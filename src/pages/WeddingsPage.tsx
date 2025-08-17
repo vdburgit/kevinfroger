@@ -4,9 +4,9 @@ import ContactForm from '../components/ContactForm';
 
 // SEO Meta data
 export const weddingsSEO = {
-  title: "DJ voor bruiloft boeken - Kevin Froger | Professionele Bruiloft DJ",
-  description: "Boek DJ Kevin Froger voor jullie bruiloft. Geen standaard playlist, maar live mixing op maat voor jullie mooiste dag. 15+ jaar ervaring.",
-  keywords: "DJ bruiloft, bruiloft DJ boeken, trouw DJ, ceremonie muziek, bruiloft entertainment"
+  title: "Bruiloft DJ Boeken Nederland - #1 Kevin Froger | 500+ Bruiloften | Live Mixing",
+  description: "🎵 #1 Bruiloft DJ Nederland - Kevin Froger. 500+ bruiloften, live mixing specialist, geen playlists. DJ bruiloft boeken vanaf €500. Gratis offerte binnen 24u!",
+  keywords: "bruiloft DJ boeken, DJ bruiloft Nederland, trouw DJ, bruiloft DJ huren, ceremonie DJ, bruiloft entertainment, wedding DJ, DJ voor bruiloft, bruiloft muziek, eerste dans DJ, bruiloft DJ Zuid-Holland, bruiloft DJ Rotterdam, bruiloft DJ Amsterdam, professionele bruiloft DJ, ervaren bruiloft DJ, live mixing bruiloft"
 };
 
 const WeddingsPage = () => {

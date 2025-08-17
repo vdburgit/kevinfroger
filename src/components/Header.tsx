@@ -73,7 +73,7 @@ const Header = () => {
             <Link to="/" className="flex items-center group">
               <img 
                 src="/images/kevin-logo.png" 
-                alt="DJ Kevin Froger Logo" 
+                alt="DJ Kevin Froger - #1 Bruiloft DJ Nederland Logo" 
                 className="h-8 md:h-12 lg:h-16 w-auto group-hover:scale-105 transition-transform duration-200 drop-shadow-lg"
               />
             </Link>

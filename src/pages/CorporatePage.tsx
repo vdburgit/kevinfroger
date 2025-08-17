@@ -4,9 +4,9 @@ import ContactForm from '../components/ContactForm';
 
 // SEO Meta data
 export const corporateSEO = {
-  title: "DJ voor bedrijfsfeest - Professioneel & sfeervol | Kevin Froger",
-  description: "Sfeervolle DJ op jouw bedrijfsfeest. Geen playlist, wel precies wat de mensen willen horen. Professionele uitstraling gegarandeerd.",
-  keywords: "DJ bedrijfsfeest, corporate DJ, zakelijke evenementen, personeelsfeest DJ, netwerkborrel muziek"
+  title: "Bedrijfsfeest DJ Nederland - Professioneel & Representatief | Kevin Froger",
+  description: "🎵 Professionele bedrijfsfeest DJ Nederland. Corporate events, personeelsfeesten, netwerkborrels. Representatieve uitstraling, live mixing. Boek vanaf €400!",
+  keywords: "bedrijfsfeest DJ, corporate DJ Nederland, DJ bedrijfsfeest boeken, zakelijke evenementen DJ, personeelsfeest DJ, netwerkborrel DJ, jubileum DJ, productlancering DJ, teambuilding DJ, award ceremony DJ, professionele corporate DJ, representatieve DJ, zakelijke DJ, business event DJ"
 };
 const CorporatePage = () => {
   const services = [

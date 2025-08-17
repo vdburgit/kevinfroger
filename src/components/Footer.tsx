@@ -56,13 +56,13 @@ const Footer = () => {
             <div className="mb-6">
               <img 
                 src="/images/kevin-logo.png" 
-                alt="DJ Kevin Froger Logo" 
+                alt="DJ Kevin Froger - #1 Bruiloft DJ Nederland" 
                 className="h-20 w-auto mb-6 drop-shadow-2xl"
               />
             </div>
             <p className="text-blue-200 text-lg leading-relaxed mb-8">
-              Professionele DJ & MC services voor bruiloften, bedrijfsfeesten en festivals. 
-              15+ jaar ervaring in live mixing en entertainment op maat.
+              #1 Bruiloft DJ Nederland - Professionele DJ & MC services voor bruiloften, bedrijfsfeesten en festivals. 
+              15+ jaar ervaring, 500+ bruiloften, live mixing specialist. DJ boeken voor alle evenementen in Nederland.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="group text-blue-300 hover:text-orange-400 transition-colors p-3 bg-blue-700/50 rounded-full hover:bg-orange-500/20">

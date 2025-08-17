@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://kevinfroger.nl/</loc>
+    <image:image>
+      <image:loc>https://kevinfroger.nl/images/kevin-portrait.jpg</image:loc>
+      <image:caption>DJ Kevin Froger - #1 Bruiloft DJ Nederland</image:caption>
+      <image:title>DJ Kevin Froger Professional Portrait</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kevinfroger.nl/images/dj-kevin-froger-bruiloft-scaled.jpeg</image:loc>
+      <image:caption>DJ Kevin Froger tijdens bruiloft performance</image:caption>
+      <image:title>Bruiloft DJ Kevin Froger Live Performance</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kevinfroger.nl/images/kevin-logo.png</image:loc>
+      <image:caption>DJ Kevin Froger Logo - Professionele DJ Services Nederland</image:caption>
+      <image:title>DJ Kevin Froger Official Logo</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kevinfroger.nl/bruiloften</loc>
+    <image:image>
+      <image:loc>https://kevinfroger.nl/images/dj-kevin-froger-bruiloft-scaled.jpeg</image:loc>
+      <image:caption>Bruiloft DJ Kevin Froger - Complete muzikale begeleiding</image:caption>
+      <image:title>DJ Kevin Froger Bruiloft Services</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kevinfroger.nl/bedrijfsfeesten</loc>
+    <image:image>
+      <image:loc>https://kevinfroger.nl/images/dj-kevin-froger-bedrijfsfeest.png</image:loc>
+      <image:caption>Corporate DJ Kevin Froger - Professionele bedrijfsfeest entertainment</image:caption>
+      <image:title>DJ Kevin Froger Corporate Events</image:title>
+    </image:image>
+  </url>
+</urlset>

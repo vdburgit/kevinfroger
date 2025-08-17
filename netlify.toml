@@ -1,6 +1,9 @@
 [build]
   publish = "dist"
   command = "npm run build"
+  
+[build.environment]
+  NODE_VERSION = "18"
 
 [functions]
   directory = "netlify/functions"
@@ -9,6 +12,46 @@
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
+
+# SEO redirects for common variations
+[[redirects]]
+  from = "/dj-boeken-nederland"
+  to = "/dj-boeken"
+  status = 301
+
+[[redirects]]
+  from = "/dj-huren-nederland" 
+  to = "/dj-huren"
+  status = 301
+
+[[redirects]]
+  from = "/bruiloft-dj"
+  to = "/bruiloften"
+  status = 301
+
+[[redirects]]
+  from = "/bedrijfsfeest-dj"
+  to = "/bedrijfsfeesten" 
+  status = 301
+
+[[redirects]]
+  from = "/festival-dj"
+  to = "/festivals"
+  status = 301
+# Headers for SEO
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
 [form]
   [form.settings]
