@@ -18,7 +18,7 @@ const PricingPage = () => {
     {
       name: "Extra Speakers",
       price: "Op aanvraag",
-      description: "Professional PA Aanvullende speakers voor grote locaties"
+      description: "Voor grotere locaties, extra Professional Audio voor +/- 500 gasten"
     },
     {
       name: "Video Integratie",
