@@ -126,7 +126,7 @@ const DJUtrechtPage = () => {
       {/* SEO Content Section */}
       <section className="py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none">
+          <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Utrecht - Professionele DJ Services Domstad</h2>
             <p>Zoek je een DJ in Utrecht? DJ Kevin Froger verzorgt professionele DJ services in de domstad. Van bruiloften in de Domkerk tot bedrijfsfeesten in Leidsche Rijn - altijd de perfecte sfeer in het hart van Nederland.</p>
             

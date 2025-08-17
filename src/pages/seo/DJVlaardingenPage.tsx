@@ -137,8 +137,8 @@ const DJVlaardingenPage = () => {
       {/* Districts & Venues Section */}
       <section className="py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* SEO Content */}
-          <div className="prose prose-lg max-w-none">
+          {/* SEO Content - Hidden but accessible to search engines */}
+          <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Vlaardingen - Professionele DJ Services Havenstad</h2>
             <p>Zoek je een DJ in Vlaardingen? DJ Kevin Froger verzorgt professionele DJ services in de havenstad. Van bruiloften aan de haven tot bedrijfsfeesten in het centrum - altijd de perfecte sfeer in Vlaardingen.</p>
             

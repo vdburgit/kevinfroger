@@ -165,7 +165,7 @@ const DJKoningsdagPage = () => {
       {/* SEO Content */}
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none">
+          <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Koningsdag - Specialist in Oranje Feesten</h2>
             <p>Zoek je een DJ voor Koningsdag? DJ Kevin Froger is specialist in oranje feesten en Nederlandse festiviteiten. Koningsdag DJ huren met het beste oranje repertoire.</p>
             

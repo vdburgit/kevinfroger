@@ -120,6 +120,12 @@ const DJNederlandPage = () => {
       {/* All Cities Section */}
       <section className="py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* SEO Content - Hidden but accessible to search engines */}
+          <div className="sr-only prose prose-lg max-w-none">
+            <h2>DJ Nederland - Professionele DJ Services Landelijk</h2>
+            <p>DJ Kevin Froger verzorgt professionele DJ services door heel Nederland. Van Noord tot Zuid, van Oost tot West - altijd de perfecte sfeer in alle provincies en steden.</p>
+          </div>
+          
           <div className="text-center mb-20">
             <h2 className="text-5xl lg:text-7xl font-black text-gray-900 mb-8 text-shadow">
               ALLE STEDEN

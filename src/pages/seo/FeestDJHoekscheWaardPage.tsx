@@ -104,8 +104,8 @@ const FeestDJHoekscheWaardPage = () => {
       {/* Services Section */}
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* SEO Content */}
-          <div className="prose prose-lg max-w-none">
+          {/* SEO Content - Hidden but accessible to search engines */}
+          <div className="sr-only prose prose-lg max-w-none">
             <h2>Feest DJ Hoeksche Waard - Professionele Party DJ Services</h2>
             <p>Zoek je een feest DJ in de Hoeksche Waard? DJ Kevin Froger verzorgt professionele party DJ services in de hele regio. Van verjaardagen tot jubilea, van Oud-Beijerland tot Strijen - altijd de perfecte feestsfeer.</p>
             

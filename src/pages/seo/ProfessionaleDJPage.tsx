@@ -173,7 +173,7 @@ const ProfessionaleDJPage = () => {
       {/* SEO Content Section */}
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none">
+          <div className="sr-only prose prose-lg max-w-none">
             <h2>Professionele DJ - DJ Kevin Froger Professional Services</h2>
             <p>Zoek je een professionele DJ? DJ Kevin Froger biedt professionele DJ services met 15+ jaar ervaring. Van live mixing specialist tot MC services - altijd de hoogste kwaliteit en betrouwbaarheid.</p>
             

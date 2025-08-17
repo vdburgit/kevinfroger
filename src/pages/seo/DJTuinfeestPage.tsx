@@ -193,7 +193,7 @@ const DJTuinfeestPage = () => {
       {/* SEO Content */}
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none">
+          <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Tuinfeest - Specialist in Outdoor Entertainment</h2>
             <p>Zoek je een DJ voor tuinfeest? DJ Kevin Froger is specialist in outdoor evenementen. Tuinfeest DJ huren met weerbestendige apparatuur en buren-vriendelijke geluidsniveaus.</p>
             

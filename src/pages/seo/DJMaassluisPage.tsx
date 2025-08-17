@@ -100,7 +100,7 @@ const DJMaassluisPage = () => {
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* SEO Content */}
-          <div className="prose prose-lg max-w-none">
+          <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Maassluis - Professionele DJ Services Historische Havenstad</h2>
             <p>Zoek je een DJ in Maassluis? DJ Kevin Froger verzorgt professionele DJ services in de historische havenstad. Van bruiloften aan het water tot bedrijfsfeesten - altijd de perfecte sfeer in Maassluis.</p>
             

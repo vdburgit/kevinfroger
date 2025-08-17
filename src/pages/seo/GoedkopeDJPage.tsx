@@ -198,7 +198,7 @@ const GoedkopeDJPage = () => {
       {/* SEO Content */}
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none">
+          <div className="sr-only prose prose-lg max-w-none">
             <h2>Goedkope DJ - Betaalbare DJ Services Met Kwaliteit</h2>
             <p>Zoek je een goedkope DJ? DJ Kevin Froger biedt betaalbare DJ services zonder kwaliteitsverlies. Professionele DJ vanaf €350, inclusief apparatuur en complete service.</p>
             

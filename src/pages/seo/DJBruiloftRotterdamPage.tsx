@@ -137,8 +137,8 @@ const DJBruiloftRotterdamPage = () => {
       {/* Venues Section */}
       <section className="py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* SEO Content */}
-          <div className="prose prose-lg max-w-none">
+          {/* SEO Content - Hidden but accessible to search engines */}
+          <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Bruiloft Rotterdam - Professionele Bruiloft DJ Maasstad</h2>
             <p>Zoek je een bruiloft DJ in Rotterdam? DJ Kevin Froger is specialist in bruiloften in de Maasstad. Van ceremonie tot feestavond, van Hotel New York tot SS Rotterdam - wij maken jullie mooiste dag onvergetelijk.</p>
             

@@ -131,7 +131,7 @@ const DJBoekenNederlandPage = () => {
       {/* Provinces Section */}
       <section className="py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none">
+          <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Boeken Nederland - Professionele DJ Services Landelijk</h2>
             <p>Wil je een DJ boeken in Nederland? DJ Kevin Froger is landelijk werkzaam en verzorgt professionele DJ services door het hele land. Van bruiloften tot bedrijfsfeesten, van festivals tot privé events - altijd de perfecte sfeer.</p>
             

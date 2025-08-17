@@ -137,8 +137,8 @@ const DJCapelleAanDenIJsselPage = () => {
       {/* Districts & Venues Section */}
       <section className="py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* SEO Content */}
-          <div className="prose prose-lg max-w-none">
+          {/* SEO Content - Hidden but accessible to search engines */}
+          <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Capelle aan den IJssel - Professionele DJ Services</h2>
             <p>Zoek je een DJ in Capelle aan den IJssel? DJ Kevin Froger verzorgt professionele DJ services in de moderne gemeente. Van bruiloften in Theater De Boeg tot bedrijfsfeesten - altijd de perfecte sfeer in Capelle.</p>
             

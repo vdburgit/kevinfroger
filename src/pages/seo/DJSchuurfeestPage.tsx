@@ -158,7 +158,7 @@ const DJSchuurfeestPage = () => {
       {/* SEO Content */}
       <section className="py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none">
+          <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Schuurfeest - Specialist in Landelijke Feesten</h2>
             <p>Zoek je een DJ voor schuurfeest? DJ Kevin Froger is specialist in landelijke en rustieke feesten. Schuurfeest DJ huren met ervaring in boerderijen, schuren en outdoor locaties.</p>
             

@@ -184,7 +184,7 @@ const DJThemafeestPage = () => {
       {/* SEO Content */}
       <section className="py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none">
+          <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Themafeest - Specialist in Thematische Entertainment</h2>
             <p>Zoek je een DJ voor themafeest? DJ Kevin Froger is specialist in thematische feesten. Themafeest DJ huren met muziek en sfeer perfect afgestemd op jouw thema.</p>
             

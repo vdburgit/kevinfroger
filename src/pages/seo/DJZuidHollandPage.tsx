@@ -162,8 +162,8 @@ const DJZuidHollandPage = () => {
             ))}
           </div>
           
-          {/* SEO Content - Now visible and well-styled */}
-          <div className="mt-20 bg-white rounded-3xl shadow-xl p-12">
+          {/* SEO Content - Hidden but accessible to search engines */}
+          <div className="sr-only">
             <div className="prose prose-lg max-w-none">
               <h2 className="text-4xl font-black text-gray-900 mb-8 text-center">
                 DJ Zuid-Holland - Professionele DJ Services Hele Provincie

@@ -126,7 +126,7 @@ const DJZoetermeerPage = () => {
       {/* SEO Content Section */}
       <section className="py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none">
+          <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Zoetermeer - Professionele DJ Services Groene Stad</h2>
             <p>Zoek je een DJ in Zoetermeer? DJ Kevin Froger verzorgt professionele DJ services in de groene stad. Van bruiloften in moderne venues tot bedrijfsfeesten - altijd de perfecte sfeer in Zoetermeer.</p>
             

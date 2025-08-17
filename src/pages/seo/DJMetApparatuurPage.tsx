@@ -194,7 +194,7 @@ const DJMetApparatuurPage = () => {
       {/* SEO Content */}
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none">
+          <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Met Apparatuur - Complete All-in DJ Services</h2>
             <p>Zoek je een DJ met apparatuur? DJ Kevin Froger levert complete all-in pakketten inclusief professionele geluids- en lichtapparatuur. Geen gedoe met verhuur, alles uit één hand.</p>
             

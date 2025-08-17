@@ -173,7 +173,7 @@ const LiveMixingDJPage = () => {
       {/* SEO Content Section */}
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none">
+          <div className="sr-only prose prose-lg max-w-none">
             <h2>Live Mixing DJ - Specialist in Live DJ Performances</h2>
             <p>Zoek je een live mixing DJ? DJ Kevin Froger is specialist in live mixing en live DJ performances. Geen standaard playlists maar unieke live mixen die ter plekke worden samengesteld.</p>
             

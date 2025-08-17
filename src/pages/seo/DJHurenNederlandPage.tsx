@@ -149,7 +149,7 @@ const DJHurenNederlandPage = () => {
       {/* SEO Content Section */}
       <section className="py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-3xl shadow-xl p-12">
+          <div className="sr-only">
             <div className="prose prose-lg max-w-none">
               <h2 className="text-4xl font-black text-gray-900 mb-8 text-center">
                 DJ Huren Nederland - Professionele DJ Services

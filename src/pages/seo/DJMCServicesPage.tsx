@@ -173,7 +173,7 @@ const DJMCServicesPage = () => {
       {/* SEO Content Section */}
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none">
+          <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ MC Services - Professionele DJ & MC Combinatie</h2>
             <p>Zoek je DJ MC services? DJ Kevin Froger combineert professionele DJ skills met ervaren MC services. Eén persoon voor complete entertainment van begin tot eind.</p>
             

@@ -137,8 +137,8 @@ const DJTielPage = () => {
       {/* Districts & Venues Section */}
       <section className="py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* SEO Content */}
-          <div className="prose prose-lg max-w-none">
+          {/* SEO Content - Hidden but accessible to search engines */}
+          <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Tiel - Professionele DJ Services Fruitstad Betuwe</h2>
             <p>Zoek je een DJ in Tiel? DJ Kevin Froger verzorgt professionele DJ services in de fruitstad van de Betuwe. Van bruiloften in Theater De Poorterij tot bedrijfsfeesten - altijd de perfecte sfeer in Tiel.</p>
             

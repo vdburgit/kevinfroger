@@ -126,7 +126,7 @@ const DJAlphenAanDenRijnPage = () => {
       {/* SEO Content Section */}
       <section className="py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none">
+          <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Alphen aan den Rijn - Professionele DJ Services Oude Rijn</h2>
             <p>Zoek je een DJ in Alphen aan den Rijn? DJ Kevin Froger verzorgt professionele DJ services aan de Oude Rijn. Van bruiloften aan het water tot bedrijfsfeesten - altijd de perfecte sfeer in Alphen.</p>
             
