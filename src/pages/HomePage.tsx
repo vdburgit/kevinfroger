@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, Play, Star, Quote, ArrowRight, Users, Music, Award, CheckCircle, Phone, Zap, Heart, Building, ChevronDown, Volume2, Mic, MessageCircle } from 'lucide-react';
+import { Calendar, ArrowRight, Users, Music, Award, Phone, Zap, Heart, Building, Volume2, Mic, MessageCircle } from 'lucide-react';
 import MusicGenresSection from '../components/MusicGenresSection';
 import PartnersSection from '../components/PartnersSection';
 
@@ -87,10 +87,6 @@ const HomePage = () => {
       description: "Jarenlange ervaring met alle soorten evenementen. Van intieme bruiloften tot grote festivals - altijd de juiste sfeer",
       color: "from-purple-500 to-pink-600"
     }
-  ];
-
-  const musicGenres = [
-    "House", "Techno", "Pop", "Rock", "Hip-Hop", "R&B", "Dance", "Classics", "Nederlands", "Hardcore"
   ];
 
   return (
@@ -214,7 +210,7 @@ const HomePage = () => {
       </section>
 
       {/* Features Section - Stayawake Style */}
-      <section id="waarom" className="py-32 bg-gray-50">
+      <section className="py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-5xl lg:text-7xl font-black text-gray-900 mb-8 text-shadow">
@@ -246,95 +242,6 @@ const HomePage = () => {
       {/* Partners Section */}
       <PartnersSection />
 
-      {/* CTA Section */}
-      <section id="contact" className="py-32 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-20 left-10 w-40 h-40 bg-orange-500/20 rounded-full blur-2xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-60 h-60 bg-orange-400/10 rounded-full blur-3xl animate-bounce-slow"></div>
-          <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-blue-400/20 rounded-full blur-xl animate-ping-slow"></div>
-        </div>
-        
-        <div className="relative max-w-5xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-5xl lg:text-7xl font-black mb-8 text-shadow-lg">
-            KLAAR VOOR EEN
-            <span className="block text-orange-400">ONVERGETELIJK FEEST?</span>
-          </h2>
-          <p className="text-2xl mb-12 text-blue-100 leading-relaxed max-w-3xl mx-auto">
-            Neem contact op voor een vrijblijvende offerte en laten we samen 
-            jouw evenement tot een groot succes maken.
-          </p>
-          
-          {/* Desktop buttons */}
-          <div className="hidden md:flex flex-col sm:flex-row gap-6 justify-center mb-12">
-            <Link
-              to="/contact"
-              className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-12 py-6 rounded-full font-black text-2xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105"
-            >
-              BOEK NU DIRECT
-              <ArrowRight className="w-6 h-6 ml-3 inline-block group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <a
-              href="tel:0645251333"
-              className="border-3 border-white text-white px-12 py-6 rounded-full font-black text-2xl hover:bg-white hover:text-blue-900 transition-all duration-300"
-            >
-              BEL DIRECT
-            </a>
-            <a
-              href="https://api.whatsapp.com/send/?phone=31645251333&text&type=phone_number&app_absent=0"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border-3 border-green-400 text-green-100 px-12 py-6 rounded-full font-black text-2xl hover:bg-green-500 hover:text-white transition-all duration-300"
-            >
-              <MessageCircle className="w-6 h-6 inline-block mr-3" />
-              WHATSAPP
-            </a>
-          </div>
-
-          {/* Mobile buttons */}
-          <div className="md:hidden w-full max-w-xs mx-auto px-2 space-y-2 mb-6">
-            <Link
-              to="/contact"
-              className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2 rounded-lg font-bold text-xs hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-md flex items-center justify-center min-h-[36px]"
-            >
-              <Calendar className="w-3 h-3 mr-1.5" />
-              BOEK NU DIRECT
-            </Link>
-            <a
-              href="https://api.whatsapp.com/send/?phone=31645251333&text&type=phone_number&app_absent=0"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-lg font-bold text-xs hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-md flex items-center justify-center min-h-[36px]"
-            >
-              <MessageCircle className="w-3 h-3 mr-1.5" />
-              WHATSAPP
-            </a>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-10 h-10 text-orange-400" />
-              </div>
-              <h3 className="font-black text-2xl mb-2">DIRECT CONTACT</h3>
-              <p className="text-blue-200 text-lg">Binnen 24 uur reactie</p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Calendar className="w-10 h-10 text-blue-400" />
-              </div>
-              <h3 className="font-black text-2xl mb-2">GRATIS OFFERTE</h3>
-              <p className="text-blue-200 text-lg">Vrijblijvend en op maat</p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-10 h-10 text-purple-400" />
-              </div>
-              <h3 className="font-black text-2xl mb-2">15+ JAAR ERVARING</h3>
-              <p className="text-blue-200 text-lg">Bewezen kwaliteit</p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

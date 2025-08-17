@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Building, Award, Users, Star, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const PartnersSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -105,7 +105,7 @@ const PartnersSection = () => {
     {
       name: "Dutch Grand Prix",
       logo: "/images/logos/dutch-grand-prix.png",
-      category: "Sport",
+      category: "Motorsport",
       description: "Formule 1 evenement"
     },
     {
@@ -116,8 +116,8 @@ const PartnersSection = () => {
     }
   ];
 
-  // Group partners into slides of 6
-  const partnersPerSlide = 6;
+  // Group partners into slides of 8 for better performance
+  const partnersPerSlide = 8;
   const totalSlides = Math.ceil(partners.length / partnersPerSlide);
   const slides = Array.from({ length: totalSlides }, (_, i) =>
     partners.slice(i * partnersPerSlide, (i + 1) * partnersPerSlide)
@@ -197,31 +197,26 @@ const PartnersSection = () => {
             >
               {slides.map((slide, slideIndex) => (
                 <div key={slideIndex} className="w-full flex-shrink-0">
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 px-8">
+                  <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 px-8">
                     {slide.map((partner, partnerIndex) => (
                       <div key={partnerIndex} className="group">
-                        <div className="bg-white/95 backdrop-blur-sm rounded-xl md:rounded-3xl shadow-md md:shadow-xl hover:shadow-xl md:hover:shadow-2xl transition-all duration-500 p-2 md:p-8 border border-white/20 hover:border-orange-300/50 transform hover:-translate-y-1 md:hover:-translate-y-4 hover:scale-102 md:hover:scale-105 h-20 md:h-80 flex flex-col">
+                        <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-4 border border-white/20 hover:border-orange-300/50 transform hover:-translate-y-2 hover:scale-105 h-32 flex flex-col">
                           {/* Logo Container */}
-                          <div className="h-12 md:h-32 flex items-center justify-center mb-1 md:mb-6 bg-gray-50 rounded-lg md:rounded-2xl p-1 md:p-4 group-hover:bg-white transition-colors duration-300">
+                          <div className="h-20 flex items-center justify-center mb-2 bg-gray-50 rounded-lg p-2 group-hover:bg-white transition-colors duration-300">
                             <img 
                               src={partner.logo} 
                               alt={`${partner.name} logo`}
-                              className="max-w-full h-full object-contain group-hover:scale-105 md:group-hover:scale-110 transition-transform duration-300"
+                              className="max-w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                               loading="lazy"
                             />
                           </div>
                           
                           {/* Partner Info */}
-                          <div className="text-center flex-1 flex flex-col justify-center hidden md:flex">
-                            <h3 className="font-black text-gray-900 text-xs md:text-lg mb-0.5 md:mb-2 group-hover:text-orange-600 transition-colors duration-300">
+                          <div className="text-center flex-1 flex flex-col justify-center">
+                            <h3 className="font-black text-gray-900 text-xs mb-1 group-hover:text-orange-600 transition-colors duration-300">
                               {partner.name}
                             </h3>
-                            <p className="text-gray-500 text-xs md:text-sm font-semibold mb-0.5 md:mb-2">{partner.category}</p>
-                            <p className="text-gray-400 text-xs leading-relaxed hidden lg:block">{partner.description}</p>
                           </div>
-
-                          {/* Hover Glow Effect */}
-                          <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-orange-500/0 via-orange-500/5 to-orange-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                         </div>
                       </div>
                     ))}
@@ -237,9 +232,9 @@ const PartnersSection = () => {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-2 h-2 md:w-4 md:h-4 rounded-full transition-all duration-300 ${
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentSlide 
-                    ? 'bg-orange-400 md:scale-125 shadow-lg shadow-orange-400/50' 
+                    ? 'bg-orange-400 scale-125 shadow-lg shadow-orange-400/50' 
                     : 'bg-white/30 hover:bg-white/50'
                 }`}
                 aria-label={`Ga naar slide ${index + 1}`}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Youtube, Clock, Award, Users, Music, MessageCircle, ChevronDown, ChevronUp } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Youtube, Award, Users, Music, MessageCircle, ChevronDown, ChevronUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -28,13 +28,6 @@ const Footer = () => {
     { name: 'Biografie', href: '/biografie' },
     { name: 'FAQ', href: '/faq' },
     { name: 'Contact', href: '/contact' }
-  ];
-
-  const stats = [
-    { icon: <Award className="w-6 h-6" />, number: '15+', label: 'Jaar Ervaring' },
-    { icon: <Users className="w-6 h-6" />, number: '500+', label: 'Bruiloften' },
-    { icon: <Music className="w-6 h-6" />, number: '50+', label: 'Festivals' },
-    { icon: <Clock className="w-6 h-6" />, number: '1000+', label: 'Events' }
   ];
 
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {

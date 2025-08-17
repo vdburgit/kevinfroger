@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Mail, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -198,22 +198,12 @@ const Header = () => {
                 
                 {/* Mobile Contact Info */}
                 <div className="pt-6 mt-4 border-t border-gray-200 space-y-3">
-                  <a
-                    href="tel:0645251333"
-                    className="flex items-center space-x-3 px-4 py-3 text-gray-800 hover:text-orange-500 transition-colors text-base font-semibold bg-gray-50 rounded-xl"
-                    aria-label="Bel DJ Kevin Froger"
+                  <Link
+                    to="/contact"
+                    className="block px-4 py-3 text-gray-800 hover:text-orange-500 transition-colors text-base font-semibold bg-gray-50 rounded-xl text-center"
                   >
-                    <Phone className="w-5 h-5" />
-                    <span className="font-semibold">06 45 25 13 33</span>
-                  </a>
-                  <a
-                    href="mailto:booking@kevinfroger.nl"
-                    className="flex items-center space-x-3 px-4 py-3 text-gray-800 hover:text-orange-500 transition-colors text-base font-semibold bg-gray-50 rounded-xl"
-                    aria-label="Email DJ Kevin Froger"
-                  >
-                    <Mail className="w-5 h-5" />
-                    <span className="font-semibold">booking@kevinfroger.nl</span>
-                  </a>
+                    Contact & Boeken
+                  </Link>
                 </div>
               </div>
             </div>

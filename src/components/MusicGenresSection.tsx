@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Music, Disc, Radio, Headphones, Volume2, Play, Pause, SkipForward, Heart, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Music, Disc, Radio, Headphones, Volume2, Play, SkipForward, Heart, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const MusicGenresSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -176,8 +176,8 @@ const MusicGenresSection = () => {
     }
   ];
 
-  // Group genres into slides of 8
-  const genresPerSlide = 8;
+  // Group genres into slides of 12 for better performance
+  const genresPerSlide = 12;
   const totalSlides = Math.ceil(musicGenres.length / genresPerSlide);
   const slides = Array.from({ length: totalSlides }, (_, i) =>
     musicGenres.slice(i * genresPerSlide, (i + 1) * genresPerSlide)
@@ -259,31 +259,25 @@ const MusicGenresSection = () => {
             >
               {slides.map((slide, slideIndex) => (
                 <div key={slideIndex} className="w-full flex-shrink-0">
-                  <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-3 md:gap-6 px-4 md:px-8">
+                  <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 px-8">
                     {slide.map((genre, genreIndex) => (
                       <div
                         key={genreIndex}
-                        className="group bg-white rounded-xl md:rounded-3xl shadow-md md:shadow-xl hover:shadow-lg md:hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 md:hover:-translate-y-3 hover:scale-102 md:hover:scale-105 border border-gray-100 hover:border-blue-200 h-32 md:h-64 flex flex-col"
+                        className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 border border-gray-100 hover:border-blue-200 h-40 flex flex-col"
                       >
                         {/* Icon Container */}
-                        <div className="flex-1 flex items-center justify-center p-2 md:p-6">
-                          <div className={`w-8 h-8 md:w-16 md:h-16 bg-gradient-to-br ${genre.color} rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                        <div className="flex-1 flex items-center justify-center p-4">
+                          <div className={`w-12 h-12 bg-gradient-to-br ${genre.color} rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                           {genre.icon}
                           </div>
                         </div>
 
                         {/* Content */}
-                        <div className="p-2 md:p-6 pt-0 text-center">
-                          <h3 className="text-xs md:text-lg font-black text-gray-900 mb-1 md:mb-2 group-hover:text-blue-600 transition-colors duration-200 leading-tight">
+                        <div className="p-4 pt-0 text-center">
+                          <h3 className="text-sm font-black text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-200 leading-tight">
                             {genre.name}
                           </h3>
-                          <p className="text-gray-600 leading-relaxed text-xs md:text-sm font-medium hidden md:block">
-                            {genre.description}
-                          </p>
                         </div>
-
-                        {/* Hover Glow Effect */}
-                        <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                       </div>
                     ))}
                   </div>
@@ -298,9 +292,9 @@ const MusicGenresSection = () => {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-2 h-2 md:w-4 md:h-4 rounded-full transition-all duration-300 ${
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentSlide 
-                    ? 'bg-blue-500 md:scale-125 shadow-lg shadow-blue-500/50' 
+                    ? 'bg-blue-500 scale-125 shadow-lg shadow-blue-500/50' 
                     : 'bg-gray-300 hover:bg-gray-400'
                 }`}
                 aria-label={`Ga naar slide ${index + 1}`}
