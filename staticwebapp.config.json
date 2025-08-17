@@ -1,6 +1,9 @@
 {
   "navigationFallback": {
     "rewrite": "/index.html",
-    "exclude": ["/assets/*", "/*.css", "/*.js", "/*.png", "/*.jpg", "/*.svg", "/favicon.ico"]
+    "exclude": ["/assets/*", "/images/*", "/favicon*"]
+  },
+  "globalHeaders": {
+    "Strict-Transport-Security": "max-age=300"
   }
 }

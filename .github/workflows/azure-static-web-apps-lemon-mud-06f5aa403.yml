@@ -1,10 +1,10 @@
-name: Azure Static Web Apps CI/CD (manual build)
+name: Azure Static Web Apps CI/CD
 
 on:
   push:
     branches: [ "main" ]
   pull_request:
-    types: [opened, synchronize, reopened, closed]
+    types: [ opened, synchronize, reopened, closed ]
     branches: [ "main" ]
   workflow_dispatch:
 
@@ -16,9 +16,6 @@ jobs:
   build_and_deploy:
     if: github.event_name != 'pull_request' || github.event.action != 'closed'
     runs-on: ubuntu-22.04
-    permissions:
-      contents: read
-      id-token: write
 
     steps:
       - name: Checkout
@@ -27,45 +24,30 @@ jobs:
           submodules: true
           lfs: false
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'npm'
-
-      - name: Install deps
-        run: npm ci
-
-      - name: Build
-        run: npm run build
-
-      # SWA verwacht bij skip_app_build dat de config in de output staat
-      - name: Copy SWA config into dist
-        if: hashFiles('staticwebapp.config.json') != ''
-        run: cp staticwebapp.config.json dist/
-
-      # (optioneel) 404 fallback is niet nodig voor SWA, maar schaadt niet
-      - name: Add 404 for SPA (optional)
-        run: if [ -f dist/index.html ]; then cp dist/index.html dist/404.html; fi
-
-      - name: Deploy to Azure Static Web Apps
-        uses: Azure/static-web-apps-deploy@v2
+      # Laat de Azure action alles doen:
+      # - detecteert Node
+      # - npm install
+      # - npm run build  (of jouw script)
+      # - uploadt de 'dist' map
+      - name: Build & Deploy to Azure Static Web Apps
+        uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_LEMON_MUD_06F5AA403 }}
           action: upload
-          # we hebben zelf gebouwd, dus sla de Oryx-build over
-          skip_app_build: true
-          skip_api_build: true           # zet op false wanneer je straks /api toevoegt
-          app_location: "dist"           # bij skip_app_build = true is dit de bron
-          output_location: ""            # leeg laten per richtlijn
-          # api_location: "api"          # uncomment als je Functions-map toevoegt
+          app_location: "/"          # je project root
+          output_location: "dist"    # Vite/Astro/… standaard outputmap
+          # api_location: "api"      # uncomment zodra je /api toevoegt
+          # (optioneel) Forceer je build-commando:
+          app_build_command: "npm ci && npm run build"
+          # (optioneel) Eigen API-build:
+          # api_build_command: "npm ci && npm run build"
 
-  close_pull_request:
+  close_pr_env:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-22.04
     steps:
-      - name: Close PR env
-        uses: Azure/static-web-apps-deploy@v2
+      - name: Close PR Environment
+        uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_LEMON_MUD_06F5AA403 }}
           action: close
