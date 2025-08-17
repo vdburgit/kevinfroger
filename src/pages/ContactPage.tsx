@@ -94,7 +94,7 @@ const ContactPage = () => {
   const faqs = [
     {
       question: "Hoe ver van tevoren moet ik boeken?",
-      answer: "Voor bruiloften raden we aan om 6-12 maanden van tevoren te boeken. Voor andere evenementen is 2-3 maanden meestal voldoende, maar we proberen altijd mee te denken ook bij last-minute boekingen."
+      answer: "Voor bruiloften raden we 6–12 maanden aan. Voor andere evenementen is 2–3 maanden meestal voldoende. Is het al snel? Bel dan direct, we denken graag mee bij last-minute boekingen."
     },
     {
       question: "Wat is inbegrepen in de prijs?",
@@ -381,7 +381,7 @@ const ContactPage = () => {
               href="tel:0645251333"
               className="border-3 border-white text-white px-12 py-6 rounded-full font-black text-2xl hover:bg-white hover:text-blue-900 transition-all duration-300"
             >
-              06 45 25 13 33
+              BEL DIRECT
             </a>
             <a
               href="https://api.whatsapp.com/send/?phone=31645251333&text&type=phone_number&app_absent=0"
