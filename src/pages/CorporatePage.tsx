@@ -2,12 +2,6 @@ import React from 'react';
 import { Building, Users, Briefcase, Calendar, CheckCircle, Trophy, Star, Quote, ArrowRight, Award, Target, Zap, Clock, Globe, Shield, Phone, MessageCircle } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
-// SEO Meta data
-export const corporateSEO = {
-  title: "Bedrijfsfeest DJ Nederland - Professioneel & Representatief | Kevin Froger",
-  description: "🎵 Professionele bedrijfsfeest DJ Nederland. Corporate events, personeelsfeesten, netwerkborrels. Representatieve uitstraling, live mixing. Boek vanaf €400!",
-  keywords: "bedrijfsfeest DJ, corporate DJ Nederland, DJ bedrijfsfeest boeken, zakelijke evenementen DJ, personeelsfeest DJ, netwerkborrel DJ, jubileum DJ, productlancering DJ, teambuilding DJ, award ceremony DJ, professionele corporate DJ, representatieve DJ, zakelijke DJ, business event DJ"
-};
 const CorporatePage = () => {
   const services = [
     {

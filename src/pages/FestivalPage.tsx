@@ -2,12 +2,6 @@ import React from 'react';
 import { Zap, Users, Music, Clock, CheckCircle, Play, Star, Quote, ArrowRight, Volume2, Mic, Radio, Headphones, Speaker, Disc, Phone, MessageCircle } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
-// SEO Meta data  
-export const festivalSEO = {
-  title: "Festival DJ Nederland - High-Energy Performances | Kevin Froger | 50+ Festivals",
-  description: "🎵 Festival DJ Nederland - Kevin Froger. 50+ festivals, high-energy performances, crowd control specialist. Festival DJ boeken vanaf €600. Power sets 60-90 min!",
-  keywords: "festival DJ Nederland, DJ festival boeken, festival DJ huren, outdoor event DJ, dance event DJ, festival entertainment, crowd control DJ, high-energy DJ, power set DJ, festival performance, electronic festival DJ, house festival DJ, techno festival DJ, hardcore festival DJ, festival MC, outdoor festival DJ"
-};
 const FestivalPage = () => {
   const services = [
     {

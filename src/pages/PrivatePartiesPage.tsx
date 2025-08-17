@@ -2,12 +2,6 @@ import React from 'react';
 import { Gift, Users, Music, Calendar, CheckCircle, ArrowRight, Star, Quote, Clock, Cake, PartyPopper, Sparkles, Phone, MessageCircle } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
-// SEO Meta data
-export const privatePartiesSEO = {
-  title: "DJ Verjaardag Boeken Nederland - Alle Leeftijden | Kevin Froger | Privé Feesten",
-  description: "🎵 DJ verjaardag boeken Nederland - Kevin Froger. Sweet 16 tot 50+ jubilea, familiefeesten, themafeesten. DJ privé feest vanaf €350. Muziek op maat!",
-  keywords: "DJ verjaardag boeken, verjaardagsfeest DJ, DJ verjaardag Nederland, privé feest DJ, familiefeest DJ, jubileum DJ, Sweet 16 DJ, DJ 18e verjaardag, DJ 21e verjaardag, DJ 30e verjaardag, DJ 40e verjaardag, DJ 50e verjaardag, themafeest DJ, huisfeest DJ, tuinfeest DJ, party DJ verjaardag"
-};
 const PrivatePartiesPage = () => {
   const services = [
     {

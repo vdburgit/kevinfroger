@@ -116,8 +116,7 @@ const HomePage = () => {
         <div className="absolute inset-0 z-20 flex items-center justify-center">
           <div className="text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
             <h1 className="text-5xl lg:text-7xl xl:text-8xl font-black text-white mb-8 leading-tight text-shadow-xl">
-              <span className="block">#1 BRUILOFT DJ</span>
-              <span className="block text-orange-400">NEDERLAND</span>
+              <span className="block">PROFESSIONELE DJ</span>
               <span className="block text-orange-400">KEVIN FROGER</span>
             </h1>
             
@@ -125,16 +124,10 @@ const HomePage = () => {
               <p className="text-xl lg:text-2xl text-white mb-4 text-shadow-lg font-bold">
                 LIVE MIXING SPECIALIST & ENERGIEKE MC
               </p>
-              <div className="flex items-center justify-center space-x-6 text-orange-400 font-black text-lg">
-                <span>✅ 500+ BRUILOFTEN</span>
-                <span>✅ 15+ JAAR ERVARING</span>
-                <span>✅ LANDELIJK ACTIEF</span>
-              </div>
             </div>
             
             <p className="text-lg lg:text-xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed text-shadow-lg">
-              🎵 DJ Kevin Froger - De meest geboekte bruiloft DJ van Nederland. Geen standaard playlists maar live mixing op maat. 
-              Van ceremonie tot feestavond, van Rotterdam tot Amsterdam - altijd de perfecte sfeer voor jullie evenement.
+              Specialist in live mixing en MC services. Ik lees het publiek en creëer de perfecte sfeer voor elk moment van jullie evenement.
             </p>
             
             {/* Desktop buttons */}
