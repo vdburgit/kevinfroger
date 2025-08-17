@@ -1,5 +1,5 @@
 import React from 'react';
-import { Zap, Users, Music, Clock, CheckCircle, Play, Star, Quote, ArrowRight, Volume2, Mic, Radio, Headphones, Speaker, Disc } from 'lucide-react';
+import { Zap, Users, Music, Clock, CheckCircle, Play, Star, Quote, ArrowRight, Volume2, Mic, Radio, Headphones, Speaker, Disc, Phone } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
 // SEO Meta data  

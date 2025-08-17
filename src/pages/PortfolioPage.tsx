@@ -154,7 +154,7 @@ const PortfolioPage = () => {
               className="border-3 border-white text-white px-10 py-5 rounded-full font-black text-xl hover:bg-white hover:text-blue-900 transition-all duration-300"
             >
               <Phone className="w-6 h-6 inline-block mr-3" />
-              06 45 25 13 33
+              BEL DIRECT
             </a>
             <a
               href="https://api.whatsapp.com/send/?phone=31645251333&text&type=phone_number&app_absent=0"

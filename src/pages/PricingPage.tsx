@@ -112,7 +112,8 @@ const PricingPage = () => {
                 href="/contact"
                 className="border-3 border-white text-white px-10 py-5 rounded-full font-black text-xl hover:bg-white hover:text-blue-900 transition-all duration-300"
               >
-                GRATIS OFFERTE
+                <Phone className="w-6 h-6 inline-block mr-3" />
+                BEL DIRECT
               </a>
             </div>
 

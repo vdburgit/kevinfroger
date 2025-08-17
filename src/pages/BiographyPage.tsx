@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, MapPin, Music, Mic, Heart, Star, Award, Calendar, Users, Zap, ArrowRight, Quote } from 'lucide-react';
+import { User, MapPin, Music, Mic, Heart, Star, Award, Calendar, Users, Zap, ArrowRight, Quote, Phone } from 'lucide-react';
 
 const BiographyPage = () => {
   const highlights = [
@@ -244,7 +244,8 @@ const BiographyPage = () => {
               href="tel:0645251333"
               className="border-3 border-white text-white px-12 py-6 rounded-full font-black text-2xl hover:bg-white hover:text-blue-900 transition-all duration-300"
             >
-              06 45 25 13 33
+              <Phone className="w-6 h-6 inline-block mr-3" />
+              BEL DIRECT
             </a>
           </div>
         </div>
