@@ -3,7 +3,7 @@ import { Star, ExternalLink } from 'lucide-react';
 
 const GoogleReviewsSection = () => {
   const averageRating = 5.0;
-  const totalReviews = 50;
+  const totalReviews = 47;
 
   return (
     <section className="py-32 bg-gradient-to-br from-orange-500 to-orange-600 relative overflow-hidden">
