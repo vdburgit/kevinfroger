@@ -1,46 +1,71 @@
-name: Azure Static Web Apps CI/CD
+name: Azure Static Web Apps CI/CD (manual build)
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
   pull_request:
     types: [opened, synchronize, reopened, closed]
-    branches:
-      - main
+    branches: [ "main" ]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  build_and_deploy_job:
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
-    runs-on: ubuntu-latest
-    name: Build and Deploy Job
+  build_and_deploy:
+    if: github.event_name != 'pull_request' || github.event.action != 'closed'
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: read
+      id-token: write
+
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           submodules: true
           lfs: false
-      - name: Build And Deploy
-        id: builddeploy
-        uses: Azure/static-web-apps-deploy@v1
-        with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_LEMON_MUD_06F5AA403 }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
-          action: "upload"
-          ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
-          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "/" # App source code path
-          api_location: "" # Api source code path - optional
-          output_location: "build" # Built app content directory - optional
-          ###### End of Repository/Build Configurations ######
 
-  close_pull_request_job:
-    if: github.event_name == 'pull_request' && github.event.action == 'closed'
-    runs-on: ubuntu-latest
-    name: Close Pull Request Job
-    steps:
-      - name: Close Pull Request
-        id: closepullrequest
-        uses: Azure/static-web-apps-deploy@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      # SWA verwacht bij skip_app_build dat de config in de output staat
+      - name: Copy SWA config into dist
+        if: hashFiles('staticwebapp.config.json') != ''
+        run: cp staticwebapp.config.json dist/
+
+      # (optioneel) 404 fallback is niet nodig voor SWA, maar schaadt niet
+      - name: Add 404 for SPA (optional)
+        run: if [ -f dist/index.html ]; then cp dist/index.html dist/404.html; fi
+
+      - name: Deploy to Azure Static Web Apps
+        uses: Azure/static-web-apps-deploy@v2
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_LEMON_MUD_06F5AA403 }}
-          action: "close"
+          action: upload
+          # we hebben zelf gebouwd, dus sla de Oryx-build over
+          skip_app_build: true
+          skip_api_build: true           # zet op false wanneer je straks /api toevoegt
+          app_location: "dist"           # bij skip_app_build = true is dit de bron
+          output_location: ""            # leeg laten per richtlijn
+          # api_location: "api"          # uncomment als je Functions-map toevoegt
+
+  close_pull_request:
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Close PR env
+        uses: Azure/static-web-apps-deploy@v2
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_LEMON_MUD_06F5AA403 }}
+          action: close
