@@ -1,6 +1,6 @@
-name: Github Pages 
+name: Github Pages
 
-on: 
+on:
   push:
     branches:
       - main
@@ -11,8 +11,9 @@ jobs:
     runs-on: ubuntu-22.04
     permissions:
       contents: write
-      concurrency:
-        group: ${{ github.workflow }}-${{ github.ref }}
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
