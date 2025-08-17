@@ -1,10 +1,9 @@
-name: Github Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -21,13 +20,18 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 20
+          cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Build project
+      - name: Build
         run: npm run build
+
+      # SPA fallback: maak 404.html zodat deep links werken
+      - name: Add 404 for SPA
+        run: cp dist/index.html dist/404.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
@@ -35,3 +39,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          cname: test2.kevinfroger.nl
