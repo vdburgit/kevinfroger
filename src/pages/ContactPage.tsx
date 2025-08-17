@@ -22,7 +22,7 @@ const ContactPage = () => {
       href: "https://api.whatsapp.com/send/?phone=31645251333&text&type=phone_number&app_absent=0",
       color: "from-green-500 to-green-600",
       bgColor: "bg-green-50",
-      description: "Meestal binnen 1 uur reactie"
+      description: "Gemiddeld binnen 1 uur reactie"
     },
     {
       icon: <Mail className="w-8 h-8" />,
@@ -42,7 +42,7 @@ const ContactPage = () => {
       href: "#contact-form",
       color: "from-orange-500 to-orange-600",
       bgColor: "bg-orange-50",
-      description: "Binnen 24 uur persoonlijke offerte"
+      description: "Binnen 24 uur uw persoonlijke offerte"
     }
   ];
 
@@ -85,7 +85,7 @@ const ContactPage = () => {
     },
     {
       step: "04",
-      title: "PERFECT EVENEMENT",
+      title: "EVENEMENT",
       description: "Ontspannen genieten van uw feest",
       icon: <CheckCircle className="w-8 h-8" />
     }
