@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-22.04
     permissions:
       contents: write
-      concurrency: 
+      concurrency:
         group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - name: Checkout repository
@@ -21,7 +21,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
 
       - name: Install dependencies
         run: npm install
@@ -31,6 +30,7 @@ jobs:
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
