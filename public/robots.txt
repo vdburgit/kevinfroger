@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://kevinfroger.nl/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Specific rules
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# Block admin areas (if any)
+Disallow: /admin/
