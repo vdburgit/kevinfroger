@@ -27,23 +27,23 @@ jobs:
       - name: Build (Vite -> dist)
         run: npm run build
 
-      - name: Post-build: files naar dist
+      - name: "Post-build: files naar dist"
         run: |
-          # dist moet bestaan
+          # 1) fail fast als dist ontbreekt
           [ -d dist ] || { echo "dist ontbreekt - build faalde"; exit 1; }
 
-          # images/ -> dist/images (alleen als images/ bestaat)
+          # 2) images/ -> dist/images (alleen als images/ bestaat)
           if [ -d images ]; then
             mkdir -p dist/images
             cp -r images/* dist/images/ || true
           fi
 
-          # staticwebapp.config.json -> dist/ (als aanwezig in root)
+          # 3) staticwebapp.config.json -> dist/ (als aanwezig in root)
           if [ -f staticwebapp.config.json ]; then
             cp -f staticwebapp.config.json dist/
           fi
 
-          # favicon/vite.svg meeleveren als ze bestaan
+          # 4) favicon/vite.svg meeleveren als ze bestaan
           if [ -f public/favicon.svg ] && [ ! -f dist/favicon.svg ]; then
             cp public/favicon.svg dist/favicon.svg
           fi
