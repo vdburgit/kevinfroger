@@ -16,9 +16,9 @@ const PricingPage = () => {
       description: "Professionele rookeffecten"
     },
     {
-      name: "Extra Geluidspunt",
+      name: "Extra Professionele Speakers",
       price: "Op aanvraag",
-      description: "Aanvullende speakers voor grote locaties"
+      description: "Professional PA Aanvullende speakers voor grote locaties"
     },
     {
       name: "Video Integratie",
