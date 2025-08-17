@@ -31,5 +31,20 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.3.0",
     "vite": "^5.4.2"
+  },
+  "engines": {
+    "node": ">=18 <20"
+  },
+  "packageManager": "npm@10",
+  "browserslist": {
+    "production": [
+      "defaults",
+      "maintained node versions"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
