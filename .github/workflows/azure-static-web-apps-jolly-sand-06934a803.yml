@@ -27,24 +27,23 @@ jobs:
       - name: Build (Vite -> dist)
         run: npm run build
 
-      - name: Post-build: voeg images en SWA-config toe aan dist
-        shell: bash
+      - name: Post-build: files naar dist
         run: |
-          # 1) fail fast als dist ontbreekt
-          test -d dist || (echo "dist ontbreekt - build faalde"; exit 1)
+          # dist moet bestaan
+          [ -d dist ] || { echo "dist ontbreekt - build faalde"; exit 1; }
 
-          # 2) images/ -> dist/images (alleen als images/ bestaat)
+          # images/ -> dist/images (alleen als images/ bestaat)
           if [ -d images ]; then
             mkdir -p dist/images
-            cp -r images/* dist/images/ 2>/dev/null || true
+            cp -r images/* dist/images/ || true
           fi
 
-          # 3) staticwebapp.config.json -> dist/ (als hij in de root staat)
+          # staticwebapp.config.json -> dist/ (als aanwezig in root)
           if [ -f staticwebapp.config.json ]; then
             cp -f staticwebapp.config.json dist/
           fi
 
-          # 4) favicon/vite.svg meeleveren als ze bestaan
+          # favicon/vite.svg meeleveren als ze bestaan
           if [ -f public/favicon.svg ] && [ ! -f dist/favicon.svg ]; then
             cp public/favicon.svg dist/favicon.svg
           fi
