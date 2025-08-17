@@ -167,22 +167,25 @@ const DJKoningsdagPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Koningsdag - Specialist in Oranje Feesten</h2>
-            <p>Zoek je een DJ voor Koningsdag? DJ Kevin Froger is specialist in oranje feesten en Nederlandse festiviteiten. Koningsdag DJ huren met het beste oranje repertoire.</p>
+            <p>Zoek je een DJ voor Koningsdag? DJ Kevin Froger is specialist in oranje feesten en Nederlandse festiviteiten. Met 15+ jaar ervaring en 50+ Koningsdag events - Koningsdag DJ huren met het beste oranje repertoire en Nederlandse feestmuziek. DJ Koningsdag Nederland voor alle oranje celebrations.</p>
             
             <h3>DJ Koningsdag - Nederlandse Feestmuziek</h3>
-            <p>Kevin heeft het complete oranje repertoire: Oranje Boven, Wij Houden Van Oranje, Wilhelmus, Nederlandse feesthits, carnaval classics, en alle patriottische liedjes.</p>
+            <p>Kevin heeft het complete oranje repertoire: Oranje Boven, Wij Houden Van Oranje, Wilhelmus, Oranje Nassouw, Nederlandse feesthits, carnaval classics, volksliederen, en alle patriottische liedjes. DJ Koningsdag met authentiek Nederlands repertoire.</p>
             
             <h3>DJ Koningsnacht</h3>
-            <p>Voor Koningsnacht party's biedt Kevin energieke DJ sets met dance muziek, party hits, en Nederlandse feesthits. Perfect voor de voorfeesten van Koningsdag.</p>
+            <p>Voor Koningsnacht party's biedt Kevin energieke DJ sets met dance muziek, party hits, en Nederlandse feesthits. Perfect voor de voorfeesten van Koningsdag. DJ Koningsnacht voor alle pre-party events en oranje warming-up feesten.</p>
             
             <h3>DJ Vrijmarkt</h3>
-            <p>Kevin verzorgt ook achtergrondmuziek voor vrijmarkten en straatfeesten. Gezellige Nederlandse muziek die past bij de Koningsdag sfeer.</p>
+            <p>Kevin verzorgt ook achtergrondmuziek voor vrijmarkten en straatfeesten. Gezellige Nederlandse muziek die past bij de Koningsdag sfeer en familie-vriendelijke events. DJ vrijmarkt voor alle leeftijden en Koningsdag activiteiten.</p>
             
             <h3>DJ Oranje Feest</h3>
-            <p>Voor oranje feesten en Nederlandse festiviteiten heeft Kevin speciale oranje playlists met alle patriottische hits en Nederlandse feestmuziek.</p>
+            <p>Voor oranje feesten en Nederlandse festiviteiten heeft Kevin speciale oranje playlists met alle patriottische hits en Nederlandse feestmuziek. DJ oranje feest voor alle Nederlandse nationale feestdagen en patriottische gelegenheden.</p>
             
             <h3>Koningsdag DJ Boeken</h3>
-            <p>Wil je een Koningsdag DJ boeken? Kevin Froger zorgt voor de perfecte oranje sfeer met Nederlandse feestmuziek en patriottische hits.</p>
+            <p>Wil je een Koningsdag DJ boeken? Kevin Froger zorgt voor de perfecte oranje sfeer met Nederlandse feestmuziek en patriottische hits. Koningsdag DJ boeken Nederland - binnen 24 uur offerte voor jouw oranje event.</p>
+            
+            <h3>Populaire Zoektermen DJ Koningsdag</h3>
+            <p>DJ Koningsdag, Koningsdag DJ, DJ voor Koningsdag, oranje feest DJ, Nederlandse feest DJ, patriottische DJ, DJ Koningsnacht, vrijmarkt DJ, DJ Koningsdag huren, DJ Koningsdag boeken, nationale feestdag DJ.</p>
           </div>
         </div>
       </section>

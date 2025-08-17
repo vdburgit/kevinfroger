@@ -200,22 +200,25 @@ const GoedkopeDJPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="sr-only prose prose-lg max-w-none">
             <h2>Goedkope DJ - Betaalbare DJ Services Met Kwaliteit</h2>
-            <p>Zoek je een goedkope DJ? DJ Kevin Froger biedt betaalbare DJ services zonder kwaliteitsverlies. Professionele DJ vanaf €350, inclusief apparatuur en complete service.</p>
+            <p>Zoek je een goedkope DJ? DJ Kevin Froger biedt betaalbare DJ services zonder kwaliteitsverlies. Goedkope DJ Nederland vanaf €350, inclusief professionele apparatuur en complete service. Betaalbare DJ met 15+ jaar ervaring en 1000+ tevreden klanten.</p>
             
             <h3>Goedkope DJ - Wat Krijg Je?</h3>
-            <p>Bij een goedkope DJ van Kevin krijg je: professionele DJ met 15+ jaar ervaring, eigen geluids- en lichtapparatuur, persoonlijke voorbereiding, live mixing (geen playlists), MC services, en backup apparatuur.</p>
+            <p>Bij een goedkope DJ van Kevin krijg je: professionele DJ met 15+ jaar ervaring, eigen geluids- en lichtapparatuur, persoonlijke voorbereiding, live mixing (geen standaard playlists), MC services, backup apparatuur, en transparante prijzen. Goedkope DJ zonder verborgen kosten.</p>
             
             <h3>Betaalbare DJ Voor Alle Events</h3>
-            <p>Goedkope DJ bruiloft vanaf €500, goedkope DJ verjaardag vanaf €350, goedkope DJ bedrijfsfeest vanaf €400, goedkope DJ festival vanaf €600. Altijd transparante prijzen zonder verborgen kosten.</p>
+            <p>Betaalbare DJ voor alle events: goedkope DJ bruiloft vanaf €500, goedkope DJ verjaardag vanaf €350, goedkope DJ bedrijfsfeest vanaf €400, goedkope DJ festival vanaf €600. Altijd transparante prijzen zonder verborgen kosten. Goedkope DJ Nederland met kwaliteitsgarantie.</p>
             
             <h3>Goedkope DJ Met Apparatuur</h3>
-            <p>Kevin brengt altijd professionele apparatuur mee: Pioneer mixers, JBL speakers, draadloze microfoons, LED verlichting, en backup systemen. Goedkope DJ inclusief complete setup.</p>
+            <p>Kevin brengt altijd professionele apparatuur mee: Pioneer mixers, JBL speakers, draadloze microfoons, LED verlichting, en backup systemen. Goedkope DJ inclusief complete setup - geen extra verhuurkosten. Betaalbare DJ met eigen professionele installatie.</p>
             
             <h3>Waarom Goedkope DJ Kevin Froger?</h3>
-            <p>Kevin biedt goedkope DJ services omdat hij direct werkt zonder tussenpersonen. Geen dure overhead, maar wel professionele kwaliteit. Goedkope DJ die inspeelt op het publiek.</p>
+            <p>Kevin biedt goedkope DJ services omdat hij direct werkt zonder tussenpersonen of agencies. Geen dure overhead, maar wel professionele kwaliteit. Goedkope DJ die inspeelt op het publiek met live mixing en persoonlijke service. Betaalbare DJ Nederland zonder kwaliteitsconcessies.</p>
             
             <h3>Goedkope DJ Boeken</h3>
-            <p>Wil je een goedkope DJ boeken? Neem contact op voor een vrijblijvende offerte. Kevin biedt altijd de beste prijs-kwaliteit verhouding voor DJ services.</p>
+            <p>Wil je een goedkope DJ boeken? Neem contact op voor een vrijblijvende offerte. Kevin biedt altijd de beste prijs-kwaliteit verhouding voor DJ services. Goedkope DJ boeken Nederland - binnen 24 uur reactie en scherpe prijzen gegarandeerd.</p>
+            
+            <h3>Populaire Zoektermen Goedkope DJ</h3>
+            <p>Goedkope DJ, betaalbare DJ, DJ goedkoop, voordelige DJ, budget DJ, scherpe prijzen DJ, goedkope DJ Nederland, betaalbare DJ services, budget vriendelijke DJ, goedkope DJ boeken, betaalbare DJ huren, voordelige DJ services.</p>
           </div>
         </div>
       </section>

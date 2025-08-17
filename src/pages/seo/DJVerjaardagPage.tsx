@@ -152,34 +152,34 @@ const DJVerjaardagPage = () => {
           {/* SEO Content - Hidden but accessible to search engines */}
           <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Verjaardag - Professionele DJ Services Alle Leeftijden</h2>
-            <p>Zoek je een DJ voor een verjaardag? DJ Kevin Froger verzorgt professionele DJ services voor verjaardagsfeesten van alle leeftijden. Van Sweet 16 tot 50+ jubilea - altijd de perfecte muziek voor jouw speciale dag.</p>
+            <p>Zoek je een DJ voor een verjaardag? DJ Kevin Froger verzorgt professionele DJ services voor verjaardagsfeesten van alle leeftijden. Met 15+ jaar ervaring en 300+ verjaardagsfeesten - van Sweet 16 tot 50+ jubilea - altijd de perfecte muziek voor jouw speciale dag. DJ verjaardag Nederland voor alle leeftijdsgroepen.</p>
             
             <h3>DJ Verjaardag - Alle Leeftijdsgroepen</h3>
-            <p>Kevin heeft ervaring met verjaardagen voor alle leeftijden: DJ 16e verjaardag, DJ 18e verjaardag, DJ 21e verjaardag, DJ 25e verjaardag, DJ 30e verjaardag, DJ 40e verjaardag, DJ 50e verjaardag, DJ 60e verjaardag, DJ 65e verjaardag, DJ pensioenfeest.</p>
+            <p>Kevin heeft ervaring met verjaardagen voor alle leeftijden: DJ 16e verjaardag (Sweet 16), DJ 18e verjaardag, DJ 21e verjaardag, DJ 25e verjaardag, DJ 30e verjaardag, DJ 40e verjaardag, DJ 50e verjaardag, DJ 60e verjaardag, DJ 65e verjaardag, DJ pensioenfeest, DJ Abraham/Sarah feest. DJ verjaardag alle leeftijden specialist.</p>
             
             <h3>Sweet 16 DJ</h3>
-            <p>Voor Sweet 16 feesten biedt Kevin trendy muziek en social media moments. Van TikTok hits tot interactieve games - altijd aangepast aan de jonge generatie.</p>
+            <p>Voor Sweet 16 feesten biedt Kevin trendy muziek en social media moments. Van TikTok hits tot Instagram-worthy momenten, van interactieve games tot dance challenges - altijd aangepast aan de jonge generatie. Sweet 16 DJ voor de perfecte tiener party.</p>
             
             <h3>DJ 18e Verjaardag</h3>
-            <p>De 18e verjaardag is een belangrijke mijlpaal. Kevin zorgt voor de perfecte mix van party muziek en speciale momenten voor deze overgang naar volwassenheid.</p>
+            <p>De 18e verjaardag is een belangrijke mijlpaal. Kevin zorgt voor de perfecte mix van party muziek en speciale momenten voor deze overgang naar volwassenheid. DJ 18e verjaardag met coming-of-age vibes en volwassen party sfeer.</p>
             
             <h3>DJ 21e Verjaardag</h3>
-            <p>Voor 21e verjaardagen combineert Kevin party sfeer met sophistication. Van club hits tot nostalgische tracks - altijd de juiste balans.</p>
+            <p>Voor 21e verjaardagen combineert Kevin party sfeer met sophistication. Van club hits tot nostalgische 2000s tracks - altijd de juiste balans tussen feest en volwassenheid. DJ 21e verjaardag voor de perfecte young adult party.</p>
             
             <h3>DJ 30e Verjaardag</h3>
-            <p>30e verjaardagen verdienen een speciale aanpak. Kevin speelt muziek die alle generaties aanspreekt en zorgt voor een onvergetelijk feest.</p>
+            <p>30e verjaardagen verdienen een speciale aanpak. Kevin speelt muziek die alle generaties aanspreekt en zorgt voor een onvergetelijk feest. DJ 30e verjaardag met nostalgische 90s/2000s hits gecombineerd met moderne tracks voor alle gasten.</p>
             
             <h3>DJ 40e Verjaardag</h3>
-            <p>Voor 40e verjaardagen biedt Kevin de perfecte mix van nostalgische hits en moderne muziek. Van 90s classics tot actuele hits.</p>
+            <p>Voor 40e verjaardagen biedt Kevin de perfecte mix van nostalgische hits en moderne muziek. Van 90s classics tot actuele hits, van rock anthems tot dance classics. DJ 40e verjaardag voor de perfecte midlife celebration.</p>
             
             <h3>DJ 50e Verjaardag</h3>
-            <p>50e verjaardagen zijn bijzondere jubilea. Kevin zorgt voor tijdloze klassiekers en evergreens die alle gasten kunnen waarderen.</p>
+            <p>50e verjaardagen zijn bijzondere jubilea. Kevin zorgt voor tijdloze klassiekers en evergreens die alle gasten kunnen waarderen. DJ 50e verjaardag met golden oldies, disco classics, en Nederlandse evergreens voor alle generaties.</p>
             
             <h3>DJ Boeken Verjaardag</h3>
-            <p>Wil je een DJ boeken voor een verjaardag? Kevin Froger past zijn service aan elke leeftijd en elk type verjaardagsfeest. Altijd persoonlijk en op maat.</p>
+            <p>Wil je een DJ boeken voor een verjaardag? Kevin Froger past zijn service aan elke leeftijd en elk type verjaardagsfeest. Altijd persoonlijk en op maat. DJ boeken verjaardag Nederland - binnen 24 uur offerte op maat voor jouw leeftijd en wensen.</p>
             
-            <h3>Populaire Verjaardag DJ Services</h3>
-            <p>DJ verjaardag, DJ verjaardagsfeest, Sweet 16 DJ, DJ 18e verjaardag, DJ 21e verjaardag, DJ 30e verjaardag, DJ 40e verjaardag, DJ 50e verjaardag, jubileum DJ, party DJ verjaardag.</p>
+            <h3>Populaire Zoektermen Verjaardag DJ</h3>
+            <p>DJ verjaardag, DJ verjaardagsfeest, Sweet 16 DJ, DJ 18e verjaardag, DJ 21e verjaardag, DJ 30e verjaardag, DJ 40e verjaardag, DJ 50e verjaardag, jubileum DJ, party DJ verjaardag, verjaardag DJ boeken, DJ voor verjaardag, verjaardagsfeest entertainment.</p>
           </div>
           
           <div className="text-center mb-20">

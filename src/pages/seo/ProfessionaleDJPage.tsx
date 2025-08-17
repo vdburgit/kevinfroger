@@ -175,28 +175,28 @@ const ProfessionaleDJPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="sr-only prose prose-lg max-w-none">
             <h2>Professionele DJ - DJ Kevin Froger Professional Services</h2>
-            <p>Zoek je een professionele DJ? DJ Kevin Froger biedt professionele DJ services met 15+ jaar ervaring. Van live mixing specialist tot MC services - altijd de hoogste kwaliteit en betrouwbaarheid.</p>
+            <p>Zoek je een professionele DJ? DJ Kevin Froger biedt professionele DJ services met 15+ jaar ervaring en 1000+ succesvolle events. Van live mixing specialist tot MC services - altijd de hoogste kwaliteit en betrouwbaarheid. Professionele DJ Nederland met landelijke dekking.</p>
             
             <h3>Professionele DJ - Wat Betekent Dat?</h3>
-            <p>Een professionele DJ betekent: betrouwbaarheid, kwaliteit, ervaring, professionele apparatuur, backup systemen, verzekering, vergunningen, en complete service van A tot Z.</p>
+            <p>Een professionele DJ betekent: betrouwbaarheid, topkwaliteit, jarenlange ervaring, professionele apparatuur (Pioneer, JBL), backup systemen, verzekering, vergunningen, punctualiteit, en complete service van A tot Z. Professionele DJ met alle certificeringen en kwaliteitsgaranties.</p>
             
             <h3>Professionele DJ Bruiloft</h3>
-            <p>Voor bruiloften is professionaliteit essentieel. Kevin heeft meer dan 500 bruiloften begeleid met complete muzikale begeleiding van ceremonie tot late avond.</p>
+            <p>Voor bruiloften is professionaliteit essentieel. Kevin heeft meer dan 500 bruiloften begeleid met complete muzikale begeleiding van ceremonie tot late avond. Professionele DJ bruiloft met stijlvolle uitstraling, perfecte timing, en emotionele intelligentie voor jullie mooiste dag.</p>
             
             <h3>Professionele DJ Bedrijfsfeest</h3>
-            <p>Bedrijfsfeesten vereisen een professionele uitstraling. Kevin verzorgt corporate events met representatieve DJ services en zakelijke benadering.</p>
+            <p>Bedrijfsfeesten vereisen een professionele uitstraling. Kevin verzorgt corporate events met representatieve DJ services en zakelijke benadering. Professionele DJ bedrijfsfeest met corporate ervaring, dress code compliance, en business etiquette.</p>
             
             <h3>Professionele DJ Apparatuur</h3>
-            <p>Kevin gebruikt alleen professionele apparatuur: Pioneer mixers, JBL speakers, Shure microfoons, en professionele verlichting. Altijd met backup systemen.</p>
+            <p>Kevin gebruikt alleen professionele apparatuur: Pioneer DJM mixers, JBL PRX speakers, Shure draadloze microfoons, LED PAR verlichting, en professionele bekabeling. Altijd met backup systemen en technische ondersteuning. Professionele DJ apparatuur van topmerken.</p>
             
             <h3>Professionele DJ Voorbereiding</h3>
-            <p>Professionele voorbereiding betekent: locatie bezoek, technische planning, muziekwensen bespreken, tijdschema afstemmen, en backup plannen maken.</p>
+            <p>Professionele voorbereiding betekent: vooraf locatie bezoek, uitgebreide technische planning, muziekwensen bespreken, tijdschema afstemmen, backup plannen maken, en complete event rundown. Professionele DJ voorbereiding voor faalloze uitvoering.</p>
             
             <h3>Professionele DJ Boeken</h3>
-            <p>Wil je een professionele DJ boeken? Kevin Froger biedt complete professionele DJ services met garantie op kwaliteit en betrouwbaarheid.</p>
+            <p>Wil je een professionele DJ boeken? Kevin Froger biedt complete professionele DJ services met garantie op kwaliteit en betrouwbaarheid. Professionele DJ boeken Nederland - binnen 24 uur reactie en uitgebreide offerte met alle details.</p>
             
-            <h3>Populaire Professionele DJ Services</h3>
-            <p>Professionele DJ, professional DJ services, ervaren DJ, betrouwbare DJ, kwaliteit DJ, live mixing DJ, MC DJ, allround DJ, event DJ, entertainment DJ.</p>
+            <h3>Populaire Zoektermen Professionele DJ</h3>
+            <p>Professionele DJ, professional DJ services, ervaren DJ, betrouwbare DJ, kwaliteit DJ, live mixing DJ, MC DJ, allround DJ, event DJ, entertainment DJ, professionele DJ Nederland, zakelijke DJ, corporate DJ, premium DJ services, topkwaliteit DJ.</p>
           </div>
         </div>
       </section>

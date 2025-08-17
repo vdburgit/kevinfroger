@@ -140,28 +140,28 @@ const DJBruiloftRotterdamPage = () => {
           {/* SEO Content - Hidden but accessible to search engines */}
           <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Bruiloft Rotterdam - Professionele Bruiloft DJ Maasstad</h2>
-            <p>Zoek je een bruiloft DJ in Rotterdam? DJ Kevin Froger is specialist in bruiloften in de Maasstad. Van ceremonie tot feestavond, van Hotel New York tot SS Rotterdam - wij maken jullie mooiste dag onvergetelijk.</p>
+            <p>Zoek je een bruiloft DJ in Rotterdam? DJ Kevin Froger is dé specialist in bruiloften in de Maasstad. Met 15+ jaar ervaring en 150+ Rotterdamse bruiloften maken wij jullie mooiste dag onvergetelijk. Van ceremonie tot feestavond, van Hotel New York tot SS Rotterdam.</p>
             
             <h3>Bruiloft DJ Rotterdam - Alle Locaties</h3>
-            <p>Kevin verzorgt bruiloften op alle toplocaties in Rotterdam: Hotel New York bruiloft DJ, SS Rotterdam bruiloft DJ, Euromast bruiloft DJ, Villa Thalia bruiloft DJ, Kunsthal Rotterdam bruiloft DJ, De Doelen bruiloft DJ, Boijmans bruiloft DJ, Wereldmuseum bruiloft DJ.</p>
+            <p>Kevin verzorgt bruiloften op alle toplocaties in Rotterdam: Hotel New York bruiloft DJ, SS Rotterdam bruiloft DJ, Euromast bruiloft DJ, Villa Thalia bruiloft DJ, Kunsthal Rotterdam bruiloft DJ, De Doelen bruiloft DJ, Boijmans Van Beuningen bruiloft DJ, Wereldmuseum bruiloft DJ, Cruise Terminal bruiloft DJ, Maassilo bruiloft DJ.</p>
             
             <h3>Trouw DJ Rotterdam</h3>
-            <p>Als trouw DJ in Rotterdam begeleidt Kevin jullie hele dag. Van getting ready muziek tot ceremonie, van diner tot late avond - complete muzikale begeleiding voor jullie bruiloft.</p>
+            <p>Als trouw DJ in Rotterdam begeleidt Kevin jullie hele dag in de Maasstad. Van getting ready muziek tot ceremonie, van diner tot late avond - complete muzikale begeleiding voor jullie bruiloft in Rotterdam. Trouw DJ Rotterdam met 15+ jaar ervaring.</p>
             
             <h3>Ceremonie DJ Rotterdam</h3>
-            <p>Voor trouwceremonies in Rotterdam zorgt Kevin voor de perfecte muzikale ondersteuning. Van klassieke ceremoniemuziek tot persoonlijke keuzes - altijd op het juiste moment.</p>
+            <p>Voor trouwceremonies in Rotterdam zorgt Kevin voor stijlvolle muzikale ondersteuning. Van klassieke ceremoniemuziek in de Laurenskerk tot moderne ceremonies in hotels - ceremonie DJ Rotterdam met perfecte timing en geluidskwaliteit.</p>
             
             <h3>Bruiloft Entertainment Rotterdam</h3>
-            <p>Kevin biedt complete bruiloft entertainment in Rotterdam. Van DJ services tot MC begeleiding, van eerste dans tot feestavond - alles voor jullie perfecte dag.</p>
+            <p>Kevin biedt complete bruiloft entertainment in Rotterdam. Van DJ services tot MC begeleiding, van eerste dans tot feestavond - alles voor jullie perfecte dag in de Maasstad. Bruiloft entertainment Rotterdam met live mixing en persoonlijke aanpak.</p>
             
             <h3>Wedding DJ Rotterdam</h3>
-            <p>Als wedding DJ in Rotterdam heeft Kevin internationale ervaring. Van Nederlandse bruiloften tot multiculturele ceremonies - altijd respectvol en professioneel.</p>
+            <p>Als wedding DJ in Rotterdam heeft Kevin internationale ervaring. Van Nederlandse bruiloften tot multiculturele ceremonies - altijd respectvol en professioneel. Wedding DJ Rotterdam voor alle nationaliteiten en culturen in de internationale Maasstad.</p>
             
             <h3>Bruiloft DJ Boeken Rotterdam</h3>
-            <p>Wil je een bruiloft DJ boeken in Rotterdam? Kevin Froger heeft meer dan 150 Rotterdamse bruiloften begeleid. Ervaring met alle venues en locaties in de Maasstad.</p>
+            <p>Wil je een bruiloft DJ boeken in Rotterdam? Kevin Froger heeft meer dan 150 Rotterdamse bruiloften begeleid. Ervaring met alle venues en locaties in de Maasstad. Bruiloft DJ boeken Rotterdam - binnen 24 uur persoonlijke offerte.</p>
             
-            <h3>Populaire Bruiloft DJ Services Rotterdam</h3>
-            <p>Bruiloft DJ Rotterdam, trouw DJ Rotterdam, wedding DJ Rotterdam, ceremonie DJ Rotterdam, bruiloft entertainment Rotterdam, Hotel New York DJ, SS Rotterdam DJ, Euromast bruiloft DJ.</p>
+            <h3>Populaire Zoektermen Bruiloft DJ Rotterdam</h3>
+            <p>Bruiloft DJ Rotterdam, trouw DJ Rotterdam, wedding DJ Rotterdam, ceremonie DJ Rotterdam, bruiloft entertainment Rotterdam, Hotel New York DJ, SS Rotterdam DJ, Euromast bruiloft DJ, Maasstad bruiloft DJ, Rotterdam DJ boeken, DJ Rotterdam bruiloft, bruiloft DJ Maasstad.</p>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">

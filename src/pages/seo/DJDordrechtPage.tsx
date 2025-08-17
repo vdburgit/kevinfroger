@@ -140,25 +140,25 @@ const DJDordrechtPage = () => {
           {/* SEO Content - Hidden but accessible to search engines */}
           <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Dordrecht - Professionele DJ Services Oudste Stad Holland</h2>
-            <p>Zoek je een DJ in Dordrecht? DJ Kevin Froger verzorgt professionele DJ services in de oudste stad van Holland. Van bruiloften in Villa Augustus tot bedrijfsfeesten in het Energiehuis - altijd historische sfeer.</p>
+            <p>Zoek je een DJ in Dordrecht? DJ Kevin Froger verzorgt professionele DJ services in de oudste stad van Holland. Met 15+ jaar ervaring en 180+ events in Dordrecht - altijd historische sfeer gecombineerd met moderne entertainment. Van bruiloften in Villa Augustus tot bedrijfsfeesten in het Energiehuis.</p>
             
             <h3>DJ Dordrecht - Alle Wijken</h3>
-            <p>Kevin is actief in heel Dordrecht: DJ Dordrecht Centrum, DJ Wielwijk, DJ Crabbehof, DJ Sterrenburg, DJ Reeland, DJ Dubbeldam, DJ Wieldrecht, DJ Stadspolders, DJ Noordflank, DJ Zuidhoven.</p>
+            <p>Kevin is actief in heel Dordrecht en alle wijken: DJ Dordrecht Centrum, DJ Wielwijk, DJ Crabbehof, DJ Sterrenburg, DJ Reeland, DJ Dubbeldam, DJ Wieldrecht, DJ Stadspolders, DJ Noordflank, DJ Zuidhoven. DJ Dordrecht alle wijken en buitengebieden beschikbaar.</p>
             
             <h3>Bruiloft DJ Dordrecht</h3>
-            <p>Voor bruiloften in Dordrecht heeft Kevin meer dan 90 succesvolle events begeleid. Van Villa Augustus tot Hof van Nederland, van Dordrechts Museum tot De Biesbosch - Kevin maakt jullie bruiloft onvergetelijk.</p>
+            <p>Voor bruiloften in Dordrecht heeft Kevin meer dan 90 succesvolle events begeleid. Van Villa Augustus tot Hof van Nederland, van Dordrechts Museum tot De Biesbosch - Kevin maakt jullie bruiloft onvergetelijk. Bruiloft DJ Dordrecht met historische flair en moderne muziek.</p>
             
             <h3>Bedrijfsfeest DJ Dordrecht</h3>
-            <p>Bedrijfsfeesten in Dordrecht krijgen de professionele touch van Kevin. Van Energiehuis tot Landgoed Groenhoven - altijd de juiste sfeer voor zakelijke evenementen in de historische stad.</p>
+            <p>Bedrijfsfeesten in Dordrecht krijgen de professionele touch van Kevin. Van Energiehuis tot Landgoed Groenhoven - altijd de juiste sfeer voor zakelijke evenementen. Bedrijfsfeest DJ Dordrecht voor alle corporate events in de oudste stad van Holland.</p>
             
             <h3>Festival DJ Dordrecht</h3>
-            <p>Kevin heeft ervaring met festivals en grote evenementen in Dordrecht. Van Dordt in Stoom tot Big Rivers - altijd spectaculaire performances in de oudste stad van Holland.</p>
+            <p>Kevin heeft ervaring met festivals en grote evenementen in Dordrecht. Van Dordt in Stoom tot Big Rivers Festival - altijd spectaculaire performances in de oudste stad van Holland. Festival DJ Dordrecht voor alle grote en kleine evenementen.</p>
             
             <h3>DJ Boeken Dordrecht</h3>
-            <p>Wil je een DJ boeken in Dordrecht? Kevin Froger kent alle locaties en venues in de stad. Professionele DJ services voor alle wijken van Dordrecht.</p>
+            <p>Wil je een DJ boeken in Dordrecht? Kevin Froger kent alle locaties en venues in de oudste stad van Holland. Professionele DJ services voor alle wijken van Dordrecht. DJ boeken Dordrecht - binnen 24 uur persoonlijke offerte.</p>
             
-            <h3>Populaire DJ Services Dordrecht</h3>
-            <p>DJ Dordrecht centrum, DJ Dubbeldam, bruiloft DJ Dordrecht, bedrijfsfeest DJ Dordrecht, festival DJ Dordrecht, corporate DJ Dordrecht, historische DJ Dordrecht, professionele DJ oudste stad.</p>
+            <h3>Populaire Zoektermen DJ Dordrecht</h3>
+            <p>DJ Dordrecht centrum, DJ Dubbeldam, bruiloft DJ Dordrecht, bedrijfsfeest DJ Dordrecht, festival DJ Dordrecht, corporate DJ Dordrecht, historische DJ Dordrecht, professionele DJ oudste stad, DJ Dordrecht boeken, DJ Dordrecht huren, Dordtse DJ.</p>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">

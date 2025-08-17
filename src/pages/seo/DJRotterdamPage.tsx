@@ -141,25 +141,25 @@ const DJRotterdamPage = () => {
           {/* SEO Content - Hidden but accessible to search engines */}
           <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Rotterdam - Professionele DJ Services Maasstad</h2>
-            <p>Zoek je een DJ in Rotterdam? DJ Kevin Froger is dé specialist voor alle evenementen in de Maasstad. Van bruiloften in Hotel New York tot bedrijfsfeesten in Ahoy Rotterdam - Kevin zorgt voor perfecte entertainment.</p>
+            <p>Zoek je een DJ in Rotterdam? DJ Kevin Froger is dé specialist voor alle evenementen in de Maasstad. Met 15+ jaar ervaring en 300+ events in Rotterdam zorgt Kevin voor perfecte entertainment. Van bruiloften in Hotel New York tot bedrijfsfeesten in Ahoy Rotterdam.</p>
             
             <h3>DJ Rotterdam - Alle Wijken en Districten</h3>
-            <p>Kevin verzorgt DJ services in heel Rotterdam: DJ Rotterdam Centrum, DJ Kralingen, DJ Noord, DJ Hillegersberg, DJ Prins Alexander, DJ Charlois, DJ Feijenoord, DJ IJsselmonde, DJ Pernis, DJ Hoek van Holland, DJ Rozenburg, DJ Overschie, DJ Delfshaven, DJ Hoogvliet.</p>
+            <p>Kevin verzorgt DJ services in heel Rotterdam en alle wijken: DJ Rotterdam Centrum, DJ Kralingen-Crooswijk, DJ Rotterdam Noord, DJ Hillegersberg-Schiebroek, DJ Prins Alexander, DJ Charlois, DJ Feijenoord, DJ IJsselmonde, DJ Pernis, DJ Hoek van Holland, DJ Rozenburg, DJ Overschie, DJ Delfshaven, DJ Hoogvliet. DJ Rotterdam alle wijken beschikbaar.</p>
             
             <h3>Bruiloft DJ Rotterdam</h3>
-            <p>Voor bruiloften in Rotterdam heeft Kevin meer dan 150 succesvolle events begeleid. Van Hotel New York tot SS Rotterdam, van Euromast tot Villa Thalia - Kevin maakt jullie bruiloft onvergetelijk.</p>
+            <p>Voor bruiloften in Rotterdam heeft Kevin meer dan 150 succesvolle events begeleid. Van Hotel New York tot SS Rotterdam, van Euromast tot Villa Thalia - Kevin maakt jullie bruiloft onvergetelijk in de Maasstad. Bruiloft DJ Rotterdam met complete muzikale begeleiding van ceremonie tot feestavond.</p>
             
             <h3>Bedrijfsfeest DJ Rotterdam</h3>
-            <p>Bedrijfsfeesten in Rotterdam verdienen professionele begeleiding. Kevin heeft ervaring met corporate events in Ahoy, World Trade Center, Cruise Terminal en andere prestigieuze locaties in Rotterdam.</p>
+            <p>Bedrijfsfeesten in Rotterdam verdienen professionele begeleiding. Kevin heeft ervaring met corporate events in Ahoy Rotterdam, World Trade Center, Cruise Terminal, Maassilo en andere prestigieuze locaties. Bedrijfsfeest DJ Rotterdam voor alle corporate events in de Maasstad.</p>
             
             <h3>Festival DJ Rotterdam</h3>
-            <p>Van North Sea Jazz tot lokale festivals - Kevin heeft ervaring met alle soorten festivals in Rotterdam. High-energy performances voor elk publiek in de Maasstad.</p>
+            <p>Van North Sea Jazz tot lokale wijkfestivals - Kevin heeft ervaring met alle soorten festivals in Rotterdam. High-energy performances voor elk publiek in de Maasstad. Festival DJ Rotterdam voor grote en kleine evenementen in de havenstad.</p>
             
             <h3>DJ Boeken Rotterdam</h3>
-            <p>Wil je een DJ boeken in Rotterdam? Kevin Froger is beschikbaar voor alle wijken en locaties. Neem contact op voor een vrijblijvende offerte voor jouw evenement in Rotterdam.</p>
+            <p>Wil je een DJ boeken in Rotterdam? Kevin Froger is beschikbaar voor alle wijken en locaties in de Maasstad. Neem contact op voor een vrijblijvende offerte voor jouw evenement in Rotterdam. DJ boeken Rotterdam - binnen 24 uur reactie gegarandeerd.</p>
             
-            <h3>Populaire DJ Services Rotterdam</h3>
-            <p>DJ Rotterdam centrum, DJ Rotterdam noord, DJ Rotterdam zuid, bruiloft DJ Rotterdam, bedrijfsfeest DJ Rotterdam, festival DJ Rotterdam, corporate DJ Rotterdam, party DJ Rotterdam, allround DJ Rotterdam, professionele DJ Rotterdam.</p>
+            <h3>Populaire Zoektermen DJ Rotterdam</h3>
+            <p>DJ Rotterdam centrum, DJ Rotterdam noord, DJ Rotterdam zuid, bruiloft DJ Rotterdam, bedrijfsfeest DJ Rotterdam, festival DJ Rotterdam, corporate DJ Rotterdam, party DJ Rotterdam, allround DJ Rotterdam, professionele DJ Rotterdam, DJ Rotterdam boeken, DJ Rotterdam huren, Maasstad DJ, Rotterdam entertainment.</p>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">

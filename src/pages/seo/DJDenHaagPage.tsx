@@ -141,25 +141,25 @@ const DJDenHaagPage = () => {
           {/* SEO Content - Hidden but accessible to search engines */}
           <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Den Haag - Professionele DJ Services Hofstad</h2>
-            <p>Zoek je een DJ in Den Haag? DJ Kevin Froger verzorgt exclusieve DJ services in de hofstad. Van bruiloften in het Kurhaus tot gala's in het Binnenhof - altijd stijlvol en professioneel.</p>
+            <p>Zoek je een DJ in Den Haag? DJ Kevin Froger verzorgt exclusieve DJ services in de hofstad. Met 15+ jaar ervaring en 250+ events in Den Haag - altijd stijlvol en professioneel. Van bruiloften in het Kurhaus tot gala's in het Binnenhof.</p>
             
             <h3>DJ Den Haag - Alle Wijken</h3>
-            <p>Kevin is actief in heel Den Haag: DJ Den Haag Centrum, DJ Scheveningen, DJ Benoordenhout, DJ Bezuidenhout, DJ Haagse Hout, DJ Laak, DJ Loosduinen, DJ Segbroek, DJ Escamp, DJ Leidschenveen, DJ Ypenburg, DJ Statenkwartier.</p>
+            <p>Kevin is actief in heel Den Haag en alle wijken: DJ Den Haag Centrum, DJ Scheveningen, DJ Benoordenhout, DJ Bezuidenhout, DJ Haagse Hout, DJ Laak, DJ Loosduinen, DJ Segbroek, DJ Escamp, DJ Leidschenveen-Ypenburg, DJ Haagse Bos, DJ Statenkwartier, DJ Archipelbuurt, DJ Zeeheldenkwartier. DJ Den Haag alle wijken beschikbaar.</p>
             
             <h3>Bruiloft DJ Den Haag</h3>
-            <p>Voor bruiloften in Den Haag heeft Kevin meer dan 120 succesvolle events begeleid. Van Kurhaus Scheveningen tot Hotel Des Indes, van Paleis Noordeinde tot Carlton Beach - Kevin maakt jullie bruiloft onvergetelijk in de hofstad.</p>
+            <p>Voor bruiloften in Den Haag heeft Kevin meer dan 120 succesvolle events begeleid. Van Kurhaus Scheveningen tot Hotel Des Indes, van Paleis Noordeinde tot Carlton Beach - Kevin maakt jullie bruiloft onvergetelijk in de hofstad. Bruiloft DJ Den Haag met stijlvolle uitstraling passend bij de regeringsstad.</p>
             
             <h3>Bedrijfsfeest DJ Den Haag</h3>
-            <p>Bedrijfsfeesten in Den Haag verdienen de beste begeleiding. Kevin heeft ervaring met corporate events in World Forum, Gemeentemuseum, Museon en andere prestigieuze locaties in de regeringsstad.</p>
+            <p>Bedrijfsfeesten in Den Haag verdienen de beste begeleiding. Kevin heeft ervaring met corporate events in World Forum, Gemeentemuseum, Museon, Ridderzaal en andere prestigieuze locaties. Bedrijfsfeest DJ Den Haag voor alle corporate events in de regeringsstad.</p>
             
             <h3>Gala DJ Den Haag</h3>
-            <p>Voor exclusieve gala's en events in Den Haag biedt Kevin premium DJ services. Van Ridderzaal tot Lange Voorhout Paleis - altijd de juiste sfeer voor uw exclusieve evenement.</p>
+            <p>Voor exclusieve gala's en events in Den Haag biedt Kevin premium DJ services. Van Ridderzaal tot Lange Voorhout Paleis - altijd de juiste sfeer voor uw exclusieve evenement. Gala DJ Den Haag voor diplomatieke en zakelijke gala's in de hofstad.</p>
             
             <h3>DJ Boeken Den Haag</h3>
-            <p>Wil je een DJ boeken in Den Haag? Kevin Froger is beschikbaar voor alle wijken en exclusieve locaties. Professionele DJ services voor de hofstad.</p>
+            <p>Wil je een DJ boeken in Den Haag? Kevin Froger is beschikbaar voor alle wijken en exclusieve locaties in de hofstad. Professionele DJ services voor de regeringsstad. DJ boeken Den Haag - binnen 24 uur persoonlijke offerte.</p>
             
-            <h3>Populaire DJ Services Den Haag</h3>
-            <p>DJ Den Haag centrum, DJ Scheveningen, bruiloft DJ Den Haag, gala DJ Den Haag, corporate DJ Den Haag, exclusieve DJ Den Haag, professionele DJ hofstad, DJ regeringsstad.</p>
+            <h3>Populaire Zoektermen DJ Den Haag</h3>
+            <p>DJ Den Haag centrum, DJ Scheveningen, bruiloft DJ Den Haag, gala DJ Den Haag, corporate DJ Den Haag, exclusieve DJ Den Haag, professionele DJ hofstad, DJ regeringsstad, DJ Den Haag boeken, DJ Den Haag huren, hofstad DJ, Haagse DJ.</p>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">

@@ -133,28 +133,28 @@ const DJBoekenNederlandPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Boeken Nederland - Professionele DJ Services Landelijk</h2>
-            <p>Wil je een DJ boeken in Nederland? DJ Kevin Froger is landelijk werkzaam en verzorgt professionele DJ services door het hele land. Van bruiloften tot bedrijfsfeesten, van festivals tot privé events - altijd de perfecte sfeer.</p>
+            <p>Wil je een DJ boeken in Nederland? DJ Kevin Froger is landelijk werkzaam en verzorgt professionele DJ services door het hele land. Met 15+ jaar ervaring en 1000+ events - van bruiloften tot bedrijfsfeesten, van festivals tot privé events - altijd de perfecte sfeer. DJ boeken Nederland in alle 12 provincies mogelijk.</p>
             
             <h3>DJ Boeken - Alle Provincies</h3>
-            <p>Kevin is actief in alle provincies: DJ boeken Zuid-Holland, DJ boeken Noord-Holland, DJ boeken Utrecht, DJ boeken Noord-Brabant, DJ boeken Gelderland, DJ boeken Overijssel, DJ boeken Limburg, DJ boeken Zeeland, DJ boeken Friesland, DJ boeken Groningen, DJ boeken Drenthe, DJ boeken Flevoland.</p>
+            <p>Kevin is actief in alle 12 provincies van Nederland: DJ boeken Zuid-Holland, DJ boeken Noord-Holland, DJ boeken Utrecht, DJ boeken Noord-Brabant, DJ boeken Gelderland, DJ boeken Overijssel, DJ boeken Limburg, DJ boeken Zeeland, DJ boeken Friesland, DJ boeken Groningen, DJ boeken Drenthe, DJ boeken Flevoland. DJ boeken Nederland landelijke dekking gegarandeerd.</p>
             
             <h3>Bruiloft DJ Boeken Nederland</h3>
-            <p>Voor bruiloften door heel Nederland heeft Kevin meer dan 500 succesvolle events begeleid. Van kastelen tot moderne venues, van strand tot bos - Kevin maakt jullie bruiloft overal onvergetelijk.</p>
+            <p>Voor bruiloften door heel Nederland heeft Kevin meer dan 500 succesvolle events begeleid. Van kastelen tot moderne venues, van strand tot bos - Kevin maakt jullie bruiloft overal onvergetelijk. Bruiloft DJ boeken Nederland met landelijke ervaring en lokale kennis.</p>
             
             <h3>Bedrijfsfeest DJ Boeken</h3>
-            <p>Kevin verzorgt bedrijfsfeesten voor ondernemingen door heel Nederland. Van multinationals tot MKB, van startups tot traditionele bedrijven - altijd professioneel en representatief.</p>
+            <p>Kevin verzorgt bedrijfsfeesten voor ondernemingen door heel Nederland. Van multinationals tot MKB, van startups tot traditionele bedrijven - altijd professioneel en representatief. Bedrijfsfeest DJ boeken Nederland voor alle corporate events landelijk.</p>
             
             <h3>Festival DJ Boeken Nederland</h3>
-            <p>Van grote festivals tot lokale dorpsfeesten - Kevin heeft ervaring met alle soorten festivals door Nederland. Altijd high-energy performances aangepast aan het publiek.</p>
+            <p>Van grote festivals tot lokale dorpsfeesten - Kevin heeft ervaring met alle soorten festivals door Nederland. Altijd high-energy performances aangepast aan het publiek. Festival DJ boeken Nederland voor alle outdoor en indoor events.</p>
             
             <h3>Professionele DJ Boeken</h3>
-            <p>Kevin is een professionele DJ met 15+ jaar ervaring. Van live mixing tot MC services, van technische setup tot complete entertainment - altijd de hoogste kwaliteit.</p>
+            <p>Kevin is een professionele DJ met 15+ jaar ervaring en bewezen track record. Van live mixing tot MC services, van technische setup tot complete entertainment - altijd de hoogste kwaliteit. Professionele DJ boeken Nederland met kwaliteitsgarantie.</p>
             
             <h3>DJ Boeken Tips</h3>
-            <p>Hoe boek je de beste DJ? Kevin adviseert: boek op tijd (6-12 maanden voor bruiloften), bespreek muziekwensen vooraf, en kies voor ervaring en betrouwbaarheid.</p>
+            <p>Hoe boek je de beste DJ in Nederland? Kevin adviseert: boek op tijd (6-12 maanden voor bruiloften), bespreek muziekwensen vooraf, kies voor ervaring en betrouwbaarheid, en vraag naar referenties. DJ boeken Nederland tips van de professional.</p>
             
-            <h3>Populaire DJ Boeken Services</h3>
-            <p>DJ boeken Nederland, professionele DJ boeken, bruiloft DJ boeken, bedrijfsfeest DJ boeken, festival DJ boeken, allround DJ boeken, landelijke DJ, DJ Kevin Froger boeken.</p>
+            <h3>Populaire Zoektermen DJ Boeken Nederland</h3>
+            <p>DJ boeken Nederland, professionele DJ boeken, bruiloft DJ boeken, bedrijfsfeest DJ boeken, festival DJ boeken, allround DJ boeken, landelijke DJ, DJ Kevin Froger boeken, DJ boeken online, DJ reserveren, DJ inhuren Nederland, DJ service Nederland.</p>
           </div>
           
           <div className="text-center mb-20">

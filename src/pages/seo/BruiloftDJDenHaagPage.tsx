@@ -140,28 +140,28 @@ const BruiloftDJDenHaagPage = () => {
           {/* SEO Content */}
           <div className="prose prose-lg max-w-none">
             <h2>Bruiloft DJ Den Haag - Professionele Bruiloft DJ Hofstad</h2>
-            <p>Zoek je een bruiloft DJ in Den Haag? DJ Kevin Froger is specialist in bruiloften in de hofstad. Van ceremonie tot feestavond, van Kurhaus Scheveningen tot Hotel Des Indes - wij maken jullie mooiste dag onvergetelijk.</p>
+            <p>Zoek je een bruiloft DJ in Den Haag? DJ Kevin Froger is dé specialist in bruiloften in de hofstad. Met 15+ jaar ervaring en 120+ Haagse bruiloften maken wij jullie mooiste dag onvergetelijk. Van ceremonie tot feestavond, van Kurhaus Scheveningen tot Hotel Des Indes.</p>
             
             <h3>Bruiloft DJ Den Haag - Exclusieve Locaties</h3>
-            <p>Kevin verzorgt bruiloften op alle toplocaties in Den Haag: Kurhaus Scheveningen bruiloft DJ, Hotel Des Indes bruiloft DJ, Paleis Noordeinde bruiloft DJ, Lange Voorhout Paleis bruiloft DJ, Gemeentemuseum bruiloft DJ, World Forum bruiloft DJ, Carlton Beach bruiloft DJ.</p>
+            <p>Kevin verzorgt bruiloften op alle exclusieve locaties in Den Haag: Kurhaus Scheveningen bruiloft DJ, Hotel Des Indes bruiloft DJ, Paleis Noordeinde bruiloft DJ, Lange Voorhout Paleis bruiloft DJ, Gemeentemuseum bruiloft DJ, World Forum bruiloft DJ, Carlton Beach bruiloft DJ, Ridderzaal bruiloft DJ, Pier Scheveningen bruiloft DJ.</p>
             
             <h3>Trouw DJ Den Haag</h3>
-            <p>Als trouw DJ in Den Haag begeleidt Kevin jullie hele dag in de hofstad. Van getting ready muziek tot ceremonie, van diner tot late avond - complete muzikale begeleiding.</p>
+            <p>Als trouw DJ in Den Haag begeleidt Kevin jullie hele dag in de hofstad. Van getting ready muziek tot ceremonie, van diner tot late avond - complete muzikale begeleiding. Trouw DJ Den Haag met stijlvolle uitstraling passend bij de regeringsstad.</p>
             
             <h3>Ceremonie DJ Den Haag</h3>
-            <p>Voor trouwceremonies in Den Haag zorgt Kevin voor stijlvolle muzikale ondersteuning. Van klassieke ceremoniemuziek in de Grote Kerk tot moderne ceremonies in hotels.</p>
+            <p>Voor trouwceremonies in Den Haag zorgt Kevin voor stijlvolle muzikale ondersteuning. Van klassieke ceremoniemuziek in de Grote Kerk tot moderne ceremonies in hotels. Ceremonie DJ Den Haag met elegante uitstraling passend bij de hofstad.</p>
             
             <h3>Bruiloft Scheveningen DJ</h3>
-            <p>Scheveningen is een populaire bruiloftbestemming. Kevin heeft ervaring met beach weddings, Kurhaus bruiloften en andere exclusieve locaties aan zee.</p>
+            <p>Scheveningen is een populaire bruiloftbestemming in Den Haag. Kevin heeft ervaring met beach weddings, Kurhaus bruiloften en andere exclusieve locaties aan zee. Bruiloft Scheveningen DJ voor strand ceremonies en seaside receptions.</p>
             
             <h3>Wedding DJ Den Haag</h3>
-            <p>Als wedding DJ in Den Haag heeft Kevin internationale ervaring. Van Nederlandse bruiloften tot diplomatieke ceremonies - altijd stijlvol en representatief voor de hofstad.</p>
+            <p>Als wedding DJ in Den Haag heeft Kevin internationale ervaring. Van Nederlandse bruiloften tot diplomatieke ceremonies - altijd stijlvol en representatief voor de hofstad. Wedding DJ Den Haag voor internationale koppels en diplomatieke evenementen.</p>
             
             <h3>Bruiloft DJ Boeken Den Haag</h3>
-            <p>Wil je een bruiloft DJ boeken in Den Haag? Kevin Froger heeft meer dan 120 Haagse bruiloften begeleid. Ervaring met alle exclusieve venues in de hofstad.</p>
+            <p>Wil je een bruiloft DJ boeken in Den Haag? Kevin Froger heeft meer dan 120 Haagse bruiloften begeleid. Ervaring met alle exclusieve venues in de hofstad. Bruiloft DJ boeken Den Haag - binnen 24 uur persoonlijke offerte voor jullie hofstad bruiloft.</p>
             
-            <h3>Populaire Bruiloft DJ Services Den Haag</h3>
-            <p>Bruiloft DJ Den Haag, trouw DJ Den Haag, wedding DJ Den Haag, ceremonie DJ Den Haag, bruiloft Scheveningen DJ, Kurhaus bruiloft DJ, hofstad bruiloft DJ, exclusieve bruiloft DJ.</p>
+            <h3>Populaire Zoektermen Bruiloft DJ Den Haag</h3>
+            <p>Bruiloft DJ Den Haag, trouw DJ Den Haag, wedding DJ Den Haag, ceremonie DJ Den Haag, bruiloft Scheveningen DJ, Kurhaus bruiloft DJ, hofstad bruiloft DJ, exclusieve bruiloft DJ, DJ Den Haag bruiloft, bruiloft DJ hofstad, Haagse bruiloft DJ, regeringsstad bruiloft DJ.</p>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">

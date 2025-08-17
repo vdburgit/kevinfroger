@@ -175,28 +175,28 @@ const LiveMixingDJPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="sr-only prose prose-lg max-w-none">
             <h2>Live Mixing DJ - Specialist in Live DJ Performances</h2>
-            <p>Zoek je een live mixing DJ? DJ Kevin Froger is specialist in live mixing en live DJ performances. Geen standaard playlists maar unieke live mixen die ter plekke worden samengesteld.</p>
+            <p>Zoek je een live mixing DJ? DJ Kevin Froger is specialist in live mixing en live DJ performances. Met 15+ jaar ervaring en 50.000+ live gemixte tracks - geen standaard playlists maar unieke live mixen die ter plekke worden samengesteld. Live mixing DJ Nederland met unieke skills.</p>
             
             <h3>Live Mixing DJ - Wat is Live Mixing?</h3>
-            <p>Live mixing betekent dat de DJ ter plekke tracks selecteert, mixt en aanpast aan de sfeer. Kevin leest het publiek en past zijn set real-time aan voor de perfecte flow.</p>
+            <p>Live mixing betekent dat de DJ ter plekke tracks selecteert, mixt en aanpast aan de sfeer. Kevin leest het publiek en past zijn set real-time aan voor de perfecte flow. Live mixing DJ technieken: beatmatching, harmonic mixing, looping, en seamless transitions voor unieke performances.</p>
             
             <h3>Live Mixing Bruiloft</h3>
-            <p>Voor bruiloften biedt live mixing de perfecte flexibiliteit. Kevin past zijn set aan elk moment: van ceremonie tot diner, van eerste dans tot feestavond.</p>
+            <p>Voor bruiloften biedt live mixing de perfecte flexibiliteit. Kevin past zijn set aan elk moment: van ceremonie tot diner, van eerste dans tot feestavond. Live mixing bruiloft DJ voor spontane momenten en perfecte timing op jullie mooiste dag.</p>
             
             <h3>Live Mixing Bedrijfsfeest</h3>
-            <p>Bij bedrijfsfeesten zorgt live mixing voor de juiste professionele sfeer. Kevin past zijn mixing aan de zakelijke setting en het diverse publiek.</p>
+            <p>Bij bedrijfsfeesten zorgt live mixing voor de juiste professionele sfeer. Kevin past zijn mixing aan de zakelijke setting en het diverse publiek. Live mixing bedrijfsfeest DJ voor corporate events met real-time aanpassing aan de sfeer.</p>
             
             <h3>Live Mixing Festival</h3>
-            <p>Voor festivals is live mixing essentieel. Kevin leest de menigte en bouwt zijn set op voor maximum impact en energie op het juiste moment.</p>
+            <p>Voor festivals is live mixing essentieel. Kevin leest de menigte en bouwt zijn set op voor maximum impact en energie op het juiste moment. Live mixing festival DJ voor crowd control en energy management tijdens grote events.</p>
             
             <h3>Live Mixing Techniek</h3>
-            <p>Kevin gebruikt professionele mixing technieken: beatmatching, harmonic mixing, looping, effects, en seamless transitions voor de perfecte flow.</p>
+            <p>Kevin gebruikt geavanceerde mixing technieken: beatmatching, harmonic mixing, looping, effects, seamless transitions, key matching, en tempo control voor de perfecte flow. Live mixing techniek op professioneel niveau met Pioneer apparatuur.</p>
             
             <h3>Live Mixing DJ Boeken</h3>
-            <p>Wil je een live mixing DJ boeken? Kevin Froger is specialist in live performances en biedt unieke live mixing services voor alle evenementen.</p>
+            <p>Wil je een live mixing DJ boeken? Kevin Froger is specialist in live performances en biedt unieke live mixing services voor alle evenementen. Live mixing DJ boeken Nederland - ervaar het verschil van echte live performances zonder playlists.</p>
             
-            <h3>Populaire Live Mixing Services</h3>
-            <p>Live mixing DJ, live DJ, live performance DJ, real-time mixing, interactive DJ, responsive DJ, adaptive DJ, live music mixing, professional live mixing.</p>
+            <h3>Populaire Zoektermen Live Mixing DJ</h3>
+            <p>Live mixing DJ, live DJ, live performance DJ, real-time mixing, interactive DJ, responsive DJ, adaptive DJ, live music mixing, professional live mixing, DJ zonder playlists, spontane DJ, improvisatie DJ, live DJ Nederland.</p>
           </div>
         </div>
       </section>

@@ -160,7 +160,7 @@ const DJSchuurfeestPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Schuurfeest - Specialist in Landelijke Feesten</h2>
-            <p>Zoek je een DJ voor schuurfeest? DJ Kevin Froger is specialist in landelijke en rustieke feesten. Schuurfeest DJ huren met ervaring in boerderijen, schuren en outdoor locaties.</p>
+            <p>Zoek je een DJ voor schuurfeest? DJ Kevin Froger is specialist in landelijke en rustieke feesten. Met 15+ jaar ervaring en 150+ schuurfeesten - schuurfeest DJ huren met ervaring in boerderijen, schuren en outdoor locaties. DJ schuurfeest Nederland voor alle landelijke events.</p>
             
             <h3>Schuurfeest DJ Huren - Alle Types</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-6">
@@ -169,19 +169,25 @@ const DJSchuurfeestPage = () => {
                   {type}
                 </span>
               ))}
+              <span className="bg-amber-100 text-amber-800 px-3 py-2 rounded-full text-sm font-bold text-center">Boerenbruiloft</span>
+              <span className="bg-amber-100 text-amber-800 px-3 py-2 rounded-full text-sm font-bold text-center">Hooifeest</span>
+              <span className="bg-amber-100 text-amber-800 px-3 py-2 rounded-full text-sm font-bold text-center">Stal feest</span>
             </div>
             
             <h3>DJ Voor Schuurfeest Voordelen</h3>
-            <p>Voordelen van Kevin als schuurfeest DJ: ervaring met rustieke locaties, aangepaste apparatuur voor schuren, muziek passend bij landelijke sfeer, en flexibele opstelling.</p>
+            <p>Voordelen van Kevin als schuurfeest DJ: uitgebreide ervaring met rustieke locaties, aangepaste apparatuur voor schuren en boerderijen, muziek passend bij landelijke sfeer, flexibele opstelling, en begrip van landelijke tradities. DJ voor schuurfeest met authentieke aanpak.</p>
             
             <h3>Schuurfeest DJ Apparatuur</h3>
-            <p>Speciale apparatuur voor schuurfeesten: compacte maar krachtige speakers, LED verlichting voor sfeer, draadloze systemen, en robuuste setup geschikt voor landelijke locaties.</p>
+            <p>Speciale apparatuur voor schuurfeesten: compacte maar krachtige speakers, LED verlichting voor rustieke sfeer, draadloze systemen, robuuste setup geschikt voor landelijke locaties, en stofbestendige apparatuur. Schuurfeest DJ apparatuur aangepast aan boerderij omgevingen.</p>
             
             <h3>DJ Boerderij Feest</h3>
-            <p>Kevin heeft ervaring met boerderij feesten en agrarische evenementen. Van oogstfeesten tot jubilea van boerenbedrijven - altijd de juiste landelijke sfeer.</p>
+            <p>Kevin heeft ervaring met boerderij feesten en agrarische evenementen. Van oogstfeesten tot jubilea van boerenbedrijven, van melkveehouderij events tot tuinbouw bijeenkomsten - altijd de juiste landelijke sfeer. DJ boerderij feest voor alle agrarische gelegenheden.</p>
             
             <h3>Schuurfeest DJ Boeken</h3>
-            <p>Wil je een schuurfeest DJ boeken? Kevin Froger begrijpt de unieke sfeer van landelijke feesten en past zijn service daarop aan.</p>
+            <p>Wil je een schuurfeest DJ boeken? Kevin Froger begrijpt de unieke sfeer van landelijke feesten en past zijn service daarop aan. Schuurfeest DJ boeken Nederland - binnen 24 uur offerte voor jouw rustieke event.</p>
+            
+            <h3>Populaire Zoektermen DJ Schuurfeest</h3>
+            <p>DJ schuurfeest, schuurfeest DJ, DJ voor schuurfeest, boerderij DJ, landelijke DJ, rustieke DJ, DJ schuurfeest huren, DJ schuurfeest boeken, country DJ, western DJ, agrarische DJ, boerenfeest DJ.</p>
           </div>
         </div>
       </section>

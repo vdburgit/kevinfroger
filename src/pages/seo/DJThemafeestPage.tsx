@@ -186,22 +186,25 @@ const DJThemafeestPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Themafeest - Specialist in Thematische Entertainment</h2>
-            <p>Zoek je een DJ voor themafeest? DJ Kevin Froger is specialist in thematische feesten. Themafeest DJ huren met muziek en sfeer perfect afgestemd op jouw thema.</p>
+            <p>Zoek je een DJ voor themafeest? DJ Kevin Froger is specialist in thematische feesten. Met 15+ jaar ervaring en 200+ themafeesten - themafeest DJ huren met muziek en sfeer perfect afgestemd op jouw thema. DJ themafeest Nederland voor alle thematische events.</p>
             
             <h3>Themafeest DJ Huren - Alle Thema's</h3>
-            <p>Kevin verzorgt alle themafeesten: DJ jaren 80 feest, DJ jaren 90 feest, DJ tropical party, DJ white party, DJ black & white feest, DJ neon party, DJ casino night, DJ western party, DJ piraten feest, DJ superhelden feest.</p>
+            <p>Kevin verzorgt alle themafeesten: DJ jaren 80 feest, DJ jaren 90 feest, DJ tropical party, DJ white party, DJ black & white feest, DJ neon party, DJ casino night, DJ western party, DJ piraten feest, DJ superhelden feest, DJ disco fever, DJ retro party, DJ vintage feest, DJ Hollywood glamour. Themafeest DJ huren voor elk gewenst thema.</p>
             
             <h3>DJ Voor Themafeest Specialiteiten</h3>
-            <p>Speciale themafeesten: DJ Oktoberfest met Duitse schlagers, DJ carnaval met Nederlandse feesthits, DJ kerstfeest met winter wonderland, DJ nieuwjaarsfeest met party classics.</p>
+            <p>Speciale themafeesten: DJ Oktoberfest met Duitse schlagers en bier muziek, DJ carnaval met Nederlandse feesthits en polonaise, DJ kerstfeest met winter wonderland sfeer, DJ nieuwjaarsfeest met party classics en countdown. DJ voor themafeest alle seizoenen en gelegenheden.</p>
             
             <h3>Themafeest DJ Muziek</h3>
-            <p>Kevin past zijn muziek volledig aan het thema aan: jaren 80 disco en new wave, jaren 90 eurodance en grunge, tropical house en reggaeton, of klassieke feesthits voor traditionele thema's.</p>
+            <p>Kevin past zijn muziek volledig aan het thema aan: jaren 80 disco en new wave, jaren 90 eurodance en grunge, tropical house en reggaeton, klassieke feesthits voor traditionele thema's, of moderne remixes van oude hits. Themafeest DJ muziek 100% op maat.</p>
             
             <h3>DJ Kostuum Feest</h3>
-            <p>Voor kostuum feesten en dress-code events past Kevin zijn presentatie aan het thema aan. Van western outfit tot elegant kostuum - altijd passend bij jouw themafeest.</p>
+            <p>Voor kostuum feesten en dress-code events past Kevin zijn presentatie aan het thema aan. Van western outfit tot elegant kostuum, van jaren 80 look tot tropical shirt - altijd passend bij jouw themafeest. DJ kostuum feest met thematische uitstraling.</p>
             
             <h3>Themafeest DJ Boeken</h3>
-            <p>Wil je een themafeest DJ boeken? Kevin Froger heeft ervaring met alle thema's en zorgt voor de perfecte sfeer die past bij jouw thematische feest.</p>
+            <p>Wil je een themafeest DJ boeken? Kevin Froger heeft ervaring met alle thema's en zorgt voor de perfecte sfeer die past bij jouw thematische feest. Themafeest DJ boeken Nederland - binnen 24 uur offerte met thema-specifieke muziekvoorstellen.</p>
+            
+            <h3>Populaire Zoektermen DJ Themafeest</h3>
+            <p>DJ themafeest, themafeest DJ, DJ voor themafeest, jaren 80 DJ, jaren 90 DJ, tropical party DJ, white party DJ, kostuum feest DJ, DJ themafeest huren, DJ themafeest boeken, thematische DJ, dress-code DJ.</p>
           </div>
         </div>
       </section>

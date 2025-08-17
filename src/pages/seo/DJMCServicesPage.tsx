@@ -175,28 +175,28 @@ const DJMCServicesPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ MC Services - Professionele DJ & MC Combinatie</h2>
-            <p>Zoek je DJ MC services? DJ Kevin Froger combineert professionele DJ skills met ervaren MC services. Eén persoon voor complete entertainment van begin tot eind.</p>
+            <p>Zoek je DJ MC services? DJ Kevin Froger combineert professionele DJ skills met ervaren MC services. Met 15+ jaar ervaring als DJ & MC - één persoon voor complete entertainment van begin tot eind. DJ MC services Nederland voor alle evenementen.</p>
             
             <h3>DJ MC Services - Voordelen Combinatie</h3>
-            <p>De voordelen van DJ & MC in één persoon: betere afstemming, naadloze overgangen, kosteneffectief, één aanspreekpunt, en perfecte timing tussen muziek en presentatie.</p>
+            <p>De voordelen van DJ & MC in één persoon: betere afstemming, naadloze overgangen tussen muziek en presentatie, kosteneffectief, één aanspreekpunt, perfecte timing, en geen communicatieproblemen. DJ MC services voor optimale event flow.</p>
             
             <h3>MC DJ Bruiloft</h3>
-            <p>Voor bruiloften biedt Kevin complete MC DJ services: ceremonie begeleiding, aankondigingen, eerste dans presentatie, spelletjes leiden, en feestavond entertainment.</p>
+            <p>Voor bruiloften biedt Kevin complete MC DJ services: ceremonie begeleiding, stijlvolle aankondigingen, eerste dans presentatie, spelletjes leiden, en feestavond entertainment. MC DJ bruiloft voor complete dagbegeleiding van jullie mooiste dag.</p>
             
             <h3>MC DJ Bedrijfsfeest</h3>
-            <p>Bij bedrijfsfeesten zorgt Kevin voor professionele MC services: welkomstwoord, presentaties begeleiden, award ceremonies, en zakelijke entertainment.</p>
+            <p>Bij bedrijfsfeesten zorgt Kevin voor professionele MC services: welkomstwoord, presentaties begeleiden, award ceremonies, netwerk facilitatie, en zakelijke entertainment. MC DJ bedrijfsfeest voor representatieve corporate events.</p>
             
             <h3>MC DJ Festival</h3>
-            <p>Voor festivals combineert Kevin DJ sets met MC skills: crowd interaction, energy building, aankondigingen, en publiek entertainment tussen acts.</p>
+            <p>Voor festivals combineert Kevin DJ sets met MC skills: crowd interaction, energy building, aankondigingen, publiek entertainment tussen acts, en crowd control. MC DJ festival voor optimale publieksbeleving en sfeer.</p>
             
             <h3>DJ Presentator Services</h3>
-            <p>Kevin is ook ervaren presentator en kan ceremonies, galas, en officiële evenementen professioneel begeleiden met de juiste tone of voice.</p>
+            <p>Kevin is ook ervaren presentator en kan ceremonies, galas, en officiële evenementen professioneel begeleiden met de juiste tone of voice. DJ presentator services voor alle formele en informele gelegenheden.</p>
             
             <h3>MC DJ Boeken</h3>
-            <p>Wil je een MC DJ boeken? Kevin Froger biedt de perfecte combinatie van DJ en MC services voor complete entertainment op elk evenement.</p>
+            <p>Wil je een MC DJ boeken? Kevin Froger biedt de perfecte combinatie van DJ en MC services voor complete entertainment op elk evenement. MC DJ boeken Nederland - één persoon voor muziek én presentatie.</p>
             
-            <h3>Populaire DJ MC Services</h3>
-            <p>DJ MC services, MC DJ, DJ presentator, entertainment host, ceremony MC, crowd interaction DJ, professional MC DJ, event host DJ, wedding MC DJ.</p>
+            <h3>Populaire Zoektermen DJ MC Services</h3>
+            <p>DJ MC services, MC DJ, DJ presentator, entertainment host, ceremony MC, crowd interaction DJ, professional MC DJ, event host DJ, wedding MC DJ, DJ met MC, presentatie DJ, allround entertainer, complete DJ service.</p>
           </div>
         </div>
       </section>

@@ -135,22 +135,28 @@ const DJHoekscheWaardPage = () => {
           {/* SEO Content - Hidden but accessible to search engines */}
           <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Kevin Froger - Professionele DJ Services Hoeksche Waard</h2>
-            <p>Zoek je een DJ in de Hoeksche Waard? DJ Kevin Froger is dé specialist voor bruiloften, bedrijfsfeesten en festivals in Oud-Beijerland, Strijen, Binnenmaas en omgeving. Met 15+ jaar ervaring zorgt Kevin voor de perfecte muzikale begeleiding van jouw evenement.</p>
+            <p>Zoek je een DJ in de Hoeksche Waard? DJ Kevin Froger is dé lokale specialist voor bruiloften, bedrijfsfeesten en festivals in Oud-Beijerland, Strijen, Binnenmaas en omgeving. Met 15+ jaar ervaring en 200+ events in de regio zorgt Kevin voor de perfecte muzikale begeleiding van jouw evenement in de Hoeksche Waard.</p>
             
             <h3>DJ Hoeksche Waard - Alle Gemeenten</h3>
-            <p>Kevin verzorgt DJ services in alle gemeenten van de Hoeksche Waard: Oud-Beijerland DJ, Strijen DJ, Binnenmaas DJ, Cromstrijen DJ, Korendijk DJ, Westmaas DJ, Heinenoord DJ, Klaaswaal DJ, Maasdam DJ, Puttershoek DJ, Zuid-Beijerland DJ.</p>
+            <p>Kevin verzorgt DJ services in alle gemeenten van de Hoeksche Waard: DJ Oud-Beijerland, DJ Strijen, DJ Binnenmaas, DJ Cromstrijen, DJ Korendijk, DJ Westmaas, DJ Heinenoord, DJ Klaaswaal, DJ Maasdam, DJ Puttershoek, DJ Zuid-Beijerland, DJ Goidschalxoord, DJ Strijensas, DJ Mijnsheerenland. DJ Hoeksche Waard alle dorpen en gemeenten.</p>
             
             <h3>Bruiloft DJ Hoeksche Waard</h3>
-            <p>Zoek je een bruiloft DJ in de Hoeksche Waard? Kevin heeft meer dan 100 bruiloften begeleid in de regio. Van ceremonie tot feestavond, van Oud-Beijerland tot Strijen - altijd de perfecte muziek voor jullie mooiste dag.</p>
+            <p>Zoek je een bruiloft DJ in de Hoeksche Waard? Kevin heeft meer dan 100 bruiloften begeleid in de regio. Van ceremonie tot feestavond, van Oud-Beijerland tot Strijen - altijd de perfecte muziek voor jullie mooiste dag. Bruiloft DJ Hoeksche Waard met lokale kennis en persoonlijke service.</p>
             
             <h3>Bedrijfsfeest DJ Hoeksche Waard</h3>
-            <p>Voor bedrijfsfeesten in de Hoeksche Waard biedt Kevin professionele DJ services. Of het nu gaat om een personeelsfeest, jubileum of netwerkborrel - Kevin zorgt voor de juiste sfeer en representatieve uitstraling.</p>
+            <p>Voor bedrijfsfeesten in de Hoeksche Waard biedt Kevin professionele DJ services. Of het nu gaat om een personeelsfeest, jubileum of netwerkborrel - Kevin zorgt voor de juiste sfeer en representatieve uitstraling. Bedrijfsfeest DJ Hoeksche Waard voor alle lokale ondernemingen en agrarische bedrijven.</p>
             
             <h3>Festival DJ Hoeksche Waard</h3>
-            <p>Kevin heeft ervaring met festivals en grote evenementen in de Hoeksche Waard. Van dorpsfeesten tot grote outdoor events - altijd high-energy performances die het publiek in beweging houden.</p>
+            <p>Van grote festivals tot lokale dorpsfeesten - Kevin heeft ervaring met alle soorten festivals in de Hoeksche Waard. High-energy performances die het publiek in beweging houden. Festival DJ Hoeksche Waard voor alle outdoor events en dorpsfeesten in de regio.</p>
             
             <h3>DJ Boeken Hoeksche Waard</h3>
-            <p>Wil je een DJ boeken in de Hoeksche Waard? Neem contact op met Kevin Froger voor een vrijblijvende offerte. Binnen 24 uur ontvang je een persoonlijk voorstel voor jouw evenement.</p>
+            <p>Wil je een DJ boeken in de Hoeksche Waard? Neem contact op met Kevin Froger voor een vrijblijvende offerte. Binnen 24 uur ontvang je een persoonlijk voorstel voor jouw evenement. DJ boeken Hoeksche Waard - lokale specialist met landelijke ervaring.</p>
+            
+            <h3>Lokale DJ Specialist Hoeksche Waard</h3>
+            <p>Kevin woont in de Hoeksche Waard en kent de regio als geen ander. Van lokale tradities tot moderne wensen - altijd de juiste balans. Lokale DJ Hoeksche Waard met persoonlijke service en korte reisafstanden.</p>
+            
+            <h3>Populaire Zoektermen DJ Hoeksche Waard</h3>
+            <p>DJ Hoeksche Waard, DJ Oud-Beijerland, DJ Strijen, bruiloft DJ Hoeksche Waard, bedrijfsfeest DJ Hoeksche Waard, festival DJ Hoeksche Waard, lokale DJ, DJ Hoeksche Waard boeken, DJ Hoeksche Waard huren, Hoeksche Waard entertainment.</p>
           </div>
           
           <div className="text-center mb-20">

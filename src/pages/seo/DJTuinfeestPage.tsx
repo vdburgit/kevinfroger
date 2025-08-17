@@ -195,22 +195,25 @@ const DJTuinfeestPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Tuinfeest - Specialist in Outdoor Entertainment</h2>
-            <p>Zoek je een DJ voor tuinfeest? DJ Kevin Froger is specialist in outdoor evenementen. Tuinfeest DJ huren met weerbestendige apparatuur en buren-vriendelijke geluidsniveaus.</p>
+            <p>Zoek je een DJ voor tuinfeest? DJ Kevin Froger is specialist in outdoor evenementen. Met 15+ jaar ervaring en 200+ tuinfeesten - tuinfeest DJ huren met weerbestendige apparatuur en buren-vriendelijke geluidsniveaus. DJ tuinfeest Nederland voor alle outdoor events.</p>
             
             <h3>Tuinfeest DJ Huren - Wat Krijg Je?</h3>
-            <p>Bij tuinfeest DJ Kevin krijg je: weerbestendige apparatuur, professionele outdoor setup, geluidsniveaus aangepast aan woonwijken, flexibele tijden, en ervaring met outdoor events.</p>
+            <p>Bij tuinfeest DJ Kevin krijg je: weerbestendige apparatuur, professionele outdoor setup, geluidsniveaus aangepast aan woonwijken, flexibele tijden, overdekte DJ booth, en uitgebreide ervaring met outdoor events. Tuinfeest DJ huren inclusief complete outdoor service.</p>
             
             <h3>DJ Voor Tuinfeest Types</h3>
-            <p>Kevin verzorgt alle tuinfeest types: verjaardagsfeest in de tuin, BBQ party DJ, zomerfeest DJ, pool party DJ, tuinfeest jubileum, familie reünie DJ, en housewarming party DJ.</p>
+            <p>Kevin verzorgt alle tuinfeest types: verjaardagsfeest in de tuin, BBQ party DJ, zomerfeest DJ, pool party DJ, tuinfeest jubileum, familie reünie DJ, housewarming party DJ, garden party DJ, en terras feest DJ. DJ voor tuinfeest alle varianten mogelijk.</p>
             
             <h3>Tuinfeest DJ Apparatuur</h3>
-            <p>Speciale outdoor apparatuur: weerbestendige speakers, overdekte DJ booth, LED verlichting voor avond sfeer, draadloze microfoons, en complete stroomvoorziening.</p>
+            <p>Speciale outdoor apparatuur: weerbestendige speakers, overdekte DJ booth, LED verlichting voor avondsfeer, draadloze microfoons, complete stroomvoorziening, en backup systemen. Tuinfeest DJ apparatuur geschikt voor alle weersomstandigheden.</p>
             
             <h3>DJ Pool Party Specialist</h3>
-            <p>Kevin is ook specialist in pool parties en zwembadfeesten. Waterproof setup, zomer hits, en party sfeer voor de perfecte pool party ervaring.</p>
+            <p>Kevin is ook specialist in pool parties en zwembadfeesten. Waterproof setup, zomer hits, tropical house, en party sfeer voor de perfecte pool party ervaring. DJ pool party met water-resistente apparatuur en zomer vibes.</p>
             
             <h3>Tuinfeest DJ Boeken</h3>
-            <p>Wil je een tuinfeest DJ boeken? Kevin Froger heeft ervaring met alle outdoor events en zorgt voor de perfecte sfeer in jouw tuin.</p>
+            <p>Wil je een tuinfeest DJ boeken? Kevin Froger heeft ervaring met alle outdoor events en zorgt voor de perfecte sfeer in jouw tuin. Tuinfeest DJ boeken Nederland - binnen 24 uur offerte voor jouw outdoor event.</p>
+            
+            <h3>Populaire Zoektermen DJ Tuinfeest</h3>
+            <p>DJ tuinfeest, tuinfeest DJ, DJ voor tuinfeest, outdoor DJ, garden party DJ, BBQ DJ, zomerfeest DJ, pool party DJ, terras DJ, DJ tuinfeest huren, DJ tuinfeest boeken, buitenfeest DJ.</p>
           </div>
         </div>
       </section>

@@ -152,19 +152,19 @@ const DJHurenNederlandPage = () => {
           <div className="sr-only">
             <div className="prose prose-lg max-w-none">
               <h2 className="text-4xl font-black text-gray-900 mb-8 text-center">
-                DJ Huren Nederland - Professionele DJ Services
+                DJ Huren Nederland - #1 Professionele DJ Services Landelijk
               </h2>
               
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
                 <div>
                   <h3 className="text-2xl font-black text-orange-600 mb-4">Waarom DJ Kevin Froger Huren?</h3>
                   <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                    DJ huren in Nederland? DJ Kevin Froger is de professionele keuze voor alle evenementen. 
-                    Als ervaren DJ met 15+ jaar ervaring biedt Kevin betaalbare DJ services zonder concessies aan kwaliteit.
+                    DJ huren in Nederland? DJ Kevin Froger is dé professionele keuze voor alle evenementen. 
+                    Als ervaren DJ met 15+ jaar ervaring en 1000+ succesvolle events biedt Kevin betaalbare DJ services zonder concessies aan kwaliteit. DJ huren Nederland vanaf €350.
                   </p>
                   <p className="text-lg text-gray-700 leading-relaxed">
                     DJ huren inclusief professionele apparatuur, licht en geluid. Geen verborgen kosten, 
-                    transparante prijzen vanaf €350. Allround DJ die inspeelt op het publiek zonder standaard playlists.
+                    transparante prijzen vanaf €350. Allround DJ die inspeelt op het publiek met live mixing - geen standaard playlists. DJ huren Nederland met landelijke dekking.
                   </p>
                 </div>
                 
@@ -174,22 +174,29 @@ const DJHurenNederlandPage = () => {
                     <div className="flex items-start space-x-3">
                       <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                       <div>
-                        <h4 className="font-black text-gray-900">Goedkope DJ met Kwaliteit</h4>
-                        <p className="text-gray-600">Betaalbare prijzen zonder kwaliteitsverlies</p>
+                        <h4 className="font-black text-gray-900">Betaalbare DJ met Topkwaliteit</h4>
+                        <p className="text-gray-600">Goedkope DJ huren vanaf €350 zonder kwaliteitsverlies</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">
                       <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-black text-gray-900">DJ Inclusief Apparatuur</h4>
-                        <p className="text-gray-600">Complete setup met licht en geluid</p>
+                        <p className="text-gray-600">DJ huren inclusief complete setup met licht en geluid</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">
                       <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-black text-gray-900">Ervaren Professionele DJ</h4>
-                        <p className="text-gray-600">15+ jaar ervaring, 1000+ events</p>
+                        <p className="text-gray-600">DJ huren met 15+ jaar ervaring, 1000+ events, 500+ bruiloften</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-black text-gray-900">Landelijke Dekking</h4>
+                        <p className="text-gray-600">DJ huren in alle provincies van Nederland mogelijk</p>
                       </div>
                     </div>
                   </div>
@@ -198,31 +205,40 @@ const DJHurenNederlandPage = () => {
               
               <div className="bg-gradient-to-r from-orange-50 to-blue-50 rounded-2xl p-8 mb-8">
                 <h3 className="text-2xl font-black text-gray-900 mb-6 text-center">
-                  Populaire DJ Huren Zoektermen
+                  Populaire DJ Huren Zoektermen Nederland
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div>
-                    <h4 className="font-black text-orange-600 mb-3">Algemeen DJ Huren</h4>
+                    <h4 className="font-black text-orange-600 mb-3">DJ Huren Algemeen</h4>
                     <div className="space-y-2">
                       {searchTerms.map((term, index) => (
                         <span key={index} className="block text-sm text-gray-700 font-medium">{term}</span>
                       ))}
+                      <span className="block text-sm text-gray-700 font-medium">DJ inhuren</span>
+                      <span className="block text-sm text-gray-700 font-medium">DJ verhuur</span>
+                      <span className="block text-sm text-gray-700 font-medium">DJ service</span>
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-black text-blue-600 mb-3">DJ Huren per Event</h4>
+                    <h4 className="font-black text-blue-600 mb-3">DJ Huren per Evenement</h4>
                     <div className="space-y-2">
                       {eventTypes.map((term, index) => (
                         <span key={index} className="block text-sm text-gray-700 font-medium">{term}</span>
                       ))}
+                      <span className="block text-sm text-gray-700 font-medium">DJ huren bruiloft</span>
+                      <span className="block text-sm text-gray-700 font-medium">DJ huren verjaardag</span>
+                      <span className="block text-sm text-gray-700 font-medium">DJ huren bedrijfsfeest</span>
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-black text-green-600 mb-3">Speciale Events</h4>
+                    <h4 className="font-black text-green-600 mb-3">DJ Huren Speciale Events</h4>
                     <div className="space-y-2">
                       {specialEvents.map((term, index) => (
                         <span key={index} className="block text-sm text-gray-700 font-medium">{term}</span>
                       ))}
+                      <span className="block text-sm text-gray-700 font-medium">DJ huren gala</span>
+                      <span className="block text-sm text-gray-700 font-medium">DJ huren opening</span>
+                      <span className="block text-sm text-gray-700 font-medium">DJ huren evenement</span>
                     </div>
                   </div>
                 </div>
@@ -230,11 +246,11 @@ const DJHurenNederlandPage = () => {
               
               <div className="text-center">
                 <h3 className="text-2xl font-black text-gray-900 mb-4">
-                  DJ Huren - Beste Keuze Nederland
+                  DJ Huren Nederland - Beste Keuze voor Alle Events
                 </h3>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Wil je een DJ huren in Nederland? Kevin Froger is de perfecte keuze. Professionele DJ, 
-                  betaalbare prijzen, eigen apparatuur, en 15+ jaar ervaring. DJ huren was nog nooit zo eenvoudig!
+                  Wil je een DJ huren in Nederland? Kevin Froger is de perfecte keuze voor alle evenementen. Professionele DJ huren met 
+                  betaalbare prijzen vanaf €350, eigen apparatuur, live mixing, en 15+ jaar ervaring. DJ huren Nederland was nog nooit zo eenvoudig - binnen 24 uur offerte!
                 </p>
               </div>
             </div>
