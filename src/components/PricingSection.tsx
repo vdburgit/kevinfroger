@@ -38,15 +38,17 @@ const PricingSection = () => {
           title: 'Standaard Pakket',
           price: 'Op aanvraag',
           duration: '4 uur',
-          description: 'DJ optreden voor 4 uur, zonder apparatuur',
+          description: 'DJ optreden voor 4 uur, inclusief apparatuur',
           features: [
             'DJ optreden voor 4 uur',
+            'Professionele geluidsapparatuur',
+            'Basis verlichting',
             'Voorbespreking muziekvoorkeuren', 
             'Live mixing op locatie',
             'Aanpassing aan publiek en sfeer',
             'Professionele uitvoering'
           ],
-          note: 'Apparatuur niet inbegrepen - wordt ter plaatse geregeld'
+          note: 'Complete setup inclusief geluid en licht'
         },
         {
           id: 'bruiloft-compleet',
@@ -54,32 +56,36 @@ const PricingSection = () => {
           price: 'Op aanvraag',
           duration: '4 uur',
           popular: true,
-          description: 'Uitgebreid DJ optreden met extra aandacht voor details',
+          description: 'Uitgebreid DJ optreden inclusief apparatuur en extra service',
           features: [
             'DJ optreden voor 4 uur',
+            'Professionele geluids- en lichtapparatuur',
+            'Draadloze microfoons',
             'Uitgebreide voorbereiding',
             'Persoonlijke muziekwensen',
             'Strakke afstemming op programma',
             'Extra aandacht voor speciale momenten',
             'Professionele begeleiding'
           ],
-          note: 'Apparatuur niet inbegrepen - focus op perfecte uitvoering'
+          note: 'Complete all-in pakket met premium service'
         },
         {
           id: 'bruiloft-premium',
           title: 'Exclusief Pakket',
           price: 'In overleg',
           duration: '4 uur',
-          description: 'Premium DJ ervaring voor exclusieve evenementen',
+          description: 'Premium DJ ervaring inclusief top apparatuur',
           features: [
             'DJ optreden voor 4 uur',
+            'Premium geluids- en lichtapparatuur',
+            'Uitgebreide verlichting en effecten',
             'Volledig op maat samengesteld',
             'Meerdaagse boekingen mogelijk',
             'Exclusieve voorbereiding',
             'VIP behandeling',
             'Alle speciale wensen mogelijk'
           ],
-          note: 'Voor bijzondere gelegenheden en meerdaagse events'
+          note: 'Luxe all-in pakket voor exclusieve evenementen'
         }
       ]
     },
@@ -95,9 +101,11 @@ const PricingSection = () => {
           title: 'Netwerk Pakket',
           price: 'Op aanvraag',
           duration: '4 uur',
-          description: 'DJ optreden voor zakelijke bijeenkomsten',
+          description: 'DJ optreden inclusief apparatuur voor zakelijke bijeenkomsten',
           features: [
             'DJ optreden voor 4 uur',
+            'Professionele geluidsapparatuur',
+            'Draadloze microfoon',
             'Achtergrondmuziek voor netwerksfeer', 
             'Representatieve en professionele uitstraling',
             'Flexibele muziekstijl',
@@ -110,9 +118,12 @@ const PricingSection = () => {
           price: 'Op aanvraag',
           duration: '4 uur',
           popular: true,
-          description: 'Uitgebreid DJ optreden voor bedrijfsfeesten',
+          description: 'Uitgebreid DJ optreden inclusief complete apparatuur',
           features: [
             'DJ optreden voor 4 uur',
+            'Professionele geluids- en lichtapparatuur',
+            'Draadloze microfoons',
+            'MC services',
             'Professionele begeleiding',
             'Muziek afgestemd op het programma',
             'Flexibele aanpassing tijdens event',
@@ -125,9 +136,12 @@ const PricingSection = () => {
           title: 'Exclusief Corporate',
           price: 'In overleg',
           duration: '4 uur',
-          description: 'Premium DJ ervaring voor exclusieve zakelijke events',
+          description: 'Premium DJ ervaring inclusief top apparatuur',
           features: [
             'DJ optreden voor 4 uur',
+            'Premium geluids- en lichtapparatuur',
+            'Uitgebreide verlichting',
+            'Video/audio integratie',
             'Volledig op maat voor uw event',
             'Muziek volledig op maat',
             'VIP behandeling',
@@ -149,12 +163,13 @@ const PricingSection = () => {
           title: 'Standaard Optreden',
           price: 'Op aanvraag',
           duration: '4 uur',
-          description: 'Energiek DJ optreden voor festivals en feesten',
+          description: 'DJ optreden zonder apparatuur - losse DJ act',
           features: [
             'DJ optreden voor 4 uur',
             'High-energy festival muziek',
             'Aanpassing aan publiek',
-            'Professionele uitvoering'
+            'Professionele uitvoering',
+            'Eigen mixing skills'
           ]
         },
         {
@@ -170,23 +185,27 @@ const PricingSection = () => {
             'Perfect als tussenact',
             'Combineerbaar met hoofdshow',
             'Energieke performance'
-          ],
-          note: 'Ideaal voor festivals met meerdere acts'
+            'Energieke performance',
+            'Professionele mixing'
+          note: 'Apparatuur niet inbegrepen - losse DJ voor festivals'
+          note: 'Losse DJ zonder apparatuur - ideaal voor festivals met eigen techniek'
         },
         {
           id: 'festival-premium',
           title: 'Exclusief Optreden',
           price: 'In overleg',
           duration: 'Flexibel',
-          description: 'Premium DJ ervaring voor exclusieve events',
-          features: [
+          description: 'Premium losse DJ act voor exclusieve festivals',
+          description: 'Losse DJ act zonder apparatuur - flexibele duur',
             'DJ optreden op maat',
             'Meerdaagse boekingen mogelijk',
             'Volledig exclusieve ervaring',
             'VIP behandeling',
             'Alle speciale wensen mogelijk',
-            'Premium service'
+            'Premium service',
+            'Exclusieve mixing'
           ]
+          note: 'Losse DJ zonder apparatuur - voor exclusieve festival acts'
         }
       ]
     }
