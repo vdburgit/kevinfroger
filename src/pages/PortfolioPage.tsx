@@ -5,10 +5,7 @@ import PartnersSection from '../components/PartnersSection';
 
 const PortfolioPage = () => {
   const googleStats = [
-    { number: "5.0", label: "Google Beoordeling", icon: <Star className="w-8 h-8" /> },
-    { number: "50+", label: "Google Reviews", icon: <Quote className="w-8 h-8" /> },
-    { number: "100%", label: "Tevreden Klanten", icon: <Users className="w-8 h-8" /> },
-    { number: "15+", label: "Jaar Ervaring", icon: <Award className="w-8 h-8" /> }
+  
   ];
 
   const achievements = [
