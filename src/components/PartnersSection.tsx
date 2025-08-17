@@ -200,20 +200,20 @@ const PartnersSection = () => {
                   <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 px-8">
                     {slide.map((partner, partnerIndex) => (
                       <div key={partnerIndex} className="group">
-                        <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-4 border border-white/20 hover:border-orange-300/50 transform hover:-translate-y-2 hover:scale-105 h-36 flex flex-col">
+                        <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-white/20 hover:border-orange-300/50 transform hover:-translate-y-2 hover:scale-105 h-32 flex flex-col">
                           {/* Logo Container */}
-                          <div className="h-20 flex items-center justify-center mb-3 bg-gray-50 rounded-lg p-2 group-hover:bg-white transition-colors duration-300">
+                          <div className="h-20 flex items-center justify-center bg-gray-50 rounded-t-lg p-3 group-hover:bg-white transition-colors duration-300">
                             <img 
                               src={partner.logo} 
                               alt={`${partner.name} logo`}
-                              className="max-w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                              className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-300"
                               loading="lazy"
                             />
                           </div>
                           
                           {/* Partner Info */}
-                          <div className="text-center flex-1 flex flex-col justify-center min-h-[2.5rem]">
-                            <h3 className="font-black text-gray-900 text-xs leading-tight group-hover:text-orange-600 transition-colors duration-300 px-1">
+                          <div className="h-12 flex items-center justify-center px-2 py-1">
+                            <h3 className="font-black text-gray-900 text-xs text-center leading-tight group-hover:text-orange-600 transition-colors duration-300 line-clamp-2">
                               {partner.name}
                             </h3>
                           </div>
