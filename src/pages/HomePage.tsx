@@ -180,7 +180,7 @@ const HomePage = () => {
                 aria-label="Bel DJ Kevin Froger"
               >
                 <Phone className="w-3 h-3 mr-1.5" />
-                06 45 25 13 33
+                BEL DIRECT
               </a>
               <a
                 href="https://api.whatsapp.com/send/?phone=31645251333&text&type=phone_number&app_absent=0"
@@ -277,7 +277,7 @@ const HomePage = () => {
               href="tel:0645251333"
               className="border-3 border-white text-white px-12 py-6 rounded-full font-black text-2xl hover:bg-white hover:text-blue-900 transition-all duration-300"
             >
-              06 45 25 13 33
+              BEL DIRECT
             </a>
             <a
               href="https://api.whatsapp.com/send/?phone=31645251333&text&type=phone_number&app_absent=0"
