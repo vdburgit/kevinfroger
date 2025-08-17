@@ -183,10 +183,8 @@ const PricingSection = () => {
             'Aanvullend DJ optreden',
             'Flexibele duur in overleg',
             'Perfect als tussenact',
-            'Combineerbaar met hoofdshow',
             'Energieke performance',
             'Professionele mixing'
-          ],
           note: 'Losse DJ zonder apparatuur - ideaal voor festivals met eigen techniek'
         },
         {
