@@ -184,10 +184,9 @@ const PricingSection = () => {
             'Flexibele duur in overleg',
             'Perfect als tussenact',
             'Combineerbaar met hoofdshow',
-            'Energieke performance'
             'Energieke performance',
             'Professionele mixing'
-          note: 'Apparatuur niet inbegrepen - losse DJ voor festivals'
+          ],
           note: 'Losse DJ zonder apparatuur - ideaal voor festivals met eigen techniek'
         },
         {
@@ -195,8 +194,8 @@ const PricingSection = () => {
           title: 'Exclusief Optreden',
           price: 'In overleg',
           duration: 'Flexibel',
-          description: 'Premium losse DJ act voor exclusieve festivals',
           description: 'Losse DJ act zonder apparatuur - flexibele duur',
+          features: [
             'DJ optreden op maat',
             'Meerdaagse boekingen mogelijk',
             'Volledig exclusieve ervaring',
@@ -204,7 +203,7 @@ const PricingSection = () => {
             'Alle speciale wensen mogelijk',
             'Premium service',
             'Exclusieve mixing'
-          ]
+          ],
           note: 'Losse DJ zonder apparatuur - voor exclusieve festival acts'
         }
       ]
