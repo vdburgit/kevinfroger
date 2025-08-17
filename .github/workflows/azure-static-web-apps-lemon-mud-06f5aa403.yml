@@ -24,23 +24,16 @@ jobs:
           submodules: true
           lfs: false
 
-      # Laat de Azure action alles doen:
-      # - detecteert Node
-      # - npm install
-      # - npm run build  (of jouw script)
-      # - uploadt de 'dist' map
+      # Oryx (in de Azure action) doet: npm install -> npm run build -> deploy
       - name: Build & Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_LEMON_MUD_06F5AA403 }}
           action: upload
-          app_location: "/"          # je project root
-          output_location: "dist"    # Vite/Astro/… standaard outputmap
-          # api_location: "api"      # uncomment zodra je /api toevoegt
-          # (optioneel) Forceer je build-commando:
+          app_location: "/"          # project root
+          output_location: "dist"    # jouw Vite/Astro buildmap
+          api_location: "api"        # Functions-map voor /api/*
           app_build_command: "npm ci && npm run build"
-          # (optioneel) Eigen API-build:
-          # api_build_command: "npm ci && npm run build"
 
   close_pr_env:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
