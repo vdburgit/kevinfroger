@@ -16,7 +16,7 @@ const PricingPage = () => {
       description: "Professionele rookeffecten"
     },
     {
-      name: "Extra Professionele Speakers",
+      name: "Extra Speakers",
       price: "Op aanvraag",
       description: "Professional PA Aanvullende speakers voor grote locaties"
     },
