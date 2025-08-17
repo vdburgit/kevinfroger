@@ -11,6 +11,7 @@ jobs:
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
@@ -23,26 +24,44 @@ jobs:
       - name: Install
         run: npm ci
 
-      # >>> NIEUW: kopieer je afbeeldingen naar de uiteindelijke build-map
-      - name: Copy static images into dist (no repo changes needed)
-        run: |
-          mkdir -p public/images
-          if [ -d "images" ]; then cp -r images/* public/images/; fi
-
-      - name: Build
+      - name: Build (Vite -> dist)
         run: npm run build
+
+      # >>> HIER HET GEMAK: we regelen alles wat Azure nodig heeft
+      - name: Post-build: voeg images en SWA-config toe aan dist
+        run: |
+          # zorg dat dist bestaat
+          test -d dist || (echo "dist ontbreekt - build faalde"; exit 1)
+
+          # 1) images: kopieer repo-root ./images naar dist/images als die map bestaat
+          if [ -d images ]; then
+            mkdir -p dist/images
+            cp -r images/* dist/images/ 2>/dev/null || true
+          fi
+
+          # 2) staticwebapp.config.json: zet dit bestand in dist/ als het in de root staat
+          if [ -f staticwebapp.config.json ]; then
+            cp -f staticwebapp.config.json dist/
+          fi
+          # (als je het ooit in public/ zet, wordt het sowieso gekopieerd door Vite)
+
+          # 3) favicon/vite.svg: voorkom 404's als je template ernaar verwijst
+          if [ -f public/favicon.svg ] && [ ! -f dist/favicon.svg ]; then
+            cp public/favicon.svg dist/favicon.svg
+          fi
+          if [ -f public/vite.svg ] && [ ! -f dist/vite.svg ]; then
+            cp public/vite.svg dist/vite.svg
+          fi
 
       - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_JOLLY_SAND_06934A803 }}
           action: upload
-          app_location: "/"
-          output_location: "dist"
+          app_location: "/"        # project-root
+          output_location: "dist"  # Vite output
           skip_app_build: true
           skip_api_build: true
-          # >>> NIEUW: pak staticwebapp.config.json uit de repo-root mee
-          config_file_location: "/"
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
