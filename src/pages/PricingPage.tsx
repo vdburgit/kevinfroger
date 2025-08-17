@@ -18,7 +18,7 @@ const PricingPage = () => {
     {
       name: "Extra Speakers",
       price: "Op aanvraag",
-      description: "Voor grotere locaties, extra Professional Audio voor +/- 500 gasten"
+      description: "Voor grote locaties is extra professionele audio beschikbaar voor groepen vanaf 300 personen."
     },
     {
       name: "Video Integratie",
