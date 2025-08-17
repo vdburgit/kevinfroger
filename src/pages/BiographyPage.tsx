@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, MapPin, Music, Mic, Heart, Star, Award, Calendar, Users, Zap, ArrowRight, Quote, Phone } from 'lucide-react';
+import { User, MapPin, Music, Mic, Heart, Star, Award, Calendar, Users, Zap, ArrowRight, Quote, Phone, MessageCircle } from 'lucide-react';
 
 const BiographyPage = () => {
   const highlights = [

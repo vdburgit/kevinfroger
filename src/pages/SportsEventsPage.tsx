@@ -1,5 +1,5 @@
 import React from 'react';
-import { Trophy, Users, Target, Calendar, CheckCircle, ArrowRight, Star, Quote, Clock, Medal, Zap, Flag } from 'lucide-react';
+import { Trophy, Users, Target, Calendar, CheckCircle, ArrowRight, Star, Quote, Clock, Medal, Zap, Flag, Phone, MessageCircle } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
 const SportsEventsPage = () => {
