@@ -185,6 +185,7 @@ const PricingSection = () => {
             'Perfect als tussenact',
             'Energieke performance',
             'Professionele mixing'
+          ],
           note: 'Losse DJ zonder apparatuur - ideaal voor festivals met eigen techniek'
         },
         {
