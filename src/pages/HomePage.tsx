@@ -101,23 +101,32 @@ const HomePage = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-blue-900 via-purple-800 to-blue-900 text-white overflow-hidden" role="banner" aria-labelledby="hero-title">
-        {/* Hero Background Image - LCP Element */}
-        <img 
-          src="/images/dj-kevin-froger-bruiloft-scaled.jpeg"
-          srcSet="/images/dj-kevin-froger-bruiloft-scaled.jpeg 800w, /images/dj-kevin-froger-bruiloft-scaled.jpeg 1200w, /images/dj-kevin-froger-bruiloft-scaled.jpeg 1600w"
-          sizes="100vw"
-          alt="DJ Kevin Froger achter de draaitafel tijdens een bruiloft met dansend publiek"
-          className="absolute inset-0 w-full h-full object-cover z-0"
-          width="1600"
-          height="900"
-          loading="eager"
-          decoding="async"
-          fetchPriority="high"
-        />
+      <section className="relative h-screen bg-gradient-to-br from-blue-900 via-purple-800 to-blue-900 text-white overflow-hidden" role="banner" aria-labelledby="hero-title">
+        {/* Hero Slider Background */}
+        <div className="absolute inset-0">
+          {heroSlides.map((slide, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-opacity duration-1000 ${
+                index === currentSlide ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
+              <img 
+                src={slide.image}
+                alt={`DJ Kevin Froger - ${slide.title}`}
+                className="w-full h-full object-cover"
+                width="800"
+                height="600"
+                loading={index === 0 ? "eager" : "lazy"}
+                decoding="async"
+                fetchPriority={index === 0 ? "high" : "low"}
+              />
+            </div>
+          ))}
+        </div>
         
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40 z-1"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
         
         {/* Animated background elements */}
         <div className="absolute top-20 left-10 w-32 h-32 bg-orange-500/20 rounded-full blur-2xl animate-pulse"></div>
@@ -125,67 +134,82 @@ const HomePage = () => {
         <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-blue-400/20 rounded-full blur-lg animate-ping-slow"></div>
         
         {/* Content */}
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 z-2">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 z-10">
           <div className="text-center mobile-hero-content">
-            <h1 id="hero-title" className="text-5xl lg:text-7xl xl:text-8xl font-black mb-8 leading-tight text-shadow-lg">
-              DJ KEVIN
-              <span className="block text-orange-400">FROGER</span>
+            <h1 id="hero-title" className="text-4xl lg:text-6xl xl:text-7xl font-black mb-6 leading-tight text-shadow-lg">
+              {heroSlides[currentSlide].title}
+              <span className="block text-orange-400">{heroSlides[currentSlide].subtitle}</span>
             </h1>
             
-            <p className="text-xl lg:text-2xl mb-12 text-blue-100 leading-relaxed max-w-4xl mx-auto">
-              Allround DJ & entertainment – sfeer, show en volle dansvloer. 
-              Specialist in live mixing en MC services voor onvergetelijke evenementen.
+            <p className="text-lg lg:text-xl mb-10 text-blue-100 leading-relaxed max-w-3xl mx-auto">
+              {heroSlides[currentSlide].description}
             </p>
             
             {/* Desktop buttons */}
-            <div className="hidden md:flex flex-col sm:flex-row gap-6 justify-center mb-16">
+            <div className="hidden md:flex flex-col sm:flex-row gap-6 justify-center mb-12">
               <Link
                 to="/prijzen"
-                className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-10 py-5 rounded-full font-black text-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105"
+                className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-full font-black text-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105"
                 aria-label="Bekijk prijzen en pakketten van DJ Kevin Froger"
               >
-                <Calendar className="w-6 h-6 inline-block mr-3" />
+                <Calendar className="w-5 h-5 inline-block mr-2" />
                 PRIJZEN & PAKKETTEN
-                <ArrowRight className="w-5 h-5 inline-block ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 inline-block ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/contact"
-                className="border-3 border-white text-white px-10 py-5 rounded-full font-black text-xl hover:bg-white hover:text-blue-900 transition-all duration-300"
+                className="border-2 border-white text-white px-8 py-4 rounded-full font-black text-lg hover:bg-white hover:text-blue-900 transition-all duration-300"
                 aria-label="Boek DJ Kevin Froger direct"
               >
-                <Phone className="w-6 h-6 inline-block mr-3" />
+                <Phone className="w-5 h-5 inline-block mr-2" />
                 BOEK DIRECT
               </Link>
               <a
                 href="https://api.whatsapp.com/send/?phone=31645251333&text&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-3 border-green-400 text-green-100 px-10 py-5 rounded-full font-black text-xl hover:bg-green-500 hover:text-white transition-all duration-300"
+                className="border-2 border-green-400 text-green-100 px-8 py-4 rounded-full font-black text-lg hover:bg-green-500 hover:text-white transition-all duration-300"
                 aria-label="Stuur WhatsApp bericht naar DJ Kevin Froger"
               >
-                <MessageCircle className="w-6 h-6 inline-block mr-3" />
+                <MessageCircle className="w-5 h-5 inline-block mr-2" />
                 WHATSAPP
               </a>
             </div>
 
             {/* Mobile buttons */}
-            <div className="md:hidden mobile-btn-container mb-16 px-4">
+            <div className="md:hidden mobile-btn-container mb-12 px-4">
               <Link
                 to="/prijzen"
-                className="mobile-btn bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg font-bold text-lg"
+                className="mobile-btn bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg font-bold text-base"
                 aria-label="Bekijk prijzen en pakketten van DJ Kevin Froger"
               >
-                <Calendar className="w-5 h-5 mr-3" />
+                <Calendar className="w-4 h-4 mr-2" />
                 PRIJZEN & PAKKETTEN
               </Link>
               <Link
                 to="/contact"
-                className="mobile-btn border-2 border-white text-white hover:bg-white hover:text-blue-900 transition-all duration-300 shadow-lg font-bold text-lg"
+                className="mobile-btn border-2 border-white text-white hover:bg-white hover:text-blue-900 transition-all duration-300 shadow-lg font-bold text-base"
                 aria-label="Boek DJ Kevin Froger direct"
               >
-                <Phone className="w-5 h-5 mr-3" />
+                <Phone className="w-4 h-4 mr-2" />
                 BOEK DIRECT
               </Link>
+            </div>
+
+            {/* Slide Indicators */}
+            <div className="flex justify-center space-x-3">
+              {heroSlides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentSlide 
+                      ? 'bg-orange-400 scale-125 shadow-lg shadow-orange-400/50' 
+                      : 'bg-white/30 hover:bg-white/50'
+                  }`}
+                  aria-label={`Ga naar slide ${index + 1}`}
+                />
+              ))}
             </div>
 
             {/* Stats */}
