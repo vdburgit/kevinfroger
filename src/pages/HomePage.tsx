@@ -255,7 +255,7 @@ const HomePage = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
             {services.map((service, index) => (
-              <div key={index} className="group bg-white rounded-2xl lg:rounded-3xl shadow-lg lg:shadow-xl overflow-hidden hover:shadow-xl lg:hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 lg:hover:-translate-y-4 border border-gray-100 mx-4 lg:mx-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                 <div className="relative h-48 lg:h-64 overflow-hidden">
                   <img 
                     src={service.image}
