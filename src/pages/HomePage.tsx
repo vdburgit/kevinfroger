@@ -100,7 +100,7 @@ const HomePage = () => {
 
   return (
     <div className="bg-white">
-      {/* VARIANT ZONDER VIDEO - Optimized Hero Section */}
+      {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-blue-900 via-purple-800 to-blue-900 text-white overflow-hidden" role="banner" aria-labelledby="hero-title">
         {/* Hero Background Image - LCP Element */}
         <img 
@@ -212,71 +212,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      
-      {/* VARIANT MET VIDEO - Alternative with Video Background */}
-      {/* 
-      <header className="hero-section" role="banner" aria-labelledby="hero-title-video">
-        <video 
-          className="hero-image"
-          poster="/images/dj-kevin-froger-bruiloft-scaled.jpeg"
-          muted
-          loop
-          playsInline
-          preload="none"
-          width="1600"
-          height="900"
-          aria-label="DJ Kevin Froger video achtergrond"
-        >
-          <source src="/videos/dj-kevin-hero.webm" type="video/webm" />
-          <source src="/videos/dj-kevin-hero.mp4" type="video/mp4" />
-        </video>
-        
-        <div className="hero-overlay"></div>
-        
-        <div className="hero-content">
-          <h1 id="hero-title-video" className="hero-title">
-            DJ Kevin Froger
-          </h1>
-          
-          <p className="hero-subtitle">
-            Allround DJ & entertainment – sfeer, show en volle dansvloer
-          </p>
-          
-          <p className="hero-description">
-            Specialist in live mixing en MC services. Ik lees het publiek en creëer de perfecte sfeer voor elk moment van jullie evenement.
-          </p>
-          
-          <div className="hero-cta">
-            <Link
-              to="/prijzen"
-              className="btn-primary"
-              aria-label="Bekijk prijzen en pakketten van DJ Kevin Froger"
-            >
-              <Calendar className="icon" />
-              Prijzen & Pakketten
-            </Link>
-            <Link
-              to="/contact"
-              className="btn-secondary"
-              aria-label="Boek DJ Kevin Froger direct"
-            >
-              <Phone className="icon" />
-              Boek Direct
-            </Link>
-          </div>
-        </div>
-        
-        <script>
-          // Start video after page load for performance
-          window.addEventListener('load', function() {
-            const video = document.querySelector('.hero-section video');
-            if (video && video.readyState >= 3) {
-              video.play().catch(() => {});
-            }
-          });
-        </script>
-      </header>
-      */}
 
       {/* Features Section - Stayawake Style */}
       <section className="py-32 bg-gray-50">
