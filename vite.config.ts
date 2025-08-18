@@ -4,14 +4,22 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/',
   plugins: [react()],
+  esbuild: {
+    target: 'es2022',
+    legalComments: 'none',
+    minifyIdentifiers: true,
+    minifySyntax: true,
+    minifyWhitespace: true,
+  },
   build: {
     outDir: 'dist',
     target: 'es2022',
     cssCodeSplit: true,
     sourcemap: false,
-    minify: 'terser',
+    minify: 'esbuild',
     chunkSizeWarningLimit: 1000,
     assetsInlineLimit: 4096,
+    reportCompressedSize: false,
     rollupOptions: {
       output: {
         assetFileNames: (assetInfo) => {
@@ -27,6 +35,11 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
           icons: ['lucide-react'],
+          seo: [
+            './src/pages/seo/DJRotterdamPage',
+            './src/pages/seo/DJDenHaagPage',
+            './src/pages/seo/DJHoekscheWaardPage'
+          ],
         },
       },
       treeshake: {
@@ -39,11 +52,14 @@ export default defineConfig({
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom', 'lucide-react'],
     exclude: ['@vite/client', '@vite/env'],
-    force: true
+    force: false
   },
   server: {
     hmr: { overlay: false },
     host: true,
-    cors: true
+    cors: true,
+    headers: {
+      'Cache-Control': 'no-cache'
+    }
   },
 })

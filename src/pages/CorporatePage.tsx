@@ -5,10 +5,10 @@ import ContactForm from '../components/ContactForm';
 const CorporatePage = () => {
   // SEO metadata for this page
   React.useEffect(() => {
-    document.title = "Bedrijfsfeest DJ Nederland | Corporate Events | DJ Kevin Froger";
+    document.title = "Bedrijfsfeest DJ Nederland | Corporate Events | DJ Kevin Froger | 200+ Bedrijfsfeesten";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', '🏢 Bedrijfsfeest DJ Nederland ✨ Professionele corporate entertainment, 200+ bedrijfsfeesten. Representatieve DJ services. Boek nu! 📞 06-45251333');
+      metaDescription.setAttribute('content', '🏢 Bedrijfsfeest DJ Nederland ✨ 200+ bedrijfsfeesten, professionele corporate entertainment. Representatieve DJ & MC services. Boek nu! 📞 06-45251333');
     }
   }, []);
 

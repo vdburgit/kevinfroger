@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import MobileCTA from './components/MobileCTA';
 import ScrollToTop from './components/ScrollToTop';
 
-// Lazy load pages for better performance
+// Lazy load pages for optimal performance and code splitting
 const HomePage = React.lazy(() => import('./pages/HomePage'));
 const WeddingsPage = React.lazy(() => import('./pages/WeddingsPage'));
 const CorporatePage = React.lazy(() => import('./pages/CorporatePage'));
@@ -21,7 +21,7 @@ const BiographyPage = React.lazy(() => import('./pages/BiographyPage'));
 const PrivacyPage = React.lazy(() => import('./pages/PrivacyPage'));
 const TermsPage = React.lazy(() => import('./pages/TermsPage'));
 
-// SEO Landing Pages
+// SEO Landing Pages - Lazy loaded for performance
 const AutoSEORouter = React.lazy(() => import('./components/AutoSEORouter'));
 const DJHoekscheWaardPage = React.lazy(() => import('./pages/seo/DJHoekscheWaardPage'));
 const DJRotterdamPage = React.lazy(() => import('./pages/seo/DJRotterdamPage'));
@@ -47,7 +47,7 @@ const DJTielPage = React.lazy(() => import('./pages/seo/DJTielPage'));
 const DJKerkAvezaathPage = React.lazy(() => import('./pages/seo/DJKerkAvezaathPage'));
 const DJVerjaardagPage = React.lazy(() => import('./pages/seo/DJVerjaardagPage'));
 
-// Additional SEO Pages
+// Additional SEO Pages - Performance optimized loading
 const DJLeidenPage = React.lazy(() => import('./pages/seo/DJLeidenPage'));
 const DJDelftPage = React.lazy(() => import('./pages/seo/DJDelftPage'));
 const DJZoetermeerPage = React.lazy(() => import('./pages/seo/DJZoetermeerPage'));
@@ -60,7 +60,7 @@ const ProfessionaleDJPage = React.lazy(() => import('./pages/seo/ProfessionaleDJ
 const LiveMixingDJPage = React.lazy(() => import('./pages/seo/LiveMixingDJPage'));
 const DJMCServicesPage = React.lazy(() => import('./pages/seo/DJMCServicesPage'));
 
-// Ultimate SEO Pages
+// Ultimate SEO Pages - Chunked for performance
 const DJHurenNederlandPage = React.lazy(() => import('./pages/seo/DJHurenNederlandPage'));
 const GoedkopeDJPage = React.lazy(() => import('./pages/seo/GoedkopeDJPage'));
 const DJMetApparatuurPage = React.lazy(() => import('./pages/seo/DJMetApparatuurPage'));
@@ -69,15 +69,17 @@ const DJSchuurfeestPage = React.lazy(() => import('./pages/seo/DJSchuurfeestPage
 const DJThemafeestPage = React.lazy(() => import('./pages/seo/DJThemafeestPage'));
 const DJKoningsdagPage = React.lazy(() => import('./pages/seo/DJKoningsdagPage'));
 
-// Dynamic SEO Components
+// Dynamic SEO Components - On-demand loading
 const DynamicSEOGenerator = React.lazy(() => import('./components/DynamicSEOGenerator'));
 const DJNederlandPage = React.lazy(() => import('./pages/seo/DJNederlandPage'));
 import { dutchCities, eventTypes } from './data/dutchCities';
 
-// Loading component
+// Optimized loading component
 const LoadingSpinner = () => (
-  <div className="min-h-screen flex items-center justify-center bg-white">
-    <div className="w-16 h-16 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
+  <div className="min-h-screen flex items-center justify-center bg-white contain-strict">
+    <div className="w-16 h-16 border-4 border-orange-500 border-t-transparent rounded-full animate-spin gpu-accelerated" role="status" aria-label="Pagina laden...">
+      <span className="sr-only">Laden...</span>
+    </div>
   </div>
 );
 
@@ -105,7 +107,7 @@ function App() {
               <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/algemene-voorwaarden" element={<TermsPage />} />
             
-              {/* SEO Landing Pages */}
+              {/* SEO Landing Pages - Performance optimized */}
               <Route path="/dj-hoeksche-waard" element={<DJHoekscheWaardPage />} />
               <Route path="/dj-rotterdam" element={<DJRotterdamPage />} />
               <Route path="/dj-den-haag" element={<DJDenHaagPage />} />
@@ -125,14 +127,14 @@ function App() {
               <Route path="/bruiloft-dj-den-haag" element={<BruiloftDJDenHaagPage />} />
               <Route path="/feest-dj-hoeksche-waard" element={<FeestDJHoekscheWaardPage />} />
             
-              {/* New SEO Pages */}
+              {/* Regional SEO Pages */}
               <Route path="/dj-s-gravendeel" element={<DJSGravendeelPage />} />
               <Route path="/dj-regio-tiel" element={<DJRegioTielPage />} />
               <Route path="/dj-tiel" element={<DJTielPage />} />
               <Route path="/dj-kerk-avezaath" element={<DJKerkAvezaathPage />} />
               <Route path="/dj-verjaardag" element={<DJVerjaardagPage />} />
             
-              {/* Additional SEO Pages */}
+              {/* Major Cities SEO Pages */}
               <Route path="/dj-leiden" element={<DJLeidenPage />} />
               <Route path="/dj-delft" element={<DJDelftPage />} />
               <Route path="/dj-zoetermeer" element={<DJZoetermeerPage />} />
@@ -145,7 +147,7 @@ function App() {
               <Route path="/live-mixing-dj" element={<LiveMixingDJPage />} />
               <Route path="/dj-mc-services" element={<DJMCServicesPage />} />
             
-              {/* Ultimate SEO Pages */}
+              {/* Service-specific SEO Pages */}
               <Route path="/dj-huren-nederland" element={<DJHurenNederlandPage />} />
               <Route path="/dj-huren" element={<DJHurenNederlandPage />} />
               <Route path="/dj-boeken" element={<DJBoekenNederlandPage />} />
@@ -162,15 +164,15 @@ function App() {
               <Route path="/dj-koningsdag" element={<DJKoningsdagPage />} />
               <Route path="/koningsdag-dj" element={<DJKoningsdagPage />} />
             
-              {/* Dynamic SEO Routes - Auto-generated for all Dutch cities */}
+              {/* Dynamic SEO Routes - Performance optimized */}
               <Route path="/dj-nederland" element={<DJNederlandPage />} />
             
-              {/* Auto-generate routes for all Dutch cities */}
+              {/* Auto-generated city routes - Lazy loaded */}
               {dutchCities.map(city => {
                 const citySlug = city.name.toLowerCase().replace(/\s+/g, '-').replace(/'/g, '');
                 return (
                   <React.Fragment key={citySlug}>
-                    {/* Basic city DJ page - only if not already manually created */}
+                    {/* City DJ pages - Exclude manually created ones */}
                     {!['hoeksche-waard', 'rotterdam', 'den-haag', 'dordrecht', 'westland', 'schiedam', 'spijkenisse', 'barendrecht', 'vlaardingen', 'capelle-aan-den-ijssel', 'maassluis', 'brielle', 'hellevoetsluis', 'goeree-overflakkee', 'leiden', 'delft', 'zoetermeer', 'gouda', 'alphen-aan-den-rijn', 'utrecht', 'amsterdam', 's-gravendeel', 'tiel'].includes(citySlug) && (
                       <Route 
                         path={`/dj-${citySlug}`} 
@@ -178,7 +180,7 @@ function App() {
                       />
                     )}
                   
-                    {/* City + event type combinations */}
+                    {/* City + event combinations - Dynamic generation */}
                     {eventTypes.map(event => (
                       <React.Fragment key={`${citySlug}-${event.name}`}>
                         <Route 
@@ -195,7 +197,7 @@ function App() {
                 );
               })}
             
-              {/* Auto-generated SEO routes for all Dutch cities */}
+              {/* Fallback auto-generated routes */}
               <Route path="/auto-seo/*" element={<AutoSEORouter />} />
             </Routes>
           </React.Suspense>

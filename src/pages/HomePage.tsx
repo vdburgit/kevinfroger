@@ -104,7 +104,7 @@ const HomePage = () => {
             <img 
               src={slide.image}
               alt={`DJ Kevin Froger - ${slide.title} ${slide.subtitle}`}
-              className="w-full h-full object-cover" 
+              className="w-full h-full object-cover"
               srcSet={`${slide.image} 1920w, ${slide.image} 1200w, ${slide.image} 800w`}
               sizes="100vw"
               width="1920"

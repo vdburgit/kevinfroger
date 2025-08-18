@@ -5,10 +5,10 @@ import ContactForm from '../components/ContactForm';
 const ContactPage = () => {
   // SEO metadata for this page
   React.useEffect(() => {
-    document.title = "Contact DJ Kevin Froger | DJ Boeken Nederland | Gratis Offerte";
+    document.title = "Contact DJ Kevin Froger | DJ Boeken Nederland | Gratis Offerte Binnen 24u";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', '📞 Contact DJ Kevin Froger ✨ Gratis offerte binnen 24u, DJ boeken Nederland. 15+ jaar ervaring, 1000+ events. Bel 06-45251333!');
+      metaDescription.setAttribute('content', '📞 Contact DJ Kevin Froger ✨ Gratis offerte binnen 24u, DJ boeken Nederland alle provincies. 15+ jaar ervaring, 1000+ events. Bel 06-45251333!');
     }
   }, []);
 
