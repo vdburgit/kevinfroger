@@ -156,6 +156,16 @@ const HomePage = () => {
                 <Phone className="w-6 h-6 inline-block mr-3" />
                 BOEK DIRECT
               </Link>
+              <a
+                href="https://api.whatsapp.com/send/?phone=31645251333&text&type=phone_number&app_absent=0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-3 border-green-400 text-green-100 px-10 py-5 rounded-full font-black text-xl hover:bg-green-500 hover:text-white transition-all duration-300"
+                aria-label="Stuur WhatsApp bericht naar DJ Kevin Froger"
+              >
+                <MessageCircle className="w-6 h-6 inline-block mr-3" />
+                WHATSAPP
+              </a>
             </div>
 
             {/* Mobile buttons */}
