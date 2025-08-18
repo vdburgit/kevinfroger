@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, ArrowRight, Users, Music, Award, Phone, Zap, Heart, Building, Volume2, Mic, MessageCircle } from 'lucide-react';
+import { Calendar, ArrowRight, Users, Music, Award, Phone, Zap, Heart, Building, Volume2, Mic, MessageCircle, CheckCircle } from 'lucide-react';
 import MusicGenresSection from '../components/MusicGenresSection';
 import PartnersSection from '../components/PartnersSection';
 
@@ -229,27 +229,86 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-              <div key={index} className="group bg-white rounded-2xl lg:rounded-3xl shadow-lg lg:shadow-xl overflow-hidden hover:shadow-xl lg:hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 lg:hover:-translate-y-4 border border-gray-100 mx-4 lg:mx-0">
-                <div className="p-4 lg:p-6">
-                  <p className="text-sm lg:text-base text-gray-600 mb-4 lg:mb-6 leading-relaxed">{service.description}</p>
+
+      {/* Services Section */}
+      <section className="py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <div className="space-y-2 lg:space-y-3 mb-4 lg:mb-6">
+          <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-gray-900 mb-4 lg:mb-6 text-shadow">
-              WAAROM
-                        <div className="w-5 h-5 lg:w-6 lg:h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
-                          <CheckCircle className="w-3 h-3 lg:w-4 lg:h-4 text-white" />
+              MIJN SERVICES
+              <span className="block text-orange-500">VOOR ELKE GELEGENHEID</span>
+            </h2>
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-                        <span className="text-sm lg:text-base text-gray-700 font-medium">{feature}</span>
-              De perfecte combinatie van ervaring, professionaliteit en passie
+              Van intieme bruiloften tot grote festivals - ik zorg voor de perfecte muzikale sfeer
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+            {services.map((service, index) => (
+              <div key={index} className="group bg-white rounded-2xl lg:rounded-3xl shadow-lg lg:shadow-xl overflow-hidden hover:shadow-xl lg:hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 lg:hover:-translate-y-4 border border-gray-100 mx-4 lg:mx-0">
+                <div className="relative h-48 lg:h-64 overflow-hidden">
+                  <img 
+                    src={service.image}
+                    alt={`DJ Kevin Froger - ${service.title}`}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   <div className="absolute top-4 right-4 lg:top-6 lg:right-6">
                     <div className={`w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r ${service.color} rounded-full flex items-center justify-center text-white shadow-lg`}>
+                      {service.icon}
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="p-4 lg:p-6">
+                  <h3 className="text-xl lg:text-2xl font-black text-gray-900 mb-3 lg:mb-4">{service.title}</h3>
+                  <p className="text-sm lg:text-base text-gray-600 mb-4 lg:mb-6 leading-relaxed">{service.description}</p>
+                  
+                  <div className="space-y-2 lg:space-y-3 mb-4 lg:mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center">
+                        <div className="w-5 h-5 lg:w-6 lg:h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                          <CheckCircle className="w-3 h-3 lg:w-4 lg:h-4 text-white" />
+                        </div>
+                        <span className="text-sm lg:text-base text-gray-700 font-medium ml-3">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <Link
+                    to={service.link}
+                    className={`inline-flex items-center bg-gradient-to-r ${service.color} text-white px-4 lg:px-6 py-2 lg:py-3 rounded-full font-bold text-sm lg:text-base hover:shadow-lg transition-all duration-300 group`}
+                  >
+                    MEER INFO
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-gray-900 mb-4 lg:mb-6 text-shadow">
+              WAAROM
+              <span className="block text-orange-500">DJ KEVIN FROGER?</span>
+            </h2>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
+              De perfecte combinatie van ervaring, professionaliteit en passie
+            </p>
+          </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
             {features.map((feature, index) => (
               <div key={index} className="text-center group px-4 lg:px-0">
                 <div className={`w-20 h-20 lg:w-24 lg:h-24 bg-gradient-to-br ${feature.color} rounded-full flex items-center justify-center mx-auto mb-6 lg:mb-8 text-white group-hover:scale-110 transition-transform duration-300 shadow-xl lg:shadow-2xl`}>
                   {feature.icon}
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                </div>
                 <h3 className="text-xl lg:text-2xl font-black text-gray-900 mb-4 lg:mb-6">{feature.title}</h3>
                 <p className="text-sm lg:text-base text-gray-600 leading-relaxed">{feature.description}</p>
               </div>
