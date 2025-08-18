@@ -1,4 +1,4 @@
-# Performance & SEO Optimizations
+# Performance & SEO Optimizations for Apache
 <IfModule mod_rewrite.c>
     RewriteEngine On
     
@@ -6,26 +6,62 @@
     RewriteCond %{HTTPS} off
     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
     
-    # Force non-www
+    # Force non-www (canonical domain)
     RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
     RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
     
-    # SPA Fallback
+    # SPA Fallback for React Router
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} !^/api/
+    RewriteCond %{REQUEST_URI} !^/images/
+    RewriteCond %{REQUEST_URI} !^/assets/
     RewriteRule . /index.html [L]
+    
+    # SEO Redirects
+    RewriteRule ^dj-boeken-nederland/?$ /dj-boeken [R=301,L]
+    RewriteRule ^dj-huren-nederland/?$ /dj-huren [R=301,L]
+    RewriteRule ^bruiloft-dj/?$ /bruiloften [R=301,L]
+    RewriteRule ^bedrijfsfeest-dj/?$ /bedrijfsfeesten [R=301,L]
+    RewriteRule ^festival-dj/?$ /festivals [R=301,L]
+    RewriteRule ^dj-kevin-froger/?$ / [R=301,L]
+    RewriteRule ^kevin-froger-dj/?$ / [R=301,L]
+    RewriteRule ^dj-kevin/?$ / [R=301,L]
 </IfModule>
 
 # Security Headers
 <IfModule mod_headers.c>
+    # HSTS
     Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    
+    # Security
     Header always set X-Content-Type-Options "nosniff"
     Header always set X-Frame-Options "DENY"
     Header always set X-XSS-Protection "1; mode=block"
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+    
+    # CORS for fonts
+    <FilesMatch "\.(woff2?|eot|ttf|otf)$">
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
 </IfModule>
 
-# Compression
+# Compression - Brotli + Gzip
+<IfModule mod_brotli.c>
+    AddOutputFilterByType BROTLI_COMPRESS text/plain
+    AddOutputFilterByType BROTLI_COMPRESS text/html
+    AddOutputFilterByType BROTLI_COMPRESS text/xml
+    AddOutputFilterByType BROTLI_COMPRESS text/css
+    AddOutputFilterByType BROTLI_COMPRESS application/xml
+    AddOutputFilterByType BROTLI_COMPRESS application/xhtml+xml
+    AddOutputFilterByType BROTLI_COMPRESS application/rss+xml
+    AddOutputFilterByType BROTLI_COMPRESS application/javascript
+    AddOutputFilterByType BROTLI_COMPRESS application/x-javascript
+    AddOutputFilterByType BROTLI_COMPRESS application/json
+    AddOutputFilterByType BROTLI_COMPRESS image/svg+xml
+</IfModule>
+
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/plain
     AddOutputFilterByType DEFLATE text/html
@@ -36,19 +72,63 @@
     AddOutputFilterByType DEFLATE application/rss+xml
     AddOutputFilterByType DEFLATE application/javascript
     AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
     AddOutputFilterByType DEFLATE image/svg+xml
 </IfModule>
 
-# Caching
+# Aggressive Caching for Performance
 <IfModule mod_expires.c>
     ExpiresActive On
+    
+    # Static Assets - 1 year
     ExpiresByType text/css "access plus 1 year"
     ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType application/x-javascript "access plus 1 year"
+    
+    # Images - 1 year
     ExpiresByType image/png "access plus 1 year"
     ExpiresByType image/jpg "access plus 1 year"
     ExpiresByType image/jpeg "access plus 1 year"
     ExpiresByType image/gif "access plus 1 year"
     ExpiresByType image/svg+xml "access plus 1 year"
     ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/avif "access plus 1 year"
+    
+    # Fonts - 1 year
     ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+    
+    # HTML - Short cache for updates
+    ExpiresByType text/html "access plus 1 hour"
+    
+    # Manifests
+    ExpiresByType application/manifest+json "access plus 1 week"
+    ExpiresByType text/cache-manifest "access plus 0 seconds"
+</IfModule>
+
+# Cache Control Headers
+<IfModule mod_headers.c>
+    # Static assets - Immutable
+    <FilesMatch "\.(css|js|png|jpg|jpeg|gif|svg|webp|avif|woff2|woff)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+        Header set Vary "Accept-Encoding"
+    </FilesMatch>
+    
+    # HTML files - Short cache
+    <FilesMatch "\.html$">
+        Header set Cache-Control "public, max-age=3600, must-revalidate"
+        Header set Vary "Accept-Encoding"
+    </FilesMatch>
+    
+    # API responses - No cache
+    <FilesMatch "^(api|\.netlify)">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+    </FilesMatch>
+</IfModule>
+
+# ETags for better caching
+<IfModule mod_headers.c>
+    Header unset ETag
+    FileETag None
 </IfModule>

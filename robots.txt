@@ -2,18 +2,30 @@ User-agent: *
 Allow: /
 Crawl-delay: 1
 
-# High priority pages
+# High priority pages for indexing
 Allow: /bruiloften
 Allow: /bedrijfsfeesten
 Allow: /festivals
 Allow: /contact
 Allow: /prijzen
 Allow: /portfolio
+Allow: /evenementen
+Allow: /biografie
 
-# SEO landing pages
+# SEO landing pages - High value
 Allow: /dj-*
 Allow: /bruiloft-dj-*
 Allow: /feest-dj-*
+Allow: /goedkope-dj
+Allow: /professionele-dj
+Allow: /live-mixing-dj
+Allow: /dj-huren*
+Allow: /dj-boeken*
+Allow: /dj-met-apparatuur
+Allow: /dj-tuinfeest
+Allow: /dj-schuurfeest
+Allow: /dj-themafeest
+Allow: /dj-koningsdag
 
 # Static assets
 Allow: /images/
@@ -21,7 +33,7 @@ Allow: /assets/
 Allow: /css/
 Allow: /js/
 
-# Block development files
+# Block development and system files
 Disallow: /src/
 Disallow: /.git/
 Disallow: /node_modules/
@@ -29,6 +41,22 @@ Disallow: /dist/
 Disallow: /*.json$
 Disallow: /*.config.*
 Disallow: /api/
+Disallow: /.env*
+Disallow: /package*.json
+Disallow: /tsconfig*.json
+Disallow: /vite.config.*
+Disallow: /tailwind.config.*
+Disallow: /postcss.config.*
+Disallow: /eslint.config.*
+Disallow: /.github/
+Disallow: /netlify/
+Disallow: /supabase/
+
+# Block query parameters that don't change content
+Disallow: /*?utm_*
+Disallow: /*?fbclid=*
+Disallow: /*?gclid=*
+Disallow: /*?ref=*
 
 # Sitemaps
 Sitemap: https://kevinfroger.nl/sitemap.xml
