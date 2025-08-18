@@ -265,6 +265,7 @@ const HomePage = () => {
                     width="400"
                     height="256"
                   />
+                  />
                   <div className="absolute top-4 right-4 lg:top-6 lg:right-6">
                     <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-full flex items-center justify-center text-white shadow-lg`}>
                       {service.icon}
