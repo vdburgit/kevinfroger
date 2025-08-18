@@ -12,6 +12,18 @@
     <meta name="googlebot" content="index, follow" />
     <meta name="theme-color" content="#f97316" />
 
+    <!-- Critical CSS Preload -->
+    <noscript></noscript>
+    
+    <!-- Font Preload -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"></noscript>
+    
+    <!-- LCP Image Preload -->
+    <link rel="preload" as="image" href="/images/dj-kevin-froger-bruiloft-scaled.jpeg" 
+          imagesrcset="/images/dj-kevin-froger-bruiloft-scaled.jpeg 1920w, /images/dj-kevin-froger-bruiloft-1200.jpeg 1200w, /images/dj-kevin-froger-bruiloft-800.jpeg 800w"
+          imagesizes="100vw" fetchpriority="high">
+    
     <!-- Locale/SEO -->
     <link rel="alternate" hreflang="nl-NL" href="https://kevinfroger.nl/" />
     <link rel="canonical" href="https://kevinfroger.nl/" />
@@ -60,19 +72,18 @@
     }
     </script>
 
-    <!-- Preload images (optioneel) -->
-    <link rel="preload" href="/images/kevin-logo.png" as="image" />
-    <link rel="preload" href="/images/kevin-portrait.jpg" as="image" />
-    <link rel="preload" href="/images/dj-kevin-froger-bruiloft-scaled.jpeg" as="image" />
-    <script type="module" crossorigin src="/assets/index-D_FdDJs-.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/vendor-BBkbCGd-.js">
-    <link rel="modulepreload" crossorigin href="/assets/icons-Be11bG61.js">
-    <link rel="modulepreload" crossorigin href="/assets/pages-CYeu4JYJ.js">
-    <link rel="stylesheet" crossorigin href="/assets/index-BS9bIFo3.css">
+    <!-- Resource Hints -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//api.whatsapp.com">
+    <script type="module" crossorigin src="/assets/index-B_P9Ljbo.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-aXfCLzXv.js">
+    <link rel="modulepreload" crossorigin href="/assets/icons--4jukR6O.js">
+    <link rel="modulepreload" crossorigin href="/assets/components-BgZvBfjw.js">
+    <link rel="modulepreload" crossorigin href="/assets/seo-DaE6mZQf.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-DcmAe6xT.css">
   </head>
   <body>
     <div id="root"></div>
-    <!-- BELANGRIJK: dit mount de React-app (Vite vervangt dit naar /assets/index-*.js) -->
   </body>
 </html>
 
