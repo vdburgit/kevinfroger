@@ -256,6 +256,10 @@ const EventsPage = () => {
                 src="/images/kevin-portrait.png" 
                 alt="DJ Kevin Froger"
                 className="w-full rounded-3xl shadow-2xl"
+                width="600"
+                height="800"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

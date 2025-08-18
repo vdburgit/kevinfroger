@@ -104,10 +104,14 @@ const HomePage = () => {
             <img 
               src={slide.image}
               alt={`DJ Kevin Froger - ${slide.title} ${slide.subtitle}`}
-              className="w-full h-full object-cover"
-              loading={index === 0 ? "eager" : "lazy"}
+              className="w-full h-full object-cover" 
+              srcSet={`${slide.image} 1920w, ${slide.image.replace('.jpeg', '-1200.jpeg')} 1200w, ${slide.image.replace('.jpeg', '-800.jpeg')} 800w`}
+              sizes="100vw"
               width="1920"
               height="1080"
+              loading={index === 0 ? "eager" : "lazy"}
+              decoding={index === 0 ? "sync" : "async"}
+              fetchPriority={index === 0 ? "high" : "auto"}
             />
           </div>
         ))}

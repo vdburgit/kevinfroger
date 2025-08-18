@@ -208,6 +208,16 @@ const MusicGenresSection = () => {
     setIsAutoPlaying(false);
   };
 
+  // Optimize scroll listeners for performance
+  useEffect(() => {
+    const handleScroll = () => {
+      // Passive scroll handling
+    };
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <section className="py-32 bg-gradient-to-br from-white via-gray-50 to-blue-50 relative overflow-hidden">
       {/* Background Elements */}

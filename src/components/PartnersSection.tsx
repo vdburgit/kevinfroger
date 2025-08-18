@@ -207,7 +207,10 @@ const PartnersSection = () => {
                               src={partner.logo} 
                               alt={`${partner.name} logo`}
                               className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                              width="120"
+                              height="60"
                               loading="lazy"
+                              decoding="async"
                             />
                           </div>
                           

@@ -3,6 +3,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Critical CSS - Above the fold styles */
+.hero-critical {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 50%, #1e3a8a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -440,17 +448,32 @@ select:focus {
 }
 
 .animate-scroll-logos {
-  animation: scroll-logos 40s linear infinite;
+  animation: scroll-logos 60s linear infinite;
   will-change: transform; /* Optimize for animations */
+  transform: translateZ(0); /* Force GPU acceleration */
 }
 
 .animate-scroll-logos:hover {
   animation-play-state: paused;
 }
 
+/* Performance optimizations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Reduce motion for performance */
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   .animate-scroll-logos {
+    animation: none;
+  }
+  
+  .animate-pulse,
+  .animate-bounce-slow,
+  .animate-ping-slow,
+  .animate-float {
     animation: none;
   }
 }

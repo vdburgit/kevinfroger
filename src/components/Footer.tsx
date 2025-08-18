@@ -58,6 +58,10 @@ const Footer = () => {
                 src="/images/kevin-logo.png" 
                 alt="DJ Kevin Froger - #1 Bruiloft DJ Nederland" 
                 className="h-20 w-auto mb-6 drop-shadow-2xl"
+                width="200"
+                height="80"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <p className="text-blue-200 text-lg leading-relaxed mb-8">

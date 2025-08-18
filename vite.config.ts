@@ -6,33 +6,36 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
-    target: 'es2015',
+    target: 'es2020',
     cssCodeSplit: true,
     sourcemap: false,
-    minify: 'terser',
+    minify: 'esbuild',
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
+        assetFileNames: 'assets/[name]-[hash][extname]',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
           icons: ['lucide-react'],
-          pages: [
-            'src/pages/HomePage.tsx',
-            'src/pages/WeddingsPage.tsx',
-            'src/pages/CorporatePage.tsx',
-            'src/pages/FestivalPage.tsx'
+          seo: [
+            'src/pages/seo/DJRotterdamPage.tsx',
+            'src/pages/seo/DJDenHaagPage.tsx',
+            'src/pages/seo/DJHoekscheWaardPage.tsx'
+          ],
+          components: [
+            'src/components/ContactForm.tsx',
+            'src/components/PartnersSection.tsx',
+            'src/components/MusicGenresSection.tsx'
           ]
         },
       },
     },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-      },
-    },
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
+    include: ['react', 'react-dom', 'react-router-dom', 'lucide-react'],
+    exclude: ['@vite/client', '@vite/env']
   },
   server: {
     hmr: { overlay: false },

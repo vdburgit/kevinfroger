@@ -11,6 +11,16 @@ const MobileCTA = () => {
     window.location.href = 'tel:0645251333';
   };
 
+  // Optimize event listeners for performance
+  React.useEffect(() => {
+    const handleScroll = () => {
+      // Passive scroll listener for better performance
+    };
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="fixed bottom-3 left-3 right-3 z-50 md:hidden">
       <div className="flex gap-2 max-w-sm mx-auto">

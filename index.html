@@ -12,6 +12,19 @@
     <meta name="googlebot" content="index, follow" />
     <meta name="theme-color" content="#f97316" />
 
+    <!-- Critical CSS Preload -->
+    <link rel="preload" href="/src/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/src/index.css"></noscript>
+    
+    <!-- Font Preload -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"></noscript>
+    
+    <!-- LCP Image Preload -->
+    <link rel="preload" as="image" href="/images/dj-kevin-froger-bruiloft-scaled.jpeg" 
+          imagesrcset="/images/dj-kevin-froger-bruiloft-scaled.jpeg 1920w, /images/dj-kevin-froger-bruiloft-1200.jpeg 1200w, /images/dj-kevin-froger-bruiloft-800.jpeg 800w"
+          imagesizes="100vw" fetchpriority="high">
+    
     <!-- Locale/SEO -->
     <link rel="alternate" hreflang="nl-NL" href="https://kevinfroger.nl/" />
     <link rel="canonical" href="https://kevinfroger.nl/" />
@@ -60,15 +73,13 @@
     }
     </script>
 
-    <!-- Preload images (optioneel) -->
-    <link rel="preload" href="/images/kevin-logo.png" as="image" />
-    <link rel="preload" href="/images/kevin-portrait.jpg" as="image" />
-    <link rel="preload" href="/images/dj-kevin-froger-bruiloft-scaled.jpeg" as="image" />
+    <!-- Resource Hints -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//api.whatsapp.com">
   </head>
   <body>
     <div id="root"></div>
-    <!-- BELANGRIJK: dit mount de React-app (Vite vervangt dit naar /assets/index-*.js) -->
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx" defer></script>
   </body>
 </html>
 
