@@ -342,7 +342,7 @@ const Footer = () => {
           {/* Copyright Section */}
           <div className="flex flex-col md:flex-row justify-between items-center mt-12">
             <p className="text-blue-300 font-semibold mb-4 md:mb-0">
-              © 2024 DJ Kevin Froger. Alle rechten voorbehouden.
+              © 2025 DJ Kevin Froger. Alle rechten voorbehouden.
             </p>
             <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6">
               <a href="/privacy" className="text-blue-300 hover:text-white font-semibold transition-colors text-center">
