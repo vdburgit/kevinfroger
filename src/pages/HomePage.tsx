@@ -101,7 +101,7 @@ const HomePage = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] bg-gradient-to-br from-blue-900 via-purple-800 to-blue-900 text-white overflow-hidden" role="banner" aria-labelledby="hero-title">
+      <section className="relative h-[70vh] bg-gradient-to-br from-blue-900 via-purple-800 to-blue-900 text-white overflow-hidden" role="banner" aria-labelledby="hero-title">
         {/* Hero Slider Background */}
         <div className="absolute inset-0">
           {heroSlides.map((slide, index) => (
@@ -157,75 +157,75 @@ const HomePage = () => {
         <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-blue-400/20 rounded-full blur-lg animate-ping-slow"></div>
         
         {/* Content */}
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 z-10">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 z-10 h-full flex items-center">
           <div className="text-center mobile-hero-content">
-            <h1 id="hero-title" className="text-4xl lg:text-5xl xl:text-6xl font-black mb-6 leading-tight text-shadow-lg">
+            <h1 id="hero-title" className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-4 lg:mb-6 leading-tight text-shadow-lg">
               {heroSlides[currentSlide].title}
               <span className="block text-orange-400">{heroSlides[currentSlide].subtitle}</span>
             </h1>
             
-            <p className="text-lg lg:text-xl mb-8 text-blue-100 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-base md:text-lg lg:text-xl xl:text-2xl mb-6 lg:mb-8 text-blue-100 leading-relaxed max-w-3xl mx-auto">
               {heroSlides[currentSlide].description}
             </p>
             
             {/* Desktop buttons */}
-            <div className="hidden md:flex flex-col sm:flex-row gap-6 justify-center mb-12">
+            <div className="hidden md:flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center mb-8 lg:mb-12">
               <Link
                 to="/prijzen"
-                className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-full font-black text-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105"
+                className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-full font-black text-base lg:text-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105"
                 aria-label="Bekijk prijzen en pakketten van DJ Kevin Froger"
               >
-                <Calendar className="w-5 h-5 inline-block mr-2" />
+                <Calendar className="w-4 h-4 lg:w-5 lg:h-5 inline-block mr-2" />
                 PRIJZEN & PAKKETTEN
-                <ArrowRight className="w-4 h-4 inline-block ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5 inline-block ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/contact"
-                className="border-2 border-white text-white px-8 py-4 rounded-full font-black text-lg hover:bg-white hover:text-blue-900 transition-all duration-300"
+                className="border-2 border-white text-white px-6 lg:px-8 py-3 lg:py-4 rounded-full font-black text-base lg:text-lg hover:bg-white hover:text-blue-900 transition-all duration-300"
                 aria-label="Boek DJ Kevin Froger direct"
               >
-                <Phone className="w-5 h-5 inline-block mr-2" />
+                <Phone className="w-4 h-4 lg:w-5 lg:h-5 inline-block mr-2" />
                 BOEK DIRECT
               </Link>
               <a
                 href="https://api.whatsapp.com/send/?phone=31645251333&text&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-green-400 text-green-100 px-8 py-4 rounded-full font-black text-lg hover:bg-green-500 hover:text-white transition-all duration-300"
+                className="border-2 border-green-400 text-green-100 px-6 lg:px-8 py-3 lg:py-4 rounded-full font-black text-base lg:text-lg hover:bg-green-500 hover:text-white transition-all duration-300"
                 aria-label="Stuur WhatsApp bericht naar DJ Kevin Froger"
               >
-                <MessageCircle className="w-5 h-5 inline-block mr-2" />
+                <MessageCircle className="w-4 h-4 lg:w-5 lg:h-5 inline-block mr-2" />
                 WHATSAPP
               </a>
             </div>
 
             {/* Mobile buttons */}
-            <div className="md:hidden mobile-btn-container mb-8 px-4">
+            <div className="md:hidden mobile-btn-container mb-6 px-4">
               <Link
                 to="/prijzen"
-                className="mobile-btn bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg font-bold text-base"
+                className="mobile-btn bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg font-bold text-sm"
                 aria-label="Bekijk prijzen en pakketten van DJ Kevin Froger"
               >
-                <Calendar className="w-4 h-4 mr-2" />
+                <Calendar className="w-3 h-3 mr-2" />
                 PRIJZEN & PAKKETTEN
               </Link>
               <Link
                 to="/contact"
-                className="mobile-btn border-2 border-white text-white hover:bg-white hover:text-blue-900 transition-all duration-300 shadow-lg font-bold text-base"
+                className="mobile-btn border-2 border-white text-white hover:bg-white hover:text-blue-900 transition-all duration-300 shadow-lg font-bold text-sm"
                 aria-label="Boek DJ Kevin Froger direct"
               >
-                <Phone className="w-4 h-4 mr-2" />
+                <Phone className="w-3 h-3 mr-2" />
                 BOEK DIRECT
               </Link>
             </div>
 
             {/* Slide Indicators */}
-            <div className="flex justify-center space-x-3">
+            <div className="flex justify-center space-x-2 lg:space-x-3">
               {heroSlides.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  className={`w-2 h-2 lg:w-3 lg:h-3 rounded-full transition-all duration-300 ${
                     index === currentSlide 
                       ? 'bg-orange-400 scale-125 shadow-lg shadow-orange-400/50' 
                       : 'bg-white/30 hover:bg-white/50'
@@ -234,24 +234,6 @@ const HomePage = () => {
                 />
               ))}
             </div>
-
-            {/* Slide Indicators */}
-            <div className="flex justify-center space-x-3">
-              {heroSlides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide 
-                      ? 'bg-orange-400 scale-125 shadow-lg shadow-orange-400/50' 
-                      : 'bg-white/30 hover:bg-white/50'
-                  }`}
-                  aria-label={`Ga naar slide ${index + 1}`}
-                />
-              ))}
-            </div>
-
-            {/* Stats */}
           </div>
         </div>
       </section>
