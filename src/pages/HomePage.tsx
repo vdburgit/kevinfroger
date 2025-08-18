@@ -179,36 +179,6 @@ const HomePage = () => {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-8 h-8 text-orange-400" />
-                </div>
-                <div className="text-3xl lg:text-4xl font-black text-orange-400 mb-2">15+</div>
-                <div className="text-blue-200 font-semibold">Jaar Ervaring</div>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-8 h-8 text-orange-400" />
-                </div>
-                <div className="text-3xl lg:text-4xl font-black text-orange-400 mb-2">500+</div>
-                <div className="text-blue-200 font-semibold">Bruiloften</div>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-orange-400" />
-                </div>
-                <div className="text-3xl lg:text-4xl font-black text-orange-400 mb-2">50+</div>
-                <div className="text-blue-200 font-semibold">Festivals</div>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-orange-400" />
-                </div>
-                <div className="text-3xl lg:text-4xl font-black text-orange-400 mb-2">1000+</div>
-                <div className="text-blue-200 font-semibold">Events</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
