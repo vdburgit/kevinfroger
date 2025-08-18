@@ -56,7 +56,7 @@ const Footer = () => {
             <div className="mb-6">
               <img 
                 src="/images/kevin-logo.png" 
-                alt="DJ Kevin Froger - #1 Bruiloft DJ Nederland" 
+                alt="DJ Kevin Froger Logo - Professionele DJ Services Nederland" 
                 className="h-20 w-auto mb-6 drop-shadow-2xl"
                 width="200"
                 height="80"

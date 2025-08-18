@@ -6,39 +6,44 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
-    target: 'es2020',
+    target: 'es2022',
     cssCodeSplit: true,
     sourcemap: false,
-    minify: 'esbuild',
+    minify: 'terser',
     chunkSizeWarningLimit: 1000,
+    assetsInlineLimit: 4096,
     rollupOptions: {
       output: {
-        assetFileNames: 'assets/[name]-[hash][extname]',
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split('.');
+          const ext = info[info.length - 1];
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
+            return `images/[name]-[hash][extname]`;
+          }
+          return `assets/[name]-[hash][extname]`;
+        },
+        chunkFileNames: 'js/[name]-[hash].js',
+        entryFileNames: 'js/[name]-[hash].js',
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
           icons: ['lucide-react'],
-          seo: [
-            'src/pages/seo/DJRotterdamPage.tsx',
-            'src/pages/seo/DJDenHaagPage.tsx',
-            'src/pages/seo/DJHoekscheWaardPage.tsx'
-          ],
-          components: [
-            'src/components/ContactForm.tsx',
-            'src/components/PartnersSection.tsx',
-            'src/components/MusicGenresSection.tsx'
-          ]
         },
       },
+      treeshake: {
+        moduleSideEffects: false,
+        propertyReadSideEffects: false,
+        tryCatchDeoptimization: false
+      }
     },
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom', 'lucide-react'],
-    exclude: ['@vite/client', '@vite/env']
+    exclude: ['@vite/client', '@vite/env'],
+    force: true
   },
   server: {
     hmr: { overlay: false },
     host: true,
+    cors: true
   },
 })

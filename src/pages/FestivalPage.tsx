@@ -3,6 +3,15 @@ import { Zap, Users, Music, Clock, CheckCircle, Play, Star, Quote, ArrowRight, V
 import ContactForm from '../components/ContactForm';
 
 const FestivalPage = () => {
+  // SEO metadata for this page
+  React.useEffect(() => {
+    document.title = "Festival DJ Nederland | High-Energy Sets | DJ Kevin Froger";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', '🎪 Festival DJ Nederland ✨ 50+ festivals, high-energy power sets, crowd control specialist. Ervaren festival DJ. Boek nu! 📞 06-45251333');
+    }
+  }, []);
+
   const services = [
     {
       icon: <Clock className="w-8 h-8" />,

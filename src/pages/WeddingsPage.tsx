@@ -3,6 +3,15 @@ import { Heart, Music, Users, Calendar, CheckCircle, ArrowRight, Star, Quote, Cl
 import ContactForm from '../components/ContactForm';
 
 const WeddingsPage = () => {
+  // SEO metadata for this page
+  React.useEffect(() => {
+    document.title = "Bruiloft DJ Nederland | DJ Kevin Froger | 500+ Bruiloften";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', '💒 Bruiloft DJ Nederland ✨ 500+ bruiloften, complete muzikale begeleiding van ceremonie tot feestavond. Live mixing specialist. Boek nu! 📞 06-45251333');
+    }
+  }, []);
+
   const services = [
     {
       icon: <Heart className="w-8 h-8" />,

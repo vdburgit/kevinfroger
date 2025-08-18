@@ -4,6 +4,15 @@ import ContactForm from '../components/ContactForm';
 import PricingSection from '../components/PricingSection';
 
 const PricingPage = () => {
+  // SEO metadata for this page
+  React.useEffect(() => {
+    document.title = "DJ Prijzen Nederland | Transparante Tarieven | DJ Kevin Froger";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', '💰 DJ Prijzen Nederland ✨ Transparante tarieven vanaf €350, geen verborgen kosten. Gratis offerte binnen 24u. Bel 06-45251333!');
+    }
+  }, []);
+
   const addOns = [
     {
       name: "Extra Verlichting",

@@ -3,47 +3,53 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Critical CSS - Above the fold styles */
+/* Critical CSS - Above the fold styles - Optimized */
 .hero-critical {
   min-height: 100vh;
   background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 50%, #1e3a8a 100%);
   position: relative;
   overflow: hidden;
+  contain: layout style paint;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 6rem; /* 96px - optimized anchor positioning */
+    scroll-padding-top: 6rem;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
   }
   
   body {
     font-family: 'Inter', system-ui, sans-serif;
-    line-height: 1.5; /* Optimized line height */
+    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeSpeed;
+    font-display: swap;
   }
 
-  /* Scroll offset for all sections with IDs */
+  /* Optimized scroll offset for all sections with IDs */
   section[id] {
-    scroll-margin-top: 6rem; /* 96px offset for sticky header + padding */
+    scroll-margin-top: 6rem;
+    contain: layout style;
   }
 
-  /* Specific scroll offsets for different screen sizes */
   @media (max-width: 768px) {
     section[id] {
-      scroll-margin-top: 5rem; /* 80px for mobile header */
+      scroll-margin-top: 5rem;
     }
   }
 
   @media (min-width: 769px) {
     section[id] {
-      scroll-margin-top: 7rem; /* 112px for desktop header */
+      scroll-margin-top: 7rem;
     }
   }
 }
 
 @layer utilities {
+  /* Performance optimized text shadows */
   .text-shadow {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
@@ -52,24 +58,37 @@
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
   
+  .text-shadow-xl {
+    text-shadow: 
+      0 4px 8px rgba(0, 0, 0, 0.5),
+      0 8px 16px rgba(0, 0, 0, 0.3),
+      0 16px 32px rgba(0, 0, 0, 0.2);
+  }
+  
   .bg-gradient-radial {
     background: radial-gradient(circle, var(--tw-gradient-stops));
   }
   
+  /* GPU accelerated animations */
   .animate-float {
     animation: float 6s ease-in-out infinite;
+    will-change: transform;
+    transform: translateZ(0);
   }
   
   .animate-bounce-slow {
     animation: bounce 3s infinite;
+    will-change: transform;
   }
   
   .animate-pulse-slow {
     animation: pulse 4s infinite;
+    will-change: opacity;
   }
   
   .animate-ping-slow {
     animation: ping 3s infinite;
+    will-change: transform, opacity;
   }
   
   @keyframes float {
@@ -77,8 +96,15 @@
     50% { transform: translateY(-20px); }
   }
   
+  /* Performance optimizations */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+  
   .backdrop-blur-xs {
     backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
   }
   
   .shadow-3xl {
@@ -93,29 +119,41 @@
     letter-spacing: 0.025em;
   }
 
-  /* Custom scroll offset utilities */
+  /* Optimized scroll offset utilities */
   .scroll-offset-header {
-    scroll-margin-top: 6rem; /* 96px for header */
+    scroll-margin-top: 6rem;
   }
   
   .scroll-offset-large {
-    scroll-margin-top: 8rem; /* 128px for sections that need more space */
+    scroll-margin-top: 8rem;
   }
 
-  /* Mobile bottom padding for fixed CTA */
+  /* Mobile optimizations */
   @media (max-width: 768px) {
     .mobile-bottom-padding {
-      padding-bottom: 5rem; /* 80px for mobile CTA button */
+      padding-bottom: 5rem;
     }
   }
 
-  /* Smooth scroll behavior for anchor links */
   .smooth-scroll {
     scroll-behavior: smooth;
   }
+  
+  /* Performance containment */
+  .contain-layout {
+    contain: layout;
+  }
+  
+  .contain-paint {
+    contain: paint;
+  }
+  
+  .contain-strict {
+    contain: strict;
+  }
 }
 
-/* Custom scrollbar */
+/* Optimized custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -133,14 +171,14 @@
   background: linear-gradient(to bottom, #ea580c, #c2410c);
 }
 
-/* Smooth transitions for all elements */
+/* Optimized transitions */
 * {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, opacity, transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 
-/* Focus styles */
+/* Optimized focus styles */
 button:focus,
 a:focus,
 input:focus,
@@ -150,7 +188,7 @@ select:focus {
   outline-offset: 2px;
 }
 
-/* Loading animation */
+/* Optimized loading animation */
 @keyframes shimmer {
   0% {
     background-position: -200px 0;
@@ -164,9 +202,10 @@ select:focus {
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200px 100%;
   animation: shimmer 1.5s infinite;
+  will-change: background-position;
 }
 
-/* Mobile CTA button animations */
+/* Optimized mobile CTA animations */
 @keyframes glow {
   0%, 100% {
     box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
@@ -178,9 +217,10 @@ select:focus {
 
 .animate-glow {
   animation: glow 3s ease-in-out infinite;
+  will-change: box-shadow;
 }
 
-/* Enhanced hero animations */
+/* GPU optimized hero animations */
 @keyframes float-up {
   0%, 100% {
     transform: translateY(0px) rotate(0deg);
@@ -194,6 +234,8 @@ select:focus {
 
 .animate-float-up {
   animation: float-up 4s ease-in-out infinite;
+  will-change: transform, opacity;
+  transform: translateZ(0);
 }
 
 @keyframes gradient-shift {
@@ -208,9 +250,10 @@ select:focus {
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient-shift 4s ease infinite;
+  will-change: background-position;
 }
 
-/* Enhanced glow effect for CTA buttons */
+/* Optimized glow effect for CTA buttons */
 @keyframes enhanced-glow {
   0%, 100% {
     box-shadow: 
@@ -228,33 +271,26 @@ select:focus {
 
 .animate-enhanced-glow {
   animation: enhanced-glow 2s ease-in-out infinite;
+  will-change: box-shadow;
 }
 
-/* Text shadow enhancements */
-.text-shadow-xl {
-  text-shadow: 
-    0 4px 8px rgba(0, 0, 0, 0.5),
-    0 8px 16px rgba(0, 0, 0, 0.3),
-    0 16px 32px rgba(0, 0, 0, 0.2);
-}
-
-/* Backdrop blur variations */
+/* Optimized backdrop blur */
 .backdrop-blur-strong {
   backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
 }
 
 .backdrop-blur-soft {
   backdrop-filter: blur(4px) saturate(120%);
+  -webkit-backdrop-filter: blur(4px) saturate(120%);
 }
 
-/* Mobile optimizations */
+/* Enhanced mobile optimizations */
 @media (max-width: 768px) {
-  /* Ensure mobile CTA doesn't interfere with content */
   body {
     padding-bottom: env(safe-area-inset-bottom);
   }
   
-  /* Universal mobile button styles */
   .mobile-btn {
     font-size: 11px !important;
     padding: 6px 12px !important;
@@ -263,13 +299,15 @@ select:focus {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 auto 6px auto !important;
-    min-height: 36px !important; /* iOS touch target minimum */
+    min-height: 44px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     font-weight: 700 !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
     transition: all 0.3s ease !important;
+    -webkit-tap-highlight-color: transparent !important;
+    touch-action: manipulation !important;
   }
   
   .mobile-btn:hover {
@@ -277,30 +315,26 @@ select:focus {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15) !important;
   }
   
-  /* Mobile icon sizes within buttons */
   .mobile-btn svg {
     width: 12px !important;
     height: 12px !important;
     margin-right: 3px !important;
   }
   
-  /* Mobile spacing */
   .mobile-spacing > * + * {
     margin-top: 6px;
   }
   
-  /* Touch-friendly tap targets */
   button, a[role="button"], .btn {
-    min-height: 40px;
-    min-width: 40px;
+    min-height: 44px;
+    min-width: 44px;
+    touch-action: manipulation;
   }
   
-  /* Hide hero elements on mobile */
   .hide-mobile {
     display: none !important;
   }
   
-  /* Mobile hero adjustments */
   .mobile-hero-content {
     padding: 1.5rem 0.75rem;
   }
@@ -317,7 +351,6 @@ select:focus {
     margin-bottom: 1rem !important;
   }
   
-  /* Mobile text improvements */
   .mobile-text-lg {
     font-size: 0.875rem !important;
     line-height: 1.5 !important;
@@ -328,39 +361,33 @@ select:focus {
     line-height: 1.4 !important;
   }
   
-  /* Mobile section padding */
   .mobile-section-padding {
     padding: 2rem 0.75rem !important;
   }
   
-  /* Mobile card improvements */
   .mobile-card {
     padding: 1rem 0.75rem !important;
     margin-bottom: 0.75rem !important;
   }
   
-  /* Mobile navigation improvements */
   .mobile-nav-item {
     padding: 0.5rem !important;
     font-size: 0.875rem !important;
     font-weight: 600 !important;
   }
   
-  /* Mobile hero title adjustments */
   .mobile-hero-title {
     font-size: 1.875rem !important;
     line-height: 1.1 !important;
     margin-bottom: 0.75rem !important;
   }
   
-  /* Mobile section titles */
   .mobile-section-title {
     font-size: 2rem !important;
     line-height: 1.2 !important;
     margin-bottom: 1rem !important;
   }
   
-  /* Mobile partner cards */
   .mobile-partner-card {
     height: 120px !important;
     padding: 0.5rem !important;
@@ -380,14 +407,12 @@ select:focus {
     font-size: 0.625rem !important;
   }
 
-  /* Mobile form improvements */
   .mobile-form-input {
     padding: 0.75rem !important;
     font-size: 0.875rem !important;
     border-radius: 8px !important;
   }
 
-  /* Mobile stats improvements */
   .mobile-stats {
     padding: 1rem !important;
   }
@@ -401,7 +426,7 @@ select:focus {
   }
 }
 
-/* Desktop button styles */
+/* Optimized desktop button styles */
 @media (min-width: 769px) {
   .desktop-btn {
     padding: 16px 32px;
@@ -410,6 +435,7 @@ select:focus {
     font-weight: 800;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
+    will-change: transform, box-shadow;
   }
   
   .desktop-btn:hover {
@@ -418,7 +444,7 @@ select:focus {
   }
 }
 
-/* Mobile-specific button containers */
+/* Optimized mobile button containers */
 @media (max-width: 768px) {
   .mobile-btn-container {
     display: flex;
@@ -429,6 +455,7 @@ select:focus {
     max-width: 100%;
     margin: 0 auto;
     padding: 0 1rem;
+    contain: layout;
   }
   
   .mobile-btn-container > * {
@@ -437,7 +464,7 @@ select:focus {
   }
 }
 
-/* Partners section logo scroll animation - OPTIMIZED */
+/* Highly optimized logo scroll animation */
 @keyframes scroll-logos {
   0% {
     transform: translateX(0);
@@ -449,22 +476,17 @@ select:focus {
 
 .animate-scroll-logos {
   animation: scroll-logos 60s linear infinite;
-  will-change: transform; /* Optimize for animations */
-  transform: translateZ(0); /* Force GPU acceleration */
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 .animate-scroll-logos:hover {
   animation-play-state: paused;
 }
 
-/* Performance optimizations */
-.gpu-accelerated {
-  transform: translateZ(0);
-  will-change: transform;
-}
-
-/* Reduce motion for performance */
-/* Reduced motion support */
+/* Accessibility - Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   .animate-scroll-logos {
     animation: none;
@@ -475,5 +497,37 @@ select:focus {
   .animate-ping-slow,
   .animate-float {
     animation: none;
+  }
+  
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .text-shadow,
+  .text-shadow-lg,
+  .text-shadow-xl {
+    text-shadow: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .animate-pulse,
+  .animate-bounce-slow,
+  .animate-ping-slow,
+  .animate-float,
+  .animate-scroll-logos {
+    animation: none;
+  }
+  
+  .shadow-xl,
+  .shadow-2xl,
+  .shadow-3xl {
+    box-shadow: none;
   }
 }

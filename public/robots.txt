@@ -2,21 +2,34 @@ User-agent: *
 Allow: /
 Crawl-delay: 1
 
-# Sitemap
-Sitemap: https://kevinfroger.nl/sitemap.xml
-Sitemap: https://kevinfroger.nl/sitemap-images.xml
-
 # High priority pages
 Allow: /bruiloften
-Allow: /dj-boeken
-Allow: /dj-huren
+Allow: /bedrijfsfeesten
+Allow: /festivals
 Allow: /contact
 Allow: /prijzen
+Allow: /portfolio
 
-# Specific rules
+# SEO landing pages
+Allow: /dj-*
+Allow: /bruiloft-dj-*
+Allow: /feest-dj-*
+
+# Static assets
 Allow: /images/
+Allow: /assets/
 Allow: /css/
 Allow: /js/
-Allow: /assets/
 
-# Block admin areas (if any)
+# Block development files
+Disallow: /src/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /*.json$
+Disallow: /*.config.*
+Disallow: /api/
+
+# Sitemaps
+Sitemap: https://kevinfroger.nl/sitemap.xml
+Sitemap: https://kevinfroger.nl/sitemap-images.xml
