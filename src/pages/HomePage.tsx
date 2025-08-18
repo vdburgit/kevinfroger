@@ -253,40 +253,48 @@ const HomePage = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
-            {services.map((service, index) => (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-                <div className="relative h-48 lg:h-64 overflow-hidden">
+            {services.map((service, index) => (
+              <div key={index} className="group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-gray-100">
+                <div className="relative overflow-hidden">
                   <img 
                     src={service.image}
                     alt={`DJ Kevin Froger - ${service.title}`}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
                     loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    width="400"
+                    height="256"
                   <div className="absolute top-4 right-4 lg:top-6 lg:right-6">
-                    <div className={`w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r ${service.color} rounded-full flex items-center justify-center text-white shadow-lg`}>
+                    <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-full flex items-center justify-center text-white shadow-lg`}>
                       {service.icon}
                     </div>
                   </div>
+                  <div className="absolute bottom-6 left-6">
+                    <h3 className="text-2xl font-black text-white mb-2 text-shadow-lg">{service.title}</h3>
+                  </div>
                 </div>
                 
-                <div className="p-4 lg:p-6">
-                  <h3 className="text-xl lg:text-2xl font-black text-gray-900 mb-3 lg:mb-4">{service.title}</h3>
-                  <p className="text-sm lg:text-base text-gray-600 mb-4 lg:mb-6 leading-relaxed">{service.description}</p>
+                <div className="p-8">
+                  <p className="text-lg text-gray-600 mb-6 leading-relaxed">{service.description}</p>
                   
-                  <div className="space-y-2 lg:space-y-3 mb-4 lg:mb-6">
+                  <div className="space-y-4 mb-6">
                     {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center">
-                        <div className="w-5 h-5 lg:w-6 lg:h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
-                          <CheckCircle className="w-3 h-3 lg:w-4 lg:h-4 text-white" />
+                      <div key={featureIndex} className="flex items-start space-x-4">
+                        <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                          <CheckCircle className="w-5 h-5 text-white" />
                         </div>
-                        <span className="text-sm lg:text-base text-gray-700 font-medium ml-3">{feature}</span>
+                        <span className="text-lg text-gray-700 font-medium">{feature}</span>
                       </div>
                     ))}
                   </div>
                   
-                  <Link
+                  <a
+                    href={service.link}
+                    className="group inline-flex items-center text-blue-700 font-black text-lg hover:text-orange-500 transition-colors duration-200"
+                  >
+                    MEER INFORMATIE
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform duration-200" />
+                  </a>
                     to={service.link}
                     className={`inline-flex items-center bg-gradient-to-r ${service.color} text-white px-4 lg:px-6 py-2 lg:py-3 rounded-full font-bold text-sm lg:text-base hover:shadow-lg transition-all duration-300 group`}
                   >
