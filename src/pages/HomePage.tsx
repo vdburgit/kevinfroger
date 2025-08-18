@@ -216,8 +216,8 @@ const HomePage = () => {
             }
           });
         </script>
-      </section>
-      */
+      </header>
+      */}
 
       {/* Features Section - Stayawake Style */}
       <section className="py-32 bg-gray-50">
