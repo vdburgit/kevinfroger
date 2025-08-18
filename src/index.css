@@ -158,6 +158,7 @@
   
   .contain-size {
     contain: size;
+  }
 }
 
 /* Custom scrollbar - GPU optimized */
