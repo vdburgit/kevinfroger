@@ -74,6 +74,16 @@ const HomePage = () => {
       icon: <Zap className="w-8 h-8" />,
       color: "from-orange-500 to-pink-600",
       price: "Op aanvraag"
+    },
+    {
+      title: "Privé Feesten",
+      description: "Verjaardagen en familiefeesten op maat gemaakt voor elke gelegenheid.",
+      features: ["Verjaardagsfeesten", "Jubilea", "Familiebijeenkomsten", "Themafeesten"],
+      link: "/prive-feesten",
+      image: "/images/IMG_1605.png",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-600",
+      price: "Op aanvraag"
     }
   ];
 
