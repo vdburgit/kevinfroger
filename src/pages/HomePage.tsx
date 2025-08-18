@@ -114,13 +114,13 @@ const HomePage = () => {
               <img 
                 src={slide.image}
                 alt={`DJ Kevin Froger - ${slide.title}`}
-                className="w-full h-full object-cover transform-gpu"
+                className="w-full h-full object-cover object-center transform-gpu"
                 width="800"
                 height="600"
                 loading={index === 0 ? "eager" : "lazy"}
                 decoding="async"
                 fetchPriority={index === 0 ? "high" : "low"}
-                sizes="100vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
               />
             </div>
           ))}
@@ -135,85 +135,85 @@ const HomePage = () => {
         <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-blue-400/20 rounded-full blur-lg animate-ping-slow"></div>
         
         {/* Content */}
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 z-10 h-full flex items-center justify-center">
-          <div className="text-center w-full">
-            <h1 id="hero-title" className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-4 lg:mb-6 leading-tight text-shadow-lg">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-12 z-10 h-full flex items-center justify-center">
+          <div className="text-center w-full max-w-5xl mx-auto">
+            <h1 id="hero-title" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-4 lg:mb-6 leading-tight text-shadow-lg">
               {heroSlides[currentSlide].title}
               <span className="block text-orange-400">{heroSlides[currentSlide].subtitle}</span>
             </h1>
             
-            <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl mb-8 lg:mb-10 text-blue-100 leading-relaxed max-w-4xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl mb-6 lg:mb-8 text-blue-100 leading-relaxed max-w-3xl mx-auto px-2">
               {heroSlides[currentSlide].description}
             </p>
             
             {/* Desktop buttons */}
-            <div className="hidden md:flex flex-row gap-6 justify-center mb-10 lg:mb-12">
+            <div className="hidden md:flex flex-row gap-4 lg:gap-6 justify-center mb-8 lg:mb-10">
               <Link
                 to="/prijzen"
-                className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 lg:px-12 py-4 lg:py-5 rounded-full font-black text-lg lg:text-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 min-h-[44px]"
+                className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 lg:px-10 py-3 lg:py-4 rounded-full font-black text-base lg:text-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-xl hover:shadow-orange-500/25 transform hover:scale-105 min-h-[44px]"
                 aria-label="Bekijk prijzen en pakketten van DJ Kevin Froger"
               >
-                <Calendar className="w-5 h-5 lg:w-6 lg:h-6 inline-block mr-3" />
+                <Calendar className="w-4 h-4 lg:w-5 lg:h-5 inline-block mr-2" />
                 PRIJZEN & PAKKETTEN
-                <ArrowRight className="w-5 h-5 lg:w-6 lg:h-6 inline-block ml-3 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5 inline-block ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/contact"
-                className="border-3 border-white text-white px-8 lg:px-12 py-4 lg:py-5 rounded-full font-black text-lg lg:text-xl hover:bg-white hover:text-blue-900 transition-all duration-300 min-h-[44px]"
+                className="border-2 border-white text-white px-6 lg:px-10 py-3 lg:py-4 rounded-full font-black text-base lg:text-lg hover:bg-white hover:text-blue-900 transition-all duration-300 min-h-[44px]"
                 aria-label="Boek DJ Kevin Froger direct"
               >
-                <Phone className="w-5 h-5 lg:w-6 lg:h-6 inline-block mr-3" />
+                <Phone className="w-4 h-4 lg:w-5 lg:h-5 inline-block mr-2" />
                 BOEK DIRECT
               </Link>
               <a
                 href="https://api.whatsapp.com/send/?phone=31645251333&text&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-3 border-green-400 text-green-100 px-8 lg:px-12 py-4 lg:py-5 rounded-full font-black text-lg lg:text-xl hover:bg-green-500 hover:text-white transition-all duration-300 min-h-[44px]"
+                className="border-2 border-green-400 text-green-100 px-6 lg:px-10 py-3 lg:py-4 rounded-full font-black text-base lg:text-lg hover:bg-green-500 hover:text-white transition-all duration-300 min-h-[44px]"
                 aria-label="Stuur WhatsApp bericht naar DJ Kevin Froger"
               >
-                <MessageCircle className="w-5 h-5 lg:w-6 lg:h-6 inline-block mr-3" />
+                <MessageCircle className="w-4 h-4 lg:w-5 lg:h-5 inline-block mr-2" />
                 WHATSAPP
               </a>
             </div>
 
             {/* Mobile buttons */}
-            <div className="md:hidden flex flex-col gap-3 mb-8 px-4 max-w-sm mx-auto">
+            <div className="md:hidden flex flex-col gap-3 mb-6 px-4 max-w-xs mx-auto">
               <Link
                 to="/prijzen"
-                className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg font-bold text-sm py-3 px-4 rounded-full flex items-center justify-center min-h-[44px]"
+                className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg font-bold text-xs py-3 px-3 rounded-lg flex items-center justify-center min-h-[44px]"
                 aria-label="Bekijk prijzen en pakketten van DJ Kevin Froger"
               >
-                <Calendar className="w-4 h-4 mr-2" />
-                PRIJZEN & PAKKETTEN
+                <Calendar className="w-3 h-3 mr-2" />
+                PRIJZEN
               </Link>
               <Link
                 to="/contact"
-                className="w-full border-2 border-white text-white hover:bg-white hover:text-blue-900 transition-all duration-300 shadow-lg font-bold text-sm py-3 px-4 rounded-full flex items-center justify-center min-h-[44px]"
+                className="w-full border-2 border-white text-white hover:bg-white hover:text-blue-900 transition-all duration-300 shadow-lg font-bold text-xs py-3 px-3 rounded-lg flex items-center justify-center min-h-[44px]"
                 aria-label="Boek DJ Kevin Froger direct"
               >
-                <Phone className="w-4 h-4 mr-2" />
-                BOEK DIRECT
+                <Phone className="w-3 h-3 mr-2" />
+                BELLEN
               </Link>
               <a
                 href="https://api.whatsapp.com/send/?phone=31645251333&text&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full border-2 border-green-400 text-green-100 hover:bg-green-500 hover:text-white transition-all duration-300 shadow-lg font-bold text-sm py-3 px-4 rounded-full flex items-center justify-center min-h-[44px]"
+                className="w-full border-2 border-green-400 text-green-100 hover:bg-green-500 hover:text-white transition-all duration-300 shadow-lg font-bold text-xs py-3 px-3 rounded-lg flex items-center justify-center min-h-[44px]"
                 aria-label="Stuur WhatsApp bericht naar DJ Kevin Froger"
               >
-                <MessageCircle className="w-4 h-4 mr-2" />
+                <MessageCircle className="w-3 h-3 mr-2" />
                 WHATSAPP
               </a>
             </div>
 
             {/* Slide Indicators */}
-            <div className="flex justify-center space-x-2" role="tablist" aria-label="Hero slides">
+            <div className="flex justify-center space-x-2 mt-4" role="tablist" aria-label="Hero slides">
               {heroSlides.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  className={`slide-indicator ${
+                  className={`w-3 h-3 lg:w-4 lg:h-4 rounded-full transition-all duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center ${
                     index === currentSlide 
                       ? 'bg-orange-400 scale-125 shadow-lg shadow-orange-400/50' 
                       : 'bg-white/30 hover:bg-white/50'
@@ -222,35 +222,36 @@ const HomePage = () => {
                   aria-selected={index === currentSlide}
                   aria-label={`Ga naar slide ${index + 1}: ${heroSlides[index].title}`}
                 >
-                  <span className="w-3 h-3 lg:w-4 lg:h-4 rounded-full bg-current"></span>
+                  <span className="w-2 h-2 lg:w-3 lg:h-3 rounded-full bg-current"></span>
                 </button>
               ))}
             </div>
           </div>
         </div>
       </section>
-
-      {/* Features Section - Stayawake Style */}
-      <section className="py-32 bg-gray-50">
+              <div key={index} className="group bg-white rounded-2xl lg:rounded-3xl shadow-lg lg:shadow-xl overflow-hidden hover:shadow-xl lg:hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 lg:hover:-translate-y-4 border border-gray-100 mx-4 lg:mx-0">
+                <div className="p-4 lg:p-6">
+                  <p className="text-sm lg:text-base text-gray-600 mb-4 lg:mb-6 leading-relaxed">{service.description}</p>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl lg:text-7xl font-black text-gray-900 mb-8 text-shadow">
+                  <div className="space-y-2 lg:space-y-3 mb-4 lg:mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-gray-900 mb-4 lg:mb-6 text-shadow">
               WAAROM
-              <span className="block text-orange-500">KEVIN FROGER?</span>
-            </h2>
-            <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                        <div className="w-5 h-5 lg:w-6 lg:h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                          <CheckCircle className="w-3 h-3 lg:w-4 lg:h-4 text-white" />
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
+                        <span className="text-sm lg:text-base text-gray-700 font-medium">{feature}</span>
               De perfecte combinatie van ervaring, professionaliteit en passie
-            </p>
-          </div>
+                  <div className="absolute top-4 right-4 lg:top-6 lg:right-6">
+                    <div className={`w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r ${service.color} rounded-full flex items-center justify-center text-white shadow-lg`}>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
             {features.map((feature, index) => (
-              <div key={index} className="text-center group">
-                <div className={`w-24 h-24 bg-gradient-to-br ${feature.color} rounded-full flex items-center justify-center mx-auto mb-8 text-white group-hover:scale-110 transition-transform duration-300 shadow-2xl`}>
+              <div key={index} className="text-center group px-4 lg:px-0">
+                <div className={`w-20 h-20 lg:w-24 lg:h-24 bg-gradient-to-br ${feature.color} rounded-full flex items-center justify-center mx-auto mb-6 lg:mb-8 text-white group-hover:scale-110 transition-transform duration-300 shadow-xl lg:shadow-2xl`}>
                   {feature.icon}
-                </div>
-                <h3 className="text-2xl font-black text-gray-900 mb-6">{feature.title}</h3>
-                <p className="text-lg text-gray-600 leading-relaxed">{feature.description}</p>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                <h3 className="text-xl lg:text-2xl font-black text-gray-900 mb-4 lg:mb-6">{feature.title}</h3>
+                <p className="text-sm lg:text-base text-gray-600 leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
