@@ -101,7 +101,30 @@ const HomePage = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative h-screen bg-gradient-to-br from-blue-900 via-purple-800 to-blue-900 text-white overflow-hidden" role="banner" aria-labelledby="hero-title">
+      <section className="relative min-h-[80vh] bg-gradient-to-br from-blue-900 via-purple-800 to-blue-900 text-white overflow-hidden" role="banner" aria-labelledby="hero-title">
+        {/* Hero Slider Background */}
+        <div className="absolute inset-0">
+          {heroSlides.map((slide, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-opacity duration-1000 ${
+                index === currentSlide ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
+              <img 
+                src={slide.image}
+                alt={`DJ Kevin Froger - ${slide.title}`}
+                className="w-full h-full object-cover"
+                width="600"
+                height="400"
+                loading={index === 0 ? "eager" : "lazy"}
+                decoding="async"
+                fetchPriority={index === 0 ? "high" : "low"}
+              />
+            </div>
+          ))}
+        </div>
+        
         {/* Hero Slider Background */}
         <div className="absolute inset-0">
           {heroSlides.map((slide, index) => (
@@ -134,14 +157,14 @@ const HomePage = () => {
         <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-blue-400/20 rounded-full blur-lg animate-ping-slow"></div>
         
         {/* Content */}
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 z-10">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 z-10">
           <div className="text-center mobile-hero-content">
-            <h1 id="hero-title" className="text-4xl lg:text-6xl xl:text-7xl font-black mb-6 leading-tight text-shadow-lg">
+            <h1 id="hero-title" className="text-4xl lg:text-5xl xl:text-6xl font-black mb-6 leading-tight text-shadow-lg">
               {heroSlides[currentSlide].title}
               <span className="block text-orange-400">{heroSlides[currentSlide].subtitle}</span>
             </h1>
             
-            <p className="text-lg lg:text-xl mb-10 text-blue-100 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg lg:text-xl mb-8 text-blue-100 leading-relaxed max-w-3xl mx-auto">
               {heroSlides[currentSlide].description}
             </p>
             
@@ -177,7 +200,7 @@ const HomePage = () => {
             </div>
 
             {/* Mobile buttons */}
-            <div className="md:hidden mobile-btn-container mb-12 px-4">
+            <div className="md:hidden mobile-btn-container mb-8 px-4">
               <Link
                 to="/prijzen"
                 className="mobile-btn bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg font-bold text-base"
@@ -194,6 +217,22 @@ const HomePage = () => {
                 <Phone className="w-4 h-4 mr-2" />
                 BOEK DIRECT
               </Link>
+            </div>
+
+            {/* Slide Indicators */}
+            <div className="flex justify-center space-x-3">
+              {heroSlides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentSlide 
+                      ? 'bg-orange-400 scale-125 shadow-lg shadow-orange-400/50' 
+                      : 'bg-white/30 hover:bg-white/50'
+                  }`}
+                  aria-label={`Ga naar slide ${index + 1}`}
+                />
+              ))}
             </div>
 
             {/* Slide Indicators */}
