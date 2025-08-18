@@ -1,0 +1,62 @@
+{
+  "mobile": {
+    "before": {
+      "performance": 71,
+      "fcp": 2.559,
+      "lcp": 7.771,
+      "tbt": 123,
+      "cls": 0.00,
+      "si": 2.559,
+      "payload_mb": 3.1,
+      "requests": 45
+    },
+    "after": {
+      "performance": 95,
+      "fcp": 1.7,
+      "lcp": 1.9,
+      "tbt": 85,
+      "cls": 0.01,
+      "si": 1.7,
+      "payload_mb": 0.78,
+      "requests": 32
+    },
+    "improvements": {
+      "performance": "+24 points",
+      "fcp": "-0.859s (-33.6%)",
+      "lcp": "-5.871s (-75.5%)",
+      "tbt": "-38ms (-30.9%)",
+      "payload": "-2.32MB (-75.2%)",
+      "requests": "-13 requests (-28.9%)"
+    }
+  },
+  "desktop": {
+    "before": {
+      "performance": 84,
+      "fcp": 0.7,
+      "lcp": 2.7,
+      "tbt": 100,
+      "cls": 0.001,
+      "si": 0.7,
+      "payload_mb": 4.0,
+      "requests": 50
+    },
+    "after": {
+      "performance": 95,
+      "fcp": 0.6,
+      "lcp": 1.1,
+      "tbt": 45,
+      "cls": 0.005,
+      "si": 0.6,
+      "payload_mb": 1.15,
+      "requests": 35
+    },
+    "improvements": {
+      "performance": "+11 points",
+      "fcp": "-0.1s (-14.3%)",
+      "lcp": "-1.6s (-59.3%)",
+      "tbt": "-55ms (-55.0%)",
+      "payload": "-2.85MB (-71.3%)",
+      "requests": "-15 requests (-30.0%)"
+    }
+  }
+}

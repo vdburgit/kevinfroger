@@ -7,6 +7,15 @@ import PartnersSection from '../components/PartnersSection';
 const HomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
+  // SEO metadata for homepage
+  React.useEffect(() => {
+    document.title = "DJ Kevin Froger - #1 Bruiloft DJ Nederland | 500+ Bruiloften | Live Mixing Specialist";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', '🎵 #1 Bruiloft DJ Nederland ✨ 500+ bruiloften, 15+ jaar ervaring. Live mixing specialist voor bruiloften, bedrijfsfeesten & festivals. Boek direct! 📞 06-45251333');
+    }
+  }, []);
+
   const heroSlides = [
     {
       image: "/images/dj-kevin-froger-bruiloft-scaled.jpeg",

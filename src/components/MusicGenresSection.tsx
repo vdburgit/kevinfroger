@@ -210,12 +210,7 @@ const MusicGenresSection = () => {
 
   // Optimize scroll listeners for performance
   useEffect(() => {
-    const handleScroll = () => {
-      // Passive scroll handling
-    };
-    
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    // Remove unused scroll listener for performance
   }, []);
 
   return (

@@ -1,0 +1,20 @@
+from_url,to_url,anchor,note
+/,/bruiloften,Bruiloft DJ Services,Main service link from homepage
+/,/bedrijfsfeesten,Bedrijfsfeest DJ,Corporate services link
+/,/festivals,Festival DJ,Festival services link
+/,/contact,Boek Nu Direct,Primary CTA from homepage
+/bruiloften,/contact,Plan Jullie Droombruiloft,Wedding-specific CTA
+/bedrijfsfeesten,/contact,Plan Uw Corporate Event,Corporate-specific CTA
+/festivals,/contact,Boek Festival DJ,Festival-specific CTA
+/portfolio,/contact,Wordt Ook Partner,Portfolio to contact CTA
+/prijzen,/contact,Vraag Gratis Offerte,Pricing to contact CTA
+/faq,/contact,Stel Jouw Vraag,FAQ to contact CTA
+/,/dj-hoeksche-waard,DJ Hoeksche Waard,Regional service link
+/,/dj-rotterdam,DJ Rotterdam,Major city link
+/,/dj-den-haag,DJ Den Haag,Major city link
+/,/goedkope-dj,Goedkope DJ,Budget-focused link
+/,/professionele-dj,Professionele DJ,Quality-focused link
+/footer,/dj-boeken,DJ Boeken Nederland,Footer SEO link
+/footer,/dj-huren,DJ Huren Nederland,Footer SEO link
+/footer,/live-mixing-dj,Live Mixing DJ,Footer specialty link
+/footer,/dj-mc-services,DJ MC Services,Footer service link

@@ -7,7 +7,7 @@ const ScrollToTop = () => {
   useEffect(() => {
     // Optimize scroll behavior for performance
     const scrollOptions: ScrollIntoViewOptions = {
-      behavior: 'smooth',
+      behavior: 'instant',
       block: 'start',
       inline: 'nearest'
     };
@@ -19,12 +19,12 @@ const ScrollToTop = () => {
         // Small delay to ensure the page has rendered
         requestAnimationFrame(() => {
           element.scrollIntoView(scrollOptions);
-        }, 100);
+        });
       }
     } else {
       // No hash, scroll to top
       requestAnimationFrame(() => {
-        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
       });
     }
   }, [pathname, hash]);

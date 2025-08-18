@@ -13,12 +13,7 @@ const MobileCTA = () => {
 
   // Optimize event listeners for performance
   React.useEffect(() => {
-    const handleScroll = () => {
-      // Passive scroll listener for better performance
-    };
-    
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    // Remove unused scroll listener for performance
   }, []);
 
   return (

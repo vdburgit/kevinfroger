@@ -1,0 +1,17 @@
+from_url,to_url,type,note
+http://kevinfroger.nl/*,https://kevinfroger.nl/*,301,Force HTTPS canonical
+https://www.kevinfroger.nl/*,https://kevinfroger.nl/*,301,Force non-www canonical
+/*?utm_*,/*,301,Strip tracking parameters
+/*?gclid=*,/*,301,Strip Google click ID
+/*?fbclid=*,/*,301,Strip Facebook click ID
+/*?ref=*,/*,301,Strip referrer parameters
+/dj-boeken-nederland,/dj-boeken,301,Canonical URL consolidation
+/dj-huren-nederland,/dj-huren,301,Canonical URL consolidation
+/bruiloft-dj,/bruiloften,301,Service page redirect
+/bedrijfsfeest-dj,/bedrijfsfeesten,301,Service page redirect
+/festival-dj,/festivals,301,Service page redirect
+/dj-kevin-froger,/,301,Brand name redirect
+/kevin-froger-dj,/,301,Brand name variation
+/dj-kevin,/,301,Short brand name
+/*/,/*,301,Remove trailing slashes (except root)
+//,/,301,Fix double slashes
