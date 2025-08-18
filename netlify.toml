@@ -85,6 +85,48 @@
   status = 301
   force = true
 
+# SEO redirects from keyword map
+[[redirects]]
+  from = "/dj-boeken-nederland"
+  to = "/dj-boeken"
+  status = 301
+
+[[redirects]]
+  from = "/dj-huren-nederland" 
+  to = "/dj-huren"
+  status = 301
+
+[[redirects]]
+  from = "/bruiloft-dj"
+  to = "/bruiloften"
+  status = 301
+
+[[redirects]]
+  from = "/bedrijfsfeest-dj"
+  to = "/bedrijfsfeesten" 
+  status = 301
+
+[[redirects]]
+  from = "/festival-dj"
+  to = "/festivals"
+  status = 301
+
+# Common typos and variations
+[[redirects]]
+  from = "/dj-kevin-froger"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/kevin-froger-dj"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/dj-kevin"
+  to = "/"
+  status = 301
+
 # SEO redirects for common variations
 [[redirects]]
   from = "/dj-boeken-nederland"

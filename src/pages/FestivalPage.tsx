@@ -10,6 +10,32 @@ const FestivalPage = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', '🎪 Festival DJ Nederland ✨ 50+ festivals, high-energy power sets 60-90 min, crowd control specialist. Ervaren festival DJ. Boek nu! 📞 06-45251333');
     }
+    
+    // Add structured data for festival page
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Festival DJ Nederland - DJ Kevin Froger",
+      "description": "High-energy festival performances en crowd control. 50+ succesvolle festivals.",
+      "url": "https://kevinfroger.nl/festivals",
+      "mainEntity": {
+        "@type": "Service",
+        "name": "Festival DJ Services",
+        "provider": {
+          "@type": "Person",
+          "name": "DJ Kevin Froger"
+        },
+        "serviceType": "Festival Entertainment",
+        "areaServed": "Nederland"
+      }
+    });
+    document.head.appendChild(script);
+    
+    return () => {
+      document.head.removeChild(script);
+    };
   }, []);
 
   const services = [

@@ -11,6 +11,28 @@ const PricingPage = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', '💰 DJ Prijzen Nederland ✨ Transparante tarieven vanaf €350, geen verborgen kosten. DJ inclusief apparatuur. Gratis offerte binnen 24u. Bel 06-45251333!');
     }
+    
+    // Add structured data for pricing page
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "DJ Prijzen Nederland - Transparante Tarieven",
+      "description": "Transparante DJ prijzen vanaf €350. Geen verborgen kosten, inclusief apparatuur.",
+      "url": "https://kevinfroger.nl/prijzen",
+      "mainEntity": {
+        "@type": "PriceSpecification",
+        "priceCurrency": "EUR",
+        "price": "350",
+        "description": "DJ services inclusief apparatuur"
+      }
+    });
+    document.head.appendChild(script);
+    
+    return () => {
+      document.head.removeChild(script);
+    };
   }, []);
 
   const addOns = [

@@ -18,7 +18,7 @@
     RewriteCond %{REQUEST_URI} !^/assets/
     RewriteRule . /index.html [L]
     
-    # SEO Redirects
+    # SEO Redirects from keyword map
     RewriteRule ^dj-boeken-nederland/?$ /dj-boeken [R=301,L]
     RewriteRule ^dj-huren-nederland/?$ /dj-huren [R=301,L]
     RewriteRule ^bruiloft-dj/?$ /bruiloften [R=301,L]
