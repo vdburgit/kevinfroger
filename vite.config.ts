@@ -11,13 +11,6 @@ export default defineConfig({
     minifySyntax: true,
     minifyWhitespace: true,
   },
-  esbuild: {
-    target: 'es2022',
-    legalComments: 'none',
-    minifyIdentifiers: true,
-    minifySyntax: true,
-    minifyWhitespace: true,
-  },
   build: {
     outDir: 'dist',
     target: 'es2022',
@@ -26,7 +19,6 @@ export default defineConfig({
     minify: 'esbuild',
     chunkSizeWarningLimit: 1000,
     assetsInlineLimit: 4096,
-    reportCompressedSize: false,
     reportCompressedSize: false,
     rollupOptions: {
       output: {
@@ -49,21 +41,7 @@ export default defineConfig({
             './src/pages/seo/DJHoekscheWaardPage'
           ],
         },
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          icons: ['lucide-react'],
-          seo: [
-            './src/pages/seo/DJRotterdamPage',
-            './src/pages/seo/DJDenHaagPage',
-            './src/pages/seo/DJHoekscheWaardPage'
-          ],
-        },
       },
-      treeshake: {
-        moduleSideEffects: false,
-        propertyReadSideEffects: false,
-        tryCatchDeoptimization: false
-      }
       treeshake: {
         moduleSideEffects: false,
         propertyReadSideEffects: false,
@@ -76,18 +54,9 @@ export default defineConfig({
     exclude: ['@vite/client', '@vite/env'],
     force: false
   },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom', 'lucide-react'],
-    exclude: ['@vite/client', '@vite/env'],
-    force: false
-  },
   server: {
     hmr: { overlay: false },
     host: true,
-    cors: true,
-    headers: {
-      'Cache-Control': 'no-cache'
-    }
     cors: true,
     headers: {
       'Cache-Control': 'no-cache'
