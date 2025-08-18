@@ -74,9 +74,9 @@ const Header = () => {
               <img 
                 src="/images/kevin-logo.png" 
                 alt="DJ Kevin Froger Logo - #1 Bruiloft DJ Nederland" 
-                className="h-8 md:h-12 lg:h-16 w-auto group-hover:scale-105 transition-transform duration-200 drop-shadow-lg"
+                className="h-8 md:h-12 lg:h-14 w-auto group-hover:scale-105 transition-transform duration-200 drop-shadow-lg"
                 width="200"
-                height="64"
+                height="56"
                 loading="eager"
                 decoding="sync"
                 fetchPriority="high"

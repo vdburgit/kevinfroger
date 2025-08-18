@@ -37,7 +37,7 @@
 [[headers]]
   for = "/*.html"
   [headers.values]
-    Cache-Control = "public, max-age=60, must-revalidate"
+    Cache-Control = "public, max-age=300, must-revalidate"
     Vary = "Accept-Encoding"
 
 [[headers]]
@@ -68,14 +68,12 @@
 [[headers]]
   for = "*.js"
   [headers.values]
-    Content-Encoding = "br"
     Cache-Control = "public, max-age=31536000, immutable"
+    Content-Encoding = "br"
 
 [[headers]]
   for = "*.css"
   [headers.values]
-    Content-Encoding = "br"
-    Cache-Control = "public, max-age=31536000, immutable"
 [functions]
   directory = "netlify/functions"
 

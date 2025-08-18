@@ -64,51 +64,59 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
     <!-- Critical Font Preload - Inter Variable -->
-    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2" type="font/woff2" crossorigin />
+    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2" type="font/woff2" crossorigin="anonymous" />
     
     <!-- LCP Image Preload - Hero Image (Critical) -->
-    <link rel="preload" as="image" href="/images/dj-kevin-froger-bruiloft-scaled.jpeg" 
-          imagesrcset="/images/dj-kevin-froger-bruiloft-scaled.jpeg 800w, /images/dj-kevin-froger-bruiloft-scaled.jpeg 1200w, /images/dj-kevin-froger-bruiloft-scaled.jpeg 1600w"
-          imagesizes="100vw" fetchpriority="high" crossorigin />
+    <link rel="preload" as="image" href="/images/dj-kevin-froger-bruiloft-scaled.jpeg" fetchpriority="high" />
     
     <!-- Critical CSS Inline (Above the fold) -->
     <style>
       /* Critical above-the-fold styles - Optimized for LCP */
       /* Critical Reset & Base */
       *{box-sizing:border-box;margin:0;padding:0}
-      html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
-      body{font-family:'Inter',system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeSpeed;font-display:swap}
+      html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent;font-feature-settings:'kern' 1,'liga' 1}
+      body{font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeSpeed;font-display:swap;color:#1f2937}
       
       /* Hero Critical Styles */
-      .hero-section{min-height:100vh;background:linear-gradient(135deg,#1e3a8a 0%,#7c3aed 50%,#1e3a8a 100%);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;contain:layout style paint}
+      .hero-section{height:70vh;min-height:500px;background:linear-gradient(135deg,#1e3a8a 0%,#7c3aed 50%,#1e3a8a 100%);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;contain:layout style paint}
       .hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.4);z-index:1}
-      .hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;will-change:auto}
+      .hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;will-change:auto;transform:translateZ(0)}
       .hero-content{position:relative;z-index:2;text-align:center;padding:1rem;max-width:80rem;margin:0 auto}
-      .hero-title{font-size:3rem;font-weight:900;color:#fff;margin-bottom:1rem;line-height:1.1;text-shadow:0 4px 8px rgba(0,0,0,0.5)}
-      .hero-subtitle{font-size:1.25rem;color:#fb923c;margin-bottom:2rem;font-weight:600;text-shadow:0 2px 4px rgba(0,0,0,0.3)}
-      .hero-description{font-size:1.125rem;color:rgba(255,255,255,0.9);margin-bottom:2rem;max-width:48rem;margin-left:auto;margin-right:auto;line-height:1.6}
+      .hero-title{font-size:clamp(2rem,8vw,6rem);font-weight:900;color:#fff;margin-bottom:1rem;line-height:1.1;text-shadow:0 4px 8px rgba(0,0,0,0.5);letter-spacing:-0.02em}
+      .hero-subtitle{font-size:clamp(1rem,4vw,2rem);color:#fb923c;margin-bottom:1.5rem;font-weight:600;text-shadow:0 2px 4px rgba(0,0,0,0.3)}
+      .hero-description{font-size:clamp(1rem,2.5vw,1.5rem);color:rgba(255,255,255,0.9);margin-bottom:2rem;max-width:48rem;margin-left:auto;margin-right:auto;line-height:1.6}
       .hero-cta{display:flex;flex-direction:column;gap:1rem;align-items:center;justify-content:center}
-      .btn-primary{background:linear-gradient(to right,#f97316,#ea580c);color:#fff;padding:1rem 2.5rem;border-radius:9999px;font-weight:900;font-size:1.125rem;text-decoration:none;display:inline-flex;align-items:center;transition:all 0.3s ease;box-shadow:0 10px 25px rgba(249,115,22,0.3);transform:translateZ(0)}
-      .btn-primary:hover{transform:translateY(-2px) scale(1.05);box-shadow:0 15px 35px rgba(249,115,22,0.4)}
-      .btn-secondary{border:2px solid #fff;color:#fff;padding:1rem 2.5rem;border-radius:9999px;font-weight:900;font-size:1.125rem;text-decoration:none;display:inline-flex;align-items:center;transition:all 0.3s ease;background:rgba(255,255,255,0.1);backdrop-filter:blur(10px)}
+      .btn-primary{background:linear-gradient(to right,#f97316,#ea580c);color:#fff;padding:0.875rem 2rem;border-radius:9999px;font-weight:900;font-size:1rem;text-decoration:none;display:inline-flex;align-items:center;transition:all 0.3s ease;box-shadow:0 8px 20px rgba(249,115,22,0.3);transform:translateZ(0);min-height:44px;min-width:44px}
+      .btn-primary:hover{transform:translateY(-2px) scale(1.05);box-shadow:0 12px 30px rgba(249,115,22,0.4)}
+      .btn-secondary{border:2px solid #fff;color:#fff;padding:0.875rem 2rem;border-radius:9999px;font-weight:900;font-size:1rem;text-decoration:none;display:inline-flex;align-items:center;transition:all 0.3s ease;background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);min-height:44px;min-width:44px}
       .btn-secondary:hover{background:#fff;color:#1e3a8a;transform:translateY(-2px)}
+      .btn-whatsapp{border:2px solid #22c55e;color:#22c55e;padding:0.875rem 2rem;border-radius:9999px;font-weight:900;font-size:1rem;text-decoration:none;display:inline-flex;align-items:center;transition:all 0.3s ease;background:rgba(34,197,94,0.1);backdrop-filter:blur(10px);min-height:44px;min-width:44px}
+      .btn-whatsapp:hover{background:#22c55e;color:#fff;transform:translateY(-2px)}
       .icon{width:1.5rem;height:1.5rem;margin-right:0.75rem}
       
       /* Responsive */
       @media(min-width:768px){
-        .hero-title{font-size:4.5rem}
-        .hero-subtitle{font-size:1.5rem}
-        .hero-description{font-size:1.25rem}
+        .hero-title{font-size:clamp(3rem,10vw,7rem)}
+        .hero-subtitle{font-size:clamp(1.25rem,5vw,2.5rem)}
+        .hero-description{font-size:clamp(1.125rem,3vw,1.75rem)}
         .hero-cta{flex-direction:row;gap:1.5rem}
-      }
-      @media(min-width:1024px){
-        .hero-title{font-size:6rem}
-        .hero-subtitle{font-size:1.875rem}
-        .hero-description{font-size:1.375rem}
+        .btn-primary,.btn-secondary,.btn-whatsapp{padding:1rem 2.5rem;font-size:1.125rem}
       }
       
-      /* Focus States */
-      .btn-primary:focus,.btn-secondary:focus{outline:2px solid #f97316;outline-offset:2px}
+      /* Focus States & Accessibility */
+      .btn-primary:focus,.btn-secondary:focus,.btn-whatsapp:focus{outline:2px solid #f97316;outline-offset:2px}
+      .slide-indicator{width:12px;height:12px;border-radius:50%;transition:all 0.3s ease;cursor:pointer;min-height:44px;min-width:44px;display:flex;align-items:center;justify-content:center}
+      .slide-indicator:focus{outline:2px solid #f97316;outline-offset:2px}
+      
+      /* Performance optimizations */
+      .hero-slider{contain:layout style paint}
+      .hero-slide{will-change:opacity;transform:translateZ(0)}
+      
+      /* Reduce motion for accessibility */
+      @media(prefers-reduced-motion:reduce){
+        .hero-slide{transition:none}
+        .btn-primary,.btn-secondary,.btn-whatsapp{transition:none}
+      }
     </style>
     
     <!-- Canonical URL -->
@@ -118,11 +126,11 @@
     <meta name="description" content="DJ Kevin Froger - Allround DJ & entertainment specialist. Sfeer, show en volle dansvloer voor bruiloften, bedrijfsfeesten en festivals. Boek direct!" />
     
     <!-- Font Optimization -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" /></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" crossorigin="anonymous" /></noscript>
     
     <!-- Non-Critical CSS Preload -->
-    <link rel="preload" href="/src/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="preload" href="/src/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'" media="print" />
     <noscript><link rel="stylesheet" href="/src/index.css" /></noscript>
 
     <!-- Enhanced JSON-LD Structured Data -->
@@ -290,19 +298,34 @@
     <!-- Speculation Rules for Desktop (Prefetch) -->
     <script type="speculationrules">
     {
+      "prerender": [{
+        "where": { "href_matches": "/bruiloften" },
+        "eagerness": "moderate"
+      }],
       "prefetch": [{
-        "where": { "and": [
-          { "href_matches": "/bruiloften" },
-          { "href_matches": "/bedrijfsfeesten" },
-          { "href_matches": "/contact" }
-        ]},
+        "where": { "href_matches": "/contact" },
         "eagerness": "moderate"
       }]
     }
     </script>
+    
+    <!-- Performance Monitoring -->
+    <script>
+      // Critical performance monitoring
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'largest-contentful-paint') {
+              console.log('LCP:', entry.startTime);
+            }
+          }
+        });
+        observer.observe({entryTypes: ['largest-contentful-paint']});
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx" defer></script>
   </body>
 </html>

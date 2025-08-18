@@ -14,12 +14,13 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     target: 'es2022',
-    cssCodeSplit: true,
+    cssCodeSplit: false,
     sourcemap: false,
     minify: 'esbuild',
-    chunkSizeWarningLimit: 1000,
-    assetsInlineLimit: 4096,
+    chunkSizeWarningLimit: 500,
+    assetsInlineLimit: 8192,
     reportCompressedSize: false,
+    cssMinify: 'esbuild',
     rollupOptions: {
       output: {
         assetFileNames: (assetInfo) => {
@@ -33,15 +34,12 @@ export default defineConfig({
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
         manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          icons: ['lucide-react'],
-          seo: [
-            './src/pages/seo/DJRotterdamPage',
-            './src/pages/seo/DJDenHaagPage',
-            './src/pages/seo/DJHoekscheWaardPage'
-          ],
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          icons: ['lucide-react']
         },
       },
+      external: [],
       treeshake: {
         moduleSideEffects: false,
         propertyReadSideEffects: false,

@@ -6,10 +6,11 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 6rem;
+    scroll-padding-top: 5rem;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
     font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+    font-optical-sizing: auto;
   }
   
   body {
@@ -20,6 +21,7 @@
     text-rendering: optimizeSpeed;
     font-display: swap;
     font-optical-sizing: auto;
+    color: #1f2937;
   }
 
   /* Performance optimized scroll offset */
@@ -45,12 +47,10 @@
   /* GPU accelerated text shadows */
   .text-shadow {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    will-change: auto;
   }
   
   .text-shadow-lg {
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    will-change: auto;
   }
   
   .text-shadow-xl {
@@ -58,7 +58,6 @@
       0 4px 8px rgba(0, 0, 0, 0.5),
       0 8px 16px rgba(0, 0, 0, 0.3),
       0 16px 32px rgba(0, 0, 0, 0.2);
-    will-change: auto;
   }
   
   .bg-gradient-radial {
@@ -67,27 +66,21 @@
   
   /* Performance optimized animations */
   .animate-float {
-    animation: float 6s ease-in-out infinite;
     will-change: transform;
-    transform: translateZ(0);
     backface-visibility: hidden;
   }
   
   .animate-bounce-slow {
-    animation: bounce 3s infinite;
     will-change: transform;
     transform: translateZ(0);
   }
   
   .animate-pulse-slow {
-    animation: pulse 4s infinite;
     will-change: opacity;
   }
   
   .animate-ping-slow {
-    animation: ping 3s infinite;
     will-change: transform, opacity;
-    transform: translateZ(0);
   }
   
   @keyframes float {
@@ -97,14 +90,16 @@
   
   /* GPU acceleration utilities */
   .gpu-accelerated {
-    transform: translateZ(0);
-    will-change: transform;
-    backface-visibility: hidden;
+    transform: translate3d(0,0,0);
   }
   
   .backdrop-blur-xs {
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
+  }
+  
+  .transform-gpu {
+    transform: translate3d(0,0,0);
   }
   
   .shadow-3xl {
