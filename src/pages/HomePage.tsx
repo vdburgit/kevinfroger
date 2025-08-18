@@ -264,6 +264,7 @@ const HomePage = () => {
                     loading="lazy"
                     width="400"
                     height="256"
+                  />
                   <div className="absolute top-4 right-4 lg:top-6 lg:right-6">
                     <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-full flex items-center justify-center text-white shadow-lg`}>
                       {service.icon}
@@ -288,18 +289,12 @@ const HomePage = () => {
                     ))}
                   </div>
                   
-                  <a
-                    href={service.link}
+                  <Link
+                    to={service.link}
                     className="group inline-flex items-center text-blue-700 font-black text-lg hover:text-orange-500 transition-colors duration-200"
                   >
                     MEER INFORMATIE
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform duration-200" />
-                  </a>
-                    to={service.link}
-                    className={`inline-flex items-center bg-gradient-to-r ${service.color} text-white px-4 lg:px-6 py-2 lg:py-3 rounded-full font-bold text-sm lg:text-base hover:shadow-lg transition-all duration-300 group`}
-                  >
-                    MEER INFO
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
                   </Link>
                 </div>
               </div>
