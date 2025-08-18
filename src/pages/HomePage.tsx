@@ -100,128 +100,124 @@ const HomePage = () => {
 
   return (
     <div className="bg-white">
-      {/* Hero Section - Fullscreen Slider */}
-      <section className="relative min-h-screen overflow-hidden" role="banner" aria-label="DJ Kevin Froger Hero Section">
-        {heroSlides.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentSlide ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/70 z-10"></div>
-            <img 
-              src={slide.image}
-              alt={`DJ Kevin Froger - ${slide.title} ${slide.subtitle}`}
-              className="w-full h-full object-cover"
-              srcSet={`${slide.image} 1920w, ${slide.image} 1200w, ${slide.image} 800w`}
-              sizes="100vw"
-              width="1920"
-              height="1080"
-              loading={index === 0 ? "eager" : "lazy"}
-              decoding={index === 0 ? "sync" : "async"}
-              fetchPriority={index === 0 ? "high" : "auto"}
-            />
-          </div>
-        ))}
+      {/* VARIANT ZONDER VIDEO - Optimized Hero Section */}
+      <header className="hero-section" role="banner" aria-labelledby="hero-title">
+        {/* Hero Background Image - LCP Element */}
+        <img 
+          src="/images/dj-kevin-froger-bruiloft-scaled.jpeg"
+          srcSet="/images/dj-kevin-froger-bruiloft-scaled.jpeg 800w, /images/dj-kevin-froger-bruiloft-scaled.jpeg 1200w, /images/dj-kevin-froger-bruiloft-scaled.jpeg 1600w"
+          sizes="100vw"
+          alt="DJ Kevin Froger achter de draaitafel tijdens een bruiloft met dansend publiek"
+          className="hero-image"
+          width="1600"
+          height="900"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
+        />
+        
+        {/* Overlay */}
+        <div className="hero-overlay"></div>
         
         {/* Content */}
-        <div className="absolute inset-0 z-20 flex items-center justify-center">
-          <div className="text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-            <h1 className="text-5xl lg:text-7xl xl:text-8xl font-black text-white mb-8 leading-tight text-shadow-xl">
-              <span className="block">PROFESSIONELE DJ</span>
-              <span className="block text-orange-400">KEVIN FROGER</span>
-            </h1>
-            
-            <div className="mb-8">
-              <p className="text-xl lg:text-2xl text-white mb-4 text-shadow-lg font-bold">
-                LIVE MIXING SPECIALIST & ENERGIEKE MC
-              </p>
-            </div>
-            
-            <p className="text-lg lg:text-xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed text-shadow-lg">
-              Specialist in live mixing en MC services. Ik lees het publiek en creëer de perfecte sfeer voor elk moment van jullie evenement.
-            </p>
-            
-            {/* Desktop buttons */}
-            <div className="hidden md:flex flex-col sm:flex-row gap-6 justify-center">
-              <Link
-                to="/contact"
-                className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-10 py-5 rounded-full font-black text-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-orange-500/50 flex items-center justify-center min-w-[200px]"
-                aria-label="Boek DJ Kevin Froger direct"
-              >
-                <Calendar className="w-6 h-6 inline-block mr-3" />
-                DIRECT BOEKEN
-                <ArrowRight className="w-5 h-5 inline-block ml-2" />
-              </Link>
-              <a
-                href="tel:0645251333"
-                className="border-3 border-white text-white px-10 py-5 rounded-full font-black text-xl hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center min-w-[200px]"
-                aria-label="Bel DJ Kevin Froger op 06 45 25 13 33"
-              >
-               <Phone className="w-6 h-6 inline-block mr-3" />
-                BEL DIRECT
-              </a>
-              <a
-                href="https://api.whatsapp.com/send/?phone=31645251333&text&type=phone_number&app_absent=0"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-3 border-green-400 text-green-100 px-10 py-5 rounded-full font-black text-xl hover:bg-green-500 hover:text-white transition-all duration-300 flex items-center justify-center min-w-[200px]"
-                aria-label="Stuur WhatsApp bericht naar DJ Kevin Froger"
-              >
-                <MessageCircle className="w-6 h-6 inline-block mr-3" />
-                WHATSAPP
-              </a>
-            </div>
-
-            {/* Mobile buttons */}
-            <div className="md:hidden w-full max-w-xs mx-auto px-2 space-y-1.5 mb-6">
-              <Link
-                to="/contact"
-                className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white px-3 py-2 rounded-lg font-bold text-xs hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-md flex items-center justify-center min-h-[36px]"
-                aria-label="Boek DJ Kevin Froger direct"
-              >
-                <Calendar className="w-3 h-3 mr-1.5" />
-                DIRECT BOEKEN
-              </Link>
-              <a
-                href="tel:0645251333"
-                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 py-2 rounded-lg font-bold text-xs hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-md flex items-center justify-center min-h-[36px]"
-                aria-label="Bel DJ Kevin Froger"
-              >
-                <Phone className="w-3 h-3 mr-1.5" />
-                BEL DIRECT
-              </a>
-              <a
-                href="https://api.whatsapp.com/send/?phone=31645251333&text&type=phone_number&app_absent=0"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white px-3 py-2 rounded-lg font-bold text-xs hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-md flex items-center justify-center min-h-[36px]"
-                aria-label="Stuur WhatsApp bericht naar DJ Kevin Froger"
-              >
-                <MessageCircle className="w-3 h-3 mr-1.5" />
-                WHATSAPP
-              </a>
-            </div>
+        <div className="hero-content">
+          <h1 id="hero-title" className="hero-title">
+            DJ Kevin Froger
+          </h1>
+          
+          <p className="hero-subtitle">
+            Allround DJ & entertainment – sfeer, show en volle dansvloer
+          </p>
+          
+          <p className="hero-description">
+            Specialist in live mixing en MC services. Ik lees het publiek en creëer de perfecte sfeer voor elk moment van jullie evenement.
+          </p>
+          
+          <div className="hero-cta">
+            <Link
+              to="/prijzen"
+              className="btn-primary"
+              aria-label="Bekijk prijzen en pakketten van DJ Kevin Froger"
+            >
+              <Calendar className="icon" />
+              Prijzen & Pakketten
+            </Link>
+            <Link
+              to="/contact"
+              className="btn-secondary"
+              aria-label="Boek DJ Kevin Froger direct"
+            >
+              <Phone className="icon" />
+              Boek Direct
+            </Link>
+          </div>
+        </div>
+      </header>
+      
+      {/* VARIANT MET VIDEO - Alternative with Video Background */}
+      {/* 
+      <header className="hero-section" role="banner" aria-labelledby="hero-title-video">
+        <video 
+          className="hero-image"
+          poster="/images/dj-kevin-froger-bruiloft-scaled.jpeg"
+          muted
+          loop
+          playsInline
+          preload="none"
+          width="1600"
+          height="900"
+          aria-label="DJ Kevin Froger video achtergrond"
+        >
+          <source src="/videos/dj-kevin-hero.webm" type="video/webm" />
+          <source src="/videos/dj-kevin-hero.mp4" type="video/mp4" />
+        </video>
+        
+        <div className="hero-overlay"></div>
+        
+        <div className="hero-content">
+          <h1 id="hero-title-video" className="hero-title">
+            DJ Kevin Froger
+          </h1>
+          
+          <p className="hero-subtitle">
+            Allround DJ & entertainment – sfeer, show en volle dansvloer
+          </p>
+          
+          <p className="hero-description">
+            Specialist in live mixing en MC services. Ik lees het publiek en creëer de perfecte sfeer voor elk moment van jullie evenement.
+          </p>
+          
+          <div className="hero-cta">
+            <Link
+              to="/prijzen"
+              className="btn-primary"
+              aria-label="Bekijk prijzen en pakketten van DJ Kevin Froger"
+            >
+              <Calendar className="icon" />
+              Prijzen & Pakketten
+            </Link>
+            <Link
+              to="/contact"
+              className="btn-secondary"
+              aria-label="Boek DJ Kevin Froger direct"
+            >
+              <Phone className="icon" />
+              Boek Direct
+            </Link>
           </div>
         </div>
         
-        {/* Slide Indicators */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex space-x-4">
-          {heroSlides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-2 h-2 md:w-4 md:h-4 rounded-full transition-all duration-300 ${
-                index === currentSlide 
-                  ? 'bg-orange-400 md:scale-125 shadow-lg' 
-                  : 'bg-white/50 hover:bg-white/75'
-              }`}
-              aria-label={`Ga naar slide ${index + 1}`}
-            />
-          ))}
-        </div>
+        <script>
+          // Start video after page load for performance
+          window.addEventListener('load', function() {
+            const video = document.querySelector('.hero-section video');
+            if (video && video.readyState >= 3) {
+              video.play().catch(() => {});
+            }
+          });
+        </script>
       </section>
+      */
 
       {/* Features Section - Stayawake Style */}
       <section className="py-32 bg-gray-50">
