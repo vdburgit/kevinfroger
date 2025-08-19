@@ -27,10 +27,6 @@ const ZuidHollandPage = React.lazy(() => import('./pages/regio/ZuidHollandPage')
 
 // City pages
 const RotterdamPage = React.lazy(() => import('./pages/regio/steden/RotterdamPage'));
-const DenHaagPage = React.lazy(() => import('./pages/regio/steden/DenHaagPage'));
-const DelftPage = React.lazy(() => import('./pages/regio/steden/DelftPage'));
-const LeidenPage = React.lazy(() => import('./pages/regio/steden/LeidenPage'));
-const ZoetermeerPage = React.lazy(() => import('./pages/regio/steden/ZoetermeerPage'));
 
 // Optimized loading component
 const LoadingSpinner = () => (
@@ -71,10 +67,6 @@ function App() {
               
               {/* City pages */}
               <Route path="/regio/zuid-holland/rotterdam" element={<RotterdamPage />} />
-              <Route path="/regio/zuid-holland/den-haag" element={<DenHaagPage />} />
-              <Route path="/regio/zuid-holland/delft" element={<DelftPage />} />
-              <Route path="/regio/zuid-holland/leiden" element={<LeidenPage />} />
-              <Route path="/regio/zuid-holland/zoetermeer" element={<ZoetermeerPage />} />
               
               {/* Legacy redirects */}
               <Route path="/bruiloften" element={<Navigate to="/bruiloft-dj" replace />} />
