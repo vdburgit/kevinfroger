@@ -188,7 +188,7 @@ const PrivatePartiesPage = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-pink-500 to-purple-600 text-white" role="banner" aria-labelledby="private-hero-title">
+      <section className="py-16 lg:py-24 bg-gradient-to-r from-pink-500 to-purple-600 text-white" role="banner" aria-labelledby="private-hero-title">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Gift className="w-16 h-16 mx-auto mb-6 text-pink-200" />
           <h1 id="private-hero-title" className="text-4xl lg:text-6xl font-black mb-6">

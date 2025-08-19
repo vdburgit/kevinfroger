@@ -246,7 +246,7 @@ const CorporatePage = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white" role="banner" aria-labelledby="corporate-hero-title">
+      <section className="py-16 lg:py-24 bg-gradient-to-r from-blue-600 to-blue-700 text-white" role="banner" aria-labelledby="corporate-hero-title">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Building className="w-16 h-16 mx-auto mb-6 text-blue-200" />
           <h1 id="corporate-hero-title" className="text-4xl lg:text-6xl font-black mb-6">

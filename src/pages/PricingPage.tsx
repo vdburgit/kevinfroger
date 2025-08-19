@@ -159,7 +159,7 @@ const PricingPage = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-blue-900 via-purple-800 to-blue-900 text-white overflow-hidden">
+      <section className="relative py-20 lg:py-32 bg-gradient-to-br from-blue-900 via-purple-800 to-blue-900 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         
         {/* Animated background elements */}

@@ -225,7 +225,7 @@ const WeddingsPage = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-pink-500 to-purple-600 text-white" role="banner" aria-labelledby="weddings-hero-title">
+      <section className="py-16 lg:py-24 bg-gradient-to-r from-pink-500 to-purple-600 text-white" role="banner" aria-labelledby="weddings-hero-title">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Heart className="w-16 h-16 mx-auto mb-6 text-pink-200" />
           <h1 id="weddings-hero-title" className="text-4xl lg:text-6xl font-black mb-6">
