@@ -320,7 +320,7 @@ const HomePage = () => {
               <Link to="/evenementen" className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-bold hover:bg-purple-200 transition-colors">
                 Allround DJ
               </Link>
-              <Link to="/portfolio" className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-bold hover:bg-indigo-200 transition-colors">
+              <Link to="/bedrijfsfeesten" className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-bold hover:bg-indigo-200 transition-colors">
                 Exclusieve DJ
               </Link>
               <Link to="/prive-feesten" className="bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full font-bold hover:bg-emerald-200 transition-colors">
