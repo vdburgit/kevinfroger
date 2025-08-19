@@ -3,6 +3,64 @@ import { MapPin, Phone, Mail, Calendar, Users, Music, Award, CheckCircle, ArrowR
 import ContactForm from '../../components/ContactForm';
 
 const DJDenHaagPage = () => {
+  // SEO metadata for this page
+  React.useEffect(() => {
+    document.title = "DJ Den Haag | DJ Kevin Froger Hofstad | 250+ Events";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'DJ Den Haag ✨ 250+ events in de hofstad. DJ Kevin Froger van centrum tot Scheveningen. Exclusieve DJ services Den Haag. Boek nu!');
+    }
+    
+    // Add Open Graph tags
+    const ogTitle = document.querySelector('meta[property="og:title"]') || document.createElement('meta');
+    ogTitle.setAttribute('property', 'og:title');
+    ogTitle.setAttribute('content', 'DJ Den Haag | DJ Kevin Froger Hofstad');
+    if (!document.head.contains(ogTitle)) document.head.appendChild(ogTitle);
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]') || document.createElement('meta');
+    ogDescription.setAttribute('property', 'og:description');
+    ogDescription.setAttribute('content', 'DJ Den Haag ✨ 250+ events in de hofstad. DJ Kevin Froger van centrum tot Scheveningen. Exclusieve DJ services Den Haag.');
+    if (!document.head.contains(ogDescription)) document.head.appendChild(ogDescription);
+    
+    const ogUrl = document.querySelector('meta[property="og:url"]') || document.createElement('meta');
+    ogUrl.setAttribute('property', 'og:url');
+    ogUrl.setAttribute('content', 'https://kevinfroger.nl/dj-den-haag');
+    if (!document.head.contains(ogUrl)) document.head.appendChild(ogUrl);
+    
+    const ogImage = document.querySelector('meta[property="og:image"]') || document.createElement('meta');
+    ogImage.setAttribute('property', 'og:image');
+    ogImage.setAttribute('content', 'https://kevinfroger.nl/images/kevin-portrait.png');
+    if (!document.head.contains(ogImage)) document.head.appendChild(ogImage);
+    
+    const ogSiteName = document.querySelector('meta[property="og:site_name"]') || document.createElement('meta');
+    ogSiteName.setAttribute('property', 'og:site_name');
+    ogSiteName.setAttribute('content', 'DJ Kevin Froger');
+    if (!document.head.contains(ogSiteName)) document.head.appendChild(ogSiteName);
+    
+    // Add structured data for Den Haag page
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "DJ Den Haag - DJ Kevin Froger",
+      "description": "Professionele DJ services in Den Haag en alle wijken van de hofstad",
+      "url": "https://kevinfroger.nl/dj-den-haag",
+      "telephone": "+31645251333",
+      "areaServed": "Den Haag",
+      "sameAs": [
+        "https://www.instagram.com/djkevinfroger/",
+        "https://www.linkedin.com/in/kevin-froger-b23aa263/",
+        "https://www.facebook.com/KevinFroger.nl",
+        "https://wa.me/31645251333"
+      ]
+    });
+    document.head.appendChild(script);
+    
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
   const services = [
     {
       title: "Bruiloften Den Haag",

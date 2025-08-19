@@ -6,10 +6,10 @@ import PricingSection from '../components/PricingSection';
 const PricingPage = () => {
   // SEO metadata for this page
   React.useEffect(() => {
-    document.title = "DJ Prijzen Nederland | Transparante Tarieven Vanaf €350 | DJ Kevin Froger";
+    document.title = "DJ Prijzen Nederland | DJ Kevin Froger Transparant";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', '💰 DJ Prijzen Nederland ✨ Transparante tarieven vanaf €350, geen verborgen kosten. DJ inclusief apparatuur. Gratis offerte binnen 24u. Bel 06-45251333!');
+      metaDescription.setAttribute('content', 'DJ Prijzen Nederland ✨ Transparante tarieven vanaf €350, geen verborgen kosten. DJ Kevin Froger inclusief apparatuur. Gratis offerte binnen 24u!');
     }
     
     // Add structured data for pricing page
@@ -17,16 +17,18 @@ const PricingPage = () => {
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "WebPage",
+      "@type": "LocalBusiness",
       "name": "DJ Prijzen Nederland - Transparante Tarieven",
       "description": "Transparante DJ prijzen vanaf €350. Geen verborgen kosten, inclusief apparatuur.",
       "url": "https://kevinfroger.nl/prijzen",
-      "mainEntity": {
-        "@type": "PriceSpecification",
-        "priceCurrency": "EUR",
-        "price": "350",
-        "description": "DJ services inclusief apparatuur"
-      }
+      "telephone": "+31645251333",
+      "areaServed": "Nederland",
+      "sameAs": [
+        "https://www.instagram.com/djkevinfroger/",
+        "https://www.linkedin.com/in/kevin-froger-b23aa263/",
+        "https://www.facebook.com/KevinFroger.nl",
+        "https://wa.me/31645251333"
+      ]
     });
     document.head.appendChild(script);
     

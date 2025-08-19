@@ -2,6 +2,38 @@ import React from 'react';
 import { User, MapPin, Music, Mic, Heart, Star, Award, Calendar, Users, Zap, ArrowRight, Quote, Phone, MessageCircle } from 'lucide-react';
 
 const BiographyPage = () => {
+  // SEO metadata for this page
+  React.useEffect(() => {
+    document.title = "DJ Kevin Froger Biografie | Het Verhaal Achter de DJ";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'DJ Kevin Froger Biografie ✨ Het verhaal achter de live mixing specialist. 15+ jaar ervaring Hoeksche Waard naar heel Nederland. Lees meer!');
+    }
+    
+    // Add structured data for biography page
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "DJ Kevin Froger Biografie",
+      "description": "Het verhaal achter DJ Kevin Froger - live mixing specialist met 15+ jaar ervaring",
+      "url": "https://kevinfroger.nl/biografie",
+      "telephone": "+31645251333",
+      "areaServed": "Nederland",
+      "sameAs": [
+        "https://www.instagram.com/djkevinfroger/",
+        "https://www.linkedin.com/in/kevin-froger-b23aa263/",
+        "https://www.facebook.com/KevinFroger.nl",
+        "https://wa.me/31645251333"
+      ]
+    });
+    document.head.appendChild(script);
+    
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
   const highlights = [
     {
       icon: <MapPin className="w-8 h-8" />,

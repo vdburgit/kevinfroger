@@ -4,6 +4,48 @@ import { ChevronDown, ChevronUp, HelpCircle, Clock, Euro, Music, Users, Calendar
 const FAQPage = () => {
   const [openItems, setOpenItems] = useState<number[]>([0]);
 
+  // SEO metadata for this page
+  React.useEffect(() => {
+    document.title = "FAQ DJ Kevin Froger | Veelgestelde Vragen DJ Services";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'FAQ DJ Kevin Froger ✨ Alle antwoorden op veelgestelde vragen over DJ services. Van prijzen tot planning. DJ Kevin Froger beantwoordt alles!');
+    }
+    
+    // Add FAQPage structured data
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "name": "FAQ DJ Kevin Froger",
+      "description": "Veelgestelde vragen over DJ services van Kevin Froger",
+      "url": "https://kevinfroger.nl/faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hoe ver van tevoren moet ik boeken?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Voor bruiloften adviseren we 6-12 maanden van tevoren te boeken, vooral voor populaire trouwdata in het voorjaar en de zomer. Voor bedrijfsfeesten en privé evenementen is 2-3 maanden meestal voldoende."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kunnen we onze eigen muziekwensen doorgeven?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absoluut! We bespreken vooraf uitgebreid jullie muziekvoorkeuren, no-go songs en speciale verzoeken. Jullie kunnen een playlist aanleveren die we vakkundig verwerken in de set."
+          }
+        }
+      ]
+    });
+    document.head.appendChild(script);
+    
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
   const toggleItem = (index: number) => {
     setOpenItems(prev => 
       prev.includes(index) 

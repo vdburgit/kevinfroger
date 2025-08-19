@@ -3,6 +3,38 @@ import { Trophy, Users, Target, Calendar, CheckCircle, ArrowRight, Star, Quote, 
 import ContactForm from '../components/ContactForm';
 
 const SportsEventsPage = () => {
+  // SEO metadata for this page
+  React.useEffect(() => {
+    document.title = "Sportfeesten DJ | DJ Kevin Froger Sport Events";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Sportfeesten DJ ✨ Energieke muziek voor sportevenementen. DJ Kevin Froger sportgala\'s, teambuilding en kampioenschappen. Boek nu!');
+    }
+    
+    // Add structured data for sports events page
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Sportfeesten DJ - DJ Kevin Froger",
+      "description": "DJ services voor sportevenementen, teambuilding en sportgala's",
+      "url": "https://kevinfroger.nl/sportfeesten",
+      "telephone": "+31645251333",
+      "areaServed": "Nederland",
+      "sameAs": [
+        "https://www.instagram.com/djkevinfroger/",
+        "https://www.linkedin.com/in/kevin-froger-b23aa263/",
+        "https://www.facebook.com/KevinFroger.nl",
+        "https://wa.me/31645251333"
+      ]
+    });
+    document.head.appendChild(script);
+    
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
   const services = [
     {
       icon: <Trophy className="w-8 h-8" />,

@@ -3,6 +3,38 @@ import { Calendar, Users, Music, Star, CheckCircle, ArrowRight, Quote, Clock, Sp
 import ContactForm from '../components/ContactForm';
 
 const EventsPage = () => {
+  // SEO metadata for this page
+  React.useEffect(() => {
+    document.title = "DJ Evenementen Nederland | DJ Kevin Froger Alle Events";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'DJ Evenementen Nederland ✨ 1000+ events alle soorten evenementen. DJ Kevin Froger van bruiloften tot festivals. Professionele DJ services!');
+    }
+    
+    // Add structured data for events page
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "DJ Evenementen Nederland - DJ Kevin Froger",
+      "description": "Professionele DJ services voor alle soorten evenementen in Nederland",
+      "url": "https://kevinfroger.nl/evenementen",
+      "telephone": "+31645251333",
+      "areaServed": "Nederland",
+      "sameAs": [
+        "https://www.instagram.com/djkevinfroger/",
+        "https://www.linkedin.com/in/kevin-froger-b23aa263/",
+        "https://www.facebook.com/KevinFroger.nl",
+        "https://wa.me/31645251333"
+      ]
+    });
+    document.head.appendChild(script);
+    
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
   const eventTypes = [
     {
       icon: <Heart className="w-8 h-8" />,

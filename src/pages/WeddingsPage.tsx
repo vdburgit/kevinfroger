@@ -5,10 +5,10 @@ import ContactForm from '../components/ContactForm';
 const WeddingsPage = () => {
   // SEO metadata for this page
   React.useEffect(() => {
-    document.title = "Bruiloft DJ Nederland | DJ Kevin Froger | 500+ Bruiloften | Live Mixing Specialist";
+    document.title = "Bruiloft DJ Nederland | DJ Kevin Froger | 500+ Events";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', '💒 Bruiloft DJ Nederland ✨ 500+ bruiloften, complete muzikale begeleiding ceremonie tot feestavond. Live mixing specialist zonder playlists. Boek nu! 📞 06-45251333');
+      metaDescription.setAttribute('content', 'Bruiloft DJ Nederland ✨ 500+ bruiloften, complete muzikale begeleiding ceremonie tot feestavond. DJ Kevin Froger live mixing specialist. Boek nu!');
     }
     
     // Add structured data for wedding page
@@ -16,20 +16,18 @@ const WeddingsPage = () => {
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "WebPage",
+      "@type": "LocalBusiness",
       "name": "Bruiloft DJ Nederland - DJ Kevin Froger",
       "description": "Complete muzikale begeleiding voor bruiloften van ceremonie tot feestavond. 500+ succesvolle bruiloften.",
       "url": "https://kevinfroger.nl/bruiloften",
-      "mainEntity": {
-        "@type": "Service",
-        "name": "Bruiloft DJ Services",
-        "provider": {
-          "@type": "Person",
-          "name": "DJ Kevin Froger"
-        },
-        "serviceType": "Wedding DJ Entertainment",
-        "areaServed": "Nederland"
-      }
+      "telephone": "+31645251333",
+      "areaServed": "Nederland",
+      "sameAs": [
+        "https://www.instagram.com/djkevinfroger/",
+        "https://www.linkedin.com/in/kevin-froger-b23aa263/",
+        "https://www.facebook.com/KevinFroger.nl",
+        "https://wa.me/31645251333"
+      ]
     });
     document.head.appendChild(script);
     

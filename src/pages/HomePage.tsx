@@ -259,7 +259,7 @@ const HomePage = () => {
                 <div className="relative overflow-hidden">
                   <img 
                     src={service.image}
-                    alt={`DJ Kevin Froger - ${service.title}`}
+                    alt={`DJ Kevin Froger ${service.title} - Professionele DJ services voor ${service.title.toLowerCase()} in Nederland`}
                     className="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition-transform duration-700"
                     loading="lazy"
                     width="400"
@@ -292,6 +292,7 @@ const HomePage = () => {
                   <Link
                     to={service.link}
                     className="group inline-flex items-center text-blue-700 font-black text-base md:text-lg hover:text-orange-500 transition-colors duration-200"
+                    aria-label={`Meer informatie over ${service.title} DJ services van Kevin Froger`}
                   >
                     MEER INFORMATIE
                     <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2 group-hover:translate-x-2 transition-transform duration-200" />
@@ -299,6 +300,30 @@ const HomePage = () => {
                 </div>
               </div>
             ))}
+          </div>
+          
+          {/* Internal Links Section */}
+          <div className="text-center mt-16">
+            <h3 className="text-2xl lg:text-3xl font-black text-gray-900 mb-8">
+              POPULAIRE DJ SERVICES
+            </h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link to="/bruiloften" className="bg-pink-100 text-pink-800 px-4 py-2 rounded-full font-bold hover:bg-pink-200 transition-colors">
+                Bruiloft DJ
+              </Link>
+              <Link to="/bedrijfsfeesten" className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-bold hover:bg-blue-200 transition-colors">
+                Bedrijfsfeest DJ
+              </Link>
+              <Link to="/festivals" className="bg-orange-100 text-orange-800 px-4 py-2 rounded-full font-bold hover:bg-orange-200 transition-colors">
+                Festival DJ
+              </Link>
+              <Link to="/prijzen" className="bg-green-100 text-green-800 px-4 py-2 rounded-full font-bold hover:bg-green-200 transition-colors">
+                DJ Prijzen
+              </Link>
+              <Link to="/contact" className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-bold hover:bg-purple-200 transition-colors">
+                DJ Boeken
+              </Link>
+            </div>
           </div>
         </div>
       </section>

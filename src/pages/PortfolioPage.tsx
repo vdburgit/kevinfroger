@@ -4,6 +4,38 @@ import GoogleReviewsSection from '../components/GoogleReviewsSection';
 import PartnersSection from '../components/PartnersSection';
 
 const PortfolioPage = () => {
+  // SEO metadata for this page
+  React.useEffect(() => {
+    document.title = "Portfolio DJ Kevin Froger | Google Reviews & Partners";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Portfolio DJ Kevin Froger ⭐ Google reviews, partners en referenties. 15+ jaar ervaring, 1000+ events. DJ Kevin Froger bekijk portfolio!');
+    }
+    
+    // Add structured data for portfolio page
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Portfolio DJ Kevin Froger",
+      "description": "Portfolio, Google reviews en partners van DJ Kevin Froger",
+      "url": "https://kevinfroger.nl/portfolio",
+      "telephone": "+31645251333",
+      "areaServed": "Nederland",
+      "sameAs": [
+        "https://www.instagram.com/djkevinfroger/",
+        "https://www.linkedin.com/in/kevin-froger-b23aa263/",
+        "https://www.facebook.com/KevinFroger.nl",
+        "https://wa.me/31645251333"
+      ]
+    });
+    document.head.appendChild(script);
+    
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
   const googleStats = [
   
   ];

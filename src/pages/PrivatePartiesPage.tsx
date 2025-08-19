@@ -3,6 +3,38 @@ import { Gift, Users, Music, Calendar, CheckCircle, ArrowRight, Star, Quote, Clo
 import ContactForm from '../components/ContactForm';
 
 const PrivatePartiesPage = () => {
+  // SEO metadata for this page
+  React.useEffect(() => {
+    document.title = "Privé Feesten DJ | DJ Kevin Froger Verjaardagen";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Privé Feesten DJ ✨ Verjaardagen, jubilea en familiefeesten. DJ Kevin Froger jouw feest, jouw muziek, jouw stijl. Boek nu!');
+    }
+    
+    // Add structured data for private parties page
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Privé Feesten DJ - DJ Kevin Froger",
+      "description": "DJ services voor privé feesten, verjaardagen en familiebijeenkomsten",
+      "url": "https://kevinfroger.nl/prive-feesten",
+      "telephone": "+31645251333",
+      "areaServed": "Nederland",
+      "sameAs": [
+        "https://www.instagram.com/djkevinfroger/",
+        "https://www.linkedin.com/in/kevin-froger-b23aa263/",
+        "https://www.facebook.com/KevinFroger.nl",
+        "https://wa.me/31645251333"
+      ]
+    });
+    document.head.appendChild(script);
+    
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
   const services = [
     {
       icon: <Gift className="w-8 h-8" />,

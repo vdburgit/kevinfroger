@@ -5,10 +5,10 @@ import ContactForm from '../components/ContactForm';
 const ContactPage = () => {
   // SEO metadata for this page
   React.useEffect(() => {
-    document.title = "Contact DJ Kevin Froger | DJ Boeken Nederland | Gratis Offerte Binnen 24u";
+    document.title = "Contact DJ Kevin Froger | DJ Boeken | Gratis Offerte";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', '📞 Contact DJ Kevin Froger ✨ Gratis offerte binnen 24u, DJ boeken Nederland alle provincies. 15+ jaar ervaring, 1000+ events. Bel 06-45251333!');
+      metaDescription.setAttribute('content', 'Contact DJ Kevin Froger ✨ Gratis offerte binnen 24u, DJ boeken Nederland alle provincies. 15+ jaar ervaring, 1000+ events. Bel 06-45251333!');
     }
     
     // Add structured data for contact page
@@ -16,18 +16,19 @@ const ContactPage = () => {
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "ContactPage",
+      "@type": "LocalBusiness",
       "name": "Contact DJ Kevin Froger",
       "description": "Neem contact op voor DJ services in Nederland. Gratis offerte binnen 24 uur.",
       "url": "https://kevinfroger.nl/contact",
-      "mainEntity": {
-        "@type": "ContactPoint",
-        "telephone": "+31645251333",
-        "email": "booking@kevinfroger.nl",
-        "contactType": "customer service",
-        "areaServed": "Nederland",
-        "availableLanguage": "Dutch"
-      }
+      "telephone": "+31645251333",
+      "email": "booking@kevinfroger.nl",
+      "areaServed": "Nederland",
+      "sameAs": [
+        "https://www.instagram.com/djkevinfroger/",
+        "https://www.linkedin.com/in/kevin-froger-b23aa263/",
+        "https://www.facebook.com/KevinFroger.nl",
+        "https://wa.me/31645251333"
+      ]
     });
     document.head.appendChild(script);
     

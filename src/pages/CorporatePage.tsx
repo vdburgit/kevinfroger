@@ -5,10 +5,10 @@ import ContactForm from '../components/ContactForm';
 const CorporatePage = () => {
   // SEO metadata for this page
   React.useEffect(() => {
-    document.title = "Bedrijfsfeest DJ Nederland | Corporate Events | DJ Kevin Froger | 200+ Bedrijfsfeesten";
+    document.title = "Bedrijfsfeest DJ Nederland | DJ Kevin Froger Corporate";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', '🏢 Bedrijfsfeest DJ Nederland ✨ 200+ bedrijfsfeesten, professionele corporate entertainment. Representatieve DJ & MC services. Boek nu! 📞 06-45251333');
+      metaDescription.setAttribute('content', 'Bedrijfsfeest DJ Nederland ✨ 200+ bedrijfsfeesten, professionele corporate entertainment. DJ Kevin Froger representatieve DJ & MC services. Boek nu!');
     }
     
     // Add structured data for corporate page
@@ -16,20 +16,18 @@ const CorporatePage = () => {
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "WebPage",
+      "@type": "LocalBusiness",
       "name": "Bedrijfsfeest DJ Nederland - DJ Kevin Froger",
       "description": "Professionele DJ services voor corporate events en personeelsfeesten. 200+ succesvolle bedrijfsfeesten.",
       "url": "https://kevinfroger.nl/bedrijfsfeesten",
-      "mainEntity": {
-        "@type": "Service",
-        "name": "Corporate DJ Services",
-        "provider": {
-          "@type": "Person",
-          "name": "DJ Kevin Froger"
-        },
-        "serviceType": "Corporate Event Entertainment",
-        "areaServed": "Nederland"
-      }
+      "telephone": "+31645251333",
+      "areaServed": "Nederland",
+      "sameAs": [
+        "https://www.instagram.com/djkevinfroger/",
+        "https://www.linkedin.com/in/kevin-froger-b23aa263/",
+        "https://www.facebook.com/KevinFroger.nl",
+        "https://wa.me/31645251333"
+      ]
     });
     document.head.appendChild(script);
     

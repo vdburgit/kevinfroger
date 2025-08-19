@@ -3,6 +3,64 @@ import { MapPin, Phone, Mail, Calendar, Users, Music, Award, CheckCircle, ArrowR
 import ContactForm from '../../components/ContactForm';
 
 const DJHoekscheWaardPage = () => {
+  // SEO metadata for this page
+  React.useEffect(() => {
+    document.title = "DJ Hoeksche Waard | DJ Kevin Froger Lokaal | 200+ Events";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'DJ Hoeksche Waard ✨ 200+ events in de regio. DJ Kevin Froger lokale specialist van Oud-Beijerland tot Strijen. Professionele DJ services!');
+    }
+    
+    // Add Open Graph tags
+    const ogTitle = document.querySelector('meta[property="og:title"]') || document.createElement('meta');
+    ogTitle.setAttribute('property', 'og:title');
+    ogTitle.setAttribute('content', 'DJ Hoeksche Waard | DJ Kevin Froger Lokaal');
+    if (!document.head.contains(ogTitle)) document.head.appendChild(ogTitle);
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]') || document.createElement('meta');
+    ogDescription.setAttribute('property', 'og:description');
+    ogDescription.setAttribute('content', 'DJ Hoeksche Waard ✨ 200+ events in de regio. DJ Kevin Froger lokale specialist van Oud-Beijerland tot Strijen.');
+    if (!document.head.contains(ogDescription)) document.head.appendChild(ogDescription);
+    
+    const ogUrl = document.querySelector('meta[property="og:url"]') || document.createElement('meta');
+    ogUrl.setAttribute('property', 'og:url');
+    ogUrl.setAttribute('content', 'https://kevinfroger.nl/dj-hoeksche-waard');
+    if (!document.head.contains(ogUrl)) document.head.appendChild(ogUrl);
+    
+    const ogImage = document.querySelector('meta[property="og:image"]') || document.createElement('meta');
+    ogImage.setAttribute('property', 'og:image');
+    ogImage.setAttribute('content', 'https://kevinfroger.nl/images/kevin-portrait.png');
+    if (!document.head.contains(ogImage)) document.head.appendChild(ogImage);
+    
+    const ogSiteName = document.querySelector('meta[property="og:site_name"]') || document.createElement('meta');
+    ogSiteName.setAttribute('property', 'og:site_name');
+    ogSiteName.setAttribute('content', 'DJ Kevin Froger');
+    if (!document.head.contains(ogSiteName)) document.head.appendChild(ogSiteName);
+    
+    // Add structured data for Hoeksche Waard page
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "DJ Hoeksche Waard - DJ Kevin Froger",
+      "description": "Professionele DJ services in de Hoeksche Waard en alle gemeenten van de regio",
+      "url": "https://kevinfroger.nl/dj-hoeksche-waard",
+      "telephone": "+31645251333",
+      "areaServed": "Hoeksche Waard",
+      "sameAs": [
+        "https://www.instagram.com/djkevinfroger/",
+        "https://www.linkedin.com/in/kevin-froger-b23aa263/",
+        "https://www.facebook.com/KevinFroger.nl",
+        "https://wa.me/31645251333"
+      ]
+    });
+    document.head.appendChild(script);
+    
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
   const services = [
     {
       title: "Bruiloften Hoeksche Waard",
