@@ -146,7 +146,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <label htmlFor="name" className="block text-sm font-black text-gray-700 mb-3 tracking-wide">
+            <label htmlFor="name" className="block text-base md:text-sm font-black text-gray-700 mb-3 tracking-wide">
               NAAM *
             </label>
             <input
@@ -156,7 +156,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
               required
               value={formData.name}
               onChange={handleChange}
-              className={`w-full px-6 py-4 border-2 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 font-semibold ${
+              className={`w-full px-4 md:px-6 py-4 border-2 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 font-semibold text-base ${
                 errors.name ? 'border-red-500' : 'border-gray-300'
               }`}
               placeholder="Jouw naam"
@@ -164,12 +164,12 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
             {errors.name && (
               <div className="flex items-center mt-2 text-red-600">
                 <AlertCircle className="w-4 h-4 mr-2" />
-                <span className="text-sm font-medium">{errors.name}</span>
+                <span className="text-base md:text-sm font-medium">{errors.name}</span>
               </div>
             )}
           </div>
           <div>
-            <label htmlFor="email" className="block text-sm font-black text-gray-700 mb-3 tracking-wide">
+            <label htmlFor="email" className="block text-base md:text-sm font-black text-gray-700 mb-3 tracking-wide">
               EMAIL *
             </label>
             <input
@@ -179,7 +179,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
               required
               value={formData.email}
               onChange={handleChange}
-              className={`w-full px-6 py-4 border-2 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 font-semibold ${
+              className={`w-full px-4 md:px-6 py-4 border-2 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 font-semibold text-base ${
                 errors.email ? 'border-red-500' : 'border-gray-300'
               }`}
               placeholder="jouw@email.nl"
@@ -187,7 +187,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
             {errors.email && (
               <div className="flex items-center mt-2 text-red-600">
                 <AlertCircle className="w-4 h-4 mr-2" />
-                <span className="text-sm font-medium">{errors.email}</span>
+                <span className="text-base md:text-sm font-medium">{errors.email}</span>
               </div>
             )}
           </div>
@@ -195,7 +195,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <label htmlFor="phone" className="block text-sm font-black text-gray-700 mb-3 tracking-wide">
+            <label htmlFor="phone" className="block text-base md:text-sm font-black text-gray-700 mb-3 tracking-wide">
               TELEFOON
             </label>
             <input
@@ -204,12 +204,12 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 font-semibold"
+              className="w-full px-4 md:px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 font-semibold text-base"
               placeholder="06 45 25 13 33"
             />
           </div>
           <div>
-            <label htmlFor="eventType" className="block text-sm font-black text-gray-700 mb-3 tracking-wide">
+            <label htmlFor="eventType" className="block text-base md:text-sm font-black text-gray-700 mb-3 tracking-wide">
               <Calendar className="w-4 h-4 inline-block mr-2" />
               TYPE EVENEMENT *
             </label>
@@ -219,7 +219,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
               required
               value={formData.eventType}
               onChange={handleChange}
-              className={`w-full px-6 py-4 border-2 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 font-semibold ${
+              className={`w-full px-4 md:px-6 py-4 border-2 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 font-semibold text-base ${
                 errors.eventType ? 'border-red-500' : 'border-gray-300'
               }`}
             >
@@ -236,7 +236,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
             {errors.eventType && (
               <div className="flex items-center mt-2 text-red-600">
                 <AlertCircle className="w-4 h-4 mr-2" />
-                <span className="text-sm font-medium">{errors.eventType}</span>
+                <span className="text-base md:text-sm font-medium">{errors.eventType}</span>
               </div>
             )}
           </div>
@@ -338,16 +338,16 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-md md:shadow-xl hover:shadow-blue-500/30 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none font-bold md:font-black text-xs md:text-lg flex items-center justify-center min-h-[36px] md:min-h-[60px] rounded-lg md:rounded-2xl px-3 md:px-8 py-2 md:py-4 focus:outline-none focus:ring-4 focus:ring-blue-500/50"
+            className="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-md md:shadow-xl hover:shadow-blue-500/30 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none font-bold md:font-black text-base md:text-lg flex items-center justify-center min-h-[48px] md:min-h-[60px] rounded-lg md:rounded-2xl px-4 md:px-8 py-3 md:py-4 focus:outline-none focus:ring-4 focus:ring-blue-500/50"
           >
             {isSubmitting ? (
               <>
-                <div className="w-3 h-3 md:w-5 md:h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-1.5 md:mr-3"></div>
+                <div className="w-4 h-4 md:w-5 md:h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2 md:mr-3"></div>
                 <span className="tracking-wide">VERSTUREN...</span>
               </>
             ) : (
               <>
-                <Send className="w-3 h-3 md:w-5 md:h-5 mr-1.5 md:mr-3" />
+                <Send className="w-4 h-4 md:w-5 md:h-5 mr-2 md:mr-3" />
                 <span className="tracking-wide">VERSTUUR AANVRAAG</span>
               </>
             )}
@@ -355,10 +355,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
           
           <a
             href="tel:0645251333"
-            className="flex-1 sm:flex-none border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300 font-bold md:font-black text-xs md:text-lg flex items-center justify-center min-h-[36px] md:min-h-[60px] rounded-lg md:rounded-2xl shadow-md hover:shadow-blue-500/20 transform hover:scale-105 bg-blue-50 hover:bg-blue-600 group px-3 md:px-6 py-2 md:py-4 focus:outline-none focus:ring-4 focus:ring-blue-500/50"
+            className="flex-1 sm:flex-none border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300 font-bold md:font-black text-base md:text-lg flex items-center justify-center min-h-[48px] md:min-h-[60px] rounded-lg md:rounded-2xl shadow-md hover:shadow-blue-500/20 transform hover:scale-105 bg-blue-50 hover:bg-blue-600 group px-4 md:px-6 py-3 md:py-4 focus:outline-none focus:ring-4 focus:ring-blue-500/50"
           >
-            <div className="w-5 h-5 md:w-8 md:h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mr-1.5 md:mr-3 group-hover:bg-white group-hover:text-blue-600 transition-all duration-300">
-              <Phone className="w-2.5 h-2.5 md:w-4 md:h-4" />
+            <div className="w-6 h-6 md:w-8 md:h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mr-2 md:mr-3 group-hover:bg-white group-hover:text-blue-600 transition-all duration-300">
+              <Phone className="w-3 h-3 md:w-4 md:h-4" />
             </div>
             <span className="tracking-wide">BEL DIRECT</span>
           </a>
@@ -367,16 +367,16 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
             href="https://api.whatsapp.com/send/?phone=31645251333&text&type=phone_number&app_absent=0"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 sm:flex-none border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-all duration-300 font-bold md:font-black text-xs md:text-lg flex items-center justify-center min-h-[36px] md:min-h-[60px] rounded-lg md:rounded-2xl shadow-md hover:shadow-green-500/20 transform hover:scale-105 bg-green-50 hover:bg-green-600 group px-3 md:px-6 py-2 md:py-4 focus:outline-none focus:ring-4 focus:ring-green-500/50"
+            className="flex-1 sm:flex-none border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-all duration-300 font-bold md:font-black text-base md:text-lg flex items-center justify-center min-h-[48px] md:min-h-[60px] rounded-lg md:rounded-2xl shadow-md hover:shadow-green-500/20 transform hover:scale-105 bg-green-50 hover:bg-green-600 group px-4 md:px-6 py-3 md:py-4 focus:outline-none focus:ring-4 focus:ring-green-500/50"
           >
-            <div className="w-5 h-5 md:w-8 md:h-8 bg-green-600 text-white rounded-full flex items-center justify-center mr-1.5 md:mr-3 group-hover:bg-white group-hover:text-green-600 transition-all duration-300">
-              <MessageCircle className="w-2.5 h-2.5 md:w-4 md:h-4" />
+            <div className="w-6 h-6 md:w-8 md:h-8 bg-green-600 text-white rounded-full flex items-center justify-center mr-2 md:mr-3 group-hover:bg-white group-hover:text-green-600 transition-all duration-300">
+              <MessageCircle className="w-3 h-3 md:w-4 md:h-4" />
             </div>
             <span className="tracking-wide">WHATSAPP</span>
           </a>
         </div>
 
-        <div className="text-center text-sm text-gray-500 pt-4">
+        <div className="text-center text-base md:text-sm text-gray-500 pt-4">
           <p>Door dit formulier te versturen ga je akkoord met onze <a href="/privacy" className="text-blue-600 hover:underline">privacyvoorwaarden</a>.</p>
         </div>
       </form>

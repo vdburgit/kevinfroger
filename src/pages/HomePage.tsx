@@ -152,7 +152,7 @@ const HomePage = () => {
               <span className="block text-orange-400">{heroSlides[currentSlide].subtitle}</span>
             </h1>
             
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl mb-6 lg:mb-8 text-blue-100 leading-relaxed max-w-3xl mx-auto px-2">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl mb-6 lg:mb-8 text-blue-100 leading-relaxed max-w-3xl mx-auto px-4">
               {heroSlides[currentSlide].description}
             </p>
             
@@ -188,31 +188,31 @@ const HomePage = () => {
             </div>
 
             {/* Mobile buttons */}
-            <div className="md:hidden flex flex-col gap-3 mb-6 px-4 max-w-xs mx-auto">
+            <div className="md:hidden flex flex-col gap-3 mb-6 px-4 max-w-sm mx-auto">
               <Link
                 to="/prijzen"
-                className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg font-bold text-xs py-3 px-3 rounded-lg flex items-center justify-center min-h-[44px]"
+                className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg font-bold text-base py-4 px-6 rounded-lg flex items-center justify-center min-h-[48px]"
                 aria-label="Bekijk prijzen en pakketten van DJ Kevin Froger"
               >
-                <Calendar className="w-3 h-3 mr-2" />
+                <Calendar className="w-5 h-5 mr-3" />
                 PRIJZEN
               </Link>
               <Link
                 to="/contact"
-                className="w-full border-2 border-white text-white hover:bg-white hover:text-blue-900 transition-all duration-300 shadow-lg font-bold text-xs py-3 px-3 rounded-lg flex items-center justify-center min-h-[44px]"
+                className="w-full border-2 border-white text-white hover:bg-white hover:text-blue-900 transition-all duration-300 shadow-lg font-bold text-base py-4 px-6 rounded-lg flex items-center justify-center min-h-[48px]"
                 aria-label="Boek DJ Kevin Froger direct"
               >
-                <Phone className="w-3 h-3 mr-2" />
+                <Phone className="w-5 h-5 mr-3" />
                 BELLEN
               </Link>
               <a
                 href="https://api.whatsapp.com/send/?phone=31645251333&text&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full border-2 border-green-400 text-green-100 hover:bg-green-500 hover:text-white transition-all duration-300 shadow-lg font-bold text-xs py-3 px-3 rounded-lg flex items-center justify-center min-h-[44px]"
+                className="w-full border-2 border-green-400 text-green-100 hover:bg-green-500 hover:text-white transition-all duration-300 shadow-lg font-bold text-base py-4 px-6 rounded-lg flex items-center justify-center min-h-[48px]"
                 aria-label="Stuur WhatsApp bericht naar DJ Kevin Froger"
               >
-                <MessageCircle className="w-3 h-3 mr-2" />
+                <MessageCircle className="w-5 h-5 mr-3" />
                 WHATSAPP
               </a>
             </div>
@@ -223,7 +223,7 @@ const HomePage = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 lg:w-4 lg:h-4 rounded-full transition-all duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center ${
+                  className={`w-3 h-3 lg:w-4 lg:h-4 rounded-full transition-all duration-300 min-h-[48px] min-w-[48px] flex items-center justify-center ${
                     index === currentSlide 
                       ? 'bg-orange-400 scale-125 shadow-lg shadow-orange-400/50' 
                       : 'bg-white/30 hover:bg-white/50'
@@ -232,7 +232,7 @@ const HomePage = () => {
                   aria-selected={index === currentSlide}
                   aria-label={`Ga naar slide ${index + 1}: ${heroSlides[index].title}`}
                 >
-                  <span className="w-2 h-2 lg:w-3 lg:h-3 rounded-full bg-current"></span>
+                  <span className="w-3 h-3 lg:w-3 lg:h-3 rounded-full bg-current"></span>
                 </button>
               ))}
             </div>
@@ -244,7 +244,7 @@ const HomePage = () => {
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-gray-900 mb-4 lg:mb-6 text-shadow">
+            <h2 className="text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-black text-gray-900 mb-4 lg:mb-6 text-shadow">
               MIJN SERVICES
               <span className="block text-orange-500">VOOR ELKE GELEGENHEID</span>
             </h2>
@@ -260,7 +260,7 @@ const HomePage = () => {
                   <img 
                     src={service.image}
                     alt={`DJ Kevin Froger - ${service.title}`}
-                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition-transform duration-700"
                     loading="lazy"
                     width="400"
                     height="256"
@@ -270,31 +270,31 @@ const HomePage = () => {
                       {service.icon}
                     </div>
                   </div>
-                  <div className="absolute bottom-6 left-6">
-                    <h3 className="text-2xl font-black text-white mb-2 text-shadow-lg">{service.title}</h3>
+                  <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6">
+                    <h3 className="text-lg md:text-2xl font-black text-white mb-2 text-shadow-lg mobile-service-title">{service.title}</h3>
                   </div>
                 </div>
                 
-                <div className="p-8">
-                  <p className="text-lg text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+                <div className="p-6 md:p-8">
+                  <p className="text-base md:text-lg text-gray-600 mb-4 md:mb-6 leading-relaxed mobile-service-description">{service.description}</p>
                   
-                  <div className="space-y-4 mb-6">
+                  <div className="space-y-3 md:space-y-4 mb-4 md:mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-start space-x-4">
-                        <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                          <CheckCircle className="w-5 h-5 text-white" />
+                        <div className="w-6 h-6 md:w-8 md:h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                          <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-white" />
                         </div>
-                        <span className="text-lg text-gray-700 font-medium">{feature}</span>
+                        <span className="text-base md:text-lg text-gray-700 font-medium mobile-feature-text">{feature}</span>
                       </div>
                     ))}
                   </div>
                   
                   <Link
                     to={service.link}
-                    className="group inline-flex items-center text-blue-700 font-black text-lg hover:text-orange-500 transition-colors duration-200"
+                    className="group inline-flex items-center text-blue-700 font-black text-base md:text-lg hover:text-orange-500 transition-colors duration-200"
                   >
                     MEER INFORMATIE
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform duration-200" />
+                    <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2 group-hover:translate-x-2 transition-transform duration-200" />
                   </Link>
                 </div>
               </div>
@@ -307,7 +307,7 @@ const HomePage = () => {
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-gray-900 mb-4 lg:mb-6 text-shadow">
+            <h2 className="text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-black text-gray-900 mb-4 lg:mb-6 text-shadow">
               WAAROM
               <span className="block text-orange-500">DJ KEVIN FROGER?</span>
             </h2>
@@ -322,8 +322,8 @@ const HomePage = () => {
                 <div className={`w-20 h-20 lg:w-24 lg:h-24 bg-gradient-to-br ${feature.color} rounded-full flex items-center justify-center mx-auto mb-6 lg:mb-8 text-white group-hover:scale-110 transition-transform duration-300 shadow-xl lg:shadow-2xl`}>
                   {feature.icon}
                 </div>
-                <h3 className="text-xl lg:text-2xl font-black text-gray-900 mb-4 lg:mb-6">{feature.title}</h3>
-                <p className="text-sm lg:text-base text-gray-600 leading-relaxed">{feature.description}</p>
+                <h3 className="text-lg lg:text-2xl font-black text-gray-900 mb-4 lg:mb-6">{feature.title}</h3>
+                <p className="text-base lg:text-base text-gray-600 leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>

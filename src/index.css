@@ -298,14 +298,14 @@ select:focus {
   }
   
   .mobile-btn {
-    font-size: 12px !important;
-    padding: 12px 16px !important;
+    font-size: 16px !important;
+    padding: 16px 24px !important;
     border-radius: 8px !important;
-    line-height: 1.2 !important;
+    line-height: 1.5 !important;
     width: 100% !important;
     max-width: 100% !important;
-    margin: 0 auto 8px auto !important;
-    min-height: 44px !important;
+    margin: 0 auto 12px auto !important;
+    min-height: 48px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -323,18 +323,18 @@ select:focus {
   }
   
   .mobile-btn svg {
-    width: 14px !important;
-    height: 14px !important;
-    margin-right: 6px !important;
+    width: 18px !important;
+    height: 18px !important;
+    margin-right: 8px !important;
   }
   
   .mobile-spacing > * + * {
-    margin-top: 8px;
+    margin-top: 12px;
   }
   
   button, a[role="button"], .btn {
-    min-height: 44px;
-    min-width: 44px;
+    min-height: 48px;
+    min-width: 48px;
     touch-action: manipulation;
   }
   
@@ -343,97 +343,120 @@ select:focus {
   }
   
   .mobile-hero-content {
-    padding: 1rem 1rem;
+    padding: 24px 16px;
     contain: layout style;
   }
   
   .mobile-hero-content h1 {
-    font-size: 1.875rem !important;
-    line-height: 1.1 !important;
-    margin-bottom: 1rem !important;
+    font-size: clamp(28px, 8vw, 34px) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 16px !important;
   }
   
   .mobile-hero-content p {
-    font-size: 1rem !important;
-    line-height: 1.4 !important;
-    margin-bottom: 1.5rem !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 24px !important;
   }
   
   .mobile-text-lg {
-    font-size: 1rem !important;
+    font-size: 16px !important;
     line-height: 1.5 !important;
   }
   
   .mobile-text-xl {
-    font-size: 1.125rem !important;
-    line-height: 1.4 !important;
+    font-size: 18px !important;
+    line-height: 1.5 !important;
   }
   
   .mobile-section-padding {
-    padding: 3rem 1rem !important;
+    padding: 32px 16px !important;
   }
   
   .mobile-card {
-    padding: 1.5rem 1rem !important;
-    margin-bottom: 1rem !important;
+    padding: 24px 16px !important;
+    margin-bottom: 16px !important;
     contain: layout style;
   }
   
   .mobile-nav-item {
-    padding: 0.75rem !important;
-    font-size: 1rem !important;
+    padding: 12px !important;
+    font-size: 16px !important;
     font-weight: 600 !important;
   }
   
   .mobile-hero-title {
-    font-size: 2rem !important;
-    line-height: 1.1 !important;
-    margin-bottom: 1rem !important;
+    font-size: clamp(28px, 8vw, 32px) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 16px !important;
   }
   
   .mobile-section-title {
-    font-size: 2.25rem !important;
+    font-size: clamp(24px, 6vw, 28px) !important;
     line-height: 1.2 !important;
-    margin-bottom: 1.25rem !important;
+    margin-bottom: 20px !important;
   }
   
   .mobile-partner-card {
-    height: 120px !important;
-    padding: 0.5rem !important;
+    height: 140px !important;
+    padding: 8px !important;
     contain: layout style paint !important;
   }
   
   .mobile-partner-card .logo-container {
-    height: 60px !important;
-    margin-bottom: 0.5rem !important;
+    height: 80px !important;
+    margin-bottom: 8px !important;
   }
   
   .mobile-partner-card h3 {
-    font-size: 0.75rem !important;
-    margin-bottom: 0.25rem !important;
+    font-size: 14px !important;
+    margin-bottom: 4px !important;
   }
   
   .mobile-partner-card p {
-    font-size: 0.625rem !important;
+    font-size: 12px !important;
   }
 
   .mobile-form-input {
-    padding: 0.75rem !important;
-    font-size: 0.875rem !important;
+    padding: 16px !important;
+    font-size: 16px !important;
     border-radius: 8px !important;
   }
 
   .mobile-stats {
-    padding: 1rem !important;
+    padding: 16px !important;
     contain: layout style !important;
   }
 
   .mobile-stats .stat-number {
-    font-size: 1.5rem !important;
+    font-size: 24px !important;
   }
 
   .mobile-stats .stat-label {
-    font-size: 0.75rem !important;
+    font-size: 14px !important;
+  }
+
+  /* Additional mobile typography fixes */
+  .mobile-service-title {
+    font-size: clamp(20px, 5vw, 24px) !important;
+    line-height: 1.3 !important;
+    margin-bottom: 12px !important;
+  }
+  
+  .mobile-service-description {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 16px !important;
+  }
+  
+  .mobile-feature-text {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+  
+  .mobile-cta-container {
+    padding: 16px !important;
+    gap: 12px !important;
   }
 }
 
