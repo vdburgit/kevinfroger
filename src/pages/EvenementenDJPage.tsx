@@ -229,14 +229,14 @@ const EvenementenDJPage = () => {
               >
                 <MapPin className="w-6 h-6 text-blue-500 mx-auto mb-2" />
                 <h3 className="text-sm font-black text-gray-900 group-hover:text-blue-600 transition-colors">
-                APP VOOR EEN PRIJSINDICATIE
+                  DJ {region.name}
                 </h3>
               </a>
             ))}
           </div>
         </div>
       </section>
-                VRAAG EEN OFFERTE AAN
+
       {/* Contact Section */}
       <section className="py-32 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
