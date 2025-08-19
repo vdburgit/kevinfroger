@@ -307,8 +307,8 @@ const BruiloftDJPage = () => {
               >
                 <MapPin className="w-6 h-6 text-pink-500 mx-auto mb-2" />
                 <h3 className="text-sm font-black text-gray-900 group-hover:text-pink-600 transition-colors">
-                  DJ {region.name}
-                </h3>
+                APP VOOR EEN PRIJSINDICATIE
+                VRAAG EEN OFFERTE AAN
               </a>
             ))}
           </div>

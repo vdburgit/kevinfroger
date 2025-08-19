@@ -166,16 +166,16 @@ const HomePage = () => {
                 aria-label="App voor snelle prijsindicatie"
               >
                 <MessageCircle className="w-4 h-4 lg:w-5 lg:h-5 inline-block mr-2" />
-                APP VOOR PRIJSINDICATIE
+                APP VOOR EEN PRIJSINDICATIE
                 <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5 inline-block ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/prijzen"
                 className="border-2 border-white text-white px-6 lg:px-10 py-3 lg:py-4 rounded-full font-black text-base lg:text-lg hover:bg-white hover:text-blue-900 transition-all duration-300 min-h-[44px]"
-                aria-label="Vraag offerte aan"
+                aria-label="Vraag een offerte aan"
               >
                 <Calendar className="w-4 h-4 lg:w-5 lg:h-5 inline-block mr-2" />
-                VRAAG OFFERTE
+                VRAAG EEN OFFERTE AAN
               </Link>
             </div>
 
@@ -189,15 +189,15 @@ const HomePage = () => {
                 aria-label="App voor snelle prijsindicatie"
               >
                 <MessageCircle className="w-5 h-5 mr-3" />
-                APP VOOR PRIJS
+                APP VOOR EEN PRIJS
               </a>
               <Link
                 to="/prijzen"
                 className="w-full border-2 border-white text-white hover:bg-white hover:text-blue-900 transition-all duration-300 shadow-lg font-bold text-base py-4 px-6 rounded-lg flex items-center justify-center min-h-[48px]"
-                aria-label="Vraag offerte aan"
+                aria-label="Vraag een offerte aan"
               >
                 <Calendar className="w-5 h-5 mr-3" />
-                OFFERTE
+                EEN OFFERTE
               </Link>
             </div>
 
