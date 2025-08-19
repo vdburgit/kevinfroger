@@ -211,6 +211,7 @@ const PartnersSection = () => {
                               height="60"
                               loading="lazy"
                               decoding="async"
+                              style={{ aspectRatio: '2/1' }}
                             />
                           </div>
                           

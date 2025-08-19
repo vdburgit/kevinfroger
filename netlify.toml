@@ -37,43 +37,46 @@
 [[headers]]
   for = "/*.html"
   [headers.values]
-    Cache-Control = "public, max-age=3600, must-revalidate"
+    Cache-Control = "public, max-age=3600, must-revalidate, stale-while-revalidate=86400"
     Vary = "Accept-Encoding"
 
 [[headers]]
   for = "/images/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=31536000, immutable, stale-while-revalidate=31536000"
     Vary = "Accept-Encoding"
+    Content-Type = "image/*"
 
 [[headers]]
   for = "/assets/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=31536000, immutable, stale-while-revalidate=31536000"
     Vary = "Accept-Encoding"
 
 [[headers]]
   for = "/js/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=31536000, immutable, stale-while-revalidate=31536000"
     Vary = "Accept-Encoding"
 
 [[headers]]
   for = "*.woff2"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=31536000, immutable, stale-while-revalidate=31536000"
     Access-Control-Allow-Origin = "*"
 
 # Brotli Compression
 [[headers]]
   for = "*.js"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    Content-Encoding = "br"
+    Cache-Control = "public, max-age=31536000, immutable, stale-while-revalidate=31536000"
+    Vary = "Accept-Encoding"
 
 [[headers]]
   for = "*.css"
   [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable, stale-while-revalidate=31536000"
+    Vary = "Accept-Encoding"
 [functions]
   directory = "netlify/functions"
 

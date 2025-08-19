@@ -111,7 +111,7 @@ const HomePage = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[400px] max-h-[600px] bg-gradient-to-br from-blue-900 via-purple-800 to-blue-900 text-white overflow-hidden" role="banner" aria-labelledby="hero-title">
+      <section className="relative h-[60vh] min-h-[400px] max-h-[600px] bg-gradient-to-br from-blue-900 via-purple-800 to-blue-900 text-white overflow-hidden hero-section" role="banner" aria-labelledby="hero-title">
         {/* Hero Slider Background */}
         <div className="absolute inset-0 hero-slider">
           {heroSlides.map((slide, index) => (
@@ -124,12 +124,13 @@ const HomePage = () => {
               <img 
                 src={slide.image}
                 alt={`DJ Kevin Froger ${slide.title} - Professionele DJ services Nederland`}
-                className="w-full h-full object-cover object-center transform-gpu"
+                className="w-full h-full object-cover object-center transform-gpu hero-image"
                 width="800"
                 height="600"
                 loading={index === 0 ? "eager" : "lazy"}
                 decoding="async"
                 fetchPriority={index === 0 ? "high" : "low"}
+                style={{ aspectRatio: '16/9' }}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
               />
             </div>
@@ -241,7 +242,7 @@ const HomePage = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 lg:py-24 bg-gray-50">
+      <section className="py-16 lg:py-24 bg-gray-50 section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-black text-gray-900 mb-4 lg:mb-6 text-shadow">
@@ -262,8 +263,10 @@ const HomePage = () => {
                     alt={`DJ Kevin Froger ${service.title} - Professionele DJ services voor ${service.title.toLowerCase()} in Nederland`}
                     className="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition-transform duration-700"
                     loading="lazy"
+                    decoding="async"
                     width="400"
                     height="256"
+                    style={{ aspectRatio: '400/256' }}
                   />
                   <div className="absolute top-4 right-4 lg:top-6 lg:right-6">
                     <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-full flex items-center justify-center text-white shadow-lg`}>
@@ -338,7 +341,7 @@ const HomePage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-16 lg:py-24 bg-white lazy-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-black text-gray-900 mb-4 lg:mb-6 text-shadow">
@@ -365,10 +368,14 @@ const HomePage = () => {
       </section>
 
       {/* Music Genres Section */}
-      <MusicGenresSection />
+      <div className="lazy-section">
+        <MusicGenresSection />
+      </div>
 
       {/* Partners Section */}
-      <PartnersSection />
+      <div className="lazy-section">
+        <PartnersSection />
+      </div>
 
     </div>
   );

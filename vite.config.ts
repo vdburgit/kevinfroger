@@ -17,10 +17,13 @@ export default defineConfig({
     cssCodeSplit: false,
     sourcemap: false,
     minify: 'esbuild',
-    chunkSizeWarningLimit: 500,
-    assetsInlineLimit: 4096,
+    chunkSizeWarningLimit: 1000,
+    assetsInlineLimit: 2048,
     reportCompressedSize: false,
     cssMinify: 'esbuild',
+    modulePreload: {
+      polyfill: false
+    },
     rollupOptions: {
       output: {
         assetFileNames: (assetInfo) => {
@@ -34,8 +37,7 @@ export default defineConfig({
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
         manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
+          vendor: ['react', 'react-dom', 'react-router-dom'],
           icons: ['lucide-react']
         },
       },
@@ -44,6 +46,10 @@ export default defineConfig({
         moduleSideEffects: false,
         propertyReadSideEffects: false,
         tryCatchDeoptimization: false
+      },
+      onwarn(warning, warn) {
+        if (warning.code === 'MODULE_LEVEL_DIRECTIVE') return;
+        warn(warning);
       }
     },
   },

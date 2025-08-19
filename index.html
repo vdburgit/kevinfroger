@@ -54,25 +54,27 @@
     <!-- Critical Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.whatsapp.com" crossorigin />
     
     <!-- Critical Font Preload - Inter Variable -->
     <link rel="preload" as="font" href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2" type="font/woff2" crossorigin="anonymous" fetchpriority="high" />
     
     <!-- LCP Image Preload - Hero Image (Critical) -->
     <link rel="preload" as="image" href="/images/dj-kevin-froger-bruiloft-scaled.jpeg" fetchpriority="high" />
+    <link rel="preload" as="image" href="/images/kevin-portrait.png" fetchpriority="low" />
     
     <!-- Critical CSS Inline (Above the fold) -->
     <style>
       /* Critical above-the-fold styles - Optimized for LCP */
       /* Critical Reset & Base */
-      *{box-sizing:border-box;margin:0;padding:0}
+      *{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased}
       html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent;font-feature-settings:'kern' 1,'liga' 1}
-      body{font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeSpeed;font-display:swap;color:#1f2937}
+      body{font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeSpeed;font-display:swap;color:#1f2937;contain:layout style}
       
       /* Hero Critical Styles */
-      .hero-section{height:70vh;min-height:500px;background:linear-gradient(135deg,#1e3a8a 0%,#7c3aed 50%,#1e3a8a 100%);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;contain:layout style paint}
+      .hero-section{height:60vh;min-height:400px;max-height:600px;background:linear-gradient(135deg,#1e3a8a 0%,#7c3aed 50%,#1e3a8a 100%);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;contain:layout style paint}
       .hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.4);z-index:1}
-      .hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;will-change:auto;transform:translateZ(0)}
+      .hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;will-change:auto;transform:translateZ(0);content-visibility:auto}
       .hero-content{position:relative;z-index:2;text-align:center;padding:1rem;max-width:80rem;margin:0 auto}
       .hero-title{font-size:clamp(2rem,8vw,6rem);font-weight:900;color:#fff;margin-bottom:1rem;line-height:1.1;text-shadow:0 4px 8px rgba(0,0,0,0.5);letter-spacing:-0.02em}
       .hero-subtitle{font-size:clamp(1rem,4vw,2rem);color:#fb923c;margin-bottom:1.5rem;font-weight:600;text-shadow:0 2px 4px rgba(0,0,0,0.3)}
@@ -85,6 +87,12 @@
       .btn-whatsapp{border:2px solid #22c55e;color:#22c55e;padding:0.875rem 2rem;border-radius:9999px;font-weight:900;font-size:1rem;text-decoration:none;display:inline-flex;align-items:center;transition:all 0.3s ease;background:rgba(34,197,94,0.1);backdrop-filter:blur(10px);min-height:44px;min-width:44px}
       .btn-whatsapp:hover{background:#22c55e;color:#fff;transform:translateY(-2px)}
       .icon{width:1.5rem;height:1.5rem;margin-right:0.75rem}
+      
+      /* Performance optimizations */
+      .section{content-visibility:auto;contain-intrinsic-size:1000px}
+      .lazy-section{content-visibility:auto;contain-intrinsic-size:800px}
+      img{display:block}
+      .embed{aspect-ratio:16/9}
       
       /* Responsive */
       @media(min-width:768px){
@@ -118,11 +126,11 @@
     <meta name="description" content="DJ Kevin Froger - Allround DJ & entertainment specialist. Sfeer, show en volle dansvloer voor bruiloften, bedrijfsfeesten en festivals. Boek direct!" />
     
     <!-- Font Optimization -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous" fetchpriority="low" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" crossorigin="anonymous" /></noscript>
     
     <!-- Non-Critical CSS Preload -->
-    <link rel="preload" href="/src/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'" media="print" />
+    <link rel="preload" href="/src/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'" media="print" fetchpriority="low" />
     <noscript><link rel="stylesheet" href="/src/index.css" /></noscript>
 
     <!-- Enhanced JSON-LD Structured Data -->
@@ -318,7 +326,7 @@
     </script>
     
     <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -336,15 +344,16 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx" defer></script>
+    <script type="module" src="/src/main.tsx" defer fetchpriority="high"></script>
     
     <!-- Cookie Banner (GDPR) -->
-    <div id="cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#1f2937; color:white; padding:1rem; z-index:9999; text-align:center;">
+    <div id="cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#1f2937; color:white; padding:1rem; z-index:9999; text-align:center; contain:layout style;">
       <p style="margin:0 0 1rem 0;">Deze website gebruikt cookies voor analytics en gebruikerservaring. <a href="/privacy" style="color:#f97316;">Meer info</a></p>
       <button onclick="acceptCookies()" style="background:#f97316; color:white; border:none; padding:0.5rem 1rem; border-radius:0.5rem; font-weight:bold; cursor:pointer;">Accepteren</button>
     </div>
     
-    <script>
+    <!-- Performance optimized scripts -->
+    <script defer>
       // Cookie consent
       function acceptCookies() {
         localStorage.setItem('cookies-accepted', 'true');
@@ -368,6 +377,26 @@
           }
         }
       });
+    </script>
+    
+    <!-- Lazy load non-critical components -->
+    <script defer>
+      // Initialize components when visible
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.dataset.loaded) {
+              entry.target.dataset.loaded = 'true';
+              // Component initialization happens here
+            }
+          });
+        }, { rootMargin: '50px' });
+        
+        // Observe lazy sections
+        document.addEventListener('DOMContentLoaded', () => {
+          document.querySelectorAll('.lazy-section').forEach(el => observer.observe(el));
+        });
+      }
     </script>
   </body>
 </html>

@@ -23,13 +23,13 @@
     font-display: swap;
     font-optical-sizing: auto;
     color: #1f2937;
-    contain: layout style;
+    contain: layout style paint;
   }
 
   /* Performance optimized scroll offset */
   section[id] {
     scroll-margin-top: 6rem;
-    contain: layout style;
+    contain: layout style paint;
   }
 
   @media (max-width: 768px) {
@@ -70,19 +70,23 @@
   .animate-float {
     will-change: transform;
     backface-visibility: hidden;
+    transform: translateZ(0);
   }
   
   .animate-bounce-slow {
     will-change: transform;
     transform: translateZ(0);
+    backface-visibility: hidden;
   }
   
   .animate-pulse-slow {
     will-change: opacity;
+    transform: translateZ(0);
   }
   
   .animate-ping-slow {
     will-change: transform, opacity;
+    transform: translateZ(0);
   }
   
   @keyframes float {
@@ -93,6 +97,7 @@
   /* GPU acceleration utilities */
   .gpu-accelerated {
     transform: translate3d(0,0,0);
+    backface-visibility: hidden;
   }
   
   .backdrop-blur-xs {
@@ -102,6 +107,12 @@
   
   .transform-gpu {
     transform: translate3d(0,0,0);
+    backface-visibility: hidden;
+  }
+  
+  .section {
+    content-visibility: auto;
+    contain-intrinsic-size: 1000px;
   }
   
   .shadow-3xl {
@@ -155,6 +166,12 @@
   
   .contain-size {
     contain: size;
+  }
+  
+  .lazy-section {
+    content-visibility: auto;
+    contain-intrinsic-size: 800px;
+    contain: layout style paint;
   }
 }
 
