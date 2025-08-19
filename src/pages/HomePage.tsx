@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, ArrowRight, Users, Music, Award, Phone, Zap, Heart, Building, Volume2, Mic, MessageCircle, CheckCircle } from 'lucide-react';
+import { Calendar, ArrowRight, Users, Music, Award, Phone, Zap, Heart, Building, Volume2, Mic, MessageCircle, CheckCircle, MapPin } from 'lucide-react';
 import MusicGenresSection from '../components/MusicGenresSection';
 import PartnersSection from '../components/PartnersSection';
 
