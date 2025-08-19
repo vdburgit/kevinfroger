@@ -108,28 +108,33 @@
   force = false
 # SEO redirects from keyword map
 [[redirects]]
-  from = "/dj-boeken-nederland"
-  to = "/dj-boeken"
+  from = "/bruiloften"
+  to = "/bruiloft-dj"
   status = 301
 
 [[redirects]]
-  from = "/dj-huren-nederland" 
-  to = "/dj-huren"
+  from = "/bedrijfsfeesten"
+  to = "/zakelijk-dj"
   status = 301
 
 [[redirects]]
-  from = "/bruiloft-dj"
-  to = "/bruiloften"
+  from = "/festivals"
+  to = "/evenementen-dj"
   status = 301
 
 [[redirects]]
-  from = "/bedrijfsfeest-dj"
-  to = "/bedrijfsfeesten" 
+  from = "/evenementen"
+  to = "/evenementen-dj"
   status = 301
 
 [[redirects]]
-  from = "/festival-dj"
-  to = "/festivals"
+  from = "/prive-feesten"
+  to = "/verjaardag-dj"
+  status = 301
+
+[[redirects]]
+  from = "/portfolio"
+  to = "/reviews"
   status = 301
 
 # Common typos and variations
