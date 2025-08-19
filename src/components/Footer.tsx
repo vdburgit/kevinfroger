@@ -68,16 +68,13 @@ const Footer = () => {
               #1 Allround DJ – Professionele DJ-diensten voor bruiloften, bedrijfsfeesten, verjaardagen en festivals. Allround DJ boeken voor alle evenementen in Nederland.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="group text-blue-300 hover:text-orange-400 transition-colors p-3 bg-blue-700/50 rounded-full hover:bg-orange-500/20">
+              <a href="https://www.facebook.com/KevinFroger.nl" target="_blank" rel="noopener noreferrer" className="group text-blue-300 hover:text-orange-400 transition-colors p-3 bg-blue-700/50 rounded-full hover:bg-orange-500/20">
                 <Facebook className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
               </a>
-              <a href="#" className="group text-blue-300 hover:text-orange-400 transition-colors p-3 bg-blue-700/50 rounded-full hover:bg-orange-500/20">
+              <a href="https://www.instagram.com/djkevinfroger/" target="_blank" rel="noopener noreferrer" className="group text-blue-300 hover:text-orange-400 transition-colors p-3 bg-blue-700/50 rounded-full hover:bg-orange-500/20">
                 <Instagram className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
               </a>
-              <a href="#" className="group text-blue-300 hover:text-orange-400 transition-colors p-3 bg-blue-700/50 rounded-full hover:bg-orange-500/20">
-                <Twitter className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
-              </a>
-              <a href="#" className="group text-blue-300 hover:text-orange-400 transition-colors p-3 bg-blue-700/50 rounded-full hover:bg-orange-500/20">
+              <a href="https://www.youtube.com/@KEVINFROGER" target="_blank" rel="noopener noreferrer" className="group text-blue-300 hover:text-orange-400 transition-colors p-3 bg-blue-700/50 rounded-full hover:bg-orange-500/20">
                 <Youtube className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
               </a>
               <a 
