@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap>
-    <loc>https://kevinfroger.nl/sitemaps/pages.xml</loc>
-    <lastmod>2025-01-17</lastmod>
-  </sitemap>
-  <sitemap>
-    <loc>https://kevinfroger.nl/sitemaps/provincies.xml</loc>
-    <lastmod>2025-01-17</lastmod>
-  </sitemap>
-  <sitemap>
-    <loc>https://kevinfroger.nl/sitemaps/steden.xml</loc>
-    <lastmod>2025-01-17</lastmod>
-  </sitemap>
-  <sitemap>
-    <loc>https://kevinfroger.nl/sitemaps/images.xml</loc>
-    <lastmod>2025-01-17</lastmod>
-  </sitemap>
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://kevinfroger.nl/</loc></url>
+  <url><loc>https://kevinfroger.nl/bruiloft-dj</loc></url>
+  <url><loc>https://kevinfroger.nl/verjaardag-dj</loc></url>
+  <url><loc>https://kevinfroger.nl/evenementen-dj</loc></url>
+  <url><loc>https://kevinfroger.nl/zakelijk-dj</loc></url>
+  <url><loc>https://kevinfroger.nl/werkwijze</loc></url>
+  <url><loc>https://kevinfroger.nl/regio/zuid-holland</loc></url>
+  <url><loc>https://kevinfroger.nl/regio/zuid-holland/rotterdam</loc></url>
+  <!-- Voeg hier al je provincie- en stadspagina's toe -->
+</urlset>
