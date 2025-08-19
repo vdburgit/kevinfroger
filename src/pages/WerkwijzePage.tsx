@@ -223,3 +223,8 @@ const WerkwijzePage = () => {
 };
 
 export default WerkwijzePage;
+            )
+            )
+            }
+  )
+}

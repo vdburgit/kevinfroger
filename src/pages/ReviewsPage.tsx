@@ -168,6 +168,9 @@ const ReviewsPage = () => {
             <a
               href="/contact"
               className="group bg-gradient-to-r from-orange-500 to-red-600 text-white px-10 py-5 rounded-full font-black text-xl hover:from-orange-600 hover:to-red-700 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105"
+            )
+            )
+            }
             >
               BOEK NU DIRECT
               <ArrowRight className="w-6 h-6 ml-3 inline-block group-hover:translate-x-1 transition-transform" />
@@ -187,3 +190,5 @@ const ReviewsPage = () => {
 };
 
 export default ReviewsPage;
+  )
+}
