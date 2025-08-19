@@ -8,25 +8,80 @@ const FestivalPage = () => {
     document.title = "Festival DJ Nederland | DJ Kevin Froger High-Energy Sets";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Festival DJ Nederland ✨ 50+ festivals, high-energy power sets 60-90 min. DJ Kevin Froger crowd control specialist. Ervaren festival DJ. Boek nu!');
+      metaDescription.setAttribute('content', 'Festival DJ Nederland. DJ Kevin Froger feest DJ 50+ festivals, high-energy power sets 60-90 min. Crowd control specialist. Ervaren festival DJ.');
     }
+    
+    // Add Open Graph tags
+    const ogTitle = document.querySelector('meta[property="og:title"]') || document.createElement('meta');
+    ogTitle.setAttribute('property', 'og:title');
+    ogTitle.setAttribute('content', 'Festival DJ Nederland | DJ Kevin Froger');
+    if (!document.head.contains(ogTitle)) document.head.appendChild(ogTitle);
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]') || document.createElement('meta');
+    ogDescription.setAttribute('property', 'og:description');
+    ogDescription.setAttribute('content', 'Festival DJ Nederland. DJ Kevin Froger feest DJ 50+ festivals, high-energy power sets 60-90 min. Crowd control specialist.');
+    if (!document.head.contains(ogDescription)) document.head.appendChild(ogDescription);
+    
+    const ogUrl = document.querySelector('meta[property="og:url"]') || document.createElement('meta');
+    ogUrl.setAttribute('property', 'og:url');
+    ogUrl.setAttribute('content', 'https://kevinfroger.nl/festivals');
+    if (!document.head.contains(ogUrl)) document.head.appendChild(ogUrl);
+    
+    const ogImage = document.querySelector('meta[property="og:image"]') || document.createElement('meta');
+    ogImage.setAttribute('property', 'og:image');
+    ogImage.setAttribute('content', 'https://kevinfroger.nl/images/kevin-portrait.png');
+    if (!document.head.contains(ogImage)) document.head.appendChild(ogImage);
     
     // Add structured data for festival page
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Festival DJ Nederland - DJ Kevin Froger",
-      "description": "High-energy festival performances en crowd control. 50+ succesvolle festivals.",
-      "url": "https://kevinfroger.nl/festivals",
-      "telephone": "+31645251333",
-      "areaServed": "Nederland",
-      "sameAs": [
-        "https://www.instagram.com/djkevinfroger/",
-        "https://www.linkedin.com/in/kevin-froger-b23aa263/",
-        "https://www.facebook.com/KevinFroger.nl",
-        "https://wa.me/31645251333"
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "name": "DJ Kevin Froger",
+          "url": "https://kevinfroger.nl",
+          "telephone": "+31645251333",
+          "areaServed": ["Zuid-Holland", "Noord-Brabant", "Gelderland", "Utrecht", "Overijssel"],
+          "sameAs": [
+            "https://www.instagram.com/djkevinfroger/",
+            "https://www.linkedin.com/in/kevin-froger-b23aa263/",
+            "https://www.facebook.com/KevinFroger.nl",
+            "https://wa.me/31645251333"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "NL"
+          }
+        },
+        {
+          "@type": "Service",
+          "serviceType": "Festival DJ",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "DJ Kevin Froger"
+          },
+          "areaServed": "NL",
+          "keywords": ["allround dj", "exclusieve dj", "feest dj"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://kevinfroger.nl"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Festival DJ",
+              "item": "https://kevinfroger.nl/festivals"
+            }
+          ]
+        }
       ]
     });
     document.head.appendChild(script);

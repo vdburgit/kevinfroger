@@ -8,25 +8,63 @@ const EventsPage = () => {
     document.title = "DJ Evenementen Nederland | DJ Kevin Froger Alle Events";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'DJ Evenementen Nederland ✨ 1000+ events alle soorten evenementen. DJ Kevin Froger van bruiloften tot festivals. Professionele DJ services!');
+      metaDescription.setAttribute('content', 'DJ Evenementen Nederland. DJ Kevin Froger allround DJ 1000+ events alle soorten evenementen. Van bruiloften tot festivals. Professionele DJ services.');
     }
+    
+    // Add Open Graph tags
+    const ogTitle = document.querySelector('meta[property="og:title"]') || document.createElement('meta');
+    ogTitle.setAttribute('property', 'og:title');
+    ogTitle.setAttribute('content', 'DJ Evenementen Nederland | DJ Kevin Froger');
+    if (!document.head.contains(ogTitle)) document.head.appendChild(ogTitle);
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]') || document.createElement('meta');
+    ogDescription.setAttribute('property', 'og:description');
+    ogDescription.setAttribute('content', 'DJ Evenementen Nederland. DJ Kevin Froger allround DJ 1000+ events alle soorten evenementen. Van bruiloften tot festivals.');
+    if (!document.head.contains(ogDescription)) document.head.appendChild(ogDescription);
+    
+    const ogUrl = document.querySelector('meta[property="og:url"]') || document.createElement('meta');
+    ogUrl.setAttribute('property', 'og:url');
+    ogUrl.setAttribute('content', 'https://kevinfroger.nl/evenementen');
+    if (!document.head.contains(ogUrl)) document.head.appendChild(ogUrl);
+    
+    const ogImage = document.querySelector('meta[property="og:image"]') || document.createElement('meta');
+    ogImage.setAttribute('property', 'og:image');
+    ogImage.setAttribute('content', 'https://kevinfroger.nl/images/kevin-portrait.png');
+    if (!document.head.contains(ogImage)) document.head.appendChild(ogImage);
     
     // Add structured data for events page
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "DJ Evenementen Nederland - DJ Kevin Froger",
-      "description": "Professionele DJ services voor alle soorten evenementen in Nederland",
-      "url": "https://kevinfroger.nl/evenementen",
-      "telephone": "+31645251333",
-      "areaServed": "Nederland",
-      "sameAs": [
-        "https://www.instagram.com/djkevinfroger/",
-        "https://www.linkedin.com/in/kevin-froger-b23aa263/",
-        "https://www.facebook.com/KevinFroger.nl",
-        "https://wa.me/31645251333"
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "name": "DJ Kevin Froger",
+          "url": "https://kevinfroger.nl",
+          "telephone": "+31645251333",
+          "areaServed": ["Zuid-Holland", "Noord-Brabant", "Gelderland", "Utrecht", "Overijssel"],
+          "sameAs": [
+            "https://www.instagram.com/djkevinfroger/",
+            "https://www.linkedin.com/in/kevin-froger-b23aa263/",
+            "https://www.facebook.com/KevinFroger.nl",
+            "https://wa.me/31645251333"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "NL"
+          }
+        },
+        {
+          "@type": "Service",
+          "serviceType": "DJ Evenementen",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "DJ Kevin Froger"
+          },
+          "areaServed": "NL",
+          "keywords": ["allround dj", "exclusieve dj", "feest dj"]
+        }
       ]
     });
     document.head.appendChild(script);

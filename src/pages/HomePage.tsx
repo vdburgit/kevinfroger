@@ -317,6 +317,15 @@ const HomePage = () => {
               <Link to="/festivals" className="bg-orange-100 text-orange-800 px-4 py-2 rounded-full font-bold hover:bg-orange-200 transition-colors">
                 Festival DJ
               </Link>
+              <Link to="/evenementen" className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-bold hover:bg-purple-200 transition-colors">
+                Allround DJ
+              </Link>
+              <Link to="/portfolio" className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-bold hover:bg-indigo-200 transition-colors">
+                Exclusieve DJ
+              </Link>
+              <Link to="/prive-feesten" className="bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full font-bold hover:bg-emerald-200 transition-colors">
+                Feest DJ
+              </Link>
               <Link to="/prijzen" className="bg-green-100 text-green-800 px-4 py-2 rounded-full font-bold hover:bg-green-200 transition-colors">
                 DJ Prijzen
               </Link>

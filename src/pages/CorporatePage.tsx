@@ -8,25 +8,80 @@ const CorporatePage = () => {
     document.title = "Bedrijfsfeest DJ Nederland | DJ Kevin Froger Corporate";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Bedrijfsfeest DJ Nederland ✨ 200+ bedrijfsfeesten, professionele corporate entertainment. DJ Kevin Froger representatieve DJ & MC services. Boek nu!');
+      metaDescription.setAttribute('content', 'Bedrijfsfeest DJ Nederland. DJ Kevin Froger exclusieve DJ 200+ bedrijfsfeesten, professionele corporate entertainment. Representatieve DJ & MC services.');
     }
+    
+    // Add Open Graph tags
+    const ogTitle = document.querySelector('meta[property="og:title"]') || document.createElement('meta');
+    ogTitle.setAttribute('property', 'og:title');
+    ogTitle.setAttribute('content', 'Bedrijfsfeest DJ Nederland | DJ Kevin Froger');
+    if (!document.head.contains(ogTitle)) document.head.appendChild(ogTitle);
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]') || document.createElement('meta');
+    ogDescription.setAttribute('property', 'og:description');
+    ogDescription.setAttribute('content', 'Bedrijfsfeest DJ Nederland. DJ Kevin Froger exclusieve DJ 200+ bedrijfsfeesten, professionele corporate entertainment.');
+    if (!document.head.contains(ogDescription)) document.head.appendChild(ogDescription);
+    
+    const ogUrl = document.querySelector('meta[property="og:url"]') || document.createElement('meta');
+    ogUrl.setAttribute('property', 'og:url');
+    ogUrl.setAttribute('content', 'https://kevinfroger.nl/bedrijfsfeesten');
+    if (!document.head.contains(ogUrl)) document.head.appendChild(ogUrl);
+    
+    const ogImage = document.querySelector('meta[property="og:image"]') || document.createElement('meta');
+    ogImage.setAttribute('property', 'og:image');
+    ogImage.setAttribute('content', 'https://kevinfroger.nl/images/kevin-portrait.png');
+    if (!document.head.contains(ogImage)) document.head.appendChild(ogImage);
     
     // Add structured data for corporate page
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Bedrijfsfeest DJ Nederland - DJ Kevin Froger",
-      "description": "Professionele DJ services voor corporate events en personeelsfeesten. 200+ succesvolle bedrijfsfeesten.",
-      "url": "https://kevinfroger.nl/bedrijfsfeesten",
-      "telephone": "+31645251333",
-      "areaServed": "Nederland",
-      "sameAs": [
-        "https://www.instagram.com/djkevinfroger/",
-        "https://www.linkedin.com/in/kevin-froger-b23aa263/",
-        "https://www.facebook.com/KevinFroger.nl",
-        "https://wa.me/31645251333"
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "name": "DJ Kevin Froger",
+          "url": "https://kevinfroger.nl",
+          "telephone": "+31645251333",
+          "areaServed": ["Zuid-Holland", "Noord-Brabant", "Gelderland", "Utrecht", "Overijssel"],
+          "sameAs": [
+            "https://www.instagram.com/djkevinfroger/",
+            "https://www.linkedin.com/in/kevin-froger-b23aa263/",
+            "https://www.facebook.com/KevinFroger.nl",
+            "https://wa.me/31645251333"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "NL"
+          }
+        },
+        {
+          "@type": "Service",
+          "serviceType": "Bedrijfsfeest DJ",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "DJ Kevin Froger"
+          },
+          "areaServed": "NL",
+          "keywords": ["allround dj", "exclusieve dj", "feest dj"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://kevinfroger.nl"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Bedrijfsfeest DJ",
+              "item": "https://kevinfroger.nl/bedrijfsfeesten"
+            }
+          ]
+        }
       ]
     });
     document.head.appendChild(script);

@@ -8,25 +8,63 @@ const PrivatePartiesPage = () => {
     document.title = "Privé Feesten DJ | DJ Kevin Froger Verjaardagen";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Privé Feesten DJ ✨ Verjaardagen, jubilea en familiefeesten. DJ Kevin Froger jouw feest, jouw muziek, jouw stijl. Boek nu!');
+      metaDescription.setAttribute('content', 'Privé Feesten DJ. DJ Kevin Froger feest DJ verjaardagen, jubilea en familiefeesten. Jouw feest, jouw muziek, jouw stijl. Boek nu.');
     }
+    
+    // Add Open Graph tags
+    const ogTitle = document.querySelector('meta[property="og:title"]') || document.createElement('meta');
+    ogTitle.setAttribute('property', 'og:title');
+    ogTitle.setAttribute('content', 'Privé Feesten DJ | DJ Kevin Froger');
+    if (!document.head.contains(ogTitle)) document.head.appendChild(ogTitle);
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]') || document.createElement('meta');
+    ogDescription.setAttribute('property', 'og:description');
+    ogDescription.setAttribute('content', 'Privé Feesten DJ. DJ Kevin Froger feest DJ verjaardagen, jubilea en familiefeesten. Jouw feest, jouw muziek, jouw stijl.');
+    if (!document.head.contains(ogDescription)) document.head.appendChild(ogDescription);
+    
+    const ogUrl = document.querySelector('meta[property="og:url"]') || document.createElement('meta');
+    ogUrl.setAttribute('property', 'og:url');
+    ogUrl.setAttribute('content', 'https://kevinfroger.nl/prive-feesten');
+    if (!document.head.contains(ogUrl)) document.head.appendChild(ogUrl);
+    
+    const ogImage = document.querySelector('meta[property="og:image"]') || document.createElement('meta');
+    ogImage.setAttribute('property', 'og:image');
+    ogImage.setAttribute('content', 'https://kevinfroger.nl/images/kevin-portrait.png');
+    if (!document.head.contains(ogImage)) document.head.appendChild(ogImage);
     
     // Add structured data for private parties page
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Privé Feesten DJ - DJ Kevin Froger",
-      "description": "DJ services voor privé feesten, verjaardagen en familiebijeenkomsten",
-      "url": "https://kevinfroger.nl/prive-feesten",
-      "telephone": "+31645251333",
-      "areaServed": "Nederland",
-      "sameAs": [
-        "https://www.instagram.com/djkevinfroger/",
-        "https://www.linkedin.com/in/kevin-froger-b23aa263/",
-        "https://www.facebook.com/KevinFroger.nl",
-        "https://wa.me/31645251333"
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "name": "DJ Kevin Froger",
+          "url": "https://kevinfroger.nl",
+          "telephone": "+31645251333",
+          "areaServed": ["Zuid-Holland", "Noord-Brabant", "Gelderland", "Utrecht", "Overijssel"],
+          "sameAs": [
+            "https://www.instagram.com/djkevinfroger/",
+            "https://www.linkedin.com/in/kevin-froger-b23aa263/",
+            "https://www.facebook.com/KevinFroger.nl",
+            "https://wa.me/31645251333"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "NL"
+          }
+        },
+        {
+          "@type": "Service",
+          "serviceType": "Privé Feesten DJ",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "DJ Kevin Froger"
+          },
+          "areaServed": "NL",
+          "keywords": ["allround dj", "exclusieve dj", "feest dj"]
+        }
       ]
     });
     document.head.appendChild(script);
