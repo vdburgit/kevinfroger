@@ -241,6 +241,43 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Popular Services Section - Moved above main services */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h3 className="text-2xl lg:text-3xl font-black text-gray-900 mb-8">
+              POPULAIRE DJ SERVICES
+            </h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link to="/bruiloften" className="bg-pink-100 text-pink-800 px-4 py-2 rounded-full font-bold hover:bg-pink-200 transition-colors">
+                Bruiloft DJ
+              </Link>
+              <Link to="/bedrijfsfeesten" className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-bold hover:bg-blue-200 transition-colors">
+                Bedrijfsfeest DJ
+              </Link>
+              <Link to="/festivals" className="bg-orange-100 text-orange-800 px-4 py-2 rounded-full font-bold hover:bg-orange-200 transition-colors">
+                Festival DJ
+              </Link>
+              <Link to="/evenementen" className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-bold hover:bg-purple-200 transition-colors">
+                Allround DJ
+              </Link>
+              <Link to="/bedrijfsfeesten" className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-bold hover:bg-indigo-200 transition-colors">
+                Exclusieve DJ
+              </Link>
+              <Link to="/prive-feesten" className="bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full font-bold hover:bg-emerald-200 transition-colors">
+                Feest DJ
+              </Link>
+              <Link to="/prijzen" className="bg-green-100 text-green-800 px-4 py-2 rounded-full font-bold hover:bg-green-200 transition-colors">
+                DJ Prijzen
+              </Link>
+              <Link to="/contact" className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-bold hover:bg-purple-200 transition-colors">
+                DJ Boeken
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="py-16 lg:py-24 bg-gray-50 section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -303,39 +340,6 @@ const HomePage = () => {
                 </div>
               </div>
             ))}
-          </div>
-          
-          {/* Internal Links Section */}
-          <div className="text-center mt-16">
-            <h3 className="text-2xl lg:text-3xl font-black text-gray-900 mb-8">
-              POPULAIRE DJ SERVICES
-            </h3>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/bruiloften" className="bg-pink-100 text-pink-800 px-4 py-2 rounded-full font-bold hover:bg-pink-200 transition-colors">
-                Bruiloft DJ
-              </Link>
-              <Link to="/bedrijfsfeesten" className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-bold hover:bg-blue-200 transition-colors">
-                Bedrijfsfeest DJ
-              </Link>
-              <Link to="/festivals" className="bg-orange-100 text-orange-800 px-4 py-2 rounded-full font-bold hover:bg-orange-200 transition-colors">
-                Festival DJ
-              </Link>
-              <Link to="/evenementen" className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-bold hover:bg-purple-200 transition-colors">
-                Allround DJ
-              </Link>
-              <Link to="/bedrijfsfeesten" className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-bold hover:bg-indigo-200 transition-colors">
-                Exclusieve DJ
-              </Link>
-              <Link to="/prive-feesten" className="bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full font-bold hover:bg-emerald-200 transition-colors">
-                Feest DJ
-              </Link>
-              <Link to="/prijzen" className="bg-green-100 text-green-800 px-4 py-2 rounded-full font-bold hover:bg-green-200 transition-colors">
-                DJ Prijzen
-              </Link>
-              <Link to="/contact" className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-bold hover:bg-purple-200 transition-colors">
-                DJ Boeken
-              </Link>
-            </div>
           </div>
         </div>
       </section>
