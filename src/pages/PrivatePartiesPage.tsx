@@ -5,10 +5,10 @@ import ContactForm from '../components/ContactForm';
 const PrivatePartiesPage = () => {
   // SEO metadata for this page
   React.useEffect(() => {
-    document.title = "Privé Feesten DJ | DJ Kevin Froger Verjaardagen";
+    document.title = "Privé Feesten DJ | DJ Kevin Froger | Feest DJ";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Privé Feesten DJ. DJ Kevin Froger feest DJ verjaardagen, jubilea en familiefeesten. Jouw feest, jouw muziek, jouw stijl. Boek nu.');
+      metaDescription.setAttribute('content', 'Privé Feesten DJ - DJ Kevin Froger feest DJ. Verjaardagen, jubilea en familiefeesten. Jouw feest, jouw muziek, jouw stijl!');
     }
     
     // Add Open Graph tags

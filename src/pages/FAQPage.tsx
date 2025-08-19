@@ -6,10 +6,10 @@ const FAQPage = () => {
 
   // SEO metadata for this page
   React.useEffect(() => {
-    document.title = "FAQ DJ Kevin Froger | Veelgestelde Vragen DJ Services";
+    document.title = "FAQ DJ Kevin Froger | Veelgestelde Vragen | Allround DJ";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'FAQ DJ Kevin Froger ✨ Alle antwoorden op veelgestelde vragen over DJ services. Van prijzen tot planning. DJ Kevin Froger beantwoordt alles!');
+      metaDescription.setAttribute('content', 'FAQ DJ Kevin Froger - allround DJ Nederland. Alle antwoorden op veelgestelde vragen over DJ services. Van prijzen tot planning!');
     }
     
     // Add FAQPage structured data

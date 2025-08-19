@@ -18,7 +18,7 @@ export default defineConfig({
     sourcemap: false,
     minify: 'esbuild',
     chunkSizeWarningLimit: 500,
-    assetsInlineLimit: 8192,
+    assetsInlineLimit: 4096,
     reportCompressedSize: false,
     cssMinify: 'esbuild',
     rollupOptions: {

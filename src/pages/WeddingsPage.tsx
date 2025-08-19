@@ -5,10 +5,10 @@ import ContactForm from '../components/ContactForm';
 const WeddingsPage = () => {
   // SEO metadata for this page
   React.useEffect(() => {
-    document.title = "Bruiloft DJ Nederland | DJ Kevin Froger | 500+ Events";
+    document.title = "Bruiloft DJ Nederland | DJ Kevin Froger | Allround DJ";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Bruiloft DJ Nederland. DJ Kevin Froger allround DJ 500+ bruiloften, complete muzikale begeleiding ceremonie tot feestavond. Live mixing specialist.');
+      metaDescription.setAttribute('content', 'Bruiloft DJ Nederland - DJ Kevin Froger allround DJ. 500+ bruiloften, complete muzikale begeleiding ceremonie tot feestavond. Boek nu!');
     }
     
     // Add Open Graph tags

@@ -5,10 +5,10 @@ import ContactForm from '../components/ContactForm';
 const EventsPage = () => {
   // SEO metadata for this page
   React.useEffect(() => {
-    document.title = "DJ Evenementen Nederland | DJ Kevin Froger Alle Events";
+    document.title = "DJ Evenementen Nederland | DJ Kevin Froger | Allround";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'DJ Evenementen Nederland. DJ Kevin Froger allround DJ 1000+ events alle soorten evenementen. Van bruiloften tot festivals. Professionele DJ services.');
+      metaDescription.setAttribute('content', 'DJ Evenementen Nederland - DJ Kevin Froger allround DJ. 1000+ events alle soorten evenementen. Van bruiloften tot festivals!');
     }
     
     // Add Open Graph tags

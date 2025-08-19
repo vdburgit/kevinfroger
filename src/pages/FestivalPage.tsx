@@ -5,10 +5,10 @@ import ContactForm from '../components/ContactForm';
 const FestivalPage = () => {
   // SEO metadata for this page
   React.useEffect(() => {
-    document.title = "Festival DJ Nederland | DJ Kevin Froger High-Energy Sets";
+    document.title = "Festival DJ Nederland | DJ Kevin Froger | Feest DJ";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Festival DJ Nederland. DJ Kevin Froger feest DJ 50+ festivals, high-energy power sets 60-90 min. Crowd control specialist. Ervaren festival DJ.');
+      metaDescription.setAttribute('content', 'Festival DJ Nederland - DJ Kevin Froger feest DJ. 50+ festivals, high-energy power sets. Crowd control specialist. Boek festival DJ nu!');
     }
     
     // Add Open Graph tags

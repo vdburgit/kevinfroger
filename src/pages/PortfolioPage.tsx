@@ -6,10 +6,10 @@ import PartnersSection from '../components/PartnersSection';
 const PortfolioPage = () => {
   // SEO metadata for this page
   React.useEffect(() => {
-    document.title = "Portfolio DJ Kevin Froger | Google Reviews & Partners";
+    document.title = "Portfolio DJ Kevin Froger | Reviews | Exclusieve DJ";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Portfolio DJ Kevin Froger ⭐ Google reviews, partners en referenties. 15+ jaar ervaring, 1000+ events. DJ Kevin Froger bekijk portfolio!');
+      metaDescription.setAttribute('content', 'Portfolio DJ Kevin Froger - exclusieve DJ Nederland. Google reviews, partners en referenties. 15+ jaar ervaring, 1000+ events!');
     }
     
     // Add structured data for portfolio page

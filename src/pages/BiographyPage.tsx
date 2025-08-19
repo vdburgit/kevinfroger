@@ -4,10 +4,10 @@ import { User, MapPin, Music, Mic, Heart, Star, Award, Calendar, Users, Zap, Arr
 const BiographyPage = () => {
   // SEO metadata for this page
   React.useEffect(() => {
-    document.title = "DJ Kevin Froger Biografie | Het Verhaal Achter de DJ";
+    document.title = "DJ Kevin Froger Biografie | Het Verhaal | Allround DJ";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'DJ Kevin Froger Biografie ✨ Het verhaal achter de live mixing specialist. 15+ jaar ervaring Hoeksche Waard naar heel Nederland. Lees meer!');
+      metaDescription.setAttribute('content', 'DJ Kevin Froger Biografie - allround DJ Nederland. Het verhaal achter de live mixing specialist. 15+ jaar ervaring Hoeksche Waard!');
     }
     
     // Add structured data for biography page

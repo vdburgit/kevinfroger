@@ -5,10 +5,10 @@ import ContactForm from '../components/ContactForm';
 const CorporatePage = () => {
   // SEO metadata for this page
   React.useEffect(() => {
-    document.title = "Bedrijfsfeest DJ Nederland | DJ Kevin Froger Corporate";
+    document.title = "Bedrijfsfeest DJ | DJ Kevin Froger | Exclusieve DJ";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Bedrijfsfeest DJ Nederland. DJ Kevin Froger exclusieve DJ 200+ bedrijfsfeesten, professionele corporate entertainment. Representatieve DJ & MC services.');
+      metaDescription.setAttribute('content', 'Bedrijfsfeest DJ - DJ Kevin Froger exclusieve DJ. 200+ bedrijfsfeesten, professionele corporate entertainment. Representatieve DJ services.');
     }
     
     // Add Open Graph tags

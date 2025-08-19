@@ -56,7 +56,7 @@ const Footer = () => {
             <div className="mb-6">
               <img 
                 src="/images/kevin-logo.png" 
-                alt="DJ Kevin Froger Logo - Professionele DJ Services Nederland" 
+                alt="DJ Kevin Froger Logo - Allround DJ Nederland" 
                 className="h-20 w-auto mb-6 drop-shadow-2xl"
                 width="200"
                 height="80"
@@ -65,7 +65,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-blue-200 text-lg leading-relaxed mb-8">
-              #1 Allround DJ – Professionele DJ-diensten voor bruiloften, bedrijfsfeesten, verjaardagen en festivals. Allround DJ boeken voor alle evenementen in Nederland.
+              Allround DJ Kevin Froger – Professionele DJ services voor bruiloften, bedrijfsfeesten en festivals. Exclusieve DJ boeken voor alle evenementen in Nederland.
             </p>
             <div className="flex space-x-4">
               <a href="https://www.facebook.com/KevinFroger.nl" target="_blank" rel="noopener noreferrer" className="group text-blue-300 hover:text-orange-400 transition-colors p-3 bg-blue-700/50 rounded-full hover:bg-orange-500/20">

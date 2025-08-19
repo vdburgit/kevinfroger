@@ -111,7 +111,7 @@ const HomePage = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative h-[70vh] min-h-[500px] max-h-[800px] bg-gradient-to-br from-blue-900 via-purple-800 to-blue-900 text-white overflow-hidden" role="banner" aria-labelledby="hero-title">
+      <section className="relative h-[60vh] min-h-[400px] max-h-[600px] bg-gradient-to-br from-blue-900 via-purple-800 to-blue-900 text-white overflow-hidden" role="banner" aria-labelledby="hero-title">
         {/* Hero Slider Background */}
         <div className="absolute inset-0 hero-slider">
           {heroSlides.map((slide, index) => (
@@ -123,7 +123,7 @@ const HomePage = () => {
             >
               <img 
                 src={slide.image}
-                alt={`DJ Kevin Froger - ${slide.title}`}
+                alt={`DJ Kevin Froger ${slide.title} - Professionele DJ services Nederland`}
                 className="w-full h-full object-cover object-center transform-gpu"
                 width="800"
                 height="600"

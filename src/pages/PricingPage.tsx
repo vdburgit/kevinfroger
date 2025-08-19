@@ -6,10 +6,10 @@ import PricingSection from '../components/PricingSection';
 const PricingPage = () => {
   // SEO metadata for this page
   React.useEffect(() => {
-    document.title = "DJ Prijzen Nederland | DJ Kevin Froger Transparant";
+    document.title = "DJ Prijzen Nederland | DJ Kevin Froger | Transparant";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'DJ Prijzen Nederland. DJ Kevin Froger allround DJ transparante tarieven vanaf €350, geen verborgen kosten. Inclusief apparatuur. Gratis offerte binnen 24u.');
+      metaDescription.setAttribute('content', 'DJ Prijzen Nederland - DJ Kevin Froger allround DJ. Transparante tarieven vanaf €350, geen verborgen kosten. Gratis offerte binnen 24u!');
     }
     
     // Add Open Graph tags

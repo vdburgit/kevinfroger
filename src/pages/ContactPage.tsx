@@ -8,7 +8,7 @@ const ContactPage = () => {
     document.title = "Contact DJ Kevin Froger | DJ Boeken | Gratis Offerte";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Contact DJ Kevin Froger. Gratis offerte binnen 24u, allround DJ boeken Nederland alle provincies. 15+ jaar ervaring, 1000+ events. Bel 06-45251333.');
+      metaDescription.setAttribute('content', 'Contact DJ Kevin Froger - allround DJ boeken Nederland. Gratis offerte binnen 24u, 15+ jaar ervaring, 1000+ events. Bel 06-45251333!');
     }
     
     // Add Open Graph tags

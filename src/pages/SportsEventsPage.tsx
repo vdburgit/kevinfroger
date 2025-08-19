@@ -5,10 +5,10 @@ import ContactForm from '../components/ContactForm';
 const SportsEventsPage = () => {
   // SEO metadata for this page
   React.useEffect(() => {
-    document.title = "Sportfeesten DJ | DJ Kevin Froger Sport Events";
+    document.title = "Sportfeesten DJ | DJ Kevin Froger | Allround DJ";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Sportfeesten DJ ✨ Energieke muziek voor sportevenementen. DJ Kevin Froger sportgala\'s, teambuilding en kampioenschappen. Boek nu!');
+      metaDescription.setAttribute('content', 'Sportfeesten DJ - DJ Kevin Froger allround DJ. Energieke muziek voor sportevenementen, sportgalas en teambuilding. Boek nu!');
     }
     
     // Add structured data for sports events page

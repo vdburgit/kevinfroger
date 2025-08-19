@@ -11,6 +11,7 @@
     -webkit-tap-highlight-color: transparent;
     font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
     font-optical-sizing: auto;
+    font-display: swap;
   }
   
   body {
@@ -22,6 +23,7 @@
     font-display: swap;
     font-optical-sizing: auto;
     color: #1f2937;
+    contain: layout style;
   }
 
   /* Performance optimized scroll offset */
