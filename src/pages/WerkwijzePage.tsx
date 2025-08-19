@@ -203,14 +203,6 @@ const WerkwijzePage = () => {
               >
                 <MapPin className="w-6 h-6 text-orange-500 mx-auto mb-2" />
                 <h3 className="text-sm font-black text-gray-900 group-hover:text-orange-600 transition-colors">
-                APP VOOR EEN PRIJSINDICATIE
-                </h3>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-                VRAAG EEN OFFERTE AAN
       {/* Contact Section */}
       <section className="py-32 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">

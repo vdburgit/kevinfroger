@@ -153,14 +153,6 @@ const ReviewsPage = () => {
               >
                 <MapPin className="w-6 h-6 text-yellow-500 mx-auto mb-2" />
                 <h3 className="text-sm font-black text-gray-900 group-hover:text-yellow-600 transition-colors">
-                APP VOOR EEN PRIJSINDICATIE
-                </h3>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-                VRAAG EEN OFFERTE AAN
       {/* CTA Section */}
       <section className="py-32 bg-gradient-to-br from-yellow-500 to-orange-600 text-white relative overflow-hidden">
         <div className="relative max-w-6xl mx-auto text-center px-4 sm:px-6 lg:px-8">
