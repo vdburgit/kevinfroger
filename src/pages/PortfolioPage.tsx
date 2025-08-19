@@ -94,7 +94,7 @@ const PortfolioPage = () => {
                 className="group mobile-btn bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg font-bold text-lg w-full min-h-[60px] rounded-2xl flex items-center justify-center mb-4"
               >
                 <Star className="w-6 h-6 inline-block mr-3" />
-                BEKIJK REVIEWS
+                BEKIJK ALLE REVIEWS
                 <ArrowRight className="w-5 h-5 inline-block ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
               <a

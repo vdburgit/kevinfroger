@@ -392,7 +392,6 @@ const ContactPage = () => {
                 href="tel:0645251333"
                 className="inline-flex items-center bg-gradient-to-r from-blue-500 to-blue-600 text-white px-8 py-4 rounded-full font-black text-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-lg"
               >
-                <Phone className="w-5 h-5 mr-2" />
                 <Phone className="w-6 h-6 inline-block mr-3" />
                 BEL DIRECT
               </a>

@@ -216,7 +216,7 @@ const EventsPage = () => {
                 className="mobile-btn bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg font-bold text-lg"
               >
                 <Calendar className="w-5 h-5 mr-3" />
-                BEKIJK EVENEMENTEN
+                BEKIJK ALLE EVENEMENTEN
               </a>
             </div>
 
