@@ -1,33 +1,35 @@
-import React from 'react';
-import { Cog, Users, Music, CheckCircle, ArrowRight, Star, Calendar, Clock, Phone, MessageCircle, MapPin } from 'lucide-react';
-import ContactForm from '../components/ContactForm';
+import React from "react";
+import { Cog, Users, Music, CheckCircle, Star, Calendar, MessageCircle, MapPin } from "lucide-react";
+import ContactForm from "../components/ContactForm";
 
-const WerkwijzePage = () => {
-  // SEO metadata for this page
+const WerkwijzePage: React.FC = () => {
+  // SEO metadata + HowTo structured data
   React.useEffect(() => {
     document.title = "Werkwijze – zo regelen we jouw feest van A tot Z | Kevin Froger";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Heldere stappen: intake, voorbereiding, techniek, show en nazorg. Eén aanspreekpunt en flexibel meedenken.');
+      metaDescription.setAttribute(
+        "content",
+        "Heldere stappen: intake, voorbereiding, techniek, show en nazorg. Eén aanspreekpunt en flexibel meedenken."
+      );
     }
-    
-    // Add structured data
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
     script.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "HowTo",
-      "name": "DJ boeken bij Kevin Froger",
-      "step": [
-        {"@type": "HowToStep", "name": "Intake", "text": "We bespreken wensen, muziek en planning."},
-        {"@type": "HowToStep", "name": "Voorbereiding", "text": "Afstemming met locatie en draaiboek."},
-        {"@type": "HowToStep", "name": "Techniek", "text": "Passende set licht & geluid, klaar voor aanvang."},
-        {"@type": "HowToStep", "name": "Show", "text": "Allround set, verzoekjes welkom, nette presentatie."},
-        {"@type": "HowToStep", "name": "Nazorg", "text": "Korte terugkoppeling en evaluatie."}
+      name: "DJ boeken bij Kevin Froger",
+      step: [
+        { "@type": "HowToStep", name: "Intake", text: "We bespreken wensen, muziek en planning." },
+        { "@type": "HowToStep", name: "Voorbereiding", text: "Afstemming met locatie en draaiboek." },
+        { "@type": "HowToStep", name: "Techniek", text: "Passende set licht & geluid, klaar voor aanvang." },
+        { "@type": "HowToStep", name: "Show", text: "Allround set, verzoekjes welkom, nette presentatie." },
+        { "@type": "HowToStep", name: "Nazorg", text: "Korte terugkoppeling en evaluatie." }
       ]
     });
     document.head.appendChild(script);
-    
+
     return () => {
       document.head.removeChild(script);
     };
@@ -38,7 +40,8 @@ const WerkwijzePage = () => {
       step: "01",
       title: "INTAKE",
       description: "We bespreken wensen, muziek en planning",
-      details: "Telefonisch of persoonlijk gesprek over jouw event, muziekvoorkeuren, tijdschema en speciale wensen.",
+      details:
+        "Telefonisch of persoonlijk gesprek over jouw event, muziekvoorkeuren, tijdschema en speciale wensen.",
       icon: <Users className="w-8 h-8" />
     },
     {
@@ -59,7 +62,8 @@ const WerkwijzePage = () => {
       step: "04",
       title: "SHOW",
       description: "Allround set, verzoekjes welkom, nette presentatie",
-      details: "Live DJ-performance aangepast aan het publiek, met ruimte voor verzoekjes en interactie.",
+      details:
+        "Live DJ-performance aangepast aan het publiek, met ruimte voor verzoekjes en interactie.",
       icon: <Music className="w-8 h-8" />
     },
     {
@@ -99,10 +103,9 @@ const WerkwijzePage = () => {
             Werkwijze – zo regelen we jouw feest van A tot Z
           </h1>
           <p className="text-xl text-gray-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Heldere stappen: intake, voorbereiding, techniek, show en nazorg. 
-            Eén aanspreekpunt en flexibel meedenken.
+            Heldere stappen: intake, voorbereiding, techniek, show en nazorg. Eén aanspreekpunt en flexibel meedenken.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
               href="https://wa.me/31645251333"
@@ -128,14 +131,18 @@ const WerkwijzePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-5xl lg:text-7xl font-black text-gray-900 mb-8 text-shadow">
-              STAP VOOR
-              <span className="block text-orange-500">STAP</span>
+              STAP VOOR <span className="block text-orange-500">STAP</span>
             </h2>
           </div>
-          
+
           <div className="space-y-16">
             {steps.map((step, index) => (
-              <div key={index} className={`flex flex-col lg:flex-row items-center gap-12 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+              <div
+                key={step.step}
+                className={`flex flex-col lg:flex-row items-center gap-12 ${
+                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                }`}
+              >
                 <div className="lg:w-1/2">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-white mr-6">
@@ -149,6 +156,7 @@ const WerkwijzePage = () => {
                   <p className="text-xl text-gray-600 mb-4 leading-relaxed">{step.description}</p>
                   <p className="text-lg text-gray-500 leading-relaxed">{step.details}</p>
                 </div>
+
                 <div className="lg:w-1/2">
                   <div className="w-full h-64 bg-gradient-to-br from-orange-100 to-blue-100 rounded-3xl flex items-center justify-center">
                     <div className="w-24 h-24 bg-gradient-to-br from-orange-500 to-blue-600 rounded-full flex items-center justify-center text-white">
@@ -167,11 +175,10 @@ const WerkwijzePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-5xl lg:text-7xl font-black text-gray-900 mb-8 text-shadow">
-              WAAROM DEZE
-              <span className="block text-orange-500">WERKWIJZE?</span>
+              WAAROM DEZE <span className="block text-orange-500">WERKWIJZE?</span>
             </h2>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-4 bg-white p-8 rounded-2xl shadow-lg">
@@ -189,27 +196,32 @@ const WerkwijzePage = () => {
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
-              BOEK EEN DJ IN JOUW REGIO
-            </h2>
+            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">BOEK EEN DJ IN JOUW REGIO</h2>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
-            {regions.map((region, index) => (
+            {regions.map((region) => (
               <a
-                key={index}
+                key={region.name}
                 href={region.href}
                 className="group bg-gray-50 p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:-translate-y-1"
               >
                 <MapPin className="w-6 h-6 text-orange-500 mx-auto mb-2" />
                 <h3 className="text-sm font-black text-gray-900 group-hover:text-orange-600 transition-colors">
+                  {region.name}
+                </h3>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section className="py-32 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl lg:text-7xl font-black text-gray-900 mb-8 text-shadow">
-              KLAAR OM
-              <span className="block text-orange-500">TE STARTEN?</span>
+              KLAAR OM <span className="block text-orange-500">TE STARTEN?</span>
             </h2>
             <p className="text-2xl text-gray-600 leading-relaxed">
               Neem contact op en laten we jouw evenement perfect regelen.
@@ -223,8 +235,3 @@ const WerkwijzePage = () => {
 };
 
 export default WerkwijzePage;
-            )
-            )
-            }
-  )
-}
