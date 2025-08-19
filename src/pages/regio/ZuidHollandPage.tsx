@@ -134,13 +134,13 @@ const ZuidHollandPage = () => {
               className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-10 py-5 rounded-full font-black text-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105"
             >
               <MessageCircle className="w-6 h-6 inline-block mr-3" />
-              APP VOOR SNELLE PRIJSINDICATIE
+              APP VOOR EEN PRIJSINDICATIE
             </a>
             <a
               href="/prijzen"
               className="border-3 border-white text-white px-10 py-5 rounded-full font-black text-xl hover:bg-white hover:text-blue-900 transition-all duration-300"
             >
-              VRAAG OFFERTE AAN
+              VRAAG EEN OFFERTE AAN
             </a>
           </div>
 
