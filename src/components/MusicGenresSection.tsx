@@ -268,12 +268,12 @@ const MusicGenresSection = () => {
                     {slide.map((genre, genreIndex) => (
                       <div
                         key={genreIndex}
-                              className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                        className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 overflow-hidden"
+                        style={{ aspectRatio: '2/1' }}
                       >
                         {/* Icon Container */}
                         <div className="flex-1 flex items-center justify-center p-4">
                           <div className={`w-12 h-12 bg-gradient-to-br ${genre.color} rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                              style={{ aspectRatio: '2/1' }}
                           {genre.icon}
                           </div>
                         </div>
