@@ -9,10 +9,10 @@ const HomePage = () => {
   
   // SEO metadata for homepage
   React.useEffect(() => {
-    document.title = "DJ Kevin Froger - #1 Bruiloft DJ Nederland | 500+ Bruiloften | Live Mixing Specialist";
+    document.title = "DJ Kevin Froger – DJ voor bruiloft, verjaardag & events";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', '🎵 #1 Bruiloft DJ Nederland ✨ 500+ bruiloften, 15+ jaar ervaring. Live mixing specialist voor bruiloften, bedrijfsfeesten & festivals. Boek direct! 📞 06-45251333');
+      metaDescription.setAttribute('content', 'Allround DJ met complete show (licht & geluid). Persoonlijk contact, strakke uitvoering en volle dansvloer. Vraag direct een prijsindicatie of offerte.');
     }
   }, []);
 
@@ -149,73 +149,56 @@ const HomePage = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-12 z-10 h-full flex items-center justify-center">
           <div className="text-center w-full max-w-5xl mx-auto">
             <h1 id="hero-title" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-4 lg:mb-6 leading-tight text-shadow-lg">
-              {heroSlides[currentSlide].title}
-              <span className="block text-orange-400">{heroSlides[currentSlide].subtitle}</span>
+              DJ VOOR BRUILOFT,
+              <span className="block text-orange-400">VERJAARDAG & EVENTS</span>
+              <span className="block text-orange-400">PERSOONLIJK, STRAK GEREGELD</span>
             </h1>
             
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl mb-6 lg:mb-8 text-blue-100 leading-relaxed max-w-3xl mx-auto px-4">
-              {heroSlides[currentSlide].description}
+              Allround DJ met complete show (licht & geluid). Van voorbereiding tot laatste plaat: strak geregeld, persoonlijk en op jouw publiek afgestemd.
             </p>
             
             {/* Desktop buttons */}
             <div className="hidden md:flex flex-row gap-4 lg:gap-6 justify-center mb-8 lg:mb-10">
               <Link
-                to="/prijzen"
+                to="https://wa.me/31645251333"
                 className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 lg:px-10 py-3 lg:py-4 rounded-full font-black text-base lg:text-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-xl hover:shadow-orange-500/25 transform hover:scale-105 min-h-[44px]"
-                aria-label="Bekijk prijzen en pakketten van DJ Kevin Froger"
+                aria-label="App voor snelle prijsindicatie"
               >
-                <Calendar className="w-4 h-4 lg:w-5 lg:h-5 inline-block mr-2" />
-                PRIJZEN & PAKKETTEN
+                <MessageCircle className="w-4 h-4 lg:w-5 lg:h-5 inline-block mr-2" />
+                APP VOOR PRIJSINDICATIE
                 <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5 inline-block ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/contact"
+                to="/prijzen"
                 className="border-2 border-white text-white px-6 lg:px-10 py-3 lg:py-4 rounded-full font-black text-base lg:text-lg hover:bg-white hover:text-blue-900 transition-all duration-300 min-h-[44px]"
-                aria-label="Boek DJ Kevin Froger direct"
+                aria-label="Vraag offerte aan"
               >
-                <Phone className="w-4 h-4 lg:w-5 lg:h-5 inline-block mr-2" />
-                BOEK DIRECT
+                <Calendar className="w-4 h-4 lg:w-5 lg:h-5 inline-block mr-2" />
+                VRAAG OFFERTE
               </Link>
-              <a
-                href="https://api.whatsapp.com/send/?phone=31645251333&text&type=phone_number&app_absent=0"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-2 border-green-400 text-green-100 px-6 lg:px-10 py-3 lg:py-4 rounded-full font-black text-base lg:text-lg hover:bg-green-500 hover:text-white transition-all duration-300 min-h-[44px]"
-                aria-label="Stuur WhatsApp bericht naar DJ Kevin Froger"
-              >
-                <MessageCircle className="w-4 h-4 lg:w-5 lg:h-5 inline-block mr-2" />
-                WHATSAPP
-              </a>
             </div>
 
             {/* Mobile buttons */}
             <div className="md:hidden flex flex-col gap-3 mb-6 px-4 max-w-sm mx-auto">
-              <Link
-                to="/prijzen"
-                className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg font-bold text-base py-4 px-6 rounded-lg flex items-center justify-center min-h-[48px]"
-                aria-label="Bekijk prijzen en pakketten van DJ Kevin Froger"
-              >
-                <Calendar className="w-5 h-5 mr-3" />
-                PRIJZEN
-              </Link>
-              <Link
-                to="/contact"
-                className="w-full border-2 border-white text-white hover:bg-white hover:text-blue-900 transition-all duration-300 shadow-lg font-bold text-base py-4 px-6 rounded-lg flex items-center justify-center min-h-[48px]"
-                aria-label="Boek DJ Kevin Froger direct"
-              >
-                <Phone className="w-5 h-5 mr-3" />
-                BELLEN
-              </Link>
               <a
-                href="https://api.whatsapp.com/send/?phone=31645251333&text&type=phone_number&app_absent=0"
+                href="https://wa.me/31645251333"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full border-2 border-green-400 text-green-100 hover:bg-green-500 hover:text-white transition-all duration-300 shadow-lg font-bold text-base py-4 px-6 rounded-lg flex items-center justify-center min-h-[48px]"
-                aria-label="Stuur WhatsApp bericht naar DJ Kevin Froger"
+                className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg font-bold text-base py-4 px-6 rounded-lg flex items-center justify-center min-h-[48px]"
+                aria-label="App voor snelle prijsindicatie"
               >
                 <MessageCircle className="w-5 h-5 mr-3" />
-                WHATSAPP
+                APP VOOR PRIJS
               </a>
+              <Link
+                to="/prijzen"
+                className="w-full border-2 border-white text-white hover:bg-white hover:text-blue-900 transition-all duration-300 shadow-lg font-bold text-base py-4 px-6 rounded-lg flex items-center justify-center min-h-[48px]"
+                aria-label="Vraag offerte aan"
+              >
+                <Calendar className="w-5 h-5 mr-3" />
+                OFFERTE
+              </Link>
             </div>
 
             {/* Slide Indicators */}
@@ -249,29 +232,29 @@ const HomePage = () => {
               POPULAIRE DJ SERVICES
             </h3>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/bruiloften" className="bg-pink-100 text-pink-800 px-4 py-2 rounded-full font-bold hover:bg-pink-200 transition-colors">
+              <Link to="/bruiloft-dj" className="bg-pink-100 text-pink-800 px-4 py-2 rounded-full font-bold hover:bg-pink-200 transition-colors">
                 Bruiloft DJ
               </Link>
-              <Link to="/bedrijfsfeesten" className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-bold hover:bg-blue-200 transition-colors">
-                Bedrijfsfeest DJ
+              <Link to="/verjaardag-dj" className="bg-green-100 text-green-800 px-4 py-2 rounded-full font-bold hover:bg-green-200 transition-colors">
+                Verjaardag DJ
               </Link>
-              <Link to="/festivals" className="bg-orange-100 text-orange-800 px-4 py-2 rounded-full font-bold hover:bg-orange-200 transition-colors">
-                Festival DJ
+              <Link to="/evenementen-dj" className="bg-orange-100 text-orange-800 px-4 py-2 rounded-full font-bold hover:bg-orange-200 transition-colors">
+                Evenementen DJ
               </Link>
-              <Link to="/evenementen" className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-bold hover:bg-purple-200 transition-colors">
-                Allround DJ
+              <Link to="/zakelijk-dj" className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-bold hover:bg-blue-200 transition-colors">
+                Zakelijk DJ
               </Link>
-              <Link to="/bedrijfsfeesten" className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-bold hover:bg-indigo-200 transition-colors">
-                Exclusieve DJ
+              <Link to="/werkwijze" className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-bold hover:bg-indigo-200 transition-colors">
+                Werkwijze
               </Link>
-              <Link to="/prive-feesten" className="bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full font-bold hover:bg-emerald-200 transition-colors">
-                Feest DJ
+              <Link to="/reviews" className="bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full font-bold hover:bg-emerald-200 transition-colors">
+                Reviews
               </Link>
               <Link to="/prijzen" className="bg-green-100 text-green-800 px-4 py-2 rounded-full font-bold hover:bg-green-200 transition-colors">
-                DJ Prijzen
+                Prijzen
               </Link>
-              <Link to="/contact" className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-bold hover:bg-purple-200 transition-colors">
-                DJ Boeken
+              <Link to="/regio" className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-bold hover:bg-purple-200 transition-colors">
+                Regio's
               </Link>
             </div>
           </div>
@@ -283,11 +266,11 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-black text-gray-900 mb-4 lg:mb-6 text-shadow">
-              MIJN SERVICES
-              <span className="block text-orange-500">VOOR ELKE GELEGENHEID</span>
+              WAT JE KRIJGT
+              <span className="block text-orange-500">COMPLETE DJ SHOW</span>
             </h2>
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              Van intieme bruiloften tot grote festivals - ik zorg voor de perfecte muzikale sfeer
+              Allround DJ met eigen show, persoonlijk contact en strakke uitvoering
             </p>
           </div>
           
@@ -344,16 +327,67 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Region Navigator Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6">
+              BOEK EEN DJ IN JOUW REGIO
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Beschikbaar in Zuid-Holland, Noord-Brabant, Gelderland, Utrecht en Overijssel
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+            <Link to="/regio/zuid-holland" className="group bg-gradient-to-br from-blue-50 to-orange-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 text-center">
+              <MapPin className="w-8 h-8 text-orange-500 mx-auto mb-3" />
+              <h3 className="font-black text-gray-900 group-hover:text-orange-600 transition-colors">Zuid-Holland</h3>
+              <p className="text-sm text-gray-600 mt-2">Rotterdam, Den Haag, Delft</p>
+            </Link>
+            <Link to="/regio/noord-brabant" className="group bg-gradient-to-br from-blue-50 to-orange-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 text-center">
+              <MapPin className="w-8 h-8 text-orange-500 mx-auto mb-3" />
+              <h3 className="font-black text-gray-900 group-hover:text-orange-600 transition-colors">Noord-Brabant</h3>
+              <p className="text-sm text-gray-600 mt-2">Eindhoven, Tilburg, Breda</p>
+            </Link>
+            <Link to="/regio/gelderland" className="group bg-gradient-to-br from-blue-50 to-orange-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 text-center">
+              <MapPin className="w-8 h-8 text-orange-500 mx-auto mb-3" />
+              <h3 className="font-black text-gray-900 group-hover:text-orange-600 transition-colors">Gelderland</h3>
+              <p className="text-sm text-gray-600 mt-2">Nijmegen, Arnhem, Apeldoorn</p>
+            </Link>
+            <Link to="/regio/utrecht" className="group bg-gradient-to-br from-blue-50 to-orange-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 text-center">
+              <MapPin className="w-8 h-8 text-orange-500 mx-auto mb-3" />
+              <h3 className="font-black text-gray-900 group-hover:text-orange-600 transition-colors">Utrecht</h3>
+              <p className="text-sm text-gray-600 mt-2">Utrecht, Amersfoort, Zeist</p>
+            </Link>
+            <Link to="/regio/overijssel" className="group bg-gradient-to-br from-blue-50 to-orange-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 text-center">
+              <MapPin className="w-8 h-8 text-orange-500 mx-auto mb-3" />
+              <h3 className="font-black text-gray-900 group-hover:text-orange-600 transition-colors">Overijssel</h3>
+              <p className="text-sm text-gray-600 mt-2">Enschede, Zwolle, Deventer</p>
+            </Link>
+          </div>
+          
+          <div className="text-center">
+            <Link
+              to="/regio"
+              className="inline-flex items-center text-blue-700 font-black text-lg hover:text-orange-500 transition-colors duration-200"
+            >
+              BEKIJK ALLE REGIO'S
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+          </div>
+        </div>
+      </section>
       {/* Features Section */}
       <section className="py-16 lg:py-24 bg-white lazy-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-black text-gray-900 mb-4 lg:mb-6 text-shadow">
-              WAAROM
-              <span className="block text-orange-500">DJ KEVIN FROGER?</span>
+              HOE IK WERK
+              <span className="block text-orange-500">STRAK GEREGELD</span>
             </h2>
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              De perfecte combinatie van ervaring, professionaliteit en passie
+              Van intake tot nazorg - één aanspreekpunt en flexibel meedenken
             </p>
           </div>
           

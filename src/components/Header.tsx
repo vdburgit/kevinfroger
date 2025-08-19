@@ -23,18 +23,16 @@ const Header = () => {
       name: 'DIENSTEN', 
       href: '#',
       dropdown: [
-        { name: 'Alle Evenementen', href: '/evenementen' },
-        { name: 'Bruiloften', href: '/bruiloften' },
-        { name: 'Bedrijfsfeesten', href: '/bedrijfsfeesten' },
-        { name: 'Festivals', href: '/festivals' },
-        { name: 'Privé Feesten', href: '/prive-feesten' },
-        { name: 'Sportfeesten', href: '/sportfeesten' }
+        { name: 'Bruiloft DJ', href: '/bruiloft-dj' },
+        { name: 'Verjaardag DJ', href: '/verjaardag-dj' },
+        { name: 'Evenementen DJ', href: '/evenementen-dj' },
+        { name: 'Zakelijk DJ', href: '/zakelijk-dj' },
+        { name: 'Werkwijze', href: '/werkwijze' }
       ]
     },
-    { name: 'PORTFOLIO', href: '/portfolio' },
+    { name: 'REVIEWS', href: '/reviews' },
+    { name: 'REGIO', href: '/regio' },
     { name: 'PRIJZEN', href: '/prijzen' },
-    { name: 'BIOGRAFIE', href: '/biografie' },
-    { name: 'FAQ', href: '/faq' },
     { name: 'CONTACT', href: '/contact' },
   ];
 
