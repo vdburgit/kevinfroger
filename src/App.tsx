@@ -24,6 +24,10 @@ const TermsPage = React.lazy(() => import('./pages/TermsPage'));
 
 // New region pages
 const ZuidHollandPage = React.lazy(() => import('./pages/regio/ZuidHollandPage'));
+const NoordBrabantPage = React.lazy(() => import('./pages/regio/NoordBrabantPage'));
+const GelderlandPage = React.lazy(() => import('./pages/regio/GelderlandPage'));
+const UtrechtPage = React.lazy(() => import('./pages/regio/UtrechtPage'));
+const OverijsselPage = React.lazy(() => import('./pages/regio/OverijsselPage'));
 
 // City pages
 const RotterdamPage = React.lazy(() => import('./pages/regio/steden/RotterdamPage'));
@@ -64,6 +68,10 @@ function App() {
             
               {/* New region structure */}
               <Route path="/regio/zuid-holland" element={<ZuidHollandPage />} />
+              <Route path="/regio/noord-brabant" element={<NoordBrabantPage />} />
+              <Route path="/regio/gelderland" element={<GelderlandPage />} />
+              <Route path="/regio/utrecht" element={<UtrechtPage />} />
+              <Route path="/regio/overijssel" element={<OverijsselPage />} />
               
               {/* City pages */}
               <Route path="/regio/zuid-holland/rotterdam" element={<RotterdamPage />} />
