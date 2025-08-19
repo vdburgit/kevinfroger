@@ -175,6 +175,16 @@
   }
 }
 
+/* Hide scrollbar for music genres slider */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 /* Custom scrollbar - GPU optimized */
 ::-webkit-scrollbar {
   width: 8px;

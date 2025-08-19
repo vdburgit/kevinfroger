@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Music, Disc, Radio, Headphones, Volume2, Play, SkipForward, Heart, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const MusicGenresSection = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+  const [isAutoScrolling, setIsAutoScrolling] = useState(true);
+  const sliderRef = useRef<HTMLDivElement>(null);
 
   const musicGenres = [
     {
@@ -176,41 +179,80 @@ const MusicGenresSection = () => {
     }
   ];
 
-  // Group genres into slides of 12 for better performance
-  const genresPerSlide = 12;
-  const totalSlides = Math.ceil(musicGenres.length / genresPerSlide);
-  const slides = Array.from({ length: totalSlides }, (_, i) =>
-    musicGenres.slice(i * genresPerSlide, (i + 1) * genresPerSlide)
-  );
+  const cardWidth = 200; // Width of each card in pixels
+  const gap = 16; // Gap between cards
+  const scrollAmount = cardWidth + gap;
 
+  const updateScrollButtons = () => {
+    if (!sliderRef.current) return;
+    
+    const { scrollLeft, scrollWidth, clientWidth } = sliderRef.current;
+    setCanScrollLeft(scrollLeft > 0);
+    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+  };
+
+  const scrollLeft = () => {
+    if (!sliderRef.current) return;
+    const newPosition = Math.max(0, scrollPosition - scrollAmount * 3);
+    sliderRef.current.scrollTo({
+      left: newPosition,
+      behavior: 'smooth'
+    });
+    setScrollPosition(newPosition);
+    setIsAutoScrolling(false);
+  };
+
+  const scrollRight = () => {
+    if (!sliderRef.current) return;
+    const maxScroll = sliderRef.current.scrollWidth - sliderRef.current.clientWidth;
+    const newPosition = Math.min(maxScroll, scrollPosition + scrollAmount * 3);
+    sliderRef.current.scrollTo({
+      left: newPosition,
+      behavior: 'smooth'
+    });
+    setScrollPosition(newPosition);
+    setIsAutoScrolling(false);
+  };
+
+  // Auto-scroll functionality
   useEffect(() => {
-    if (!isAutoPlaying) return;
+    if (!isAutoScrolling || !sliderRef.current) return;
     
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % totalSlides);
-    }, 5000);
+      if (!sliderRef.current) return;
+      
+      const { scrollLeft, scrollWidth, clientWidth } = sliderRef.current;
+      const maxScroll = scrollWidth - clientWidth;
+      
+      if (scrollLeft >= maxScroll - 10) {
+        // Reset to beginning
+        sliderRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+        setScrollPosition(0);
+      } else {
+        // Continue scrolling
+        const newPosition = Math.min(maxScroll, scrollLeft + scrollAmount);
+        sliderRef.current.scrollTo({ left: newPosition, behavior: 'smooth' });
+        setScrollPosition(newPosition);
+      }
+    }, 3000);
     
     return () => clearInterval(timer);
-  }, [isAutoPlaying, totalSlides]);
+  }, [isAutoScrolling, scrollAmount]);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % totalSlides);
-    setIsAutoPlaying(false);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
-    setIsAutoPlaying(false);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-    setIsAutoPlaying(false);
-  };
-
-  // Optimize scroll listeners for performance
   useEffect(() => {
-    // Remove unused scroll listener for performance
+    updateScrollButtons();
+    
+    const handleScroll = () => {
+      if (!sliderRef.current) return;
+      setScrollPosition(sliderRef.current.scrollLeft);
+      updateScrollButtons();
+    };
+
+    const slider = sliderRef.current;
+    if (slider) {
+      slider.addEventListener('scroll', handleScroll, { passive: true });
+      return () => slider.removeEventListener('scroll', handleScroll);
+    }
   }, []);
 
   return (
@@ -235,77 +277,84 @@ const MusicGenresSection = () => {
           </p>
         </div>
 
-        {/* Slider Container */}
+        {/* Single Horizontal Slider */}
         <div className="relative">
           {/* Navigation Arrows */}
           <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-14 h-14 bg-white/90 backdrop-blur-sm rounded-full hover:bg-white transition-all duration-300 flex items-center justify-center text-gray-700 shadow-xl group"
-            aria-label="Vorige muziekgenres"
+            onClick={scrollLeft}
+            disabled={!canScrollLeft}
+            className={`absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-14 h-14 rounded-full transition-all duration-300 flex items-center justify-center shadow-xl group ${
+              canScrollLeft 
+                ? 'bg-white/90 backdrop-blur-sm hover:bg-white text-gray-700 cursor-pointer' 
+                : 'bg-gray-200/50 text-gray-400 cursor-not-allowed'
+            }`}
+            aria-label="Scroll naar links"
           >
-            <ChevronLeft className="w-7 h-7 group-hover:scale-110 transition-transform duration-200" />
+            <ChevronLeft className={`w-7 h-7 transition-transform duration-200 ${canScrollLeft ? 'group-hover:scale-110' : ''}`} />
           </button>
           
           <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-14 h-14 bg-white/90 backdrop-blur-sm rounded-full hover:bg-white transition-all duration-300 flex items-center justify-center text-gray-700 shadow-xl group"
-            aria-label="Volgende muziekgenres"
+            onClick={scrollRight}
+            disabled={!canScrollRight}
+            className={`absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-14 h-14 rounded-full transition-all duration-300 flex items-center justify-center shadow-xl group ${
+              canScrollRight 
+                ? 'bg-white/90 backdrop-blur-sm hover:bg-white text-gray-700 cursor-pointer' 
+                : 'bg-gray-200/50 text-gray-400 cursor-not-allowed'
+            }`}
+            aria-label="Scroll naar rechts"
           >
-            <ChevronRight className="w-7 h-7 group-hover:scale-110 transition-transform duration-200" />
+            <ChevronRight className={`w-7 h-7 transition-transform duration-200 ${canScrollRight ? 'group-hover:scale-110' : ''}`} />
           </button>
 
-          {/* Slides */}
-          <div className="overflow-hidden rounded-3xl">
-            <div 
-              className="flex transition-transform duration-700 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-              onMouseEnter={() => setIsAutoPlaying(false)}
-              onMouseLeave={() => setIsAutoPlaying(true)}
-            >
-              {slides.map((slide, slideIndex) => (
-                <div key={slideIndex} className="w-full flex-shrink-0">
-                  <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 px-8">
-                    {slide.map((genre, genreIndex) => (
-                      <div
-                        key={genreIndex}
-                        className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 overflow-hidden"
-                        style={{ aspectRatio: '2/1' }}
-                      >
-                        {/* Icon Container */}
-                        <div className="flex-1 flex items-center justify-center p-4">
-                          <div className={`w-12 h-12 bg-gradient-to-br ${genre.color} rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                          {genre.icon}
-                          </div>
-                        </div>
-
-                        {/* Content */}
-                        <div className="p-4 pt-0 text-center">
-                          <h3 className="text-sm font-black text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-200 leading-tight">
-                            {genre.name}
-                          </h3>
-                        </div>
-                      </div>
-                    ))}
+          {/* Horizontal Scrolling Container */}
+          <div 
+            ref={sliderRef}
+            className="flex gap-4 overflow-x-auto scrollbar-hide px-8 py-4"
+            style={{ 
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none',
+              WebkitOverflowScrolling: 'touch'
+            }}
+            onMouseEnter={() => setIsAutoScrolling(false)}
+            onMouseLeave={() => setIsAutoScrolling(true)}
+          >
+            {musicGenres.map((genre, index) => (
+              <div
+                key={index}
+                className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 overflow-hidden flex-shrink-0"
+                style={{ 
+                  width: `${cardWidth}px`,
+                  aspectRatio: '1/1'
+                }}
+              >
+                {/* Icon Container */}
+                <div className="flex-1 flex items-center justify-center p-6">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${genre.color} rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                    {genre.icon}
                   </div>
                 </div>
-              ))}
-            </div>
+
+                {/* Content */}
+                <div className="p-4 pt-0 text-center">
+                  <h3 className="text-sm font-black text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-200 leading-tight">
+                    {genre.name}
+                  </h3>
+                </div>
+              </div>
+            ))}
           </div>
 
-          {/* Slide Indicators */}
-          <div className="flex justify-center mt-12 space-x-3">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide 
-                    ? 'bg-blue-500 scale-125 shadow-lg shadow-blue-500/50' 
-                    : 'bg-gray-300 hover:bg-gray-400'
-                }`}
-                aria-label={`Ga naar slide ${index + 1}`}
+          {/* Scroll Progress Indicator */}
+          <div className="flex justify-center mt-8">
+            <div className="w-64 h-2 bg-gray-200 rounded-full overflow-hidden">
+              <div 
+                className="h-full bg-gradient-to-r from-blue-500 to-orange-500 rounded-full transition-all duration-300"
+                style={{ 
+                  width: `${sliderRef.current ? 
+                    ((scrollPosition / (sliderRef.current.scrollWidth - sliderRef.current.clientWidth)) * 100) : 0}%` 
+                }}
               />
-            ))}
+            </div>
           </div>
         </div>
 
