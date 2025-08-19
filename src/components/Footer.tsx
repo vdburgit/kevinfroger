@@ -65,8 +65,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-blue-200 text-lg leading-relaxed mb-8">
-              #1 Bruiloft DJ Nederland - Professionele DJ & MC services voor bruiloften, bedrijfsfeesten en festivals. 
-              15+ jaar ervaring, 500+ bruiloften, live mixing specialist. DJ boeken voor alle evenementen in Nederland.
+              #1 Allround DJ – Professionele DJ-diensten voor bruiloften, bedrijfsfeesten, verjaardagen en festivals. Allround DJ boeken voor alle evenementen in Nederland.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="group text-blue-300 hover:text-orange-400 transition-colors p-3 bg-blue-700/50 rounded-full hover:bg-orange-500/20">
