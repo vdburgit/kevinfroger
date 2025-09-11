@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://kevinfroger.nl/sitemaps/services.xml</loc>
+    <lastmod>2025-01-17</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://kevinfroger.nl/sitemaps/combos.xml</loc>
+    <lastmod>2025-01-17</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://kevinfroger.nl/sitemaps/occasions.xml</loc>
+    <lastmod>2025-01-17</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://kevinfroger.nl/sitemaps/cities.xml</loc>
+    <lastmod>2025-01-17</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://kevinfroger.nl/sitemaps/city_themes.xml</loc>
+    <lastmod>2025-01-17</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://kevinfroger.nl/sitemaps/city_micros.xml</loc>
+    <lastmod>2025-01-17</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://kevinfroger.nl/sitemaps/blog.xml</loc>
+    <lastmod>2025-01-17</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://kevinfroger.nl/sitemaps/images.xml</loc>
+    <lastmod>2025-01-17</lastmod>
+  </sitemap>
+</sitemapindex>

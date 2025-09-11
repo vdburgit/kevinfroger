@@ -1,45 +1,29 @@
-# DJ Kevin Froger - Robots.txt
 User-agent: *
 Allow: /
-
-# High priority pages
-Allow: /bruiloft-dj
-Allow: /verjaardag-dj
-Allow: /evenementen-dj
-Allow: /zakelijk-dj
-Allow: /werkwijze
-Allow: /reviews
-Allow: /regio
-Allow: /prijzen
-Allow: /contact
-
-# Region pages
-Allow: /regio/*
-
-# Static assets
-Allow: /images/
-Allow: /assets/
-Allow: /css/
-Allow: /js/
-
-# Block development files
-Disallow: /src/
-Disallow: /.git/
-Disallow: /node_modules/
-Disallow: /dist/
-Disallow: /*.json$
-Disallow: /*.config.*
-Disallow: /api/
-Disallow: /.env*
-
-# Block tracking parameters
-Disallow: /*?utm_*
-Disallow: /*?fbclid=*
-Disallow: /*?gclid=*
-
-# Block search
+Disallow: /zoeken
 Disallow: /search
-Disallow: /?*
-
-# Sitemaps
-Sitemap: https://kevinfroger.nl/sitemap.xml
+Disallow: /cart
+Disallow: /checkout
+Disallow: /account
+Disallow: /login
+Disallow: /register
+Disallow: /thank-you
+Disallow: /offerte-bedankt
+Disallow: /*?*replytocom=
+Disallow: /*?*preview=
+Disallow: /*?*session=
+Allow: /*.js$
+Allow: /*.css$
+Allow: /assets/
+Allow: /static/
+Allow: /fonts/
+Allow: /images/
+Sitemap: https://kevinfroger.nl/sitemap_index.xml
+Sitemap: https://kevinfroger.nl/sitemaps/services.xml
+Sitemap: https://kevinfroger.nl/sitemaps/combos.xml
+Sitemap: https://kevinfroger.nl/sitemaps/occasions.xml
+Sitemap: https://kevinfroger.nl/sitemaps/cities.xml
+Sitemap: https://kevinfroger.nl/sitemaps/city_themes.xml
+Sitemap: https://kevinfroger.nl/sitemaps/city_micros.xml
+Sitemap: https://kevinfroger.nl/sitemaps/blog.xml
+Sitemap: https://kevinfroger.nl/sitemaps/images.xml
