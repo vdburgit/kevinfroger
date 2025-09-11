@@ -134,7 +134,7 @@ const Footer = () => {
                   <MapPin className="w-5 h-5 text-orange-400" />
                 </div>
                 <span className="text-blue-200 font-semibold">
-                  Nederland<br />
+                  Nederland<wbr /><br />
                   <span className="text-sm opacity-75">(landelijk werkzaam)</span>
                 </span>
               </li>
