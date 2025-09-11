@@ -43,6 +43,15 @@
     RewriteRule ^dj/the-hague/?$ dj-den-haag/ [R=301,L]
     RewriteRule ^dj/denhaag/?$ dj-den-haag/ [R=301,L]
     
+    # 's-Hertogenbosch varianten → canoniek
+    RewriteRule ^dj/den-bosch/?$ dj-s-hertogenbosch/ [R=301,L]
+    RewriteRule ^dj/denbosch/?$ dj-s-hertogenbosch/ [R=301,L]
+    
+    # Den Haag varianten → canoniek
+    RewriteRule ^dj/s-gravenhage/?$ dj-den-haag/ [R=301,L]
+    RewriteRule ^dj/the-hague/?$ dj-den-haag/ [R=301,L]
+    RewriteRule ^dj/denhaag/?$ dj-den-haag/ [R=301,L]
+    
     # Strip tracking parameters
     RewriteCond %{QUERY_STRING} (^|&)(utm_[^=]*|gclid|fbclid|ref)= [NC]
     RewriteRule ^ %{REQUEST_URI}? [R=301,L]

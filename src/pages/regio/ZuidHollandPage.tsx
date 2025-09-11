@@ -56,6 +56,8 @@ const ZuidHollandPage = () => {
     { name: "Alphen a/d Rijn", href: "/regio/zuid-holland/alphen-aan-den-rijn", description: "Aan de rivier" },
     { name: "Schiedam", href: "/regio/zuid-holland/schiedam", description: "Jeneverstad" },
     { name: "Vlaardingen", href: "/regio/zuid-holland/vlaardingen", description: "Havenstad" }
+    { name: "'s-Gravendeel", href: "/dj-s-gravendeel/", description: "Hart Hoeksche Waard" },
+    { name: "Hoeksche Waard", href: "/dj-hoeksche-waard/", description: "Eilandregio" }
   ];
 
   const services = [

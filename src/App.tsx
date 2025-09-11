@@ -136,6 +136,15 @@ function App() {
               {/* SEO-routes – automatisch uit /pages/seo */}
               {seoRouteElements}
 
+              {/* 's-Gravendeel 7-pack - Explicit routes */}
+              <Route path="/dj-s-gravendeel" element={<DJSGravendeelPage />} />
+              <Route path="/dj-bruiloft-s-gravendeel" element={<DJBruiloftSGravendeelPage />} />
+              <Route path="/dj-verjaardag-s-gravendeel" element={<DJVerjaardagSGravendeelPage />} />
+              <Route path="/dj-bedrijfsfeest-s-gravendeel" element={<DJBedrijfsfeestSGravendeelPage />} />
+              <Route path="/dj-last-minute-s-gravendeel" element={<DJLastMinuteSGravendeelPage />} />
+              <Route path="/dj-prijs-s-gravendeel" element={<DJPrijsSGravendeelPage />} />
+              <Route path="/dj-saxofonist-s-gravendeel" element={<DJSaxofonistSGravendeelPage />} />
+
               {/* Legacy redirects */}
               <Route path="/bruiloften" element={<Navigate to="/bruiloft-dj" replace />} />
               <Route path="/bedrijfsfeesten" element={<Navigate to="/zakelijk-dj" replace />} />
