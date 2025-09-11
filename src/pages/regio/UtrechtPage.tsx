@@ -12,6 +12,33 @@ const UtrechtPage = () => {
       metaDescription.setAttribute('content', 'Ervaren allround DJ in Utrecht voor bruiloft, verjaardag en events. Compleet met licht & geluid. Vraag je prijs of offerte.');
     }
     
+    // Add canonical URL
+    const canonical = document.querySelector('link[rel="canonical"]') || document.createElement('link');
+    canonical.setAttribute('rel', 'canonical');
+    canonical.setAttribute('href', 'https://kevinfroger.nl/regio/utrecht');
+    if (!document.head.contains(canonical)) document.head.appendChild(canonical);
+    
+    // Add Open Graph tags
+    const ogTitle = document.querySelector('meta[property="og:title"]') || document.createElement('meta');
+    ogTitle.setAttribute('property', 'og:title');
+    ogTitle.setAttribute('content', 'DJ huren in Utrecht – complete DJ‑show | Kevin Froger');
+    if (!document.head.contains(ogTitle)) document.head.appendChild(ogTitle);
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]') || document.createElement('meta');
+    ogDescription.setAttribute('property', 'og:description');
+    ogDescription.setAttribute('content', 'Ervaren allround DJ in Utrecht voor bruiloft, verjaardag en events. Compleet met licht & geluid.');
+    if (!document.head.contains(ogDescription)) document.head.appendChild(ogDescription);
+    
+    const ogUrl = document.querySelector('meta[property="og:url"]') || document.createElement('meta');
+    ogUrl.setAttribute('property', 'og:url');
+    ogUrl.setAttribute('content', 'https://kevinfroger.nl/regio/utrecht');
+    if (!document.head.contains(ogUrl)) document.head.appendChild(ogUrl);
+    
+    const ogImage = document.querySelector('meta[property="og:image"]') || document.createElement('meta');
+    ogImage.setAttribute('property', 'og:image');
+    ogImage.setAttribute('content', 'https://kevinfroger.nl/images/kevin-portrait.png');
+    if (!document.head.contains(ogImage)) document.head.appendChild(ogImage);
+    
     // Add structured data
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -46,14 +73,18 @@ const UtrechtPage = () => {
   }, []);
 
   const cities = [
-    { name: "Utrecht", href: "/regio/utrecht/utrecht", description: "Domstad" },
-    { name: "Amersfoort", href: "/regio/utrecht/amersfoort", description: "Keistad" },
-    { name: "Nieuwegein", href: "/regio/utrecht/nieuwegein", description: "Nieuwe stad" },
-    { name: "Zeist", href: "/regio/utrecht/zeist", description: "Bos en heide" },
-    { name: "IJsselstein", href: "/regio/utrecht/ijsselstein", description: "Historische stad" },
-    { name: "Houten", href: "/regio/utrecht/houten", description: "Groene stad" },
-    { name: "Veenendaal", href: "/regio/utrecht/veenendaal", description: "Textielstad" },
-    { name: "Soest", href: "/regio/utrecht/soest", description: "Bos en duin" }
+    { name: "Utrecht", href: "/dj-utrecht", description: "Domstad" },
+    { name: "Amersfoort", href: "/dj-amersfoort", description: "Keistad" },
+    { name: "Nieuwegein", href: "/dj-nieuwegein", description: "Nieuwe stad" },
+    { name: "Zeist", href: "/dj-zeist", description: "Bos en heide" },
+    { name: "IJsselstein", href: "/dj-ijsselstein", description: "Historische stad" },
+    { name: "Houten", href: "/dj-houten", description: "Groene stad" },
+    { name: "Veenendaal", href: "/dj-veenendaal", description: "Textielstad" },
+    { name: "Soest", href: "/dj-soest", description: "Bos en duin" },
+    { name: "De Bilt", href: "/dj-de-bilt", description: "KNMI stad" },
+    { name: "Woerden", href: "/dj-woerden", description: "Kaasstad" },
+    { name: "Baarn", href: "/dj-baarn", description: "Paleisstad" },
+    { name: "Bunnik", href: "/dj-bunnik", description: "Universiteit" }
   ];
 
   const services = [
@@ -93,12 +124,23 @@ const UtrechtPage = () => {
   const stats = [
     { number: "15+", label: "Jaar in Utrecht", icon: <Award className="w-8 h-8" /> },
     { number: "200+", label: "Events in de provincie", icon: <Calendar className="w-8 h-8" /> },
-    { number: "8", label: "Grote steden", icon: <MapPin className="w-8 h-8" /> },
+    { number: "12", label: "Grote steden", icon: <MapPin className="w-8 h-8" /> },
     { number: "100%", label: "Tevreden klanten", icon: <Star className="w-8 h-8" /> }
   ];
 
   return (
     <div className="bg-white">
+      {/* NoScript Fallback */}
+      <noscript>
+        <div className="bg-orange-600 text-white p-4 text-center">
+          <h1 className="text-2xl font-bold mb-2">DJ Kevin Froger - Utrecht</h1>
+          <p className="mb-4">Ervaren allround DJ in Utrecht voor alle evenementen.</p>
+          <a href="https://wa.me/31645251333" className="bg-white text-orange-600 px-6 py-3 rounded-full font-bold">
+            WhatsApp Contact
+          </a>
+        </div>
+      </noscript>
+
       {/* Breadcrumbs */}
       <nav aria-label="Breadcrumb" className="bg-gray-50 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -113,13 +155,28 @@ const UtrechtPage = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-r from-red-600 to-orange-700 text-white" role="banner">
+      <section className="py-16 lg:py-24 bg-gradient-to-r from-orange-600 to-orange-700 text-white" role="banner">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <MapPin className="w-16 h-16 mx-auto mb-6 text-red-200" />
+          <picture>
+            <source type="image/avif" 
+                    srcset="/images/dj-kevin-froger-bruiloft-640.avif 640w, /images/dj-kevin-froger-bruiloft-960.avif 960w, /images/dj-kevin-froger-bruiloft-1280.avif 1280w"
+                    sizes="(max-width: 768px) 100vw, 960px" />
+            <source type="image/webp" 
+                    srcset="/images/dj-kevin-froger-bruiloft-640.webp 640w, /images/dj-kevin-froger-bruiloft-960.webp 960w, /images/dj-kevin-froger-bruiloft-1280.webp 1280w"
+                    sizes="(max-width: 768px) 100vw, 960px" />
+            <img src="/images/dj-kevin-froger-bruiloft-scaled.jpeg"
+                 width="1280" height="720"
+                 alt="DJ Kevin Froger Utrecht - Professionele DJ services"
+                 loading="eager" 
+                 fetchpriority="high" 
+                 decoding="async"
+                 className="w-16 h-16 mx-auto mb-6 rounded-full object-cover" />
+          </picture>
+          
           <h1 className="text-4xl lg:text-6xl font-black mb-6">
             DJ huren in Utrecht – complete DJ‑show
           </h1>
-          <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto leading-relaxed">
             Ervaren allround DJ in Utrecht voor bruiloft, verjaardag en events. 
             Van Utrecht stad tot Amersfoort - compleet met licht & geluid. Vraag je prijs of offerte.
           </p>
@@ -129,14 +186,18 @@ const UtrechtPage = () => {
               href="https://wa.me/31645251333"
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-10 py-5 rounded-full font-black text-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105"
+              className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-10 py-5 rounded-full font-black text-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 min-h-[48px] min-w-[48px]"
+              aria-label="WhatsApp contact voor prijsindicatie DJ Utrecht"
+              title="App voor een prijsindicatie"
             >
               <MessageCircle className="w-6 h-6 inline-block mr-3" />
               APP VOOR EEN PRIJSINDICATIE
             </a>
             <a
               href="/prijzen"
-              className="border-3 border-white text-white px-10 py-5 rounded-full font-black text-xl hover:bg-white hover:text-red-900 transition-all duration-300"
+              className="border-3 border-white text-white px-10 py-5 rounded-full font-black text-xl hover:bg-white hover:text-orange-900 transition-all duration-300 min-h-[48px] min-w-[48px]"
+              aria-label="Vraag offerte aan voor DJ Utrecht"
+              title="Vraag een offerte aan"
             >
               VRAAG EEN OFFERTE AAN
             </a>
@@ -150,7 +211,7 @@ const UtrechtPage = () => {
                   {stat.icon}
                 </div>
                 <div className="text-3xl lg:text-4xl font-black text-orange-400 mb-2">{stat.number}</div>
-                <div className="text-red-200 font-semibold">{stat.label}</div>
+                <div className="text-orange-200 font-semibold">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -163,7 +224,7 @@ const UtrechtPage = () => {
           <div className="text-center mb-20">
             <h2 className="text-5xl lg:text-7xl font-black text-gray-900 mb-8 text-shadow">
               DJ SERVICES
-              <span className="block text-red-700">UTRECHT</span>
+              <span className="block text-orange-700">UTRECHT</span>
             </h2>
           </div>
           
@@ -179,12 +240,12 @@ const UtrechtPage = () => {
             ))}
           </div>
 
-          <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-3xl p-12">
+          <div className="bg-gradient-to-r from-orange-50 to-gray-50 rounded-3xl p-12">
             <h3 className="text-3xl font-black text-gray-900 mb-8 text-center">Wat je krijgt in Utrecht:</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {usps.map((usp, index) => (
                 <div key={index} className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <span className="text-lg text-gray-700 font-medium">{usp}</span>
@@ -214,6 +275,8 @@ const UtrechtPage = () => {
                 key={index}
                 to={city.href}
                 className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:-translate-y-2 border border-gray-100 hover:border-orange-200"
+                aria-label={`DJ services in ${city.name}`}
+                title={`DJ ${city.name} - ${city.description}`}
               >
                 <MapPin className="w-8 h-8 text-orange-500 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
                 <h3 className="text-lg font-black text-gray-900 group-hover:text-orange-600 transition-colors duration-300 mb-2">
@@ -235,7 +298,7 @@ const UtrechtPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-5xl lg:text-7xl font-black text-gray-900 mb-8 text-shadow">
               BOEK EEN DJ
-              <span className="block text-red-700">IN UTRECHT</span>
+              <span className="block text-orange-700">IN UTRECHT</span>
             </h2>
             <p className="text-2xl text-gray-600 leading-relaxed">
               Klaar om jouw evenement in Utrecht onvergetelijk te maken?

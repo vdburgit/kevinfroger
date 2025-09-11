@@ -12,6 +12,33 @@ const NoordBrabantPage = () => {
       metaDescription.setAttribute('content', 'Ervaren allround DJ in Noord-Brabant voor bruiloft, verjaardag en events. Compleet met licht & geluid. Vraag je prijs of offerte.');
     }
     
+    // Add canonical URL
+    const canonical = document.querySelector('link[rel="canonical"]') || document.createElement('link');
+    canonical.setAttribute('rel', 'canonical');
+    canonical.setAttribute('href', 'https://kevinfroger.nl/regio/noord-brabant');
+    if (!document.head.contains(canonical)) document.head.appendChild(canonical);
+    
+    // Add Open Graph tags
+    const ogTitle = document.querySelector('meta[property="og:title"]') || document.createElement('meta');
+    ogTitle.setAttribute('property', 'og:title');
+    ogTitle.setAttribute('content', 'DJ huren in Noord-Brabant – complete DJ‑show | Kevin Froger');
+    if (!document.head.contains(ogTitle)) document.head.appendChild(ogTitle);
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]') || document.createElement('meta');
+    ogDescription.setAttribute('property', 'og:description');
+    ogDescription.setAttribute('content', 'Ervaren allround DJ in Noord-Brabant voor bruiloft, verjaardag en events. Compleet met licht & geluid.');
+    if (!document.head.contains(ogDescription)) document.head.appendChild(ogDescription);
+    
+    const ogUrl = document.querySelector('meta[property="og:url"]') || document.createElement('meta');
+    ogUrl.setAttribute('property', 'og:url');
+    ogUrl.setAttribute('content', 'https://kevinfroger.nl/regio/noord-brabant');
+    if (!document.head.contains(ogUrl)) document.head.appendChild(ogUrl);
+    
+    const ogImage = document.querySelector('meta[property="og:image"]') || document.createElement('meta');
+    ogImage.setAttribute('property', 'og:image');
+    ogImage.setAttribute('content', 'https://kevinfroger.nl/images/kevin-portrait.png');
+    if (!document.head.contains(ogImage)) document.head.appendChild(ogImage);
+    
     // Add structured data
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -46,14 +73,18 @@ const NoordBrabantPage = () => {
   }, []);
 
   const cities = [
-    { name: "Eindhoven", href: "/regio/noord-brabant/eindhoven", description: "Lichtstad" },
-    { name: "Tilburg", href: "/regio/noord-brabant/tilburg", description: "Textielstad" },
-    { name: "Breda", href: "/regio/noord-brabant/breda", description: "Parel van het zuiden" },
-    { name: "'s-Hertogenbosch", href: "/regio/noord-brabant/den-bosch", description: "Hoofdstad Brabant" },
-    { name: "Helmond", href: "/regio/noord-brabant/helmond", description: "Industriestad" },
-    { name: "Roosendaal", href: "/regio/noord-brabant/roosendaal", description: "Spoorwegstad" },
-    { name: "Bergen op Zoom", href: "/regio/noord-brabant/bergen-op-zoom", description: "Vestingstad" },
-    { name: "Oss", href: "/regio/noord-brabant/oss", description: "Maasstad" }
+    { name: "Eindhoven", href: "/dj-eindhoven", description: "Lichtstad" },
+    { name: "Tilburg", href: "/dj-tilburg", description: "Textielstad" },
+    { name: "Breda", href: "/dj-breda", description: "Parel van het zuiden" },
+    { name: "'s-Hertogenbosch", href: "/dj-s-hertogenbosch", description: "Hoofdstad Brabant" },
+    { name: "Helmond", href: "/dj-helmond", description: "Industriestad" },
+    { name: "Roosendaal", href: "/dj-roosendaal", description: "Spoorwegstad" },
+    { name: "Bergen op Zoom", href: "/dj-bergen-op-zoom", description: "Vestingstad" },
+    { name: "Oss", href: "/dj-oss", description: "Maasstad" },
+    { name: "Oosterhout", href: "/dj-oosterhout", description: "Groene stad" },
+    { name: "Etten-Leur", href: "/dj-etten-leur", description: "Markstad" },
+    { name: "Veldhoven", href: "/dj-veldhoven", description: "Technologiestad" },
+    { name: "Best", href: "/dj-best", description: "Moderne gemeente" }
   ];
 
   const services = [
@@ -93,12 +124,23 @@ const NoordBrabantPage = () => {
   const stats = [
     { number: "15+", label: "Jaar in Noord-Brabant", icon: <Award className="w-8 h-8" /> },
     { number: "300+", label: "Events in de provincie", icon: <Calendar className="w-8 h-8" /> },
-    { number: "8", label: "Grote steden", icon: <MapPin className="w-8 h-8" /> },
+    { number: "12", label: "Grote steden", icon: <MapPin className="w-8 h-8" /> },
     { number: "100%", label: "Tevreden klanten", icon: <Star className="w-8 h-8" /> }
   ];
 
   return (
     <div className="bg-white">
+      {/* NoScript Fallback */}
+      <noscript>
+        <div className="bg-red-600 text-white p-4 text-center">
+          <h1 className="text-2xl font-bold mb-2">DJ Kevin Froger - Noord-Brabant</h1>
+          <p className="mb-4">Ervaren allround DJ in Noord-Brabant voor alle evenementen.</p>
+          <a href="https://wa.me/31645251333" className="bg-white text-red-600 px-6 py-3 rounded-full font-bold">
+            WhatsApp Contact
+          </a>
+        </div>
+      </noscript>
+
       {/* Breadcrumbs */}
       <nav aria-label="Breadcrumb" className="bg-gray-50 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -115,12 +157,27 @@ const NoordBrabantPage = () => {
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-r from-red-600 to-red-700 text-white" role="banner">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <MapPin className="w-16 h-16 mx-auto mb-6 text-red-200" />
+          <picture>
+            <source type="image/avif" 
+                    srcset="/images/dj-kevin-froger-bruiloft-640.avif 640w, /images/dj-kevin-froger-bruiloft-960.avif 960w, /images/dj-kevin-froger-bruiloft-1280.avif 1280w"
+                    sizes="(max-width: 768px) 100vw, 960px" />
+            <source type="image/webp" 
+                    srcset="/images/dj-kevin-froger-bruiloft-640.webp 640w, /images/dj-kevin-froger-bruiloft-960.webp 960w, /images/dj-kevin-froger-bruiloft-1280.webp 1280w"
+                    sizes="(max-width: 768px) 100vw, 960px" />
+            <img src="/images/dj-kevin-froger-bruiloft-scaled.jpeg"
+                 width="1280" height="720"
+                 alt="DJ Kevin Froger Noord-Brabant - Professionele DJ services"
+                 loading="eager" 
+                 fetchpriority="high" 
+                 decoding="async"
+                 className="w-16 h-16 mx-auto mb-6 rounded-full object-cover" />
+          </picture>
+          
           <h1 className="text-4xl lg:text-6xl font-black mb-6">
-            DJ huren in Noord-Brabant – complete DJ‑show
+            DJ huren in Noord&shy;-Brabant – complete DJ‑show
           </h1>
           <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Ervaren allround DJ in Noord-Brabant voor bruiloft, verjaardag en events. 
+            Ervaren allround DJ in Noord&nbsp;-&nbsp;Brabant voor bruiloft, verjaardag en events. 
             Van Eindhoven tot Breda - compleet met licht & geluid. Vraag je prijs of offerte.
           </p>
           
@@ -129,14 +186,18 @@ const NoordBrabantPage = () => {
               href="https://wa.me/31645251333"
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-10 py-5 rounded-full font-black text-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105"
+              className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-10 py-5 rounded-full font-black text-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 min-h-[48px] min-w-[48px]"
+              aria-label="WhatsApp contact voor prijsindicatie DJ Noord-Brabant"
+              title="App voor een prijsindicatie"
             >
               <MessageCircle className="w-6 h-6 inline-block mr-3" />
               APP VOOR EEN PRIJSINDICATIE
             </a>
             <a
               href="/prijzen"
-              className="border-3 border-white text-white px-10 py-5 rounded-full font-black text-xl hover:bg-white hover:text-red-900 transition-all duration-300"
+              className="border-3 border-white text-white px-10 py-5 rounded-full font-black text-xl hover:bg-white hover:text-red-900 transition-all duration-300 min-h-[48px] min-w-[48px]"
+              aria-label="Vraag offerte aan voor DJ Noord-Brabant"
+              title="Vraag een offerte aan"
             >
               VRAAG EEN OFFERTE AAN
             </a>
@@ -180,7 +241,7 @@ const NoordBrabantPage = () => {
           </div>
 
           <div className="bg-gradient-to-r from-red-50 to-gray-50 rounded-3xl p-12">
-            <h3 className="text-3xl font-black text-gray-900 mb-8 text-center">Wat je krijgt in Noord-Brabant:</h3>
+            <h3 className="text-3xl font-black text-gray-900 mb-8 text-center">Wat je krijgt in Noord&nbsp;-&nbsp;Brabant:</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {usps.map((usp, index) => (
                 <div key={index} className="flex items-start space-x-4">
@@ -214,6 +275,8 @@ const NoordBrabantPage = () => {
                 key={index}
                 to={city.href}
                 className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:-translate-y-2 border border-gray-100 hover:border-orange-200"
+                aria-label={`DJ services in ${city.name}`}
+                title={`DJ ${city.name} - ${city.description}`}
               >
                 <MapPin className="w-8 h-8 text-orange-500 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
                 <h3 className="text-lg font-black text-gray-900 group-hover:text-orange-600 transition-colors duration-300 mb-2">
@@ -238,7 +301,7 @@ const NoordBrabantPage = () => {
               <span className="block text-red-700">IN NOORD-BRABANT</span>
             </h2>
             <p className="text-2xl text-gray-600 leading-relaxed">
-              Klaar om jouw evenement in Noord-Brabant onvergetelijk te maken?
+              Klaar om jouw evenement in Noord&nbsp;-&nbsp;Brabant onvergetelijk te maken?
             </p>
           </div>
           <ContactForm eventType="Noord-Brabant" />

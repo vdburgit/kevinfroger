@@ -121,18 +121,25 @@ const HomePage = () => {
                 index === currentSlide ? 'opacity-100' : 'opacity-0'
               }`}
             >
-              <img 
-                src={slide.image}
-                alt={`DJ Kevin Froger ${slide.title} - Professionele DJ services Nederland`}
-                className="w-full h-full object-cover object-center transform-gpu hero-image"
-                width="800"
-                height="600"
-                loading={index === 0 ? "eager" : "lazy"}
-                decoding="async"
-                fetchPriority={index === 0 ? "high" : "low"}
-                style={{ aspectRatio: '16/9' }}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-              />
+              <picture>
+                <source type="image/avif" 
+                        srcset="/images/dj-kevin-froger-bruiloft-640.avif 640w, /images/dj-kevin-froger-bruiloft-960.avif 960w, /images/dj-kevin-froger-bruiloft-1280.avif 1280w"
+                        sizes="(max-width: 768px) 100vw, 100vw" />
+                <source type="image/webp" 
+                        srcset="/images/dj-kevin-froger-bruiloft-640.webp 640w, /images/dj-kevin-froger-bruiloft-960.webp 960w, /images/dj-kevin-froger-bruiloft-1280.webp 1280w"
+                        sizes="(max-width: 768px) 100vw, 100vw" />
+                <img 
+                  src={slide.image}
+                  alt={`DJ Kevin Froger ${slide.title} - Professionele DJ services Nederland`}
+                  className="w-full h-full object-cover object-center transform-gpu hero-image"
+                  width="1280"
+                  height="720"
+                  loading={index === 0 ? "eager" : "lazy"}
+                  decoding="async"
+                  fetchPriority={index === 0 ? "high" : "low"}
+                  sizes="(max-width: 768px) 100vw, 100vw"
+                />
+              </picture>
             </div>
           ))}
         </div>
@@ -162,8 +169,9 @@ const HomePage = () => {
             <div className="hidden md:flex flex-row gap-4 lg:gap-6 justify-center mb-8 lg:mb-10">
               <Link
                 to="https://wa.me/31645251333"
-                className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 lg:px-10 py-3 lg:py-4 rounded-full font-black text-base lg:text-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-xl hover:shadow-orange-500/25 transform hover:scale-105 min-h-[44px]"
+                className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 lg:px-10 py-3 lg:py-4 rounded-full font-black text-base lg:text-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-xl hover:shadow-orange-500/25 transform hover:scale-105 min-h-[48px] min-w-[48px]"
                 aria-label="App voor snelle prijsindicatie"
+                title="WhatsApp voor snelle prijsindicatie"
               >
                 <MessageCircle className="w-4 h-4 lg:w-5 lg:h-5 inline-block mr-2" />
                 APP VOOR EEN PRIJSINDICATIE
@@ -171,8 +179,9 @@ const HomePage = () => {
               </Link>
               <Link
                 to="/prijzen"
-                className="border-2 border-white text-white px-6 lg:px-10 py-3 lg:py-4 rounded-full font-black text-base lg:text-lg hover:bg-white hover:text-blue-900 transition-all duration-300 min-h-[44px]"
+                className="border-2 border-white text-white px-6 lg:px-10 py-3 lg:py-4 rounded-full font-black text-base lg:text-lg hover:bg-white hover:text-blue-900 transition-all duration-300 min-h-[48px] min-w-[48px]"
                 aria-label="Vraag een offerte aan"
+                title="Vraag een offerte aan"
               >
                 <Calendar className="w-4 h-4 lg:w-5 lg:h-5 inline-block mr-2" />
                 VRAAG EEN OFFERTE AAN
@@ -185,16 +194,18 @@ const HomePage = () => {
                 href="https://wa.me/31645251333"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg font-bold text-base py-4 px-6 rounded-lg flex items-center justify-center min-h-[48px]"
+                className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg font-bold text-base py-4 px-6 rounded-lg flex items-center justify-center min-h-[48px] min-w-[48px]"
                 aria-label="App voor snelle prijsindicatie"
+                title="WhatsApp voor snelle prijsindicatie"
               >
                 <MessageCircle className="w-5 h-5 mr-3" />
                 APP VOOR EEN PRIJS
               </a>
               <Link
                 to="/prijzen"
-                className="w-full border-2 border-white text-white hover:bg-white hover:text-blue-900 transition-all duration-300 shadow-lg font-bold text-base py-4 px-6 rounded-lg flex items-center justify-center min-h-[48px]"
+                className="w-full border-2 border-white text-white hover:bg-white hover:text-blue-900 transition-all duration-300 shadow-lg font-bold text-base py-4 px-6 rounded-lg flex items-center justify-center min-h-[48px] min-w-[48px]"
                 aria-label="Vraag een offerte aan"
+                title="Vraag een offerte aan"
               >
                 <Calendar className="w-5 h-5 mr-3" />
                 EEN OFFERTE
@@ -278,16 +289,24 @@ const HomePage = () => {
             {services.map((service, index) => (
               <div key={index} className="group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-gray-100">
                 <div className="relative overflow-hidden">
-                  <img 
-                    src={service.image}
-                    alt={`DJ Kevin Froger ${service.title} - Professionele DJ services voor ${service.title.toLowerCase()} in Nederland`}
-                    className="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition-transform duration-700"
-                    loading="lazy"
-                    decoding="async"
-                    width="400"
-                    height="256"
-                    style={{ aspectRatio: '400/256' }}
-                  />
+                  <picture>
+                    <source type="image/avif" 
+                            srcset="/images/service-640.avif 640w, /images/service-960.avif 960w"
+                            sizes="(max-width: 768px) 100vw, 400px" />
+                    <source type="image/webp" 
+                            srcset="/images/service-640.webp 640w, /images/service-960.webp 960w"
+                            sizes="(max-width: 768px) 100vw, 400px" />
+                    <img 
+                      src={service.image}
+                      alt={`DJ Kevin Froger ${service.title} - Professionele DJ services voor ${service.title.toLowerCase()} in Nederland`}
+                      className="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+                      loading="lazy"
+                      decoding="async"
+                      width="400"
+                      height="256"
+                      sizes="(max-width: 768px) 100vw, 400px"
+                    />
+                  </picture>
                   <div className="absolute top-4 right-4 lg:top-6 lg:right-6">
                     <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-full flex items-center justify-center text-white shadow-lg`}>
                       {service.icon}

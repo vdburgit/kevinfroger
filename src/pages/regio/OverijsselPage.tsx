@@ -12,6 +12,33 @@ const OverijsselPage = () => {
       metaDescription.setAttribute('content', 'Ervaren allround DJ in Overijssel voor bruiloft, verjaardag en events. Compleet met licht & geluid. Vraag je prijs of offerte.');
     }
     
+    // Add canonical URL
+    const canonical = document.querySelector('link[rel="canonical"]') || document.createElement('link');
+    canonical.setAttribute('rel', 'canonical');
+    canonical.setAttribute('href', 'https://kevinfroger.nl/regio/overijssel');
+    if (!document.head.contains(canonical)) document.head.appendChild(canonical);
+    
+    // Add Open Graph tags
+    const ogTitle = document.querySelector('meta[property="og:title"]') || document.createElement('meta');
+    ogTitle.setAttribute('property', 'og:title');
+    ogTitle.setAttribute('content', 'DJ huren in Overijssel – complete DJ‑show | Kevin Froger');
+    if (!document.head.contains(ogTitle)) document.head.appendChild(ogTitle);
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]') || document.createElement('meta');
+    ogDescription.setAttribute('property', 'og:description');
+    ogDescription.setAttribute('content', 'Ervaren allround DJ in Overijssel voor bruiloft, verjaardag en events. Compleet met licht & geluid.');
+    if (!document.head.contains(ogDescription)) document.head.appendChild(ogDescription);
+    
+    const ogUrl = document.querySelector('meta[property="og:url"]') || document.createElement('meta');
+    ogUrl.setAttribute('property', 'og:url');
+    ogUrl.setAttribute('content', 'https://kevinfroger.nl/regio/overijssel');
+    if (!document.head.contains(ogUrl)) document.head.appendChild(ogUrl);
+    
+    const ogImage = document.querySelector('meta[property="og:image"]') || document.createElement('meta');
+    ogImage.setAttribute('property', 'og:image');
+    ogImage.setAttribute('content', 'https://kevinfroger.nl/images/kevin-portrait.png');
+    if (!document.head.contains(ogImage)) document.head.appendChild(ogImage);
+    
     // Add structured data
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -46,14 +73,18 @@ const OverijsselPage = () => {
   }, []);
 
   const cities = [
-    { name: "Enschede", href: "/regio/overijssel/enschede", description: "Textielstad" },
-    { name: "Zwolle", href: "/regio/overijssel/zwolle", description: "Hanzestad" },
-    { name: "Deventer", href: "/regio/overijssel/deventer", description: "Boekenstad" },
-    { name: "Hengelo", href: "/regio/overijssel/hengelo", description: "Industriestad" },
-    { name: "Almelo", href: "/regio/overijssel/almelo", description: "Textielstad" },
-    { name: "Kampen", href: "/regio/overijssel/kampen", description: "Hanzestad" },
-    { name: "Steenwijk", href: "/regio/overijssel/steenwijk", description: "Waterstad" },
-    { name: "Hardenberg", href: "/regio/overijssel/hardenberg", description: "Vechtstad" }
+    { name: "Enschede", href: "/dj-enschede", description: "Textielstad" },
+    { name: "Zwolle", href: "/dj-zwolle", description: "Hanzestad" },
+    { name: "Deventer", href: "/dj-deventer", description: "Boekenstad" },
+    { name: "Hengelo", href: "/dj-hengelo", description: "Industriestad" },
+    { name: "Almelo", href: "/dj-almelo", description: "Textielstad" },
+    { name: "Kampen", href: "/dj-kampen", description: "Hanzestad" },
+    { name: "Steenwijkerland", href: "/dj-steenwijkerland", description: "Waterstad" },
+    { name: "Hardenberg", href: "/dj-hardenberg", description: "Vechtstad" },
+    { name: "Oldenzaal", href: "/dj-oldenzaal", description: "Grensstad" },
+    { name: "Raalte", href: "/dj-raalte", description: "Sallandse stad" },
+    { name: "Ommen", href: "/dj-ommen", description: "Vechtstad" },
+    { name: "Dalfsen", href: "/dj-dalfsen", description: "Vechtdal" }
   ];
 
   const services = [
@@ -93,12 +124,23 @@ const OverijsselPage = () => {
   const stats = [
     { number: "15+", label: "Jaar in Overijssel", icon: <Award className="w-8 h-8" /> },
     { number: "150+", label: "Events in de provincie", icon: <Calendar className="w-8 h-8" /> },
-    { number: "8", label: "Grote steden", icon: <MapPin className="w-8 h-8" /> },
+    { number: "12", label: "Grote steden", icon: <MapPin className="w-8 h-8" /> },
     { number: "100%", label: "Tevreden klanten", icon: <Star className="w-8 h-8" /> }
   ];
 
   return (
     <div className="bg-white">
+      {/* NoScript Fallback */}
+      <noscript>
+        <div className="bg-blue-600 text-white p-4 text-center">
+          <h1 className="text-2xl font-bold mb-2">DJ Kevin Froger - Overijssel</h1>
+          <p className="mb-4">Ervaren allround DJ in Overijssel voor alle evenementen.</p>
+          <a href="https://wa.me/31645251333" className="bg-white text-blue-600 px-6 py-3 rounded-full font-bold">
+            WhatsApp Contact
+          </a>
+        </div>
+      </noscript>
+
       {/* Breadcrumbs */}
       <nav aria-label="Breadcrumb" className="bg-gray-50 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -113,9 +155,24 @@ const OverijsselPage = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-r from-blue-600 to-green-700 text-white" role="banner">
+      <section className="py-16 lg:py-24 bg-gradient-to-r from-blue-600 to-blue-700 text-white" role="banner">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <MapPin className="w-16 h-16 mx-auto mb-6 text-blue-200" />
+          <picture>
+            <source type="image/avif" 
+                    srcset="/images/dj-kevin-froger-bruiloft-640.avif 640w, /images/dj-kevin-froger-bruiloft-960.avif 960w, /images/dj-kevin-froger-bruiloft-1280.avif 1280w"
+                    sizes="(max-width: 768px) 100vw, 960px" />
+            <source type="image/webp" 
+                    srcset="/images/dj-kevin-froger-bruiloft-640.webp 640w, /images/dj-kevin-froger-bruiloft-960.webp 960w, /images/dj-kevin-froger-bruiloft-1280.webp 1280w"
+                    sizes="(max-width: 768px) 100vw, 960px" />
+            <img src="/images/dj-kevin-froger-bruiloft-scaled.jpeg"
+                 width="1280" height="720"
+                 alt="DJ Kevin Froger Overijssel - Professionele DJ services"
+                 loading="eager" 
+                 fetchpriority="high" 
+                 decoding="async"
+                 className="w-16 h-16 mx-auto mb-6 rounded-full object-cover" />
+          </picture>
+          
           <h1 className="text-4xl lg:text-6xl font-black mb-6">
             DJ huren in Overijssel – complete DJ‑show
           </h1>
@@ -129,14 +186,18 @@ const OverijsselPage = () => {
               href="https://wa.me/31645251333"
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-10 py-5 rounded-full font-black text-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105"
+              className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-10 py-5 rounded-full font-black text-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 min-h-[48px] min-w-[48px]"
+              aria-label="WhatsApp contact voor prijsindicatie DJ Overijssel"
+              title="App voor een prijsindicatie"
             >
               <MessageCircle className="w-6 h-6 inline-block mr-3" />
               APP VOOR EEN PRIJSINDICATIE
             </a>
             <a
               href="/prijzen"
-              className="border-3 border-white text-white px-10 py-5 rounded-full font-black text-xl hover:bg-white hover:text-blue-900 transition-all duration-300"
+              className="border-3 border-white text-white px-10 py-5 rounded-full font-black text-xl hover:bg-white hover:text-blue-900 transition-all duration-300 min-h-[48px] min-w-[48px]"
+              aria-label="Vraag offerte aan voor DJ Overijssel"
+              title="Vraag een offerte aan"
             >
               VRAAG EEN OFFERTE AAN
             </a>
@@ -179,7 +240,7 @@ const OverijsselPage = () => {
             ))}
           </div>
 
-          <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-3xl p-12">
+          <div className="bg-gradient-to-r from-blue-50 to-gray-50 rounded-3xl p-12">
             <h3 className="text-3xl font-black text-gray-900 mb-8 text-center">Wat je krijgt in Overijssel:</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {usps.map((usp, index) => (
@@ -214,6 +275,8 @@ const OverijsselPage = () => {
                 key={index}
                 to={city.href}
                 className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:-translate-y-2 border border-gray-100 hover:border-orange-200"
+                aria-label={`DJ services in ${city.name}`}
+                title={`DJ ${city.name} - ${city.description}`}
               >
                 <MapPin className="w-8 h-8 text-orange-500 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
                 <h3 className="text-lg font-black text-gray-900 group-hover:text-orange-600 transition-colors duration-300 mb-2">
