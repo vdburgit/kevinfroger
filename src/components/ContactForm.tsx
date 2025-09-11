@@ -162,6 +162,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
               className={`w-full px-4 md:px-6 py-4 border-2 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 font-semibold text-base ${
                 errors.name ? 'border-red-500' : 'border-gray-300'
               }`}
+              placeholder="Je naam"
               placeholder="Jouw naam"
             />
             {errors.name && (
@@ -185,6 +186,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
               className={`w-full px-4 md:px-6 py-4 border-2 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 font-semibold text-base ${
                 errors.email ? 'border-red-500' : 'border-gray-300'
               }`}
+              placeholder="je@email.nl"
               placeholder="jouw@email.nl"
             />
             {errors.email && (
@@ -208,6 +210,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
               value={formData.phone}
               onChange={handleChange}
               className="w-full px-4 md:px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 font-semibold text-base"
+              placeholder="Je telefoonnummer"
               placeholder="Jouw telefoonnummer"
             />
           </div>
@@ -226,7 +229,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
                 errors.eventType ? 'border-red-500' : 'border-gray-300'
               }`}
             >
-              <option value="">Selecteer type evenement</option>
+              <option value="">Kies je evenement</option>
               <option value="bruiloft">Bruiloft</option>
               <option value="bedrijfsfeest">Bedrijfsfeest</option>
               <option value="festival">Festival</option>
@@ -385,6 +388,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
 
         <div className="text-center text-base md:text-sm text-gray-500 pt-4">
           <p>We gebruiken je gegevens alleen om je aanvraag te beantwoorden. <a href="/privacy" className="text-blue-600 hover:underline">Meer info</a>.</p>
+          <p>Door dit formulier te versturen ga je akkoord met ons <a href="/privacy" className="text-blue-600 hover:underline">privacybeleid</a>.</p>
         </div>
       </form>
     </div>

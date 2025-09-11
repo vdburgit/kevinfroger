@@ -31,6 +31,7 @@ const MobileCTA = () => {
           onClick={handleCallClick}
           className="flex-1 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-4 py-3 rounded-lg font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 active:scale-95 flex items-center justify-center space-x-2 focus:outline-none focus:ring-2 focus:ring-blue-500/50 min-h-[48px]"
           aria-label="Bel Kevin"
+          aria-label="Bel DJ Kevin Froger op 06 45 25 13 33"
         >
           <Phone className="w-4 h-4 flex-shrink-0" />
           <span className="font-bold">Bel Kevin</span>
