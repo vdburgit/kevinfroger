@@ -12,33 +12,6 @@ const GelderlandPage = () => {
       metaDescription.setAttribute('content', 'Ervaren allround DJ in Gelderland voor bruiloft, verjaardag en events. Compleet met licht & geluid. Vraag je prijs of offerte.');
     }
     
-    // Add canonical URL
-    const canonical = document.querySelector('link[rel="canonical"]') || document.createElement('link');
-    canonical.setAttribute('rel', 'canonical');
-    canonical.setAttribute('href', 'https://kevinfroger.nl/regio/gelderland');
-    if (!document.head.contains(canonical)) document.head.appendChild(canonical);
-    
-    // Add Open Graph tags
-    const ogTitle = document.querySelector('meta[property="og:title"]') || document.createElement('meta');
-    ogTitle.setAttribute('property', 'og:title');
-    ogTitle.setAttribute('content', 'DJ huren in Gelderland – complete DJ‑show | Kevin Froger');
-    if (!document.head.contains(ogTitle)) document.head.appendChild(ogTitle);
-    
-    const ogDescription = document.querySelector('meta[property="og:description"]') || document.createElement('meta');
-    ogDescription.setAttribute('property', 'og:description');
-    ogDescription.setAttribute('content', 'Ervaren allround DJ in Gelderland voor bruiloft, verjaardag en events. Compleet met licht & geluid.');
-    if (!document.head.contains(ogDescription)) document.head.appendChild(ogDescription);
-    
-    const ogUrl = document.querySelector('meta[property="og:url"]') || document.createElement('meta');
-    ogUrl.setAttribute('property', 'og:url');
-    ogUrl.setAttribute('content', 'https://kevinfroger.nl/regio/gelderland');
-    if (!document.head.contains(ogUrl)) document.head.appendChild(ogUrl);
-    
-    const ogImage = document.querySelector('meta[property="og:image"]') || document.createElement('meta');
-    ogImage.setAttribute('property', 'og:image');
-    ogImage.setAttribute('content', 'https://kevinfroger.nl/images/kevin-portrait.png');
-    if (!document.head.contains(ogImage)) document.head.appendChild(ogImage);
-    
     // Add structured data
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -73,18 +46,14 @@ const GelderlandPage = () => {
   }, []);
 
   const cities = [
-    { name: "Nijmegen", href: "/dj-nijmegen", description: "Oudste stad" },
-    { name: "Arnhem", href: "/dj-arnhem", description: "Hoofdstad Gelderland" },
-    { name: "Apeldoorn", href: "/dj-apeldoorn", description: "Kroondomein" },
-    { name: "Ede", href: "/dj-ede", description: "Veluwe stad" },
-    { name: "Doetinchem", href: "/dj-doetinchem", description: "Achterhoek" },
-    { name: "Zutphen", href: "/dj-zutphen", description: "Hanzestad" },
-    { name: "Wageningen", href: "/dj-wageningen", description: "Universiteitsstad" },
-    { name: "Tiel", href: "/dj-tiel", description: "Fruitstad" },
-    { name: "Harderwijk", href: "/dj-harderwijk", description: "Hanzestad" },
-    { name: "Barneveld", href: "/dj-barneveld", description: "Kippendorp" },
-    { name: "Culemborg", href: "/dj-culemborg", description: "Vestingstad" },
-    { name: "Winterswijk", href: "/dj-winterswijk", description: "Achterhoek parel" }
+    { name: "Nijmegen", href: "/regio/gelderland/nijmegen", description: "Oudste stad" },
+    { name: "Arnhem", href: "/regio/gelderland/arnhem", description: "Hoofdstad Gelderland" },
+    { name: "Apeldoorn", href: "/regio/gelderland/apeldoorn", description: "Kroondomein" },
+    { name: "Ede", href: "/regio/gelderland/ede", description: "Veluwe stad" },
+    { name: "Doetinchem", href: "/regio/gelderland/doetinchem", description: "Achterhoek" },
+    { name: "Zutphen", href: "/regio/gelderland/zutphen", description: "Hanzestad" },
+    { name: "Wageningen", href: "/regio/gelderland/wageningen", description: "Universiteitsstad" },
+    { name: "Tiel", href: "/regio/gelderland/tiel", description: "Fruitstad" }
   ];
 
   const services = [
@@ -124,23 +93,12 @@ const GelderlandPage = () => {
   const stats = [
     { number: "15+", label: "Jaar in Gelderland", icon: <Award className="w-8 h-8" /> },
     { number: "250+", label: "Events in de provincie", icon: <Calendar className="w-8 h-8" /> },
-    { number: "12", label: "Grote steden", icon: <MapPin className="w-8 h-8" /> },
+    { number: "8", label: "Grote steden", icon: <MapPin className="w-8 h-8" /> },
     { number: "100%", label: "Tevreden klanten", icon: <Star className="w-8 h-8" /> }
   ];
 
   return (
     <div className="bg-white">
-      {/* NoScript Fallback */}
-      <noscript>
-        <div className="bg-green-600 text-white p-4 text-center">
-          <h1 className="text-2xl font-bold mb-2">DJ Kevin Froger - Gelderland</h1>
-          <p className="mb-4">Ervaren allround DJ in Gelderland voor alle evenementen.</p>
-          <a href="https://wa.me/31645251333" className="bg-white text-green-600 px-6 py-3 rounded-full font-bold">
-            WhatsApp Contact
-          </a>
-        </div>
-      </noscript>
-
       {/* Breadcrumbs */}
       <nav aria-label="Breadcrumb" className="bg-gray-50 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -157,16 +115,7 @@ const GelderlandPage = () => {
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-r from-green-600 to-green-700 text-white" role="banner">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <img 
-            src="/images/kevin-logo.png" 
-            alt="DJ Kevin Froger Gelderland"
-            className="w-16 h-16 mx-auto mb-6 rounded-full object-cover"
-            width="64"
-            height="64"
-            loading="eager"
-            decoding="sync"
-          />
-          
+          <MapPin className="w-16 h-16 mx-auto mb-6 text-green-200" />
           <h1 className="text-4xl lg:text-6xl font-black mb-6">
             DJ huren in Gelderland – complete DJ‑show
           </h1>
@@ -180,18 +129,14 @@ const GelderlandPage = () => {
               href="https://wa.me/31645251333"
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-10 py-5 rounded-full font-black text-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 min-h-[48px] min-w-[48px]"
-              aria-label="WhatsApp contact voor prijsindicatie DJ Gelderland"
-              title="App voor een prijsindicatie"
+              className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-10 py-5 rounded-full font-black text-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105"
             >
               <MessageCircle className="w-6 h-6 inline-block mr-3" />
               APP VOOR EEN PRIJSINDICATIE
             </a>
             <a
               href="/prijzen"
-              className="border-3 border-white text-white px-10 py-5 rounded-full font-black text-xl hover:bg-white hover:text-green-900 transition-all duration-300 min-h-[48px] min-w-[48px]"
-              aria-label="Vraag offerte aan voor DJ Gelderland"
-              title="Vraag een offerte aan"
+              className="border-3 border-white text-white px-10 py-5 rounded-full font-black text-xl hover:bg-white hover:text-green-900 transition-all duration-300"
             >
               VRAAG EEN OFFERTE AAN
             </a>
@@ -269,8 +214,6 @@ const GelderlandPage = () => {
                 key={index}
                 to={city.href}
                 className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:-translate-y-2 border border-gray-100 hover:border-orange-200"
-                aria-label={`DJ services in ${city.name}`}
-                title={`DJ ${city.name} - ${city.description}`}
               >
                 <MapPin className="w-8 h-8 text-orange-500 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
                 <h3 className="text-lg font-black text-gray-900 group-hover:text-orange-600 transition-colors duration-300 mb-2">

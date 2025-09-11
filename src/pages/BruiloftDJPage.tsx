@@ -304,8 +304,6 @@ const BruiloftDJPage = () => {
                 key={index}
                 href={region.href}
                 className="group bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:-translate-y-1"
-                aria-label={`App direct met Kevin voor ${region.name}`}
-                title={`App direct met Kevin voor ${region.name}`}
               >
                 <MapPin className="w-6 h-6 text-pink-500 mx-auto mb-2" />
                 <h3 className="text-sm font-black text-gray-900 group-hover:text-pink-600 transition-colors">

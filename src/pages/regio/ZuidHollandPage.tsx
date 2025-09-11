@@ -56,8 +56,6 @@ const ZuidHollandPage = () => {
     { name: "Alphen a/d Rijn", href: "/regio/zuid-holland/alphen-aan-den-rijn", description: "Aan de rivier" },
     { name: "Schiedam", href: "/regio/zuid-holland/schiedam", description: "Jeneverstad" },
     { name: "Vlaardingen", href: "/regio/zuid-holland/vlaardingen", description: "Havenstad" }
-    { name: "'s-Gravendeel", href: "/dj-s-gravendeel/", description: "Hart Hoeksche Waard" },
-    { name: "Hoeksche Waard", href: "/dj-hoeksche-waard/", description: "Eilandregio" }
   ];
 
   const services = [
@@ -119,15 +117,21 @@ const ZuidHollandPage = () => {
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-r from-blue-600 to-blue-700 text-white" role="banner">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <img 
-            src="/images/kevin-logo.png" 
-            alt="DJ Kevin Froger Zuid-Holland"
-            className="w-16 h-16 mx-auto mb-6 rounded-full object-cover"
-            width="64"
-            height="64"
-            loading="eager"
-            decoding="sync"
-          />
+          <MapPin className="w-16 h-16 mx-auto mb-6 text-blue-200" />
+          <h1 className="text-4xl lg:text-6xl font-black mb-6">
+            DJ huren in Zuid-Holland – complete DJ‑show
+          </h1>
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Ervaren allround DJ in Zuid-Holland voor bruiloft, verjaardag en events. 
+            Van Rotterdam tot Leiden - compleet met licht & geluid. Vraag je prijs of offerte.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+            <a
+              href="https://wa.me/31645251333"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-10 py-5 rounded-full font-black text-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105"
             >
               <MessageCircle className="w-6 h-6 inline-block mr-3" />
               APP VOOR EEN PRIJSINDICATIE

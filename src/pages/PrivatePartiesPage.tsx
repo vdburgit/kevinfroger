@@ -244,10 +244,6 @@ const PrivatePartiesPage = () => {
                   src={type.image} 
                   alt={type.title}
                   className="w-full h-64 object-cover"
-                  width="400"
-                  height="256"
-                  loading="lazy"
-                  decoding="async"
                 />
                 <div className="p-8">
                   <h3 className="text-2xl font-black text-gray-900 mb-4">{type.title}</h3>

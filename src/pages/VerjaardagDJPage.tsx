@@ -234,8 +234,6 @@ const VerjaardagDJPage = () => {
                 key={index}
                 href={region.href}
                 className="group bg-gray-50 p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:-translate-y-1"
-                aria-label={`App direct met Kevin voor DJ ${region.name}`}
-                title={`App direct met Kevin voor DJ ${region.name}`}
               >
                 <MapPin className="w-6 h-6 text-green-500 mx-auto mb-2" />
                 <h3 className="text-sm font-black text-gray-900 group-hover:text-green-600 transition-colors">

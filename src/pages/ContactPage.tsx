@@ -290,23 +290,17 @@ const ContactPage = () => {
                 href="#contact-form"
                 onClick={(e) => handleSmoothScroll(e, '#contact-form')}
                 className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-10 py-5 rounded-full font-black text-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105"
-                aria-label="Vraag offerte aan"
-                title="Vraag offerte aan"
-                aria-label="Vraag offerte aan"
-                title="Vraag offerte aan"
               >
                 <Send className="w-6 h-6 inline-block mr-3" />
-                Vraag offerte aan
+                VRAAG OFFERTE AAN
                 <ArrowRight className="w-5 h-5 inline-block ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
                 href="tel:0645251333"
                 className="border-3 border-white text-white px-10 py-5 rounded-full font-black text-xl hover:bg-white hover:text-blue-900 transition-all duration-300"
-                aria-label="Bel Kevin"
-                title="Bel Kevin"
               >
                 <Phone className="w-6 h-6 inline-block mr-3" />
-                Bel Kevin
+                DIRECT BELLEN
               </a>
             </div>
           </div>
@@ -318,12 +312,12 @@ const ContactPage = () => {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl lg:text-7xl font-black text-gray-900 mb-8 text-shadow">
-              VRAAG OFFERTE AAN
-              <span className="block text-blue-700">VOOR JE EVENT</span>
+              VRAAG DIRECT EEN
+              <span className="block text-blue-700">OFFERTE AAN</span>
             </h2>
             <p className="text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
               Vul het formulier in en ontvang binnen 24 uur een persoonlijke offerte 
-              op maat voor je evenement. Geen verplichtingen, wel professioneel advies.
+              op maat voor jouw evenement. Geen verplichtingen, wel professioneel advies.
             </p>
           </div>
           <ContactForm />
@@ -398,21 +392,17 @@ const ContactPage = () => {
                 href="tel:0645251333"
                 className="inline-flex items-center bg-gradient-to-r from-blue-500 to-blue-600 text-white px-8 py-4 rounded-full font-black text-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-lg"
               >
-                aria-label="Bel Kevin"
-                title="Bel Kevin"
                 <Phone className="w-6 h-6 inline-block mr-3" />
-                Bel Kevin
+                BEL DIRECT
               </a>
               <a
                 href="https://api.whatsapp.com/send/?phone=31645251333&text&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center border-2 border-green-500 text-green-500 px-8 py-4 rounded-full font-black text-lg hover:bg-green-500 hover:text-white transition-all duration-200"
-                aria-label="App direct met Kevin"
-                title="App direct met Kevin"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
-                App direct
+                WHATSAPP
               </a>
             </div>
           </div>
@@ -449,14 +439,14 @@ const ContactPage = () => {
               <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Calendar className="w-8 h-8 text-blue-400" />
               </div>
-              <h3 className="font-black text-xl mb-2">Gratis offerte</h3>
+              <h3 className="font-black text-xl mb-2">GRATIS OFFERTE</h3>
               <p className="text-blue-200">Vrijblijvend en op maat</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="w-8 h-8 text-purple-400" />
               </div>
-              <h3 className="font-black text-xl mb-2">15+ jaar ervaring</h3>
+              <h3 className="font-black text-xl mb-2">15+ JAAR ERVARING</h3>
               <p className="text-blue-200">Bewezen kwaliteit</p>
             </div>
           </div>

@@ -134,7 +134,7 @@ const Footer = () => {
                   <MapPin className="w-5 h-5 text-orange-400" />
                 </div>
                 <span className="text-blue-200 font-semibold">
-                  Nederland<wbr /><br />
+                  Nederland<br />
                   <span className="text-sm opacity-75">(landelijk werkzaam)</span>
                 </span>
               </li>
@@ -211,9 +211,6 @@ const Footer = () => {
                 <li><a href="/dj-hellevoetsluis" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">DJ Hellevoetsluis</a></li>
                 <li><a href="/dj-goeree-overflakkee" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">DJ Goeree-Overflakkee</a></li>
                 <li><a href="/dj-s-gravendeel" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">DJ 's-Gravendeel</a></li>
-                <li><a href="/dj-bruiloft-s-gravendeel" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">Bruiloft DJ 's-Gravendeel</a></li>
-                <li><a href="/dj-verjaardag-s-gravendeel" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">Verjaardag DJ 's-Gravendeel</a></li>
-                <li><a href="/dj-bedrijfsfeest-s-gravendeel" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">Bedrijfsfeest DJ 's-Gravendeel</a></li>
                 <li><a href="/dj-zuid-holland" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">DJ Zuid-Holland</a></li>
                 
                 {/* Regio Tiel */}

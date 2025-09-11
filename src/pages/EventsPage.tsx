@@ -260,7 +260,6 @@ const EventsPage = () => {
                     loading="lazy"
                     width="400"
                     height="256"
-                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                   <div className="absolute top-6 right-6">
