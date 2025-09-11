@@ -162,7 +162,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
               className={`w-full px-4 md:px-6 py-4 border-2 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 font-semibold text-base ${
                 errors.name ? 'border-red-500' : 'border-gray-300'
               }`}
-              placeholder="Je naam"
               placeholder="Jouw naam"
             />
             {errors.name && (
@@ -186,7 +185,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
               className={`w-full px-4 md:px-6 py-4 border-2 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 font-semibold text-base ${
                 errors.email ? 'border-red-500' : 'border-gray-300'
               }`}
-              placeholder="je@email.nl"
               placeholder="jouw@email.nl"
             />
             {errors.email && (
@@ -210,7 +208,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
               value={formData.phone}
               onChange={handleChange}
               className="w-full px-4 md:px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 font-semibold text-base"
-              placeholder="Je telefoonnummer"
               placeholder="Jouw telefoonnummer"
             />
           </div>
@@ -229,7 +226,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
                 errors.eventType ? 'border-red-500' : 'border-gray-300'
               }`}
             >
-              <option value="">Kies je evenement</option>
+              <option value="">Selecteer type evenement</option>
               <option value="bruiloft">Bruiloft</option>
               <option value="bedrijfsfeest">Bedrijfsfeest</option>
               <option value="festival">Festival</option>
