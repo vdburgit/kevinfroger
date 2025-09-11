@@ -152,8 +152,6 @@ const BiographyPage = () => {
                 src="/images/kevin-portrait.png" 
                 alt="DJ Kevin Froger"
                 className="w-full rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
-                srcSet="/images/kevin-portrait.png 600w, /images/kevin-portrait-800.png 800w"
-                sizes="(max-width: 768px) 100vw, 600px"
                 width="600"
                 height="800"
                 loading="eager"

@@ -130,7 +130,7 @@ const HomePage = () => {
                         sizes="(max-width: 768px) 100vw, 100vw" />
                 <img 
                   src={slide.image}
-                  alt={`DJ Kevin Froger ${slide.title}`}
+                  alt="DJ Kevin Froger - Professionele DJ services Nederland"
                   className="w-full h-full object-cover object-center transform-gpu hero-image"
                   width="1280"
                   height="720"
@@ -290,24 +290,15 @@ const HomePage = () => {
             {services.map((service, index) => (
               <div key={index} className="group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-gray-100">
                 <div className="relative overflow-hidden">
-                  <picture>
-                    <source type="image/avif" 
-                            srcset="/images/service-640.avif 640w, /images/service-960.avif 960w"
-                            sizes="(max-width: 768px) 100vw, 400px" />
-                    <source type="image/webp" 
-                            srcset="/images/service-640.webp 640w, /images/service-960.webp 960w"
-                            sizes="(max-width: 768px) 100vw, 400px" />
-                    <img 
-                      src={service.image}
-                      alt={`DJ Kevin Froger ${service.title}`}
-                      className="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition-transform duration-700"
-                      loading="lazy"
-                      decoding="async"
-                      width="400"
-                      height="256"
-                      sizes="(max-width: 768px) 100vw, 400px"
-                    />
-                  </picture>
+                  <img 
+                    src={service.image}
+                    alt={`DJ Kevin Froger ${service.title}`}
+                    className="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+                    loading="lazy"
+                    decoding="async"
+                    width="400"
+                    height="256"
+                  />
                   <div className="absolute top-4 right-4 lg:top-6 lg:right-6">
                     <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-full flex items-center justify-center text-white shadow-lg`}>
                       {service.icon}

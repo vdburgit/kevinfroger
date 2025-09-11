@@ -157,21 +157,15 @@ const GelderlandPage = () => {
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-r from-green-600 to-green-700 text-white" role="banner">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <picture>
-            <source type="image/avif" 
-                    srcset="/images/dj-kevin-froger-bruiloft-640.avif 640w, /images/dj-kevin-froger-bruiloft-960.avif 960w, /images/dj-kevin-froger-bruiloft-1280.avif 1280w"
-                    sizes="(max-width: 768px) 100vw, 960px" />
-            <source type="image/webp" 
-                    srcset="/images/dj-kevin-froger-bruiloft-640.webp 640w, /images/dj-kevin-froger-bruiloft-960.webp 960w, /images/dj-kevin-froger-bruiloft-1280.webp 1280w"
-                    sizes="(max-width: 768px) 100vw, 960px" />
-            <img src="/images/dj-kevin-froger-bruiloft-scaled.jpeg"
-                 width="1280" height="720"
-                 alt="DJ Kevin Froger Gelderland - Professionele DJ services"
-                 loading="eager" 
-                 fetchpriority="high" 
-                 decoding="async"
-                 className="w-16 h-16 mx-auto mb-6 rounded-full object-cover" />
-          </picture>
+          <img 
+            src="/images/kevin-logo.png" 
+            alt="DJ Kevin Froger Gelderland"
+            className="w-16 h-16 mx-auto mb-6 rounded-full object-cover"
+            width="64"
+            height="64"
+            loading="eager"
+            decoding="sync"
+          />
           
           <h1 className="text-4xl lg:text-6xl font-black mb-6">
             DJ huren in Gelderland – complete DJ‑show
