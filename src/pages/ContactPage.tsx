@@ -449,14 +449,14 @@ const ContactPage = () => {
               <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Calendar className="w-8 h-8 text-blue-400" />
               </div>
-              <h3 className="font-black text-xl mb-2">GRATIS OFFERTE</h3>
+              <h3 className="font-black text-xl mb-2">Gratis offerte</h3>
               <p className="text-blue-200">Vrijblijvend en op maat</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="w-8 h-8 text-purple-400" />
               </div>
-              <h3 className="font-black text-xl mb-2">15+ JAAR ERVARING</h3>
+              <h3 className="font-black text-xl mb-2">15+ jaar ervaring</h3>
               <p className="text-blue-200">Bewezen kwaliteit</p>
             </div>
           </div>
