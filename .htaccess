@@ -2,13 +2,46 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
     
-    # Force HTTPS
-    RewriteCond %{HTTPS} off
-    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    # Force HTTPS & non-www (canonical domain)
+    RewriteCond %{HTTPS} off [OR]
+    RewriteCond %{HTTP_HOST} ^www\.kevinfroger\.nl$ [NC]
+    RewriteRule ^(.*)$ https://kevinfroger.nl/$1 [R=301,L]
     
-    # Force non-www (canonical domain)
-    RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-    RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+    # Regio → stad redirects
+    RewriteRule ^regio/([a-z0-9\-]+)/([a-z0-9\-]+)/?$ dj-$2/ [R=301,L]
+    
+    # dj-huren/{stad} → dj-{stad}
+    RewriteRule ^dj-huren/([a-z0-9\-]+)/?$ dj-$1/ [R=301,L]
+    
+    # Dubbele segmenten /{stad}/{stad}-n → dj-{stad}
+    RewriteRule ^([a-z0-9\-]+)/\1-\d+/?$ dj-$1/ [R=301,L]
+    
+    # Thema synoniemen → canoniek
+    RewriteRule ^bruiloft-dj-([a-z0-9\-]+)/?$ dj-bruiloft-$1/ [R=301,L]
+    RewriteRule ^dj-voor-bruiloft-([a-z0-9\-]+)/?$ dj-bruiloft-$1/ [R=301,L]
+    RewriteRule ^wedding-dj-([a-z0-9\-]+)/?$ dj-bruiloft-$1/ [R=301,L]
+    RewriteRule ^verjaardags-dj-([a-z0-9\-]+)/?$ dj-verjaardag-$1/ [R=301,L]
+    RewriteRule ^party-dj-([a-z0-9\-]+)/?$ dj-verjaardag-$1/ [R=301,L]
+    RewriteRule ^dj-bedrijfsevenement-([a-z0-9\-]+)/?$ dj-bedrijfsfeest-$1/ [R=301,L]
+    RewriteRule ^dj-personeelsfeest-([a-z0-9\-]+)/?$ dj-bedrijfsfeest-$1/ [R=301,L]
+    
+    # Micro synoniemen → canoniek
+    RewriteRule ^dj-spoed-([a-z0-9\-]+)/?$ dj-last-minute-$1/ [R=301,L]
+    RewriteRule ^dj-kosten-([a-z0-9\-]+)/?$ dj-prijs-$1/ [R=301,L]
+    
+    # 's-Gravendeel varianten → canoniek
+    RewriteRule ^dj/(\'|%27)s-gravendeel/?$ dj-s-gravendeel/ [R=301,L]
+    RewriteRule ^dj/gravendeel/?$ dj-s-gravendeel/ [R=301,L]
+    RewriteRule ^regio/zuid-holland/(\'|%27)s-gravendeel/?$ dj-s-gravendeel/ [R=301,L]
+    
+    # 's-Hertogenbosch varianten → canoniek
+    RewriteRule ^dj/den-bosch/?$ dj-s-hertogenbosch/ [R=301,L]
+    RewriteRule ^dj/denbosch/?$ dj-s-hertogenbosch/ [R=301,L]
+    
+    # Den Haag varianten → canoniek
+    RewriteRule ^dj/s-gravenhage/?$ dj-den-haag/ [R=301,L]
+    RewriteRule ^dj/the-hague/?$ dj-den-haag/ [R=301,L]
+    RewriteRule ^dj/denhaag/?$ dj-den-haag/ [R=301,L]
     
     # Strip tracking parameters
     RewriteCond %{QUERY_STRING} (^|&)(utm_[^=]*|gclid|fbclid|ref)= [NC]
@@ -26,16 +59,6 @@
     RewriteCond %{REQUEST_URI} !^/images/
     RewriteCond %{REQUEST_URI} !^/assets/
     RewriteRule . /index.html [L]
-    
-    # SEO Redirects from keyword map
-    RewriteRule ^dj-boeken-nederland/?$ /dj-boeken [R=301,L]
-    RewriteRule ^dj-huren-nederland/?$ /dj-huren [R=301,L]
-    RewriteRule ^bruiloft-dj/?$ /bruiloften [R=301,L]
-    RewriteRule ^bedrijfsfeest-dj/?$ /bedrijfsfeesten [R=301,L]
-    RewriteRule ^festival-dj/?$ /festivals [R=301,L]
-    RewriteRule ^dj-kevin-froger/?$ / [R=301,L]
-    RewriteRule ^kevin-froger-dj/?$ / [R=301,L]
-    RewriteRule ^dj-kevin/?$ / [R=301,L]
 </IfModule>
 
 # Security Headers
