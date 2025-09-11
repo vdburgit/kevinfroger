@@ -226,15 +226,13 @@ const ZakelijkDJPage = () => {
                 key={index}
                 href={region.href}
                 className="group bg-gray-50 p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:-translate-y-1"
+                aria-label={`DJ ${region.name}`}
+                title={`DJ ${region.name}`}
               >
-                aria-label="App direct met Kevin"
-                title="App direct met Kevin"
                 <MapPin className="w-6 h-6 text-blue-500 mx-auto mb-2" />
                 <h3 className="text-sm font-black text-gray-900 group-hover:text-blue-600 transition-colors">
-                aria-label="Vraag offerte aan"
-                title="Vraag offerte aan"
                   DJ {region.name}
-                Vraag offerte aan
+                </h3>
               </a>
             ))}
           </div>
