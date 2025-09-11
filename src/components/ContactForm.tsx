@@ -150,7 +150,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <label htmlFor="name" className="block text-base md:text-sm font-black text-gray-700 mb-3 tracking-wide">
-              JE NAAM *
+              NAAM *
             </label>
             <input
               type="text"
@@ -163,6 +163,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
                 errors.name ? 'border-red-500' : 'border-gray-300'
               }`}
               placeholder="Je naam"
+              placeholder="Jouw naam"
             />
             {errors.name && (
               <div className="flex items-center mt-2 text-red-600">
@@ -173,7 +174,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
           </div>
           <div>
             <label htmlFor="email" className="block text-base md:text-sm font-black text-gray-700 mb-3 tracking-wide">
-              JE E-MAIL *
+              EMAIL *
             </label>
             <input
               type="email"
@@ -186,6 +187,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
                 errors.email ? 'border-red-500' : 'border-gray-300'
               }`}
               placeholder="je@email.nl"
+              placeholder="jouw@email.nl"
             />
             {errors.email && (
               <div className="flex items-center mt-2 text-red-600">
@@ -199,7 +201,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <label htmlFor="phone" className="block text-base md:text-sm font-black text-gray-700 mb-3 tracking-wide">
-              JE TELEFOON
+              TELEFOON
             </label>
             <input
               type="tel"
@@ -209,6 +211,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
               onChange={handleChange}
               className="w-full px-4 md:px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 font-semibold text-base"
               placeholder="Je telefoonnummer"
+              placeholder="Jouw telefoonnummer"
             />
           </div>
           <div>
