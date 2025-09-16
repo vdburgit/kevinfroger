@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Calendar, Users, Music, Award, CheckCircle, ArrowRight, Star, Heart, Building, Zap, Phone, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Calendar, Users, Music, Award, CheckCircle, ArrowRight, Star, Heart, Building, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ContactForm from '../../../components/ContactForm';
 
@@ -11,6 +11,32 @@ const Rotterdam = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'DJ Rotterdam ✨ 300+ events in de Maasstad. DJ Kevin Froger van centrum tot Hoek van Holland. Professionele DJ services Rotterdam. Boek nu!');
     }
+    
+    // Add Open Graph tags
+    const ogTitle = document.querySelector('meta[property="og:title"]') || document.createElement('meta');
+    ogTitle.setAttribute('property', 'og:title');
+    ogTitle.setAttribute('content', 'DJ Rotterdam | DJ Kevin Froger Maasstad');
+    if (!document.head.contains(ogTitle)) document.head.appendChild(ogTitle);
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]') || document.createElement('meta');
+    ogDescription.setAttribute('property', 'og:description');
+    ogDescription.setAttribute('content', 'DJ Rotterdam ✨ 300+ events in de Maasstad. DJ Kevin Froger van centrum tot Hoek van Holland. Professionele DJ services Rotterdam.');
+    if (!document.head.contains(ogDescription)) document.head.appendChild(ogDescription);
+    
+    const ogUrl = document.querySelector('meta[property="og:url"]') || document.createElement('meta');
+    ogUrl.setAttribute('property', 'og:url');
+    ogUrl.setAttribute('content', 'https://kevinfroger.nl/regio/zuid-holland/rotterdam');
+    if (!document.head.contains(ogUrl)) document.head.appendChild(ogUrl);
+    
+    const ogImage = document.querySelector('meta[property="og:image"]') || document.createElement('meta');
+    ogImage.setAttribute('property', 'og:image');
+    ogImage.setAttribute('content', 'https://kevinfroger.nl/images/kevin-portrait.png');
+    if (!document.head.contains(ogImage)) document.head.appendChild(ogImage);
+    
+    const ogSiteName = document.querySelector('meta[property="og:site_name"]') || document.createElement('meta');
+    ogSiteName.setAttribute('property', 'og:site_name');
+    ogSiteName.setAttribute('content', 'DJ Kevin Froger');
+    if (!document.head.contains(ogSiteName)) document.head.appendChild(ogSiteName);
     
     // Add structured data for Rotterdam page
     const script = document.createElement('script');
@@ -28,14 +54,18 @@ const Rotterdam = () => {
           ]
         },
         {
-          "@type": "Service",
-          "serviceType": "DJ Rotterdam",
-          "provider": {
-            "@type": "Person",
-            "name": "Kevin Froger",
-            "url": "https://kevinfroger.nl/"
-          },
-          "areaServed": "Rotterdam"
+          "@type": "LocalBusiness",
+          "name": "DJ Rotterdam - DJ Kevin Froger",
+          "description": "Professionele DJ services in Rotterdam en alle wijken van de Maasstad",
+          "url": "https://kevinfroger.nl/regio/zuid-holland/rotterdam",
+          "telephone": "+31645251333",
+          "areaServed": "Rotterdam",
+          "sameAs": [
+            "https://www.instagram.com/djkevinfroger/",
+            "https://www.linkedin.com/in/kevin-froger-b23aa263/",
+            "https://www.facebook.com/KevinFroger.nl",
+            "https://wa.me/31645251333"
+          ]
         }
       ]
     });
@@ -71,6 +101,18 @@ const Rotterdam = () => {
       icon: <Zap className="w-8 h-8" />,
       color: "from-orange-500 to-pink-600"
     }
+  ];
+
+  const districts = [
+    "Rotterdam Centrum", "Kralingen-Crooswijk", "Noord", "Hillegersberg-Schiebroek",
+    "Prins Alexander", "Charlois", "Feijenoord", "IJsselmonde", "Pernis",
+    "Hoek van Holland", "Rozenburg", "Overschie", "Delfshaven", "Hoogvliet"
+  ];
+
+  const venues = [
+    "Hotel New York", "SS Rotterdam", "Euromast", "Kunsthal Rotterdam",
+    "De Doelen", "Ahoy Rotterdam", "Villa Thalia", "Boijmans Van Beuningen",
+    "Wereldmuseum", "Cruise Terminal", "Maassilo", "LantarenVenster"
   ];
 
   const stats = [
@@ -177,6 +219,67 @@ const Rotterdam = () => {
                 <p className="text-gray-600 leading-relaxed">{service.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Districts & Venues Section */}
+      <section className="py-32 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* SEO Content - Hidden but accessible to search engines */}
+          <div className="sr-only prose prose-lg max-w-none">
+            <h2>DJ Rotterdam - Professionele DJ Services Maasstad</h2>
+            <p>Zoek je een DJ in Rotterdam? DJ Kevin Froger is dé specialist voor alle evenementen in de Maasstad. Met 15+ jaar ervaring en 300+ events in Rotterdam zorgt Kevin voor perfecte entertainment. Van bruiloften in Hotel New York tot bedrijfsfeesten in Ahoy Rotterdam.</p>
+            
+            <h3>DJ Rotterdam - Alle Wijken en Districten</h3>
+            <p>Kevin verzorgt DJ services in heel Rotterdam en alle wijken: DJ Rotterdam Centrum, DJ Kralingen-Crooswijk, DJ Rotterdam Noord, DJ Hillegersberg-Schiebroek, DJ Prins Alexander, DJ Charlois, DJ Feijenoord, DJ IJsselmonde, DJ Pernis, DJ Hoek van Holland, DJ Rozenburg, DJ Overschie, DJ Delfshaven, DJ Hoogvliet. DJ Rotterdam alle wijken beschikbaar.</p>
+            
+            <h3>Bruiloft DJ Rotterdam</h3>
+            <p>Voor bruiloften in Rotterdam heeft Kevin meer dan 150 succesvolle events begeleid. Van Hotel New York tot SS Rotterdam, van Euromast tot Villa Thalia - Kevin maakt jullie bruiloft onvergetelijk in de Maasstad. Bruiloft DJ Rotterdam met complete muzikale begeleiding van ceremonie tot feestavond.</p>
+            
+            <h3>Bedrijfsfeest DJ Rotterdam</h3>
+            <p>Bedrijfsfeesten in Rotterdam verdienen professionele begeleiding. Kevin heeft ervaring met corporate events in Ahoy Rotterdam, World Trade Center, Cruise Terminal, Maassilo en andere prestigieuze locaties. Bedrijfsfeest DJ Rotterdam voor alle corporate events in de Maasstad.</p>
+            
+            <h3>Festival DJ Rotterdam</h3>
+            <p>Van North Sea Jazz tot lokale wijkfestivals - Kevin heeft ervaring met alle soorten festivals in Rotterdam. High-energy performances voor elk publiek in de Maasstad. Festival DJ Rotterdam voor grote en kleine evenementen in de havenstad.</p>
+            
+            <h3>DJ Boeken Rotterdam</h3>
+            <p>Wil je een DJ boeken in Rotterdam? Kevin Froger is beschikbaar voor alle wijken en locaties in de Maasstad. Neem contact op voor een vrijblijvende offerte voor jouw evenement in Rotterdam. DJ boeken Rotterdam - binnen 24 uur reactie gegarandeerd.</p>
+            
+            <h3>Populaire Zoektermen DJ Rotterdam</h3>
+            <p>DJ Rotterdam centrum, DJ Rotterdam noord, DJ Rotterdam zuid, bruiloft DJ Rotterdam, bedrijfsfeest DJ Rotterdam, festival DJ Rotterdam, corporate DJ Rotterdam, party DJ Rotterdam, allround DJ Rotterdam, professionele DJ Rotterdam, DJ Rotterdam boeken, DJ Rotterdam huren, Maasstad DJ, Rotterdam entertainment.</p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-12 text-shadow">
+                ALLE WIJKEN
+                <span className="block text-orange-500">ROTTERDAM</span>
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {districts.map((district, index) => (
+                  <div key={index} className="bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
+                    <MapPin className="w-6 h-6 text-orange-500 mx-auto mb-2" />
+                    <h3 className="text-sm font-black text-gray-900">{district}</h3>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-12 text-shadow">
+                POPULAIRE
+                <span className="block text-blue-700">LOCATIES</span>
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {venues.map((venue, index) => (
+                  <div key={index} className="bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
+                    <Building className="w-6 h-6 text-blue-500 mx-auto mb-2" />
+                    <h3 className="text-sm font-black text-gray-900">{venue}</h3>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
