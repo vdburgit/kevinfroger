@@ -196,27 +196,27 @@ const Footer = () => {
               }`}>
                 <ul className="space-y-2 mt-4 grid grid-cols-2 gap-2">
                 {/* Zuid-Holland Hoofdsteden */}
-                <li><a href="/regio/zuid-holland/rotterdam" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">DJ Rotterdam</a></li>
-                <li><a href="/regio/zuid-holland/den-haag" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">DJ Den Haag</a></li>
-                <li><a href="/regio/zuid-holland/dordrecht" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">DJ Dordrecht</a></li>
-                <li><a href="/regio/zuid-holland/westland" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">DJ Westland</a></li>
-                <li><a href="/regio/zuid-holland/schiedam" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">DJ Schiedam</a></li>
-                <li><a href="/regio/zuid-holland/vlaardingen" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">DJ Vlaardingen</a></li>
-                <li><a href="/regio/zuid-holland/spijkenisse" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">DJ Spijkenisse</a></li>
-                <li><a href="/regio/zuid-holland/delft" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">DJ Delft</a></li>
-                <li><a href="/regio/zuid-holland/leiden" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">DJ Leiden</a></li>
-                <li><a href="/regio/zuid-holland/zoetermeer" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">DJ Zoetermeer</a></li>
-                <li><a href="/regio/zuid-holland/gouda" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">DJ Gouda</a></li>
+                <li><a href="/regio/zuid-holland/rotterdam" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">Rotterdam</a></li>
+                <li><a href="/regio/zuid-holland/den-haag" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">Den Haag</a></li>
+                <li><a href="/regio/zuid-holland/dordrecht" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">Dordrecht</a></li>
+                <li><a href="/regio/zuid-holland/westland" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">Westland</a></li>
+                <li><a href="/regio/zuid-holland/schiedam" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">Schiedam</a></li>
+                <li><a href="/regio/zuid-holland/vlaardingen" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">Vlaardingen</a></li>
+                <li><a href="/regio/zuid-holland/spijkenisse" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">Spijkenisse</a></li>
+                <li><a href="/regio/zuid-holland/delft" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">Delft</a></li>
+                <li><a href="/regio/zuid-holland/leiden" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">Leiden</a></li>
+                <li><a href="/regio/zuid-holland/zoetermeer" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">Zoetermeer</a></li>
+                <li><a href="/regio/zuid-holland/gouda" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">Gouda</a></li>
                 
                 {/* Noord-Brabant Steden */}
-                <li><a href="/regio/noord-brabant/eindhoven" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">DJ Eindhoven</a></li>
-                <li><a href="/regio/noord-brabant/tilburg" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">DJ Tilburg</a></li>
-                <li><a href="/regio/noord-brabant/breda" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">DJ Breda</a></li>
-                <li><a href="/regio/noord-brabant/den-bosch" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">DJ Den Bosch</a></li>
+                <li><a href="/regio/noord-brabant/eindhoven" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">Eindhoven</a></li>
+                <li><a href="/regio/noord-brabant/tilburg" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">Tilburg</a></li>
+                <li><a href="/regio/noord-brabant/breda" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">Breda</a></li>
+                <li><a href="/regio/noord-brabant/den-bosch" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">Den Bosch</a></li>
                 
                 {/* Overige Provincies */}
-                <li><a href="/regio/utrecht/utrecht" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">DJ Utrecht</a></li>
-                <li><a href="/regio/noord-holland/amsterdam" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">DJ Amsterdam</a></li>
+                <li><a href="/regio/utrecht/utrecht" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">Utrecht</a></li>
+                <li><a href="/regio/noord-holland/amsterdam" className="text-blue-200 hover:text-white transition-colors font-semibold hover:translate-x-1 transform duration-200 inline-block text-sm">Amsterdam</a></li>
                 </ul>
               </div>
             </div>
