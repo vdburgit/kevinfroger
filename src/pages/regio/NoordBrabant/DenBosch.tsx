@@ -3,29 +3,29 @@ import { MapPin, Phone, Mail, Calendar, Users, Music, Award, CheckCircle, ArrowR
 import { Link } from 'react-router-dom';
 import ContactForm from '../../../components/ContactForm';
 
-const DenHaag = () => {
+const DenBosch = () => {
   // SEO metadata for this page
   React.useEffect(() => {
-    document.title = "DJ Den Haag | DJ Kevin Froger Hofstad | 250+ Events";
+    document.title = "DJ Den Bosch | DJ Kevin Froger Hoofdstad Brabant | 80+ Events";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'DJ Den Haag ✨ 250+ events in de hofstad. DJ Kevin Froger van centrum tot Scheveningen. Exclusieve DJ services Den Haag. Boek nu!');
+      metaDescription.setAttribute('content', 'DJ Den Bosch ✨ 80+ events in de hoofdstad van Brabant. DJ Kevin Froger van centrum tot buitenwijken. Professionele DJ services Den Bosch. Boek nu!');
     }
     
     // Add Open Graph tags
     const ogTitle = document.querySelector('meta[property="og:title"]') || document.createElement('meta');
     ogTitle.setAttribute('property', 'og:title');
-    ogTitle.setAttribute('content', 'DJ Den Haag | DJ Kevin Froger Hofstad');
+    ogTitle.setAttribute('content', 'DJ Den Bosch | DJ Kevin Froger Hoofdstad Brabant');
     if (!document.head.contains(ogTitle)) document.head.appendChild(ogTitle);
     
     const ogDescription = document.querySelector('meta[property="og:description"]') || document.createElement('meta');
     ogDescription.setAttribute('property', 'og:description');
-    ogDescription.setAttribute('content', 'DJ Den Haag ✨ 250+ events in de hofstad. DJ Kevin Froger van centrum tot Scheveningen. Exclusieve DJ services Den Haag.');
+    ogDescription.setAttribute('content', 'DJ Den Bosch ✨ 80+ events in de hoofdstad van Brabant. DJ Kevin Froger van centrum tot buitenwijken. Professionele DJ services Den Bosch.');
     if (!document.head.contains(ogDescription)) document.head.appendChild(ogDescription);
     
     const ogUrl = document.querySelector('meta[property="og:url"]') || document.createElement('meta');
     ogUrl.setAttribute('property', 'og:url');
-    ogUrl.setAttribute('content', 'https://kevinfroger.nl/regio/zuid-holland/den-haag');
+    ogUrl.setAttribute('content', 'https://kevinfroger.nl/regio/noord-brabant/den-bosch');
     if (!document.head.contains(ogUrl)) document.head.appendChild(ogUrl);
     
     const ogImage = document.querySelector('meta[property="og:image"]') || document.createElement('meta');
@@ -38,7 +38,7 @@ const DenHaag = () => {
     ogSiteName.setAttribute('content', 'DJ Kevin Froger');
     if (!document.head.contains(ogSiteName)) document.head.appendChild(ogSiteName);
     
-    // Add structured data for Den Haag page
+    // Add structured data for Den Bosch page
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify({
@@ -49,17 +49,17 @@ const DenHaag = () => {
           "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://kevinfroger.nl/"},
             {"@type": "ListItem", "position": 2, "name": "Regio", "item": "https://kevinfroger.nl/regio"},
-            {"@type": "ListItem", "position": 3, "name": "Zuid-Holland", "item": "https://kevinfroger.nl/regio/zuid-holland"},
-            {"@type": "ListItem", "position": 4, "name": "Den Haag", "item": "https://kevinfroger.nl/regio/zuid-holland/den-haag"}
+            {"@type": "ListItem", "position": 3, "name": "Noord-Brabant", "item": "https://kevinfroger.nl/regio/noord-brabant"},
+            {"@type": "ListItem", "position": 4, "name": "Den Bosch", "item": "https://kevinfroger.nl/regio/noord-brabant/den-bosch"}
           ]
         },
         {
           "@type": "LocalBusiness",
-          "name": "DJ Den Haag - DJ Kevin Froger",
-          "description": "Professionele DJ services in Den Haag en alle wijken van de hofstad",
-          "url": "https://kevinfroger.nl/regio/zuid-holland/den-haag",
+          "name": "DJ Den Bosch - DJ Kevin Froger",
+          "description": "Professionele DJ services in Den Bosch en alle wijken van de hoofdstad van Brabant",
+          "url": "https://kevinfroger.nl/regio/noord-brabant/den-bosch",
           "telephone": "+31645251333",
-          "areaServed": "Den Haag",
+          "areaServed": "Den Bosch",
           "sameAs": [
             "https://www.instagram.com/djkevinfroger/",
             "https://www.linkedin.com/in/kevin-froger-b23aa263/",
@@ -78,48 +78,47 @@ const DenHaag = () => {
 
   const services = [
     {
-      title: "Bruiloften Den Haag",
-      description: "Elegante bruiloft DJ voor alle locaties in de hofstad",
+      title: "Bruiloften Den Bosch",
+      description: "Romantische bruiloft DJ in de hoofdstad van Brabant",
       icon: <Heart className="w-8 h-8" />,
       color: "from-pink-500 to-purple-600"
     },
     {
       title: "Bedrijfsfeesten",
-      description: "Professionele corporate events in Den Haag",
+      description: "Corporate events in provinciale hoofdstad",
       icon: <Building className="w-8 h-8" />,
       color: "from-blue-500 to-blue-600"
     },
     {
-      title: "Privé Feesten",
-      description: "Stijlvolle privé evenementen door heel Den Haag",
-      icon: <Users className="w-8 h-8" />,
-      color: "from-green-500 to-green-600"
+      title: "Festival DJ Den Bosch",
+      description: "Grote evenementen in de Bossche stad",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-orange-500 to-pink-600"
     },
     {
-      title: "Gala's & Events",
-      description: "Exclusieve evenementen in de regeringsstad",
-      icon: <Crown className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-600"
+      title: "Privé DJ Den Bosch",
+      description: "Privé feesten in alle wijken",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-green-500 to-green-600"
     }
   ];
 
   const districts = [
-    "Den Haag Centrum", "Scheveningen", "Benoordenhout", "Bezuidenhout",
-    "Haagse Hout", "Laak", "Loosduinen", "Segbroek", "Escamp",
-    "Leidschenveen-Ypenburg", "Haagse Bos", "Statenkwartier", "Archipelbuurt", "Zeeheldenkwartier"
+    "Den Bosch Centrum", "Maaspoort", "Rosmalen", "Engelen", "Empel",
+    "Nuland", "Vinkel", "Geffen", "Hintham", "Kruisstraat"
   ];
 
   const venues = [
-    "Kurhaus Scheveningen", "Hotel Des Indes", "Paleis Noordeinde", "Binnenhof",
-    "Gemeentemuseum", "Museon", "World Forum", "Lange Voorhout Paleis",
-    "Ridderzaal", "Pier Scheveningen", "Carlton Beach", "Grand Hotel Amrâth"
+    "Sint-Janskathedraal", "Noordbrabants Museum", "Theater aan de Parade", "Jeroen Bosch Ziekenhuis",
+    "Autotron", "Design Museum", "Stedelijk Gymnasium", "Avans Hogeschool",
+    "Bossche Broek", "Zuiderpark", "Paleiskwartier", "De Vliert"
   ];
 
   const stats = [
-    { number: "15+", label: "Jaar in Den Haag", icon: <Award className="w-8 h-8" /> },
-    { number: "250+", label: "Events in Den Haag", icon: <Calendar className="w-8 h-8" /> },
-    { number: "120+", label: "Haagse Bruiloften", icon: <Heart className="w-8 h-8" /> },
-    { number: "80+", label: "Corporate Events", icon: <Building className="w-8 h-8" /> }
+    { number: "15+", label: "Jaar in Den Bosch", icon: <Award className="w-8 h-8" /> },
+    { number: "80+", label: "Events in Den Bosch", icon: <Calendar className="w-8 h-8" /> },
+    { number: "50+", label: "Bossche Bruiloften", icon: <Heart className="w-8 h-8" /> },
+    { number: "30+", label: "Corporate Events", icon: <Building className="w-8 h-8" /> }
   ];
 
   return (
@@ -132,9 +131,9 @@ const DenHaag = () => {
             <li className="text-gray-400">/</li>
             <li><Link to="/regio" className="text-gray-500 hover:text-gray-700">Regio</Link></li>
             <li className="text-gray-400">/</li>
-            <li><Link to="/regio/zuid-holland" className="text-gray-500 hover:text-gray-700">Zuid-Holland</Link></li>
+            <li><Link to="/regio/noord-brabant" className="text-gray-500 hover:text-gray-700">Noord-Brabant</Link></li>
             <li className="text-gray-400">/</li>
-            <li className="text-gray-900 font-semibold">Den Haag</li>
+            <li className="text-gray-900 font-semibold">Den Bosch</li>
           </ol>
         </div>
       </nav>
@@ -150,17 +149,17 @@ const DenHaag = () => {
           <div className="text-center">
             <div className="flex items-center justify-center space-x-3 mb-8">
               <Crown className="w-10 h-10 text-orange-400" />
-              <span className="text-orange-400 font-black text-xl tracking-wide">DEN HAAG</span>
+              <span className="text-orange-400 font-black text-xl tracking-wide">DEN BOSCH</span>
             </div>
             
             <h1 className="text-5xl lg:text-7xl xl:text-8xl font-black mb-8 leading-tight text-shadow-lg">
               DJ KEVIN FROGER
-              <span className="block text-orange-400">DEN HAAG</span>
+              <span className="block text-orange-400">DEN BOSCH</span>
             </h1>
             
             <p className="text-xl lg:text-2xl mb-12 text-blue-100 leading-relaxed max-w-4xl mx-auto">
-              Professionele DJ services in Den Haag. Van het centrum tot Scheveningen, 
-              van bruiloften in het Kurhaus tot gala's in de hofstad - altijd stijlvol en professioneel.
+              Professionele DJ services in Den Bosch. Van het centrum tot buitenwijken, 
+              van bruiloften in de hoofdstad van Brabant tot bedrijfsfeesten - altijd de perfecte sfeer in de Bossche stad.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
@@ -169,7 +168,7 @@ const DenHaag = () => {
                 className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-10 py-5 rounded-full font-black text-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105"
               >
                 <Calendar className="w-6 h-6 inline-block mr-3" />
-                BOEK NU IN DEN HAAG
+                BOEK NU IN DEN BOSCH
                 <ArrowRight className="w-5 h-5 inline-block ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
@@ -202,10 +201,10 @@ const DenHaag = () => {
           <div className="text-center mb-20">
             <h2 className="text-5xl lg:text-7xl font-black text-gray-900 mb-8 text-shadow">
               DJ SERVICES
-              <span className="block text-blue-700">DEN HAAG</span>
+              <span className="block text-blue-700">DEN BOSCH</span>
             </h2>
             <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Professionele DJ services voor alle gelegenheden in de hofstad
+              Professionele DJ services voor alle gelegenheden in de hoofdstad van Brabant
             </p>
           </div>
           
@@ -228,33 +227,36 @@ const DenHaag = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* SEO Content - Hidden but accessible to search engines */}
           <div className="sr-only prose prose-lg max-w-none">
-            <h2>DJ Den Haag - Professionele DJ Services Hofstad</h2>
-            <p>Zoek je een DJ in Den Haag? DJ Kevin Froger verzorgt exclusieve DJ services in de hofstad. Met 15+ jaar ervaring en 250+ events in Den Haag - altijd stijlvol en professioneel. Van bruiloften in het Kurhaus tot gala's in het Binnenhof.</p>
+            <h2>DJ Den Bosch - Professionele DJ Services Hoofdstad Brabant</h2>
+            <p>Zoek je een DJ in Den Bosch? DJ Kevin Froger verzorgt professionele DJ services in de hoofdstad van Noord-Brabant. Van bruiloften in de Sint-Janskathedraal tot bedrijfsfeesten - altijd de perfecte sfeer in de Bossche stad.</p>
             
-            <h3>DJ Den Haag - Alle Wijken</h3>
-            <p>Kevin is actief in heel Den Haag en alle wijken: DJ Den Haag Centrum, DJ Scheveningen, DJ Benoordenhout, DJ Bezuidenhout, DJ Haagse Hout, DJ Laak, DJ Loosduinen, DJ Segbroek, DJ Escamp, DJ Leidschenveen-Ypenburg, DJ Haagse Bos, DJ Statenkwartier, DJ Archipelbuurt, DJ Zeeheldenkwartier. DJ Den Haag alle wijken beschikbaar.</p>
+            <h3>DJ Den Bosch - Alle Wijken</h3>
+            <p>Kevin is actief in heel Den Bosch: DJ Den Bosch Centrum, DJ Maaspoort, DJ Rosmalen, DJ Engelen, DJ Empel, DJ Nuland, DJ Vinkel, DJ Geffen, DJ Hintham, DJ Kruisstraat.</p>
             
-            <h3>Bruiloft DJ Den Haag</h3>
-            <p>Voor bruiloften in Den Haag heeft Kevin meer dan 120 succesvolle events begeleid. Van Kurhaus Scheveningen tot Hotel Des Indes, van Paleis Noordeinde tot Carlton Beach - Kevin maakt jullie bruiloft onvergetelijk in de hofstad. Bruiloft DJ Den Haag met stijlvolle uitstraling passend bij de regeringsstad.</p>
+            <h3>Bruiloft DJ Den Bosch</h3>
+            <p>Voor bruiloften in Den Bosch heeft Kevin meer dan 50 succesvolle events begeleid. Van Sint-Janskathedraal tot Noordbrabants Museum, van Theater aan de Parade tot moderne venues - Kevin maakt jullie bruiloft onvergetelijk in de hoofdstad van Brabant.</p>
             
-            <h3>Bedrijfsfeest DJ Den Haag</h3>
-            <p>Bedrijfsfeesten in Den Haag verdienen de beste begeleiding. Kevin heeft ervaring met corporate events in World Forum, Gemeentemuseum, Museon, Ridderzaal en andere prestigieuze locaties. Bedrijfsfeest DJ Den Haag voor alle corporate events in de regeringsstad.</p>
+            <h3>Bedrijfsfeest DJ Den Bosch</h3>
+            <p>Den Bosch is de hoofdstad van Noord-Brabant. Kevin verzorgt bedrijfsfeesten voor provinciale instellingen, lokale ondernemingen en heeft ervaring met corporate events in de Bossche stad.</p>
             
-            <h3>Gala DJ Den Haag</h3>
-            <p>Voor exclusieve gala's en events in Den Haag biedt Kevin premium DJ services. Van Ridderzaal tot Lange Voorhout Paleis - altijd de juiste sfeer voor uw exclusieve evenement. Gala DJ Den Haag voor diplomatieke en zakelijke gala's in de hofstad.</p>
+            <h3>Festival DJ Den Bosch</h3>
+            <p>Van Jazz in Duketown tot lokale festivals - Kevin heeft ervaring met alle soorten festivals in Den Bosch. Altijd aangepast aan het Brabantse publiek.</p>
             
-            <h3>DJ Boeken Den Haag</h3>
-            <p>Wil je een DJ boeken in Den Haag? Kevin Froger is beschikbaar voor alle wijken en exclusieve locaties in de hofstad. Professionele DJ services voor de regeringsstad. DJ boeken Den Haag - binnen 24 uur persoonlijke offerte.</p>
+            <h3>DJ Sint-Janskathedraal</h3>
+            <p>De Sint-Janskathedraal is een iconische locatie in Den Bosch. Kevin heeft ervaring met events in deze historische setting en andere religieuze locaties.</p>
             
-            <h3>Populaire Zoektermen DJ Den Haag</h3>
-            <p>DJ Den Haag centrum, DJ Scheveningen, bruiloft DJ Den Haag, gala DJ Den Haag, corporate DJ Den Haag, exclusieve DJ Den Haag, professionele DJ hofstad, DJ regeringsstad, DJ Den Haag boeken, DJ Den Haag huren, hofstad DJ, Haagse DJ.</p>
+            <h3>DJ Boeken Den Bosch</h3>
+            <p>Wil je een DJ boeken in Den Bosch? Kevin Froger kent alle locaties van het centrum tot Rosmalen. Professionele DJ services voor de hoofdstad van Brabant.</p>
+            
+            <h3>Populaire DJ Services Den Bosch</h3>
+            <p>DJ Den Bosch centrum, DJ Rosmalen, bruiloft DJ Den Bosch, bedrijfsfeest DJ Den Bosch, festival DJ Den Bosch, kathedraal DJ, Bossche DJ, professionele DJ Den Bosch.</p>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             <div>
               <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-12 text-shadow">
                 ALLE WIJKEN
-                <span className="block text-orange-500">DEN HAAG</span>
+                <span className="block text-orange-500">DEN BOSCH</span>
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {districts.map((district, index) => (
@@ -268,7 +270,7 @@ const DenHaag = () => {
             
             <div>
               <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-12 text-shadow">
-                EXCLUSIEVE
+                BRABANTSE
                 <span className="block text-blue-700">LOCATIES</span>
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -290,17 +292,17 @@ const DenHaag = () => {
           <div className="text-center mb-16">
             <h2 className="text-5xl lg:text-7xl font-black text-gray-900 mb-8 text-shadow">
               BOEK DJ KEVIN
-              <span className="block text-blue-700">IN DEN HAAG</span>
+              <span className="block text-blue-700">IN DEN BOSCH</span>
             </h2>
             <p className="text-2xl text-gray-600 leading-relaxed">
-              Klaar om jouw evenement in Den Haag onvergetelijk te maken?
+              Klaar om jouw evenement in Den Bosch onvergetelijk te maken?
             </p>
           </div>
-          <ContactForm eventType="Den Haag evenement" />
+          <ContactForm eventType="Den Bosch evenement" />
         </div>
       </section>
     </div>
   );
 };
 
-export default DenHaag;
+export default DenBosch;

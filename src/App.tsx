@@ -35,19 +35,26 @@ const OverijsselPage = React.lazy(() => import("./pages/regio/OverijsselPage"));
 const NoordHollandPage = React.lazy(() => import("./pages/regio/NoordHollandPage"));
 const ZeelandPage = React.lazy(() => import("./pages/regio/ZeelandPage"));
 
-const RotterdamPage = React.lazy(() => import("./pages/regio/steden/RotterdamPage"));
-const DenHaagPage = React.lazy(() => import("./pages/regio/steden/DenHaagPage"));
-const DelftPage = React.lazy(() => import("./pages/regio/steden/DelftPage"));
-const LeidenPage = React.lazy(() => import("./pages/regio/steden/LeidenPage"));
-const ZoetermeerPage = React.lazy(() => import("./pages/regio/steden/ZoetermeerPage"));
-const DordrechtPage = React.lazy(() => import("./pages/regio/steden/DordrechtPage"));
-const GoudaPage = React.lazy(() => import("./pages/regio/steden/GoudaPage"));
-const AmsterdamPage = React.lazy(() => import("./pages/regio/steden/AmsterdamPage"));
-const UtrechtStadPage = React.lazy(() => import("./pages/regio/steden/UtrechtStadPage"));
-const EindhovenPage = React.lazy(() => import("./pages/regio/steden/EindhovenPage"));
-const TilburgPage = React.lazy(() => import("./pages/regio/steden/TilburgPage"));
-const BredaPage = React.lazy(() => import("./pages/regio/steden/BredaPage"));
-const DenBoschPage = React.lazy(() => import("./pages/regio/steden/DenBoschPage"));
+// Zuid-Holland Steden
+const Rotterdam = React.lazy(() => import("./pages/regio/ZuidHolland/Rotterdam"));
+const DenHaag = React.lazy(() => import("./pages/regio/ZuidHolland/DenHaag"));
+const Delft = React.lazy(() => import("./pages/regio/ZuidHolland/Delft"));
+const Leiden = React.lazy(() => import("./pages/regio/ZuidHolland/Leiden"));
+const Zoetermeer = React.lazy(() => import("./pages/regio/ZuidHolland/Zoetermeer"));
+const Dordrecht = React.lazy(() => import("./pages/regio/ZuidHolland/Dordrecht"));
+const Gouda = React.lazy(() => import("./pages/regio/ZuidHolland/Gouda"));
+
+// Noord-Holland Steden
+const Amsterdam = React.lazy(() => import("./pages/regio/NoordHolland/Amsterdam"));
+
+// Utrecht Steden
+const Utrecht = React.lazy(() => import("./pages/regio/Utrecht/Utrecht"));
+
+// Noord-Brabant Steden
+const Eindhoven = React.lazy(() => import("./pages/regio/NoordBrabant/Eindhoven"));
+const Tilburg = React.lazy(() => import("./pages/regio/NoordBrabant/Tilburg"));
+const Breda = React.lazy(() => import("./pages/regio/NoordBrabant/Breda"));
+const DenBosch = React.lazy(() => import("./pages/regio/NoordBrabant/DenBosch"));
 
 /**
  * SEO-pagina’s – automatisch routes genereren via import.meta.glob
@@ -147,25 +154,25 @@ function App() {
               <Route path="/regio/zeeland" element={<ZeelandPage />} />
 
               {/* Steden */}
-              <Route path="/regio/zuid-holland/rotterdam" element={<RotterdamPage />} />
-              <Route path="/regio/zuid-holland/den-haag" element={<DenHaagPage />} />
-              <Route path="/regio/zuid-holland/delft" element={<DelftPage />} />
-              <Route path="/regio/zuid-holland/leiden" element={<LeidenPage />} />
-              <Route path="/regio/zuid-holland/zoetermeer" element={<ZoetermeerPage />} />
-              <Route path="/regio/zuid-holland/dordrecht" element={<DordrechtPage />} />
-              <Route path="/regio/zuid-holland/gouda" element={<GoudaPage />} />
+              <Route path="/regio/zuid-holland/rotterdam" element={<Rotterdam />} />
+              <Route path="/regio/zuid-holland/den-haag" element={<DenHaag />} />
+              <Route path="/regio/zuid-holland/delft" element={<Delft />} />
+              <Route path="/regio/zuid-holland/leiden" element={<Leiden />} />
+              <Route path="/regio/zuid-holland/zoetermeer" element={<Zoetermeer />} />
+              <Route path="/regio/zuid-holland/dordrecht" element={<Dordrecht />} />
+              <Route path="/regio/zuid-holland/gouda" element={<Gouda />} />
               
               {/* Noord-Holland steden */}
-              <Route path="/regio/noord-holland/amsterdam" element={<AmsterdamPage />} />
+              <Route path="/regio/noord-holland/amsterdam" element={<Amsterdam />} />
               
               {/* Utrecht steden */}
-              <Route path="/regio/utrecht/utrecht" element={<UtrechtStadPage />} />
+              <Route path="/regio/utrecht/utrecht" element={<Utrecht />} />
               
               {/* Noord-Brabant steden */}
-              <Route path="/regio/noord-brabant/eindhoven" element={<EindhovenPage />} />
-              <Route path="/regio/noord-brabant/tilburg" element={<TilburgPage />} />
-              <Route path="/regio/noord-brabant/breda" element={<BredaPage />} />
-              <Route path="/regio/noord-brabant/den-bosch" element={<DenBoschPage />} />
+              <Route path="/regio/noord-brabant/eindhoven" element={<Eindhoven />} />
+              <Route path="/regio/noord-brabant/tilburg" element={<Tilburg />} />
+              <Route path="/regio/noord-brabant/breda" element={<Breda />} />
+              <Route path="/regio/noord-brabant/den-bosch" element={<DenBosch />} />
 
               {/* SEO-routes – automatisch uit /pages/seo */}
               {seoRouteElements}
