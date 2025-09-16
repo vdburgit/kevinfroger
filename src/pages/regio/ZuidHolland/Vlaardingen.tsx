@@ -1,30 +1,31 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Calendar, Users, Music, Award, CheckCircle, ArrowRight, Star, Heart, Building, Zap, Crown } from 'lucide-react';
-import ContactForm from '../../components/ContactForm';
+import { MapPin, Phone, Mail, Calendar, Users, Music, Award, CheckCircle, ArrowRight, Star, Heart, Building, Zap, Ship } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import ContactForm from '../../../components/ContactForm';
 
-const DJDenHaagPage = () => {
+const Vlaardingen = () => {
   // SEO metadata for this page
   React.useEffect(() => {
-    document.title = "DJ Den Haag | DJ Kevin Froger Hofstad | 250+ Events";
+    document.title = "DJ Vlaardingen | DJ Kevin Froger Havenstad | 110+ Events";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'DJ Den Haag ✨ 250+ events in de hofstad. DJ Kevin Froger van centrum tot Scheveningen. Exclusieve DJ services Den Haag. Boek nu!');
+      metaDescription.setAttribute('content', 'DJ Vlaardingen ✨ 110+ events in de havenstad. DJ Kevin Froger van centrum tot Westwijk. Professionele DJ services Vlaardingen. Boek nu!');
     }
     
     // Add Open Graph tags
     const ogTitle = document.querySelector('meta[property="og:title"]') || document.createElement('meta');
     ogTitle.setAttribute('property', 'og:title');
-    ogTitle.setAttribute('content', 'DJ Den Haag | DJ Kevin Froger Hofstad');
+    ogTitle.setAttribute('content', 'DJ Vlaardingen | DJ Kevin Froger Havenstad');
     if (!document.head.contains(ogTitle)) document.head.appendChild(ogTitle);
     
     const ogDescription = document.querySelector('meta[property="og:description"]') || document.createElement('meta');
     ogDescription.setAttribute('property', 'og:description');
-    ogDescription.setAttribute('content', 'DJ Den Haag ✨ 250+ events in de hofstad. DJ Kevin Froger van centrum tot Scheveningen. Exclusieve DJ services Den Haag.');
+    ogDescription.setAttribute('content', 'DJ Vlaardingen ✨ 110+ events in de havenstad. DJ Kevin Froger van centrum tot Westwijk. Professionele DJ services Vlaardingen.');
     if (!document.head.contains(ogDescription)) document.head.appendChild(ogDescription);
     
     const ogUrl = document.querySelector('meta[property="og:url"]') || document.createElement('meta');
     ogUrl.setAttribute('property', 'og:url');
-    ogUrl.setAttribute('content', 'https://kevinfroger.nl/dj-den-haag');
+    ogUrl.setAttribute('content', 'https://kevinfroger.nl/regio/zuid-holland/vlaardingen');
     if (!document.head.contains(ogUrl)) document.head.appendChild(ogUrl);
     
     const ogImage = document.querySelector('meta[property="og:image"]') || document.createElement('meta');
@@ -37,22 +38,35 @@ const DJDenHaagPage = () => {
     ogSiteName.setAttribute('content', 'DJ Kevin Froger');
     if (!document.head.contains(ogSiteName)) document.head.appendChild(ogSiteName);
     
-    // Add structured data for Den Haag page
+    // Add structured data for Vlaardingen page
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "DJ Den Haag - DJ Kevin Froger",
-      "description": "Professionele DJ services in Den Haag en alle wijken van de hofstad",
-      "url": "https://kevinfroger.nl/dj-den-haag",
-      "telephone": "+31645251333",
-      "areaServed": "Den Haag",
-      "sameAs": [
-        "https://www.instagram.com/djkevinfroger/",
-        "https://www.linkedin.com/in/kevin-froger-b23aa263/",
-        "https://www.facebook.com/KevinFroger.nl",
-        "https://wa.me/31645251333"
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://kevinfroger.nl/"},
+            {"@type": "ListItem", "position": 2, "name": "Regio", "item": "https://kevinfroger.nl/regio"},
+            {"@type": "ListItem", "position": 3, "name": "Zuid-Holland", "item": "https://kevinfroger.nl/regio/zuid-holland"},
+            {"@type": "ListItem", "position": 4, "name": "Vlaardingen", "item": "https://kevinfroger.nl/regio/zuid-holland/vlaardingen"}
+          ]
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": "DJ Vlaardingen - DJ Kevin Froger",
+          "description": "Professionele DJ services in Vlaardingen en alle wijken van de havenstad",
+          "url": "https://kevinfroger.nl/regio/zuid-holland/vlaardingen",
+          "telephone": "+31645251333",
+          "areaServed": "Vlaardingen",
+          "sameAs": [
+            "https://www.instagram.com/djkevinfroger/",
+            "https://www.linkedin.com/in/kevin-froger-b23aa263/",
+            "https://www.facebook.com/KevinFroger.nl",
+            "https://wa.me/31645251333"
+          ]
+        }
       ]
     });
     document.head.appendChild(script);
@@ -61,54 +75,69 @@ const DJDenHaagPage = () => {
       document.head.removeChild(script);
     };
   }, []);
+
   const services = [
     {
-      title: "Bruiloften Den Haag",
-      description: "Elegante bruiloft DJ voor alle locaties in de hofstad",
+      title: "Bruiloften Vlaardingen",
+      description: "Romantische bruiloft DJ in de historische havenstad",
       icon: <Heart className="w-8 h-8" />,
       color: "from-pink-500 to-purple-600"
     },
     {
       title: "Bedrijfsfeesten",
-      description: "Professionele corporate events in Den Haag",
+      description: "Corporate events in Vlaardingen en omgeving",
       icon: <Building className="w-8 h-8" />,
       color: "from-blue-500 to-blue-600"
     },
     {
       title: "Privé Feesten",
-      description: "Stijlvolle privé evenementen door heel Den Haag",
+      description: "Gezellige familiefeesten in Vlaardingen",
       icon: <Users className="w-8 h-8" />,
       color: "from-green-500 to-green-600"
     },
     {
-      title: "Gala's & Events",
-      description: "Exclusieve evenementen in de regeringsstad",
-      icon: <Crown className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-600"
+      title: "Festivals & Events",
+      description: "Grote evenementen in de havenstad",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-orange-500 to-pink-600"
     }
   ];
 
   const districts = [
-    "Den Haag Centrum", "Scheveningen", "Benoordenhout", "Bezuidenhout",
-    "Haagse Hout", "Laak", "Loosduinen", "Segbroek", "Escamp",
-    "Leidschenveen-Ypenburg", "Haagse Bos", "Statenkwartier", "Archipelbuurt", "Zeeheldenkwartier"
+    "Vlaardingen Centrum", "Westwijk", "Oostwijk", "Ambacht", "Holy",
+    "Vettenoord", "Babberspolder", "Indische Buurt", "Broekpolder", "Ziedewij"
   ];
 
   const venues = [
-    "Kurhaus Scheveningen", "Hotel Des Indes", "Paleis Noordeinde", "Binnenhof",
-    "Gemeentemuseum", "Museon", "World Forum", "Lange Voorhout Paleis",
-    "Ridderzaal", "Pier Scheveningen", "Carlton Beach", "Grand Hotel Amrâth"
+    "Stedelijk Museum", "Theater De Stoep", "Sportpark De Kooi", "Zwembad De Waterdam",
+    "Cultuurhuis Vlaardingen", "Haven Vlaardingen", "Park Broekpolder", "Landgoed Holy",
+    "Ambacht Centrum", "Westwijk Park", "Oostwijk Sporthal", "Vettenoord Recreatie"
   ];
 
   const stats = [
-    { number: "15+", label: "Jaar in Den Haag", icon: <Award className="w-8 h-8" /> },
-    { number: "250+", label: "Events in Den Haag", icon: <Calendar className="w-8 h-8" /> },
-    { number: "120+", label: "Haagse Bruiloften", icon: <Heart className="w-8 h-8" /> },
-    { number: "80+", label: "Corporate Events", icon: <Building className="w-8 h-8" /> }
+    { number: "15+", label: "Jaar in Vlaardingen", icon: <Award className="w-8 h-8" /> },
+    { number: "110+", label: "Events in Vlaardingen", icon: <Calendar className="w-8 h-8" /> },
+    { number: "65+", label: "Vlaardingers Bruiloften", icon: <Heart className="w-8 h-8" /> },
+    { number: "35+", label: "Corporate Events", icon: <Building className="w-8 h-8" /> }
   ];
 
   return (
     <div className="bg-white">
+      {/* Breadcrumbs */}
+      <nav aria-label="Breadcrumb" className="bg-gray-50 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li><Link to="/" className="text-gray-500 hover:text-gray-700">Home</Link></li>
+            <li className="text-gray-400">/</li>
+            <li><Link to="/regio" className="text-gray-500 hover:text-gray-700">Regio</Link></li>
+            <li className="text-gray-400">/</li>
+            <li><Link to="/regio/zuid-holland" className="text-gray-500 hover:text-gray-700">Zuid-Holland</Link></li>
+            <li className="text-gray-400">/</li>
+            <li className="text-gray-900 font-semibold">Vlaardingen</li>
+          </ol>
+        </div>
+      </nav>
+
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-blue-900 via-purple-800 to-blue-900 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -119,18 +148,18 @@ const DJDenHaagPage = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-3 mb-8">
-              <Crown className="w-10 h-10 text-orange-400" />
-              <span className="text-orange-400 font-black text-xl tracking-wide">DEN HAAG</span>
+              <Ship className="w-10 h-10 text-orange-400" />
+              <span className="text-orange-400 font-black text-xl tracking-wide">VLAARDINGEN</span>
             </div>
             
             <h1 className="text-5xl lg:text-7xl xl:text-8xl font-black mb-8 leading-tight text-shadow-lg">
               DJ KEVIN FROGER
-              <span className="block text-orange-400">DEN HAAG</span>
+              <span className="block text-orange-400">VLAARDINGEN</span>
             </h1>
             
             <p className="text-xl lg:text-2xl mb-12 text-blue-100 leading-relaxed max-w-4xl mx-auto">
-              Professionele DJ services in Den Haag. Van het centrum tot Scheveningen, 
-              van bruiloften in het Kurhaus tot gala's in de hofstad - altijd stijlvol en professioneel.
+              Professionele DJ services in Vlaardingen. Van het centrum tot Westwijk, 
+              van bruiloften aan de haven tot bedrijfsfeesten - altijd de perfecte sfeer in de havenstad.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
@@ -139,7 +168,7 @@ const DJDenHaagPage = () => {
                 className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-10 py-5 rounded-full font-black text-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105"
               >
                 <Calendar className="w-6 h-6 inline-block mr-3" />
-                BOEK NU IN DEN HAAG
+                BOEK NU IN VLAARDINGEN
                 <ArrowRight className="w-5 h-5 inline-block ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
@@ -172,10 +201,10 @@ const DJDenHaagPage = () => {
           <div className="text-center mb-20">
             <h2 className="text-5xl lg:text-7xl font-black text-gray-900 mb-8 text-shadow">
               DJ SERVICES
-              <span className="block text-blue-700">DEN HAAG</span>
+              <span className="block text-blue-700">VLAARDINGEN</span>
             </h2>
             <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Professionele DJ services voor alle gelegenheden in de hofstad
+              Professionele DJ services voor alle gelegenheden in de havenstad
             </p>
           </div>
           
@@ -198,33 +227,33 @@ const DJDenHaagPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* SEO Content - Hidden but accessible to search engines */}
           <div className="sr-only prose prose-lg max-w-none">
-            <h2>DJ Den Haag - Professionele DJ Services Hofstad</h2>
-            <p>Zoek je een DJ in Den Haag? DJ Kevin Froger verzorgt exclusieve DJ services in de hofstad. Met 15+ jaar ervaring en 250+ events in Den Haag - altijd stijlvol en professioneel. Van bruiloften in het Kurhaus tot gala's in het Binnenhof.</p>
+            <h2>DJ Vlaardingen - Professionele DJ Services Havenstad</h2>
+            <p>Zoek je een DJ in Vlaardingen? DJ Kevin Froger verzorgt professionele DJ services in de havenstad. Van bruiloften aan de haven tot bedrijfsfeesten in het centrum - altijd de perfecte sfeer in Vlaardingen.</p>
             
-            <h3>DJ Den Haag - Alle Wijken</h3>
-            <p>Kevin is actief in heel Den Haag en alle wijken: DJ Den Haag Centrum, DJ Scheveningen, DJ Benoordenhout, DJ Bezuidenhout, DJ Haagse Hout, DJ Laak, DJ Loosduinen, DJ Segbroek, DJ Escamp, DJ Leidschenveen-Ypenburg, DJ Haagse Bos, DJ Statenkwartier, DJ Archipelbuurt, DJ Zeeheldenkwartier. DJ Den Haag alle wijken beschikbaar.</p>
+            <h3>DJ Vlaardingen - Alle Wijken</h3>
+            <p>Kevin is actief in heel Vlaardingen: DJ Vlaardingen Centrum, DJ Westwijk, DJ Oostwijk, DJ Ambacht, DJ Holy, DJ Vettenoord, DJ Babberspolder, DJ Indische Buurt, DJ Broekpolder, DJ Ziedewij.</p>
             
-            <h3>Bruiloft DJ Den Haag</h3>
-            <p>Voor bruiloften in Den Haag heeft Kevin meer dan 120 succesvolle events begeleid. Van Kurhaus Scheveningen tot Hotel Des Indes, van Paleis Noordeinde tot Carlton Beach - Kevin maakt jullie bruiloft onvergetelijk in de hofstad. Bruiloft DJ Den Haag met stijlvolle uitstraling passend bij de regeringsstad.</p>
+            <h3>Bruiloft DJ Vlaardingen</h3>
+            <p>Voor bruiloften in Vlaardingen heeft Kevin meer dan 65 succesvolle events begeleid. Van Stedelijk Museum tot Theater De Stoep, van Landgoed Holy tot Haven Vlaardingen - Kevin maakt jullie bruiloft onvergetelijk.</p>
             
-            <h3>Bedrijfsfeest DJ Den Haag</h3>
-            <p>Bedrijfsfeesten in Den Haag verdienen de beste begeleiding. Kevin heeft ervaring met corporate events in World Forum, Gemeentemuseum, Museon, Ridderzaal en andere prestigieuze locaties. Bedrijfsfeest DJ Den Haag voor alle corporate events in de regeringsstad.</p>
+            <h3>Bedrijfsfeest DJ Vlaardingen</h3>
+            <p>Vlaardingen heeft een sterke bedrijvensector. Kevin verzorgt bedrijfsfeesten voor lokale ondernemingen en heeft ervaring met corporate events in de havenstad.</p>
             
-            <h3>Gala DJ Den Haag</h3>
-            <p>Voor exclusieve gala's en events in Den Haag biedt Kevin premium DJ services. Van Ridderzaal tot Lange Voorhout Paleis - altijd de juiste sfeer voor uw exclusieve evenement. Gala DJ Den Haag voor diplomatieke en zakelijke gala's in de hofstad.</p>
+            <h3>DJ Haven Vlaardingen</h3>
+            <p>De haven van Vlaardingen biedt unieke locaties voor evenementen. Kevin heeft ervaring met events aan het water en in maritieme settings.</p>
             
-            <h3>DJ Boeken Den Haag</h3>
-            <p>Wil je een DJ boeken in Den Haag? Kevin Froger is beschikbaar voor alle wijken en exclusieve locaties in de hofstad. Professionele DJ services voor de regeringsstad. DJ boeken Den Haag - binnen 24 uur persoonlijke offerte.</p>
+            <h3>DJ Boeken Vlaardingen</h3>
+            <p>Wil je een DJ boeken in Vlaardingen? Kevin Froger kent alle locaties van Westwijk tot Oostwijk. Professionele DJ services voor de havenstad.</p>
             
-            <h3>Populaire Zoektermen DJ Den Haag</h3>
-            <p>DJ Den Haag centrum, DJ Scheveningen, bruiloft DJ Den Haag, gala DJ Den Haag, corporate DJ Den Haag, exclusieve DJ Den Haag, professionele DJ hofstad, DJ regeringsstad, DJ Den Haag boeken, DJ Den Haag huren, hofstad DJ, Haagse DJ.</p>
+            <h3>Populaire DJ Services Vlaardingen</h3>
+            <p>DJ Vlaardingen centrum, DJ Westwijk, DJ Oostwijk, bruiloft DJ Vlaardingen, bedrijfsfeest DJ Vlaardingen, haven DJ Vlaardingen, maritieme DJ, professionele DJ Vlaardingen.</p>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             <div>
               <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-12 text-shadow">
                 ALLE WIJKEN
-                <span className="block text-orange-500">DEN HAAG</span>
+                <span className="block text-orange-500">VLAARDINGEN</span>
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {districts.map((district, index) => (
@@ -238,13 +267,13 @@ const DJDenHaagPage = () => {
             
             <div>
               <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-12 text-shadow">
-                EXCLUSIEVE
+                HAVEN
                 <span className="block text-blue-700">LOCATIES</span>
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {venues.map((venue, index) => (
                   <div key={index} className="bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-                    <Crown className="w-6 h-6 text-blue-500 mx-auto mb-2" />
+                    <Ship className="w-6 h-6 text-blue-500 mx-auto mb-2" />
                     <h3 className="text-sm font-black text-gray-900">{venue}</h3>
                   </div>
                 ))}
@@ -260,17 +289,17 @@ const DJDenHaagPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-5xl lg:text-7xl font-black text-gray-900 mb-8 text-shadow">
               BOEK DJ KEVIN
-              <span className="block text-blue-700">IN DEN HAAG</span>
+              <span className="block text-blue-700">IN VLAARDINGEN</span>
             </h2>
             <p className="text-2xl text-gray-600 leading-relaxed">
-              Klaar om jouw evenement in Den Haag onvergetelijk te maken?
+              Klaar om jouw evenement in Vlaardingen onvergetelijk te maken?
             </p>
           </div>
-          <ContactForm eventType="Den Haag evenement" />
+          <ContactForm eventType="Vlaardingen evenement" />
         </div>
       </section>
     </div>
   );
 };
 
-export default DJDenHaagPage;
+export default Vlaardingen;

@@ -1,8 +1,81 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Calendar, Users, Music, Award, CheckCircle, ArrowRight, Star, Heart, Building, Zap, Factory } from 'lucide-react';
-import ContactForm from '../../components/ContactForm';
+import { Link } from 'react-router-dom';
+import ContactForm from '../../../components/ContactForm';
 
-const DJSchiedamPage = () => {
+const Schiedam = () => {
+  // SEO metadata for this page
+  React.useEffect(() => {
+    document.title = "DJ Schiedam | DJ Kevin Froger Jeneverstad | 120+ Events";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'DJ Schiedam ✨ 120+ events in de jeneverstad. DJ Kevin Froger van centrum tot Nieuwland. Professionele DJ services Schiedam. Boek nu!');
+    }
+    
+    // Add Open Graph tags
+    const ogTitle = document.querySelector('meta[property="og:title"]') || document.createElement('meta');
+    ogTitle.setAttribute('property', 'og:title');
+    ogTitle.setAttribute('content', 'DJ Schiedam | DJ Kevin Froger Jeneverstad');
+    if (!document.head.contains(ogTitle)) document.head.appendChild(ogTitle);
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]') || document.createElement('meta');
+    ogDescription.setAttribute('property', 'og:description');
+    ogDescription.setAttribute('content', 'DJ Schiedam ✨ 120+ events in de jeneverstad. DJ Kevin Froger van centrum tot Nieuwland. Professionele DJ services Schiedam.');
+    if (!document.head.contains(ogDescription)) document.head.appendChild(ogDescription);
+    
+    const ogUrl = document.querySelector('meta[property="og:url"]') || document.createElement('meta');
+    ogUrl.setAttribute('property', 'og:url');
+    ogUrl.setAttribute('content', 'https://kevinfroger.nl/regio/zuid-holland/schiedam');
+    if (!document.head.contains(ogUrl)) document.head.appendChild(ogUrl);
+    
+    const ogImage = document.querySelector('meta[property="og:image"]') || document.createElement('meta');
+    ogImage.setAttribute('property', 'og:image');
+    ogImage.setAttribute('content', 'https://kevinfroger.nl/images/kevin-portrait.png');
+    if (!document.head.contains(ogImage)) document.head.appendChild(ogImage);
+    
+    const ogSiteName = document.querySelector('meta[property="og:site_name"]') || document.createElement('meta');
+    ogSiteName.setAttribute('property', 'og:site_name');
+    ogSiteName.setAttribute('content', 'DJ Kevin Froger');
+    if (!document.head.contains(ogSiteName)) document.head.appendChild(ogSiteName);
+    
+    // Add structured data for Schiedam page
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://kevinfroger.nl/"},
+            {"@type": "ListItem", "position": 2, "name": "Regio", "item": "https://kevinfroger.nl/regio"},
+            {"@type": "ListItem", "position": 3, "name": "Zuid-Holland", "item": "https://kevinfroger.nl/regio/zuid-holland"},
+            {"@type": "ListItem", "position": 4, "name": "Schiedam", "item": "https://kevinfroger.nl/regio/zuid-holland/schiedam"}
+          ]
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": "DJ Schiedam - DJ Kevin Froger",
+          "description": "Professionele DJ services in Schiedam en alle wijken van de jeneverstad",
+          "url": "https://kevinfroger.nl/regio/zuid-holland/schiedam",
+          "telephone": "+31645251333",
+          "areaServed": "Schiedam",
+          "sameAs": [
+            "https://www.instagram.com/djkevinfroger/",
+            "https://www.linkedin.com/in/kevin-froger-b23aa263/",
+            "https://www.facebook.com/KevinFroger.nl",
+            "https://wa.me/31645251333"
+          ]
+        }
+      ]
+    });
+    document.head.appendChild(script);
+    
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
   const services = [
     {
       title: "Bruiloften Schiedam",
@@ -50,6 +123,21 @@ const DJSchiedamPage = () => {
 
   return (
     <div className="bg-white">
+      {/* Breadcrumbs */}
+      <nav aria-label="Breadcrumb" className="bg-gray-50 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li><Link to="/" className="text-gray-500 hover:text-gray-700">Home</Link></li>
+            <li className="text-gray-400">/</li>
+            <li><Link to="/regio" className="text-gray-500 hover:text-gray-700">Regio</Link></li>
+            <li className="text-gray-400">/</li>
+            <li><Link to="/regio/zuid-holland" className="text-gray-500 hover:text-gray-700">Zuid-Holland</Link></li>
+            <li className="text-gray-400">/</li>
+            <li className="text-gray-900 font-semibold">Schiedam</li>
+          </ol>
+        </div>
+      </nav>
+
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-blue-900 via-purple-800 to-blue-900 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -214,4 +302,4 @@ const DJSchiedamPage = () => {
   );
 };
 
-export default DJSchiedamPage;
+export default Schiedam;

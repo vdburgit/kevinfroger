@@ -6,7 +6,7 @@ import MobileCTA from "./components/MobileCTA";
 import ScrollToTop from "./components/ScrollToTop";
 
 /**
- * Hoofdpagina’s – expliciet lazy loaden
+ * Hoofdpagina's – expliciet lazy loaden
  */
 const HomePage = React.lazy(() => import("./pages/HomePage"));
 const BruiloftDJPage = React.lazy(() => import("./pages/BruiloftDJPage"));
@@ -25,7 +25,7 @@ const PrivacyPage = React.lazy(() => import("./pages/PrivacyPage"));
 const TermsPage = React.lazy(() => import("./pages/TermsPage"));
 
 /**
- * Regio’s en steden – expliciet
+ * Regio's en provincies – expliciet
  */
 const ZuidHollandPage = React.lazy(() => import("./pages/regio/ZuidHollandPage"));
 const NoordBrabantPage = React.lazy(() => import("./pages/regio/NoordBrabantPage"));
@@ -35,7 +35,9 @@ const OverijsselPage = React.lazy(() => import("./pages/regio/OverijsselPage"));
 const NoordHollandPage = React.lazy(() => import("./pages/regio/NoordHollandPage"));
 const ZeelandPage = React.lazy(() => import("./pages/regio/ZeelandPage"));
 
-// Zuid-Holland Steden
+/**
+ * Zuid-Holland Steden
+ */
 const Rotterdam = React.lazy(() => import("./pages/regio/ZuidHolland/Rotterdam"));
 const DenHaag = React.lazy(() => import("./pages/regio/ZuidHolland/DenHaag"));
 const Delft = React.lazy(() => import("./pages/regio/ZuidHolland/Delft"));
@@ -43,63 +45,52 @@ const Leiden = React.lazy(() => import("./pages/regio/ZuidHolland/Leiden"));
 const Zoetermeer = React.lazy(() => import("./pages/regio/ZuidHolland/Zoetermeer"));
 const Dordrecht = React.lazy(() => import("./pages/regio/ZuidHolland/Dordrecht"));
 const Gouda = React.lazy(() => import("./pages/regio/ZuidHolland/Gouda"));
+const Schiedam = React.lazy(() => import("./pages/regio/ZuidHolland/Schiedam"));
+const Vlaardingen = React.lazy(() => import("./pages/regio/ZuidHolland/Vlaardingen"));
+const Spijkenisse = React.lazy(() => import("./pages/regio/ZuidHolland/Spijkenisse"));
+const Westland = React.lazy(() => import("./pages/regio/ZuidHolland/Westland"));
 
-// Noord-Holland Steden
+/**
+ * Noord-Holland Steden
+ */
 const Amsterdam = React.lazy(() => import("./pages/regio/NoordHolland/Amsterdam"));
 
-// Utrecht Steden
+/**
+ * Utrecht Steden
+ */
 const Utrecht = React.lazy(() => import("./pages/regio/Utrecht/Utrecht"));
 
-// Noord-Brabant Steden
+/**
+ * Noord-Brabant Steden
+ */
 const Eindhoven = React.lazy(() => import("./pages/regio/NoordBrabant/Eindhoven"));
 const Tilburg = React.lazy(() => import("./pages/regio/NoordBrabant/Tilburg"));
 const Breda = React.lazy(() => import("./pages/regio/NoordBrabant/Breda"));
 const DenBosch = React.lazy(() => import("./pages/regio/NoordBrabant/DenBosch"));
 
 /**
- * SEO-pagina’s – automatisch routes genereren via import.meta.glob
- * Bestandsnaam => pad:
- *   DJBruiloftRotterdamPage.tsx  -> /dj-bruiloft-rotterdam
- *   DJCapelleAanDenIJsselPage.tsx -> /dj-capelle-aan-den-ijssel (speciale IJ-fix)
- *   BruiloftDJDenHaagPage.tsx    -> /bruiloft-dj-den-haag
+ * Overige SEO-pagina's (niet-steden) – automatisch uit /pages/seo
  */
-const seoModules = import.meta.glob("./pages/seo/*.tsx"); // lazy loaders per file
+const seoModules = import.meta.glob("./pages/seo/*.tsx");
 
 function toSlugFromFile(filename: string) {
-  // strip map + extensie
-  let name = filename.replace(/\.\/pages\/seo\//, "").replace(/\.tsx$/, ""); // bijv. "DJBruiloftRotterdamPage"
-  name = name.replace(/Page$/, ""); // "DJBruiloftRotterdam"
-
-  // Specifieke NL-fix: "IJ" als 1 cluster behandelen
+  let name = filename.replace(/\.\/pages\/seo\//, "").replace(/\.tsx$/, "");
+  name = name.replace(/Page$/, "");
   name = name.replace(/IJ/g, "Ij");
-
-  // CamelCase -> kebab-case
-  // a) scheiding tussen lower/number en Upper
   name = name.replace(/([a-z0-9])([A-Z])/g, "$1-$2");
-  // b) sequences van capitals gevolgd door Capital+lower (ABCDef -> ABC-Def)
   name = name.replace(/([A-Z]+)([A-Z][a-z])/g, "$1-$2");
-
-  // naar lowercase
   let slug = name.toLowerCase();
-
-  // "i-jssel" edgecase die soms kan ontstaan -> "ijssel"
   slug = slug.replace(/-i-j/g, "-ij");
-
-  // underscores -> streepjes
   slug = slug.replace(/_/g, "-");
-
   return `/${slug}`;
 }
 
 const seoRouteElements = Object.entries(seoModules).map(([path, loader]) => {
   const slug = toSlugFromFile(path);
-
-  // React.lazy verwacht { default: Component }
   const LazyComp = React.lazy(async () => {
     const mod: any = await (loader as () => Promise<any>)();
     return { default: mod.default };
   });
-
   return <Route key={slug} path={slug} element={<LazyComp />} />;
 });
 
@@ -144,7 +135,7 @@ function App() {
               <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/algemene-voorwaarden" element={<TermsPage />} />
 
-              {/* Regio-routes */}
+              {/* Regio/Provincie routes */}
               <Route path="/regio/zuid-holland" element={<ZuidHollandPage />} />
               <Route path="/regio/noord-brabant" element={<NoordBrabantPage />} />
               <Route path="/regio/gelderland" element={<GelderlandPage />} />
@@ -153,7 +144,7 @@ function App() {
               <Route path="/regio/noord-holland" element={<NoordHollandPage />} />
               <Route path="/regio/zeeland" element={<ZeelandPage />} />
 
-              {/* Steden */}
+              {/* Zuid-Holland Steden */}
               <Route path="/regio/zuid-holland/rotterdam" element={<Rotterdam />} />
               <Route path="/regio/zuid-holland/den-haag" element={<DenHaag />} />
               <Route path="/regio/zuid-holland/delft" element={<Delft />} />
@@ -161,20 +152,24 @@ function App() {
               <Route path="/regio/zuid-holland/zoetermeer" element={<Zoetermeer />} />
               <Route path="/regio/zuid-holland/dordrecht" element={<Dordrecht />} />
               <Route path="/regio/zuid-holland/gouda" element={<Gouda />} />
+              <Route path="/regio/zuid-holland/schiedam" element={<Schiedam />} />
+              <Route path="/regio/zuid-holland/vlaardingen" element={<Vlaardingen />} />
+              <Route path="/regio/zuid-holland/spijkenisse" element={<Spijkenisse />} />
+              <Route path="/regio/zuid-holland/westland" element={<Westland />} />
               
-              {/* Noord-Holland steden */}
+              {/* Noord-Holland Steden */}
               <Route path="/regio/noord-holland/amsterdam" element={<Amsterdam />} />
               
-              {/* Utrecht steden */}
+              {/* Utrecht Steden */}
               <Route path="/regio/utrecht/utrecht" element={<Utrecht />} />
               
-              {/* Noord-Brabant steden */}
+              {/* Noord-Brabant Steden */}
               <Route path="/regio/noord-brabant/eindhoven" element={<Eindhoven />} />
               <Route path="/regio/noord-brabant/tilburg" element={<Tilburg />} />
               <Route path="/regio/noord-brabant/breda" element={<Breda />} />
               <Route path="/regio/noord-brabant/den-bosch" element={<DenBosch />} />
 
-              {/* SEO-routes – automatisch uit /pages/seo */}
+              {/* SEO-routes – automatisch uit /pages/seo (alleen niet-steden) */}
               {seoRouteElements}
 
               {/* Legacy redirects */}
