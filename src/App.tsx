@@ -32,8 +32,22 @@ const NoordBrabantPage = React.lazy(() => import("./pages/regio/NoordBrabantPage
 const GelderlandPage = React.lazy(() => import("./pages/regio/GelderlandPage"));
 const UtrechtPage = React.lazy(() => import("./pages/regio/UtrechtPage"));
 const OverijsselPage = React.lazy(() => import("./pages/regio/OverijsselPage"));
+const NoordHollandPage = React.lazy(() => import("./pages/regio/NoordHollandPage"));
+const ZeelandPage = React.lazy(() => import("./pages/regio/ZeelandPage"));
 
 const RotterdamPage = React.lazy(() => import("./pages/regio/steden/RotterdamPage"));
+const DenHaagPage = React.lazy(() => import("./pages/regio/steden/DenHaagPage"));
+const DelftPage = React.lazy(() => import("./pages/regio/steden/DelftPage"));
+const LeidenPage = React.lazy(() => import("./pages/regio/steden/LeidenPage"));
+const ZoetermeerPage = React.lazy(() => import("./pages/regio/steden/ZoetermeerPage"));
+const DordrechtPage = React.lazy(() => import("./pages/regio/steden/DordrechtPage"));
+const GoudaPage = React.lazy(() => import("./pages/regio/steden/GoudaPage"));
+const AmsterdamPage = React.lazy(() => import("./pages/regio/steden/AmsterdamPage"));
+const UtrechtStadPage = React.lazy(() => import("./pages/regio/steden/UtrechtStadPage"));
+const EindhovenPage = React.lazy(() => import("./pages/regio/steden/EindhovenPage"));
+const TilburgPage = React.lazy(() => import("./pages/regio/steden/TilburgPage"));
+const BredaPage = React.lazy(() => import("./pages/regio/steden/BredaPage"));
+const DenBoschPage = React.lazy(() => import("./pages/regio/steden/DenBoschPage"));
 
 /**
  * SEO-pagina’s – automatisch routes genereren via import.meta.glob
@@ -129,9 +143,29 @@ function App() {
               <Route path="/regio/gelderland" element={<GelderlandPage />} />
               <Route path="/regio/utrecht" element={<UtrechtPage />} />
               <Route path="/regio/overijssel" element={<OverijsselPage />} />
+              <Route path="/regio/noord-holland" element={<NoordHollandPage />} />
+              <Route path="/regio/zeeland" element={<ZeelandPage />} />
 
               {/* Steden */}
               <Route path="/regio/zuid-holland/rotterdam" element={<RotterdamPage />} />
+              <Route path="/regio/zuid-holland/den-haag" element={<DenHaagPage />} />
+              <Route path="/regio/zuid-holland/delft" element={<DelftPage />} />
+              <Route path="/regio/zuid-holland/leiden" element={<LeidenPage />} />
+              <Route path="/regio/zuid-holland/zoetermeer" element={<ZoetermeerPage />} />
+              <Route path="/regio/zuid-holland/dordrecht" element={<DordrechtPage />} />
+              <Route path="/regio/zuid-holland/gouda" element={<GoudaPage />} />
+              
+              {/* Noord-Holland steden */}
+              <Route path="/regio/noord-holland/amsterdam" element={<AmsterdamPage />} />
+              
+              {/* Utrecht steden */}
+              <Route path="/regio/utrecht/utrecht" element={<UtrechtStadPage />} />
+              
+              {/* Noord-Brabant steden */}
+              <Route path="/regio/noord-brabant/eindhoven" element={<EindhovenPage />} />
+              <Route path="/regio/noord-brabant/tilburg" element={<TilburgPage />} />
+              <Route path="/regio/noord-brabant/breda" element={<BredaPage />} />
+              <Route path="/regio/noord-brabant/den-bosch" element={<DenBoschPage />} />
 
               {/* SEO-routes – automatisch uit /pages/seo */}
               {seoRouteElements}

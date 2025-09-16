@@ -72,6 +72,20 @@ const RegioPage = () => {
       description: "Van Enschede tot Zwolle - het oosten van Nederland",
       cities: ["Enschede", "Zwolle", "Deventer", "Hengelo", "Almelo", "Kampen"],
       color: "from-orange-500 to-orange-600"
+    },
+    {
+      name: "Noord-Holland",
+      href: "/regio/noord-holland",
+      description: "Van Amsterdam tot Alkmaar - het hart van de Randstad",
+      cities: ["Amsterdam", "Haarlem", "Alkmaar", "Zaanstad", "Hilversum", "Amstelveen"],
+      color: "from-red-500 to-red-600"
+    },
+    {
+      name: "Zeeland",
+      href: "/regio/zeeland",
+      description: "Van Middelburg tot Vlissingen - de kustprovincie",
+      cities: ["Middelburg", "Vlissingen", "Goes", "Terneuzen"],
+      color: "from-cyan-500 to-blue-600"
     }
   ];
 
