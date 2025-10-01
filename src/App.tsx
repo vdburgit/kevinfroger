@@ -23,6 +23,7 @@ const ContactPage = React.lazy(() => import("./pages/ContactPage"));
 const BiographyPage = React.lazy(() => import("./pages/BiographyPage"));
 const PrivacyPage = React.lazy(() => import("./pages/PrivacyPage"));
 const TermsPage = React.lazy(() => import("./pages/TermsPage"));
+const SecretEventsPage = React.lazy(() => import("./pages/SecretEventsPage"));
 
 /**
  * Regio's en provincies – expliciet
@@ -134,6 +135,7 @@ function App() {
               <Route path="/biografie" element={<BiographyPage />} />
               <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/algemene-voorwaarden" element={<TermsPage />} />
+              <Route path="/secret-events-privacy" element={<SecretEventsPage />} />
 
               {/* Regio/Provincie routes */}
               <Route path="/regio/zuid-holland" element={<ZuidHollandPage />} />
