@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import MobileCTA from "./components/MobileCTA";
 import ScrollToTop from "./components/ScrollToTop";
+import CookieBanner from "./components/CookieBanner";
 
 /**
  * Hoofdpagina's – expliciet lazy loaden
@@ -188,6 +189,7 @@ function App() {
         </main>
         <Footer />
         <MobileCTA />
+        <CookieBanner />
       </div>
     </Router>
   );

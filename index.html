@@ -346,38 +346,7 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx" defer fetchpriority="high"></script>
     
-    <!-- Cookie Banner (GDPR) -->
-    <div id="cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#1f2937; color:white; padding:1rem; z-index:9999; text-align:center; contain:layout style;">
-      <p style="margin:0 0 1rem 0;">Deze website gebruikt cookies voor analytics en gebruikerservaring. <a href="/privacy" style="color:#f97316;">Meer info</a></p>
-      <button onclick="acceptCookies()" style="background:#f97316; color:white; border:none; padding:0.5rem 1rem; border-radius:0.5rem; font-weight:bold; cursor:pointer;">Accepteren</button>
-    </div>
-    
-    <!-- Performance optimized scripts -->
-    <script defer>
-      // Cookie consent
-      function acceptCookies() {
-        localStorage.setItem('cookies-accepted', 'true');
-        document.getElementById('cookie-banner').style.display = 'none';
-      }
-      
-      // Show banner if not accepted
-      if (!localStorage.getItem('cookies-accepted')) {
-        document.getElementById('cookie-banner').style.display = 'block';
-      }
-      
-      // Contact event tracking
-      document.addEventListener('click', function(e) {
-        if (e.target.href) {
-          if (e.target.href.includes('tel:')) {
-            trackEvent('phone_click', 'contact');
-          } else if (e.target.href.includes('mailto:')) {
-            trackEvent('email_click', 'contact');
-          } else if (e.target.href.includes('whatsapp')) {
-            trackEvent('whatsapp_click', 'contact');
-          }
-        }
-      });
-    </script>
+
     
     <!-- Lazy load non-critical components -->
     <script defer>
