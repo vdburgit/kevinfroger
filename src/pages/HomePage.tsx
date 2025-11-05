@@ -297,6 +297,8 @@ const HomePage = () => {
                     className="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition-transform duration-700"
                     loading="lazy"
                     decoding="async"
+                    fetchPriority="low"
+                    decoding="async"
                     width="400"
                     height="256"
                     style={{ aspectRatio: '400/256' }}
