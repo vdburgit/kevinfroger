@@ -17,7 +17,7 @@ const HomePage = () => {
   }, []);
 
   const heroSlides = [
-    {
+    { // This is the first slide, used as static image for mobile
       image: "/images/dj-kevin-froger-bruiloft-scaled.jpeg",
       title: "PROFESSIONELE DJ",
       subtitle: "KEVIN FROGER",
@@ -112,6 +112,19 @@ const HomePage = () => {
     <div className="bg-white">
       {/* Hero Section */}
       <section className="relative h-[60vh] min-h-[400px] max-h-[600px] bg-gradient-to-br from-blue-900 via-purple-800 to-blue-900 text-white overflow-hidden hero-section" role="banner" aria-labelledby="hero-title">
+        {/* Mobile-only static hero image */}
+        <div className="md:hidden absolute inset-0">
+          <img
+            src="/images/dj-kevin-froger-bruiloft-scaled.jpeg"
+            alt="DJ Kevin Froger - Professionele DJ services Nederland"
+            className="w-full h-full object-cover object-center transform-gpu hero-image"
+            width="800"
+            height="600"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+          />
+        </div>
         {/* Hero Slider Background */}
         <div className="absolute inset-0 hero-slider">
           {heroSlides.map((slide, index) => (
@@ -122,7 +135,7 @@ const HomePage = () => {
               }`}
             >
               <img 
-                src={slide.image}
+                src={slide.image} // Consider using a <picture> element here for WebP
                 alt={`DJ Kevin Froger ${slide.title} - Professionele DJ services Nederland`}
                 className="w-full h-full object-cover object-center transform-gpu hero-image"
                 width="800"
