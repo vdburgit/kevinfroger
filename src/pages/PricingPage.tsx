@@ -291,6 +291,8 @@ const PricingPage = () => {
                 height="800"
                 loading="lazy"
                 decoding="async"
+                fetchPriority="low"
+                decoding="async"
               />
             </div>
           </div>

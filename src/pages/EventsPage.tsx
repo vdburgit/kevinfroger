@@ -258,6 +258,8 @@ const EventsPage = () => {
                     alt={event.title}
                     className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
                     loading="lazy"
+                    decoding="async"
+                    fetchPriority="low"
                     width="400"
                     height="256"
                   />

@@ -157,6 +157,8 @@ const BiographyPage = () => {
                 width="600"
                 height="800"
                 loading="eager"
+                decoding="async"
+                fetchPriority="high"
                 decoding="sync"
                 fetchPriority="high"
               />

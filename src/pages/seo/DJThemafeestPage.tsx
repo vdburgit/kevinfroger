@@ -146,6 +146,9 @@ const DJThemafeestPage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {themes.map((theme, index) => (
+                  width="400"
+                  height="256"
+                  loading="lazy"
               <div key={index} className="group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="p-8">
                   <div className={`w-16 h-16 bg-gradient-to-br ${theme.color} rounded-full flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform duration-300`}>

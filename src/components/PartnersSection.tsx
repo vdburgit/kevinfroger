@@ -211,6 +211,8 @@ const PartnersSection = () => {
                               height="60"
                               loading="lazy"
                               decoding="async"
+                              fetchPriority="low"
+                              decoding="async"
                               style={{ aspectRatio: '2/1' }}
                             />
                           </div>
