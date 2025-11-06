@@ -23,3 +23,11 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Lighthouse reports and testing artifacts
+lighthouse*.json
+lighthouse*.html
+.chrome-user-data/
+
+# Claude Code artifacts
+.claude/
