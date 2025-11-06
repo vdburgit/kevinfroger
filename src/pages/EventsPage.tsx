@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Users, Music, Star, CheckCircle, ArrowRight, Quote, Clock, Sparkles, Gift, Building, Heart, Phone, MessageCircle } from 'lucide-react';
+import { Calendar, Music, Star, CheckCircle, ArrowRight, Sparkles, Gift, Building, Heart, Phone } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
 const EventsPage = () => {
@@ -253,14 +253,18 @@ const EventsPage = () => {
             {eventTypes.map((event, index) => (
               <div key={index} className="group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-gray-100">
                 <div className="relative overflow-hidden">
-                  <img 
-                    src={event.image} 
-                    alt={event.title}
-                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
-                    loading="lazy"
-                    width="400"
-                    height="256"
-                  />
+                  <picture>
+                    <source type="image/avif" srcSet={`${event.image.replace(/\.(jpe?g|png)$/i, '')}-640.avif 640w, ${event.image.replace(/\.(jpe?g|png)$/i, '')}-320.avif 320w`} sizes="(max-width: 768px) 100vw, 33vw" />
+                    <source type="image/webp" srcSet={`${event.image.replace(/\.(jpe?g|png)$/i, '')}-640.webp 640w, ${event.image.replace(/\.(jpe?g|png)$/i, '')}-320.webp 320w`} sizes="(max-width: 768px) 100vw, 33vw" />
+                    <img 
+                      src={event.image.replace(/\.(jpe?g|png)$/i, '') + '-640.jpg'} 
+                      alt={event.title}
+                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+                      loading="lazy"
+                      width="400"
+                      height="256"
+                    />
+                  </picture>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                   <div className="absolute top-6 right-6">
                     <div className={`w-12 h-12 bg-gradient-to-r ${event.color} rounded-full flex items-center justify-center text-white shadow-lg`}>
@@ -322,15 +326,19 @@ const EventsPage = () => {
             </div>
             
             <div>
-              <img 
-                src="/images/kevin-portrait.png" 
-                alt="DJ Kevin Froger"
-                className="w-full rounded-3xl shadow-2xl"
-                width="600"
-                height="800"
-                loading="lazy"
-                decoding="async"
-              />
+              <picture>
+                <source type="image/avif" srcSet="/images/kevin-portrait-1280.avif 1280w, /images/kevin-portrait-640.avif 640w" sizes="(max-width: 768px) 100vw, 50vw" />
+                <source type="image/webp" srcSet="/images/kevin-portrait-1280.webp 1280w, /images/kevin-portrait-640.webp 640w" sizes="(max-width: 768px) 100vw, 50vw" />
+                <img
+                  src="/images/kevin-portrait-1280.jpg"
+                  alt="DJ Kevin Froger"
+                  className="w-full rounded-3xl shadow-2xl"
+                  width="600"
+                  height="800"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </div>
           </div>
         </div>
