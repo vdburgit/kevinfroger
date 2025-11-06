@@ -27,7 +27,14 @@ dist-ssr
 # Lighthouse reports and testing artifacts
 lighthouse*.json
 lighthouse*.html
+live_*.html
 .chrome-user-data/
 
 # Claude Code artifacts
 .claude/
+
+# Development scripts
+scripts/fix-accessibility.js
+
+# Windows artifacts
+nul
