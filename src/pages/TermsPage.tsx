@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileText, CheckCircle, AlertTriangle, Mail, Phone } from 'lucide-react';
+import { FileText, Mail, Phone } from 'lucide-react';
 
 const TermsPage = () => {
   return (

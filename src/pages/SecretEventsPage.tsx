@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Lock, Eye, FileText, Award, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, Music, AlertTriangle, Globe, Crown, Zap } from 'lucide-react';
+import { Shield, Lock, Eye, FileText, CheckCircle, Phone, Mail, AlertTriangle, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ContactForm from '../components/ContactForm';
 

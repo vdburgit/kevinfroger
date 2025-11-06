@@ -1,90 +1,85 @@
-import React from 'react';
-import { Phone, Mail, MapPin, Clock, CheckCircle, MessageSquare, ArrowRight, Award, Users, Music, Calendar, Star, Quote, MessageCircle, Send, Zap } from 'lucide-react';
+import { Phone, Mail, CheckCircle, ArrowRight, Award, Users, Music, Calendar, Star, MessageCircle, Send } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
+import { useSEO, generateBreadcrumbSchema } from '../hooks/useSEO';
 
 const ContactPage = () => {
-  // SEO metadata for this page
-  React.useEffect(() => {
-    document.title = "Contact DJ Kevin Froger | DJ Boeken | Gratis Offerte";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Contact DJ Kevin Froger - allround DJ boeken Nederland. Gratis offerte binnen 24u, 15+ jaar ervaring, 1000+ events. Bel 06-45251333!');
-    }
-    
-    // Add Open Graph tags
-    const ogTitle = document.querySelector('meta[property="og:title"]') || document.createElement('meta');
-    ogTitle.setAttribute('property', 'og:title');
-    ogTitle.setAttribute('content', 'Contact DJ Kevin Froger | DJ Boeken');
-    if (!document.head.contains(ogTitle)) document.head.appendChild(ogTitle);
-    
-    const ogDescription = document.querySelector('meta[property="og:description"]') || document.createElement('meta');
-    ogDescription.setAttribute('property', 'og:description');
-    ogDescription.setAttribute('content', 'Contact DJ Kevin Froger. Gratis offerte binnen 24u, allround DJ boeken Nederland alle provincies. 15+ jaar ervaring.');
-    if (!document.head.contains(ogDescription)) document.head.appendChild(ogDescription);
-    
-    const ogUrl = document.querySelector('meta[property="og:url"]') || document.createElement('meta');
-    ogUrl.setAttribute('property', 'og:url');
-    ogUrl.setAttribute('content', 'https://kevinfroger.nl/contact');
-    if (!document.head.contains(ogUrl)) document.head.appendChild(ogUrl);
-    
-    const ogImage = document.querySelector('meta[property="og:image"]') || document.createElement('meta');
-    ogImage.setAttribute('property', 'og:image');
-    ogImage.setAttribute('content', 'https://kevinfroger.nl/images/kevin-portrait.png');
-    if (!document.head.contains(ogImage)) document.head.appendChild(ogImage);
-    
-    // Add structured data for contact page
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify({
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "LocalBusiness",
-          "name": "DJ Kevin Froger",
-          "url": "https://kevinfroger.nl",
-          "telephone": "+31645251333",
-          "email": "booking@kevinfroger.nl",
-          "areaServed": ["Zuid-Holland", "Noord-Brabant", "Gelderland", "Utrecht", "Overijssel"],
-          "sameAs": [
-            "https://www.instagram.com/djkevinfroger/",
-            "https://www.linkedin.com/in/kevin-froger-b23aa263/",
-            "https://www.facebook.com/KevinFroger.nl",
-            "https://wa.me/31645251333"
-          ],
-          "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "NL"
-          }
+  // Enhanced SEO configuration for contact page
+  useSEO({
+    title: 'Contact DJ Kevin Froger | DJ Boeken | Gratis Offerte',
+    description: 'Contact DJ Kevin Froger - allround DJ boeken Nederland. Gratis offerte binnen 24u, 15+ jaar ervaring, 1000+ events. Bel 06-18894520 of stuur WhatsApp!',
+    keywords: 'dj boeken, dj contact, dj offerte, dj huren nederland, dj prijs, contact kevin froger, dj beschikbaarheid',
+    canonical: 'https://kevinfroger.nl/contact',
+    ogType: 'website',
+    ogImage: 'https://kevinfroger.nl/images/kevin-portrait.png',
+    ogImageAlt: 'DJ Kevin Froger - Contact voor DJ boekingen',
+    twitterCard: 'summary_large_image',
+    jsonLd: [
+      generateBreadcrumbSchema([
+        { name: 'Home', url: '/' },
+        { name: 'Contact', url: '/contact' }
+      ]),
+      {
+        '@context': 'https://schema.org',
+        '@type': 'LocalBusiness',
+        name: 'DJ Kevin Froger',
+        url: 'https://kevinfroger.nl',
+        telephone: '+31618894520',
+        email: 'info@kevinfroger.nl',
+        areaServed: [
+          { '@type': 'Place', name: 'Nederland' },
+          { '@type': 'Place', name: 'Zuid-Holland' },
+          { '@type': 'Place', name: 'Noord-Brabant' },
+          { '@type': 'Place', name: 'Gelderland' },
+          { '@type': 'Place', name: 'Utrecht' },
+          { '@type': 'Place', name: 'Overijssel' },
+          { '@type': 'Place', name: 'Noord-Holland' },
+          { '@type': 'Place', name: 'Zeeland' }
+        ],
+        sameAs: [
+          'https://www.instagram.com/djkevinfroger/',
+          'https://www.linkedin.com/in/kevin-froger-b23aa263/',
+          'https://www.facebook.com/KevinFroger.nl',
+          'https://wa.me/31618894520'
+        ],
+        address: {
+          '@type': 'PostalAddress',
+          addressCountry: 'NL'
         },
-        {
-          "@type": "HowTo",
-          "name": "DJ boeken in 3 stappen",
-          "step": [
-            {
-              "@type": "HowToStep",
-              "name": "Beschikbaarheid",
-              "text": "Datum & locatie checken."
-            },
-            {
-              "@type": "HowToStep",
-              "name": "Offerte",
-              "text": "Showkeuze & prijs bevestigen."
-            },
-            {
-              "@type": "HowToStep",
-              "name": "Definitief boeken",
-              "text": "Contract & planning rond."
-            }
-          ]
+        priceRange: '€€',
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '5.0',
+          reviewCount: '47'
         }
-      ]
-    });
-    document.head.appendChild(script);
-    
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'DJ boeken in 3 stappen',
+        totalTime: 'PT24H',
+        step: [
+          {
+            '@type': 'HowToStep',
+            position: 1,
+            name: 'Beschikbaarheid checken',
+            text: 'Datum & locatie checken. Direct beschikbaarheid via WhatsApp of contactformulier.'
+          },
+          {
+            '@type': 'HowToStep',
+            position: 2,
+            name: 'Offerte ontvangen',
+            text: 'Showkeuze & prijs bevestigen. Gratis offerte binnen 24 uur.'
+          },
+          {
+            '@type': 'HowToStep',
+            position: 3,
+            name: 'Definitief boeken',
+            text: 'Contract & planning rond. Persoonlijke begeleiding tot en met je evenement.'
+          }
+        ]
+      }
+    ]
+  });
 
   const contactMethods = [
     {

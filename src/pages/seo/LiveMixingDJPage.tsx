@@ -1,5 +1,5 @@
 import React from 'react';
-import { Music, Phone, Mail, Calendar, Users, Award, CheckCircle, ArrowRight, Star, Heart, Building, Zap, Disc, Headphones, Volume2 } from 'lucide-react';
+import { Music, Users, ArrowRight, Star, Heart, Building, Zap, Disc, Headphones, Volume2 } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
 
 const LiveMixingDJPage = () => {

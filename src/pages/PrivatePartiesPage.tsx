@@ -1,5 +1,5 @@
 import React from 'react';
-import { Gift, Users, Music, Calendar, CheckCircle, ArrowRight, Star, Quote, Clock, Cake, PartyPopper, Sparkles, Phone, MessageCircle } from 'lucide-react';
+import { Gift, Users, Music, CheckCircle, Cake, PartyPopper, Sparkles } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
 const PrivatePartiesPage = () => {
@@ -174,16 +174,6 @@ const PrivatePartiesPage = () => {
     }
   ];
 
-  const musicStyles = [
-    "Pop & Rock Hits",
-    "Dance & House", 
-    "R&B & Hip-Hop",
-    "Nederlandse Hits",
-    "Jaren '80 & '90",
-    "Feest & Carnaval",
-    "Classics & Oldies",
-    "Latin & Reggaeton"
-  ];
 
   return (
     <div className="bg-white">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Zap, Users, Music, Clock, CheckCircle, Play, Star, Quote, ArrowRight, Volume2, Mic, Radio, Headphones, Speaker, Disc, Phone, MessageCircle } from 'lucide-react';
+import { Zap, Users, Music, Clock, CheckCircle, Play, Volume2, Mic, Radio, Speaker, Disc } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
 const FestivalPage = () => {
@@ -214,11 +214,6 @@ const FestivalPage = () => {
       popular: false
     }
   ];
-
-  const musicGenres = [
-    "House", "Techno", "Hardcore", "Trance", "Progressive", "Electro", "Bass", "Future House"
-  ];
-
   const festivalTypes = [
     "Stadsfeesten",
     "Muziekfestivals", 

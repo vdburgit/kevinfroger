@@ -1,5 +1,5 @@
 import React from 'react';
-import { Gift, Users, Music, Calendar, CheckCircle, ArrowRight, Star, Quote, Clock, Cake, PartyPopper, Sparkles, Phone, MessageCircle, MapPin } from 'lucide-react';
+import { Gift, Users, CheckCircle, PartyPopper, Sparkles, MessageCircle, MapPin } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
 const VerjaardagDJPage = () => {

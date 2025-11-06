@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, Phone, Mail, Calendar, Users, Music, Award, CheckCircle, ArrowRight, Star, Heart, Building, Zap, Palette, Crown, Sun } from 'lucide-react';
+import { Sparkles, Music, Award, CheckCircle, ArrowRight, Star, Zap, Palette, Crown, Sun } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
 
 // Create a simple mask icon component since VenetianMask doesn't exist

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Crown, Phone, Mail, Calendar, Users, Music, Award, CheckCircle, ArrowRight, Star, Heart, Building, Zap, Flag, PartyPopper } from 'lucide-react';
+import { Crown, Users, Music, CheckCircle, ArrowRight, Star, Flag, PartyPopper } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
 
 const DJKoningsdagPage = () => {

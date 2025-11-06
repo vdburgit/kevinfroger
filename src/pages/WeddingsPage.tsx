@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Music, Users, Calendar, CheckCircle, ArrowRight, Star, Quote, Clock, Camera, Gift, Sparkles, Phone, MessageCircle } from 'lucide-react';
+import { Heart, Music, Users, CheckCircle, Camera, Gift, Sparkles } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
 const WeddingsPage = () => {
@@ -192,16 +192,6 @@ const WeddingsPage = () => {
     }
   ];
 
-  const musicStyles = [
-    "Klassiek & Instrumentaal",
-    "Pop & Rock Classics", 
-    "Nederlandse Hits",
-    "Dance & House",
-    "R&B & Soul",
-    "Jazz & Lounge",
-    "Feest & Carnaval",
-    "Internationale Hits"
-  ];
 
   const faq = [
     {

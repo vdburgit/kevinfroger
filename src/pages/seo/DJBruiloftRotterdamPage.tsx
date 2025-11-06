@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, MapPin, Calendar, Users, Music, Award, CheckCircle, ArrowRight, Star, Building, Crown, Camera } from 'lucide-react';
+import { Heart, MapPin, Calendar, Users, Music, Award, ArrowRight, Star, Crown } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
 
 const DJBruiloftRotterdamPage = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mic, Phone, Mail, Calendar, Users, Music, Award, CheckCircle, ArrowRight, Star, Heart, Building, Zap, Volume2, MessageSquare } from 'lucide-react';
+import { Mic, Users, Music, ArrowRight, Star, Heart, Building, Zap, Volume2, MessageSquare } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
 
 const DJMCServicesPage = () => {

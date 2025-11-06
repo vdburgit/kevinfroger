@@ -1,5 +1,5 @@
 import React from 'react';
-import { Euro, Phone, Mail, Calendar, Users, Music, Award, CheckCircle, ArrowRight, Star, Heart, Building, Zap, Globe, Clock, Target } from 'lucide-react';
+import { Euro, Users, Award, CheckCircle, ArrowRight, Star, Heart, Building, Zap, Target } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
 
 const GoedkopeDJPage = () => {

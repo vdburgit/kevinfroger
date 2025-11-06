@@ -1,5 +1,5 @@
 import React from 'react';
-import { Trophy, Users, Target, Calendar, CheckCircle, ArrowRight, Star, Quote, Clock, Medal, Zap, Flag, Phone, MessageCircle } from 'lucide-react';
+import { Trophy, Users, Target, CheckCircle, Medal, Zap, Flag } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
 const SportsEventsPage = () => {
@@ -158,16 +158,6 @@ const SportsEventsPage = () => {
     }
   ];
 
-  const musicStyles = [
-    "Motivatie Hits",
-    "Victory Songs", 
-    "Team Anthems",
-    "High-Energy Dance",
-    "Rock & Pop",
-    "Electronic Beats",
-    "Sport Classics",
-    "International Hits"
-  ];
 
   return (
     <div className="bg-white">

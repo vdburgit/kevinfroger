@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Lock, Eye, FileText, Mail, Phone } from 'lucide-react';
+import { Shield, Mail, Phone } from 'lucide-react';
 
 const PrivacyPage = () => {
   return (

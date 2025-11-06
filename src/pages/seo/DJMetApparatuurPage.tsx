@@ -1,5 +1,5 @@
 import React from 'react';
-import { Speaker, Phone, Mail, Calendar, Users, Music, Award, CheckCircle, ArrowRight, Star, Heart, Building, Zap, Volume2, Mic, Lightbulb } from 'lucide-react';
+import { Speaker, Users, Music, Award, CheckCircle, ArrowRight, Heart, Building, Zap, Volume2, Lightbulb } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
 
 const DJMetApparatuurPage = () => {

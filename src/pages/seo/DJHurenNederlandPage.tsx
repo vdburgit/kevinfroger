@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, Phone, Mail, Calendar, Users, Music, Award, CheckCircle, ArrowRight, Star, Heart, Building, Zap, Globe, Euro, Clock } from 'lucide-react';
+import { Search, Calendar, Users, Award, CheckCircle, ArrowRight, Heart, Building, Zap, Euro } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
 
 const DJHurenNederlandPage = () => {
