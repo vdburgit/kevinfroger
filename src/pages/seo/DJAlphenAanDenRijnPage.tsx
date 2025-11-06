@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Calendar, Users, Music, Award, CheckCircle, ArrowRight, Star, Heart, Building, Zap, Waves } from 'lucide-react';
+import { Calendar, Users, Award, ArrowRight, Heart, Building, Zap, Waves } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
 
 const DJAlphenAanDenRijnPage = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, Quote, ExternalLink, Building, Award, Users, Calendar, ArrowRight, MessageCircle, Phone } from 'lucide-react';
+import { Star, Building, Award, ArrowRight, MessageCircle, Phone } from 'lucide-react';
 import GoogleReviewsSection from '../components/GoogleReviewsSection';
 import PartnersSection from '../components/PartnersSection';
 

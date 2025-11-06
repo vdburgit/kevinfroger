@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, MapPin, Calendar, Users, Music, Award, CheckCircle, ArrowRight, Star, Heart, Building, Zap } from 'lucide-react';
+import { Globe, MapPin, Calendar, Award, ArrowRight } from 'lucide-react';
 import { dutchCities } from '../../data/dutchCities';
 import ContactForm from '../../components/ContactForm';
 

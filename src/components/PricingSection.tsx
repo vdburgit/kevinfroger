@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Check, Star, Calendar, Users, Music, Zap, Building, Heart, ArrowRight, Euro, Clock } from 'lucide-react';
+import { X, Check, Calendar, Zap, Building, Heart, ArrowRight, Clock } from 'lucide-react';
 
 interface Package {
   id: string;

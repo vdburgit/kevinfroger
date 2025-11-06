@@ -1,16 +1,5 @@
 import React from "react";
-import {
-  Star,
-  Building,
-  Award,
-  Users,
-  Calendar,
-  ArrowRight,
-  MessageCircle,
-  Phone,
-  MapPin,
-  Music
-} from "lucide-react";
+import { Star, Building, Award, ArrowRight, MessageCircle, Phone, MapPin } from 'lucide-react';
 import GoogleReviewsSection from "../components/GoogleReviewsSection";
 import PartnersSection from "../components/PartnersSection";
 

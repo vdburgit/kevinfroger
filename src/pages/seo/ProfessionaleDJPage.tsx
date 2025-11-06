@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, Phone, Mail, Calendar, Users, Music, CheckCircle, ArrowRight, Star, Heart, Building, Zap, Shield, Clock, Target } from 'lucide-react';
+import { Award, Calendar, Users, ArrowRight, Star, Heart, Building, Zap, Shield, Clock, Target } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
 
 const ProfessionaleDJPage = () => {

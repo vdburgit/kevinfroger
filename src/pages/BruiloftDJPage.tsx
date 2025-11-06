@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Music, Users, Calendar, CheckCircle, ArrowRight, Star, Quote, Clock, Camera, Gift, Sparkles, Phone, MessageCircle, MapPin } from 'lucide-react';
+import { Heart, Music, Users, CheckCircle, ArrowRight, Star, Sparkles, MessageCircle, MapPin } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
 const BruiloftDJPage = () => {

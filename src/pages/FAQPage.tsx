@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, HelpCircle, Clock, Euro, Music, Users, Calendar, Phone, Mail, MessageCircle } from 'lucide-react';
+import { ChevronDown, ChevronUp, HelpCircle, Euro, Music, Users, Calendar, Phone, Mail } from 'lucide-react';
 
 const FAQPage = () => {
   const [openItems, setOpenItems] = useState<number[]>([0]);

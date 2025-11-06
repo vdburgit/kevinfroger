@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Calendar, Users, Music, Award, CheckCircle, ArrowRight, Star, Heart, Building, Zap, Ship } from 'lucide-react';
+import { MapPin, Calendar, Users, Award, ArrowRight, Heart, Building, Zap, Ship } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ContactForm from '../../../components/ContactForm';
 

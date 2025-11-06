@@ -1,5 +1,5 @@
 import React from 'react';
-import { Euro, Clock, Users, CheckCircle, ArrowRight, Calendar, Music, Award, Zap, Phone } from 'lucide-react';
+import { Euro, Clock, Users, CheckCircle, ArrowRight, Calendar, Music, Phone } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 import PricingSection from '../components/PricingSection';
 

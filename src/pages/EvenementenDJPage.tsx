@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Users, Music, Star, CheckCircle, Play, Quote, ArrowRight, Volume2, Mic, Radio, Headphones, Speaker, Disc, Phone, MessageCircle, MapPin } from 'lucide-react';
+import { Calendar, Users, Music, Star, CheckCircle, MessageCircle, MapPin } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
 const EvenementenDJPage = () => {

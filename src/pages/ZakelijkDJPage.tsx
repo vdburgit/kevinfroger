@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building, Users, Briefcase, Calendar, CheckCircle, Trophy, Star, Quote, ArrowRight, Award, Target, Zap, Clock, Globe, Shield, Phone, MessageCircle, MapPin } from 'lucide-react';
+import { Building, Users, CheckCircle, Trophy, Target, MessageCircle, MapPin } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
 const ZakelijkDJPage = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Clock, CheckCircle, MessageSquare, ArrowRight, Award, Users, Music, Calendar, Star, Quote, MessageCircle, Send, Zap } from 'lucide-react';
+import { Phone, Mail, CheckCircle, ArrowRight, Award, Users, Music, Calendar, Star, MessageCircle, Send } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
 const ContactPage = () => {

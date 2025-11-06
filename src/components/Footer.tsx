@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Youtube, Linkedin, Award, Users, Music, MessageCircle, ChevronDown, ChevronUp } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram, Youtube, Linkedin, MessageCircle, ChevronDown, ChevronUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {

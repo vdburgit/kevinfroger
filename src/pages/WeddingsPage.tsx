@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Music, Users, Calendar, CheckCircle, ArrowRight, Star, Quote, Clock, Camera, Gift, Sparkles, Phone, MessageCircle } from 'lucide-react';
+import { Heart, Music, Users, CheckCircle, Camera, Gift, Sparkles } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
 const WeddingsPage = () => {

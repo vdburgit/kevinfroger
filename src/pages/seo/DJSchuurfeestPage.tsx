@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Phone, Mail, Calendar, Users, Music, Award, CheckCircle, ArrowRight, Star, Heart, Building, Zap, TreePine } from 'lucide-react';
+import { Home, Award, CheckCircle, ArrowRight, Heart, Zap, TreePine } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
 
 // Create a simple barn icon component since Barcode doesn't work as Barn

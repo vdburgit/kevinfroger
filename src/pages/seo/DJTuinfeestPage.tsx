@@ -1,5 +1,5 @@
 import React from 'react';
-import { TreePine, Phone, Mail, Calendar, Users, Music, Award, CheckCircle, ArrowRight, Star, Heart, Building, Zap, Sun, Flower, Leaf } from 'lucide-react';
+import { TreePine, Award, CheckCircle, ArrowRight, Heart, Zap, Sun, Flower, Leaf } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
 
 const DJTuinfeestPage = () => {
