@@ -174,16 +174,6 @@ const PrivatePartiesPage = () => {
     }
   ];
 
-  const musicStyles = [
-    "Pop & Rock Hits",
-    "Dance & House", 
-    "R&B & Hip-Hop",
-    "Nederlandse Hits",
-    "Jaren '80 & '90",
-    "Feest & Carnaval",
-    "Classics & Oldies",
-    "Latin & Reggaeton"
-  ];
 
   return (
     <div className="bg-white">

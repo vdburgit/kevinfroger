@@ -158,16 +158,6 @@ const SportsEventsPage = () => {
     }
   ];
 
-  const musicStyles = [
-    "Motivatie Hits",
-    "Victory Songs", 
-    "Team Anthems",
-    "High-Energy Dance",
-    "Rock & Pop",
-    "Electronic Beats",
-    "Sport Classics",
-    "International Hits"
-  ];
 
   return (
     <div className="bg-white">

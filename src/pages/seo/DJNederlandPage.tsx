@@ -1,15 +1,8 @@
-import React from 'react';
 import { Globe, MapPin, Calendar, Award, ArrowRight } from 'lucide-react';
 import { dutchCities } from '../../data/dutchCities';
 import ContactForm from '../../components/ContactForm';
 
 const DJNederlandPage = () => {
-  const provinces = [
-    "Zuid-Holland", "Noord-Holland", "Utrecht", "Noord-Brabant", 
-    "Gelderland", "Overijssel", "Limburg", "Zeeland", 
-    "Friesland", "Groningen", "Drenthe", "Flevoland"
-  ];
-
   const majorCities = dutchCities.filter(city => city.type === 'grote stad');
   const allCities = dutchCities.filter(city => city.type !== 'grote stad');
 

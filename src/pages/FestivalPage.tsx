@@ -214,11 +214,6 @@ const FestivalPage = () => {
       popular: false
     }
   ];
-
-  const musicGenres = [
-    "House", "Techno", "Hardcore", "Trance", "Progressive", "Electro", "Bass", "Future House"
-  ];
-
   const festivalTypes = [
     "Stadsfeesten",
     "Muziekfestivals", 

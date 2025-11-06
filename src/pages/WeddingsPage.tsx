@@ -192,16 +192,6 @@ const WeddingsPage = () => {
     }
   ];
 
-  const musicStyles = [
-    "Klassiek & Instrumentaal",
-    "Pop & Rock Classics", 
-    "Nederlandse Hits",
-    "Dance & House",
-    "R&B & Soul",
-    "Jazz & Lounge",
-    "Feest & Carnaval",
-    "Internationale Hits"
-  ];
 
   const faq = [
     {
