@@ -5,32 +5,32 @@ import ContactForm from '../../components/ContactForm';
 const DJHurenNederlandPage = () => {
   const services = [
     {
-      title: "DJ Huren Bruiloft",
-      description: "Professionele bruiloft DJ huren voor jullie mooiste dag",
+      title: "Bruiloft DJ",
+      description: "Van ceremonie tot laatste dans: complete begeleiding met persoonlijke voorbereiding.",
       icon: <Heart className="w-8 h-8" />,
       color: "from-pink-500 to-purple-600",
-      price: "Vanaf €500"
+      price: "Op aanvraag"
     },
     {
-      title: "DJ Huren Bedrijfsfeest",
-      description: "Corporate DJ huren voor zakelijke evenementen",
+      title: "Zakelijk DJ",
+      description: "Professionele uitstraling voor bedrijfsfeesten, borrels en netwerkevents.",
       icon: <Building className="w-8 h-8" />,
       color: "from-blue-500 to-blue-600",
-      price: "Vanaf €400"
+      price: "Op aanvraag"
     },
     {
-      title: "DJ Huren Festival",
-      description: "Festival DJ huren voor grote evenementen",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-orange-500 to-pink-600",
-      price: "Vanaf €600"
-    },
-    {
-      title: "DJ Huren Privé Feest",
-      description: "DJ huren voor verjaardagen en familiefeesten",
+      title: "Verjaardag DJ",
+      description: "Muziek op maat voor elke leeftijd en elk publiek – feestelijk of gezellig.",
       icon: <Users className="w-8 h-8" />,
       color: "from-green-500 to-green-600",
-      price: "Vanaf €350"
+      price: "Op aanvraag"
+    },
+    {
+      title: "Licht & Geluid",
+      description: "Complete verhuur van professionele DJ-, licht- en geluidsapparatuur.",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-orange-500 to-pink-600",
+      price: "Op aanvraag"
     }
   ];
 
@@ -76,13 +76,12 @@ const DJHurenNederlandPage = () => {
             </div>
             
             <h1 className="text-5xl lg:text-7xl xl:text-8xl font-black mb-8 leading-tight text-shadow-lg">
-              DJ HUREN
-              <span className="block text-orange-400">NEDERLAND</span>
+              DJ HUREN NEDERLAND –
+              <span className="block text-orange-400">ALLROUND, BETAALBAAR EN BETROUWBAAR</span>
             </h1>
-            
+
             <p className="text-xl lg:text-2xl mb-12 text-blue-100 leading-relaxed max-w-4xl mx-auto">
-              DJ huren in Nederland? DJ Kevin Froger is de professionele keuze. Goedkope DJ met kwaliteit, 
-              ervaren DJ met eigen apparatuur, allround DJ voor alle evenementen. DJ huren vanaf €350.
+              DJ huren met eigen apparatuur, muziek op maat en persoonlijke aanpak. Direct contact met de DJ, geen tussenpersonen. Prijsindicatie binnen 24 uur – landelijke dekking.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
@@ -123,11 +122,11 @@ const DJHurenNederlandPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-5xl lg:text-7xl font-black text-gray-900 mb-8 text-shadow">
-              DJ HUREN
-              <span className="block text-blue-700">ALLE EVENEMENTEN</span>
+              DJ HUREN PER GELEGENHEID –
+              <span className="block text-blue-700">SPECIALISATIES & ERVARING</span>
             </h2>
             <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Professionele DJ huren voor alle gelegenheden - goedkoop en met kwaliteit
+              Van bruiloft tot bedrijfsfeest: muziek op maat, eigen apparatuur en ervaring met elk publiek.
             </p>
           </div>
           

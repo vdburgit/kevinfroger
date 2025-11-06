@@ -66,43 +66,43 @@ const HomePage = () => {
 
   const services = [
     {
-      title: "Bruiloften",
-      description: "Complete muzikale begeleiding voor jullie mooiste dag. Van ceremonie tot late avond.",
-      features: ["Ceremonie muziek", "Diner begeleiding", "Eerste dans", "Feestavond DJ"],
-      link: "/bruiloften",
+      title: "Bruiloft DJ",
+      description: "Van ceremonie tot laatste plaat: persoonlijke begeleiding en muziek die past bij jullie dag.",
+      features: ["Intake & voorbereiding", "Ceremonie & diner", "Live mixing feestavond", "Eigen licht & geluid"],
+      link: "/bruiloft-dj",
       image: "/images/dj-kevin-froger-bruiloft-scaled.jpeg",
       icon: <Heart className="w-8 h-8" />,
       color: "from-pink-500 to-purple-600",
       price: "Op aanvraag"
     },
     {
-      title: "Bedrijfsfeesten", 
-      description: "Professionele entertainment voor corporate events en personeelsfeesten.",
-      features: ["Netwerkevents", "Jubilea", "Productlanceringen", "Teambuilding"],
-      link: "/bedrijfsfeesten",
+      title: "Verjaardag DJ",
+      description: "Muziek op maat voor elke verjaardag. Van gezellige 50+ tot knallend 30-jarig feest.",
+      features: ["Muziek op het publiek", "Flexibele opzet", "Licht & geluid pakket", "MC services mogelijk"],
+      link: "/verjaardag-dj",
+      image: "/images/IMG_1605.png",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-600",
+      price: "Op aanvraag"
+    },
+    {
+      title: "Zakelijk DJ",
+      description: "Van netwerkborrel tot personeelsfeest: professioneel, representatief en aanpasbaar.",
+      features: ["Achtergrond of feest", "Representatieve uitstraling", "Flexibele indeling", "Meertalig mogelijk"],
+      link: "/zakelijk-dj",
       image: "/images/dj-kevin-froger-bedrijfsfeest.png",
       icon: <Building className="w-8 h-8" />,
       color: "from-blue-500 to-blue-600",
       price: "Op aanvraag"
     },
     {
-      title: "Festivals",
-      description: "High-energy festival sets. 60 minuten non-stop entertainment voor elk publiek.",
-      features: ["Power sets", "Crowd control", "MC services", "Flexibele tijdslots"],
-      link: "/festivals", 
+      title: "Licht & Geluid",
+      description: "Complete verhuur van professionele DJ-, licht- en geluidsapparatuur voor elk evenement.",
+      features: ["Professioneel geluid", "Sfeervolle lichtshow", "Eigen materiaal", "Inclusief DJ mogelijk"],
+      link: "/licht-en-geluid-verhuur",
       image: "/images/licht-en-geluid-verhuur-show-scaled.jpeg",
       icon: <Zap className="w-8 h-8" />,
       color: "from-orange-500 to-pink-600",
-      price: "Op aanvraag"
-    },
-    {
-      title: "Privé Feesten",
-      description: "Verjaardagen en familiefeesten op maat gemaakt voor elke gelegenheid.",
-      features: ["Verjaardagsfeesten", "Jubilea", "Familiebijeenkomsten", "Themafeesten"],
-      link: "/prive-feesten",
-      image: "/images/IMG_1605.png",
-      icon: <Users className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-600",
       price: "Op aanvraag"
     }
   ];
@@ -110,20 +110,20 @@ const HomePage = () => {
   const features = [
     {
       icon: <Volume2 className="w-12 h-12" />,
-      title: "LIVE MIXING SPECIALIST",
-      description: "Geen standaard playlists maar unieke live mixen die ter plekke worden samengesteld, afgestemd op de sfeer van het moment",
+      title: "RECHTSTREEKS BIJ DE DJ",
+      description: "Je hebt direct contact met mij. Geen verhuurbedrijf, geen tussenpersonen. Duidelijke communicatie, snelle reactie en betrokkenheid van begin tot eind.",
       color: "from-blue-500 to-blue-600"
     },
     {
       icon: <Mic className="w-12 h-12" />,
-      title: "ENERGIEKE MC SERVICES",
-      description: "DJ én MC in één persoon. Interactie met het publiek en professionele presentatie voor complete entertainment",
+      title: "COMPLETE DJ SHOW",
+      description: "Licht, geluid en DJ in één pakket. Van subtiele achtergrondmuziek tot spectaculaire lichtshow – alles uit eigen bezit en strak geregeld.",
       color: "from-orange-500 to-orange-600"
     },
     {
       icon: <Users className="w-12 h-12" />,
-      title: "15+ JAAR ERVARING", 
-      description: "Jarenlange ervaring met alle soorten evenementen. Van intieme bruiloften tot grote festivals - altijd de juiste sfeer",
+      title: "15+ JAAR ERVARING",
+      description: "Meer dan 500 bruiloften gedraaid, van intieme ceremonies tot grote feesten. Ik weet hoe ik de dansvloer vol krijg en vol houd.",
       color: "from-purple-500 to-pink-600"
     }
   ];
@@ -190,13 +190,12 @@ const HomePage = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-12 z-10 h-full flex items-center justify-center">
           <div className="text-center w-full max-w-5xl mx-auto">
             <h1 id="hero-title" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-4 lg:mb-6 leading-tight text-shadow-lg">
-              DJ VOOR BRUILOFT,
-              <span className="block text-orange-400">VERJAARDAG & EVENTS</span>
-              <span className="block text-orange-400">PERSOONLIJK, STRAK GEREGELD</span>
+              ALLROUND DJ MET COMPLETE SHOW –
+              <span className="block text-orange-400">RECHTSTREEKS BIJ DE DJ</span>
             </h1>
-            
+
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl mb-6 lg:mb-8 text-blue-100 leading-relaxed max-w-3xl mx-auto px-4">
-              Allround DJ met complete show (licht & geluid). Van voorbereiding tot laatste plaat: strak geregeld, persoonlijk en op jouw publiek afgestemd.
+              Persoonlijk contact, strakke uitvoering en een volle dansvloer. 15+ jaar ervaring, 500+ bruiloften. Vraag direct een prijsindicatie of offerte – app of bel.
             </p>
             
             {/* Desktop buttons */}
@@ -307,11 +306,11 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-black text-gray-900 mb-4 lg:mb-6 text-shadow">
-              WAT JE KRIJGT
-              <span className="block text-orange-500">COMPLETE DJ SHOW</span>
+              DJ HUREN VOOR ELK EVENEMENT –
+              <span className="block text-orange-500">PROFESSIONEEL EN COMPLEET</span>
             </h2>
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              Allround DJ met eigen show, persoonlijk contact en strakke uitvoering
+              Van bruiloft tot zakelijk evenement: één aanspreekpunt, eigen apparatuur en muziek op maat. Direct prijsindicatie of offerte – geen tussenpersonen.
             </p>
           </div>
           
@@ -429,11 +428,11 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-black text-gray-900 mb-4 lg:mb-6 text-shadow">
-              HOE IK WERK
-              <span className="block text-orange-500">STRAK GEREGELD</span>
+              WAAROM DJ KEVIN FROGER?
+              <span className="block text-orange-500">PERSOONLIJK, PROFESSIONEEL, STRAK GEREGELD</span>
             </h2>
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              Van intake tot nazorg - één aanspreekpunt en flexibel meedenken
+              Van intake tot nazorg: één aanspreekpunt, flexibel meedenken en een dansvloer die vol blijft.
             </p>
           </div>
           
