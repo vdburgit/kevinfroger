@@ -159,8 +159,6 @@ const BiographyPage = () => {
                 loading="eager"
                 decoding="async"
                 fetchPriority="high"
-                decoding="sync"
-                fetchPriority="high"
               />
               <div className="absolute -bottom-8 -right-8 bg-white p-8 rounded-2xl shadow-xl">
                 <div className="flex items-center space-x-4">
