@@ -1,78 +1,49 @@
-import React from 'react';
 import { Heart, Music, Users, CheckCircle, ArrowRight, Star, Sparkles, MessageCircle, MapPin } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
+import { useSEO, generateBreadcrumbSchema, generateServiceSchema, generateFAQSchema } from '../hooks/useSEO';
 
 const BruiloftDJPage = () => {
-  // SEO metadata for this page
-  React.useEffect(() => {
-    document.title = "Bruiloft DJ – persoonlijk & professioneel | Kevin Froger";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Openingsdans tot knallend slot. Complete DJ‑show met licht & geluid, afgestemd op jullie dag. Snel een prijs via WhatsApp of ontvang een offerte.');
-    }
-    
-    // Add structured data for wedding page
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify({
-      "@context": "https://schema.org",
-      "@graph": [
+  // Enhanced SEO configuration for wedding DJ page
+  useSEO({
+    title: 'Bruiloft DJ – persoonlijk & professioneel | Kevin Froger',
+    description: 'Openingsdans tot knallend slot. Complete DJ‑show met licht & geluid, afgestemd op jullie dag. 15+ jaar ervaring, 500+ bruiloften gedraaid. Snel een prijs via WhatsApp of ontvang een offerte.',
+    keywords: 'bruiloft dj, bruiloft dj nederland, bruiloft dj zuid-holland, trouw dj, dj bruiloft, bruiloft muziek, ceremonie muziek, openingsdans, feest dj bruiloft',
+    canonical: 'https://kevinfroger.nl/bruiloft-dj',
+    ogType: 'website',
+    ogImage: 'https://kevinfroger.nl/images/dj-kevin-froger-bruiloft-scaled.jpeg',
+    ogImageAlt: 'DJ Kevin Froger - Bruiloft DJ met complete show setup',
+    twitterCard: 'summary_large_image',
+    jsonLd: [
+      generateBreadcrumbSchema([
+        { name: 'Home', url: '/' },
+        { name: 'Bruiloft DJ', url: '/bruiloft-dj' }
+      ]),
+      generateServiceSchema({
+        name: 'DJ voor bruiloft',
+        description: 'Complete bruiloft DJ service met licht, geluid en MC services. Persoonlijke begeleiding van ceremonie tot late avond voor jullie perfecte bruiloft.',
+        areaServed: ['Nederland', 'Zuid-Holland', 'Noord-Brabant', 'Gelderland', 'Utrecht', 'Overijssel', 'Noord-Holland', 'Zeeland'],
+        priceRange: '€750-€2500'
+      }),
+      generateFAQSchema([
         {
-          "@type": "Service",
-          "serviceType": "DJ voor bruiloft",
-          "provider": {
-            "@type": "Person",
-            "name": "Kevin Froger",
-            "url": "https://kevinfroger.nl/"
-          },
-          "areaServed": ["Zuid-Holland", "Noord-Brabant", "Gelderland", "Utrecht", "Overijssel"],
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "DJ‑shows",
-            "itemListElement": [
-              {"@type": "Offer", "name": "Compacte show"},
-              {"@type": "Offer", "name": "Uitgebreide show"},
-              {"@type": "Offer", "name": "XL show met special effects"}
-            ]
-          }
+          question: 'Kunnen we onze favoriete muziek doorgeven?',
+          answer: 'Zeker. Vooraf verzamelen we jullie wensen en doornemen we alles. Op de avond zelf speel ik in op de sfeer en verzoekjes.'
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Kunnen we onze favoriete muziek doorgeven?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Zeker. Vooraf verzamelen we jullie wensen en doornemen we alles. Op de avond zelf speel ik in op de sfeer en verzoekjes."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Wat is inbegrepen bij de show?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Complete set met licht en geluid, microfoon, op- & afbouw en voorbereiding. Alles in overleg met de locatie."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Hoe snel ontvangen we een prijsindicatie?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Binnen enkele minuten via WhatsApp of e‑mail krijg je een indicatie op basis van duur, locatie en setup."
-              }
-            }
-          ]
+          question: 'Wat is inbegrepen bij de show?',
+          answer: 'Complete set met licht en geluid, microfoon, op- & afbouw en voorbereiding. Alles in overleg met de locatie.'
+        },
+        {
+          question: 'Hoe snel ontvangen we een prijsindicatie?',
+          answer: 'Binnen enkele minuten via WhatsApp of e‑mail krijg je een indicatie op basis van duur, locatie en setup.'
+        },
+        {
+          question: 'Begeleid je ook de ceremonie?',
+          answer: 'Ja, als dat gewenst is zorgen we voor muziek tijdens de ceremonie, vanaf binnenkomst tot ontvangst.'
         }
-      ]
-    });
-    document.head.appendChild(script);
-    
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
+      ])
+    ]
+  });
 
   const services = [
     {

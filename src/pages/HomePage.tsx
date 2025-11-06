@@ -1,20 +1,40 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, ArrowRight, Users, Zap, Heart, Building, Volume2, Mic, MessageCircle, CheckCircle, MapPin } from 'lucide-react';
 import MusicGenresSection from '../components/MusicGenresSection';
 import PartnersSection from '../components/PartnersSection';
+import { useSEO, generateBreadcrumbSchema } from '../hooks/useSEO';
 
 const HomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
-  // SEO metadata for homepage
-  React.useEffect(() => {
-    document.title = "DJ Kevin Froger – DJ voor bruiloft, verjaardag & events";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Allround DJ met complete show (licht & geluid). Persoonlijk contact, strakke uitvoering en volle dansvloer. Vraag direct een prijsindicatie of offerte.');
-    }
-  }, []);
+
+  // Enhanced SEO configuration for homepage
+  useSEO({
+    title: 'DJ Kevin Froger – DJ voor bruiloft, verjaardag & events',
+    description: 'Allround DJ met complete show (licht & geluid). Persoonlijk contact, strakke uitvoering en volle dansvloer. 15+ jaar ervaring, 500+ bruiloften. Vraag direct een prijsindicatie of offerte.',
+    keywords: 'bruiloft dj nederland, dj boeken, dj huren, allround dj, bruiloft dj, festival dj, bedrijfsfeest dj, live mixing dj, mc services',
+    canonical: 'https://kevinfroger.nl/',
+    ogType: 'website',
+    ogImage: 'https://kevinfroger.nl/images/dj-kevin-froger-bruiloft-scaled.jpeg',
+    ogImageAlt: 'DJ Kevin Froger - Professioneel DJ bij bruiloft met complete licht en geluid show',
+    twitterCard: 'summary_large_image',
+    jsonLd: [
+      generateBreadcrumbSchema([
+        { name: 'Home', url: '/' }
+      ]),
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        'name': 'DJ Kevin Froger',
+        'url': 'https://kevinfroger.nl',
+        'potentialAction': {
+          '@type': 'SearchAction',
+          'target': 'https://kevinfroger.nl/search?q={search_term_string}',
+          'query-input': 'required name=search_term_string'
+        }
+      }
+    ]
+  });
 
   const heroSlides = [
     { // This is the first slide, used as static image for mobile
