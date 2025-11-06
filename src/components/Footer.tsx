@@ -68,17 +68,17 @@ const Footer = () => {
               Allround DJ Kevin Froger – Professionele DJ services voor bruiloften, bedrijfsfeesten en festivals. Exclusieve DJ boeken voor alle evenementen in Nederland.
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/KevinFroger.nl" target="_blank" rel="noopener noreferrer" className="group text-blue-300 hover:text-orange-400 transition-colors p-3 bg-blue-700/50 rounded-full hover:bg-orange-500/20">
-                <Facebook className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
+              <a href="https://www.facebook.com/KevinFroger.nl" target="_blank" rel="noopener noreferrer" className="group text-blue-300 hover:text-orange-400 transition-colors p-3 bg-blue-700/50 rounded-full hover:bg-orange-500/20" aria-label="Volg DJ Kevin Froger op Facebook">
+                <Facebook className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" aria-hidden="true" />
               </a>
-              <a href="https://www.instagram.com/djkevinfroger/" target="_blank" rel="noopener noreferrer" className="group text-blue-300 hover:text-orange-400 transition-colors p-3 bg-blue-700/50 rounded-full hover:bg-orange-500/20">
-                <Instagram className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
+              <a href="https://www.instagram.com/djkevinfroger/" target="_blank" rel="noopener noreferrer" className="group text-blue-300 hover:text-orange-400 transition-colors p-3 bg-blue-700/50 rounded-full hover:bg-orange-500/20" aria-label="Volg DJ Kevin Froger op Instagram">
+                <Instagram className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" aria-hidden="true" />
               </a>
-              <a href="https://www.youtube.com/@KEVINFROGER" target="_blank" rel="noopener noreferrer" className="group text-blue-300 hover:text-orange-400 transition-colors p-3 bg-blue-700/50 rounded-full hover:bg-orange-500/20">
-                <Youtube className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
+              <a href="https://www.youtube.com/@KEVINFROGER" target="_blank" rel="noopener noreferrer" className="group text-blue-300 hover:text-orange-400 transition-colors p-3 bg-blue-700/50 rounded-full hover:bg-orange-500/20" aria-label="Bekijk DJ Kevin Froger op YouTube">
+                <Youtube className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" aria-hidden="true" />
               </a>
-              <a href="https://www.linkedin.com/in/kevin-froger-b23aa263/" target="_blank" rel="noopener noreferrer" className="group text-blue-300 hover:text-orange-400 transition-colors p-3 bg-blue-700/50 rounded-full hover:bg-orange-500/20">
-                <Linkedin className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
+              <a href="https://www.linkedin.com/in/kevin-froger-b23aa263/" target="_blank" rel="noopener noreferrer" className="group text-blue-300 hover:text-orange-400 transition-colors p-3 bg-blue-700/50 rounded-full hover:bg-orange-500/20" aria-label="Connect met DJ Kevin Froger op LinkedIn">
+                <Linkedin className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" aria-hidden="true" />
               </a>
               <a 
                 href="https://api.whatsapp.com/send/?phone=31645251333&text&type=phone_number&app_absent=0"
