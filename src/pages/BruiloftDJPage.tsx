@@ -48,56 +48,56 @@ const BruiloftDJPage = () => {
   const services = [
     {
       icon: <Heart className="w-8 h-8" />,
-      title: "Ceremonie begeleiding",
-      description: "Muzikale ondersteuning tijdens de trouwceremonie"
+      title: "Ceremonie & Ontvangst",
+      description: "Muzikale begeleiding vanaf binnenkomst tot borrel"
     },
     {
       icon: <Music className="w-8 h-8" />,
-      title: "Diner muziek",
-      description: "Sfeervolle achtergrondmuziek tijdens het diner"
+      title: "Diner & Speeches",
+      description: "Sfeervolle achtergrondmuziek en microfoon voor toespraken"
     },
     {
       icon: <Sparkles className="w-8 h-8" />,
-      title: "Eerste dans begeleiding",
-      description: "Perfect geluid en timing voor jullie eerste dans"
+      title: "Openingsdans",
+      description: "Perfecte timing en geluid voor jullie eerste dans samen"
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Feestavond DJ sets",
-      description: "Van rustig tot uitbundig, aangepast aan jullie gasten"
+      title: "Feestavond",
+      description: "Live DJ set afgestemd op jullie gasten en wensen"
     }
   ];
 
   const usps = [
-    "Complete show met licht & geluid",
-    "Duidelijke planning en één aanspreekpunt", 
-    "Flexibel inspelen op de sfeer",
-    "Nette op‑/afbouw zonder overlast"
+    "Van ceremonie tot laatste plaat – complete begeleiding",
+    "Direct contact met de DJ – geen verhuurbedrijf",
+    "Eigen licht- en geluidapparatuur uit één hand",
+    "500+ bruiloften ervaring – ik weet wat werkt"
   ];
 
   const process = [
     {
       step: "01",
       title: "INTAKE",
-      description: "We bespreken wensen, muziek en planning",
+      description: "Kennismaking, wensen bespreken en prijsindicatie binnen 24 uur",
       icon: <Heart className="w-8 h-8" />
     },
     {
-      step: "02", 
+      step: "02",
       title: "VOORBEREIDING",
-      description: "Afstemming met locatie en draaiboek",
+      description: "Muziekwensen verzamelen, afstemming met locatie en draaiboek opstellen",
       icon: <Music className="w-8 h-8" />
     },
     {
       step: "03",
-      title: "TECHNIEK",
-      description: "Passende set licht & geluid, klaar voor aanvang",
+      title: "OPBOUW",
+      description: "Ruim voor aanvang installatie opbouwen en testen",
       icon: <Sparkles className="w-8 h-8" />
     },
     {
       step: "04",
-      title: "SHOW",
-      description: "Allround set, verzoekjes welkom, nette presentatie",
+      title: "UITVOERING",
+      description: "Van ceremonie tot feestavond – live mixing op jullie publiek",
       icon: <Star className="w-8 h-8" />
     }
   ];

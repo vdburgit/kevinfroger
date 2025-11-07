@@ -68,45 +68,45 @@ const VerjaardagDJPage = () => {
   const services = [
     {
       icon: <Gift className="w-8 h-8" />,
-      title: "18e & 21e verjaardagen",
-      description: "Trendy muziek voor jonge volwassenen"
+      title: "18+, 21+ en 30+ feesten",
+      description: "Muziek die aansluit bij jonge volwassenen"
     },
     {
       icon: <PartyPopper className="w-8 h-8" />,
-      title: "Volwassen verjaardagen",
-      description: "Van 30+ tot 70+ - elke leeftijd zijn eigen stijl"
+      title: "40+, 50+ en 60+ verjaardagen",
+      description: "Van gezellig tot uitbundig – afgestemd op het publiek"
     },
     {
       icon: <Sparkles className="w-8 h-8" />,
-      title: "Jubilea & mijlpalen",
-      description: "Speciale gelegenheden vieren met stijl"
+      title: "Jubilea en mijlpalen",
+      description: "25, 40 of 50 jaar getrouwd – feestelijk vieren"
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Familiebijeenkomsten",
-      description: "Reünies en familiefeesten"
+      title: "Familiefeesten",
+      description: "Reünies en familiebijeenkomsten met alle generaties"
     }
   ];
 
   const usps = [
-    "Allround muziek voor alle leeftijden",
-    "Verzoekjes welkom tijdens het feest",
-    "Complete set met licht & geluid",
-    "Snelle communicatie via WhatsApp"
+    "Muziek op maat voor elke leeftijd en elk publiek",
+    "Van gezellig tot feestelijk – flexibel inspelen",
+    "Eigen licht- en geluidapparatuur inclusief",
+    "Direct contact met de DJ – snelle afstemming"
   ];
 
   const faq = [
     {
       question: "Welke muziek draai je op verjaardagen?",
-      answer: "Allround muziek aangepast aan de leeftijd en wensen. Van actuele hits tot nostalgische classics."
+      answer: "Allround muziek aangepast aan de leeftijd en het publiek. Van actuele hits voor jonge feesten tot nostalgische classics voor 50+ verjaardagen. Vooraf stemmen we muziekwensen af."
     },
     {
       question: "Kunnen gasten verzoekjes doen?",
-      answer: "Absoluut! Verzoekjes zijn altijd welkom en ik speel graag in op de wensen van de gasten."
+      answer: "Zeker! Verzoekjes zijn welkom en ik werk ze graag in als ze passen bij de sfeer. Ook kunnen gasten vooraf via een online tool nummers doorgeven."
     },
     {
-      question: "Hoe lang van tevoren opbouwen?",
-      answer: "Meestal 1-2 uur voor aanvang. Dit stem ik vooraf af met de locatie en jullie planning."
+      question: "Hoe lang van tevoren ben je er voor opbouw?",
+      answer: "Meestal 1-2 uur voor aanvang, afhankelijk van de locatie en opstelling. Ik stem dit vooraf met je af zodat alles klaar is zonder stress."
     }
   ];
 

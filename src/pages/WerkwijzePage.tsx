@@ -39,47 +39,47 @@ const WerkwijzePage: React.FC = () => {
     {
       step: "01",
       title: "INTAKE",
-      description: "We bespreken wensen, muziek en planning",
+      description: "Kennismaken en behoeftes bespreken",
       details:
-        "Telefonisch of persoonlijk gesprek over jouw event, muziekvoorkeuren, tijdschema en speciale wensen.",
+        "We bespreken je evenement, wensen en verwachtingen. Datum, locatie, tijdschema, muziekvoorkeuren en eventuele speciale verzoeken komen aan bod. Je krijgt binnen 24 uur een prijsindicatie of offerte.",
       icon: <Users className="w-8 h-8" />
     },
     {
       step: "02",
       title: "VOORBEREIDING",
-      description: "Afstemming met locatie en draaiboek",
-      details: "Ik neem contact op met de locatie voor technische afstemming en bereid de muziekset voor.",
+      description: "Planning en afstemming",
+      details: "Ik stem af met de locatie over techniek en ruimte. We stellen samen een draaiboek op met tijdsindeling en belangrijke momenten. Muziekwensen verzamel ik via een handige online tool.",
       icon: <Calendar className="w-8 h-8" />
     },
     {
       step: "03",
-      title: "TECHNIEK",
-      description: "Passende set licht & geluid, klaar voor aanvang",
-      details: "Tijdige opbouw van de complete DJ-show, soundcheck en laatste afstemming.",
+      title: "OPBOUW",
+      description: "Installatie en soundcheck",
+      details: "Ik kom ruim voor aanvang de apparatuur opbouwen en instellen. Alles wordt getest: geluid, licht en backup-systemen. Bij aanvang van het feest is alles klaar en werkend.",
       icon: <Cog className="w-8 h-8" />
     },
     {
       step: "04",
-      title: "SHOW",
-      description: "Allround set, verzoekjes welkom, nette presentatie",
+      title: "UITVOERING",
+      description: "Live DJ performance op maat",
       details:
-        "Live DJ-performance aangepast aan het publiek, met ruimte voor verzoekjes en interactie.",
+        "Ik draai live en stem de muziek af op het publiek en de sfeer. Verzoekjes zijn welkom en worden waar mogelijk ingewerkt. Als MC begeleid ik indien gewenst ook aankondigingen en ceremonies.",
       icon: <Music className="w-8 h-8" />
     },
     {
       step: "05",
-      title: "NAZORG",
-      description: "Korte terugkoppeling en evaluatie",
-      details: "Nette afbouw en optioneel een korte evaluatie voor toekomstige verbeteringen.",
+      title: "AFBOUW & NAZORG",
+      description: "Netjes afsluiten en evalueren",
+      details: "Na afloop bouw ik de apparatuur netjes af. Optioneel stuur ik je een evaluatieformulier om de samenwerking te bespreken en te leren van jullie ervaring.",
       icon: <Star className="w-8 h-8" />
     }
   ];
 
   const benefits = [
-    "Eén aanspreekpunt voor alle communicatie",
-    "Flexibel meedenken bij wijzigingen",
-    "Transparante afspraken en planning",
-    "Professionele uitvoering van A tot Z"
+    "Direct contact met de DJ – geen verhuurbedrijf of tussenpersonen",
+    "Flexibel meedenken bij wijzigingen of onverwachte situaties",
+    "Transparante communicatie en heldere afspraken",
+    "Persoonlijke betrokkenheid van intake tot afbouw"
   ];
 
   const regions = [
@@ -100,10 +100,10 @@ const WerkwijzePage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Cog className="w-16 h-16 mx-auto mb-6 text-gray-200" />
           <h1 className="text-4xl lg:text-6xl font-black mb-6">
-            Werkwijze – zo regelen we jouw feest van A tot Z
+            Werkwijze – van intake tot nazorg
           </h1>
           <p className="text-xl text-gray-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Heldere stappen: intake, voorbereiding, techniek, show en nazorg. Eén aanspreekpunt en flexibel meedenken.
+            Van eerste contact tot afbouw: één aanspreekpunt, duidelijke stappen en persoonlijke betrokkenheid. Zo werkt samenwerken met DJ Kevin Froger.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">

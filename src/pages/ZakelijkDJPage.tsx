@@ -61,30 +61,30 @@ const ZakelijkDJPage = () => {
     {
       icon: <Building className="w-8 h-8" />,
       title: "Bedrijfsfeesten & jubilea",
-      description: "Professionele entertainment voor bedrijfsevenementen"
-    },
-    {
-      icon: <Target className="w-8 h-8" />,
-      title: "Productlanceringen",
-      description: "Muzikale ondersteuning bij product presentaties"
+      description: "Muzikale begeleiding voor bedrijfsfeesten en mijlpalen"
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Netwerkevenenementen", 
-      description: "Sfeervolle achtergrondmuziek voor networking"
+      title: "Netwerkborrels & recepties",
+      description: "Subtiele achtergrondmuziek voor networking en borrels"
     },
     {
       icon: <Trophy className="w-8 h-8" />,
       title: "Personeelsfeesten",
-      description: "Van rustig tot uitbundig voor alle medewerkers"
+      description: "Van gezellig borrelmoment tot uitbundig teamfeest"
+    },
+    {
+      icon: <Target className="w-8 h-8" />,
+      title: "Productlanceringen & events",
+      description: "Muzikale ondersteuning bij presentaties en openingen"
     }
   ];
 
   const usps = [
-    "Briefing en professionele voorbereiding",
-    "Dresscode en representatieve uitstraling",
-    "Volume en zone-afstemming",
-    "Microfoon en aankondigingen op verzoek"
+    "Professionele uitstraling en representatief optreden",
+    "Flexibel: van achtergrondmuziek tot feestavond",
+    "Afstemming met locatie en planning vooraf",
+    "Microfoon en MC-services indien gewenst"
   ];
 
   const faq = [

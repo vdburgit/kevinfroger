@@ -125,35 +125,35 @@ const PricingPage = () => {
   const factors = [
     {
       icon: <Clock className="w-8 h-8" />,
-      title: "Duur van het Event",
+      title: "Duur & Tijdstip",
       description: "Van 4 uur tot complete dagbegeleiding"
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: "Aantal Gasten",
-      description: "Bepaalt de benodigde apparatuur"
+      description: "Bepaalt welk licht- en geluidpakket nodig is"
     },
     {
       icon: <Calendar className="w-8 h-8" />,
       title: "Type Evenement",
-      description: "Elke gelegenheid heeft eigen behoeften"
+      description: "Bruiloft, verjaardag of zakelijk feest"
     },
     {
       icon: <Music className="w-8 h-8" />,
-      title: "Extra Services",
-      description: "MC, verlichting, speciale effecten"
+      title: "Extra Wensen",
+      description: "MC, speciale effecten of uitgebreide lichtshow"
     }
   ];
 
   const benefits = [
-    "Transparante prijzen zonder verborgen kosten",
-    "Gratis offerte binnen 24 uur",
-    "Flexibele pakketten op maat",
-    "Professionele apparatuur inbegrepen",
-    "15+ jaar ervaring gegarandeerd",
-    "Backup plan en apparatuur standaard",
-    "Persoonlijke voorbereiding altijd",
-    "Tevredenheidsgarantie"
+    "Prijsindicatie binnen 24 uur na aanvraag",
+    "Geen verborgen kosten – alles inclusief",
+    "Flexibel maatwerk voor elk evenement",
+    "Professionele apparatuur altijd inbegrepen",
+    "Direct contact met de DJ",
+    "Backup-apparatuur standaard aanwezig",
+    "Persoonlijke voorbereiding en afstemming",
+    "15+ jaar ervaring, 500+ bruiloften"
   ];
 
   return (
@@ -170,14 +170,12 @@ const PricingPage = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
           <div className="text-center">
             <h1 className="text-5xl lg:text-7xl xl:text-8xl font-black mb-8 leading-tight text-shadow-lg">
-              TRANSPARANTE
-              <span className="block text-orange-400">PRIJZEN</span>
-              <span className="block text-orange-400">VOOR ELKE</span>
-              <span className="block text-orange-400">GELEGENHEID</span>
+              PRIJZEN DJ BOEKEN –
+              <span className="block text-orange-400">DUIDELIJK EN EERLIJK</span>
             </h1>
-            
+
             <p className="text-xl lg:text-2xl mb-12 text-blue-100 leading-relaxed max-w-4xl mx-auto">
-              Duidelijke pakketten zonder verborgen kosten. Van intieme feesten tot grote evenementen - wij hebben voor elke gelegenheid en elk budget de perfecte oplossing.
+              Prijs op maat, afgestemd op je evenement en wensen. Binnen 24 uur een prijsindicatie of offerte – geen verrassingen, geen verborgen kosten.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">

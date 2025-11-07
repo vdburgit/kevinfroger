@@ -203,8 +203,8 @@ const PartnersSection = () => {
                         <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-white/20 hover:border-orange-300/50 transform hover:-translate-y-2 hover:scale-105 h-32 flex flex-col">
                           {/* Logo Container */}
                           <div className="h-20 flex items-center justify-center bg-gray-50 rounded-t-lg p-3 group-hover:bg-white transition-colors duration-300">
-                            <img 
-                              src={partner.logo} 
+                            <img
+                              src={partner.logo}
                               alt={`${partner.name} logo`}
                               className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-300"
                               width="120"
@@ -212,7 +212,6 @@ const PartnersSection = () => {
                               loading="lazy"
                               decoding="async"
                               fetchPriority="low"
-                              decoding="async"
                               style={{ aspectRatio: '2/1' }}
                             />
                           </div>

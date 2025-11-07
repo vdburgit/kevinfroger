@@ -38,44 +38,44 @@ const BiographyPage = () => {
     {
       icon: <MapPin className="w-8 h-8" />,
       title: "Hoeksche Waard",
-      description: "Afkomstig uit de prachtige Hoeksche Waard",
+      description: "Gevestigd in Hoeksche Waard, landelijke dekking",
       color: "from-blue-500 to-blue-600"
     },
     {
       icon: <Music className="w-8 h-8" />,
       title: "Live Mixing",
-      description: "Unieke live mixen ter plekke samengesteld",
+      description: "Muziek live afgestemd op het publiek",
       color: "from-orange-500 to-orange-600"
     },
     {
       icon: <Mic className="w-8 h-8" />,
       title: "DJ & MC",
-      description: "Energieke MC die interactie aangaat met publiek",
+      description: "Begeleiding van ceremonies en aankondigingen",
       color: "from-purple-500 to-pink-600"
     },
     {
       icon: <Heart className="w-8 h-8" />,
-      title: "Persoonlijke Aanpak",
-      description: "Afgestemd op de sfeer van het moment",
+      title: "Direct Contact",
+      description: "Rechtstreeks met de DJ – geen tussenpersonen",
       color: "from-green-500 to-green-600"
     }
   ];
 
   const expertise = [
     {
-      title: "Live Mixing Specialist",
-      description: "Geen standaard playlists of mixtapes, maar unieke live mixen die ter plekke worden samengesteld. Kevin voelt perfect aan wat het publiek wil horen en past zijn set daarop aan.",
+      title: "Persoonlijke Aanpak",
+      description: "Direct contact met de DJ – geen verhuurbedrijf of tussenpersonen. Je spreekt en plant rechtstreeks met Kevin, van eerste contact tot afbouw. Betrokken, toegankelijk en flexibel.",
+      icon: <Heart className="w-12 h-12" />
+    },
+    {
+      title: "Complete DJ Show",
+      description: "Licht, geluid en DJ in één pakket uit eigen bezit. Van subtiele achtergrondmuziek tot spectaculaire lichtshow – alles strak geregeld en professioneel uitgevoerd.",
       icon: <Music className="w-12 h-12" />
     },
     {
-      title: "Energieke MC Services",
-      description: "Als ervaren MC gaat Kevin de interactie aan met het publiek en tilt hij elke avond naar een hoger niveau. Van aankondigingen tot crowd interaction - alles met de juiste energie.",
-      icon: <Mic className="w-12 h-12" />
-    },
-    {
-      title: "Veelzijdige Evenementen",
-      description: "Of het nu gaat om een intieme bruiloft, een bedrijfsfeest of een groots evenement - Kevin zorgt ervoor dat elk feest onvergetelijk wordt met zijn persoonlijke aanpak.",
-      icon: <Calendar className="w-12 h-12" />
+      title: "15+ Jaar Ervaring",
+      description: "Meer dan 500 bruiloften gedraaid, van intieme ceremonies tot grote feesten. Ervaring met elk publiek en elke situatie – ik weet hoe ik de dansvloer vol krijg en vol houd.",
+      icon: <Award className="w-12 h-12" />
     }
   ];
 
@@ -106,14 +106,13 @@ const BiographyPage = () => {
               </div>
               
               <h1 className="text-5xl lg:text-7xl xl:text-8xl font-black mb-8 leading-tight text-shadow-lg">
-                ONTMOET
+                OVER
                 <span className="block text-orange-400">DJ KEVIN</span>
                 <span className="block text-orange-400">FROGER</span>
               </h1>
-              
+
               <p className="text-xl lg:text-2xl mb-12 text-blue-100 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Van de prachtige Hoeksche Waard naar heel Nederland - ontdek het verhaal achter 
-                de DJ die elk evenement tot een onvergetelijke ervaring maakt.
+                Allround DJ uit de Hoeksche Waard. 15+ jaar ervaring met bruiloften, bedrijfsfeesten en evenementen door heel Nederland. Persoonlijke aanpak, live mixing en direct contact.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start mb-12">
