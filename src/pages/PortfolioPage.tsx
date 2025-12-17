@@ -1,5 +1,6 @@
 import React from 'react';
-import { Star, Building, Award, ArrowRight, MessageCircle, Phone } from 'lucide-react';
+import { Star, Building, Award, ArrowRight, MessageCircle, Phone, Briefcase, MapPin, Users as UsersIcon, CheckCircle, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import GoogleReviewsSection from '../components/GoogleReviewsSection';
 import PartnersSection from '../components/PartnersSection';
 
@@ -58,6 +59,75 @@ const PortfolioPage = () => {
       description: "15+ jaar ervaring met 1000+ succesvolle evenementen",
       icon: <Award className="w-10 h-10" />,
       color: "from-purple-500 to-purple-600"
+    }
+  ];
+
+  // Case Studies - Real-world examples
+  const cases = [
+    {
+      id: 1,
+      eventType: "Bruiloft",
+      location: "Rotterdam, Maassilo",
+      region: "Zuid-Holland",
+      date: "Oktober 2024",
+      title: "Urban bruiloft met 300 gasten in industriële locatie",
+      challenge: "Venue zonder akoestische demping, strenge geluidslimiet 95dB, breed publiek (20-75 jaar), high-end verwachtingen",
+      solution: "2x line-array speakers in cardioid-opstelling, dynamische EQ per tijdslot, 3-fase muziekflow (lounge → dinner → party), real-time dB-monitoring",
+      result: "Hele avond binnen limiet gebleven, volle dansvloer van 22:00-02:00, 5-sterren review + aanbeveling aan 3 andere stellen",
+      testimonial: "Kevin heeft de perfecte balans gevonden tussen volume en sfeer. Zelfs onze oudere gasten vonden het niet te hard, terwijl de dansvloer constant vol stond!",
+      icon: <Heart className="w-6 h-6" />
+    },
+    {
+      id: 2,
+      eventType: "Bedrijfsfeest",
+      location: "Utrecht, Jaarbeurs",
+      region: "Utrecht",
+      date: "December 2024",
+      title: "Kerstborrel 500 medewerkers met live-act integratie",
+      challenge: "Live-band speelt 2 sets, DJ moet naadloos overnemen, networking-deel (18-20u) vs party-deel (20-23u), diverse leeftijden en muzieksmaken",
+      solution: "Shared backline met band, pre-sync setlist voor smooth handovers, aparte DJ-booth met zichtlijn naar stage manager, lounge-mix tijdens networking → upbeat party na 20:00",
+      result: "Zero downtime tussen acts, 85% van gasten bleef tot het einde (normaal ~60%), opdrachtgever boekt opnieuw voor 2025 + referral naar andere BV's in concern",
+      testimonial: "De overgang van band naar DJ was zo smooth dat niemand het merkte. Kevin voelde perfect aan wanneer hij de energie moest verhogen.",
+      icon: <Briefcase className="w-6 h-6" />
+    },
+    {
+      id: 3,
+      eventType: "Verjaardag",
+      location: "Den Haag, Privé villa",
+      region: "Zuid-Holland",
+      date: "September 2024",
+      title: "50-jarig jubileum met 120 gasten in tuin + binnen",
+      challenge: "Outdoor ceremonie (17:00), indoor diner (18:30), outdoor party (21:00), weer-afhankelijk, 2 ruimtes simultaan van geluid voorzien",
+      solution: "Draadloos systeem met zone-control, backup indoor setup voor regen, seamless overgangen tussen locaties, muziek afgestemd op 'golden oldies' meets modern",
+      result: "Weer bleef goed, geen technische issues, perfecte flow tussen momenten, jarige gaf aan dat muziek 'de rode draad' was die alles samensmeedde",
+      testimonial: "We hadden 3 generaties op ons feest en iedereen heeft genoten. Kevin wist precies wanneer hij welk genre moest draaien.",
+      icon: <UsersIcon className="w-6 h-6" />
+    },
+    {
+      id: 4,
+      eventType: "Bruiloft",
+      location: "Delft, Prinsenhof",
+      region: "Zuid-Holland",
+      date: "Juni 2024",
+      title: "Kasteel-bruiloft met strikte monumentenregels",
+      challenge: "Monument met 98dB limiet + sluitingstijd 00:00, geen vaste stroomvoorziening in feestzaal, historisch interieur (geen schroeven/spijkers), ceremonie + diner + feest in verschillende ruimtes",
+      solution: "Accu-powered speaker systemen (geen kabels door monumentale gangen), geluidsmeter op DJ-booth, pro-actieve volume management, mobiele setup in 45 min verplaatsbaar tussen ruimtes",
+      result: "Nooit boven 96dB gekomen, monumentenwacht complimenteerde ons over 'minst invasieve setup ooit', bruidspaar kreeg extra uur (tot 01:00) vanwege nul klachten buurt",
+      testimonial: "We waren bang dat de geluidslimiet het feest zou verpesten, maar Kevin maakte er juist een voordeel van. Iedereen kon praten én dansen!",
+      icon: <Heart className="w-6 h-6" />
+    },
+    {
+      id: 5,
+      eventType: "Zakelijk",
+      location: "Amsterdam, Beurs van Berlage",
+      region: "Noord-Holland",
+      date: "November 2024",
+      title: "Product launch event met 400 gasten en CEO speech",
+      challenge: "Strak draaiboek met live product reveal (20:30), CEO speech (21:00) + Q&A, internationale gasten (Engels + Nederlands), corporate branding moet overal zichtbaar blijven",
+      solution: "LED screen integratie met product visuals, draadloze lavaliermicrofoon voor CEO + backup handheld, playlist fully approved door marketing (brand-aligned), seamless switch tussen background → presentatie → party modes",
+      result: "Product reveal op exact juiste moment (gesynct met videomuur), CEO speech zonder enkel technisch probleem, 92% van gasten bleef tot einde (target was 80%), klant vroeg direct offerte voor 2025 event",
+      testimonial: "Kevin was niet 'just a DJ' maar een volwaardige technische partner. Hij dacht mee over draaiboek en lost problemen op voordat wij ze zagen.",
+      icon: <Briefcase className="w-6 h-6" />
     }
   ];
 
@@ -155,6 +225,116 @@ const PortfolioPage = () => {
 
       {/* Partners Section */}
       <PartnersSection />
+
+      {/* Case Studies Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-6xl font-black text-gray-900 mb-4">
+              Cases: hoe we feesten laten slagen
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Van intieme verjaardagen tot grote bedrijfsevents - concrete voorbeelden van hoe we uitdagingen oplossen
+            </p>
+          </div>
+
+          <div className="space-y-12">
+            {cases.map((c, i) => (
+              <article
+                key={c.id}
+                id={`case-${c.id}`}
+                className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-3xl p-8 lg:p-12 border-l-4 border-blue-600 hover:shadow-xl transition-shadow duration-300"
+              >
+                {/* Header */}
+                <div className="flex flex-wrap items-center gap-3 mb-6">
+                  <div className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full">
+                    {c.icon}
+                    <span className="text-sm font-bold">{c.eventType}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-700">
+                    <MapPin className="w-4 h-4" />
+                    <span className="text-sm font-semibold">{c.location}</span>
+                  </div>
+                  <div className="text-sm text-gray-500">|</div>
+                  <span className="text-sm text-gray-600">{c.date}</span>
+                </div>
+
+                {/* Title */}
+                <h3 className="text-2xl lg:text-3xl font-black text-gray-900 mb-8">{c.title}</h3>
+
+                {/* Three Columns */}
+                <div className="grid md:grid-cols-3 gap-8">
+                  <div>
+                    <h4 className="flex items-center gap-2 font-bold text-sm text-orange-600 mb-3">
+                      <span className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center text-xs">1</span>
+                      VRAAGSTUK
+                    </h4>
+                    <p className="text-sm text-gray-700 leading-relaxed">{c.challenge}</p>
+                  </div>
+                  <div>
+                    <h4 className="flex items-center gap-2 font-bold text-sm text-blue-600 mb-3">
+                      <span className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-xs">2</span>
+                      AANPAK
+                    </h4>
+                    <p className="text-sm text-gray-700 leading-relaxed">{c.solution}</p>
+                  </div>
+                  <div>
+                    <h4 className="flex items-center gap-2 font-bold text-sm text-green-600 mb-3">
+                      <span className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center text-xs">3</span>
+                      RESULTAAT
+                    </h4>
+                    <p className="text-sm text-gray-700 leading-relaxed">{c.result}</p>
+                  </div>
+                </div>
+
+                {/* Testimonial */}
+                {c.testimonial && (
+                  <blockquote className="mt-8 p-6 bg-white rounded-xl border-l-4 border-blue-600">
+                    <p className="text-gray-700 italic leading-relaxed">"{c.testimonial}"</p>
+                  </blockquote>
+                )}
+
+                {/* Region Link */}
+                <div className="mt-6 pt-6 border-t border-gray-200">
+                  <Link
+                    to={`/regio/${c.region.toLowerCase().replace(' ', '-')}`}
+                    className="text-sm text-blue-600 hover:text-orange-500 font-semibold inline-flex items-center gap-2 group"
+                  >
+                    <MapPin className="w-4 h-4" />
+                    Meer events in {c.region}
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="text-center mt-16 p-8 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl">
+            <h3 className="text-2xl font-black text-gray-900 mb-4">
+              Herken je jouw situatie in een van deze cases?
+            </h3>
+            <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
+              Elke locatie en elk feest is uniek. Laat ons weten wat jouw uitdagingen zijn en we denken mee over de beste aanpak.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg"
+              >
+                Bespreek jouw event
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/prijzen"
+                className="inline-flex items-center justify-center border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-600 hover:text-white transition-all duration-300"
+              >
+                Bekijk pakketten
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-32 bg-gradient-to-br from-blue-900 via-purple-800 to-blue-900 text-white relative overflow-hidden">

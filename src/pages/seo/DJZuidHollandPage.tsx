@@ -40,7 +40,7 @@ const DJZuidHollandPage = () => {
   const stats = [
     { number: "15+", label: "Jaar in Zuid-Holland", icon: <Award className="w-8 h-8" /> },
     { number: "1000+", label: "Events Zuid-Holland", icon: <Calendar className="w-8 h-8" /> },
-    { number: "500+", label: "Zuid-Hollandse Bruiloften", icon: <Heart className="w-8 h-8" /> },
+    { number: "50+", label: "Festivals", icon: <Heart className="w-8 h-8" /> },
     { number: "200+", label: "Corporate Events", icon: <Building className="w-8 h-8" /> }
   ];
 
@@ -192,7 +192,7 @@ const DJZuidHollandPage = () => {
                       <Heart className="w-6 h-6 text-pink-500 mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-black text-gray-900">Bruiloft DJ Zuid-Holland</h4>
-                        <p className="text-gray-600">500+ bruiloften van Kurhaus Den Haag tot Hotel New York Rotterdam</p>
+                        <p className="text-gray-600">Talloze bruiloften van Kurhaus Den Haag tot Hotel New York Rotterdam</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">

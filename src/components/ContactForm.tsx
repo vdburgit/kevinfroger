@@ -224,6 +224,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
               }`}
             >
               <option value="">Selecteer type evenement</option>
+              <option value="eventplan-scan">🎯 Eventplan-scan (gratis adviesgesprek)</option>
               <option value="bruiloft">Bruiloft</option>
               <option value="bedrijfsfeest">Bedrijfsfeest</option>
               <option value="festival">Festival</option>

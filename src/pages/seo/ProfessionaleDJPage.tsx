@@ -56,7 +56,7 @@ const ProfessionaleDJPage = () => {
   const stats = [
     { number: "15+", label: "Jaar Professioneel", icon: <Award className="w-8 h-8" /> },
     { number: "1000+", label: "Professionele Events", icon: <Calendar className="w-8 h-8" /> },
-    { number: "500+", label: "Bruiloften", icon: <Heart className="w-8 h-8" /> },
+    { number: "7", label: "Provincies", icon: <Heart className="w-8 h-8" /> },
     { number: "100%", label: "Tevredenheid", icon: <Star className="w-8 h-8" /> }
   ];
 

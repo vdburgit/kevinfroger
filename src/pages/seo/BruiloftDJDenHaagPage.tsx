@@ -1,8 +1,17 @@
 import React from 'react';
 import { Heart, MapPin, Calendar, Users, Music, Award, ArrowRight, Star, Crown } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
+import { useSEO } from '../../hooks/useSEO';
 
 const BruiloftDJDenHaagPage = () => {
+  // Canonical to city page
+  useSEO({
+    title: 'Bruiloft DJ Den Haag | Zie onze Den Haag pagina',
+    description: 'Bruiloft DJ in Den Haag? Bekijk onze volledige Den Haag pagina voor alle informatie over bruiloft DJ services in de Hofstad.',
+    keywords: 'bruiloft DJ Den Haag, trouw DJ Den Haag, wedding DJ The Hague',
+    canonical: 'https://kevinfroger.nl/regio/zuid-holland/den-haag',
+  });
+
   const services = [
     {
       title: "Ceremonie Begeleiding",
@@ -44,7 +53,7 @@ const BruiloftDJDenHaagPage = () => {
   const stats = [
     { number: "15+", label: "Jaar Bruiloft Ervaring", icon: <Award className="w-8 h-8" /> },
     { number: "120+", label: "Haagse Bruiloften", icon: <Heart className="w-8 h-8" /> },
-    { number: "500+", label: "Totaal Bruiloften", icon: <Calendar className="w-8 h-8" /> },
+    { number: "50+", label: "Festivals", icon: <Calendar className="w-8 h-8" /> },
     { number: "100%", label: "Tevreden Koppels", icon: <Star className="w-8 h-8" /> }
   ];
 

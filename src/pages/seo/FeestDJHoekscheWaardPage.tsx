@@ -1,8 +1,17 @@
 import React from 'react';
 import { Gift, Calendar, Users, Award, ArrowRight, Star, PartyPopper } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
+import { useSEO } from '../../hooks/useSEO';
 
 const FeestDJHoekscheWaardPage = () => {
+  // Canonical to region page (no specific city page exists)
+  useSEO({
+    title: 'Feest DJ Hoeksche Waard | DJ Kevin Froger Zuid-Holland',
+    description: 'Feest DJ in Hoeksche Waard? DJ Kevin Froger verzorgt verjaardagen, jubilea en themafeesten in de hele Hoeksche Waard.',
+    keywords: 'feest DJ Hoeksche Waard, DJ Hoeksche Waard, verjaardag DJ Hoeksche Waard',
+    canonical: 'https://kevinfroger.nl/regio/zuid-holland',
+  });
+
   const services = [
     {
       title: "Verjaardagsfeesten",

@@ -9,7 +9,7 @@ const RegioPage = () => {
     document.title = "Regio's – DJ Kevin Froger beschikbaar door heel Nederland";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'DJ Kevin Froger is beschikbaar in Zuid-Holland, Noord-Brabant, Gelderland, Utrecht en Overijssel. Bekijk alle steden en regio\'s.');
+      metaDescription.setAttribute('content', 'DJ Kevin Froger is beschikbaar in Zuid-Holland, Noord-Brabant, Gelderland, Utrecht, Overijssel, Noord-Holland en Zeeland. Bekijk alle steden en regio\'s.');
     }
     
     // Add structured data
@@ -22,7 +22,7 @@ const RegioPage = () => {
       "description": "DJ services beschikbaar in alle regio's van Nederland",
       "url": "https://kevinfroger.nl/regio",
       "telephone": "+31645251333",
-      "areaServed": ["Zuid-Holland", "Noord-Brabant", "Gelderland", "Utrecht", "Overijssel"],
+      "areaServed": ["Zuid-Holland", "Noord-Brabant", "Gelderland", "Utrecht", "Overijssel", "Noord-Holland", "Zeeland"],
       "sameAs": [
         "https://www.instagram.com/djkevinfroger/",
         "https://www.linkedin.com/in/kevin-froger-b23aa263/",
@@ -90,7 +90,7 @@ const RegioPage = () => {
   ];
 
   const stats = [
-    { number: "5", label: "Provincies", icon: <Globe className="w-8 h-8" /> },
+    { number: "7", label: "Provincies", icon: <Globe className="w-8 h-8" /> },
     { number: "50+", label: "Steden", icon: <MapPin className="w-8 h-8" /> },
     { number: "1000+", label: "Events", icon: <Calendar className="w-8 h-8" /> },
     { number: "15+", label: "Jaar Ervaring", icon: <Award className="w-8 h-8" /> }
@@ -106,7 +106,7 @@ const RegioPage = () => {
             Regio's – DJ Kevin Froger beschikbaar door heel Nederland
           </h1>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Beschikbaar in Zuid-Holland, Noord-Brabant, Gelderland, Utrecht en Overijssel. 
+            Beschikbaar in Zuid-Holland, Noord-Brabant, Gelderland, Utrecht, Overijssel, Noord-Holland en Zeeland.
             Bekijk alle steden waar ik regelmatig draai.
           </p>
           

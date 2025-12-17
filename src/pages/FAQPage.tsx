@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, HelpCircle, Euro, Music, Users, Calendar, Phone, Mail } from 'lucide-react';
+import { ChevronDown, ChevronUp, HelpCircle, Euro, Music, Users, Calendar, Phone, Mail, BookOpen, CheckCircle, AlertCircle, Clock, Volume2, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const FAQPage = () => {
   const [openItems, setOpenItems] = useState<number[]>([0]);
@@ -260,8 +261,52 @@ const FAQPage = () => {
         </div>
       </section>
 
+      {/* Table of Contents - Sticky Nav */}
+      <nav className="bg-gray-50 border-y border-gray-200 sticky top-16 z-40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <h2 className="text-sm font-semibold text-gray-600 mb-3">INHOUD</h2>
+          <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+            <li>
+              <a href="#veelgestelde-vragen" className="text-blue-600 hover:text-orange-500 font-semibold transition-colors">
+                Veelgestelde vragen
+              </a>
+            </li>
+            <li>
+              <a href="#gids-muziekkeuze" className="text-blue-600 hover:text-orange-500 font-semibold transition-colors">
+                📖 Gids: Muziekkeuze
+              </a>
+            </li>
+            <li>
+              <a href="#gids-draaiboek" className="text-blue-600 hover:text-orange-500 font-semibold transition-colors">
+                📖 Gids: Draaiboek
+              </a>
+            </li>
+            <li>
+              <a href="#gids-opbouw" className="text-blue-600 hover:text-orange-500 font-semibold transition-colors">
+                📖 Gids: Opbouw & tijden
+              </a>
+            </li>
+            <li>
+              <a href="#gids-geluidslimieten" className="text-blue-600 hover:text-orange-500 font-semibold transition-colors">
+                📖 Gids: Geluidslimieten
+              </a>
+            </li>
+            <li>
+              <a href="#gids-venue-checklist" className="text-blue-600 hover:text-orange-500 font-semibold transition-colors">
+                📖 Gids: Venue-checklist
+              </a>
+            </li>
+            <li>
+              <a href="#gids-microfoon-mc" className="text-blue-600 hover:text-orange-500 font-semibold transition-colors">
+                📖 Gids: Microfoon & MC
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
       {/* FAQ Section */}
-      <section id="faq" className="py-32 bg-white">
+      <section id="veelgestelde-vragen" className="py-32 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-5xl lg:text-7xl font-black text-gray-900 mb-8 text-shadow">
@@ -316,6 +361,554 @@ const FAQPage = () => {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Guide Sections - Knowledge Base */}
+
+      {/* Guide 1: Muziekkeuze */}
+      <section id="gids-muziekkeuze" className="py-16 bg-white border-t border-gray-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center">
+              <Music className="w-6 h-6 text-white" />
+            </div>
+            <h2 className="text-3xl font-black text-gray-900">📖 Gids: Muziekkeuze voor jouw feest</h2>
+          </div>
+
+          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+            De juiste muziek maakt of breekt je feest. Hier is hoe je dat aanpakt, gebaseerd op 15+ jaar ervaring met meer dan 1000 events.
+          </p>
+
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">1. Ken je publiek</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Voor een bruiloft met gasten van 20-70 jaar kies je een mix van klassiekers, moderne hits en everything in between. De sleutel is het bouwen van "muzikale bruggen" die álle leeftijdsgroepen aanspreken.
+              </p>
+              <Link to="/bruiloft-dj" className="text-blue-600 hover:text-orange-500 font-semibold inline-flex items-center gap-2">
+                → Lees meer over bruiloft-muziek
+              </Link>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">2. Bepaal de flow van je avond</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span><strong>Ontvangst (17:00-19:00):</strong> Lounge, jazz, acoustic covers (70-90 BPM)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span><strong>Diner (19:00-21:30):</strong> Uptempo achtergrond, geen vocals tijdens speeches (90-110 BPM)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span><strong>Feest (21:30-02:00):</strong> Build-up van 110 naar 128 BPM, dynamische pieken en dalen</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">3. Wensenlijst én "not to play"</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Stuur vooraf 10-20 nummers die je zeker wilt horen + 5 die absoluut niet gedraaid mogen worden. Dit geeft ons een perfect beeld van je smaak zonder je te beperken in flexibiliteit.
+              </p>
+              <Link to="/werkwijze" className="text-blue-600 hover:text-orange-500 font-semibold inline-flex items-center gap-2">
+                → Onze muziekvoorbereiding in detail
+              </Link>
+            </div>
+
+            <div className="bg-orange-50 p-6 rounded-lg mt-6">
+              <h4 className="font-black text-gray-900 mb-2">💡 Pro-tip van Kevin</h4>
+              <p className="text-gray-700 italic">
+                "Laat je gasten vooraf stemmen via een Google Form met 20 suggesties. Dan weet je zeker dat je de goede vibe treft, én je gasten voelen zich al betrokken vóór het feest begint."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Guide 2: Draaiboek */}
+      <section id="gids-draaiboek" className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+              <Calendar className="w-6 h-6 text-white" />
+            </div>
+            <h2 className="text-3xl font-black text-gray-900">📖 Gids: Draaiboek voor je event</h2>
+          </div>
+
+          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+            Een strak draaiboek zorgt dat je DJ weet wanneer wat gebeurt, welke muziek bij welk moment hoort, en wanneer de microfoon nodig is.
+          </p>
+
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Wat staat er in een draaiboek?</h3>
+              <div className="overflow-x-auto">
+                <table className="w-full border border-gray-300 rounded-lg overflow-hidden">
+                  <thead className="bg-blue-500 text-white">
+                    <tr>
+                      <th className="px-4 py-3 text-left font-bold">Tijdstip</th>
+                      <th className="px-4 py-3 text-left font-bold">Moment</th>
+                      <th className="px-4 py-3 text-left font-bold">Actie DJ</th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-white">
+                    <tr className="border-t border-gray-200">
+                      <td className="px-4 py-3">19:00</td>
+                      <td className="px-4 py-3">Binnenkomst bruidspaar</td>
+                      <td className="px-4 py-3">Fade to intro-track, volume omhoog, aankondiging via mic</td>
+                    </tr>
+                    <tr className="border-t border-gray-200 bg-gray-50">
+                      <td className="px-4 py-3">19:15</td>
+                      <td className="px-4 py-3">Welkomstwoord</td>
+                      <td className="px-4 py-3">Microfoon overdragen, muziek uit</td>
+                    </tr>
+                    <tr className="border-t border-gray-200">
+                      <td className="px-4 py-3">20:00</td>
+                      <td className="px-4 py-3">Eerste dans</td>
+                      <td className="px-4 py-3">Pre-cued nummer, spotlight-signaal</td>
+                    </tr>
+                    <tr className="border-t border-gray-200 bg-gray-50">
+                      <td className="px-4 py-3">21:00</td>
+                      <td className="px-4 py-3">Taart aansnijden</td>
+                      <td className="px-4 py-3">Volume dimmen, aankondiging, romantisch nummer</td>
+                    </tr>
+                    <tr className="border-t border-gray-200">
+                      <td className="px-4 py-3">21:30</td>
+                      <td className="px-4 py-3">Start feest</td>
+                      <td className="px-4 py-3">Uptempo opener, gasten naar dansvloer lokken</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div>
+              <Link to="/werkwijze" className="text-blue-600 hover:text-orange-500 font-semibold inline-flex items-center gap-2">
+                → Bekijk onze volledige werkwijze
+              </Link>
+              <span className="mx-2 text-gray-400">|</span>
+              <Link to="/bruiloft-dj" className="text-blue-600 hover:text-orange-500 font-semibold inline-flex items-center gap-2">
+                → Voorbeeld bruiloft-tijdlijn
+              </Link>
+            </div>
+
+            <div className="bg-blue-50 p-6 rounded-lg">
+              <h4 className="font-black text-gray-900 mb-2">💡 Pro-tip van Kevin</h4>
+              <p className="text-gray-700 italic">
+                "Bouw 15 minuten buffer in tussen grote momenten. Speeches lopen altijd uit, en gasten hebben tijd nodig om van ceremonie naar diner te bewegen."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Guide 3: Opbouw & tijden */}
+      <section id="gids-opbouw" className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center">
+              <Clock className="w-6 h-6 text-white" />
+            </div>
+            <h2 className="text-3xl font-black text-gray-900">📖 Gids: Opbouw & tijden</h2>
+          </div>
+
+          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+            Een professionele DJ-setup vergt tijd en planning. Hier is wat je moet weten over opbouw, geluidschecks en afbraak.
+          </p>
+
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Standaard opbouwtijden</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span><strong>Basis setup (DJ + geluid):</strong> 60-90 minuten voor aanvang</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span><strong>Met uitgebreide lichtshow:</strong> 90-120 minuten voor aanvang</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span><strong>Meerdere ruimtes:</strong> +30 minuten per extra ruimte</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span><strong>Afbraak:</strong> 30-45 minuten na afloop</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Wat gebeurt er tijdens opbouw?</h3>
+              <ol className="space-y-3 text-gray-700 list-decimal list-inside">
+                <li><strong>Locatie-verkenning:</strong> Check stroomvoorziening, positionering, looproutes</li>
+                <li><strong>Setup apparatuur:</strong> Speakers, DJ-booth, licht, kabels netjes wegwerken</li>
+                <li><strong>Geluidscheck:</strong> Volume testen, microfoons checken, EQ aanpassen aan ruimte</li>
+                <li><strong>Lichttest:</strong> Alle lichteffecten testen en programmeren</li>
+                <li><strong>Final check:</strong> Alle nummers voorbereiden, draaiboek doornemen</li>
+              </ol>
+            </div>
+
+            <div>
+              <Link to="/prijzen" className="text-blue-600 hover:text-orange-500 font-semibold inline-flex items-center gap-2">
+                → Bekijk onze pakketten
+              </Link>
+              <span className="mx-2 text-gray-400">|</span>
+              <Link to="/contact" className="text-blue-600 hover:text-orange-500 font-semibold inline-flex items-center gap-2">
+                → Plan een locatie-check
+              </Link>
+            </div>
+
+            <div className="bg-green-50 p-6 rounded-lg">
+              <h4 className="font-black text-gray-900 mb-2">⚠️ Let op</h4>
+              <p className="text-gray-700">
+                Sommige locaties hebben strikte opbouwtijden (bijv. kastelen, monumenten). Vraag dit altijd vooraf na bij je venue en communiceer het met ons. We plannen dan eerder of zorgen voor snellere setup.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Guide 4: Geluidslimieten */}
+      <section id="gids-geluidslimieten" className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center">
+              <Volume2 className="w-6 h-6 text-white" />
+            </div>
+            <h2 className="text-3xl font-black text-gray-900">📖 Gids: Geluidslimieten</h2>
+          </div>
+
+          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+            Steeds meer locaties hebben geluidsbeperkingen. Hier is hoe je daarmee omgaat zonder de feestvibe te verliezen.
+          </p>
+
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Standaard dB-limieten</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-start gap-3">
+                  <AlertCircle className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
+                  <span><strong>95 dB:</strong> Strenge limiet (vaak monumenten, kastelen, woonwijken)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <AlertCircle className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
+                  <span><strong>100 dB:</strong> Normale limiet (meeste feestzalen, hotels)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span><strong>105 dB+:</strong> Ruime limiet (industriële locaties, grote zalen)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span><strong>Geen limiet:</strong> Buiten locaties (ver van bebouwing), bepaalde evenemententerreinen</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Hoe zorgen wij voor volle dansvloer binnen limieten?</h3>
+              <ol className="space-y-3 text-gray-700 list-decimal list-inside">
+                <li><strong>Cardioid speaker opstelling:</strong> Geluid gericht op dansvloer, niet naar meetpunt</li>
+                <li><strong>Dynamische EQ:</strong> Lage frequenties (bas) strategisch doseren—voelt harder maar meet lager</li>
+                <li><strong>Slimme nummerkeuze:</strong> Tracks met "punch" in 2-4kHz, niet alleen diepe bas</li>
+                <li><strong>Peak management:</strong> Real-time monitoring, pieken voorkomen zonder energie te verliezen</li>
+              </ol>
+            </div>
+
+            <div>
+              <Link to="/contact" className="text-blue-600 hover:text-orange-500 font-semibold inline-flex items-center gap-2">
+                → Neem contact op voor locatie-advies
+              </Link>
+            </div>
+
+            <div className="bg-orange-50 p-6 rounded-lg">
+              <h4 className="font-black text-gray-900 mb-2">✅ Kevin's garantie</h4>
+              <p className="text-gray-700">
+                In 15 jaar hebben we nog nooit een event gehad waarbij de limiet werd overschreden. We meten continu en passen pro-actief aan. Jullie feest gaat door, ongeacht de limiet.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Guide 5: Venue checklist */}
+      <section id="gids-venue-checklist" className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center">
+              <MapPin className="w-6 h-6 text-white" />
+            </div>
+            <h2 className="text-3xl font-black text-gray-900">📖 Gids: Venue-checklist</h2>
+          </div>
+
+          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+            Check deze punten bij je locatie om technische problemen op de dag zelf te voorkomen.
+          </p>
+
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Essentiële checks voor de DJ</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <strong className="text-gray-900">Stroomvoorziening:</strong>
+                    <p className="text-gray-700">Minimaal 2x 16A (230V) stopcontacten binnen 15 meter van DJ-positie. Aparte groep (niet delen met keuken!).</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <strong className="text-gray-900">Positionering:</strong>
+                    <p className="text-gray-700">Vrij zicht op dansvloer, niet achter pilaren. Genoeg ruimte (min. 3x2 meter) voor DJ-booth en speakers.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <strong className="text-gray-900">Opbouwtijd:</strong>
+                    <p className="text-gray-700">Wanneer mag de DJ binnen? Zijn er beperkingen (bijv. tijdens ceremonie)? We hebben 90-120 min nodig.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <strong className="text-gray-900">Geluidslimieten:</strong>
+                    <p className="text-gray-700">Is er een dB-limiet? Waar hangt de meter? Tot hoe laat mag er muziek zijn?</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <strong className="text-gray-900">Toegang & parkeren:</strong>
+                    <p className="text-gray-700">Waar kan de DJ laden/lossen? Is er parkeergelegenheid voor de bus?</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <strong className="text-gray-900">Contactpersoon:</strong>
+                    <p className="text-gray-700">Wie is er van de locatie aanwezig op de dag? Telefoonnummer voor noodgevallen?</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <Link to="/regio" className="text-blue-600 hover:text-orange-500 font-semibold inline-flex items-center gap-2">
+                → Bekijk onze regio's
+              </Link>
+              <span className="mx-2 text-gray-400">|</span>
+              <Link to="/contact" className="text-blue-600 hover:text-orange-500 font-semibold inline-flex items-center gap-2">
+                → Plan een locatiebezoek
+              </Link>
+            </div>
+
+            <div className="bg-purple-50 p-6 rounded-lg">
+              <h4 className="font-black text-gray-900 mb-2">💡 Pro-tip van Kevin</h4>
+              <p className="text-gray-700 italic">
+                "Maak foto's van de ruimte (breed overzicht + close-ups van stopcontacten en DJ-plek) en stuur die door. Dan kunnen we vooraf al perfect voorbereiden en weten we precies wat we nodig hebben."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Guide 6: Microfoon & MC */}
+      <section id="gids-microfoon-mc" className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-red-600 rounded-full flex items-center justify-center">
+              <Users className="w-6 h-6 text-white" />
+            </div>
+            <h2 className="text-3xl font-black text-gray-900">📖 Gids: Microfoon & MC-services</h2>
+          </div>
+
+          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+            Van welkomstwoord tot ceremonie-begeleiding: zo zet je de microfoon en MC-rol optimaal in.
+          </p>
+
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Wat valt onder MC-services?</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span><strong>Aankondigingen:</strong> Binnenkomst bruidspaar, eerste dans, taart aansnijden, speeches</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span><strong>Draaiboek-coördinatie:</strong> Signaleren wanneer iets gaat gebeuren, andere leveranciers aansturen</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span><strong>Interactie met gasten:</strong> Dansvloer vullen, spelletjes begeleiden, sfeer aanwakkeren</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span><strong>Microfoon beheer:</strong> Zorgen dat sprekers op tijd een werkende microfoon hebben</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Welke microfoons gebruiken we?</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li><strong>Draadloze handmicrofoons:</strong> Voor speeches, aankondigingen, gasten die iets willen zeggen</li>
+                <li><strong>Headset microfoon:</strong> Voor DJ/MC als deze veel moet praten (optioneel)</li>
+                <li><strong>Backup microfoon:</strong> Altijd aanwezig voor noodgevallen of dubbele sprekers</li>
+              </ul>
+            </div>
+
+            <div>
+              <Link to="/zakelijk-dj" className="text-blue-600 hover:text-orange-500 font-semibold inline-flex items-center gap-2">
+                → MC voor bedrijfsevents
+              </Link>
+              <span className="mx-2 text-gray-400">|</span>
+              <Link to="/bruiloft-dj" className="text-blue-600 hover:text-orange-500 font-semibold inline-flex items-center gap-2">
+                → MC voor bruiloften
+              </Link>
+            </div>
+
+            <div className="bg-pink-50 p-6 rounded-lg">
+              <h4 className="font-black text-gray-900 mb-2">⚖️ De balans</h4>
+              <p className="text-gray-700">
+                Een goede MC is <em>aanwezig maar niet opdringerig</em>. We stemmen vooraf af hoeveel presentatie je wilt: minimaal (alleen cruciale aankondigingen) of actief (tussen nummers door, interactie, humor). Het is jullie feest—wij passen ons aan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Freshness Block */}
+      <section className="py-12 bg-gradient-to-r from-blue-50 to-purple-50 border-y border-gray-200">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="text-center mb-6">
+              <BookOpen className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+              <h3 className="text-2xl font-black text-gray-900">Deze kennisbank wordt continu uitgebreid</h3>
+              <p className="text-gray-600 mt-2">Op basis van vragen van klanten en nieuwe ontwikkelingen in de branche</p>
+            </div>
+            <div className="text-center text-sm text-gray-500">
+              <p>Laatst bijgewerkt: {new Date().toLocaleDateString('nl-NL', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+              <p className="mt-2">
+                Mis je een onderwerp? <Link to="/contact" className="text-blue-600 hover:text-orange-500 font-semibold">Laat het ons weten →</Link>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Over Kevin Froger - Entity Claiming for GEO */}
+      <section className="py-20 bg-white border-y border-gray-200">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-4">
+              Over Kevin Froger
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Professionele allround DJ met 15+ jaar ervaring in heel Nederland
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8">
+              <h3 className="text-2xl font-black text-gray-900 mb-4">Wie is Kevin Froger?</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Kevin Froger is een professionele allround DJ uit Nederland met meer dan 15 jaar ervaring
+                in de evenementenbranche. Sinds 2008 verzorgt hij DJ services voor bruiloften, bedrijfsfeesten,
+                festivals en privé evenementen door heel Nederland.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Met een uitgebreide muziekbibliotheek van 50.000+ tracks in alle genres en state-of-the-art
+                geluids- en lichtapparatuur zorgt Kevin voor de perfecte sfeer op elk evenement. Zijn expertise
+                ligt in het aanvoelen van het publiek en het creëren van een onvergetelijke ervaring.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-orange-50 to-pink-50 rounded-2xl p-8">
+              <h3 className="text-2xl font-black text-gray-900 mb-6">Werkgebied & Expertise</h3>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-black text-gray-900 mb-2 flex items-center">
+                    <MapPin className="w-5 h-5 mr-2 text-blue-600" />
+                    Actief in 7 provincies
+                  </h4>
+                  <p className="text-sm text-gray-600 ml-7">
+                    Zuid-Holland, Noord-Holland, Utrecht, Noord-Brabant, Gelderland, Overijssel, Zeeland
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-black text-gray-900 mb-2 flex items-center">
+                    <Users className="w-5 h-5 mr-2 text-purple-600" />
+                    1000+ succesvolle events
+                  </h4>
+                  <p className="text-sm text-gray-600 ml-7">
+                    Waaronder honderden bruiloften, 50+ festivals, en talloze bedrijfs- en privé feesten
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-black text-gray-900 mb-2 flex items-center">
+                    <CheckCircle className="w-5 h-5 mr-2 text-green-600" />
+                    Specialisaties
+                  </h4>
+                  <p className="text-sm text-gray-600 ml-7">
+                    Bruiloft DJ, bedrijfsfeest DJ, festival DJ, MC services, live mixing, muziekadvies
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-gray-50 rounded-2xl p-8">
+            <h3 className="text-xl font-black text-gray-900 mb-6 text-center">Contactgegevens Kevin Froger</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div>
+                <Phone className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+                <p className="text-sm text-gray-600 mb-1">Telefoon</p>
+                <a href="tel:0645251333" className="text-blue-600 font-black hover:text-orange-500 transition-colors">
+                  06 45 25 13 33
+                </a>
+              </div>
+              <div>
+                <Mail className="w-8 h-8 text-purple-600 mx-auto mb-2" />
+                <p className="text-sm text-gray-600 mb-1">Email</p>
+                <a href="mailto:booking@kevinfroger.nl" className="text-purple-600 font-black hover:text-orange-500 transition-colors break-all">
+                  booking@kevinfroger.nl
+                </a>
+              </div>
+              <div>
+                <MapPin className="w-8 h-8 text-green-600 mx-auto mb-2" />
+                <p className="text-sm text-gray-600 mb-1">Website</p>
+                <a href="https://kevinfroger.nl" className="text-green-600 font-black hover:text-orange-500 transition-colors">
+                  kevinfroger.nl
+                </a>
+              </div>
+            </div>
+            <div className="mt-6 pt-6 border-t border-gray-200">
+              <p className="text-sm text-gray-600 text-center mb-3">Volg Kevin Froger op social media:</p>
+              <div className="flex justify-center gap-4 flex-wrap">
+                <a href="https://www.instagram.com/djkevinfroger/" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-orange-500 font-semibold transition-colors">
+                  Instagram
+                </a>
+                <a href="https://www.linkedin.com/in/kevin-froger-b23aa263/" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:text-orange-500 font-semibold transition-colors">
+                  LinkedIn
+                </a>
+                <a href="https://www.facebook.com/KevinFroger.nl" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-orange-500 font-semibold transition-colors">
+                  Facebook
+                </a>
+                <a href="https://wa.me/31645251333" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-orange-500 font-semibold transition-colors">
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

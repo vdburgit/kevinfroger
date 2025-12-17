@@ -1,8 +1,17 @@
 import React from 'react';
 import { Heart, MapPin, Calendar, Users, Music, Award, ArrowRight, Star, Crown } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
+import { useSEO } from '../../hooks/useSEO';
 
 const DJBruiloftRotterdamPage = () => {
+  // Canonical to city page
+  useSEO({
+    title: 'Bruiloft DJ Rotterdam | Zie onze Rotterdam pagina',
+    description: 'Bruiloft DJ in Rotterdam? Bekijk onze volledige Rotterdam pagina voor alle informatie over bruiloft DJ services in Rotterdam.',
+    keywords: 'bruiloft DJ Rotterdam, trouw DJ Rotterdam, wedding DJ Rotterdam',
+    canonical: 'https://kevinfroger.nl/regio/zuid-holland/rotterdam',
+  });
+
   const services = [
     {
       title: "Ceremonie Begeleiding",
@@ -44,7 +53,7 @@ const DJBruiloftRotterdamPage = () => {
   const stats = [
     { number: "15+", label: "Jaar Bruiloft Ervaring", icon: <Award className="w-8 h-8" /> },
     { number: "150+", label: "Rotterdamse Bruiloften", icon: <Heart className="w-8 h-8" /> },
-    { number: "500+", label: "Totaal Bruiloften", icon: <Calendar className="w-8 h-8" /> },
+    { number: "50+", label: "Festivals", icon: <Calendar className="w-8 h-8" /> },
     { number: "100%", label: "Tevreden Koppels", icon: <Star className="w-8 h-8" /> }
   ];
 

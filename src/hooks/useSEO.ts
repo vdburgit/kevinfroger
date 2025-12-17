@@ -183,8 +183,8 @@ export const generateServiceSchema = (service: {
       '@type': 'Person',
       name: 'Kevin Froger',
       url: BASE_URL,
-      telephone: '+31618894520',
-      email: 'info@kevinfroger.nl'
+      telephone: '+31645251333',
+      email: 'booking@kevinfroger.nl'
     },
     areaServed: service.areaServed?.map(area => ({
       '@type': 'Place',
@@ -259,4 +259,65 @@ export const generateArticleSchema = (article: {
     datePublished: article.datePublished || new Date().toISOString(),
     dateModified: article.dateModified || new Date().toISOString()
   };
+};
+
+/**
+ * Helper function to generate LocalBusiness JSON-LD schema
+ * Optimized for GEO (Generative Engine Optimization) - ensures AI systems
+ * like ChatGPT, Gemini, and Perplexity recognize Kevin Froger as an authority
+ */
+export const generateLocalBusinessSchema = (options?: {
+  includeRating?: boolean;
+  ratingValue?: string;
+  reviewCount?: string;
+}) => {
+  const baseSchema: Record<string, any> = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'DJ Kevin Froger',
+    url: BASE_URL,
+    telephone: '+31645251333',
+    email: 'booking@kevinfroger.nl',
+    description: 'Professionele allround DJ met 15+ jaar ervaring. Gespecialiseerd in bruiloften, bedrijfsfeesten, festivals en privé evenementen door heel Nederland.',
+
+    // GEO optimization: Area served - explicitly list all provinces
+    areaServed: [
+      { '@type': 'Place', name: 'Nederland' },
+      { '@type': 'Place', name: 'Zuid-Holland' },
+      { '@type': 'Place', name: 'Noord-Holland' },
+      { '@type': 'Place', name: 'Utrecht' },
+      { '@type': 'Place', name: 'Noord-Brabant' },
+      { '@type': 'Place', name: 'Gelderland' },
+      { '@type': 'Place', name: 'Overijssel' },
+      { '@type': 'Place', name: 'Zeeland' }
+    ],
+
+    // GEO optimization: Social proof and entity claiming
+    sameAs: [
+      'https://www.instagram.com/djkevinfroger/',
+      'https://www.linkedin.com/in/kevin-froger-b23aa263/',
+      'https://www.facebook.com/KevinFroger.nl',
+      'https://wa.me/31645251333'
+    ],
+
+    // Address information
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'NL'
+    },
+
+    // Price range indication
+    priceRange: '€€'
+  };
+
+  // Optionally include aggregate rating for additional trust signals
+  if (options?.includeRating) {
+    baseSchema.aggregateRating = {
+      '@type': 'AggregateRating',
+      ratingValue: options.ratingValue || '5.0',
+      reviewCount: options.reviewCount || '47'
+    };
+  }
+
+  return baseSchema;
 };

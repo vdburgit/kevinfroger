@@ -82,7 +82,7 @@ const BiographyPage = () => {
   const stats = [
     { number: "15+", label: "Jaar Ervaring", icon: <Award className="w-8 h-8" /> },
     { number: "1000+", label: "Events", icon: <Calendar className="w-8 h-8" /> },
-    { number: "500+", label: "Bruiloften", icon: <Heart className="w-8 h-8" /> },
+    { number: "7", label: "Provincies", icon: <Heart className="w-8 h-8" /> },
     { number: "50+", label: "Festivals", icon: <Zap className="w-8 h-8" /> }
   ];
 

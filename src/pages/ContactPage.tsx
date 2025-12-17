@@ -6,7 +6,7 @@ const ContactPage = () => {
   // Enhanced SEO configuration for contact page
   useSEO({
     title: 'Contact DJ Kevin Froger | DJ Boeken | Gratis Offerte',
-    description: 'Contact DJ Kevin Froger - allround DJ boeken Nederland. Gratis offerte binnen 24u, 15+ jaar ervaring, 1000+ events. Bel 06-18894520 of stuur WhatsApp!',
+    description: 'Contact DJ Kevin Froger - allround DJ boeken Nederland. Gratis offerte binnen 24u, 15+ jaar ervaring, 1000+ events. Bel 06 45 25 13 33 of stuur WhatsApp!',
     keywords: 'dj boeken, dj contact, dj offerte, dj huren nederland, dj prijs, contact kevin froger, dj beschikbaarheid',
     canonical: 'https://kevinfroger.nl/contact',
     ogType: 'website',
@@ -23,8 +23,8 @@ const ContactPage = () => {
         '@type': 'LocalBusiness',
         name: 'DJ Kevin Froger',
         url: 'https://kevinfroger.nl',
-        telephone: '+31618894520',
-        email: 'info@kevinfroger.nl',
+        telephone: '+31645251333',
+        email: 'booking@kevinfroger.nl',
         areaServed: [
           { '@type': 'Place', name: 'Nederland' },
           { '@type': 'Place', name: 'Zuid-Holland' },
@@ -39,7 +39,7 @@ const ContactPage = () => {
           'https://www.instagram.com/djkevinfroger/',
           'https://www.linkedin.com/in/kevin-froger-b23aa263/',
           'https://www.facebook.com/KevinFroger.nl',
-          'https://wa.me/31618894520'
+          'https://wa.me/31645251333'
         ],
         address: {
           '@type': 'PostalAddress',
@@ -137,7 +137,7 @@ const ContactPage = () => {
 
   const stats = [
     { icon: <Award className="w-8 h-8" />, number: '15+', label: 'Jaar Ervaring', color: 'text-blue-500' },
-    { icon: <Users className="w-8 h-8" />, number: '500+', label: 'Bruiloften', color: 'text-pink-500' },
+    { icon: <MapPin className="w-8 h-8" />, number: '7', label: 'Provincies', color: 'text-pink-500' },
     { icon: <Music className="w-8 h-8" />, number: '50+', label: 'Festivals', color: 'text-orange-500' },
     { icon: <CheckCircle className="w-8 h-8" />, number: '1000+', label: 'Events', color: 'text-green-500' }
   ];
@@ -299,6 +299,71 @@ const ContactPage = () => {
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Eventplan-scan Section */}
+      <section id="eventplan-scan" className="py-20 bg-gradient-to-br from-blue-50 via-orange-50 to-blue-50 scroll-mt-24">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="inline-block bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-6 uppercase tracking-wide">
+              GRATIS INTAKEGESPREK
+            </span>
+            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-4">
+              Eventplan-scan: weet binnen 24 uur wat je nodig hebt
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Nog niet precies wat je wilt? Vraag een gratis Eventplan-scan aan. We kijken naar jouw locatie,
+              publiek, doelen en budget - en geven direct concreet advies.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+            <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="text-4xl mb-3">📍</div>
+              <h3 className="font-black text-sm mb-2">Locatie-check</h3>
+              <p className="text-xs text-gray-600">Techniek passend bij jouw venue</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="text-4xl mb-3">🎵</div>
+              <h3 className="font-black text-sm mb-2">Muziekadvies</h3>
+              <p className="text-xs text-gray-600">Stijl en BPM voor jouw publiek</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="text-4xl mb-3">⚡</div>
+              <h3 className="font-black text-sm mb-2">Risico-scan</h3>
+              <p className="text-xs text-gray-600">Geluidslimieten & backup plan</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="text-4xl mb-3">💰</div>
+              <h3 className="font-black text-sm mb-2">Pakketadvies</h3>
+              <p className="text-xs text-gray-600">Beste prijs-kwaliteit voor jou</p>
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+            <a
+              href="https://api.whatsapp.com/send/?phone=31645251333&text=Ik%20wil%20graag%20een%20gratis%20Eventplan-scan%20aanvragen%20voor%20mijn%20evenement"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-full font-black text-lg hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-green-500/25 transform hover:scale-105"
+            >
+              <MessageCircle className="w-6 h-6 mr-3" />
+              Via WhatsApp aanvragen
+            </a>
+            <a
+              href="#contact-form"
+              onClick={(e) => handleSmoothScroll(e, '#contact-form')}
+              className="inline-flex items-center justify-center border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-full font-black text-lg hover:bg-blue-600 hover:text-white transition-all duration-300"
+            >
+              <Send className="w-6 h-6 mr-3" />
+              Via formulier aanvragen
+            </a>
+          </div>
+
+          <p className="text-xs text-gray-500 text-center">
+            ⏱️ Reactie binnen 24 uur | 📞 Direct daarna optioneel belafspraak | 🚫 Geen verplichtingen
+          </p>
         </div>
       </section>
 

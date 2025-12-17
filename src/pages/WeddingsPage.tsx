@@ -8,7 +8,7 @@ const WeddingsPage = () => {
     document.title = "Bruiloft DJ Nederland | DJ Kevin Froger | Allround DJ";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Bruiloft DJ Nederland - DJ Kevin Froger allround DJ. 500+ bruiloften, complete muzikale begeleiding ceremonie tot feestavond. Boek nu!');
+      metaDescription.setAttribute('content', 'Bruiloft DJ Nederland - DJ Kevin Froger allround DJ. Complete muzikale begeleiding ceremonie tot feestavond. 15+ jaar ervaring. Boek nu!');
     }
     
     // Add Open Graph tags
@@ -19,7 +19,7 @@ const WeddingsPage = () => {
     
     const ogDescription = document.querySelector('meta[property="og:description"]') || document.createElement('meta');
     ogDescription.setAttribute('property', 'og:description');
-    ogDescription.setAttribute('content', 'Bruiloft DJ Nederland. DJ Kevin Froger allround DJ 500+ bruiloften, complete muzikale begeleiding ceremonie tot feestavond.');
+    ogDescription.setAttribute('content', 'Bruiloft DJ Nederland. DJ Kevin Froger allround DJ. Complete muzikale begeleiding ceremonie tot feestavond. 15+ jaar ervaring.');
     if (!document.head.contains(ogDescription)) document.head.appendChild(ogDescription);
     
     const ogUrl = document.querySelector('meta[property="og:url"]') || document.createElement('meta');

@@ -56,7 +56,7 @@ const DJMCServicesPage = () => {
   const stats = [
     { number: "15+", label: "Jaar MC Ervaring", icon: <Mic className="w-8 h-8" /> },
     { number: "1000+", label: "MC Events", icon: <MessageSquare className="w-8 h-8" /> },
-    { number: "500+", label: "Bruiloft MC", icon: <Heart className="w-8 h-8" /> },
+    { number: "50+", label: "Festivals MC", icon: <Heart className="w-8 h-8" /> },
     { number: "100%", label: "DJ & MC Combo", icon: <Music className="w-8 h-8" /> }
   ];
 

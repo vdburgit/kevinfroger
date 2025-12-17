@@ -1,8 +1,17 @@
 import React from 'react';
 import { Calendar, Users, Award, ArrowRight, Heart, Building, Zap, Waves } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
+import { useSEO } from '../../hooks/useSEO';
 
 const DJAlphenAanDenRijnPage = () => {
+  // Canonical to region page (no specific city page exists)
+  useSEO({
+    title: 'DJ Alphen aan den Rijn | DJ Kevin Froger Zuid-Holland',
+    description: 'DJ huren in Alphen aan den Rijn? DJ Kevin Froger verzorgt bruiloften, bedrijfsfeesten en privé events in Alphen aan den Rijn en omgeving.',
+    keywords: 'DJ Alphen aan den Rijn, DJ huren Alphen, bruiloft DJ Alphen, feest DJ Alphen aan den Rijn',
+    canonical: 'https://kevinfroger.nl/regio/zuid-holland',
+  });
+
   const services = [
     {
       title: "Bruiloften Alphen aan den Rijn",

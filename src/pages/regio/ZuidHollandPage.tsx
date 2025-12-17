@@ -94,7 +94,7 @@ const ZuidHollandPage = () => {
 
   const stats = [
     { number: "15+", label: "Jaar in Zuid-Holland", icon: <Award className="w-8 h-8" /> },
-    { number: "500+", label: "Events in de provincie", icon: <Calendar className="w-8 h-8" /> },
+    { number: "1000+", label: "Events totaal", icon: <Calendar className="w-8 h-8" /> },
     { number: "10", label: "Grote steden", icon: <MapPin className="w-8 h-8" /> },
     { number: "100%", label: "Tevreden klanten", icon: <Star className="w-8 h-8" /> }
   ];

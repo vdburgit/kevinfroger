@@ -11,7 +11,7 @@ const HomePage = () => {
   // Enhanced SEO configuration for homepage
   useSEO({
     title: 'DJ Kevin Froger – DJ voor bruiloft, verjaardag & events',
-    description: 'Allround DJ met complete show (licht & geluid). Persoonlijk contact, strakke uitvoering en volle dansvloer. 15+ jaar ervaring, 500+ bruiloften. Vraag direct een prijsindicatie of offerte.',
+    description: 'Allround DJ met complete show (licht & geluid). Persoonlijk contact, strakke uitvoering en volle dansvloer. 15+ jaar ervaring. Vraag direct een prijsindicatie of offerte.',
     keywords: 'bruiloft dj nederland, dj boeken, dj huren, allround dj, bruiloft dj, festival dj, bedrijfsfeest dj, live mixing dj, mc services',
     canonical: 'https://kevinfroger.nl/',
     ogType: 'website',
@@ -190,12 +190,11 @@ const HomePage = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-12 z-10 h-full flex items-center justify-center">
           <div className="text-center w-full max-w-5xl mx-auto">
             <h1 id="hero-title" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-4 lg:mb-6 leading-tight text-shadow-lg">
-              ALLROUND DJ MET COMPLETE SHOW –
-              <span className="block text-orange-400">RECHTSTREEKS BIJ DE DJ</span>
+              ALLROUND DJ MET COMPLETE SHOW
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl mb-6 lg:mb-8 text-blue-100 leading-relaxed max-w-3xl mx-auto px-4">
-              Persoonlijk contact, strakke uitvoering en een volle dansvloer. 15+ jaar ervaring, 500+ bruiloften. Vraag direct een prijsindicatie of offerte – app of bel.
+              Persoonlijk contact, strakke uitvoering en een volle dansvloer. 15+ jaar ervaring. Vraag direct een prijsindicatie of offerte – app of bel.
             </p>
             
             {/* Desktop buttons */}

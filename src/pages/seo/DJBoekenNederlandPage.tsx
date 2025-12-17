@@ -1,8 +1,17 @@
 import React from 'react';
 import { Calendar, Users, Award, ArrowRight, Heart, Building, Zap, Globe } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
+import { useSEO } from '../../hooks/useSEO';
 
 const DJBoekenNederlandPage = () => {
+  // Canonical to pillar page
+  useSEO({
+    title: 'DJ boeken Nederland | Zie DJ huren Nederland voor volledige info',
+    description: 'DJ boeken in Nederland? Bekijk onze uitgebreide gids op DJ huren Nederland voor alle informatie over onze diensten, prijzen en beschikbaarheid.',
+    keywords: 'DJ boeken, DJ boeken Nederland, professionele DJ boeken, bruiloft DJ boeken, bedrijfsfeest DJ boeken',
+    canonical: 'https://kevinfroger.nl/dj-huren-nederland',
+  });
+
   const services = [
     {
       title: "DJ Boeken Bruiloft",
@@ -32,14 +41,14 @@ const DJBoekenNederlandPage = () => {
 
   const provinces = [
     "Zuid-Holland", "Noord-Holland", "Utrecht", "Noord-Brabant", "Gelderland",
-    "Overijssel", "Limburg", "Zeeland", "Friesland", "Groningen", "Drenthe", "Flevoland"
+    "Overijssel", "Zeeland"
   ];
 
   const stats = [
     { number: "15+", label: "Jaar Landelijk Actief", icon: <Award className="w-8 h-8" /> },
     { number: "1000+", label: "Events Nederland", icon: <Calendar className="w-8 h-8" /> },
-    { number: "500+", label: "Nederlandse Bruiloften", icon: <Heart className="w-8 h-8" /> },
-    { number: "12", label: "Provincies Actief", icon: <Globe className="w-8 h-8" /> }
+    { number: "50+", label: "Festivals", icon: <Heart className="w-8 h-8" /> },
+    { number: "7", label: "Provincies Actief", icon: <Globe className="w-8 h-8" /> }
   ];
 
   return (
@@ -133,13 +142,13 @@ const DJBoekenNederlandPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="sr-only prose prose-lg max-w-none">
             <h2>DJ Boeken Nederland - Professionele DJ Services Landelijk</h2>
-            <p>Wil je een DJ boeken in Nederland? DJ Kevin Froger is landelijk werkzaam en verzorgt professionele DJ services door het hele land. Met 15+ jaar ervaring en 1000+ events - van bruiloften tot bedrijfsfeesten, van festivals tot privé events - altijd de perfecte sfeer. DJ boeken Nederland in alle 12 provincies mogelijk.</p>
-            
-            <h3>DJ Boeken - Alle Provincies</h3>
-            <p>Kevin is actief in alle 12 provincies van Nederland: DJ boeken Zuid-Holland, DJ boeken Noord-Holland, DJ boeken Utrecht, DJ boeken Noord-Brabant, DJ boeken Gelderland, DJ boeken Overijssel, DJ boeken Limburg, DJ boeken Zeeland, DJ boeken Friesland, DJ boeken Groningen, DJ boeken Drenthe, DJ boeken Flevoland. DJ boeken Nederland landelijke dekking gegarandeerd.</p>
+            <p>Wil je een DJ boeken in Nederland? DJ Kevin Froger verzorgt professionele DJ services in 7 provincies. Met 15+ jaar ervaring en 1000+ events - van bruiloften tot bedrijfsfeesten, van festivals tot privé events - altijd de perfecte sfeer. DJ boeken Nederland met focus op Zuid-Holland, Noord-Brabant, Gelderland, Utrecht, Overijssel, Noord-Holland en Zeeland.</p>
+
+            <h3>DJ Boeken - Actieve Provincies</h3>
+            <p>Kevin is actief in 7 provincies van Nederland: DJ boeken Zuid-Holland, DJ boeken Noord-Holland, DJ boeken Utrecht, DJ boeken Noord-Brabant, DJ boeken Gelderland, DJ boeken Overijssel, DJ boeken Zeeland. DJ boeken Nederland met landelijke dekking in deze regio's gegarandeerd.</p>
             
             <h3>Bruiloft DJ Boeken Nederland</h3>
-            <p>Voor bruiloften door heel Nederland heeft Kevin meer dan 500 succesvolle events begeleid. Van kastelen tot moderne venues, van strand tot bos - Kevin maakt jullie bruiloft overal onvergetelijk. Bruiloft DJ boeken Nederland met landelijke ervaring en lokale kennis.</p>
+            <p>Voor bruiloften door heel Nederland heeft Kevin honderden succesvolle events begeleid. Van kastelen tot moderne venues, van strand tot bos - Kevin maakt jullie bruiloft overal onvergetelijk. Bruiloft DJ boeken Nederland met landelijke ervaring en lokale kennis.</p>
             
             <h3>Bedrijfsfeest DJ Boeken</h3>
             <p>Kevin verzorgt bedrijfsfeesten voor ondernemingen door heel Nederland. Van multinationals tot MKB, van startups tot traditionele bedrijven - altijd professioneel en representatief. Bedrijfsfeest DJ boeken Nederland voor alle corporate events landelijk.</p>

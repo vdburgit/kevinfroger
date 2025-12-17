@@ -6,7 +6,7 @@ const BruiloftDJPage = () => {
   // Enhanced SEO configuration for wedding DJ page
   useSEO({
     title: 'Bruiloft DJ – persoonlijk & professioneel | Kevin Froger',
-    description: 'Openingsdans tot knallend slot. Complete DJ‑show met licht & geluid, afgestemd op jullie dag. 15+ jaar ervaring, 500+ bruiloften gedraaid. Snel een prijs via WhatsApp of ontvang een offerte.',
+    description: 'Openingsdans tot knallend slot. Complete DJ‑show met licht & geluid, afgestemd op jullie dag. 15+ jaar ervaring. Snel een prijs via WhatsApp of ontvang een offerte.',
     keywords: 'bruiloft dj, bruiloft dj nederland, bruiloft dj zuid-holland, trouw dj, dj bruiloft, bruiloft muziek, ceremonie muziek, openingsdans, feest dj bruiloft',
     canonical: 'https://kevinfroger.nl/bruiloft-dj',
     ogType: 'website',
@@ -72,7 +72,7 @@ const BruiloftDJPage = () => {
     "Van ceremonie tot laatste plaat – complete begeleiding",
     "Direct contact met de DJ – geen verhuurbedrijf",
     "Eigen licht- en geluidapparatuur uit één hand",
-    "500+ bruiloften ervaring – ik weet wat werkt"
+    "15+ jaar ervaring – ik weet wat werkt"
   ];
 
   const process = [

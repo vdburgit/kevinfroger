@@ -8,8 +8,8 @@ const DJNederlandPage = () => {
 
   const stats = [
     { number: "15+", label: "Jaar Landelijk Actief", icon: <Award className="w-8 h-8" /> },
-    { number: "12", label: "Provincies", icon: <Globe className="w-8 h-8" /> },
-    { number: "100+", label: "Steden & Gemeenten", icon: <MapPin className="w-8 h-8" /> },
+    { number: "7", label: "Provincies Actief", icon: <Globe className="w-8 h-8" /> },
+    { number: "50+", label: "Steden Actief", icon: <MapPin className="w-8 h-8" /> },
     { number: "1000+", label: "Events Nederland", icon: <Calendar className="w-8 h-8" /> }
   ];
 

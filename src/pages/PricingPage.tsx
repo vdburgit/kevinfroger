@@ -153,7 +153,7 @@ const PricingPage = () => {
     "Direct contact met de DJ",
     "Backup-apparatuur standaard aanwezig",
     "Persoonlijke voorbereiding en afstemming",
-    "15+ jaar ervaring, 500+ bruiloften"
+    "15+ jaar ervaring, 1000+ events"
   ];
 
   return (
@@ -213,6 +213,65 @@ const PricingPage = () => {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Eventplan-scan Section */}
+      <section className="py-20 bg-gradient-to-br from-primary/10 to-orange-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="inline-block bg-primary text-white text-xs font-bold px-3 py-1 rounded-full mb-4">
+            GRATIS INTAKEGESPREK
+          </span>
+          <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-4">
+            Eventplan-scan: weet binnen 24 uur wat je nodig hebt
+          </h2>
+          <p className="text-lg text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Nog niet zeker welk pakket bij je past? Stuur ons je event-details en ontvang binnen 24 uur een persoonlijk advies:
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+            <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="text-4xl mb-3">📍</div>
+              <h3 className="font-black text-sm mb-2">Locatie-check</h3>
+              <p className="text-xs text-gray-600">Techniek passend bij jouw venue</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="text-4xl mb-3">🎵</div>
+              <h3 className="font-black text-sm mb-2">Muziekadvies</h3>
+              <p className="text-xs text-gray-600">Genres & flow voor jouw publiek</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="text-4xl mb-3">⚡</div>
+              <h3 className="font-black text-sm mb-2">Risico-scan</h3>
+              <p className="text-xs text-gray-600">Geluidslimieten, opbouwtijd, stroomvoorziening</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="text-4xl mb-3">💰</div>
+              <h3 className="font-black text-sm mb-2">Pakketadvies</h3>
+              <p className="text-xs text-gray-600">Welk pakket + opties passen?</p>
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+            <a
+              href="https://api.whatsapp.com/send/?phone=31645251333&text=Ik wil graag een gratis Eventplan-scan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg"
+            >
+              Via WhatsApp aanvragen
+            </a>
+            <a
+              href="/contact"
+              className="inline-flex items-center justify-center border-2 border-primary text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-primary hover:text-white transition-all duration-300"
+            >
+              Via formulier aanvragen
+            </a>
+          </div>
+
+          <p className="text-xs text-gray-500">
+            ⏱️ Reactie binnen 24 uur | 📞 Direct daarna optioneel belafspraak | 🚫 Geen verplichtingen
+          </p>
         </div>
       </section>
 
