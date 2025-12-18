@@ -8,7 +8,7 @@
     
     <!-- Primary Meta Tags -->
     <title>DJ Kevin Froger - Bruiloft DJ Nederland | Allround DJ</title>
-    <meta name="description" content="DJ Kevin Froger - allround DJ Nederland. 500+ bruiloften, 15+ jaar ervaring. Professionele DJ services voor alle evenementen. Boek direct!" />
+    <meta name="description" content="DJ Kevin Froger - allround DJ Nederland. 15+ jaar ervaring, 1000+ events. Professionele DJ services voor alle evenementen. Boek direct!" />
     <meta name="keywords" content="bruiloft DJ Nederland, DJ boeken, DJ huren, live mixing DJ, professionele DJ, allround DJ, DJ met apparatuur, bedrijfsfeest DJ, festival DJ, DJ Zuid-Holland, DJ Rotterdam, DJ Den Haag, DJ Kevin Froger, wedding DJ, corporate DJ, party DJ, entertainment DJ, mobiele DJ show, DJ inclusief licht en geluid" />
     <meta name="author" content="DJ Kevin Froger" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -25,8 +25,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://kevinfroger.nl/" />
     <meta property="og:title" content="DJ Kevin Froger - Bruiloft DJ Nederland" />
-    <meta property="og:description" content="DJ Kevin Froger - allround DJ Nederland. 500+ bruiloften, 15+ jaar ervaring. Professionele DJ services voor alle evenementen." />
-    <meta property="og:image" content="https://kevinfroger.nl/images/kevin-portrait.png" />
+    <meta property="og:description" content="DJ Kevin Froger - allround DJ Nederland. 15+ jaar ervaring, 1000+ events. Professionele DJ services voor alle evenementen." />
+    <meta property="og:image" content="https://kevinfroger.nl/images/kevin-portrait.webp" />
     <meta property="og:image:width" content="600" />
     <meta property="og:image:height" content="800" />
     <meta property="og:image:alt" content="DJ Kevin Froger - Professionele DJ Nederland" />
@@ -60,11 +60,13 @@
     <link rel="preload" as="font" href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2" type="font/woff2" crossorigin="anonymous" fetchpriority="high" />
     
     <!-- LCP Image Preload - Hero Image (Critical) - WebP for best performance -->
-    <link rel="preload" as="image" href="/images/dj-kevin-froger-bruiloft-scaled-1280.webp" fetchpriority="high" type="image/webp" />
-    <link rel="preload" as="image" href="/images/dj-kevin-froger-bruiloft-scaled-1280.avif" fetchpriority="high" type="image/avif" />
+    <link rel="preload" as="image" href="/images/dj-kevin-froger-bruiloft-scaled.webp" fetchpriority="high" type="image/webp" />
     
     <!-- Critical CSS Inline (Above the fold) -->
     <style>
+      /* Critical Font Face - Inline for instant availability */
+      @font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
       /* Critical above-the-fold styles - Optimized for LCP */
       /* Critical Reset & Base */
       *{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased}
@@ -125,10 +127,8 @@
     <!-- Meta Description -->
     <meta name="description" content="DJ Kevin Froger - Allround DJ & entertainment specialist. Sfeer, show en volle dansvloer voor bruiloften, bedrijfsfeesten en festivals. Boek direct!" />
     
-    <!-- Font Optimization -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous" fetchpriority="low" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" crossorigin="anonymous" /></noscript>
-    
+    <!-- Font loaded inline in critical CSS above - no external CSS needed -->
+
     <!-- Non-Critical CSS Preload -->
     <link rel="preload" href="/assets/index-GpCggnTa.css" as="style" onload="this.onload=null;this.rel='stylesheet'" media="print" fetchpriority="low" />
     <noscript></noscript>
@@ -141,10 +141,10 @@
       "name": "DJ Kevin Froger",
       "alternateName": ["Kevin Froger", "DJ Kevin", "Kevin Froger DJ"],
       "jobTitle": "Professional DJ & MC",
-      "description": "#1 Bruiloft DJ Nederland - Live mixing specialist met 15+ jaar ervaring, 500+ bruiloften, 50+ festivals",
+      "description": "#1 Bruiloft DJ Nederland - Live mixing specialist met 15+ jaar ervaring, 1000+ events, 50+ festivals",
       "url": "https://kevinfroger.nl",
       "logo": "https://kevinfroger.nl/images/kevin-logo.png",
-      "image": "https://kevinfroger.nl/images/kevin-portrait.png",
+      "image": "https://kevinfroger.nl/images/kevin-portrait.webp",
       "telephone": "+31645251333",
       "email": "booking@kevinfroger.nl",
       "priceRange": "€350-€2500",
@@ -325,23 +325,44 @@
       }
     </script>
     
-    <!-- Google Analytics 4 -->
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=GTM-PV4P82PD"></script>
+    <!-- Google Analytics 4 - Delayed load for better performance -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'GTM-PV4P82PD');
-      
+
       // Event tracking for contact actions
       function trackEvent(action, category) {
-        gtag('event', action, {
-          event_category: category,
-          event_label: 'DJ Kevin Froger Contact'
-        });
+        if (window.gtag) {
+          gtag('event', action, {
+            event_category: category,
+            event_label: 'DJ Kevin Froger Contact'
+          });
+        }
       }
+
+      // Load GTM after page interaction or 3 seconds
+      let gtmLoaded = false;
+      function loadGTM() {
+        if (gtmLoaded) return;
+        gtmLoaded = true;
+
+        const script = document.createElement('script');
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=GTM-PV4P82PD';
+        script.async = true;
+        script.onload = function() {
+          gtag('js', new Date());
+          gtag('config', 'GTM-PV4P82PD');
+        };
+        document.head.appendChild(script);
+      }
+
+      // Load on first interaction or after 3 seconds
+      ['mousedown', 'touchstart', 'keydown', 'scroll'].forEach(event => {
+        document.addEventListener(event, loadGTM, { once: true, passive: true });
+      });
+      setTimeout(loadGTM, 3000);
     </script>
-    <script type="module" crossorigin src="/js/index-CwejHoVW.js"></script>
+    <script type="module" crossorigin src="/js/index-LcqdeqU2.js"></script>
     <link rel="modulepreload" crossorigin href="/js/vendor-ZwcYGKNu.js">
     <link rel="modulepreload" crossorigin href="/js/icons-CSAO10Jy.js">
     <link rel="stylesheet" crossorigin href="/assets/style-Cam-D2L4.css">
