@@ -157,19 +157,19 @@ const PrivatePartiesPage = () => {
     {
       title: "Sweet 16 & 18e Verjaardagen",
       description: "De perfecte overgang naar volwassenheid vieren",
-      image: "/images/IMG_1605.png",
+      image: "/images/IMG_1605.webp",
       features: ["Trendy muziek", "Social media moments", "Interactieve games"]
     },
     {
       title: "Volwassen Verjaardagsfeesten",
       description: "Van 30+ tot 70+ - elke leeftijd zijn eigen stijl",
-      image: "/images/IMG_9532.png",
+      image: "/images/IMG_9532.webp",
       features: ["Muziek op maat", "Nostalgische hits", "Dansbare classics"]
     },
     {
       title: "Themafeesten",
       description: "Van jaren '80 disco tot tropical paradise",
-      image: "/images/dj-kevin-froger-apreskifeest.png",
+      image: "/images/dj-kevin-froger-apreskifeest.webp",
       features: ["Thema muziek", "Passende effecten", "Kostuum party support"]
     }
   ];

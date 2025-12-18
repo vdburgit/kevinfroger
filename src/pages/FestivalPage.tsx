@@ -270,8 +270,8 @@ const FestivalPage = () => {
               </div>
             </div>
             <div>
-              <img 
-                src="/images/IMG_1605.png" 
+              <img
+                src="/images/IMG_1605.webp"
                 alt="Festival Crowd"
                 className="w-full rounded-3xl shadow-2xl"
                 width="600"

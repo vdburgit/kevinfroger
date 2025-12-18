@@ -86,7 +86,7 @@ const EventsPage = () => {
       icon: <Building className="w-8 h-8" />,
       title: "Bedrijfsfeesten",
       description: "Professionele entertainment voor corporate events",
-      image: "/images/dj-kevin-froger-bedrijfsfeest.png",
+      image: "/images/dj-kevin-froger-bedrijfsfeest.webp",
       link: "/bedrijfsfeesten",
       color: "from-blue-500 to-blue-600"
     },
@@ -94,7 +94,7 @@ const EventsPage = () => {
       icon: <Sparkles className="w-8 h-8" />,
       title: "Festivals",
       description: "High-energy festival sets voor elk publiek",
-      image: "/images/licht-en-geluid-verhuur-show-scaled.jpeg",
+      image: "/images/licht-en-geluid-verhuur-show-scaled.webp",
       link: "/festivals",
       color: "from-orange-500 to-pink-600"
     },
@@ -102,7 +102,7 @@ const EventsPage = () => {
       icon: <Gift className="w-8 h-8" />,
       title: "Privé Feesten",
       description: "Verjaardagen en familiefeesten op maat",
-      image: "/images/IMG_1605.png",
+      image: "/images/IMG_1605.webp",
       link: "/prive-feesten",
       color: "from-purple-500 to-pink-600"
     },
@@ -110,7 +110,7 @@ const EventsPage = () => {
       icon: <Star className="w-8 h-8" />,
       title: "Sportfeesten",
       description: "Energieke begeleiding van sportevenementen",
-      image: "/images/IMG_9532.png",
+      image: "/images/IMG_9532.webp",
       link: "/sportfeesten",
       color: "from-green-500 to-blue-600"
     },
@@ -118,7 +118,7 @@ const EventsPage = () => {
       icon: <Calendar className="w-8 h-8" />,
       title: "Speciale Evenementen",
       description: "Jubilea, galas en unieke gelegenheden",
-      image: "/images/dj-booth-wit-design.png",
+      image: "/images/dj-booth-wit-design.webp",
       link: "/contact",
       color: "from-indigo-500 to-purple-600"
     }

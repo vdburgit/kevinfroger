@@ -50,7 +50,7 @@ const HomePage = () => {
       description: "Geen standaard playlists, maar unieke live sets die ik ter plekke samenstel. Elke track wordt zorgvuldig gekozen voor het perfecte moment."
     },
     {
-      image: "/images/dj-kevin-froger-bedrijfsfeest.png",
+      image: "/images/dj-kevin-froger-bedrijfsfeest.webp",
       title: "DJ & MC",
       subtitle: "COMPLETE SERVICE",
       description: "Als ervaren MC begeleid ik jullie evenement van begin tot eind. Van aankondigingen tot crowd interaction - alles voor de perfecte sfeer."
@@ -80,7 +80,7 @@ const HomePage = () => {
       description: "Muziek op maat voor elke verjaardag. Van gezellige 50+ tot knallend 30-jarig feest.",
       features: ["Muziek op het publiek", "Flexibele opzet", "Licht & geluid pakket", "MC services mogelijk"],
       link: "/verjaardag-dj",
-      image: "/images/IMG_1605.png",
+      image: "/images/IMG_1605.webp",
       icon: <Users className="w-8 h-8" />,
       color: "from-purple-500 to-pink-600",
       price: "Op aanvraag"
@@ -90,7 +90,7 @@ const HomePage = () => {
       description: "Van netwerkborrel tot personeelsfeest: professioneel, representatief en aanpasbaar.",
       features: ["Achtergrond of feest", "Representatieve uitstraling", "Flexibele indeling", "Meertalig mogelijk"],
       link: "/zakelijk-dj",
-      image: "/images/dj-kevin-froger-bedrijfsfeest.png",
+      image: "/images/dj-kevin-froger-bedrijfsfeest.webp",
       icon: <Building className="w-8 h-8" />,
       color: "from-blue-500 to-blue-600",
       price: "Op aanvraag"

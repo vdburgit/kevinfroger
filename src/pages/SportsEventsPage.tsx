@@ -120,19 +120,19 @@ const SportsEventsPage = () => {
     {
       title: "Voetbalverenigingen",
       description: "Van jeugdfeesten tot kampioenschappen",
-      image: "/images/IMG_9532.png",
+      image: "/images/IMG_9532.webp",
       features: ["Teamliedjes", "Victory songs", "Sfeervolle intro's"]
     },
     {
       title: "Fitness & Gym Events",
       description: "Energieke muziek voor sportieve evenementen",
-      image: "/images/IMG_0230.png",
+      image: "/images/IMG_0230.webp",
       features: ["High-energy tracks", "Motivatie muziek", "Workout beats"]
     },
     {
       title: "Tennis & Racket Sports",
       description: "Stijlvolle begeleiding van toernooien",
-      image: "/images/IMG_2341.png",
+      image: "/images/IMG_2341.webp",
       features: ["Elegante achtergrond", "Award ceremonies", "Networking muziek"]
     }
   ];

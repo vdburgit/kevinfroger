@@ -389,10 +389,13 @@ const WeddingsPage = () => {
             </div>
             
             <div>
-              <img 
-                src="/images/dj-booth-wit-design.png" 
+              <img
+                src="/images/dj-booth-wit-design.webp"
                 alt="DJ Setup Bruiloft"
                 className="w-full rounded-3xl shadow-2xl"
+                width="600"
+                height="400"
+                loading="lazy"
               />
             </div>
           </div>
