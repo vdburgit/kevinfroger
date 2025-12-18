@@ -135,17 +135,16 @@ const HomePage = () => {
         {/* Mobile-only static hero image */}
         <div className="md:hidden absolute inset-0">
           <picture>
-            <source type="image/avif" srcSet="/images/dj-kevin-froger-bruiloft-scaled-1280.avif 1280w, /images/dj-kevin-froger-bruiloft-scaled-640.avif 640w, /images/dj-kevin-froger-bruiloft-scaled-320.avif 320w" sizes="(max-width: 768px) 100vw, 100vw" />
             <source type="image/webp" srcSet="/images/dj-kevin-froger-bruiloft-scaled-1280.webp 1280w, /images/dj-kevin-froger-bruiloft-scaled-640.webp 640w, /images/dj-kevin-froger-bruiloft-scaled-320.webp 320w" sizes="(max-width: 768px) 100vw, 100vw" />
             <img
-              src="/images/dj-kevin-froger-bruiloft-scaled-1280.jpg"
+              src="/images/dj-kevin-froger-bruiloft-scaled.webp"
               alt="DJ Kevin Froger - Professionele DJ services Nederland"
               className="w-full h-full object-cover object-center transform-gpu hero-image"
               width="1200"
               height="800"
               loading="eager"
               decoding="async"
-              fetchPriority="high"
+              fetchpriority="high"
             />
           </picture>
         </div>
@@ -158,22 +157,19 @@ const HomePage = () => {
                 index === currentSlide ? 'opacity-100' : 'opacity-0'
               }`}
             >
-              <picture>
-                <source type="image/avif" srcSet={`${slide.image.replace(/\.(jpe?g|png)$/i, '')}-1280.avif 1280w, ${slide.image.replace(/\.(jpe?g|png)$/i, '')}-640.avif 640w, ${slide.image.replace(/\.(jpe?g|png)$/i, '')}-320.avif 320w`} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw" />
-                <source type="image/webp" srcSet={`${slide.image.replace(/\.(jpe?g|png)$/i, '')}-1280.webp 1280w, ${slide.image.replace(/\.(jpe?g|png)$/i, '')}-640.webp 640w, ${slide.image.replace(/\.(jpe?g|png)$/i, '')}-320.webp 320w`} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw" />
-                <img
-                  src={slide.image.replace(/\.(jpe?g|png)$/i, '') + '-1280.jpg'}
-                  alt={`DJ Kevin Froger ${slide.title} - Professionele DJ services Nederland`}
-                  className="w-full h-full object-cover object-center transform-gpu hero-image"
-                  width="1200"
-                  height="675"
-                  loading={index === 0 ? 'eager' : 'lazy'}
-                  decoding="async"
-                  fetchPriority={index === 0 ? 'high' : 'low'}
-                  style={{ aspectRatio: '16/9' }}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-                />
-              </picture>
+              <img
+                src={slide.image}
+                srcSet={`${slide.image.replace(/\.webp$/i, '')}-640.webp 640w, ${slide.image.replace(/\.webp$/i, '')}-1280.webp 1280w`}
+                sizes="(max-width: 768px) 100vw, 100vw"
+                alt={`DJ Kevin Froger ${slide.title} - Professionele DJ services Nederland`}
+                className="w-full h-full object-cover object-center transform-gpu hero-image"
+                width="1200"
+                height="675"
+                loading={index === 0 ? 'eager' : 'lazy'}
+                decoding="async"
+                fetchpriority={index === 0 ? 'high' : 'low'}
+                style={{ aspectRatio: '16/9' }}
+              />
             </div>
           ))}
         </div>
@@ -317,21 +313,19 @@ const HomePage = () => {
             {services.map((service, index) => (
               <div key={index} className="group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-gray-100">
                 <div className="relative overflow-hidden">
-                  <picture>
-                    <source type="image/avif" srcSet={`${service.image.replace(/\.(jpe?g|png)$/i, '')}-640.avif 640w, ${service.image.replace(/\.(jpe?g|png)$/i, '')}-320.avif 320w`} sizes="(max-width: 768px) 100vw, 33vw" />
-                    <source type="image/webp" srcSet={`${service.image.replace(/\.(jpe?g|png)$/i, '')}-640.webp 640w, ${service.image.replace(/\.(jpe?g|png)$/i, '')}-320.webp 320w`} sizes="(max-width: 768px) 100vw, 33vw" />
-                    <img
-                      src={service.image.replace(/\.(jpe?g|png)$/i, '') + '-640.jpg'}
-                      alt={`DJ Kevin Froger ${service.title} - Professionele DJ services voor ${service.title.toLowerCase()} in Nederland`}
-                      className="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition-transform duration-700"
-                      loading="lazy"
-                      fetchPriority="low"
-                      decoding="async"
-                      width="400"
-                      height="256"
-                      style={{ aspectRatio: '400/256' }}
-                    />
-                  </picture>
+                  <img
+                    src={service.image}
+                    srcSet={`${service.image.replace(/\.webp$/i, '')}-320.webp 320w, ${service.image.replace(/\.webp$/i, '')}-640.webp 640w`}
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    alt={`DJ Kevin Froger ${service.title} - Professionele DJ services voor ${service.title.toLowerCase()} in Nederland`}
+                    className="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+                    loading="lazy"
+                    fetchpriority="low"
+                    decoding="async"
+                    width="400"
+                    height="256"
+                    style={{ aspectRatio: '400/256' }}
+                  />
                   <div className="absolute top-4 right-4 lg:top-6 lg:right-6">
                     <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-full flex items-center justify-center text-white shadow-lg`}>
                       {service.icon}

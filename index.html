@@ -64,6 +64,9 @@
     
     <!-- Critical CSS Inline (Above the fold) -->
     <style>
+      /* Critical Font Face - Inline for instant availability */
+      @font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
       /* Critical above-the-fold styles - Optimized for LCP */
       /* Critical Reset & Base */
       *{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased}
@@ -124,10 +127,8 @@
     <!-- Meta Description -->
     <meta name="description" content="DJ Kevin Froger - Allround DJ & entertainment specialist. Sfeer, show en volle dansvloer voor bruiloften, bedrijfsfeesten en festivals. Boek direct!" />
     
-    <!-- Font Optimization -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous" fetchpriority="low" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" crossorigin="anonymous" /></noscript>
-    
+    <!-- Font loaded inline in critical CSS above - no external CSS needed -->
+
     <!-- Non-Critical CSS Preload -->
     <link rel="preload" href="/src/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'" media="print" fetchpriority="low" />
     <noscript><link rel="stylesheet" href="/src/index.css" /></noscript>
@@ -324,21 +325,42 @@
       }
     </script>
     
-    <!-- Google Analytics 4 -->
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=GTM-PV4P82PD"></script>
+    <!-- Google Analytics 4 - Delayed load for better performance -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'GTM-PV4P82PD');
-      
+
       // Event tracking for contact actions
       function trackEvent(action, category) {
-        gtag('event', action, {
-          event_category: category,
-          event_label: 'DJ Kevin Froger Contact'
-        });
+        if (window.gtag) {
+          gtag('event', action, {
+            event_category: category,
+            event_label: 'DJ Kevin Froger Contact'
+          });
+        }
       }
+
+      // Load GTM after page interaction or 3 seconds
+      let gtmLoaded = false;
+      function loadGTM() {
+        if (gtmLoaded) return;
+        gtmLoaded = true;
+
+        const script = document.createElement('script');
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=GTM-PV4P82PD';
+        script.async = true;
+        script.onload = function() {
+          gtag('js', new Date());
+          gtag('config', 'GTM-PV4P82PD');
+        };
+        document.head.appendChild(script);
+      }
+
+      // Load on first interaction or after 3 seconds
+      ['mousedown', 'touchstart', 'keydown', 'scroll'].forEach(event => {
+        document.addEventListener(event, loadGTM, { once: true, passive: true });
+      });
+      setTimeout(loadGTM, 3000);
     </script>
   </head>
   <body>
