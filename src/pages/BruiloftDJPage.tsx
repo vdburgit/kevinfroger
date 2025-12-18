@@ -10,7 +10,7 @@ const BruiloftDJPage = () => {
     keywords: 'bruiloft dj, bruiloft dj nederland, bruiloft dj zuid-holland, trouw dj, dj bruiloft, bruiloft muziek, ceremonie muziek, openingsdans, feest dj bruiloft',
     canonical: 'https://kevinfroger.nl/bruiloft-dj',
     ogType: 'website',
-    ogImage: 'https://kevinfroger.nl/images/dj-kevin-froger-bruiloft-scaled.jpeg',
+    ogImage: 'https://kevinfroger.nl/images/dj-kevin-froger-bruiloft-scaled.webp',
     ogImageAlt: 'DJ Kevin Froger - Bruiloft DJ met complete show setup',
     twitterCard: 'summary_large_image',
     jsonLd: [

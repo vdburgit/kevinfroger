@@ -78,7 +78,7 @@ const EventsPage = () => {
       icon: <Heart className="w-8 h-8" />,
       title: "Bruiloften & Trouwfeesten",
       description: "Complete muzikale begeleiding voor jullie mooiste dag",
-      image: "/images/dj-kevin-froger-bruiloft-scaled.jpeg",
+      image: "/images/dj-kevin-froger-bruiloft-scaled.webp",
       link: "/bruiloften",
       color: "from-pink-500 to-purple-600"
     },
@@ -254,7 +254,7 @@ const EventsPage = () => {
               <div key={index} className="group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-gray-100">
                 <div className="relative overflow-hidden">
                   <img
-                    src={event.image}
+                    src={`${event.image.replace(/\.webp$/i, '')}-640.webp`}
                     srcSet={`${event.image.replace(/\.webp$/i, '')}-320.webp 320w, ${event.image.replace(/\.webp$/i, '')}-640.webp 640w`}
                     sizes="(max-width: 768px) 100vw, 33vw"
                     alt={event.title}
@@ -327,7 +327,7 @@ const EventsPage = () => {
             
             <div>
               <img
-                src="/images/kevin-portrait.webp"
+                src="/images/kevin-portrait-1280.webp"
                 srcSet="/images/kevin-portrait-640.webp 640w, /images/kevin-portrait-1280.webp 1280w"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 alt="DJ Kevin Froger"

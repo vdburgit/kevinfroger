@@ -402,8 +402,8 @@ const CorporatePage = () => {
             </div>
             
             <div>
-              <img 
-                src="/images/licht-en-geluid-verhuur-scaled.jpeg" 
+              <img
+                src="/images/licht-en-geluid-verhuur-scaled.webp"
                 alt="Corporate DJ Setup"
                 className="w-full rounded-3xl shadow-2xl"
               />

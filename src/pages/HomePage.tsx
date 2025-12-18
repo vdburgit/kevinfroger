@@ -15,7 +15,7 @@ const HomePage = () => {
     keywords: 'bruiloft dj nederland, dj boeken, dj huren, allround dj, bruiloft dj, festival dj, bedrijfsfeest dj, live mixing dj, mc services',
     canonical: 'https://kevinfroger.nl/',
     ogType: 'website',
-    ogImage: 'https://kevinfroger.nl/images/dj-kevin-froger-bruiloft-scaled.jpeg',
+    ogImage: 'https://kevinfroger.nl/images/dj-kevin-froger-bruiloft-scaled.webp',
     ogImageAlt: 'DJ Kevin Froger - Professioneel DJ bij bruiloft met complete licht en geluid show',
     twitterCard: 'summary_large_image',
     jsonLd: [
@@ -38,13 +38,13 @@ const HomePage = () => {
 
   const heroSlides = [
     { // This is the first slide, used as static image for mobile
-      image: "/images/dj-kevin-froger-bruiloft-scaled.jpeg",
+      image: "/images/dj-kevin-froger-bruiloft-scaled.webp",
       title: "PROFESSIONELE DJ",
       subtitle: "KEVIN FROGER",
       description: "Specialist in live mixing en MC services. Ik lees het publiek en creëer de perfecte sfeer voor elk moment van jullie evenement."
     },
     {
-      image: "/images/licht-en-geluid-verhuur-show-scaled.jpeg",
+      image: "/images/licht-en-geluid-verhuur-show-scaled.webp",
       title: "LIVE MIXING",
       subtitle: "SPECIALIST",
       description: "Geen standaard playlists, maar unieke live sets die ik ter plekke samenstel. Elke track wordt zorgvuldig gekozen voor het perfecte moment."
@@ -70,7 +70,7 @@ const HomePage = () => {
       description: "Van ceremonie tot laatste plaat: persoonlijke begeleiding en muziek die past bij jullie dag.",
       features: ["Intake & voorbereiding", "Ceremonie & diner", "Live mixing feestavond", "Eigen licht & geluid"],
       link: "/bruiloft-dj",
-      image: "/images/dj-kevin-froger-bruiloft-scaled.jpeg",
+      image: "/images/dj-kevin-froger-bruiloft-scaled.webp",
       icon: <Heart className="w-8 h-8" />,
       color: "from-pink-500 to-purple-600",
       price: "Op aanvraag"
@@ -100,7 +100,7 @@ const HomePage = () => {
       description: "Complete verhuur van professionele DJ-, licht- en geluidsapparatuur voor elk evenement.",
       features: ["Professioneel geluid", "Sfeervolle lichtshow", "Eigen materiaal", "Inclusief DJ mogelijk"],
       link: "/licht-en-geluid-verhuur",
-      image: "/images/licht-en-geluid-verhuur-show-scaled.jpeg",
+      image: "/images/licht-en-geluid-verhuur-show-scaled.webp",
       icon: <Zap className="w-8 h-8" />,
       color: "from-orange-500 to-pink-600",
       price: "Op aanvraag"
@@ -137,7 +137,7 @@ const HomePage = () => {
           <picture>
             <source type="image/webp" srcSet="/images/dj-kevin-froger-bruiloft-scaled-1280.webp 1280w, /images/dj-kevin-froger-bruiloft-scaled-640.webp 640w, /images/dj-kevin-froger-bruiloft-scaled-320.webp 320w" sizes="(max-width: 768px) 100vw, 100vw" />
             <img
-              src="/images/dj-kevin-froger-bruiloft-scaled.webp"
+              src="/images/dj-kevin-froger-bruiloft-scaled-1280.webp"
               alt="DJ Kevin Froger - Professionele DJ services Nederland"
               className="w-full h-full object-cover object-center transform-gpu hero-image"
               width="1200"
@@ -158,7 +158,7 @@ const HomePage = () => {
               }`}
             >
               <img
-                src={slide.image}
+                src={`${slide.image.replace(/\.webp$/i, '')}-1280.webp`}
                 srcSet={`${slide.image.replace(/\.webp$/i, '')}-640.webp 640w, ${slide.image.replace(/\.webp$/i, '')}-1280.webp 1280w`}
                 sizes="(max-width: 768px) 100vw, 100vw"
                 alt={`DJ Kevin Froger ${slide.title} - Professionele DJ services Nederland`}
@@ -314,7 +314,7 @@ const HomePage = () => {
               <div key={index} className="group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-gray-100">
                 <div className="relative overflow-hidden">
                   <img
-                    src={service.image}
+                    src={`${service.image.replace(/\.webp$/i, '')}-640.webp`}
                     srcSet={`${service.image.replace(/\.webp$/i, '')}-320.webp 320w, ${service.image.replace(/\.webp$/i, '')}-640.webp 640w`}
                     sizes="(max-width: 768px) 100vw, 33vw"
                     alt={`DJ Kevin Froger ${service.title} - Professionele DJ services voor ${service.title.toLowerCase()} in Nederland`}
