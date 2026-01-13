@@ -1,4 +1,4 @@
-import { Phone, Mail, CheckCircle, ArrowRight, Award, Users, Music, Calendar, Star, MessageCircle, Send } from 'lucide-react';
+import { Phone, Mail, CheckCircle, ArrowRight, Award, Users, Music, Calendar, Star, MessageCircle, Send, MapPin } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 import { useSEO, generateBreadcrumbSchema } from '../hooks/useSEO';
 

@@ -49,8 +49,8 @@ if (is_file($rlfile) && ($now - (int)@file_get_contents($rlfile)) < 30) {
 }
 @file_put_contents($rlfile, (string)$now);
 
-// Validatie: alleen naam, e-mail en bericht verplicht
-if ($bot !== '' || $name === '' || !filter_var($email, FILTER_VALIDATE_EMAIL) || $message === '') {
+// Validatie: alleen naam, e-mail en eventType verplicht
+if ($bot !== '' || $name === '' || !filter_var($email, FILTER_VALIDATE_EMAIL) || $eventType === '') {
   http_response_code(422);
   echo json_encode(['ok' => false, 'error' => 'Ongeldige invoer']);
   exit;
@@ -67,10 +67,14 @@ $lines = [
   $location   !== '' ? "Locatie/plaats: {$location}" : null,
   $guestCount !== '' ? "Aantal gasten: {$guestCount}" : null,
   $budget     !== '' ? "Budget indicatie: {$budget}" : null,
-  "",
-  "Bericht:",
-  $message,
 ];
+
+if ($message !== '') {
+  $lines[] = "";
+  $lines[] = "Bericht:";
+  $lines[] = $message;
+}
+
 $body = implode("\n", array_values(array_filter($lines, fn($v) => $v !== null)));
 
 // Headers
