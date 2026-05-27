@@ -1,9 +1,30 @@
 import React, { useState } from 'react';
-import { Send, Calendar, Users, MapPin, Clock, CheckCircle, AlertCircle, Phone, MessageCircle } from 'lucide-react';
+import {
+  Send,
+  CheckCircle,
+  AlertCircle,
+  Phone,
+  MessageCircle,
+} from 'lucide-react';
 
 interface ContactFormProps {
   eventType?: string;
 }
+
+const inputClass = 'w-full px-4 py-2.5 rounded-lg text-white text-sm focus:outline-none focus:ring-2 transition-colors';
+const inputErrorClass = 'w-full px-4 py-2.5 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-red-400 transition-colors';
+const labelClass = 'block text-sm font-semibold mb-1.5';
+const inputStyle = {
+  background: 'rgba(255,255,255,0.07)',
+  border: '1px solid rgba(255,255,255,0.14)',
+  color: 'var(--kf-text)',
+} as React.CSSProperties;
+const inputErrorStyle = {
+  background: 'rgba(255,255,255,0.07)',
+  border: '1px solid rgba(239,68,68,0.7)',
+  color: 'var(--kf-text)',
+} as React.CSSProperties;
+const labelStyle = { color: 'rgba(255,255,255,0.75)' } as React.CSSProperties;
 
 const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
   const [formData, setFormData] = useState({
@@ -15,7 +36,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
     location: '',
     guestCount: '',
     budget: '',
-    message: ''
+    message: '',
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -44,25 +65,26 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
 
-    // Clear error when user starts typing
     if (errors[name]) {
-      setErrors(prev => ({
+      setErrors((prev) => ({
         ...prev,
-        [name]: ''
+        [name]: '',
       }));
     }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
@@ -86,7 +108,9 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
       setIsSubmitted(true);
     } catch (error) {
       console.error('Error submitting form:', error);
-      setSubmitError('Er is een fout opgetreden. Probeer het opnieuw of bel direct: 06 45 25 13 33');
+      setSubmitError(
+        'Er is een fout opgetreden. Probeer het opnieuw of bel direct: 06 45 25 13 33'
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -94,23 +118,26 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
 
   if (isSubmitted) {
     return (
-      <div className="bg-white rounded-3xl shadow-2xl p-10 text-center">
-        <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-          <CheckCircle className="w-10 h-10 text-green-600" />
+      <div className="flex flex-col items-center text-center py-8">
+        <div
+          className="w-16 h-16 rounded-full flex items-center justify-center mb-5"
+          style={{ background: 'rgba(37,211,102,0.12)' }}
+        >
+          <CheckCircle size={32} style={{ color: '#25D366' }} />
         </div>
-        <h3 className="text-3xl font-black text-gray-900 mb-4">BEDANKT!</h3>
-        <p className="text-lg text-gray-600 mb-8">
-          Je aanvraag is succesvol verzonden naar booking@kevinfroger.nl. We nemen binnen 24 uur contact met je op 
-          voor een vrijblijvend gesprek over jouw evenement.
+        <h3 className="text-xl font-black text-white mb-3">Bedankt!</h3>
+        <p className="text-sm leading-relaxed mb-6" style={{ color: 'var(--kf-text-muted)' }}>
+          Je aanvraag is succesvol verzonden naar booking@kevinfroger.nl. Ik neem binnen 24 uur
+          contact met je op voor een vrijblijvend gesprek over je evenement.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:0645251333"
-            className="mobile-btn bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 transition-all duration-200 font-bold"
-          >
-            OF BEL DIRECT: 06 45 25 13 33
+        <div className="flex flex-col sm:flex-row gap-3 w-full">
+          <a href="tel:0645251333" className="flex-1 kf-btn-primary">
+            <Phone size={16} />
+            Bel direct: 06 45 25 13 33
           </a>
           <button
+            type="button"
+            className="flex-1 kf-btn-secondary"
             onClick={() => {
               setIsSubmitted(false);
               setFormData({
@@ -122,12 +149,11 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
                 location: '',
                 guestCount: '',
                 budget: '',
-                message: ''
+                message: '',
               });
             }}
-            className="mobile-btn border-2 border-gray-300 text-gray-700 hover:border-gray-400 transition-all duration-200 font-bold"
           >
-            NIEUWE AANVRAAG
+            Nieuwe aanvraag
           </button>
         </div>
       </div>
@@ -135,19 +161,32 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
   }
 
   return (
-    <div className="bg-white rounded-3xl shadow-2xl p-10">
-      <form onSubmit={handleSubmit} className="space-y-8">
+    <form onSubmit={handleSubmit} noValidate>
+      <div className="mb-6">
+        <p className="kf-label">Aanvraagformulier</p>
+        <h3 className="text-xl font-black text-white mb-1">Plan je feest met Kevin</h3>
+        <p className="text-sm" style={{ color: 'var(--kf-text-muted)' }}>
+          Velden met <span style={{ color: 'var(--kf-accent-gold)' }}>*</span> zijn verplicht. Reactie binnen 24 uur.
+        </p>
+      </div>
+
+      <div className="space-y-4">
         {submitError && (
-          <div className="bg-red-50 border border-red-200 rounded-xl p-4 flex items-start">
-            <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
-            <p className="text-red-700 font-medium">{submitError}</p>
+          <div
+            className="flex items-start gap-3 p-4 rounded-lg text-sm"
+            style={{ background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.3)', color: '#fca5a5' }}
+            role="alert"
+          >
+            <AlertCircle size={18} className="shrink-0 mt-0.5" />
+            <span>{submitError}</span>
           </div>
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Name & Email */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label htmlFor="name" className="block text-base md:text-sm font-black text-gray-700 mb-3 tracking-wide">
-              NAAM *
+            <label htmlFor="name" className={labelClass} style={labelStyle}>
+              Naam <span style={{ color: 'var(--kf-accent-gold)' }}>*</span>
             </label>
             <input
               type="text"
@@ -156,21 +195,22 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
               required
               value={formData.name}
               onChange={handleChange}
-              className={`w-full px-4 md:px-6 py-4 border-2 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 font-semibold text-base ${
-                errors.name ? 'border-red-500' : 'border-gray-300'
-              }`}
               placeholder="Jouw naam"
+              autoComplete="name"
+              className={errors.name ? inputErrorClass : inputClass}
+              style={errors.name ? inputErrorStyle : inputStyle}
             />
             {errors.name && (
-              <div className="flex items-center mt-2 text-red-600">
-                <AlertCircle className="w-4 h-4 mr-2" />
-                <span className="text-base md:text-sm font-medium">{errors.name}</span>
-              </div>
+              <span className="flex items-center gap-1 mt-1.5 text-xs" style={{ color: '#fca5a5' }}>
+                <AlertCircle size={12} />
+                {errors.name}
+              </span>
             )}
           </div>
+
           <div>
-            <label htmlFor="email" className="block text-base md:text-sm font-black text-gray-700 mb-3 tracking-wide">
-              EMAIL *
+            <label htmlFor="email" className={labelClass} style={labelStyle}>
+              E-mail <span style={{ color: 'var(--kf-accent-gold)' }}>*</span>
             </label>
             <input
               type="email"
@@ -179,39 +219,40 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
               required
               value={formData.email}
               onChange={handleChange}
-              className={`w-full px-4 md:px-6 py-4 border-2 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 font-semibold text-base ${
-                errors.email ? 'border-red-500' : 'border-gray-300'
-              }`}
               placeholder="jouw@email.nl"
+              autoComplete="email"
+              className={errors.email ? inputErrorClass : inputClass}
+              style={errors.email ? inputErrorStyle : inputStyle}
             />
             {errors.email && (
-              <div className="flex items-center mt-2 text-red-600">
-                <AlertCircle className="w-4 h-4 mr-2" />
-                <span className="text-base md:text-sm font-medium">{errors.email}</span>
-              </div>
+              <span className="flex items-center gap-1 mt-1.5 text-xs" style={{ color: '#fca5a5' }}>
+                <AlertCircle size={12} />
+                {errors.email}
+              </span>
             )}
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Phone & Event type */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label htmlFor="phone" className="block text-base md:text-sm font-black text-gray-700 mb-3 tracking-wide">
-              TELEFOON
-            </label>
+            <label htmlFor="phone" className={labelClass} style={labelStyle}>Telefoon</label>
             <input
               type="tel"
               id="phone"
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-4 md:px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 font-semibold text-base"
               placeholder="06 45 25 13 33"
+              autoComplete="tel"
+              className={inputClass}
+              style={inputStyle}
             />
           </div>
+
           <div>
-            <label htmlFor="eventType" className="block text-base md:text-sm font-black text-gray-700 mb-3 tracking-wide">
-              <Calendar className="w-4 h-4 inline-block mr-2" />
-              TYPE EVENEMENT *
+            <label htmlFor="eventType" className={labelClass} style={labelStyle}>
+              Type evenement <span style={{ color: 'var(--kf-accent-gold)' }}>*</span>
             </label>
             <select
               id="eventType"
@@ -219,12 +260,11 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
               required
               value={formData.eventType}
               onChange={handleChange}
-              className={`w-full px-4 md:px-6 py-4 border-2 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 font-semibold text-base ${
-                errors.eventType ? 'border-red-500' : 'border-gray-300'
-              }`}
+              className={errors.eventType ? inputErrorClass : inputClass}
+              style={errors.eventType ? inputErrorStyle : inputStyle}
             >
               <option value="">Selecteer type evenement</option>
-              <option value="eventplan-scan">🎯 Eventplan-scan (gratis adviesgesprek)</option>
+              <option value="eventplan-scan">Eventplan-scan (gratis adviesgesprek)</option>
               <option value="bruiloft">Bruiloft</option>
               <option value="bedrijfsfeest">Bedrijfsfeest</option>
               <option value="festival">Festival</option>
@@ -235,20 +275,18 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
               <option value="anders">Anders</option>
             </select>
             {errors.eventType && (
-              <div className="flex items-center mt-2 text-red-600">
-                <AlertCircle className="w-4 h-4 mr-2" />
-                <span className="text-base md:text-sm font-medium">{errors.eventType}</span>
-              </div>
+              <span className="flex items-center gap-1 mt-1.5 text-xs" style={{ color: '#fca5a5' }}>
+                <AlertCircle size={12} />
+                {errors.eventType}
+              </span>
             )}
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Date & Location */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label htmlFor="eventDate" className="block text-sm font-black text-gray-700 mb-3 tracking-wide">
-              <Clock className="w-4 h-4 inline-block mr-2" />
-              DATUM EVENEMENT
-            </label>
+            <label htmlFor="eventDate" className={labelClass} style={labelStyle}>Datum evenement</label>
             <input
               type="date"
               id="eventDate"
@@ -256,38 +294,37 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
               value={formData.eventDate}
               onChange={handleChange}
               min={new Date().toISOString().split('T')[0]}
-              className="w-full px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 font-semibold"
+              className={inputClass}
+              style={inputStyle}
             />
           </div>
+
           <div>
-            <label htmlFor="location" className="block text-sm font-black text-gray-700 mb-3 tracking-wide">
-              <MapPin className="w-4 h-4 inline-block mr-2" />
-              LOCATIE/PLAATS
-            </label>
+            <label htmlFor="location" className={labelClass} style={labelStyle}>Locatie / plaats</label>
             <input
               type="text"
               id="location"
               name="location"
               value={formData.location}
               onChange={handleChange}
-              className="w-full px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 font-semibold"
-              placeholder="Stad/Locatie"
+              placeholder="Stad of locatie"
+              className={inputClass}
+              style={inputStyle}
             />
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Guest count & Budget */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label htmlFor="guestCount" className="block text-sm font-black text-gray-700 mb-3 tracking-wide">
-              <Users className="w-4 h-4 inline-block mr-2" />
-              AANTAL GASTEN
-            </label>
+            <label htmlFor="guestCount" className={labelClass} style={labelStyle}>Aantal gasten</label>
             <select
               id="guestCount"
               name="guestCount"
               value={formData.guestCount}
               onChange={handleChange}
-              className="w-full px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 font-semibold"
+              className={inputClass}
+              style={inputStyle}
             >
               <option value="">Aantal gasten</option>
               <option value="0-25">0-25 gasten</option>
@@ -298,16 +335,16 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
               <option value="500+">500+ gasten</option>
             </select>
           </div>
+
           <div>
-            <label htmlFor="budget" className="block text-sm font-black text-gray-700 mb-3 tracking-wide">
-              BUDGET INDICATIE
-            </label>
+            <label htmlFor="budget" className={labelClass} style={labelStyle}>Budget indicatie</label>
             <select
               id="budget"
               name="budget"
               value={formData.budget}
               onChange={handleChange}
-              className="w-full px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 font-semibold"
+              className={inputClass}
+              style={inputStyle}
             >
               <option value="">Budget indicatie</option>
               <option value="500-750">€500 - €750</option>
@@ -320,68 +357,67 @@ const ContactForm: React.FC<ContactFormProps> = ({ eventType = '' }) => {
           </div>
         </div>
 
+        {/* Message */}
         <div>
-          <label htmlFor="message" className="block text-sm font-black text-gray-700 mb-3 tracking-wide">
-            AANVULLENDE INFORMATIE
-          </label>
+          <label htmlFor="message" className={labelClass} style={labelStyle}>Bericht / aanvullende info</label>
           <textarea
             id="message"
             name="message"
             rows={5}
             value={formData.message}
             onChange={handleChange}
-            className="w-full px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none font-semibold"
-            placeholder="Vertel ons meer over jouw evenement, speciale wensen, muziekvoorkeur, tijdschema, etc..."
+            placeholder="Vertel kort over je feest: tijden, wensen, muziekvoorkeur, locatie, etc."
+            className={`${inputClass} resize-none`}
+            style={inputStyle}
           />
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 pt-6">
+        {/* Submit row */}
+        <div className="flex flex-col sm:flex-row gap-3 pt-2">
           <button
             type="submit"
+            className="flex-1 kf-btn-primary disabled:opacity-60"
             disabled={isSubmitting}
-            className="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-md md:shadow-xl hover:shadow-blue-500/30 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none font-bold md:font-black text-base md:text-lg flex items-center justify-center min-h-[48px] md:min-h-[60px] rounded-lg md:rounded-2xl px-4 md:px-8 py-3 md:py-4 focus:outline-none focus:ring-4 focus:ring-blue-500/50"
           >
             {isSubmitting ? (
               <>
-                <div className="w-4 h-4 md:w-5 md:h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2 md:mr-3"></div>
-                <span className="tracking-wide">VERSTUREN...</span>
+                <span
+                  className="w-4 h-4 border-2 rounded-full animate-spin"
+                  style={{ borderColor: 'rgba(22,4,12,0.3)', borderTopColor: '#16040C' }}
+                />
+                Versturen…
               </>
             ) : (
               <>
-                <Send className="w-4 h-4 md:w-5 md:h-5 mr-2 md:mr-3" />
-                <span className="tracking-wide">VERSTUUR AANVRAAG</span>
+                <Send size={16} />
+                Verstuur aanvraag
               </>
             )}
           </button>
-          
-          <a
-            href="tel:0645251333"
-            className="flex-1 sm:flex-none border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300 font-bold md:font-black text-base md:text-lg flex items-center justify-center min-h-[48px] md:min-h-[60px] rounded-lg md:rounded-2xl shadow-md hover:shadow-blue-500/20 transform hover:scale-105 bg-blue-50 hover:bg-blue-600 group px-4 md:px-6 py-3 md:py-4 focus:outline-none focus:ring-4 focus:ring-blue-500/50"
-          >
-            <div className="w-6 h-6 md:w-8 md:h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mr-2 md:mr-3 group-hover:bg-white group-hover:text-blue-600 transition-all duration-300">
-              <Phone className="w-3 h-3 md:w-4 md:h-4" />
-            </div>
-            <span className="tracking-wide">BEL DIRECT</span>
+
+          <a href="tel:0645251333" className="kf-btn-secondary">
+            <Phone size={16} />
+            Bel direct
           </a>
-          
+
           <a
-            href="https://api.whatsapp.com/send/?phone=31645251333&text&type=phone_number&app_absent=0"
+            href="https://wa.me/31645251333"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 sm:flex-none border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-all duration-300 font-bold md:font-black text-base md:text-lg flex items-center justify-center min-h-[48px] md:min-h-[60px] rounded-lg md:rounded-2xl shadow-md hover:shadow-green-500/20 transform hover:scale-105 bg-green-50 hover:bg-green-600 group px-4 md:px-6 py-3 md:py-4 focus:outline-none focus:ring-4 focus:ring-green-500/50"
+            className="kf-btn-secondary"
+            style={{ color: '#25D366', borderColor: 'rgba(37,211,102,0.3)' }}
           >
-            <div className="w-6 h-6 md:w-8 md:h-8 bg-green-600 text-white rounded-full flex items-center justify-center mr-2 md:mr-3 group-hover:bg-white group-hover:text-green-600 transition-all duration-300">
-              <MessageCircle className="w-3 h-3 md:w-4 md:h-4" />
-            </div>
-            <span className="tracking-wide">WHATSAPP</span>
+            <MessageCircle size={16} />
+            WhatsApp
           </a>
         </div>
 
-        <div className="text-center text-base md:text-sm text-gray-500 pt-4">
-          <p>Door dit formulier te versturen ga je akkoord met onze <a href="/privacy" className="text-blue-600 hover:underline">privacyvoorwaarden</a>.</p>
-        </div>
-      </form>
-    </div>
+        <p className="text-xs pt-1" style={{ color: 'rgba(255,255,255,0.35)' }}>
+          Door dit formulier te versturen ga je akkoord met onze{' '}
+          <a href="/privacy" className="underline transition-colors hover:text-white">privacyvoorwaarden</a>.
+        </p>
+      </div>
+    </form>
   );
 };
 

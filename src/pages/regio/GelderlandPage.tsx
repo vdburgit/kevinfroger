@@ -1,18 +1,17 @@
 import React from 'react';
-import { MapPin, Calendar, Users, Award, CheckCircle, ArrowRight, Star, Heart, Building, Zap, MessageCircle } from 'lucide-react';
+import { MapPin, Heart, Users, Building, Zap, CheckCircle, MessageCircle, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ContactForm from '../../components/ContactForm';
+import { GradientDivider } from '../../components/GradientDivider';
 
 const GelderlandPage = () => {
-  // SEO metadata for this page
   React.useEffect(() => {
     document.title = "DJ huren in Gelderland – complete DJ‑show | Kevin Froger";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Ervaren allround DJ in Gelderland voor bruiloft, verjaardag en events. Compleet met licht & geluid. Vraag je prijs of offerte.');
     }
-    
-    // Add structured data
+
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify({
@@ -39,7 +38,7 @@ const GelderlandPage = () => {
       ]
     });
     document.head.appendChild(script);
-    
+
     return () => {
       document.head.removeChild(script);
     };
@@ -60,26 +59,22 @@ const GelderlandPage = () => {
     {
       title: "Bruiloft DJ Gelderland",
       description: "Complete muzikale begeleiding voor jullie mooiste dag",
-      icon: <Heart className="w-8 h-8" />,
-      color: "from-pink-500 to-purple-600"
+      icon: <Heart size={28} />
     },
     {
       title: "Verjaardag DJ Gelderland",
       description: "Van 18e verjaardag tot jubileum - altijd feest",
-      icon: <Users className="w-8 h-8" />,
-      color: "from-green-500 to-green-600"
+      icon: <Users size={28} />
     },
     {
       title: "Zakelijk DJ Gelderland",
       description: "Professionele DJ voor bedrijfsfeesten",
-      icon: <Building className="w-8 h-8" />,
-      color: "from-blue-500 to-blue-600"
+      icon: <Building size={28} />
     },
     {
       title: "Evenementen DJ Gelderland",
       description: "Festivals en publieke evenementen",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-orange-500 to-pink-600"
+      icon: <Zap size={28} />
     }
   ];
 
@@ -91,103 +86,82 @@ const GelderlandPage = () => {
   ];
 
   const stats = [
-    { number: "15+", label: "Jaar in Gelderland", icon: <Award className="w-8 h-8" /> },
-    { number: "250+", label: "Events in de provincie", icon: <Calendar className="w-8 h-8" /> },
-    { number: "8", label: "Grote steden", icon: <MapPin className="w-8 h-8" /> },
-    { number: "100%", label: "Tevreden klanten", icon: <Star className="w-8 h-8" /> }
+    { number: "15+", label: "Jaar in Gelderland" },
+    { number: "250+", label: "Events in de provincie" },
+    { number: "8", label: "Grote steden" },
+    { number: "100%", label: "Tevreden klanten" }
   ];
 
   return (
-    <div className="bg-white">
-      {/* Breadcrumbs */}
-      <nav aria-label="Breadcrumb" className="bg-gray-50 py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ol className="flex items-center space-x-2 text-sm">
-            <li><Link to="/" className="text-gray-500 hover:text-gray-700">Home</Link></li>
-            <li className="text-gray-400">/</li>
-            <li><Link to="/regio" className="text-gray-500 hover:text-gray-700">Regio</Link></li>
-            <li className="text-gray-400">/</li>
-            <li className="text-gray-900 font-semibold">Gelderland</li>
+    <div style={{ background: '#ffffff', color: '#151515' }}>
+      {/* Breadcrumb */}
+      <nav aria-label="Breadcrumb" style={{ background: '#f7f3ed', borderBottom: '1px solid rgba(0,0,0,0.08)' }} className="py-3">
+        <div className="kf-section-inner py-0">
+          <ol className="flex items-center gap-2 text-xs" style={{ color: 'rgba(21,21,21,0.60)' }}>
+            <li><Link to="/" className="transition-colors hover:underline">Home</Link></li>
+            <li>/</li>
+            <li><Link to="/regio" className="transition-colors hover:underline">Regio</Link></li>
+            <li>/</li>
+            <li style={{ color: '#151515' }} className="font-semibold">Gelderland</li>
           </ol>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-r from-green-600 to-green-700 text-white" role="banner">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <MapPin className="w-16 h-16 mx-auto mb-6 text-green-200" />
-          <h1 className="text-4xl lg:text-6xl font-black mb-6">
-            DJ huren in Gelderland – complete DJ‑show
-          </h1>
-          <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Ervaren allround DJ in Gelderland voor bruiloft, verjaardag en events. 
-            Van Nijmegen tot Arnhem - compleet met licht & geluid. Vraag je prijs of offerte.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-            <a
-              href="https://wa.me/31645251333"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-10 py-5 rounded-full font-black text-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105"
-            >
-              <MessageCircle className="w-6 h-6 inline-block mr-3" />
-              APP VOOR EEN PRIJSINDICATIE
-            </a>
-            <a
-              href="/prijzen"
-              className="border-3 border-white text-white px-10 py-5 rounded-full font-black text-xl hover:bg-white hover:text-green-900 transition-all duration-300"
-            >
-              VRAAG EEN OFFERTE AAN
-            </a>
+      {/* Hero */}
+      <section className="kf-seo-hero" role="banner">
+        <div className="kf-section-inner relative z-10 text-center py-24 lg:py-36">
+          <div className="flex items-center justify-center gap-2 mb-5">
+            <MapPin size={18} style={{ color: '#ff7a00' }} />
+            <span className="kf-eyebrow">Gelderland</span>
           </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  {stat.icon}
-                </div>
-                <div className="text-3xl lg:text-4xl font-black text-orange-400 mb-2">{stat.number}</div>
-                <div className="text-green-200 font-semibold">{stat.label}</div>
+          <h1 className="kf-hero-title mb-6" style={{ color: '#151515' }}>DJ huren in <span style={{ color: '#e60000' }}>Gelderland</span></h1>
+          <p className="kf-hero-subtitle mx-auto mb-10" style={{ maxWidth: '620px', color: 'rgba(21,21,21,0.62)' }}>
+            Ervaren allround DJ in Gelderland voor bruiloft, verjaardag en events. Van Nijmegen tot Arnhem - compleet met licht &amp; geluid. Vraag je prijs of offerte.
+          </p>
+          <div className="kf-hero-actions justify-center">
+            <a href="https://wa.me/31645251333" target="_blank" rel="noopener noreferrer" className="kf-btn-primary">
+              <MessageCircle size={18} /> App voor prijsindicatie
+            </a>
+            <a href="/contact" className="kf-btn-secondary">Vraag offerte aan</a>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto mt-14">
+            {stats.map((s, i) => (
+              <div key={i} style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '20px', boxShadow: '0 4px 18px rgba(0,0,0,0.07)' }} className="p-4 text-center">
+                <div className="text-2xl font-black" style={{ color: '#151515' }}>{s.number}</div>
+                <div className="text-xs mt-1" style={{ color: 'rgba(21,21,21,0.60)' }}>{s.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl lg:text-7xl font-black text-gray-900 mb-8 text-shadow">
-              DJ SERVICES
-              <span className="block text-green-700">GELDERLAND</span>
-            </h2>
+      <GradientDivider />
+
+      {/* Services */}
+      <section className="kf-section" style={{ background: '#ffffff' }}>
+        <div className="kf-section-inner">
+          <div className="text-center mb-14">
+            <p className="kf-label mb-3">DJ services</p>
+            <h2 className="text-3xl md:text-4xl font-black kf-section-title">DJ services Gelderland</h2>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {services.map((service, index) => (
-              <div key={index} className="group p-8 bg-gray-50 rounded-2xl hover:shadow-lg transition-all duration-300">
-                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-full flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform duration-300`}>
-                  {service.icon}
+          <div className="kf-services-grid">
+            {services.map((s, i) => (
+              <div key={i} className="kf-service-card" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '20px', boxShadow: '0 4px 18px rgba(0,0,0,0.07)' }}>
+                <div className="mb-5 w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: 'rgba(255,122,0,0.10)', color: '#ff7a00' }}>
+                  {s.icon}
                 </div>
-                <h3 className="text-xl font-black text-gray-900 mb-4">{service.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{service.description}</p>
+                <h3 className="text-lg font-bold mb-2" style={{ color: '#151515' }}>{s.title}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'rgba(21,21,21,0.60)' }}>{s.description}</p>
               </div>
             ))}
           </div>
-
-          <div className="bg-gradient-to-r from-green-50 to-gray-50 rounded-3xl p-12">
-            <h3 className="text-3xl font-black text-gray-900 mb-8 text-center">Wat je krijgt in Gelderland:</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {usps.map((usp, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <CheckCircle className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="text-lg text-gray-700 font-medium">{usp}</span>
+          <div className="mt-14 rounded-2xl p-8" style={{ background: '#fff7e6', border: '1px solid rgba(230,0,0,0.10)' }}>
+            <h3 className="text-xl font-bold mb-6" style={{ color: '#151515' }}>Wat je krijgt in Gelderland:</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {usps.map((u, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <CheckCircle size={18} className="shrink-0 mt-0.5" style={{ color: '#e60000' }} />
+                  <span className="text-sm" style={{ color: 'rgba(21,21,21,0.60)' }}>{u}</span>
                 </div>
               ))}
             </div>
@@ -195,53 +169,47 @@ const GelderlandPage = () => {
         </div>
       </section>
 
-      {/* Cities Section */}
-      <section className="py-32 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl lg:text-7xl font-black text-gray-900 mb-8 text-shadow">
-              ALLE STEDEN
-              <span className="block text-orange-500">GELDERLAND</span>
-            </h2>
-            <p className="text-2xl text-gray-600 max-w-4xl mx-auto">
-              Klik op jouw stad voor lokale informatie en beschikbaarheid
-            </p>
+      <GradientDivider />
+
+      {/* Cities */}
+      <section className="kf-section" style={{ background: '#fff7e6' }}>
+        <div className="kf-section-inner">
+          <div className="text-center mb-10">
+            <p className="kf-label mb-3">Steden</p>
+            <h2 className="text-2xl md:text-3xl font-black kf-section-title">Alle steden Gelderland</h2>
+            <p className="mt-2 text-sm" style={{ color: 'rgba(21,21,21,0.60)' }}>Klik op jouw stad voor lokale informatie en beschikbaarheid</p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {cities.map((city, index) => (
-              <Link
-                key={index}
-                to={city.href}
-                className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:-translate-y-2 border border-gray-100 hover:border-orange-200"
-              >
-                <MapPin className="w-8 h-8 text-orange-500 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <h3 className="text-lg font-black text-gray-900 group-hover:text-orange-600 transition-colors duration-300 mb-2">
-                  DJ {city.name}
-                </h3>
-                <p className="text-sm text-gray-600 mb-4">{city.description}</p>
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <ArrowRight className="w-5 h-5 text-orange-500 mx-auto" />
-                </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {cities.map((c, i) => (
+              <Link key={i} to={c.href} style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '20px', boxShadow: '0 4px 18px rgba(0,0,0,0.07)' }} className="flex flex-col items-center gap-2 p-5 text-center transition-all hover:scale-105">
+                <MapPin size={18} style={{ color: '#ff7a00' }} />
+                <span className="text-sm font-bold" style={{ color: '#151515' }}>DJ {c.name}</span>
+                <span className="text-xs" style={{ color: 'rgba(21,21,21,0.60)' }}>{c.description}</span>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-32 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl lg:text-7xl font-black text-gray-900 mb-8 text-shadow">
-              BOEK EEN DJ
-              <span className="block text-green-700">IN GELDERLAND</span>
-            </h2>
-            <p className="text-2xl text-gray-600 leading-relaxed">
-              Klaar om jouw evenement in Gelderland onvergetelijk te maken?
-            </p>
+      <GradientDivider />
+
+      {/* Contact */}
+      <section className="kf-section" style={{ background: '#ffffff' }}>
+        <div className="kf-section-inner" style={{ maxWidth: '720px' }}>
+          <div className="text-center mb-10">
+            <p className="kf-label mb-3">Contact</p>
+            <h2 className="text-3xl md:text-4xl font-black kf-section-title">Boek een DJ in Gelderland</h2>
+            <p className="mt-3 text-sm" style={{ color: 'rgba(21,21,21,0.60)' }}>Klaar om jouw evenement in Gelderland onvergetelijk te maken?</p>
           </div>
-          <ContactForm eventType="Gelderland" />
+          <div className="kf-hero-card p-8 md:p-10">
+            <ContactForm eventType="Gelderland" />
+          </div>
+          <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="tel:0645251333" className="kf-btn-secondary"><Phone size={16} /> 06 45 25 13 33</a>
+            <a href="https://wa.me/31645251333" target="_blank" rel="noopener noreferrer" className="kf-btn-secondary" style={{ color: '#25D366', borderColor: 'rgba(37,211,102,0.3)' }}>
+              <MessageCircle size={16} /> WhatsApp
+            </a>
+          </div>
         </div>
       </section>
     </div>

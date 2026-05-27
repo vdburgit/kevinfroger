@@ -1,219 +1,239 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Phone } from 'lucide-react';
+
+const serviceLinks = [
+  { name: 'Bruiloft DJ',     href: '/bruiloft-dj' },
+  { name: 'Verjaardag DJ',   href: '/verjaardag-dj' },
+  { name: 'Evenementen DJ',  href: '/evenementen-dj' },
+  { name: 'Zakelijk DJ',     href: '/zakelijk-dj' },
+  { name: 'Werkwijze',       href: '/werkwijze' },
+];
+
+const navigation = [
+  { name: 'Home',      href: '/' },
+  { name: 'DJ Shows',  href: '#',   dropdown: serviceLinks },
+  { name: 'Reviews',   href: '/reviews' },
+  { name: 'Prijzen',   href: '/prijzen' },
+  { name: 'Contact',   href: '/contact' },
+];
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [menuOpen,     setMenuOpen]     = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [scrolled,     setScrolled]     = useState(false);
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 48);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const navigation = [
-    { name: 'HOME', href: '/' },
-    { 
-      name: 'DIENSTEN', 
-      href: '#',
-      dropdown: [
-        { name: 'Bruiloft DJ', href: '/bruiloft-dj' },
-        { name: 'Verjaardag DJ', href: '/verjaardag-dj' },
-        { name: 'Evenementen DJ', href: '/evenementen-dj' },
-        { name: 'Zakelijk DJ', href: '/zakelijk-dj' },
-        { name: 'Werkwijze', href: '/werkwijze' }
-      ]
-    },
-    { name: 'REVIEWS', href: '/reviews' },
-    { name: 'REGIO', href: '/regio' },
-    { name: 'PRIJZEN', href: '/prijzen' },
-    { name: 'CONTACT', href: '/contact' },
-  ];
+  useEffect(() => {
+    setMenuOpen(false);
+    setServicesOpen(false);
+  }, [location.pathname]);
 
-  const isActive = (path: string) => location.pathname === path;
-
-  const handleLinkClick = (href: string) => {
-    setIsServicesOpen(false);
-    setIsMenuOpen(false);
-    
-    // Handle hash links
-    if (href.includes('#')) {
-      const [path, hash] = href.split('#');
-      if (path === '' || path === location.pathname) {
-        // Same page, just scroll to element
-        const element = document.getElementById(hash);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }
-      // For different pages with hash, let React Router handle it
-    }
-  };
+  const bg = scrolled
+    ? 'rgba(14,14,14,0.97)'
+    : 'rgba(14,14,14,0.72)';
 
   return (
-    <>
+    <header
+      className="sticky top-0 z-50 transition-all duration-300"
+      style={{
+        background: bg,
+        borderBottom: '1px solid rgba(255,255,255,0.07)',
+        backdropFilter: 'blur(20px)',
+        WebkitBackdropFilter: 'blur(20px)',
+      }}
+    >
+      {/* Red accent line */}
+      <div className="kf-header-accent" />
 
-      {/* Main Header */}
-      <header className={`sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white/95 backdrop-blur-lg shadow-xl border-b border-gray-200' 
-          : 'bg-white/90 backdrop-blur-sm shadow-lg'
-      }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-3 lg:py-4">
-            {/* Logo */}
-            <Link to="/" className="flex items-center group">
-              <img 
-                src="/images/kevin-logo.png" 
-                alt="DJ Kevin Froger Logo - Professionele DJ Nederland" 
-                className="h-8 md:h-12 lg:h-14 w-auto group-hover:scale-105 transition-transform duration-200 drop-shadow-lg"
-                width="200"
-                height="56"
-                loading="eager"
-                decoding="sync"
-                fetchPriority="high"
-              />
-            </Link>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 lg:h-[72px]">
 
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
-              {navigation.map((item) => (
-                <div key={item.name} className="relative group">
-                  {item.dropdown ? (
-                    <div className="relative">
-                      <button 
-                        className="flex items-center px-4 py-2 text-sm font-black tracking-wide transition-all duration-200 text-gray-900 hover:text-orange-500"
-                        onMouseEnter={() => setIsServicesOpen(true)}
-                        onMouseLeave={() => setIsServicesOpen(false)}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setIsServicesOpen(!isServicesOpen);
-                        }}
-                      >
-                        {item.name}
-                        <ChevronDown className="w-4 h-4 ml-1" />
-                      </button>
-                      
-                      <div 
-                        className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-2xl shadow-2xl border border-gray-100 py-4 z-50 transition-all duration-300 ${
-                          isServicesOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
-                        }`}
-                        onMouseEnter={() => setIsServicesOpen(true)}
-                        onMouseLeave={() => setIsServicesOpen(false)}
-                      >
-                        {item.dropdown.map((dropdownItem) => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.href}
-                            className="block px-6 py-3 text-sm font-bold text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-all duration-200"
-                            onClick={() => handleLinkClick(dropdownItem.href)}
-                          >
-                            {dropdownItem.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  ) : (
-                    <Link
-                      to={item.href}
-                      className={`px-4 py-2 text-sm font-black tracking-wide transition-all duration-200 relative group ${
-                        isActive(item.href)
-                          ? 'text-orange-500'
-                          : 'text-gray-900 hover:text-orange-500'
-                      }`}
-                      onClick={() => handleLinkClick(item.href)}
+          {/* Logo */}
+          <Link to="/" className="flex-shrink-0" aria-label="Kevin Froger – Allround DJ">
+            <img
+              src="/images/kevin-logo.png"
+              alt="Kevin Froger Allround DJ"
+              className="h-9 lg:h-11 w-auto"
+              width={200} height={44}
+              loading="eager"
+            />
+          </Link>
+
+          {/* Desktop nav */}
+          <nav className="hidden lg:flex items-center gap-0.5" aria-label="Hoofdmenu">
+            {navigation.map((item) =>
+              item.dropdown ? (
+                <div
+                  key={item.name}
+                  className="relative"
+                  onMouseEnter={() => setServicesOpen(true)}
+                  onMouseLeave={() => setServicesOpen(false)}
+                >
+                  <button
+                    className="flex items-center gap-1 px-4 py-2 text-sm font-semibold rounded-lg transition-colors"
+                    style={{ color: 'rgba(255,255,255,0.70)' }}
+                    onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
+                    onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.70)')}
+                  >
+                    {item.name}
+                    <ChevronDown size={13} className={`transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} />
+                  </button>
+
+                  {servicesOpen && (
+                    <div
+                      className="absolute top-full left-0 w-52 py-2 z-50 mt-0.5"
+                      style={{
+                        background: '#181818',
+                        border: '1px solid rgba(255,255,255,0.10)',
+                        borderRadius: '14px',
+                        boxShadow: '0 24px 60px rgba(0,0,0,0.65)',
+                      }}
                     >
-                      {item.name}
-                      <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-orange-500 transform transition-transform duration-200 ${
-                        isActive(item.href) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-                      }`}></span>
-                    </Link>
+                      {item.dropdown.map((d) => (
+                        <Link
+                          key={d.name}
+                          to={d.href}
+                          className="block px-4 py-2.5 text-sm font-semibold transition-colors"
+                          style={{ color: 'rgba(255,255,255,0.60)' }}
+                          onMouseEnter={e => {
+                            e.currentTarget.style.color = '#fff';
+                            e.currentTarget.style.background = 'rgba(230,0,0,0.10)';
+                          }}
+                          onMouseLeave={e => {
+                            e.currentTarget.style.color = 'rgba(255,255,255,0.60)';
+                            e.currentTarget.style.background = 'transparent';
+                          }}
+                        >
+                          {d.name}
+                        </Link>
+                      ))}
+                    </div>
                   )}
                 </div>
-              ))}
-            </nav>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="px-4 py-2 text-sm font-semibold rounded-lg transition-colors"
+                  style={{
+                    color: location.pathname === item.href
+                      ? '#ff7a00'
+                      : 'rgba(255,255,255,0.70)',
+                  }}
+                  onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.color = location.pathname === item.href
+                      ? '#ff7a00'
+                      : 'rgba(255,255,255,0.70)';
+                  }}
+                >
+                  {item.name}
+                </Link>
+              )
+            )}
+          </nav>
 
-            {/* Desktop CTA Button */}
-            <div className="hidden lg:block">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-3 rounded-full font-black text-sm tracking-wide hover:from-orange-600 hover:to-orange-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
-              >
-                BOEKEN
-              </Link>
-            </div>
+          {/* Desktop CTA */}
+          <a
+            href="tel:0645251333"
+            className="hidden lg:inline-flex items-center gap-2 font-bold text-sm px-5 py-2.5 rounded-full transition-all"
+            style={{
+              background: 'linear-gradient(135deg, #e60000, #ff7a00)',
+              color: '#fff',
+              boxShadow: '0 6px 20px rgba(230,0,0,0.30)',
+            }}
+            onMouseEnter={e => (e.currentTarget.style.opacity = '0.88')}
+            onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
+            aria-label="Bel Kevin Froger"
+          >
+            <Phone size={14} />
+            06 45 25 13 33
+          </a>
 
-            {/* Mobile menu button */}
-            <button
-              className="lg:hidden p-2 rounded-md text-gray-900 hover:text-orange-500 hover:bg-gray-100 transition-colors duration-200"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Open mobiel menu"
-            >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-
-          {/* Mobile Navigation */}
-          {isMenuOpen && (
-            <div className="lg:hidden py-6 border-t border-gray-200 bg-white shadow-xl">
-              <div className="flex flex-col space-y-2">
-                {navigation.map((item) => (
-                  <div key={item.name}>
-                    {item.dropdown ? (
-                      <div>
-                        <div className="px-4 py-3 text-lg font-black tracking-wide text-gray-900 mobile-nav-item">
-                          {item.name}
-                        </div>
-                        <div className="pl-6 space-y-2">
-                          {item.dropdown.map((dropdownItem) => (
-                            <Link
-                              key={dropdownItem.name}
-                              to={dropdownItem.href}
-                              className="block px-4 py-3 text-base font-bold text-gray-600 hover:text-orange-500 hover:bg-orange-50 rounded-xl transition-all duration-200 mobile-nav-item"
-                              onClick={() => handleLinkClick(dropdownItem.href)}
-                            >
-                              {dropdownItem.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ) : (
-                      <Link
-                        to={item.href}
-                        className={`px-4 py-3 text-lg font-black tracking-wide rounded-xl transition-all duration-200 mobile-nav-item ${
-                          isActive(item.href)
-                            ? 'text-orange-500 bg-orange-50'
-                            : 'text-gray-900 hover:text-orange-500 hover:bg-orange-50'
-                        }`}
-                        onClick={() => handleLinkClick(item.href)}
-                      >
-                        {item.name}
-                      </Link>
-                    )}
-                  </div>
-                ))}
-                
-                {/* Mobile Contact Info */}
-                <div className="pt-6 mt-4 border-t border-gray-200 space-y-3">
-                  <Link
-                    to="/contact"
-                    className="block px-4 py-3 text-gray-800 hover:text-orange-500 transition-colors text-base font-semibold bg-gray-50 rounded-xl text-center"
-                  >
-                    Contact & Boeken
-                  </Link>
-                </div>
-              </div>
-            </div>
-          )}
+          {/* Mobile toggle */}
+          <button
+            type="button"
+            onClick={() => setMenuOpen(v => !v)}
+            className="lg:hidden p-2 rounded-lg"
+            style={{ color: 'rgba(255,255,255,0.7)', background: 'rgba(255,255,255,0.06)' }}
+            aria-label={menuOpen ? 'Sluit menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+          >
+            {menuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
-      </header>
-    </>
+      </div>
+
+      {/* Mobile menu */}
+      {menuOpen && (
+        <div
+          className="lg:hidden pb-4"
+          style={{
+            borderTop: '1px solid rgba(255,255,255,0.07)',
+            background: 'rgba(14,14,14,0.99)',
+          }}
+        >
+          <div className="max-w-7xl mx-auto px-4 pt-3 space-y-0.5">
+            {navigation.map((item) =>
+              item.dropdown ? (
+                <div key={item.name}>
+                  <button
+                    onClick={() => setServicesOpen(v => !v)}
+                    className="w-full flex items-center justify-between px-4 py-3 text-sm font-semibold rounded-xl"
+                    style={{ color: 'rgba(255,255,255,0.70)' }}
+                  >
+                    {item.name}
+                    <ChevronDown size={13} className={`transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  {servicesOpen && (
+                    <div className="ml-4 mt-0.5 space-y-0.5 pb-1">
+                      {item.dropdown.map((d) => (
+                        <Link
+                          key={d.name}
+                          to={d.href}
+                          className="block px-4 py-2.5 text-sm font-semibold rounded-xl"
+                          style={{ color: 'rgba(255,255,255,0.55)', background: 'rgba(255,255,255,0.03)' }}
+                        >
+                          {d.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="block px-4 py-3 text-sm font-semibold rounded-xl"
+                  style={{
+                    color: location.pathname === item.href ? '#ff7a00' : 'rgba(255,255,255,0.70)',
+                  }}
+                >
+                  {item.name}
+                </Link>
+              )
+            )}
+
+            <div className="pt-3 pb-1">
+              <a
+                href="tel:0645251333"
+                className="flex items-center justify-center gap-2 w-full py-3.5 rounded-full font-bold text-sm"
+                style={{ background: 'linear-gradient(135deg,#e60000,#ff7a00)', color: '#fff' }}
+              >
+                <Phone size={16} /> 06 45 25 13 33
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+    </header>
   );
 };
 

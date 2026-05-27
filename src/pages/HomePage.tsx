@@ -1,458 +1,389 @@
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, ArrowRight, Users, Zap, Heart, Building, Volume2, Mic, MessageCircle, CheckCircle, MapPin } from 'lucide-react';
-import MusicGenresSection from '../components/MusicGenresSection';
-import PartnersSection from '../components/PartnersSection';
-import { useSEO, generateBreadcrumbSchema } from '../hooks/useSEO';
+import {
+  ArrowRight, MessageCircle, Phone, Mail, MapPin,
+  Heart, Building, Zap, Mic, Users, Volume2,
+  CheckCircle, ChevronDown, Calendar,
+  Instagram, Facebook, Youtube,
+} from 'lucide-react';
+import ContactForm from '../components/ContactForm';
+import { GradientDivider } from '../components/GradientDivider';
+import {
+  useSEO, generateBreadcrumbSchema, generateFAQSchema, generateLocalBusinessSchema,
+} from '../hooks/useSEO';
+
+const heroSlides = [
+  { image: '/images/IMG_0388-1920.webp',                         alt: 'DJ Kevin Froger in actie' },
+  { image: '/images/dj-kevin-froger-bruiloft-scaled-1280.webp',  alt: 'DJ Kevin Froger op een bruiloft' },
+  { image: '/images/licht-en-geluid-verhuur-show-scaled-1280.webp', alt: 'Licht en geluid show' },
+  { image: '/images/dj-kevin-froger-bedrijfsfeest-1280.webp',    alt: 'DJ Kevin Froger bedrijfsfeest' },
+];
+
+const services = [
+  { title: 'Bruiloft DJ',    desc: 'Van ceremonie tot laatste plaat — muziek en sfeer die past bij jullie dag.',    link: '/bruiloft-dj',    icon: <Heart size={22} /> },
+  { title: 'Verjaardag DJ',  desc: 'Muziek op maat, van gezellig tot knallend feest.',                             link: '/verjaardag-dj',  icon: <Users size={22} /> },
+  { title: 'Zakelijk DJ',    desc: 'Representatief en aanpasbaar — borrel tot personeelsfeest.',                    link: '/zakelijk-dj',    icon: <Building size={22} /> },
+  { title: 'Evenementen DJ', desc: 'Complete DJ-show voor elk evenement, groot of klein.',                         link: '/evenementen-dj', icon: <Zap size={22} /> },
+  { title: 'Licht & Geluid', desc: 'Eigen high-end apparatuur — inclusief of apart.',                              link: '/evenementen-dj', icon: <Volume2 size={22} /> },
+  { title: 'Werkwijze',      desc: 'Intake, voorbereiding op maat en strakke uitvoering.',                         link: '/werkwijze',      icon: <Mic size={22} /> },
+];
+
+const faqs = [
+  { q: 'Hoe ver van tevoren moet ik boeken?',    a: 'Voor bruiloften raden we 6–12 maanden aan. Voor andere evenementen is 2–3 maanden voldoende.' },
+  { q: 'Wat is inbegrepen in de prijs?',         a: 'DJ-services, geluidsapparatuur, microfoon, basisverlichting en voor- en nabereiding. Uitgebreide lichtshows zijn als toevoeging beschikbaar.' },
+  { q: 'Kunnen we muziekwensen doorgeven?',      a: 'Absoluut. Vooraf bespreken we alle wensen en no-go songs.' },
+  { q: 'Draait Kevin met een vaste playlist?',   a: 'Nee. Kevin draait allround en speelt live in op het publiek. Wensen worden vooraf besproken en meegenomen.' },
+  { q: 'Hoe zit het met de technische setup?',  a: 'Kevin verzorgt de complete setup en afbouw met eigen professionele apparatuur.' },
+];
+
+const marqueeItems = [
+  'Allround DJ', 'Bruiloft DJ', 'Bedrijfsfeest', 'Verjaardag DJ',
+  'Licht & Geluid', 'Evenementen DJ', 'Heel Nederland', 'Eigen apparatuur', 'Direct contact',
+];
+
+const regions = [
+  { name: 'Zuid-Holland',  href: '/regio/zuid-holland',  cities: 'Rotterdam · Den Haag · Delft' },
+  { name: 'Noord-Brabant', href: '/regio/noord-brabant', cities: 'Eindhoven · Tilburg · Breda' },
+  { name: 'Gelderland',    href: '/regio/gelderland',    cities: 'Nijmegen · Arnhem · Apeldoorn' },
+  { name: 'Utrecht',       href: '/regio/utrecht',       cities: 'Utrecht · Amersfoort · Zeist' },
+  { name: 'Overijssel',    href: '/regio/overijssel',    cities: 'Enschede · Zwolle · Deventer' },
+  { name: 'Noord-Holland', href: '/regio/noord-holland', cities: 'Amsterdam · Haarlem · Alkmaar' },
+  { name: 'Zeeland',       href: '/regio/zeeland',       cities: 'Middelburg · Vlissingen · Goes' },
+];
 
 const HomePage = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  // Enhanced SEO configuration for homepage
-  useSEO({
-    title: 'DJ Kevin Froger – DJ voor bruiloft, verjaardag & events',
-    description: 'Allround DJ met complete show (licht & geluid). Persoonlijk contact, strakke uitvoering en volle dansvloer. 15+ jaar ervaring. Vraag direct een prijsindicatie of offerte.',
-    keywords: 'bruiloft dj nederland, dj boeken, dj huren, allround dj, bruiloft dj, festival dj, bedrijfsfeest dj, live mixing dj, mc services',
-    canonical: 'https://kevinfroger.nl/',
-    ogType: 'website',
-    ogImage: 'https://kevinfroger.nl/images/dj-kevin-froger-bruiloft-scaled.webp',
-    ogImageAlt: 'DJ Kevin Froger - Professioneel DJ bij bruiloft met complete licht en geluid show',
-    twitterCard: 'summary_large_image',
-    jsonLd: [
-      generateBreadcrumbSchema([
-        { name: 'Home', url: '/' }
-      ]),
-      {
-        '@context': 'https://schema.org',
-        '@type': 'WebSite',
-        'name': 'DJ Kevin Froger',
-        'url': 'https://kevinfroger.nl',
-        'potentialAction': {
-          '@type': 'SearchAction',
-          'target': 'https://kevinfroger.nl/search?q={search_term_string}',
-          'query-input': 'required name=search_term_string'
-        }
-      }
-    ]
-  });
-
-  const heroSlides = [
-    { // This is the first slide, used as static image for mobile
-      image: "/images/dj-kevin-froger-bruiloft-scaled.webp",
-      title: "PROFESSIONELE DJ",
-      subtitle: "KEVIN FROGER",
-      description: "Specialist in live mixing en MC services. Ik lees het publiek en creëer de perfecte sfeer voor elk moment van jullie evenement."
-    },
-    {
-      image: "/images/licht-en-geluid-verhuur-show-scaled.webp",
-      title: "LIVE MIXING",
-      subtitle: "SPECIALIST",
-      description: "Geen standaard playlists, maar unieke live sets die ik ter plekke samenstel. Elke track wordt zorgvuldig gekozen voor het perfecte moment."
-    },
-    {
-      image: "/images/dj-kevin-froger-bedrijfsfeest.webp",
-      title: "DJ & MC",
-      subtitle: "COMPLETE SERVICE",
-      description: "Als ervaren MC begeleid ik jullie evenement van begin tot eind. Van aankondigingen tot crowd interaction - alles voor de perfecte sfeer."
-    }
-  ];
+  const [slide,   setSlide]   = useState(0);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 5000);
-    return () => clearInterval(timer);
+    const t = setInterval(() => setSlide(s => (s + 1) % heroSlides.length), 5500);
+    return () => clearInterval(t);
   }, []);
 
-  const services = [
-    {
-      title: "Bruiloft DJ",
-      description: "Van ceremonie tot laatste plaat: persoonlijke begeleiding en muziek die past bij jullie dag.",
-      features: ["Intake & voorbereiding", "Ceremonie & diner", "Live mixing feestavond", "Eigen licht & geluid"],
-      link: "/bruiloft-dj",
-      image: "/images/dj-kevin-froger-bruiloft-scaled.webp",
-      icon: <Heart className="w-8 h-8" />,
-      color: "from-pink-500 to-purple-600",
-      price: "Op aanvraag"
-    },
-    {
-      title: "Verjaardag DJ",
-      description: "Muziek op maat voor elke verjaardag. Van gezellige 50+ tot knallend 30-jarig feest.",
-      features: ["Muziek op het publiek", "Flexibele opzet", "Licht & geluid pakket", "MC services mogelijk"],
-      link: "/verjaardag-dj",
-      image: "/images/IMG_1605.webp",
-      icon: <Users className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-600",
-      price: "Op aanvraag"
-    },
-    {
-      title: "Zakelijk DJ",
-      description: "Van netwerkborrel tot personeelsfeest: professioneel, representatief en aanpasbaar.",
-      features: ["Achtergrond of feest", "Representatieve uitstraling", "Flexibele indeling", "Meertalig mogelijk"],
-      link: "/zakelijk-dj",
-      image: "/images/dj-kevin-froger-bedrijfsfeest.webp",
-      icon: <Building className="w-8 h-8" />,
-      color: "from-blue-500 to-blue-600",
-      price: "Op aanvraag"
-    },
-    {
-      title: "Licht & Geluid",
-      description: "Complete verhuur van professionele DJ-, licht- en geluidsapparatuur voor elk evenement.",
-      features: ["Professioneel geluid", "Sfeervolle lichtshow", "Eigen materiaal", "Inclusief DJ mogelijk"],
-      link: "/licht-en-geluid-verhuur",
-      image: "/images/licht-en-geluid-verhuur-show-scaled.webp",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-orange-500 to-pink-600",
-      price: "Op aanvraag"
-    }
-  ];
-
-  const features = [
-    {
-      icon: <Volume2 className="w-12 h-12" />,
-      title: "RECHTSTREEKS BIJ DE DJ",
-      description: "Je hebt direct contact met mij. Geen verhuurbedrijf, geen tussenpersonen. Duidelijke communicatie, snelle reactie en betrokkenheid van begin tot eind.",
-      color: "from-blue-500 to-blue-600"
-    },
-    {
-      icon: <Mic className="w-12 h-12" />,
-      title: "COMPLETE DJ SHOW",
-      description: "Licht, geluid en DJ in één pakket. Van subtiele achtergrondmuziek tot spectaculaire lichtshow – alles uit eigen bezit en strak geregeld.",
-      color: "from-orange-500 to-orange-600"
-    },
-    {
-      icon: <Users className="w-12 h-12" />,
-      title: "15+ JAAR ERVARING",
-      description: "Meer dan 500 bruiloften gedraaid, van intieme ceremonies tot grote feesten. Ik weet hoe ik de dansvloer vol krijg en vol houd.",
-      color: "from-purple-500 to-pink-600"
-    }
-  ];
+  useSEO({
+    title: 'Allround DJ Kevin Froger – Bruiloft, Bedrijfsfeest & Evenementen',
+    description: 'Boek allround DJ Kevin Froger voor bruiloften, bedrijfsfeesten, verjaardagen en evenementen. Persoonlijke aanpak, eigen licht & geluid, door heel Nederland.',
+    keywords: 'allround dj, dj boeken, dj huren, dj voor bruiloft, dj voor verjaardag, dj voor bedrijfsfeest, dj voor evenement, dj met licht en geluid, dj Nederland',
+    canonical: 'https://kevinfroger.nl/',
+    ogType: 'website',
+    ogImage: 'https://kevinfroger.nl/images/IMG_0388-1920.webp',
+    ogImageAlt: 'Allround DJ Kevin Froger in actie',
+    twitterCard: 'summary_large_image',
+    jsonLd: [
+      generateBreadcrumbSchema([{ name: 'Home', url: '/' }]),
+      generateLocalBusinessSchema(),
+      { '@context': 'https://schema.org', '@type': 'WebSite', name: 'DJ Kevin Froger', url: 'https://kevinfroger.nl' },
+      generateFAQSchema(faqs.map(f => ({ question: f.q, answer: f.a }))),
+    ],
+  });
 
   return (
-    <div className="bg-white">
-      {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[400px] max-h-[600px] bg-gradient-to-br from-blue-900 via-purple-800 to-blue-900 text-white overflow-hidden hero-section" role="banner" aria-labelledby="hero-title">
-        {/* Mobile-only static hero image */}
-        <div className="md:hidden absolute inset-0">
-          <picture>
-            <source type="image/webp" srcSet="/images/dj-kevin-froger-bruiloft-scaled-1280.webp 1280w, /images/dj-kevin-froger-bruiloft-scaled-640.webp 640w, /images/dj-kevin-froger-bruiloft-scaled-320.webp 320w" sizes="(max-width: 768px) 100vw, 100vw" />
-            <img
-              src="/images/dj-kevin-froger-bruiloft-scaled-1280.webp"
-              alt="DJ Kevin Froger - Professionele DJ services Nederland"
-              className="w-full h-full object-cover object-center transform-gpu hero-image"
-              width="1200"
-              height="800"
-              loading="eager"
-              decoding="async"
-              fetchpriority="high"
-            />
-          </picture>
+    <div style={{ background: '#ffffff', color: '#151515' }}>
+
+      {/* ════════════════════════════
+          HERO — performer-first
+      ════════════════════════════ */}
+      <section style={{ position: 'relative', width: '100%', height: '100svh', minHeight: '600px', overflow: 'hidden' }} aria-labelledby="hero-title">
+
+        {/* Slider images */}
+        {heroSlides.map((s, i) => (
+          <img key={i} src={s.image} alt={s.alt}
+            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', opacity: i === slide ? 1 : 0, transition: 'opacity 1.4s ease', zIndex: i === slide ? 0 : -1 }}
+            loading={i === 0 ? 'eager' : 'lazy'} decoding={i === 0 ? 'sync' : 'async'}
+          />
+        ))}
+
+        {/* Gradient overlay — bottom-heavy for text readability */}
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.18) 40%, rgba(0,0,0,0.70) 75%, rgba(0,0,0,0.88) 100%)', zIndex: 1 }} />
+
+        {/* Content — bottom-left anchor, like viezejack */}
+        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, zIndex: 2, padding: 'clamp(32px,6vw,72px) clamp(20px,6vw,80px) clamp(48px,8vh,80px)' }}>
+
+          {/* Eyebrow */}
+          <p style={{ color: '#ff7a00', fontSize: '0.75rem', fontWeight: 800, letterSpacing: '0.28em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>
+            Allround DJ · Nederland
+          </p>
+
+          {/* Big name */}
+          <h1 id="hero-title" style={{ fontFamily: 'var(--kf-font-heading)', fontWeight: 900, fontSize: 'clamp(3.2rem,9vw,9rem)', color: '#ffffff', lineHeight: 0.88, letterSpacing: '-0.04em', textTransform: 'uppercase', marginBottom: 'clamp(1rem,2.5vh,1.75rem)', textShadow: '0 4px 40px rgba(0,0,0,0.5)' }}>
+            KEVIN<br />FROGER
+          </h1>
+
+          {/* Subtitle */}
+          <p style={{ color: 'rgba(255,247,230,0.85)', fontSize: 'clamp(1rem,1.8vw,1.2rem)', fontWeight: 500, maxWidth: '520px', lineHeight: 1.55, marginBottom: 'clamp(1.5rem,3vh,2.25rem)' }}>
+            Voor feesten, bruiloften en evenementen die je bijblijven.
+          </p>
+
+          {/* CTAs */}
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
+            <a href="#contact" className="kf-button-primary" style={{ background: 'linear-gradient(135deg,#e60000,#ff7a00)' }}>
+              <Calendar size={15} /> Boek Kevin
+            </a>
+            <a href="https://wa.me/31645251333" target="_blank" rel="noopener noreferrer"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#25D366', color: '#fff', padding: '14px 26px', borderRadius: '999px', fontWeight: 700, fontSize: '0.9rem', textDecoration: 'none' }}>
+              <MessageCircle size={15} /> WhatsApp
+            </a>
+          </div>
+
+          {/* Social links — subtle row */}
+          <div style={{ display: 'flex', gap: '16px', marginTop: 'clamp(1.5rem,3vh,2.5rem)', alignItems: 'center' }}>
+            {[
+              { href: 'https://www.instagram.com/djkevinfroger/', icon: <Instagram size={18} />, label: 'Instagram' },
+              { href: 'https://www.facebook.com/KevinFroger.nl', icon: <Facebook size={18} />, label: 'Facebook' },
+              { href: 'https://www.youtube.com/@KEVINFROGER',     icon: <Youtube size={18} />,   label: 'YouTube' },
+            ].map(s => (
+              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}
+                style={{ color: 'rgba(255,255,255,0.60)', transition: 'color 0.2s' }}
+                onMouseEnter={e => (e.currentTarget.style.color = '#ff7a00')}
+                onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.60)')}>
+                {s.icon}
+              </a>
+            ))}
+          </div>
         </div>
-        {/* Hero Slider Background */}
-        <div className="absolute inset-0 hero-slider">
-          {heroSlides.map((slide, index) => (
-            <div
-              key={index}
-              className={`absolute inset-0 hero-slide transition-opacity duration-1000 ${
-                index === currentSlide ? 'opacity-100' : 'opacity-0'
-              }`}
-            >
-              <img
-                src={`${slide.image.replace(/\.webp$/i, '')}-1280.webp`}
-                srcSet={`${slide.image.replace(/\.webp$/i, '')}-640.webp 640w, ${slide.image.replace(/\.webp$/i, '')}-1280.webp 1280w`}
-                sizes="(max-width: 768px) 100vw, 100vw"
-                alt={`DJ Kevin Froger ${slide.title} - Professionele DJ services Nederland`}
-                className="w-full h-full object-cover object-center transform-gpu hero-image"
-                width="1200"
-                height="675"
-                loading={index === 0 ? 'eager' : 'lazy'}
-                decoding="async"
-                fetchpriority={index === 0 ? 'high' : 'low'}
-                style={{ aspectRatio: '16/9' }}
-              />
-            </div>
+
+        {/* Slide dots */}
+        <div style={{ position: 'absolute', bottom: 'clamp(16px,3vh,28px)', right: 'clamp(20px,4vw,48px)', display: 'flex', gap: '8px', zIndex: 3 }}>
+          {heroSlides.map((_, i) => (
+            <button key={i} onClick={() => setSlide(i)} aria-label={`Slide ${i + 1}`}
+              style={{ width: i === slide ? '24px' : '8px', height: '8px', borderRadius: '4px', background: i === slide ? '#ff7a00' : 'rgba(255,255,255,0.40)', border: 'none', cursor: 'pointer', transition: 'all 0.3s', padding: 0 }} />
           ))}
         </div>
-        
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40"></div>
-        
-        {/* Animated background elements */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-orange-500/20 rounded-full blur-2xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-48 h-48 bg-purple-400/10 rounded-full blur-3xl animate-bounce-slow"></div>
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-blue-400/20 rounded-full blur-lg animate-ping-slow"></div>
-        
-        {/* Content */}
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-12 z-10 h-full flex items-center justify-center">
-          <div className="text-center w-full max-w-5xl mx-auto">
-            <h1 id="hero-title" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-4 lg:mb-6 leading-tight text-shadow-lg">
-              ALLROUND DJ MET COMPLETE SHOW
-            </h1>
+      </section>
 
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl mb-6 lg:mb-8 text-blue-100 leading-relaxed max-w-3xl mx-auto px-4">
-              Persoonlijk contact, strakke uitvoering en een volle dansvloer. 15+ jaar ervaring. Vraag direct een prijsindicatie of offerte – app of bel.
+      {/* ════════════════════════════
+          MARQUEE
+      ════════════════════════════ */}
+      <div className="kf-marquee" aria-hidden="true">
+        <div className="kf-marquee-inner">
+          {[...marqueeItems, ...marqueeItems].map((item, i) => (
+            <span key={i} className="kf-marquee-item"><span className="kf-marquee-dot" />{item}</span>
+          ))}
+        </div>
+      </div>
+
+      {/* ════════════════════════════
+          OVER KEVIN — split photo + text
+      ════════════════════════════ */}
+      <section style={{ background: '#ffffff', padding: 'clamp(56px,8vw,112px) clamp(20px,5vw,80px)' }}>
+        <div style={{ maxWidth: '1180px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(40px,6vw,80px)', alignItems: 'center' }}>
+
+          {/* Photo — left */}
+          <div style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', aspectRatio: '4/5' }}>
+            <img src="/images/dj-kevin-froger-bruiloft-scaled-640.webp" alt="DJ Kevin Froger" className="w-full h-full object-cover" loading="lazy" decoding="async" width={560} height={700} />
+            {/* Red accent stripe */}
+            <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '4px', background: 'linear-gradient(90deg,#e60000,#ff7a00)' }} />
+          </div>
+
+          {/* Text — right */}
+          <div>
+            <p style={{ color: '#e60000', fontSize: '0.72rem', fontWeight: 800, letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '1rem' }}>Over Kevin Froger</p>
+            <h2 style={{ fontFamily: 'var(--kf-font-heading)', fontWeight: 900, fontSize: 'clamp(2rem,3.5vw,3.2rem)', color: '#151515', letterSpacing: '-0.04em', lineHeight: 1.0, marginBottom: '1.5rem' }}>
+              Allround DJ met gevoel voor sfeer en publiek
+            </h2>
+            <p style={{ color: 'rgba(21,21,21,0.65)', lineHeight: 1.85, marginBottom: '1rem', fontSize: '1rem' }}>
+              Kevin Froger is een allround DJ voor feesten waar de sfeer vanaf het eerste moment goed moet staan. Met brede muziekkennis, professionele voorbereiding en gevoel voor het publiek zorgt Kevin voor een avond die past bij de gasten, de locatie en het soort feest.
             </p>
-            
-            {/* Desktop buttons */}
-            <div className="hidden md:flex flex-row gap-4 lg:gap-6 justify-center mb-8 lg:mb-10">
-              <Link
-                to="https://wa.me/31645251333"
-                className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 lg:px-10 py-3 lg:py-4 rounded-full font-black text-base lg:text-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-xl hover:shadow-orange-500/25 transform hover:scale-105 min-h-[44px]"
-                aria-label="App voor snelle prijsindicatie"
-              >
-                <MessageCircle className="w-4 h-4 lg:w-5 lg:h-5 inline-block mr-2" />
-                APP VOOR EEN PRIJSINDICATIE
-                <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5 inline-block ml-2 group-hover:translate-x-1 transition-transform" />
+            <p style={{ color: 'rgba(21,21,21,0.55)', lineHeight: 1.85, marginBottom: '2rem' }}>
+              Van bruiloft tot bedrijfsfeest — de muziek wordt live afgestemd op wat er gebeurt op de dansvloer.
+            </p>
+            <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2.5rem', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              {['Direct contact met de DJ', 'Eigen professioneel licht & geluid', 'Op maat afgestemd op jullie feest', 'Actief in heel Nederland'].map(item => (
+                <li key={item} style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#2d2d2d', fontSize: '0.92rem', fontWeight: 600 }}>
+                  <CheckCircle size={16} style={{ color: '#e60000', flexShrink: 0 }} />{item}
+                </li>
+              ))}
+            </ul>
+            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+              <a href="#contact" className="kf-button-primary"><Calendar size={15} /> Beschikbaarheid</a>
+              <a href="https://wa.me/31645251333" target="_blank" rel="noopener noreferrer" className="kf-button-secondary"><MessageCircle size={15} /> WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <GradientDivider />
+
+      {/* ════════════════════════════
+          DJ SHOWS / DIENSTEN
+      ════════════════════════════ */}
+      <section id="shows" style={{ background: '#fff7e6', padding: 'clamp(56px,8vw,100px) clamp(20px,5vw,80px)' }}>
+        <div style={{ maxWidth: '1180px', margin: '0 auto' }}>
+          <div style={{ marginBottom: '3rem' }}>
+            <p style={{ color: '#e60000', fontSize: '0.72rem', fontWeight: 800, letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>DJ Shows</p>
+            <h2 style={{ fontFamily: 'var(--kf-font-heading)', fontWeight: 900, fontSize: 'clamp(2rem,4vw,3.2rem)', color: '#151515', letterSpacing: '-0.04em', lineHeight: 1.0 }}>
+              Voor elk feest de juiste show
+            </h2>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px,1fr))', gap: '20px' }}>
+            {services.map(s => (
+              <Link key={s.title} to={s.link} style={{ textDecoration: 'none', display: 'block', background: '#ffffff', border: '1px solid rgba(0,0,0,0.07)', borderRadius: '16px', padding: '28px 26px', transition: 'transform 0.22s, box-shadow 0.22s, border-color 0.22s', boxShadow: '0 2px 12px rgba(0,0,0,0.05)', position: 'relative', overflow: 'hidden' }}
+                onMouseEnter={e => { const el = e.currentTarget; el.style.transform = 'translateY(-4px)'; el.style.boxShadow = '0 12px 40px rgba(0,0,0,0.12)'; el.style.borderColor = 'rgba(230,0,0,0.22)'; }}
+                onMouseLeave={e => { const el = e.currentTarget; el.style.transform = 'translateY(0)'; el.style.boxShadow = '0 2px 12px rgba(0,0,0,0.05)'; el.style.borderColor = 'rgba(0,0,0,0.07)'; }}>
+                {/* Top accent */}
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg,#e60000,#ff7a00)' }} />
+                <div style={{ width: '48px', height: '48px', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(230,0,0,0.08)', color: '#e60000', marginBottom: '1.1rem' }}>
+                  {s.icon}
+                </div>
+                <h3 style={{ fontFamily: 'var(--kf-font-heading)', fontWeight: 800, fontSize: '1.05rem', color: '#151515', marginBottom: '0.6rem', letterSpacing: '-0.02em' }}>{s.title}</h3>
+                <p style={{ color: 'rgba(21,21,21,0.58)', fontSize: '0.875rem', lineHeight: 1.72, marginBottom: '1.25rem' }}>{s.desc}</p>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', color: '#e60000', fontWeight: 700, fontSize: '0.82rem' }}>
+                  Meer informatie <ArrowRight size={13} />
+                </span>
               </Link>
-              <Link
-                to="/prijzen"
-                className="border-2 border-white text-white px-6 lg:px-10 py-3 lg:py-4 rounded-full font-black text-base lg:text-lg hover:bg-white hover:text-blue-900 transition-all duration-300 min-h-[44px]"
-                aria-label="Vraag een offerte aan"
-              >
-                <Calendar className="w-4 h-4 lg:w-5 lg:h-5 inline-block mr-2" />
-                VRAAG EEN OFFERTE AAN
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <GradientDivider />
+
+      {/* ════════════════════════════
+          REGIO
+      ════════════════════════════ */}
+      <section style={{ background: '#ffffff', padding: 'clamp(56px,8vw,100px) clamp(20px,5vw,80px)' }}>
+        <div style={{ maxWidth: '1180px', margin: '0 auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
+            <div>
+              <p style={{ color: '#e60000', fontSize: '0.72rem', fontWeight: 800, letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>Werkgebied</p>
+              <h2 style={{ fontFamily: 'var(--kf-font-heading)', fontWeight: 900, fontSize: 'clamp(1.8rem,3.5vw,3rem)', color: '#151515', letterSpacing: '-0.04em', lineHeight: 1.0, marginBottom: '1.25rem' }}>
+                DJ boeken in jouw regio
+              </h2>
+              <p style={{ color: 'rgba(21,21,21,0.60)', lineHeight: 1.8, marginBottom: '2rem' }}>
+                Kevin Froger is actief door heel Nederland — bruiloften, bedrijfsfeesten en evenementen in Zuid-Holland, Noord-Brabant, Gelderland, Utrecht, Overijssel, Noord-Holland en Zeeland.
+              </p>
+              <Link to="/regio" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#e60000', fontWeight: 700, fontSize: '0.875rem', textDecoration: 'none' }}>
+                Bekijk alle regio's <ArrowRight size={14} />
               </Link>
             </div>
-
-            {/* Mobile buttons */}
-            <div className="md:hidden flex flex-col gap-3 mb-6 px-4 max-w-sm mx-auto">
-              <a
-                href="https://wa.me/31645251333"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg font-bold text-base py-4 px-6 rounded-lg flex items-center justify-center min-h-[48px]"
-                aria-label="App voor snelle prijsindicatie"
-              >
-                <MessageCircle className="w-5 h-5 mr-3" />
-                APP VOOR EEN PRIJS
-              </a>
-              <Link
-                to="/prijzen"
-                className="w-full border-2 border-white text-white hover:bg-white hover:text-blue-900 transition-all duration-300 shadow-lg font-bold text-base py-4 px-6 rounded-lg flex items-center justify-center min-h-[48px]"
-                aria-label="Vraag een offerte aan"
-              >
-                <Calendar className="w-5 h-5 mr-3" />
-                EEN OFFERTE
-              </Link>
-            </div>
-
-            {/* Slide Indicators */}
-            <div className="flex justify-center space-x-2 mt-4" role="tablist" aria-label="Hero slides">
-              {heroSlides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 lg:w-4 lg:h-4 rounded-full transition-all duration-300 min-h-[48px] min-w-[48px] flex items-center justify-center ${
-                    index === currentSlide 
-                      ? 'bg-orange-400 scale-125 shadow-lg shadow-orange-400/50' 
-                      : 'bg-white/30 hover:bg-white/50'
-                  }`}
-                  role="tab"
-                  aria-selected={index === currentSlide}
-                  aria-label={`Ga naar slide ${index + 1}: ${heroSlides[index].title}`}
-                >
-                  <span className="w-3 h-3 lg:w-3 lg:h-3 rounded-full bg-current"></span>
-                </button>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+              {regions.map(r => (
+                <Link key={r.name} to={r.href} style={{ background: '#fff7e6', border: '1px solid rgba(0,0,0,0.07)', borderRadius: '14px', padding: '16px 18px', textDecoration: 'none', transition: 'all 0.2s' }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(230,0,0,0.28)'; e.currentTarget.style.background = '#fff2d6'; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(0,0,0,0.07)'; e.currentTarget.style.background = '#fff7e6'; }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                    <MapPin size={13} style={{ color: '#e60000', flexShrink: 0 }} />
+                    <strong style={{ fontFamily: 'var(--kf-font-heading)', fontWeight: 800, color: '#151515', fontSize: '0.88rem' }}>{r.name}</strong>
+                  </div>
+                  <p style={{ color: 'rgba(21,21,21,0.45)', fontSize: '0.68rem', marginLeft: '21px' }}>{r.cities}</p>
+                </Link>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Popular Services Section - Moved above main services */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h3 className="text-2xl lg:text-3xl font-black text-gray-900 mb-8">
-              POPULAIRE DJ SERVICES
-            </h3>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/bruiloft-dj" className="bg-pink-100 text-pink-800 px-4 py-2 rounded-full font-bold hover:bg-pink-200 transition-colors">
-                Bruiloft DJ
-              </Link>
-              <Link to="/verjaardag-dj" className="bg-green-100 text-green-800 px-4 py-2 rounded-full font-bold hover:bg-green-200 transition-colors">
-                Verjaardag DJ
-              </Link>
-              <Link to="/evenementen-dj" className="bg-orange-100 text-orange-800 px-4 py-2 rounded-full font-bold hover:bg-orange-200 transition-colors">
-                Evenementen DJ
-              </Link>
-              <Link to="/zakelijk-dj" className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-bold hover:bg-blue-200 transition-colors">
-                Zakelijk DJ
-              </Link>
-              <Link to="/werkwijze" className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-bold hover:bg-indigo-200 transition-colors">
-                Werkwijze
-              </Link>
-              <Link to="/reviews" className="bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full font-bold hover:bg-emerald-200 transition-colors">
-                Reviews
-              </Link>
-              <Link to="/prijzen" className="bg-green-100 text-green-800 px-4 py-2 rounded-full font-bold hover:bg-green-200 transition-colors">
-                Prijzen
-              </Link>
-              <Link to="/regio" className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-bold hover:bg-purple-200 transition-colors">
-                Regio's
-              </Link>
+      <GradientDivider />
+
+      {/* ════════════════════════════
+          FAQ
+      ════════════════════════════ */}
+      <section id="faq" style={{ background: '#f7f3ed', padding: 'clamp(56px,8vw,100px) clamp(20px,5vw,80px)' }}>
+        <div style={{ maxWidth: '720px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+            <p style={{ color: '#e60000', fontSize: '0.72rem', fontWeight: 800, letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>Vragen</p>
+            <h2 style={{ fontFamily: 'var(--kf-font-heading)', fontWeight: 900, fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', color: '#151515', letterSpacing: '-0.04em' }}>Alles wat je wilt weten</h2>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            {faqs.map((f, i) => (
+              <div key={i} style={{ background: '#ffffff', border: openFaq === i ? '1px solid rgba(230,0,0,0.28)' : '1px solid rgba(0,0,0,0.08)', borderLeft: openFaq === i ? '3px solid #e60000' : '1px solid rgba(0,0,0,0.08)', borderRadius: '12px', overflow: 'hidden', transition: 'border-color 0.2s', boxShadow: '0 2px 10px rgba(0,0,0,0.04)' }}>
+                <button type="button" onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '18px 22px', textAlign: 'left', color: '#151515', fontWeight: 600, fontSize: '0.95rem', background: 'transparent', border: 'none', cursor: 'pointer', fontFamily: 'var(--kf-font-heading)' }}
+                  aria-expanded={openFaq === i}>
+                  <span>{f.q}</span>
+                  <ChevronDown size={16} style={{ color: '#e60000', flexShrink: 0, marginLeft: '12px', transform: openFaq === i ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }} />
+                </button>
+                {openFaq === i && (
+                  <div style={{ padding: '0 22px 18px', color: 'rgba(21,21,21,0.65)', fontSize: '0.88rem', lineHeight: 1.78, borderTop: '1px solid rgba(0,0,0,0.07)' }}>
+                    {f.a}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ════════════════════════════
+          CTA BANNER
+      ════════════════════════════ */}
+      <section style={{ background: '#151515', padding: 'clamp(64px,8vw,100px) clamp(20px,5vw,80px)', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 70% 80% at 10% 50%, rgba(230,0,0,0.22), transparent 55%), radial-gradient(ellipse 50% 60% at 90% 50%, rgba(255,122,0,0.14), transparent 50%)', pointerEvents: 'none' }} />
+        <div style={{ maxWidth: '1180px', margin: '0 auto', position: 'relative', zIndex: 1, display: 'grid', gridTemplateColumns: '1fr auto', alignItems: 'center', gap: '40px' }}>
+          <div>
+            <p style={{ color: '#ff7a00', fontSize: '0.72rem', fontWeight: 800, letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>Direct contact</p>
+            <h2 style={{ fontFamily: 'var(--kf-font-heading)', fontWeight: 900, fontSize: 'clamp(2rem,4vw,3.5rem)', color: '#ffffff', letterSpacing: '-0.04em', lineHeight: 0.95, marginBottom: '1rem' }}>
+              Beschikbaar op<br />jouw datum?
+            </h2>
+            <p style={{ color: 'rgba(255,255,255,0.62)', fontSize: '1rem', lineHeight: 1.7 }}>
+              Stuur je datum, locatie en soort feest door. Dan kijk ik graag met je mee.
+            </p>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', flexShrink: 0 }}>
+            <a href="#contact" className="kf-button-primary" style={{ whiteSpace: 'nowrap' }}><Calendar size={15} /> Beschikbaarheid</a>
+            <a href="https://wa.me/31645251333" target="_blank" rel="noopener noreferrer"
+              style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px', background: '#25D366', color: '#fff', padding: '14px 26px', borderRadius: '999px', fontWeight: 700, fontSize: '0.9rem', textDecoration: 'none', whiteSpace: 'nowrap' }}>
+              <MessageCircle size={15} /> WhatsApp Kevin
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ════════════════════════════
+          CONTACT
+      ════════════════════════════ */}
+      <section id="contact" style={{ background: '#ffffff', padding: 'clamp(56px,8vw,100px) clamp(20px,5vw,80px)' }}>
+        <div style={{ maxWidth: '1180px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(40px,6vw,72px)' }}>
+          <div>
+            <p style={{ color: '#e60000', fontSize: '0.72rem', fontWeight: 800, letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>Boeken</p>
+            <h2 style={{ fontFamily: 'var(--kf-font-heading)', fontWeight: 900, fontSize: 'clamp(1.8rem,3.5vw,3rem)', color: '#151515', letterSpacing: '-0.04em', lineHeight: 1.0, marginBottom: '1rem' }}>
+              Kevin Froger boeken?
+            </h2>
+            <p style={{ color: 'rgba(21,21,21,0.60)', lineHeight: 1.8, marginBottom: '2rem' }}>
+              Vertel kort wat over je feest — datum, locatie, soort feest en eventuele wensen. Je hoort binnen 24 uur van mij.
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '2rem' }}>
+              {[
+                { href: 'tel:+31645251333',            icon: <Phone size={15} />,        label: 'Bel Kevin',       sub: '06 45 25 13 33',        wa: false },
+                { href: 'https://wa.me/31645251333',   icon: <MessageCircle size={15}/>,  label: 'WhatsApp direct', sub: 'Snelle reactie',         wa: true  },
+                { href: 'mailto:kevin@kevinfroger.nl', icon: <Mail size={15} />,          label: 'Mail Kevin',      sub: 'kevin@kevinfroger.nl',   wa: false },
+              ].map(c => (
+                <a key={c.label} href={c.href} target={c.wa ? '_blank' : undefined} rel={c.wa ? 'noopener noreferrer' : undefined}
+                  style={{ display: 'flex', alignItems: 'center', gap: '14px', padding: '14px 18px', background: '#fff7e6', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '14px', textDecoration: 'none', transition: 'all 0.2s' }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(230,0,0,0.25)'; e.currentTarget.style.background = '#fff2d6'; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(0,0,0,0.08)'; e.currentTarget.style.background = '#fff7e6'; }}>
+                  <div style={{ width: '40px', height: '40px', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: c.wa ? 'rgba(37,211,102,0.12)' : 'rgba(230,0,0,0.10)', color: c.wa ? '#25D366' : '#e60000', flexShrink: 0 }}>
+                    {c.icon}
+                  </div>
+                  <div>
+                    <strong style={{ display: 'block', color: '#151515', fontSize: '0.9rem', fontWeight: 700 }}>{c.label}</strong>
+                    <span style={{ color: 'rgba(21,21,21,0.50)', fontSize: '0.8rem' }}>{c.sub}</span>
+                  </div>
+                </a>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-16 lg:py-24 bg-gray-50 section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-black text-gray-900 mb-4 lg:mb-6 text-shadow">
-              DJ HUREN VOOR ELK EVENEMENT –
-              <span className="block text-orange-500">PROFESSIONEEL EN COMPLEET</span>
-            </h2>
-            <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              Van bruiloft tot zakelijk evenement: één aanspreekpunt, eigen apparatuur en muziek op maat. Direct prijsindicatie of offerte – geen tussenpersonen.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-gray-100">
-                <div className="relative overflow-hidden">
-                  <img
-                    src={`${service.image.replace(/\.webp$/i, '')}-640.webp`}
-                    srcSet={`${service.image.replace(/\.webp$/i, '')}-320.webp 320w, ${service.image.replace(/\.webp$/i, '')}-640.webp 640w`}
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    alt={`DJ Kevin Froger ${service.title} - Professionele DJ services voor ${service.title.toLowerCase()} in Nederland`}
-                    className="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition-transform duration-700"
-                    loading="lazy"
-                    fetchpriority="low"
-                    decoding="async"
-                    width="400"
-                    height="256"
-                    style={{ aspectRatio: '400/256' }}
-                  />
-                  <div className="absolute top-4 right-4 lg:top-6 lg:right-6">
-                    <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-full flex items-center justify-center text-white shadow-lg`}>
-                      {service.icon}
-                    </div>
-                  </div>
-                  <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6">
-                    <h3 className="text-lg md:text-2xl font-black text-white mb-2 text-shadow-lg mobile-service-title">{service.title}</h3>
-                  </div>
-                </div>
-                
-                <div className="p-6 md:p-8">
-                  <p className="text-base md:text-lg text-gray-600 mb-4 md:mb-6 leading-relaxed mobile-service-description">{service.description}</p>
-                  
-                  <div className="space-y-3 md:space-y-4 mb-4 md:mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-start space-x-4">
-                        <div className="w-6 h-6 md:w-8 md:h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                          <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-white" />
-                        </div>
-                        <span className="text-base md:text-lg text-gray-700 font-medium mobile-feature-text">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <Link
-                    to={service.link}
-                    className="group inline-flex items-center text-blue-700 font-black text-base md:text-lg hover:text-orange-500 transition-colors duration-200"
-                    aria-label={`Meer informatie over ${service.title} DJ services van Kevin Froger`}
-                  >
-                    MEER INFORMATIE
-                    <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2 group-hover:translate-x-2 transition-transform duration-200" />
-                  </Link>
-                </div>
-              </div>
-            ))}
+          <div style={{ background: '#fff7e6', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '20px', padding: 'clamp(24px,4vw,36px)', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}>
+            <ContactForm />
           </div>
         </div>
       </section>
 
-      {/* Region Navigator Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6">
-              BOEK EEN DJ IN JOUW REGIO
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Beschikbaar in Zuid-Holland, Noord-Brabant, Gelderland, Utrecht en Overijssel
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
-            <Link to="/regio/zuid-holland" className="group bg-gradient-to-br from-blue-50 to-orange-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 text-center">
-              <MapPin className="w-8 h-8 text-orange-500 mx-auto mb-3" />
-              <h3 className="font-black text-gray-900 group-hover:text-orange-600 transition-colors">Zuid-Holland</h3>
-              <p className="text-sm text-gray-600 mt-2">Rotterdam, Den Haag, Delft</p>
-            </Link>
-            <Link to="/regio/noord-brabant" className="group bg-gradient-to-br from-blue-50 to-orange-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 text-center">
-              <MapPin className="w-8 h-8 text-orange-500 mx-auto mb-3" />
-              <h3 className="font-black text-gray-900 group-hover:text-orange-600 transition-colors">Noord-Brabant</h3>
-              <p className="text-sm text-gray-600 mt-2">Eindhoven, Tilburg, Breda</p>
-            </Link>
-            <Link to="/regio/gelderland" className="group bg-gradient-to-br from-blue-50 to-orange-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 text-center">
-              <MapPin className="w-8 h-8 text-orange-500 mx-auto mb-3" />
-              <h3 className="font-black text-gray-900 group-hover:text-orange-600 transition-colors">Gelderland</h3>
-              <p className="text-sm text-gray-600 mt-2">Nijmegen, Arnhem, Apeldoorn</p>
-            </Link>
-            <Link to="/regio/utrecht" className="group bg-gradient-to-br from-blue-50 to-orange-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 text-center">
-              <MapPin className="w-8 h-8 text-orange-500 mx-auto mb-3" />
-              <h3 className="font-black text-gray-900 group-hover:text-orange-600 transition-colors">Utrecht</h3>
-              <p className="text-sm text-gray-600 mt-2">Utrecht, Amersfoort, Zeist</p>
-            </Link>
-            <Link to="/regio/overijssel" className="group bg-gradient-to-br from-blue-50 to-orange-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 text-center">
-              <MapPin className="w-8 h-8 text-orange-500 mx-auto mb-3" />
-              <h3 className="font-black text-gray-900 group-hover:text-orange-600 transition-colors">Overijssel</h3>
-              <p className="text-sm text-gray-600 mt-2">Enschede, Zwolle, Deventer</p>
-            </Link>
-          </div>
-          
-          <div className="text-center">
-            <Link
-              to="/regio"
-              className="inline-flex items-center text-blue-700 font-black text-lg hover:text-orange-500 transition-colors duration-200"
-            >
-              BEKIJK ALLE REGIO'S
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-          </div>
-        </div>
-      </section>
-      {/* Features Section */}
-      <section className="py-16 lg:py-24 bg-white lazy-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-black text-gray-900 mb-4 lg:mb-6 text-shadow">
-              WAAROM DJ KEVIN FROGER?
-              <span className="block text-orange-500">PERSOONLIJK, PROFESSIONEEL, STRAK GEREGELD</span>
-            </h2>
-            <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              Van intake tot nazorg: één aanspreekpunt, flexibel meedenken en een dansvloer die vol blijft.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
-            {features.map((feature, index) => (
-              <div key={index} className="text-center group px-4 lg:px-0">
-                <div className={`w-20 h-20 lg:w-24 lg:h-24 bg-gradient-to-br ${feature.color} rounded-full flex items-center justify-center mx-auto mb-6 lg:mb-8 text-white group-hover:scale-110 transition-transform duration-300 shadow-xl lg:shadow-2xl`}>
-                  {feature.icon}
-                </div>
-                <h3 className="text-lg lg:text-2xl font-black text-gray-900 mb-4 lg:mb-6">{feature.title}</h3>
-                <p className="text-base lg:text-base text-gray-600 leading-relaxed">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Music Genres Section */}
-      <div className="lazy-section">
-        <MusicGenresSection />
-      </div>
-
-      {/* Partners Section */}
-      <div className="lazy-section">
-        <PartnersSection />
-      </div>
-
+      {/* Mobile responsive overrides */}
+      <style>{`
+        @media (max-width: 768px) {
+          #hero-title { font-size: clamp(2.8rem,14vw,5rem) !important; }
+        }
+        @media (max-width: 900px) {
+          .home-split { grid-template-columns: 1fr !important; }
+          .home-split > div:first-child { display: none; }
+          .home-cta-grid { grid-template-columns: 1fr !important; }
+          .home-cta-grid > div:last-child { flex-direction: row !important; flex-wrap: wrap; }
+          .home-regio-grid { grid-template-columns: 1fr !important; }
+          .home-contact-grid { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
     </div>
   );
 };

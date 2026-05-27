@@ -100,9 +100,10 @@ const seoRouteElements = Object.entries(seoModules).map(([path, loader]) => {
  * Loading state
  */
 const LoadingSpinner: React.FC = () => (
-  <div className="min-h-screen flex items-center justify-center bg-white contain-strict">
+  <div className="min-h-screen flex items-center justify-center contain-strict" style={{ background: 'var(--kf-bg)' }}>
     <div
-      className="w-16 h-16 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"
+      className="w-16 h-16 border-4 border-t-transparent rounded-full animate-spin"
+      style={{ borderColor: 'var(--kf-accent-gold)', borderTopColor: 'transparent' }}
       role="status"
       aria-label="Pagina laden..."
     >
@@ -114,10 +115,10 @@ const LoadingSpinner: React.FC = () => (
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen" style={{ background: 'var(--kf-bg)', color: 'var(--kf-text)' }}>
         <ScrollToTop />
         <Header />
-        <main className="pb-16 md:pb-0">
+        <main className="pb-20 md:pb-0">
           <React.Suspense fallback={<LoadingSpinner />}>
             <Routes>
               {/* Hoofd-routes */}
@@ -159,13 +160,13 @@ function App() {
               <Route path="/regio/zuid-holland/vlaardingen" element={<Vlaardingen />} />
               <Route path="/regio/zuid-holland/spijkenisse" element={<Spijkenisse />} />
               <Route path="/regio/zuid-holland/westland" element={<Westland />} />
-              
+
               {/* Noord-Holland Steden */}
               <Route path="/regio/noord-holland/amsterdam" element={<Amsterdam />} />
-              
+
               {/* Utrecht Steden */}
               <Route path="/regio/utrecht/utrecht" element={<Utrecht />} />
-              
+
               {/* Noord-Brabant Steden */}
               <Route path="/regio/noord-brabant/eindhoven" element={<Eindhoven />} />
               <Route path="/regio/noord-brabant/tilburg" element={<Tilburg />} />
