@@ -2,44 +2,21 @@
 User-agent: *
 Allow: /
 
-# High priority pages
-Allow: /bruiloft-dj
-Allow: /verjaardag-dj
-Allow: /evenementen-dj
-Allow: /zakelijk-dj
-Allow: /werkwijze
-Allow: /reviews
-Allow: /regio
-Allow: /prijzen
-Allow: /contact
-
-# Region pages
-Allow: /regio/*
-
 # Static assets
 Allow: /images/
 Allow: /assets/
-Allow: /css/
-Allow: /js/
 
 # Block development files
 Disallow: /src/
 Disallow: /.git/
 Disallow: /node_modules/
 Disallow: /dist/
-Disallow: /*.json$
-Disallow: /*.config.*
 Disallow: /api/
-Disallow: /.env*
 
 # Block tracking parameters
 Disallow: /*?utm_*
 Disallow: /*?fbclid=*
 Disallow: /*?gclid=*
 
-# Block search
-Disallow: /search
-Disallow: /?*
-
-# Sitemaps
+# Sitemap
 Sitemap: https://kevinfroger.nl/sitemap.xml

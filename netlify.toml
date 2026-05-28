@@ -1,112 +1,53 @@
 [build]
   publish = "dist"
   command = "npm run build"
-  
-[build.environment]
-  NODE_VERSION = "18"
-  NPM_FLAGS = "--production --no-optional --prefer-offline"
-  
-# Performance optimizations
-[build.processing]
-  skip_processing = false
-[build.processing.css]
-  bundle = true
-  minify = true
-[build.processing.js]
-  bundle = true
-  minify = true
-[build.processing.html]
-  pretty_urls = true
-[build.processing.images]
-  compress = true
 
-# Performance & Security Headers
+[build.environment]
+  NODE_VERSION = "22"
+
+# --- Security & cache headers ---
+
 [[headers]]
   for = "/*"
   [headers.values]
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
-    Cross-Origin-Opener-Policy = "same-origin"
-    Cross-Origin-Embedder-Policy = "credentialless"
-    Content-Security-Policy-Report-Only = "default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self' data: https:; frame-ancestors 'self'; upgrade-insecure-requests"
-
-[[headers]]
-  for = "/*.html"
-  [headers.values]
-    Cache-Control = "public, max-age=3600, must-revalidate, stale-while-revalidate=86400"
-    Vary = "Accept-Encoding"
 
 [[headers]]
   for = "/images/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable, stale-while-revalidate=31536000"
-    Vary = "Accept-Encoding"
-    Content-Type = "image/*"
+    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
   for = "/assets/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable, stale-while-revalidate=31536000"
-    Vary = "Accept-Encoding"
-
-[[headers]]
-  for = "/js/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable, stale-while-revalidate=31536000"
-    Vary = "Accept-Encoding"
+    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
   for = "*.woff2"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable, stale-while-revalidate=31536000"
+    Cache-Control = "public, max-age=31536000, immutable"
     Access-Control-Allow-Origin = "*"
 
-# Brotli Compression
-[[headers]]
-  for = "*.js"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable, stale-while-revalidate=31536000"
-    Vary = "Accept-Encoding"
+# --- Domain canonicalisation ---
 
-[[headers]]
-  for = "*.css"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable, stale-while-revalidate=31536000"
-    Vary = "Accept-Encoding"
-[functions]
-  directory = "netlify/functions"
-
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
-
-# Force HTTPS
 [[redirects]]
   from = "http://kevinfroger.nl/*"
   to = "https://kevinfroger.nl/:splat"
   status = 301
   force = true
 
-# Force non-www
 [[redirects]]
   from = "https://www.kevinfroger.nl/*"
   to = "https://kevinfroger.nl/:splat"
   status = 301
   force = true
 
-# Strip tracking parameters
-[[redirects]]
-  from = "/*"
-  to = "/:splat"
-  status = 301
-  conditions = {Query = ["utm_*", "gclid", "fbclid", "ref"]}
-  force = false
-# SEO redirects from keyword map
+# --- Service-pagina redirects (oude slugs naar nieuwe) ---
+
 [[redirects]]
   from = "/bruiloften"
   to = "/bruiloft-dj"
@@ -119,12 +60,22 @@
 
 [[redirects]]
   from = "/festivals"
-  to = "/evenementen-dj"
+  to = "/festival-dj"
+  status = 301
+
+[[redirects]]
+  from = "/privefeesten"
+  to = "/verjaardag-dj"
   status = 301
 
 [[redirects]]
   from = "/evenementen"
-  to = "/evenementen-dj"
+  to = "/festival-dj"
+  status = 301
+
+[[redirects]]
+  from = "/evenementen-dj"
+  to = "/festival-dj"
   status = 301
 
 [[redirects]]
@@ -133,64 +84,101 @@
   status = 301
 
 [[redirects]]
-  from = "/portfolio"
-  to = "/reviews"
-  status = 301
-
-# Common typos and variations
-[[redirects]]
-  from = "/dj-kevin-froger"
-  to = "/"
-  status = 301
-
-[[redirects]]
-  from = "/kevin-froger-dj"
-  to = "/"
-  status = 301
-
-[[redirects]]
-  from = "/dj-kevin"
-  to = "/"
-  status = 301
-
-# Trailing slash normalization
-[[redirects]]
-  from = "/*//"
-  to = "/:splat/"
-  status = 301
-
-[[redirects]]
-  from = "/*/"
-  to = "/:splat"
-  status = 301
-  conditions = {Path = "!/"}
-# SEO redirects for common variations
-[[redirects]]
-  from = "/dj-boeken-nederland"
-  to = "/dj-boeken"
-  status = 301
-
-[[redirects]]
-  from = "/dj-huren-nederland" 
-  to = "/dj-huren"
-  status = 301
-
-[[redirects]]
-  from = "/bruiloft-dj"
-  to = "/bruiloften"
+  from = "/feest-dj"
+  to = "/verjaardag-dj"
   status = 301
 
 [[redirects]]
   from = "/bedrijfsfeest-dj"
-  to = "/bedrijfsfeesten" 
+  to = "/zakelijk-dj"
   status = 301
 
 [[redirects]]
-  from = "/festival-dj"
-  to = "/festivals"
+  from = "/portfolio"
+  to = "/reviews"
   status = 301
 
-# Common typos and variations
+# --- Werkgebied alias ---
+
+[[redirects]]
+  from = "/werkgebied"
+  to = "/regios"
+  status = 301
+
+[[redirects]]
+  from = "/regio"
+  to = "/regios"
+  status = 301
+
+# --- Dunne provinciepagina's (oude live site) naar werkgebied ---
+
+[[redirects]]
+  from = "/dj-boeken-drenthe"
+  to = "/regios"
+  status = 301
+
+[[redirects]]
+  from = "/dj-boeken-friesland"
+  to = "/regios"
+  status = 301
+
+[[redirects]]
+  from = "/dj-boeken-groningen"
+  to = "/regios"
+  status = 301
+
+[[redirects]]
+  from = "/dj-boeken-limburg"
+  to = "/regios"
+  status = 301
+
+[[redirects]]
+  from = "/dj-boeken-noord-brabant"
+  to = "/regios"
+  status = 301
+
+[[redirects]]
+  from = "/dj-boeken-noord-brabant-2"
+  to = "/regios"
+  status = 301
+
+[[redirects]]
+  from = "/dj-boeken-noord-holland"
+  to = "/regios"
+  status = 301
+
+[[redirects]]
+  from = "/dj-boeken-overijssel"
+  to = "/regios"
+  status = 301
+
+[[redirects]]
+  from = "/dj-boeken-flevoland"
+  to = "/regios"
+  status = 301
+
+[[redirects]]
+  from = "/dj-boeken-zeeland"
+  to = "/regios"
+  status = 301
+
+[[redirects]]
+  from = "/dj-boeken-gelderland"
+  to = "/dj-boeken-betuwe"
+  status = 301
+
+[[redirects]]
+  from = "/dj-boeken-utrecht"
+  to = "/regios"
+  status = 301
+
+[[redirects]]
+  from = "/dj-boeken-zuid-holland"
+  to = "/dj-boeken-hoeksche-waard"
+  status = 301
+
+# --- Oude slug aliases ---
+
 [[redirects]]
   from = "/dj-kevin-froger"
   to = "/"
@@ -205,8 +193,3 @@
   from = "/dj-kevin"
   to = "/"
   status = 301
-
-[form]
-  [form.settings]
-    [form.settings.notification]
-      email = "booking@kevinfroger.nl"

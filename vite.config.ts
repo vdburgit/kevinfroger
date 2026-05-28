@@ -1,79 +1,24 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+// @lovable.dev/vite-tanstack-config already includes the following — do NOT add them manually
+// or the app will break with duplicate plugins:
+//   - tanstackStart, viteReact, tailwindcss, tsConfigPaths, nitro (build-only using cloudflare as a default target),
+//     componentTagger (dev-only), VITE_* env injection, @ path alias, React/TanStack dedupe,
+//     error logger plugins, and sandbox detection (port/host/strictPort).
+// You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
+import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
-  base: '/',
-  plugins: [react()],
-  esbuild: {
-    target: 'es2022',
-    legalComments: 'none',
-    minifyIdentifiers: true,
-    minifySyntax: true,
-    minifyWhitespace: true,
+  tanstackStart: {
+    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
+    // nitro/vite builds from this
+    server: { entry: "server" },
   },
-  build: {
-    outDir: 'dist',
-    target: 'es2022',
-    cssCodeSplit: false,
-    sourcemap: false,
-    minify: 'esbuild',
-    chunkSizeWarningLimit: 1000,
-    assetsInlineLimit: 2048,
-    reportCompressedSize: false,
-    cssMinify: 'esbuild',
-    modulePreload: { polyfill: false },
-    rollupOptions: {
-      output: {
-        assetFileNames: (assetInfo) => {
-          const info = assetInfo.name.split('.')
-          const ext = info[info.length - 1]
-          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
-            return `images/[name]-[hash][extname]`
-          }
-          return `assets/[name]-[hash][extname]`
-        },
-        chunkFileNames: 'js/[name]-[hash].js',
-        entryFileNames: 'js/[name]-[hash].js',
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          icons: ['lucide-react'],
-        },
-      },
-      external: [],
-      treeshake: {
-        moduleSideEffects: false,
-        propertyReadSideEffects: false,
-        tryCatchDeoptimization: false,
-      },
-      onwarn(warning, warn) {
-        if (warning.code === 'MODULE_LEVEL_DIRECTIVE') return
-        warn(warning)
-      },
-    },
+  // Deploy target = Netlify. Switches nitro from the default cloudflare-module
+  // bundle to a Netlify Functions bundle; publish dir becomes `dist`.
+  nitro: {
+    preset: "netlify",
   },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom', 'lucide-react'],
-    exclude: ['@vite/client', '@vite/env'],
-    force: false,
+  // Dev-server op poort 3000 zodat hij bereikbaar is op de gewone URL.
+  vite: {
+    server: { port: 3000, host: "0.0.0.0" },
   },
-  server: {
-    host: true,                 // bind op 0.0.0.0
-    port: 3000,
-    cors: true,
-    headers: { 'Cache-Control': 'no-cache' },
-
-    // ✅ sta je publieke host toe (Cloudflare Tunnel)
-    allowedHosts: ['dev.kevinfroger.nl'],
-
-    // ✅ HMR via je HTTPS-tunnel
-    hmr: {
-      host: 'dev.kevinfroger.nl',
-      clientPort: 443,
-      protocol: 'wss',
-    },
-
-    // (optioneel, maar helpt soms met absolute URLs achter proxy)
-    origin: 'https://dev.kevinfroger.nl',
-    strictPort: true,
-  },
-})
+});
