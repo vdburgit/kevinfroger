@@ -13,6 +13,10 @@
   RewriteEngine On
   RewriteBase /
 
+  # www -> apex (kevinfroger.nl) zodat er geen dubbele host bestaat.
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
   # Geen automatische "voeg trailing slash toe"-301 voor mappen.
   DirectorySlash Off
 
