@@ -78,7 +78,7 @@ function Page() {
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Vertrouwd door</div>
             <h2 className="text-4xl md:text-6xl leading-[0.9]" style={{ fontFamily: "var(--font-display)" }}>Merken die<br/><span className="text-primary">terugkomen.</span></h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Onder andere Heineken, Jumbo, Van der Valk, Bol.com, Feyenoord, Dutch Grand Prix, Circuit Zandvoort en de Koninklijke Landmacht. Wat ze gemeen hebben: een dag met meerdere programmaonderdelen, een gemengd gezelschap en geen ruimte voor losse eindjes.
+              Onder andere Heineken, Jumbo, Albert Heijn, Makro, Bol.com, KPN, Van der Valk, Feyenoord, Sparta Rotterdam, Dutch Grand Prix, Circuit Zandvoort, Roparun, de Koninklijke Landmacht, de Politie, Hogeschool Rotterdam, Flügel, Pupa Milano, YourSurprise, Voorwinden en Modern Nerdplace. Wat ze gemeen hebben: een dag met meerdere programmaonderdelen, een gemengd gezelschap en geen ruimte voor losse eindjes.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/werkwijze" className="rounded-full border-2 border-secondary text-secondary px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:bg-secondary hover:text-secondary-foreground transition">Werkwijze</Link>
