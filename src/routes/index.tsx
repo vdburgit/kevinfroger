@@ -16,7 +16,7 @@ const IMG_DJ_BOOTH = "/images/licht-en-geluid-verhuur-show.jpeg";
 const IMG_PRIVATE = "/images/dj-kevin-froger-prive-feest.jpeg";
 const IMG_WEDDING = "/images/dj-kevin-froger-bruiloft-scaled.jpeg";
 const IMG_CORPORATE = "/images/dj-kevin-froger-bedrijfsfeest.webp";
-const IMG_APRESKI = "/images/dj-kevin-froger-apreskifeest.webp";
+const IMG_FESTIVAL = "/images/dj-kevin-froger-festival.webp";
 
 // Logo-varianten (max 240px) gegenereerd door scripts/optimize-logos.js (WebP)
 // of als compacte SVG. width/height = intrinsieke afmeting zodat de layout
@@ -178,7 +178,7 @@ function Index() {
             {[
               { title: "Bruiloften", img: IMG_WEDDING, alt: "DJ Kevin Froger draait op een bruiloft", desc: "Complete muzikale begeleiding voor jullie mooiste dag, van ceremonie tot late avond.", href: "/bruiloft-dj" },
               { title: "Bedrijfsfeesten", img: IMG_CORPORATE, alt: "DJ Kevin Froger op een bedrijfsfeest", desc: "Professionele entertainment voor corporate events, jubilea en personeelsfeesten.", href: "/zakelijk-dj" },
-              { title: "Festivals", img: IMG_APRESKI, alt: "DJ Kevin Froger draait een festivalset", desc: "Strakke sets met crowd control en presentatie voor festivals en aprèsski.", href: "/festival-dj" },
+              { title: "Festivals", img: IMG_FESTIVAL, alt: "DJ Kevin Froger op een festival met vuurwerk boven het podium en volle dansvloer", desc: "Strakke sets met crowd control en presentatie voor festivals en aprèsski.", href: "/festival-dj" },
               { title: "Privéfeesten", img: IMG_PRIVATE, alt: "DJ Kevin Froger op een privéfeest of verjaardag", desc: "Verjaardag, themafeest of besloten event, altijd op maat van jouw gasten.", href: "/verjaardag-dj" },
             ].map((d) => {
               const { src, srcSet } = responsiveImage(d.img);
