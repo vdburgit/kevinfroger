@@ -8,8 +8,8 @@ const HAS_1280 = new Set([
   "/images/dj-booth-black",
   "/images/dj-booth-wit-design",
   "/images/dj-booth-apresski",
-  "/images/AdobeStock_1026307983-scaled",
-  "/images/AdobeStock_829085185-scaled",
+  "/images/dj-kevin-froger-prive-feest",
+  "/images/dj-kevin-froger-bedrijfsfeest-lichtshow",
   "/images/kevin-portrait",
   "/images/kevin-logo",
 ]);
@@ -17,8 +17,8 @@ const HAS_1280 = new Set([
 // Subset that additionally has -1920.webp variants. Used for hero-style usage.
 const HAS_1920 = new Set([
   "/images/dj-kevin-froger-bruiloft-scaled",
-  "/images/AdobeStock_1026307983-scaled",
-  "/images/AdobeStock_829085185-scaled",
+  "/images/dj-kevin-froger-prive-feest",
+  "/images/dj-kevin-froger-bedrijfsfeest-lichtshow",
   "/images/kevin-logo",
 ]);
 

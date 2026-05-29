@@ -6,7 +6,7 @@ import { ContactCta } from "@/components/ContactCta";
 import { ServiceCityIndex } from "@/components/ServiceCityIndex";
 import { breadcrumb, buildSeo, service } from "@/lib/seo";
 
-const IMG = "/images/AdobeStock_1026307983-scaled.jpeg";
+const IMG = "/images/dj-kevin-froger-prive-feest.jpeg";
 
 export const Route = createFileRoute("/verjaardag-dj")({
   head: () => buildSeo({

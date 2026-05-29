@@ -87,7 +87,7 @@ function Page() {
             </div>
           </div>
           <div className="rounded-2xl overflow-hidden border-2 border-border aspect-[4/5]">
-            <img src="/images/AdobeStock_829085185-scaled.jpeg" alt="Sfeervol bedrijfsfeest met lichtshow" className="w-full h-full object-cover" loading="lazy" />
+            <img src="/images/dj-kevin-froger-bedrijfsfeest-lichtshow-1280.webp" alt="Sfeervol bedrijfsfeest met lichtshow" className="w-full h-full object-cover" loading="lazy" width={1280} height={718} />
           </div>
         </div>
       </section>

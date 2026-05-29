@@ -13,7 +13,7 @@ const HERO_WEBP_SRCSET =
 // Portret: responsive zodat mobiel de 640px-variant (~55 KB) pakt i.p.v. het volle bestand.
 const PORTRAIT = responsiveImage("/images/kevin-portrait.webp");
 const IMG_DJ_BOOTH = "/images/licht-en-geluid-verhuur-show.jpeg";
-const IMG_PRIVATE = "/images/AdobeStock_1026307983-scaled.jpeg";
+const IMG_PRIVATE = "/images/dj-kevin-froger-prive-feest.jpeg";
 const IMG_WEDDING = "/images/dj-kevin-froger-bruiloft-scaled.jpeg";
 const IMG_CORPORATE = "/images/dj-kevin-froger-bedrijfsfeest.webp";
 const IMG_APRESKI = "/images/dj-kevin-froger-apreskifeest.webp";
