@@ -18,19 +18,29 @@ const IMG_WEDDING = "/images/dj-kevin-froger-bruiloft-scaled.jpeg";
 const IMG_CORPORATE = "/images/dj-kevin-froger-bedrijfsfeest.webp";
 const IMG_APRESKI = "/images/dj-kevin-froger-apreskifeest.webp";
 
-// WebP-varianten (max 240px) gegenereerd door scripts/optimize-logos.js. width/height
-// = intrinsieke afmeting zodat de layout gereserveerd wordt (CLS) en max-h-14 het tonen regelt.
+// Logo-varianten (max 240px) gegenereerd door scripts/optimize-logos.js (WebP)
+// of als compacte SVG. width/height = intrinsieke afmeting zodat de layout
+// gereserveerd wordt (CLS); max-h regelt het tonen.
 const PARTNER_LOGOS = [
   { src: "/images/logos/heineken.webp", alt: "Heineken", w: 240, h: 125 },
-  { src: "/images/logos/feyenoord-rotterdam.webp", alt: "Feyenoord Rotterdam", w: 240, h: 240 },
   { src: "/images/logos/jumbo.webp", alt: "Jumbo", w: 240, h: 67 },
+  { src: "/images/logos/albert-heijn.svg", alt: "Albert Heijn", w: 240, h: 251 },
+  { src: "/images/logos/makro.webp", alt: "Makro", w: 240, h: 64 },
   { src: "/images/logos/bolcom.webp", alt: "Bol.com", lightBg: true, w: 240, h: 240 },
+  { src: "/images/logos/kpn.webp", alt: "KPN", w: 228, h: 240 },
   { src: "/images/logos/van-der-valk.webp", alt: "Van der Valk", w: 240, h: 119 },
+  { src: "/images/logos/feyenoord-rotterdam.webp", alt: "Feyenoord Rotterdam", w: 240, h: 240 },
+  { src: "/images/logos/sparta-rotterdam.webp", alt: "Sparta Rotterdam", w: 64, h: 64 },
   { src: "/images/logos/dutch-grand-prix.webp", alt: "Dutch Grand Prix", w: 240, h: 146 },
-  { src: "/images/logos/landmacht.webp", alt: "Koninklijke Landmacht", w: 240, h: 240 },
-  { src: "/images/logos/hogeschool-rotterdam.webp", alt: "Hogeschool Rotterdam", w: 240, h: 183 },
   { src: "/images/logos/zandvoort.webp", alt: "Circuit Zandvoort", w: 240, h: 240 },
+  { src: "/images/logos/landmacht.webp", alt: "Koninklijke Landmacht", w: 240, h: 240 },
+  { src: "/images/logos/politie.svg", alt: "Politie", w: 240, h: 240 },
+  { src: "/images/logos/hogeschool-rotterdam.webp", alt: "Hogeschool Rotterdam", w: 240, h: 183 },
+  { src: "/images/logos/flugel.webp", alt: "Flügel", w: 181, h: 240 },
+  { src: "/images/logos/pupa-milano.webp", alt: "Pupa Milano", w: 240, h: 240 },
+  { src: "/images/logos/yoursurprise.svg", alt: "YourSurprise", w: 240, h: 105 },
   { src: "/images/logos/voorwinden.webp", alt: "Voorwinden", w: 240, h: 77 },
+  { src: "/images/logos/modern-nerdplace.webp", alt: "Modern Nerdplace", w: 240, h: 240 },
 ];
 
 export const Route = createFileRoute("/")({
@@ -289,10 +299,12 @@ function Index() {
               Gedraaid voor <span className="text-primary">o.a.</span>
             </h2>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          {/* Gecentreerde flex-wrap: gelijke vakken, een niet-volle laatste rij
+              staat netjes gecentreerd i.p.v. links uitgelijnd. */}
+          <div className="flex flex-wrap justify-center gap-4">
             {PARTNER_LOGOS.map((p) => (
-              <div key={p.alt} className={`flex items-center justify-center p-5 rounded-xl border border-border h-24 hover:border-primary transition-colors ${p.lightBg ? "bg-white" : "bg-card"}`}>
-                <img src={p.src} alt={p.alt} width={p.w} height={p.h} loading="lazy" decoding="async" className="max-h-14 max-w-full object-contain opacity-90 hover:opacity-100 transition" />
+              <div key={p.alt} className={`flex items-center justify-center p-4 rounded-xl border border-border h-24 w-[calc(50%-0.5rem)] sm:w-40 hover:border-primary transition-colors ${p.lightBg ? "bg-white" : "bg-card"}`}>
+                <img src={p.src} alt={p.alt} width={p.w} height={p.h} loading="lazy" decoding="async" className="max-h-12 max-w-full object-contain opacity-90 hover:opacity-100 transition" />
               </div>
             ))}
           </div>
