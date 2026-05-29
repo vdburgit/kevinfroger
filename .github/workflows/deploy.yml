@@ -29,6 +29,11 @@ jobs:
       - name: Build
         run: npm run build
 
+      # Prerender: per route statische HTML met de juiste meta/JSON-LD/content,
+      # zodat crawlers en social scrapers (geen JS) pagina-specifieke SEO zien.
+      - name: Prerender routes
+        run: npm run prerender
+
       # SPA fallback: 404.html = kopie van index.html, zodat deep links
       # zoals /dj-boeken-tiel direct werken op GitHub Pages.
       - name: Add SPA 404 fallback
