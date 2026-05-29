@@ -176,15 +176,15 @@ function Index() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Bruiloften", img: IMG_WEDDING, desc: "Complete muzikale begeleiding voor jullie mooiste dag, van ceremonie tot late avond.", href: "/bruiloft-dj" },
-              { title: "Bedrijfsfeesten", img: IMG_CORPORATE, desc: "Professionele entertainment voor corporate events, jubilea en personeelsfeesten.", href: "/zakelijk-dj" },
-              { title: "Festivals", img: IMG_APRESKI, desc: "Strakke sets met crowd control en presentatie voor festivals en aprèsski.", href: "/festival-dj" },
-              { title: "Privéfeesten", img: IMG_PRIVATE, desc: "Verjaardag, themafeest of besloten event, altijd op maat van jouw gasten.", href: "/verjaardag-dj" },
+              { title: "Bruiloften", img: IMG_WEDDING, alt: "DJ Kevin Froger draait op een bruiloft", desc: "Complete muzikale begeleiding voor jullie mooiste dag, van ceremonie tot late avond.", href: "/bruiloft-dj" },
+              { title: "Bedrijfsfeesten", img: IMG_CORPORATE, alt: "DJ Kevin Froger op een bedrijfsfeest", desc: "Professionele entertainment voor corporate events, jubilea en personeelsfeesten.", href: "/zakelijk-dj" },
+              { title: "Festivals", img: IMG_APRESKI, alt: "DJ Kevin Froger draait een festivalset", desc: "Strakke sets met crowd control en presentatie voor festivals en aprèsski.", href: "/festival-dj" },
+              { title: "Privéfeesten", img: IMG_PRIVATE, alt: "DJ Kevin Froger op een privéfeest of verjaardag", desc: "Verjaardag, themafeest of besloten event, altijd op maat van jouw gasten.", href: "/verjaardag-dj" },
             ].map((d) => {
               const { src, srcSet } = responsiveImage(d.img);
               return (
               <Link key={d.title} to={d.href} className="group relative block overflow-hidden rounded-2xl bg-card border-2 border-border hover:border-primary transition-colors aspect-[4/5]">
-                <img src={src} srcSet={srcSet} sizes="(min-width:1024px) 25vw, (min-width:640px) 50vw, 100vw" alt={d.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" width={800} height={1000} />
+                <img src={src} srcSet={srcSet} sizes="(min-width:1024px) 25vw, (min-width:640px) 50vw, 100vw" alt={d.alt} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" width={800} height={1000} />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/10" />
                 <div className="absolute inset-x-0 bottom-0 p-6">
                   <h3 className="text-2xl md:text-3xl mb-2 text-white" style={{ fontFamily: "var(--font-display)" }}>{d.title}</h3>
@@ -305,7 +305,7 @@ function Index() {
           <div className="flex flex-wrap justify-center gap-4">
             {PARTNER_LOGOS.map((p) => (
               <div key={p.alt} className={`flex items-center justify-center p-4 rounded-xl border border-border h-24 w-[calc(50%-0.5rem)] sm:w-40 hover:border-primary transition-colors ${p.lightBg ? "bg-white" : "bg-card"}`}>
-                <img src={p.src} alt={p.alt} width={p.w} height={p.h} loading="lazy" decoding="async" className="max-h-12 max-w-full object-contain opacity-90 hover:opacity-100 transition" />
+                <img src={p.src} alt={`${p.alt} logo`} width={p.w} height={p.h} loading="lazy" decoding="async" className="max-h-12 max-w-full object-contain opacity-90 hover:opacity-100 transition" />
               </div>
             ))}
           </div>
