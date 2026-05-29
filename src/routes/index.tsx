@@ -87,8 +87,9 @@ function Index() {
         <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, oklch(0.16 0.012 250 / 0.55) 0%, oklch(0.16 0.012 250 / 0.35) 40%, oklch(0.16 0.012 250 / 0.95) 100%)" }} />
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at center, transparent 30%, oklch(0.16 0.012 250 / 0.6) 100%)" }} />
 
-        {/* Top bar: gedeeld component met mobile menu */}
-        <div className="relative z-10">
+        {/* Top bar: gedeeld component met mobile menu. z-50 zodat de header
+            boven het hero-content-blok (z-10) ligt en klikbaar is. */}
+        <div className="relative z-50">
           <SiteHeader transparent />
         </div>
 
