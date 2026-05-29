@@ -73,6 +73,7 @@ const SAME_AS = [
   "https://www.facebook.com/KevinFroger.nl",
   "https://www.linkedin.com/in/kevinfroger/",
   "https://soundcloud.com/kevin-froger-358539469",
+  "https://www.youtube.com/@KEVINFROGER",
 ];
 
 const ORGANIZATION_JSONLD = {
