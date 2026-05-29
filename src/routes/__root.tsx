@@ -67,6 +67,14 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 const SITE_URL = "https://kevinfroger.nl";
 const OG_IMAGE = `${SITE_URL}/images/kevin-portrait.webp`;
 
+// Officiële profielen voor schema.org sameAs (entiteitsherkenning bij Google).
+const SAME_AS = [
+  "https://www.instagram.com/djkevinfroger/",
+  "https://www.facebook.com/KevinFroger.nl",
+  "https://www.linkedin.com/in/kevinfroger/",
+  "https://soundcloud.com/kevin-froger-358539469",
+];
+
 const ORGANIZATION_JSONLD = {
   "@context": "https://schema.org",
   "@graph": [
@@ -93,6 +101,7 @@ const ORGANIZATION_JSONLD = {
         bestRating: "5",
         reviewCount: "10",
       },
+      sameAs: SAME_AS,
       areaServed: [
         { "@type": "Country", name: "Nederland" },
         // Alle 12 provincies
@@ -292,6 +301,7 @@ const ORGANIZATION_JSONLD = {
       name: "Kevin Froger",
       jobTitle: "Allround DJ",
       worksFor: { "@id": `${SITE_URL}/#business` },
+      sameAs: SAME_AS,
       url: SITE_URL,
       image: `${SITE_URL}/images/kevin-portrait.webp`,
     },
