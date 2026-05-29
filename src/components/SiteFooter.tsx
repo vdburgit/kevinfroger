@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 
-const LOGO = "/images/kevin-logo.png";
+const LOGO = "/images/kevin-logo-small.webp";
 
 export function SiteFooter() {
   return (
@@ -9,7 +9,7 @@ export function SiteFooter() {
         {/* Top: branding + diensten + info */}
         <div className="grid md:grid-cols-4 gap-10 text-sm">
           <div className="md:col-span-2">
-            <img src={LOGO} alt="DJ Kevin Froger" className="h-14 sm:h-16 w-auto mb-4" />
+            <img src={LOGO} alt="DJ Kevin Froger" width={360} height={198} loading="lazy" decoding="async" className="h-14 sm:h-16 w-auto mb-4" />
             <p className="text-muted-foreground max-w-sm leading-relaxed">
               Allround DJ voor bruiloften, bedrijfsfeesten, verjaardagen en festivals door heel Nederland. Veel ervaring in de Betuwe, Bommelerwaard, Hoeksche Waard en Zuid-Holland.
             </p>

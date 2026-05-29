@@ -1,31 +1,34 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import heroCrowd from "@/assets/hero-crowd.jpg";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SITE_URL, buildSeo } from "@/lib/seo";
 import { responsiveImage } from "@/lib/images";
 
 const ROTATING_WORDS = ["BRUILOFT", "FEEST", "BEDRIJFSFEEST", "FESTIVAL"];
-const IMG_HERO = heroCrowd;
+// Vast publiek pad (niet via Vite-bundle) zodat de hero in index.html ge-preload kan worden.
+const HERO_WEBP_SRCSET =
+  "/images/hero-crowd-640.webp 640w, /images/hero-crowd-1280.webp 1280w, /images/hero-crowd-1920.webp 1920w";
 const IMG_DJ_BOOTH = "/images/licht-en-geluid-verhuur-show.jpeg";
 const IMG_PRIVATE = "/images/AdobeStock_1026307983-scaled.jpeg";
 const IMG_WEDDING = "/images/dj-kevin-froger-bruiloft-scaled.jpeg";
 const IMG_CORPORATE = "/images/dj-kevin-froger-bedrijfsfeest.webp";
 const IMG_APRESKI = "/images/dj-kevin-froger-apreskifeest.webp";
 
+// WebP-varianten (max 240px) gegenereerd door scripts/optimize-logos.js. width/height
+// = intrinsieke afmeting zodat de layout gereserveerd wordt (CLS) en max-h-14 het tonen regelt.
 const PARTNER_LOGOS = [
-  { src: "/images/logos/heineken.png", alt: "Heineken" },
-  { src: "/images/logos/feyenoord-rotterdam.png", alt: "Feyenoord Rotterdam" },
-  { src: "/images/logos/jumbo.png", alt: "Jumbo" },
-  { src: "/images/logos/bolcom.png", alt: "Bol.com", lightBg: true },
-  { src: "/images/logos/van-der-valk.png", alt: "Van der Valk" },
-  { src: "/images/logos/dutch-grand-prix.png", alt: "Dutch Grand Prix" },
-  { src: "/images/logos/landmacht.png", alt: "Koninklijke Landmacht" },
-  { src: "/images/logos/hogeschool-rotterdam.png", alt: "Hogeschool Rotterdam" },
-  { src: "/images/logos/zandvoort.png", alt: "Circuit Zandvoort" },
-  { src: "/images/logos/voorwinden.png", alt: "Voorwinden" },
+  { src: "/images/logos/heineken.webp", alt: "Heineken", w: 240, h: 125 },
+  { src: "/images/logos/feyenoord-rotterdam.webp", alt: "Feyenoord Rotterdam", w: 240, h: 240 },
+  { src: "/images/logos/jumbo.webp", alt: "Jumbo", w: 240, h: 67 },
+  { src: "/images/logos/bolcom.webp", alt: "Bol.com", lightBg: true, w: 240, h: 240 },
+  { src: "/images/logos/van-der-valk.webp", alt: "Van der Valk", w: 240, h: 119 },
+  { src: "/images/logos/dutch-grand-prix.webp", alt: "Dutch Grand Prix", w: 240, h: 146 },
+  { src: "/images/logos/landmacht.webp", alt: "Koninklijke Landmacht", w: 240, h: 240 },
+  { src: "/images/logos/hogeschool-rotterdam.webp", alt: "Hogeschool Rotterdam", w: 240, h: 183 },
+  { src: "/images/logos/zandvoort.webp", alt: "Circuit Zandvoort", w: 240, h: 240 },
+  { src: "/images/logos/voorwinden.webp", alt: "Voorwinden", w: 240, h: 77 },
 ];
 
 export const Route = createFileRoute("/")({
@@ -66,15 +69,18 @@ function Index() {
     <main className="min-h-screen bg-background text-foreground">
       {/* HERO: full-bleed festival photo + giant wordmark */}
       <section className="relative min-h-screen w-full overflow-hidden flex flex-col">
-        <img
-          src={IMG_HERO}
-          alt="Volle dansvloer met rode podiumverlichting en confetti tijdens DJ-set van Kevin Froger"
-          className="absolute inset-0 w-full h-full object-cover"
-          width={1920}
-          height={1080}
-          loading="eager"
-          fetchPriority="high"
-        />
+        <picture>
+          <source type="image/webp" srcSet={HERO_WEBP_SRCSET} sizes="100vw" />
+          <img
+            src="/images/hero-crowd.jpg"
+            alt="Volle dansvloer met rode podiumverlichting en confetti tijdens DJ-set van Kevin Froger"
+            className="absolute inset-0 w-full h-full object-cover"
+            width={1920}
+            height={1080}
+            loading="eager"
+            fetchPriority="high"
+          />
+        </picture>
         {/* Warm overlay */}
         <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, oklch(0.16 0.012 250 / 0.55) 0%, oklch(0.16 0.012 250 / 0.35) 40%, oklch(0.16 0.012 250 / 0.95) 100%)" }} />
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at center, transparent 30%, oklch(0.16 0.012 250 / 0.6) 100%)" }} />
@@ -281,7 +287,7 @@ function Index() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {PARTNER_LOGOS.map((p) => (
               <div key={p.alt} className={`flex items-center justify-center p-5 rounded-xl border border-border h-24 hover:border-primary transition-colors ${p.lightBg ? "bg-white" : "bg-card"}`}>
-                <img src={p.src} alt={p.alt} className="max-h-14 max-w-full object-contain opacity-90 hover:opacity-100 transition" />
+                <img src={p.src} alt={p.alt} width={p.w} height={p.h} loading="lazy" decoding="async" className="max-h-14 max-w-full object-contain opacity-90 hover:opacity-100 transition" />
               </div>
             ))}
           </div>
