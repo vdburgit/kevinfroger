@@ -18,6 +18,9 @@ export function ContactCta({
           <Link to="/contact" className="rounded-full bg-background text-foreground px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm tracking-[0.15em] uppercase font-bold hover:bg-foreground hover:text-background transition">
             Offerte aanvragen
           </Link>
+          <a href="tel:+31645251333" className="rounded-full border-2 border-background text-background px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm tracking-[0.15em] uppercase font-bold hover:bg-background hover:text-foreground transition">
+            Bel 06 45 25 13 33
+          </a>
           <a href="https://wa.me/31645251333" className="rounded-full border-2 border-background text-background px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm tracking-[0.15em] uppercase font-bold hover:bg-background hover:text-foreground transition">
             App direct
           </a>
