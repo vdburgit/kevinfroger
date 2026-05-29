@@ -1,14 +1,24 @@
-# SPA-fallback voor de Apache/LiteSpeed-host.
-# De site is een client-side SPA: alleen / heeft een echt bestand, de overige
-# routes (bijv. /regios, /bruiloft-dj) worden door de router in de browser
-# afgehandeld. Zonder onderstaande rewrite geeft de server bij een directe
-# laad/refresh van zo'n route een harde 404. Deze regel serveert index.html
-# (status 200) voor elk pad dat geen bestaand bestand of map is, zodat de SPA
-# de juiste pagina rendert. Bestaande assets, afbeeldingen en de
-# redirect-stubs blijven gewoon direct werken.
+# Routing voor de Apache/LiteSpeed-host.
+#
+# De site is geprerenderd: elke route staat als <route>/index.html in de build.
+# Daarnaast hydrateert er een client-side SPA overheen.
+#
+# 1) Geprerenderde routes serveren we ZONDER trailing-slash-redirect, zodat de
+#    URL zonder slash (zoals in de sitemap, canonicals en interne links) direct
+#    met status 200 wordt geserveerd (geen 301 naar /pad/).
+# 2) Bestaande bestanden (assets, afbeeldingen, redirect-stubs) gaan ongemoeid.
+# 3) Al het overige valt terug op de SPA-entry (index.html), zodat onbekende
+#    deep links niet hard 404'en maar de router de pagina laat afhandelen.
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # Geen automatische "voeg trailing slash toe"-301 voor mappen.
+  DirectorySlash Off
+
+  # Geprerenderde route (map met index.html) direct serveren op de URL zonder slash.
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+  RewriteRule ^(.+?)/?$ /$1/index.html [L]
 
   # Bestaande bestanden en mappen ongemoeid serveren.
   RewriteCond %{REQUEST_FILENAME} -f [OR]
