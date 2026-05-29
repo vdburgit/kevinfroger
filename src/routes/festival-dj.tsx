@@ -6,7 +6,7 @@ import { ContactCta } from "@/components/ContactCta";
 import { ServiceCityIndex } from "@/components/ServiceCityIndex";
 import { breadcrumb, buildSeo, service } from "@/lib/seo";
 
-const IMG = "/images/dj-kevin-froger-apreskifeest.webp";
+const IMG = "/images/dj-kevin-froger-festival.webp";
 
 export const Route = createFileRoute("/festival-dj")({
   head: () => buildSeo({
@@ -47,7 +47,7 @@ function Page() {
         title={<>60 minuten<br/><span className="text-primary">non-stop.</span></>}
         intro="Op een festival of groot evenement moet de energie meteen staan. Ik draai strakke sets die het publiek meenemen, met crowd control en presentatie. Of het nu een set van 60 minuten is of een langer blok."
         image={IMG}
-        imageAlt="DJ Kevin Froger draait een festivalset"
+        imageAlt="DJ Kevin Froger op een festival: verlicht hoofdpodium met vuurwerk en een juichende dansende menigte"
       />
 
       <section className="py-24 px-6 lg:px-10">
