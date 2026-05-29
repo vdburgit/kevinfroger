@@ -173,12 +173,13 @@ const PROVINCES: Array<{
 function ProvinceCard({ p }: { p: (typeof PROVINCES)[number] }) {
   return (
     <details className="group mb-4 rounded-2xl border-2 border-border bg-card overflow-hidden">
-      <summary className="flex items-center justify-between cursor-pointer list-none px-5 sm:px-6 py-4 sm:py-5 hover:bg-background/40 transition-colors">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl leading-[0.95]" style={{ fontFamily: "var(--font-display)" }}>
+      <summary className="flex items-center justify-between cursor-pointer list-none px-5 sm:px-6 py-3 sm:py-3.5 hover:bg-background/40 transition-colors">
+        {/* Compacte kop bij dicht; bij open weer groot (group-open). */}
+        <h2 className="text-lg sm:text-xl group-open:text-2xl sm:group-open:text-3xl md:group-open:text-4xl leading-[0.95]" style={{ fontFamily: "var(--font-display)" }}>
           DJ in {p.name}
         </h2>
         <svg
-          className="w-6 h-6 sm:w-8 sm:h-8 text-secondary transition-transform group-open:rotate-180 shrink-0 ml-3"
+          className="w-5 h-5 sm:w-6 sm:h-6 text-secondary transition-transform group-open:rotate-180 shrink-0 ml-3"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
