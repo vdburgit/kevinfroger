@@ -46,7 +46,7 @@ const PARTNER_LOGOS = [
 
 export const Route = createFileRoute("/")({
   head: () => buildSeo({
-    title: "DJ Kevin Froger | Allround DJ voor bruiloft, bedrijfsfeest & festival",
+    title: "DJ Kevin Froger | Allround DJ: bruiloft, feest & festival",
     description: "Allround DJ voor bruiloft, bedrijfsfeest of festival door heel Nederland. Veel ervaring in de Betuwe, Bommelerwaard, Hoeksche Waard en Zuid-Holland. Licht en geluid inbegrepen.",
     path: "/",
     image: IMG_WEDDING,

@@ -517,7 +517,7 @@ export const CITIES: Record<string, CityData> = {
     province: "Zuid-Holland",
     region: "Voorne-Putten",
     title: "DJ Spijkenisse huren | Bruiloft & feest | Kevin Froger",
-    description: "DJ in Spijkenisse en op Voorne-Putten voor bruiloften, bedrijfsfeesten en verjaardagen. Vraag een offerte aan.",
+    description: "DJ in Spijkenisse en op Voorne-Putten voor bruiloften, bedrijfsfeesten en verjaardagen. Vraag een offerte aan. Eigen licht en geluid, DJ en MC in één.",
     heroIntro: "Spijkenisse is de centrale plek op Voorne-Putten. Ik draai er regelmatig en kom ook in Hellevoetsluis, Brielle en de hele Voorne-Putten regio.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of verjaardag in Spijkenisse en Voorne-Putten.",
     paragraphs: [
@@ -597,7 +597,7 @@ export const CITIES: Record<string, CityData> = {
     province: "Noord-Holland",
     region: "Het Gooi",
     title: "DJ Hilversum huren | Bruiloft & event | Kevin Froger",
-    description: "DJ in Hilversum en Het Gooi voor bruiloften, bedrijfsfeesten en festivals. Vraag een offerte aan.",
+    description: "DJ in Hilversum en Het Gooi voor bruiloften, bedrijfsfeesten en festivals. Vraag een offerte aan. Eigen licht en geluid, DJ en MC in één.",
     heroIntro: "Hilversum is mediastad bij uitstek: veel corporate events bij omroepen, productiebedrijven en hotels. Voor bruiloften en feesten in Het Gooi kom ik regelmatig.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of verjaardag in Hilversum en Het Gooi.",
     paragraphs: [
@@ -637,7 +637,7 @@ export const CITIES: Record<string, CityData> = {
     province: "Utrecht",
     region: "Utrechtse Heuvelrug",
     title: "DJ Zeist huren | Bruiloft & feest | Kevin Froger",
-    description: "DJ in Zeist en op de Utrechtse Heuvelrug voor bruiloften en bedrijfsfeesten. Complete show inbegrepen.",
+    description: "DJ in Zeist en op de Utrechtse Heuvelrug voor bruiloften en bedrijfsfeesten. Complete show inbegrepen. Eigen licht en geluid, DJ en MC in één.",
     heroIntro: "Zeist heeft prachtige landgoederen die ideaal zijn voor bruiloften, plus veel bedrijven met events. Ik draai regelmatig op de Heuvelrug.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of verjaardag in Zeist en op de Utrechtse Heuvelrug.",
     paragraphs: [
@@ -657,7 +657,7 @@ export const CITIES: Record<string, CityData> = {
     province: "Utrecht",
     region: "Kromme Rijnstreek",
     title: "DJ Houten huren | Bruiloft & feest | Kevin Froger",
-    description: "DJ in Houten voor bruiloften, bedrijfsfeesten en verjaardagen. Complete show inbegrepen. Vraag een offerte aan.",
+    description: "DJ in Houten voor bruiloften, bedrijfsfeesten en verjaardagen. Complete show inbegrepen. Vraag een offerte aan. Eigen licht en geluid, DJ en MC in één.",
     heroIntro: "Houten ligt vlakbij Utrecht en heeft mooie feestlocaties. Voor bruiloften en bedrijfsevents in Houten en de Kromme Rijnstreek kom ik regelmatig.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of verjaardag in Houten en de Kromme Rijnstreek.",
     paragraphs: [
@@ -717,7 +717,7 @@ export const CITIES: Record<string, CityData> = {
     province: "Gelderland",
     region: "FoodValley",
     title: "DJ Wageningen huren | Bruiloft & event | Kevin Froger",
-    description: "DJ in Wageningen voor bruiloften, bedrijfsfeesten en studentenfeesten. Vraag een offerte aan.",
+    description: "DJ in Wageningen voor bruiloften, bedrijfsfeesten en studentenfeesten. Vraag een offerte aan. Eigen licht en geluid, DJ en MC in één.",
     heroIntro: "Wageningen is de FoodValley met een sterke wetenschaps- en studentencultuur. Voor bruiloften, bedrijfsevents bij WUR en studentenfeesten kom ik regelmatig.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of festival in Wageningen en de FoodValley.",
     paragraphs: [
@@ -737,7 +737,7 @@ export const CITIES: Record<string, CityData> = {
     province: "Noord-Brabant",
     region: "Peelregio",
     title: "DJ Helmond huren | Bruiloft & feest | Kevin Froger",
-    description: "DJ in Helmond voor bruiloften en bedrijfsfeesten in Brabant. Complete show inbegrepen. Vraag een offerte aan.",
+    description: "DJ in Helmond voor bruiloften en bedrijfsfeesten in Brabant. Complete show inbegrepen. Vraag een offerte aan. Eigen licht en geluid, DJ en MC in één.",
     heroIntro: "Helmond ligt vlakbij Eindhoven in de Peelregio. Voor bruiloften, bedrijfsfeesten en verjaardagen kom ik in de stad en het ommeland regelmatig.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of verjaardag in Helmond en de Peelregio.",
     paragraphs: [
@@ -757,7 +757,7 @@ export const CITIES: Record<string, CityData> = {
     province: "Noord-Brabant",
     region: "Noordoost-Brabant",
     title: "DJ Oss huren | Bruiloft & feest | Kevin Froger",
-    description: "DJ in Oss voor bruiloften, bedrijfsfeesten en verjaardagen. Complete show inbegrepen.",
+    description: "DJ in Oss voor bruiloften, bedrijfsfeesten en verjaardagen. Complete show inbegrepen. Eigen licht en geluid, DJ en MC in één.",
     heroIntro: "Oss is een Brabantse industriestad met veel bedrijfsfeesten. Voor bruiloften kom ik ook in de Maas-regio en het Land van Cuijk.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of verjaardag in Oss en Noordoost-Brabant.",
     paragraphs: [
@@ -777,7 +777,7 @@ export const CITIES: Record<string, CityData> = {
     province: "Overijssel",
     region: "Twente",
     title: "DJ Enschede huren | Bruiloft & feest | Kevin Froger",
-    description: "DJ in Enschede en heel Twente voor bruiloften, bedrijfsfeesten en festivals. Vraag een offerte aan.",
+    description: "DJ in Enschede en heel Twente voor bruiloften, bedrijfsfeesten en festivals. Vraag een offerte aan. Eigen licht en geluid, DJ en MC in één.",
     heroIntro: "Voor klussen in Enschede en Twente rij ik graag mee, vaak met overnachting. Studentenstad met actieve feestcultuur en mooie buitenlocaties richting Duitse grens.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of festival in Enschede en Twente.",
     paragraphs: [
@@ -797,7 +797,7 @@ export const CITIES: Record<string, CityData> = {
     province: "Overijssel",
     region: "Salland",
     title: "DJ Deventer huren | Bruiloft & event | Kevin Froger",
-    description: "DJ in Deventer voor bruiloften, bedrijfsfeesten en festivals. Vraag een offerte aan.",
+    description: "DJ in Deventer voor bruiloften, bedrijfsfeesten en festivals. Vraag een offerte aan. Eigen licht en geluid, DJ en MC in één.",
     heroIntro: "Deventer is een Hanze-stad met veel sfeer en historische feestlocaties. Voor bruiloften, bedrijfsevents en festivals kom ik regelmatig in de hele Salland-regio.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of festival in Deventer en Salland.",
     paragraphs: [
@@ -817,7 +817,7 @@ export const CITIES: Record<string, CityData> = {
     province: "Friesland",
     region: "Friesland",
     title: "DJ Leeuwarden huren | Bruiloft & event | Kevin Froger",
-    description: "DJ in Leeuwarden voor bruiloften, festivals en bedrijfsfeesten in Friesland. Voor mooie klussen kom ik graag mee.",
+    description: "DJ in Leeuwarden voor bruiloften, festivals en bedrijfsfeesten in Friesland. Voor mooie klussen kom ik graag mee. Eigen licht en geluid, DJ en MC in één.",
     heroIntro: "Voor mooie klussen in Leeuwarden en Friesland kom ik graag mee, met overnachting in overleg. Friese hoofdstad met sterke feestcultuur en sfeervolle buitenlocaties.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of festival in Leeuwarden en Friesland.",
     paragraphs: [
@@ -837,7 +837,7 @@ export const CITIES: Record<string, CityData> = {
     province: "Groningen",
     region: "Groningen",
     title: "DJ Groningen huren | Bruiloft & festival | Kevin Froger",
-    description: "DJ in Groningen voor bruiloften, festivals en bedrijfsfeesten. Voor mooie klussen rij ik graag mee.",
+    description: "DJ in Groningen voor bruiloften, festivals en bedrijfsfeesten. Voor mooie klussen rij ik graag mee. Eigen licht en geluid, DJ en MC in één.",
     heroIntro: "Voor mooie klussen in Groningen ben ik beschikbaar, met overnachting omdat de afstand groter is. Studentenstad met actieve feestcultuur.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of festival in Groningen.",
     paragraphs: [
@@ -857,7 +857,7 @@ export const CITIES: Record<string, CityData> = {
     province: "Drenthe",
     region: "Drenthe",
     title: "DJ Assen huren | Bruiloft & event | Kevin Froger",
-    description: "DJ in Assen voor bruiloften, festivals en bedrijfsfeesten in Drenthe. Vraag een offerte aan.",
+    description: "DJ in Assen voor bruiloften, festivals en bedrijfsfeesten in Drenthe. Vraag een offerte aan. Eigen licht en geluid, DJ en MC in één.",
     heroIntro: "Voor klussen in Assen en Drenthe rij ik op aanvraag, vaak met overnachting. Bekend van TT Assen, sterke evenementen-cultuur.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of festival in Assen en Drenthe.",
     paragraphs: [
@@ -877,7 +877,7 @@ export const CITIES: Record<string, CityData> = {
     province: "Zeeland",
     region: "Walcheren",
     title: "DJ Middelburg huren | Bruiloft & strandfeest | Kevin Froger",
-    description: "DJ in Middelburg en heel Zeeland voor bruiloften, strandfeesten en festivals. Vraag een offerte aan.",
+    description: "DJ in Middelburg en heel Zeeland voor bruiloften, strandfeesten en festivals. Vraag een offerte aan. Eigen licht en geluid, DJ en MC in één.",
     heroIntro: "Voor bruiloften en strandfeesten in Zeeland kom ik graag. Middelburg is centraal in Walcheren en de Zeeuwse Kust biedt veel mooie locaties.",
     serviceDescription: "Allround DJ voor bruiloft, strandfeest of bedrijfsevent in Middelburg en Zeeland.",
     paragraphs: [
@@ -897,7 +897,7 @@ export const CITIES: Record<string, CityData> = {
     province: "Limburg",
     region: "Midden-Limburg",
     title: "DJ Roermond huren | Bruiloft & feest | Kevin Froger",
-    description: "DJ in Roermond voor bruiloften en bedrijfsfeesten in Midden-Limburg. Vraag een offerte aan.",
+    description: "DJ in Roermond voor bruiloften en bedrijfsfeesten in Midden-Limburg. Vraag een offerte aan. Eigen licht en geluid, DJ en MC in één.",
     heroIntro: "Voor klussen in Roermond en Midden-Limburg kom ik graag, met overnachting. Bekend van de Maasplassen en het Designer Outlet, sterk eventcircuit.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of festival in Roermond en Midden-Limburg.",
     paragraphs: [
@@ -939,7 +939,7 @@ export const CITIES: Record<string, CityData> = {
     province: "Gelderland",
     region: "West Betuwe",
     title: "DJ Tuil huren | DJ in dorp West Betuwe | Kevin Froger",
-    description: "DJ in Tuil aan de Waal voor bruiloften, verjaardagen en feesten in de West Betuwe. Vraag een offerte aan.",
+    description: "DJ in Tuil aan de Waal voor bruiloften, verjaardagen en feesten in de West Betuwe. Vraag een offerte aan. Eigen licht en geluid, DJ en MC in één.",
     heroIntro: "Tuil ligt aan de Waal in de West Betuwe, tussen Geldermalsen en Tiel. Voor feesten in dit landelijke gebied kom ik regelmatig, mooie sfeer langs de rivier.",
     serviceDescription: "Allround DJ voor bruiloft, verjaardag of feest in Tuil en omliggende West Betuwe dorpen.",
     paragraphs: [
@@ -960,7 +960,7 @@ export const CITIES: Record<string, CityData> = {
     province: "Gelderland",
     region: "West Betuwe",
     title: "DJ Ophemert huren | DJ West Betuwe | Kevin Froger",
-    description: "DJ in Ophemert aan de Waal voor bruiloften, verjaardagen en feesten in de West Betuwe.",
+    description: "DJ in Ophemert aan de Waal voor bruiloften, verjaardagen en feesten in de West Betuwe. Eigen licht en geluid, DJ en MC in één.",
     heroIntro: "Ophemert ligt aan de Waal in de West Betuwe. Een sfeervol dorp met mooie buitenlocaties, ideaal voor landelijke bruiloften. Ik draai er regelmatig.",
     serviceDescription: "Allround DJ voor bruiloft, verjaardag of feest in Ophemert en omliggende West Betuwe dorpen.",
     paragraphs: [
@@ -981,7 +981,7 @@ export const CITIES: Record<string, CityData> = {
     province: "Gelderland",
     region: "West Betuwe",
     title: "DJ Varik huren | DJ West Betuwe | Kevin Froger",
-    description: "DJ in Varik aan de Waal voor bruiloften en feesten in de West Betuwe.",
+    description: "DJ in Varik aan de Waal voor bruiloften en feesten in de West Betuwe. Eigen licht en geluid, DJ en MC in één.",
     heroIntro: "Varik is een dorp aan de Waal in de West Betuwe, tussen Tiel en Zaltbommel. Voor bruiloften op landelijke locaties of feesten in dorpscentra draai ik er met plezier.",
     serviceDescription: "Allround DJ voor bruiloft, verjaardag of feest in Varik en de West Betuwe.",
     paragraphs: [
