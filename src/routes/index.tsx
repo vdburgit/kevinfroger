@@ -10,6 +10,8 @@ const ROTATING_WORDS = ["BRUILOFT", "FEEST", "BEDRIJFSFEEST", "FESTIVAL"];
 // Vast publiek pad (niet via Vite-bundle) zodat de hero in index.html ge-preload kan worden.
 const HERO_WEBP_SRCSET =
   "/images/hero-crowd-640.webp 640w, /images/hero-crowd-1280.webp 1280w, /images/hero-crowd-1920.webp 1920w";
+// Portret: responsive zodat mobiel de 640px-variant (~55 KB) pakt i.p.v. het volle bestand.
+const PORTRAIT = responsiveImage("/images/kevin-portrait.webp");
 const IMG_DJ_BOOTH = "/images/licht-en-geluid-verhuur-show.jpeg";
 const IMG_PRIVATE = "/images/AdobeStock_1026307983-scaled.jpeg";
 const IMG_WEDDING = "/images/dj-kevin-froger-bruiloft-scaled.jpeg";
@@ -245,7 +247,9 @@ function Index() {
           {/* Cutout portret-kolom. Bron is 797x1167; max-w klein houden voor scherpte op retina. */}
           <div className="order-1 lg:order-2 relative flex justify-center lg:justify-end items-end">
             <img
-              src="/images/kevin-portrait.webp"
+              src={PORTRAIT.src}
+              srcSet={PORTRAIT.srcSet}
+              sizes="(min-width:1024px) 420px, 360px"
               alt="Kevin Froger met confetti achter zijn DJ-booth"
               className="relative w-full max-w-[360px] lg:max-w-[420px] h-auto"
               style={{ filter: "drop-shadow(0 30px 60px oklch(0 0 0 / 0.55)) drop-shadow(0 0 40px oklch(0.74 0.21 42 / 0.35))" }}
