@@ -123,11 +123,6 @@
   status = 301
 
 [[redirects]]
-  from = "/dj-boeken-groningen"
-  to = "/regios"
-  status = 301
-
-[[redirects]]
   from = "/dj-boeken-limburg"
   to = "/regios"
   status = 301
@@ -165,11 +160,6 @@
 [[redirects]]
   from = "/dj-boeken-gelderland"
   to = "/dj-boeken-betuwe"
-  status = 301
-
-[[redirects]]
-  from = "/dj-boeken-utrecht"
-  to = "/regios"
   status = 301
 
 [[redirects]]
