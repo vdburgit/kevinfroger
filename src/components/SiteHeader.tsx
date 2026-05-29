@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { SocialLinks } from "@/components/SocialLinks";
 
 const LOGO = "/images/kevin-logo-small.webp";
 
@@ -135,6 +136,7 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
               >
                 💬 Direct een appje sturen
               </a>
+              <SocialLinks className="pt-2" />
             </div>
           </div>
         </nav>
