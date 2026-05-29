@@ -89,7 +89,7 @@ function Page() {
       <section className="py-20 px-6 lg:px-10">
         <div className="max-w-[800px] mx-auto">
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Wat je betaalt hangt af van de duur van de avond, de locatie en eventuele extra wensen, maar je krijgt altijd een heldere offerte. Goedkoop is niet mijn uitgangspunt, eerlijk wel. Je boekt geen hobbyist, maar een DJ met 15+ jaar ervaring en meer dan 500 bruiloften, die de avond strak verzorgt en met je meedenkt. Dat verschil merk je op de dansvloer.
+            Wat je betaalt hangt af van de duur van de avond, de locatie en eventuele extra wensen, maar je krijgt altijd een heldere offerte. Goedkoop is niet mijn uitgangspunt, eerlijk wel. Je boekt geen hobbyist, maar een DJ met 15+ jaar ervaring, die de avond strak verzorgt en met je meedenkt. Dat verschil merk je op de dansvloer.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mt-6">
             In de prijs zit de complete show: opbouw, een professionele geluidsset, een lichtshow en mijn rol als DJ en MC. We bespreken vooraf je wensen, zodat je precies krijgt wat bij jouw feest past.

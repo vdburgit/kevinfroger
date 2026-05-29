@@ -95,7 +95,7 @@ function Index() {
         {/* Hero content */}
         <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-5 sm:px-6 pb-12 sm:pb-16">
           <span className="text-secondary text-[10px] sm:text-xs md:text-sm tracking-[0.3em] sm:tracking-[0.4em] uppercase font-bold mb-5 sm:mb-6">
-            Nederland · 15+ jaar · 500+ bruiloften
+            Nederland · 15+ jaar · allround DJ
           </span>
           <h1
             className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.95] sm:leading-[0.9] tracking-tight text-foreground max-w-5xl"
@@ -127,7 +127,7 @@ function Index() {
           <div className="flex gap-10 py-4 whitespace-nowrap animate-[scroll_30s_linear_infinite] text-white text-sm md:text-base tracking-[0.3em] uppercase font-bold">
             {Array.from({ length: 6 }).map((_, i) => (
               <span key={i} className="flex gap-10 items-center">
-                <span>★ 500+ bruiloften</span>
+                <span>★ Bruiloft tot festival</span>
                 <span>★ Eigen licht en geluid</span>
                 <span>★ DJ en MC in een</span>
                 <span>★ 15+ jaar ervaring</span>
@@ -212,7 +212,7 @@ function Index() {
               Persoonlijk,<br/><span className="text-primary">strak geregeld.</span>
             </h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-xl">
-              Ik ben Kevin Froger, allround DJ. Al ruim 15 jaar draai ik bruiloften, bedrijfsfeesten, verjaardagen en festivals door heel Nederland, met 500+ bruiloften op de teller en veel ervaring in de Betuwe, Bommelerwaard en Zuid-Holland. Ik kom met een complete show, dus licht en geluid zijn geregeld, en ik ben DJ en MC in een persoon. Geen vaste afspeellijst: ik lees de zaal en bouw de avond ter plekke op.
+              Ik ben Kevin Froger, allround DJ. Al ruim 15 jaar draai ik bruiloften, bedrijfsfeesten, verjaardagen en festivals door heel Nederland, met veel ervaring in de Betuwe, Bommelerwaard en Zuid-Holland. Ik kom met een complete show, dus licht en geluid zijn geregeld, en ik ben DJ en MC in een persoon. Geen vaste afspeellijst: ik lees de zaal en bouw de avond ter plekke op.
             </p>
 
             {/* 2 stats, minimal, geen kaders */}

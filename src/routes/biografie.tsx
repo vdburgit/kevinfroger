@@ -10,7 +10,7 @@ const IMG = "/images/licht-en-geluid-verhuur-show.jpeg";
 export const Route = createFileRoute("/biografie")({
   head: () => buildSeo({
     title: "Biografie DJ Kevin Froger | 15+ jaar achter de knoppen",
-    description: "Het verhaal van DJ Kevin Froger. Van eerste schoolfeesten tot 500+ bruiloften, bedrijfsfeesten en festivals door heel Nederland.",
+    description: "Het verhaal van DJ Kevin Froger. Van eerste schoolfeesten tot bruiloften, bedrijfsfeesten en festivals door heel Nederland.",
     path: "/biografie",
     image: IMG,
     type: "profile",
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/biografie")({
           "@id": `${SITE_URL}/#kevin`,
           name: "Kevin Froger",
           jobTitle: "Allround DJ",
-          description: "Allround DJ met 15+ jaar ervaring en 500+ bruiloften. Bruiloften, bedrijfsfeesten, verjaardagen en festivals door heel Nederland.",
+          description: "Allround DJ met 15+ jaar ervaring. Bruiloften, bedrijfsfeesten, verjaardagen en festivals door heel Nederland.",
           url: `${SITE_URL}/biografie`,
           image: `${SITE_URL}${IMG}`,
           worksFor: { "@id": `${SITE_URL}/#business` },
@@ -40,7 +40,7 @@ export const Route = createFileRoute("/biografie")({
 
 const TIMELINE = [
   { y: "2009", t: "Eerste set", d: "Schoolfeest in de regio. Het begin van een onomkeerbare voorliefde voor dansvloeren." },
-  { y: "2012", t: "Eerste bruiloft", d: "Sindsdien gemiddeld 30 bruiloften per jaar, eerst regionaal en daarna door het hele land." },
+  { y: "2012", t: "Eerste bruiloft", d: "Sindsdien een vast onderdeel van mijn werk, eerst regionaal en daarna door het hele land." },
   { y: "2016", t: "Corporate jaren", d: "Vaste DJ voor merken als Heineken, Jumbo en Van der Valk." },
   { y: "2019", t: "Festivalpodia", d: "Sets op Dutch Grand Prix, Circuit Zandvoort en diverse aprèsski-events." },
   { y: "2023", t: "Eigen show set-up", d: "Volledige investering in eigen licht- en geluidssysteem voor complete shows zonder externe partijen." },
@@ -66,7 +66,7 @@ function Page() {
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>Ik geloof niet in standaardplaylists. Elke avond is anders, elk publiek is anders, en het is mijn taak om dat verschil te horen en daarop te reageren. Live mixing is voor mij de enige manier waarop ik wil werken.</p>
             <p>Dat principe combineer ik met een nuchtere, zakelijke aanpak: heldere afspraken, op tijd opbouwen, backup-apparatuur in de auto en directe communicatie met de organisatie. Geen drama, wel resultaat.</p>
-            <p>Inmiddels draai ik gemiddeld 40 events per jaar, van intieme bruiloften tot grotere festivals. Wat ze gemeen hebben: een avond waar de muziek precies past en de mensen blijven dansen.</p>
+            <p>Inmiddels draai ik regelmatig door het hele land, van intieme bruiloften tot grotere festivals. Wat ze gemeen hebben: een avond waar de muziek precies past en de mensen blijven dansen.</p>
           </div>
         </div>
       </section>
