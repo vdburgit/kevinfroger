@@ -24,9 +24,7 @@ import { Route as DjBoekenZaltbommelRouteImport } from './routes/dj-boeken-zaltb
 import { Route as DjBoekenWageningenRouteImport } from './routes/dj-boeken-wageningen'
 import { Route as DjBoekenVenloRouteImport } from './routes/dj-boeken-venlo'
 import { Route as DjBoekenVeenendaalRouteImport } from './routes/dj-boeken-veenendaal'
-import { Route as DjBoekenVarikRouteImport } from './routes/dj-boeken-varik'
 import { Route as DjBoekenUtrechtRouteImport } from './routes/dj-boeken-utrecht'
-import { Route as DjBoekenTuilRouteImport } from './routes/dj-boeken-tuil'
 import { Route as DjBoekenTilburgRouteImport } from './routes/dj-boeken-tilburg'
 import { Route as DjBoekenTielRouteImport } from './routes/dj-boeken-tiel'
 import { Route as DjBoekenSpijkenisseRouteImport } from './routes/dj-boeken-spijkenisse'
@@ -34,7 +32,6 @@ import { Route as DjBoekenSchiedamRouteImport } from './routes/dj-boeken-schieda
 import { Route as DjBoekenRotterdamRouteImport } from './routes/dj-boeken-rotterdam'
 import { Route as DjBoekenRoermondRouteImport } from './routes/dj-boeken-roermond'
 import { Route as DjBoekenOssRouteImport } from './routes/dj-boeken-oss'
-import { Route as DjBoekenOphemertRouteImport } from './routes/dj-boeken-ophemert'
 import { Route as DjBoekenNijmegenRouteImport } from './routes/dj-boeken-nijmegen'
 import { Route as DjBoekenNieuwegeinRouteImport } from './routes/dj-boeken-nieuwegein'
 import { Route as DjBoekenMiddelburgRouteImport } from './routes/dj-boeken-middelburg'
@@ -149,19 +146,9 @@ const DjBoekenVeenendaalRoute = DjBoekenVeenendaalRouteImport.update({
   path: '/dj-boeken-veenendaal',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DjBoekenVarikRoute = DjBoekenVarikRouteImport.update({
-  id: '/dj-boeken-varik',
-  path: '/dj-boeken-varik',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const DjBoekenUtrechtRoute = DjBoekenUtrechtRouteImport.update({
   id: '/dj-boeken-utrecht',
   path: '/dj-boeken-utrecht',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DjBoekenTuilRoute = DjBoekenTuilRouteImport.update({
-  id: '/dj-boeken-tuil',
-  path: '/dj-boeken-tuil',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DjBoekenTilburgRoute = DjBoekenTilburgRouteImport.update({
@@ -197,11 +184,6 @@ const DjBoekenRoermondRoute = DjBoekenRoermondRouteImport.update({
 const DjBoekenOssRoute = DjBoekenOssRouteImport.update({
   id: '/dj-boeken-oss',
   path: '/dj-boeken-oss',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DjBoekenOphemertRoute = DjBoekenOphemertRouteImport.update({
-  id: '/dj-boeken-ophemert',
-  path: '/dj-boeken-ophemert',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DjBoekenNijmegenRoute = DjBoekenNijmegenRouteImport.update({
@@ -434,7 +416,6 @@ export interface FileRoutesByFullPath {
   '/dj-boeken-middelburg': typeof DjBoekenMiddelburgRoute
   '/dj-boeken-nieuwegein': typeof DjBoekenNieuwegeinRoute
   '/dj-boeken-nijmegen': typeof DjBoekenNijmegenRoute
-  '/dj-boeken-ophemert': typeof DjBoekenOphemertRoute
   '/dj-boeken-oss': typeof DjBoekenOssRoute
   '/dj-boeken-roermond': typeof DjBoekenRoermondRoute
   '/dj-boeken-rotterdam': typeof DjBoekenRotterdamRoute
@@ -442,9 +423,7 @@ export interface FileRoutesByFullPath {
   '/dj-boeken-spijkenisse': typeof DjBoekenSpijkenisseRoute
   '/dj-boeken-tiel': typeof DjBoekenTielRoute
   '/dj-boeken-tilburg': typeof DjBoekenTilburgRoute
-  '/dj-boeken-tuil': typeof DjBoekenTuilRoute
   '/dj-boeken-utrecht': typeof DjBoekenUtrechtRoute
-  '/dj-boeken-varik': typeof DjBoekenVarikRoute
   '/dj-boeken-veenendaal': typeof DjBoekenVeenendaalRoute
   '/dj-boeken-venlo': typeof DjBoekenVenloRoute
   '/dj-boeken-wageningen': typeof DjBoekenWageningenRoute
@@ -500,7 +479,6 @@ export interface FileRoutesByTo {
   '/dj-boeken-middelburg': typeof DjBoekenMiddelburgRoute
   '/dj-boeken-nieuwegein': typeof DjBoekenNieuwegeinRoute
   '/dj-boeken-nijmegen': typeof DjBoekenNijmegenRoute
-  '/dj-boeken-ophemert': typeof DjBoekenOphemertRoute
   '/dj-boeken-oss': typeof DjBoekenOssRoute
   '/dj-boeken-roermond': typeof DjBoekenRoermondRoute
   '/dj-boeken-rotterdam': typeof DjBoekenRotterdamRoute
@@ -508,9 +486,7 @@ export interface FileRoutesByTo {
   '/dj-boeken-spijkenisse': typeof DjBoekenSpijkenisseRoute
   '/dj-boeken-tiel': typeof DjBoekenTielRoute
   '/dj-boeken-tilburg': typeof DjBoekenTilburgRoute
-  '/dj-boeken-tuil': typeof DjBoekenTuilRoute
   '/dj-boeken-utrecht': typeof DjBoekenUtrechtRoute
-  '/dj-boeken-varik': typeof DjBoekenVarikRoute
   '/dj-boeken-veenendaal': typeof DjBoekenVeenendaalRoute
   '/dj-boeken-venlo': typeof DjBoekenVenloRoute
   '/dj-boeken-wageningen': typeof DjBoekenWageningenRoute
@@ -567,7 +543,6 @@ export interface FileRoutesById {
   '/dj-boeken-middelburg': typeof DjBoekenMiddelburgRoute
   '/dj-boeken-nieuwegein': typeof DjBoekenNieuwegeinRoute
   '/dj-boeken-nijmegen': typeof DjBoekenNijmegenRoute
-  '/dj-boeken-ophemert': typeof DjBoekenOphemertRoute
   '/dj-boeken-oss': typeof DjBoekenOssRoute
   '/dj-boeken-roermond': typeof DjBoekenRoermondRoute
   '/dj-boeken-rotterdam': typeof DjBoekenRotterdamRoute
@@ -575,9 +550,7 @@ export interface FileRoutesById {
   '/dj-boeken-spijkenisse': typeof DjBoekenSpijkenisseRoute
   '/dj-boeken-tiel': typeof DjBoekenTielRoute
   '/dj-boeken-tilburg': typeof DjBoekenTilburgRoute
-  '/dj-boeken-tuil': typeof DjBoekenTuilRoute
   '/dj-boeken-utrecht': typeof DjBoekenUtrechtRoute
-  '/dj-boeken-varik': typeof DjBoekenVarikRoute
   '/dj-boeken-veenendaal': typeof DjBoekenVeenendaalRoute
   '/dj-boeken-venlo': typeof DjBoekenVenloRoute
   '/dj-boeken-wageningen': typeof DjBoekenWageningenRoute
@@ -635,7 +608,6 @@ export interface FileRouteTypes {
     | '/dj-boeken-middelburg'
     | '/dj-boeken-nieuwegein'
     | '/dj-boeken-nijmegen'
-    | '/dj-boeken-ophemert'
     | '/dj-boeken-oss'
     | '/dj-boeken-roermond'
     | '/dj-boeken-rotterdam'
@@ -643,9 +615,7 @@ export interface FileRouteTypes {
     | '/dj-boeken-spijkenisse'
     | '/dj-boeken-tiel'
     | '/dj-boeken-tilburg'
-    | '/dj-boeken-tuil'
     | '/dj-boeken-utrecht'
-    | '/dj-boeken-varik'
     | '/dj-boeken-veenendaal'
     | '/dj-boeken-venlo'
     | '/dj-boeken-wageningen'
@@ -701,7 +671,6 @@ export interface FileRouteTypes {
     | '/dj-boeken-middelburg'
     | '/dj-boeken-nieuwegein'
     | '/dj-boeken-nijmegen'
-    | '/dj-boeken-ophemert'
     | '/dj-boeken-oss'
     | '/dj-boeken-roermond'
     | '/dj-boeken-rotterdam'
@@ -709,9 +678,7 @@ export interface FileRouteTypes {
     | '/dj-boeken-spijkenisse'
     | '/dj-boeken-tiel'
     | '/dj-boeken-tilburg'
-    | '/dj-boeken-tuil'
     | '/dj-boeken-utrecht'
-    | '/dj-boeken-varik'
     | '/dj-boeken-veenendaal'
     | '/dj-boeken-venlo'
     | '/dj-boeken-wageningen'
@@ -767,7 +734,6 @@ export interface FileRouteTypes {
     | '/dj-boeken-middelburg'
     | '/dj-boeken-nieuwegein'
     | '/dj-boeken-nijmegen'
-    | '/dj-boeken-ophemert'
     | '/dj-boeken-oss'
     | '/dj-boeken-roermond'
     | '/dj-boeken-rotterdam'
@@ -775,9 +741,7 @@ export interface FileRouteTypes {
     | '/dj-boeken-spijkenisse'
     | '/dj-boeken-tiel'
     | '/dj-boeken-tilburg'
-    | '/dj-boeken-tuil'
     | '/dj-boeken-utrecht'
-    | '/dj-boeken-varik'
     | '/dj-boeken-veenendaal'
     | '/dj-boeken-venlo'
     | '/dj-boeken-wageningen'
@@ -834,7 +798,6 @@ export interface RootRouteChildren {
   DjBoekenMiddelburgRoute: typeof DjBoekenMiddelburgRoute
   DjBoekenNieuwegeinRoute: typeof DjBoekenNieuwegeinRoute
   DjBoekenNijmegenRoute: typeof DjBoekenNijmegenRoute
-  DjBoekenOphemertRoute: typeof DjBoekenOphemertRoute
   DjBoekenOssRoute: typeof DjBoekenOssRoute
   DjBoekenRoermondRoute: typeof DjBoekenRoermondRoute
   DjBoekenRotterdamRoute: typeof DjBoekenRotterdamRoute
@@ -842,9 +805,7 @@ export interface RootRouteChildren {
   DjBoekenSpijkenisseRoute: typeof DjBoekenSpijkenisseRoute
   DjBoekenTielRoute: typeof DjBoekenTielRoute
   DjBoekenTilburgRoute: typeof DjBoekenTilburgRoute
-  DjBoekenTuilRoute: typeof DjBoekenTuilRoute
   DjBoekenUtrechtRoute: typeof DjBoekenUtrechtRoute
-  DjBoekenVarikRoute: typeof DjBoekenVarikRoute
   DjBoekenVeenendaalRoute: typeof DjBoekenVeenendaalRoute
   DjBoekenVenloRoute: typeof DjBoekenVenloRoute
   DjBoekenWageningenRoute: typeof DjBoekenWageningenRoute
@@ -969,25 +930,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DjBoekenVeenendaalRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/dj-boeken-varik': {
-      id: '/dj-boeken-varik'
-      path: '/dj-boeken-varik'
-      fullPath: '/dj-boeken-varik'
-      preLoaderRoute: typeof DjBoekenVarikRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/dj-boeken-utrecht': {
       id: '/dj-boeken-utrecht'
       path: '/dj-boeken-utrecht'
       fullPath: '/dj-boeken-utrecht'
       preLoaderRoute: typeof DjBoekenUtrechtRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/dj-boeken-tuil': {
-      id: '/dj-boeken-tuil'
-      path: '/dj-boeken-tuil'
-      fullPath: '/dj-boeken-tuil'
-      preLoaderRoute: typeof DjBoekenTuilRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dj-boeken-tilburg': {
@@ -1037,13 +984,6 @@ declare module '@tanstack/react-router' {
       path: '/dj-boeken-oss'
       fullPath: '/dj-boeken-oss'
       preLoaderRoute: typeof DjBoekenOssRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/dj-boeken-ophemert': {
-      id: '/dj-boeken-ophemert'
-      path: '/dj-boeken-ophemert'
-      fullPath: '/dj-boeken-ophemert'
-      preLoaderRoute: typeof DjBoekenOphemertRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dj-boeken-nijmegen': {
@@ -1354,7 +1294,6 @@ const rootRouteChildren: RootRouteChildren = {
   DjBoekenMiddelburgRoute: DjBoekenMiddelburgRoute,
   DjBoekenNieuwegeinRoute: DjBoekenNieuwegeinRoute,
   DjBoekenNijmegenRoute: DjBoekenNijmegenRoute,
-  DjBoekenOphemertRoute: DjBoekenOphemertRoute,
   DjBoekenOssRoute: DjBoekenOssRoute,
   DjBoekenRoermondRoute: DjBoekenRoermondRoute,
   DjBoekenRotterdamRoute: DjBoekenRotterdamRoute,
@@ -1362,9 +1301,7 @@ const rootRouteChildren: RootRouteChildren = {
   DjBoekenSpijkenisseRoute: DjBoekenSpijkenisseRoute,
   DjBoekenTielRoute: DjBoekenTielRoute,
   DjBoekenTilburgRoute: DjBoekenTilburgRoute,
-  DjBoekenTuilRoute: DjBoekenTuilRoute,
   DjBoekenUtrechtRoute: DjBoekenUtrechtRoute,
-  DjBoekenVarikRoute: DjBoekenVarikRoute,
   DjBoekenVeenendaalRoute: DjBoekenVeenendaalRoute,
   DjBoekenVenloRoute: DjBoekenVenloRoute,
   DjBoekenWageningenRoute: DjBoekenWageningenRoute,

@@ -40,6 +40,10 @@ const REDIRECTS = {
   "/dj-boeken-zeeland": "/regios",
   "/dj-boeken-gelderland": "/dj-boeken-betuwe",
   "/dj-boeken-zuid-holland": "/dj-boeken-hoeksche-waard",
+  // Opgeruimde minidorp-pagina's (West Betuwe) -> Betuwe-regiopagina
+  "/dj-boeken-tuil": "/dj-boeken-betuwe",
+  "/dj-boeken-ophemert": "/dj-boeken-betuwe",
+  "/dj-boeken-varik": "/dj-boeken-betuwe",
   // Oude merk-slugs
   "/dj-kevin-froger": "/",
   "/kevin-froger-dj": "/",
