@@ -1,0 +1,20 @@
+# SPA-fallback voor de Apache/LiteSpeed-host.
+# De site is een client-side SPA: alleen / heeft een echt bestand, de overige
+# routes (bijv. /regios, /bruiloft-dj) worden door de router in de browser
+# afgehandeld. Zonder onderstaande rewrite geeft de server bij een directe
+# laad/refresh van zo'n route een harde 404. Deze regel serveert index.html
+# (status 200) voor elk pad dat geen bestaand bestand of map is, zodat de SPA
+# de juiste pagina rendert. Bestaande assets, afbeeldingen en de
+# redirect-stubs blijven gewoon direct werken.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Bestaande bestanden en mappen ongemoeid serveren.
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Al het overige naar de SPA-entry (200, geen 404).
+  RewriteRule ^ /index.html [L]
+</IfModule>
