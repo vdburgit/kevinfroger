@@ -41,6 +41,7 @@ const PARTNER_LOGOS = [
   { src: "/images/logos/yoursurprise.svg", alt: "YourSurprise", w: 240, h: 105 },
   { src: "/images/logos/voorwinden.webp", alt: "Voorwinden", w: 240, h: 77 },
   { src: "/images/logos/modern-nerdplace.webp", alt: "Modern Nerdplace", w: 240, h: 240 },
+  { src: "/images/logos/roparun.webp", alt: "Roparun", w: 240, h: 27 },
 ];
 
 export const Route = createFileRoute("/")({
