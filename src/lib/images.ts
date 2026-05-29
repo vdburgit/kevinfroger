@@ -11,7 +11,6 @@ const HAS_1280 = new Set([
   "/images/dj-kevin-froger-prive-feest",
   "/images/dj-kevin-froger-bedrijfsfeest-lichtshow",
   "/images/kevin-portrait",
-  "/images/kevin-logo",
 ]);
 
 // Subset that additionally has -1920.webp variants. Used for hero-style usage.
@@ -19,7 +18,6 @@ const HAS_1920 = new Set([
   "/images/dj-kevin-froger-bruiloft-scaled",
   "/images/dj-kevin-froger-prive-feest",
   "/images/dj-kevin-froger-bedrijfsfeest-lichtshow",
-  "/images/kevin-logo",
 ]);
 
 export type ImageSources = { src: string; srcSet?: string };
