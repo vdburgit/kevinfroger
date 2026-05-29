@@ -105,7 +105,7 @@ function Index() {
         </div>
 
         {/* Hero content */}
-        <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-5 sm:px-6 pb-12 sm:pb-16">
+        <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-5 sm:px-6 pt-24 sm:pt-28 pb-12 sm:pb-16">
           <span className="text-secondary text-[10px] sm:text-xs md:text-sm tracking-[0.3em] sm:tracking-[0.4em] uppercase font-bold mb-5 sm:mb-6">
             Nederland · 15+ jaar · allround DJ
           </span>
