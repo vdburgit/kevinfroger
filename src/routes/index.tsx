@@ -129,7 +129,7 @@ function Index() {
               Direct offerte aanvragen
             </Link>
             <a href="tel:0645251333" className="rounded-full border-2 border-secondary text-secondary px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.18em] uppercase font-bold hover:bg-secondary hover:text-secondary-foreground transition">
-              06 45 25 13 33
+              Bellen
             </a>
           </div>
         </div>
@@ -363,7 +363,7 @@ function Index() {
               Offerte aanvragen
             </Link>
             <a href="tel:+31645251333" className="rounded-full border-2 border-background text-background px-8 py-4 text-sm tracking-[0.18em] uppercase font-bold hover:bg-background hover:text-foreground transition">
-              Bel 06 45 25 13 33
+              Bellen
             </a>
             <a href="https://wa.me/31645251333" className="rounded-full border-2 border-background text-background px-8 py-4 text-sm tracking-[0.18em] uppercase font-bold hover:bg-background hover:text-foreground transition">
               App direct

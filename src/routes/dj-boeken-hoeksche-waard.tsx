@@ -68,7 +68,7 @@ function Page() {
 
       <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>Datum checken</h2>
       <p className="text-lg text-muted-foreground leading-relaxed">
-        Wil je weten of ik op jouw datum kan? Bel of app 06-45251333, dan check ik het meteen. Of bekijk eerst de <Link to="/prijzen" className="text-secondary underline hover:text-primary">prijzen</Link> en <Link to="/reviews" className="text-secondary underline hover:text-primary">reviews</Link>.
+        Wil je weten of ik op jouw datum kan? Bel of app ons, dan check ik het meteen. Of bekijk eerst de <Link to="/prijzen" className="text-secondary underline hover:text-primary">prijzen</Link> en <Link to="/reviews" className="text-secondary underline hover:text-primary">reviews</Link>.
       </p>
     </LocationLayout>
   );

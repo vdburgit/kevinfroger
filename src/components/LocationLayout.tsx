@@ -57,7 +57,7 @@ export function LocationLayout({ eyebrow, heroTitle, heroIntro, heroImage, heroI
         </section>
       )}
 
-      <ContactCta title={<>Check je<br/>datum.</>} subtitle="App of bel 06-45251333. Reactie binnen 24 uur." />
+      <ContactCta title={<>Check je<br/>datum.</>} subtitle="App of bel ons. Reactie binnen 24 uur." />
       <SiteFooter />
     </main>
   );

@@ -62,7 +62,7 @@ function Page() {
 
       <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>Datum prikken</h2>
       <p className="text-lg text-muted-foreground leading-relaxed">
-        Benieuwd naar de mogelijkheden voor jouw datum? App 06-45251333 of vraag een offerte aan. Bekijk eerst de <Link to="/prijzen" className="text-secondary underline hover:text-primary">prijzen</Link> en <Link to="/reviews" className="text-secondary underline hover:text-primary">reviews</Link>.
+        Benieuwd naar de mogelijkheden voor jouw datum? App ons of vraag een offerte aan. Bekijk eerst de <Link to="/prijzen" className="text-secondary underline hover:text-primary">prijzen</Link> en <Link to="/reviews" className="text-secondary underline hover:text-primary">reviews</Link>.
       </p>
     </LocationLayout>
   );

@@ -14,7 +14,7 @@ export function SiteFooter() {
               Allround DJ voor bruiloften, bedrijfsfeesten, verjaardagen en festivals door heel Nederland. Veel ervaring in de Betuwe, Bommelerwaard, Hoeksche Waard en Zuid-Holland.
             </p>
             <div className="mt-4 text-muted-foreground text-sm space-y-1">
-              <div>📞 <a href="tel:0645251333" className="hover:text-foreground">06 45 25 13 33</a></div>
+              <div>📞 <a href="tel:0645251333" className="hover:text-foreground">Bellen</a></div>
               <div>✉️ <a href="mailto:Booking@kevinfroger.nl" className="hover:text-foreground">Booking@kevinfroger.nl</a></div>
             </div>
           </div>

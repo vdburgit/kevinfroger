@@ -75,7 +75,7 @@ function Page() {
           <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Werkgebied</div>
           <h2 className="text-4xl md:text-5xl leading-[0.9] mb-6" style={{ fontFamily: "var(--font-display)" }}>Feest DJ door heel Nederland</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            Voor verjaardagen en feesten kom ik in heel Nederland, met extra veel boekingen in de Betuwe, Bommelerwaard, Hoeksche Waard en Zuid-Holland. Wil je weten of ik op jouw datum kan? App of bel 06-45251333.
+            Voor verjaardagen en feesten kom ik in heel Nederland, met extra veel boekingen in de Betuwe, Bommelerwaard, Hoeksche Waard en Zuid-Holland. Wil je weten of ik op jouw datum kan? App of bel ons.
           </p>
           <div className="mt-8 flex flex-wrap gap-3 justify-center">
             <Link to="/prijzen" className="rounded-full border-2 border-secondary text-secondary px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:bg-secondary hover:text-secondary-foreground transition">Prijzen</Link>

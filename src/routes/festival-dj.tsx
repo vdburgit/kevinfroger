@@ -86,7 +86,7 @@ function Page() {
       </section>
 
       <ServiceCityIndex service="Festival" />
-      <ContactCta title={<>Boek je<br/>festivalslot.</>} subtitle="App of bel 06-45251333 met datum, locatie en gewenst tijdslot. Reactie binnen 24 uur." />
+      <ContactCta title={<>Boek je<br/>festivalslot.</>} subtitle="App of bel ons met datum, locatie en gewenst tijdslot. Reactie binnen 24 uur." />
       <SiteFooter />
     </main>
   );

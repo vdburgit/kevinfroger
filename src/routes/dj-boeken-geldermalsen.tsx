@@ -62,7 +62,7 @@ function Page() {
 
       <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>Datum checken</h2>
       <p className="text-lg text-muted-foreground leading-relaxed">
-        Via de A15 is West Betuwe goed bereikbaar. App of bel 06-45251333 om je datum te checken.
+        Via de A15 is West Betuwe goed bereikbaar. App of bel ons om je datum te checken.
       </p>
     </LocationLayout>
   );

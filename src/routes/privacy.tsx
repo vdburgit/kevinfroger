@@ -41,7 +41,7 @@ function Page() {
             <p>Deze website plaatst geen tracking cookies. Alleen technisch noodzakelijke cookies worden gebruikt.</p>
           </Section>
           <Section title="7. Contact">
-            <p>Vragen over deze privacyverklaring? Mail naar Booking@kevinfroger.nl of bel 06 45 25 13 33.</p>
+            <p>Vragen over deze privacyverklaring? Mail naar Booking@kevinfroger.nl of bel ons.</p>
           </Section>
         </div>
       </article>

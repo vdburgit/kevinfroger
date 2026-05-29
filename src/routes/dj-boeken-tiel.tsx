@@ -68,7 +68,7 @@ function Page() {
 
       <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>Datum checken</h2>
       <p className="text-lg text-muted-foreground leading-relaxed">
-        Bel of app 06-45251333 voor je datum. Of bekijk eerst de <Link to="/prijzen" className="text-secondary underline hover:text-primary">prijzen</Link>.
+        Bel of app ons voor je datum. Of bekijk eerst de <Link to="/prijzen" className="text-secondary underline hover:text-primary">prijzen</Link>.
       </p>
     </LocationLayout>
   );

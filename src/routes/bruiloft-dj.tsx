@@ -110,7 +110,7 @@ function Page() {
       </section>
 
       <ServiceCityIndex service="Bruiloft" />
-      <ContactCta title={<>Klaar om jullie<br/>datum te checken?</>} subtitle="App of bel 06-45251333 met jullie datum en locatie. Reactie binnen 24 uur." />
+      <ContactCta title={<>Klaar om jullie<br/>datum te checken?</>} subtitle="App of bel ons met jullie datum en locatie. Reactie binnen 24 uur." />
       <SiteFooter />
     </main>
   );

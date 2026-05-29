@@ -62,7 +62,7 @@ function Page() {
 
       <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>Beschikbaarheid</h2>
       <p className="text-lg text-muted-foreground leading-relaxed">
-        Wil je weten of ik beschikbaar ben? Bel of app 06-45251333. Bekijk eerst de <Link to="/prijzen" className="text-secondary underline hover:text-primary">prijzen</Link>.
+        Wil je weten of ik beschikbaar ben? Bel of app ons. Bekijk eerst de <Link to="/prijzen" className="text-secondary underline hover:text-primary">prijzen</Link>.
       </p>
     </LocationLayout>
   );

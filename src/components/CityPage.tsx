@@ -54,7 +54,7 @@ export function CityPage({ city }: { city: CityData }) {
         Datum checken
       </h2>
       <p className="text-lg text-muted-foreground leading-relaxed">
-        Wil je weten of ik op jouw datum kan in {city.name}? Bel of app 06-45251333, dan check ik het meteen. Bekijk eerst de <Link to="/prijzen" className="text-secondary underline hover:text-primary">prijzen</Link> en <Link to="/reviews" className="text-secondary underline hover:text-primary">reviews</Link>.
+        Wil je weten of ik op jouw datum kan in {city.name}? Bel of app ons, dan check ik het meteen. Bekijk eerst de <Link to="/prijzen" className="text-secondary underline hover:text-primary">prijzen</Link> en <Link to="/reviews" className="text-secondary underline hover:text-primary">reviews</Link>.
       </p>
     </LocationLayout>
   );

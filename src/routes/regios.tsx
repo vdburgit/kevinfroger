@@ -248,7 +248,7 @@ function Page() {
         </div>
       </section>
 
-      <ContactCta title={<>Datum prikken<br/>in jouw plaats?</>} subtitle="App of bel 06-45251333 met datum en locatie. Reactie binnen 24 uur." />
+      <ContactCta title={<>Datum prikken<br/>in jouw plaats?</>} subtitle="App of bel ons met datum en locatie. Reactie binnen 24 uur." />
       <SiteFooter />
     </main>
   );

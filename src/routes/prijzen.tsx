@@ -131,7 +131,7 @@ function Page() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl leading-[0.9]" style={{ fontFamily: "var(--font-display)" }}>Andere wensen?</h2>
           <p className="mt-4 text-muted-foreground">Combineer modules, voeg uren toe of vraag een volledig maatpakket aan. Alles bespreekbaar.</p>
-          <p className="mt-6 text-muted-foreground">Wil je een prijsindicatie? Vraag een vrijblijvende offerte aan of app 06-45251333, dan reken ik het voor je uit.</p>
+          <p className="mt-6 text-muted-foreground">Wil je een prijsindicatie? Vraag een vrijblijvende offerte aan of app ons, dan reken ik het voor je uit.</p>
         </div>
       </section>
 

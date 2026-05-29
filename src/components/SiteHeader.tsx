@@ -122,7 +122,7 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
 
             <div className="mt-8 space-y-3 text-sm text-muted-foreground">
               <a href="tel:0645251333" className="block text-foreground text-lg">
-                📞 06 45 25 13 33
+                📞 Bellen
               </a>
               <a href="mailto:Booking@kevinfroger.nl" className="block hover:text-foreground">
                 ✉️ Booking@kevinfroger.nl

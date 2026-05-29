@@ -57,7 +57,7 @@ function Page() {
             <div className="mt-10 space-y-5">
               <div>
                 <div className="text-xs tracking-[0.25em] uppercase text-secondary font-bold">Telefoon</div>
-                <a href="tel:0645251333" className="text-xl mt-1 inline-block hover:text-primary transition">06 45 25 13 33</a>
+                <a href="tel:0645251333" className="text-xl mt-1 inline-block hover:text-primary transition">Bellen</a>
               </div>
               <div>
                 <div className="text-xs tracking-[0.25em] uppercase text-secondary font-bold">E-mail</div>
@@ -107,7 +107,7 @@ function Page() {
               <button type="submit" className="w-full rounded-full bg-primary text-primary-foreground px-8 py-4 text-sm tracking-[0.18em] uppercase font-bold hover:opacity-90 transition shadow-[var(--shadow-glow)]">
                 Verstuur aanvraag
               </button>
-              <p className="text-xs text-muted-foreground">Liever direct contact? Bel 06 45 25 13 33 of stuur een appje.</p>
+              <p className="text-xs text-muted-foreground">Liever direct contact? Bel ons of stuur een appje.</p>
             </form>
           </div>
         </div>
