@@ -21,18 +21,28 @@ const PORT = 4178;
 const sitemap = await readFile(path.join(DIST, "sitemap.xml"), "utf8");
 const routes = [
   ...new Set(
-    [...sitemap.matchAll(/<loc>https:\/\/kevinfroger\.nl(\/[^<]*)?<\/loc>/g)]
-      .map((m) => (m[1] || "/").replace(/\/$/, "") || "/")
+    [
+      ...sitemap.matchAll(/<loc>https:\/\/kevinfroger\.nl(\/[^<]*)?<\/loc>/g),
+    ].map((m) => (m[1] || "/").replace(/\/$/, "") || "/"),
   ),
 ];
 
 // Statische server met SPA-fallback (onbekend pad -> index.html).
 const MIME = {
-  ".html": "text/html", ".js": "text/javascript", ".css": "text/css",
-  ".webp": "image/webp", ".svg": "image/svg+xml", ".png": "image/png",
-  ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".avif": "image/avif",
-  ".json": "application/json", ".xml": "application/xml", ".ico": "image/x-icon",
-  ".txt": "text/plain", ".woff2": "font/woff2",
+  ".html": "text/html",
+  ".js": "text/javascript",
+  ".css": "text/css",
+  ".webp": "image/webp",
+  ".svg": "image/svg+xml",
+  ".png": "image/png",
+  ".jpg": "image/jpeg",
+  ".jpeg": "image/jpeg",
+  ".avif": "image/avif",
+  ".json": "application/json",
+  ".xml": "application/xml",
+  ".ico": "image/x-icon",
+  ".txt": "text/plain",
+  ".woff2": "font/woff2",
 };
 // Pristine SPA-shell in geheugen: voor ELKE route serveren we deze, niet de
 // schijf-index.html (die overschrijven we tijdens het prerenderen van "/").
@@ -58,7 +68,10 @@ const server = createServer(async (req, res) => {
 await new Promise((r) => server.listen(PORT, r));
 
 async function launch() {
-  const base = { headless: "new", args: ["--no-sandbox", "--disable-setuid-sandbox"] };
+  const base = {
+    headless: "new",
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+  };
   try {
     return await puppeteer.launch(base);
   } catch {
@@ -70,7 +83,17 @@ const browser = await launch();
 let n = 0;
 for (const route of routes) {
   const page = await browser.newPage();
-  await page.goto(`http://localhost:${PORT}${route}`, { waitUntil: "networkidle0", timeout: 30000 });
+  // GTM niet laten laden tijdens prerender: anders injecteert de snippet de
+  // runtime gtm.js-tag (en evt. door de container geladen tags) in de DOM, die
+  // dan in de statische HTML belandt en de container straks dubbel laadt.
+  await page.setRequestInterception(true);
+  page.on("request", (req) =>
+    /googletagmanager\.com/.test(req.url()) ? req.abort() : req.continue(),
+  );
+  await page.goto(`http://localhost:${PORT}${route}`, {
+    waitUntil: "networkidle0",
+    timeout: 30000,
+  });
   // Wacht tot de router de canonical voor deze route heeft gezet.
   await page
     .waitForFunction(
@@ -80,10 +103,19 @@ for (const route of routes) {
         return c && (c.getAttribute("href") || "").endsWith(want);
       },
       { timeout: 10000 },
-      route
+      route,
     )
     .catch(() => {});
-  const html = "<!doctype html>\n" + (await page.evaluate(() => document.documentElement.outerHTML));
+  const html =
+    "<!doctype html>\n" +
+    (await page.evaluate(() => {
+      // De door de GTM-snippet runtime-geinjecteerde script-node weghalen; de
+      // originele inline snippet blijft staan en draait straks in de browser.
+      document
+        .querySelectorAll('script[src*="googletagmanager.com"]')
+        .forEach((s) => s.remove());
+      return document.documentElement.outerHTML;
+    }));
   const outDir = route === "/" ? DIST : path.join(DIST, route);
   await mkdir(outDir, { recursive: true });
   await writeFile(path.join(outDir, "index.html"), html);
