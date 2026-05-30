@@ -13,14 +13,14 @@ const PACKAGES = [
     from: "v.a. €795",
     price: "795",
     desc: "Voor intieme feesten tot ~75 gasten.",
-    features: ["DJ-set tot 5 uur", "Compacte geluidsset", "Basis sfeerverlichting", "Persoonlijke intake", "Reiskosten t/m 50 km"],
+    features: ["DJ-set 4 uur show", "Compacte geluidsset", "Basis sfeerverlichting", "Persoonlijke intake", "Reiskosten t/m 50 km inbegrepen"],
   },
   {
     name: "Complete",
     from: "v.a. €1295",
     price: "1295",
     desc: "Het meest gekozen pakket voor bruiloften en bedrijfsfeesten.",
-    features: ["DJ-set tot 6 uur", "Volledig geluidssysteem", "Lichtshow met movingheads", "Draadloze microfoons", "Intake + draaiboek", "Reiskosten heel NL inbegrepen"],
+    features: ["DJ-set 4 uur show", "Volledig geluidssysteem", "Lichtshow met movingheads", "Draadloze microfoons", "Intake + draaiboek", "Reiskosten tot 50 km inbegrepen"],
     featured: true,
   },
   {
