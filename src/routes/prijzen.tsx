@@ -20,7 +20,7 @@ const PACKAGES = [
     from: "v.a. €1295",
     price: "1295",
     desc: "Het meest gekozen pakket voor bruiloften en bedrijfsfeesten.",
-    features: ["DJ-set 4 uur show", "Volledig geluidssysteem", "Lichtshow met movingheads", "Draadloze microfoons", "Intake + draaiboek", "Reiskosten tot 50 km inbegrepen"],
+    features: ["DJ-set 4 uur show", "Volledig geluidssysteem", "Lichtshow met movingheads", "Draadloze microfoons", "Intake + draaiboek", "Reiskosten t/m 50 km inbegrepen"],
     featured: true,
   },
   {
