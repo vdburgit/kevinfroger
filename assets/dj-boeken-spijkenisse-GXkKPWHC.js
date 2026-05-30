@@ -1,1 +1,0 @@
-import{ad as o,i as t}from"./index-BAUReuvn.js";import{C as i}from"./CityPage-BZqvOOCY.js";import"./LocationLayout-ClSP6BmO.js";import"./SiteFooter-BJfSGgND.js";import"./ContactCta-CEDDutCy.js";import"./images-CH2kJFe4.js";import"./Breadcrumbs-BGR5MhYt.js";const x=()=>o.jsx(i,{city:t});export{x as component};
