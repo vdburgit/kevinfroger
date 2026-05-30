@@ -31,6 +31,7 @@ export const Route = createFileRoute("/dj-boeken-geldermalsen")({
 function Page() {
   return (
     <LocationLayout
+      breadcrumbs={[{ name: "Home", path: "/" }, { name: "Werkgebied", path: "/regios" }, { name: "Geldermalsen", path: "/dj-boeken-geldermalsen" }]}
       eyebrow="Geldermalsen"
       heroTitle={<>DJ huren in<br/><span className="text-primary">Geldermalsen.</span></>}
       heroIntro="Geldermalsen ligt midden in West Betuwe, omringd door dorpen als Beesd, Buurmalsen, Tricht en Meteren. Het is fruitstreek in het kwadraat, met veel landelijke locaties die zich prima lenen voor een feest."

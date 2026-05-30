@@ -219,6 +219,7 @@ function Page() {
       <PageHero
         eyebrow="Werkgebied"
         title={<>DJ door<br/><span className="text-primary">heel Nederland.</span></>}
+        breadcrumbs={[{ name: "Home", path: "/" }, { name: "Werkgebied", path: "/regios" }]}
         intro="Ik draai bruiloften, bedrijfsfeesten, verjaardagen en festivals door alle twaalf provincies van Nederland. Veel boekingen komen uit de Randstad, de Betuwe en Zuid-Holland, maar voor een mooie klus kom ik naar elke plaats."
         image={IMG}
         imageAlt="DJ Kevin Froger met complete show op een feest"

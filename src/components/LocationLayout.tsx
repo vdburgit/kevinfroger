@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageHero } from "@/components/PageHero";
 import { ContactCta } from "@/components/ContactCta";
+import type { Crumb } from "@/components/Breadcrumbs";
 
 type Props = {
   eyebrow: string;
@@ -12,9 +13,10 @@ type Props = {
   heroImageAlt: string;
   children: React.ReactNode;
   related?: Array<{ to: string; label: string }>;
+  breadcrumbs?: Crumb[];
 };
 
-export function LocationLayout({ eyebrow, heroTitle, heroIntro, heroImage, heroImageAlt, children, related }: Props) {
+export function LocationLayout({ eyebrow, heroTitle, heroIntro, heroImage, heroImageAlt, children, related, breadcrumbs }: Props) {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <SiteHeader transparent />
@@ -24,6 +26,7 @@ export function LocationLayout({ eyebrow, heroTitle, heroIntro, heroImage, heroI
         intro={heroIntro}
         image={heroImage}
         imageAlt={heroImageAlt}
+        breadcrumbs={breadcrumbs}
       />
 
       <section className="py-20 px-6 lg:px-10">

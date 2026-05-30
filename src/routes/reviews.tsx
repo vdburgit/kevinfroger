@@ -30,15 +30,13 @@ export const Route = createFileRoute("/reviews")({
     jsonLd: [
       {
         "@context": "https://schema.org",
-        "@type": "ItemList",
-        name: "Klantreviews DJ Kevin Froger",
-        itemListElement: REVIEWS.map((r, i) => ({
+        "@type": "LocalBusiness",
+        "@id": `${SITE_URL}/#business`,
+        review: REVIEWS.map((r) => ({
           "@type": "Review",
-          position: i + 1,
           author: { "@type": "Person", name: r.who },
-          reviewBody: r.q,
           reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-          itemReviewed: { "@id": `${SITE_URL}/#business` },
+          reviewBody: r.q,
         })),
       },
       breadcrumb([
@@ -60,6 +58,7 @@ function Page() {
         intro="Het belangrijkste oordeel komt van de mensen die het hebben meegemaakt. Een selectie van reacties van klanten door de jaren heen."
         image={IMG}
         imageAlt="DJ Kevin Froger booth met gouden verlichting"
+        breadcrumbs={[{ name: "Home", path: "/" }, { name: "Reviews", path: "/reviews" }]}
       />
 
       <section className="py-12 px-6 lg:px-10">

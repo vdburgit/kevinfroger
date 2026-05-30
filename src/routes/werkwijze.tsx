@@ -54,6 +54,7 @@ function Page() {
       <PageHero
         eyebrow="Werkwijze"
         title={<>Van eerste<br/><span className="text-primary">mail tot encore.</span></>}
+        breadcrumbs={[{ name: "Home", path: "/" }, { name: "Werkwijze", path: "/werkwijze" }]}
         intro="Een transparant proces in 8 stappen, zodat jullie weten wat er gebeurt, wanneer het gebeurt en wie het doet."
         image={IMG}
         imageAlt="DJ Kevin Froger DJ-booth met show verlichting"

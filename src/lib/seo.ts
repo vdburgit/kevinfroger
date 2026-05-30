@@ -97,6 +97,23 @@ export function breadcrumb(items: Array<{ name: string; path: string }>) {
   };
 }
 
+export type FaqItem = { q: string; a: string };
+
+// FAQPage JSON-LD. Voed dit met DEZELFDE array als het zichtbare <Faq>-component,
+// zodat de zichtbare tekst en de structured data gegarandeerd identiek zijn
+// (vereiste van Google: antwoord in JSON-LD moet 1-op-1 op de pagina staan).
+export function faqPage(items: FaqItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+}
+
 export function service(opts: {
   name: string;
   description: string;

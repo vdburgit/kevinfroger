@@ -18,6 +18,11 @@ export function CityPage({ city }: { city: CityData }) {
       heroImage={IMG}
       heroImageAlt={`DJ Kevin Froger in ${city.name}`}
       related={city.related}
+      breadcrumbs={[
+        { name: "Home", path: "/" },
+        { name: "Werkgebied", path: "/regios" },
+        { name: city.name, path: `/dj-boeken-${city.slug}` },
+      ]}
     >
       <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>
         Bruiloft, feest of zakelijk in {city.name}

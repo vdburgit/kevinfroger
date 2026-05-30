@@ -31,6 +31,7 @@ export const Route = createFileRoute("/dj-boeken-hoeksche-waard")({
 function Page() {
   return (
     <LocationLayout
+      breadcrumbs={[{ name: "Home", path: "/" }, { name: "Werkgebied", path: "/regios" }, { name: "Hoeksche Waard", path: "/dj-boeken-hoeksche-waard" }]}
       eyebrow="Hoeksche Waard"
       heroTitle={<>DJ in de<br/><span className="text-primary">Hoeksche Waard.</span></>}
       heroIntro="In de Hoeksche Waard draai ik al jaren, van een bruiloft op een boerderij tot een verjaardag in het dorpshuis. Veel boekingen komen via via, omdat ik hier bekend ben in het feestcircuit."

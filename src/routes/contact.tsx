@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SITE_URL, breadcrumb, buildSeo } from "@/lib/seo";
 
 export const Route = createFileRoute("/contact")({
@@ -48,6 +49,7 @@ function Page() {
         <div className="max-w-[1400px] mx-auto grid lg:grid-cols-5 gap-12">
           <div className="lg:col-span-2">
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Contact</div>
+            <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Contact", path: "/contact" }]} variant="default" className="mb-6" />
             <h1 className="text-5xl md:text-7xl leading-[0.9]" style={{ fontFamily: "var(--font-display)" }}>
               Laten we<br/><span className="text-primary">praten.</span>
             </h1>

@@ -81,6 +81,7 @@ function Page() {
       <PageHero
         eyebrow="Prijzen"
         title={<>Wat kost<br/><span className="text-primary">een DJ?</span></>}
+        breadcrumbs={[{ name: "Home", path: "/" }, { name: "Prijzen", path: "/prijzen" }]}
         intro="Op zoek naar een betaalbare DJ voor je bruiloft of feest? Bij mij weet je vooraf waar je aan toe bent. Ik werk met een eerlijke all-in prijs voor DJ, licht en geluid, zonder verrassingen achteraf."
         image={IMG}
         imageAlt="DJ Kevin Froger booth met sfeerverlichting"

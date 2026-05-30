@@ -54,6 +54,7 @@ function Page() {
       <PageHero
         eyebrow="Biografie"
         title={<>15+ jaar<br/><span className="text-primary">achter de knoppen.</span></>}
+        breadcrumbs={[{ name: "Home", path: "/" }, { name: "Biografie", path: "/biografie" }]}
         intro="DJ-en begon voor mij als hobby in de slaapkamer en groeide uit tot een carrière. Inmiddels draai ik feesten voor merken, bruidsparen en festivalbezoekers door heel Nederland, met veel ervaring in de Betuwe, Bommelerwaard, Hoeksche Waard en Zuid-Holland."
         image={IMG}
         imageAlt="DJ Kevin Froger met volledige show set-up"

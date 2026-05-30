@@ -4,9 +4,19 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { PageHero } from "@/components/PageHero";
 import { ContactCta } from "@/components/ContactCta";
 import { ServiceCityIndex } from "@/components/ServiceCityIndex";
-import { breadcrumb, buildSeo, service } from "@/lib/seo";
+import { Faq } from "@/components/Faq";
+import { breadcrumb, buildSeo, faqPage, service, type FaqItem } from "@/lib/seo";
 
 const IMG = "/images/dj-kevin-froger-bruiloft-scaled.jpeg";
+
+const FAQ: FaqItem[] = [
+  { q: "Draai je de hele dag, van ceremonie tot feestavond?", a: "Ja. Ik verzorg achtergrondmuziek bij binnenkomst en diner, begeleid de openingsdans en bouw daarna de feestavond op naar een volle dansvloer." },
+  { q: "Verzorg je licht en geluid zelf?", a: "Ja, ik kom met een complete show inclusief geluidsset en sfeerverlichting. Je hoeft geen aparte leverancier te regelen." },
+  { q: "Ben je ook MC of presentator?", a: "Ja, ik ben DJ en MC in een persoon. Aankondigingen, toespraken en programmaonderdelen praat ik netjes aan elkaar." },
+  { q: "In welke regio's draai je bruiloften?", a: "Door heel Nederland, met veel ervaring in de Betuwe, Bommelerwaard, Hoeksche Waard en Zuid-Holland." },
+  { q: "Hoe ver van tevoren moet ik boeken?", a: "Populaire data raken vroeg vol. Check je datum zo vroeg mogelijk; ik reageer binnen 24 uur." },
+  { q: "Werk je met een vaste afspeellijst?", a: "Nee. Ik lees de zaal en bouw de avond ter plekke op, afgestemd op jullie gasten en wensen." },
+];
 
 export const Route = createFileRoute("/bruiloft-dj")({
   head: () => buildSeo({
@@ -26,6 +36,7 @@ export const Route = createFileRoute("/bruiloft-dj")({
         { name: "Home", path: "/" },
         { name: "Bruiloft DJ", path: "/bruiloft-dj" },
       ]),
+      faqPage(FAQ),
     ],
   }),
   component: Page,
@@ -50,6 +61,7 @@ function Page() {
         intro="Jullie trouwdag draait om sfeer, en muziek bepaalt die sfeer voor een groot deel. Als bruiloft DJ verzorg ik de hele dag, van de ceremonie tot de laatste plaat."
         image={IMG}
         imageAlt="DJ Kevin Froger achter zijn set tijdens een bruiloft"
+        breadcrumbs={[{ name: "Home", path: "/" }, { name: "Bruiloft DJ", path: "/bruiloft-dj" }]}
       />
 
       <section className="py-24 px-6 lg:px-10">
@@ -92,24 +104,12 @@ function Page() {
         </div>
       </section>
 
-      <section className="py-20 px-6 lg:px-10">
-        <div className="max-w-[1400px] mx-auto text-center">
-          <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Werkgebied</div>
-          <h2 className="text-4xl md:text-5xl leading-[0.9] mb-6" style={{ fontFamily: "var(--font-display)" }}>Bruiloft DJ in heel Nederland</h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            Ik draai bruiloften door heel Nederland, met veel ervaring in de Betuwe, Bommelerwaard, Hoeksche Waard en Zuid-Holland. Voor jouw plaats kom ik graag mee.
-          </p>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <Link to="/dj-boeken-hoeksche-waard" className="rounded-full bg-card border-2 border-border text-foreground px-5 py-2 text-xs tracking-[0.15em] uppercase font-bold hover:border-primary transition">Hoeksche Waard</Link>
-            <Link to="/dj-boeken-tiel" className="rounded-full bg-card border-2 border-border text-foreground px-5 py-2 text-xs tracking-[0.15em] uppercase font-bold hover:border-primary transition">Tiel</Link>
-            <Link to="/dj-boeken-betuwe" className="rounded-full bg-card border-2 border-border text-foreground px-5 py-2 text-xs tracking-[0.15em] uppercase font-bold hover:border-primary transition">Betuwe</Link>
-            <Link to="/dj-boeken-dordrecht" className="rounded-full bg-card border-2 border-border text-foreground px-5 py-2 text-xs tracking-[0.15em] uppercase font-bold hover:border-primary transition">Dordrecht</Link>
-            <Link to="/regios" className="rounded-full bg-card border-2 border-border text-foreground px-5 py-2 text-xs tracking-[0.15em] uppercase font-bold hover:border-primary transition">Heel werkgebied</Link>
-          </div>
-        </div>
-      </section>
-
-      <ServiceCityIndex service="Bruiloft" />
+      <ServiceCityIndex
+        service="Bruiloft"
+        collapsible
+        intro="Ik draai bruiloften door heel Nederland, met veel ervaring in de Betuwe, Bommelerwaard, Hoeksche Waard en Zuid-Holland. Voor jouw plaats kom ik graag mee."
+      />
+      <Faq items={FAQ} />
       <ContactCta title={<>Klaar om jullie<br/>datum te checken?</>} subtitle="App of bel ons met jullie datum en locatie. Reactie binnen 24 uur." />
       <SiteFooter />
     </main>

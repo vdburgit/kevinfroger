@@ -31,6 +31,7 @@ export const Route = createFileRoute("/dj-boeken-betuwe")({
 function Page() {
   return (
     <LocationLayout
+      breadcrumbs={[{ name: "Home", path: "/" }, { name: "Werkgebied", path: "/regios" }, { name: "Betuwe", path: "/dj-boeken-betuwe" }]}
       eyebrow="Betuwe en Rivierenland"
       heroTitle={<>Allround DJ in de<br/><span className="text-primary">Betuwe.</span></>}
       heroIntro="De Betuwe is een gebied met veel mooie feestplekken, van landelijke trouwlocaties tussen de boomgaarden tot zalen in de dorpskernen. Ik draai er regelmatig, van Tiel tot Zaltbommel en alles ertussen."

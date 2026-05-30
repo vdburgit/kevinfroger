@@ -31,6 +31,7 @@ export const Route = createFileRoute("/dj-boeken-gorinchem")({
 function Page() {
   return (
     <LocationLayout
+      breadcrumbs={[{ name: "Home", path: "/" }, { name: "Werkgebied", path: "/regios" }, { name: "Gorinchem", path: "/dj-boeken-gorinchem" }]}
       eyebrow="Gorinchem"
       heroTitle={<>DJ huren<br/><span className="text-primary">in Gorinchem.</span></>}
       heroIntro="Gorinchem is voor mij een vaste stop tussen de Hoeksche Waard en de Betuwe. Ik draai er regelmatig en ken zowel de stad als de Alblasserwaard en het Land van Heusden en Altena goed."

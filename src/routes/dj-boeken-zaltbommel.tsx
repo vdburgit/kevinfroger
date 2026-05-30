@@ -31,6 +31,7 @@ export const Route = createFileRoute("/dj-boeken-zaltbommel")({
 function Page() {
   return (
     <LocationLayout
+      breadcrumbs={[{ name: "Home", path: "/" }, { name: "Werkgebied", path: "/regios" }, { name: "Zaltbommel", path: "/dj-boeken-zaltbommel" }]}
       eyebrow="Zaltbommel"
       heroTitle={<>DJ huren<br/><span className="text-primary">in Zaltbommel.</span></>}
       heroIntro="Zaltbommel ligt net ten zuiden van de Waal, in de Bommelerwaard. Een mooi stukje rivierenland met genoeg sfeervolle feestlocaties. Ik draai er graag en de regio is vanuit mijn kant prima bereikbaar."

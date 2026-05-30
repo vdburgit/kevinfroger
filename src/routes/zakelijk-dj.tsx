@@ -4,9 +4,18 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { PageHero } from "@/components/PageHero";
 import { ContactCta } from "@/components/ContactCta";
 import { ServiceCityIndex } from "@/components/ServiceCityIndex";
-import { breadcrumb, buildSeo, service } from "@/lib/seo";
+import { Faq } from "@/components/Faq";
+import { breadcrumb, buildSeo, faqPage, service, type FaqItem } from "@/lib/seo";
 
 const IMG = "/images/dj-kevin-froger-bedrijfsfeest.webp";
+
+const FAQ: FaqItem[] = [
+  { q: "Draai je personeelsfeesten, jubilea en bedrijfsevents?", a: "Ja, van borrel en personeelsfeest tot jubileum en corporate event." },
+  { q: "Kun je het programma aan elkaar presenteren?", a: "Ja, als DJ en MC verzorg ik ook aankondigingen en momenten op het podium." },
+  { q: "Neem je eigen licht en geluid mee?", a: "Ja, een complete show is inbegrepen, geschikt voor zowel kleine als grote zalen." },
+  { q: "Voor welke bedrijven heb je gedraaid?", a: "Onder andere voor Heineken, Jumbo, Albert Heijn, KPN, Van der Valk en Feyenoord Rotterdam." },
+  { q: "In welk gebied draai je bedrijfsfeesten?", a: "Door heel Nederland." },
+];
 
 export const Route = createFileRoute("/zakelijk-dj")({
   head: () => buildSeo({
@@ -26,6 +35,7 @@ export const Route = createFileRoute("/zakelijk-dj")({
         { name: "Home", path: "/" },
         { name: "Bedrijfsfeest DJ", path: "/zakelijk-dj" },
       ]),
+      faqPage(FAQ),
     ],
   }),
   component: Page,
@@ -50,6 +60,7 @@ function Page() {
         intro="Een goed bedrijfsfeest blijft hangen bij je collega's en relaties. Ik verzorg personeelsfeesten, jubilea, netwerkevents, productlanceringen en teambuilding. Inclusief licht, geluid en presentatie."
         image={IMG}
         imageAlt="DJ Kevin Froger op een bedrijfsfeest"
+        breadcrumbs={[{ name: "Home", path: "/" }, { name: "Bedrijfsfeest DJ", path: "/zakelijk-dj" }]}
       />
 
       <section className="py-24 px-6 lg:px-10">
@@ -92,7 +103,8 @@ function Page() {
         </div>
       </section>
 
-      <ServiceCityIndex service="Bedrijfsfeest" />
+      <ServiceCityIndex service="Bedrijfsfeest" collapsible />
+      <Faq items={FAQ} />
       <ContactCta />
       <SiteFooter />
     </main>

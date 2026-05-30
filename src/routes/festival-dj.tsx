@@ -4,9 +4,17 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { PageHero } from "@/components/PageHero";
 import { ContactCta } from "@/components/ContactCta";
 import { ServiceCityIndex } from "@/components/ServiceCityIndex";
-import { breadcrumb, buildSeo, service } from "@/lib/seo";
+import { Faq } from "@/components/Faq";
+import { breadcrumb, buildSeo, faqPage, service, type FaqItem } from "@/lib/seo";
 
 const IMG = "/images/dj-kevin-froger-festival.webp";
+
+const FAQ: FaqItem[] = [
+  { q: "Draai je festivals en aprèsski?", a: "Ja, strakke sets met crowd control en presentatie voor festivals en aprèsski-events." },
+  { q: "Verzorg je ook de presentatie op het podium?", a: "Ja, ik combineer DJ en MC en houd de energie en het publiek vast." },
+  { q: "Welke stijlen draai je?", a: "Allround, opgebouwd naar de sfeer van het event en het publiek." },
+  { q: "In welk gebied ben je inzetbaar?", a: "Door heel Nederland." },
+];
 
 export const Route = createFileRoute("/festival-dj")({
   head: () => buildSeo({
@@ -26,6 +34,7 @@ export const Route = createFileRoute("/festival-dj")({
         { name: "Home", path: "/" },
         { name: "Festival DJ", path: "/festival-dj" },
       ]),
+      faqPage(FAQ),
     ],
   }),
   component: Page,
@@ -48,6 +57,7 @@ function Page() {
         intro="Op een festival of groot evenement moet de energie meteen staan. Ik draai strakke sets die het publiek meenemen, met crowd control en presentatie. Of het nu een set van 60 minuten is of een langer blok."
         image={IMG}
         imageAlt="DJ Kevin Froger op een festival: verlicht hoofdpodium met vuurwerk en een juichende dansende menigte"
+        breadcrumbs={[{ name: "Home", path: "/" }, { name: "Festival DJ", path: "/festival-dj" }]}
       />
 
       <section className="py-24 px-6 lg:px-10">
@@ -85,7 +95,8 @@ function Page() {
         </div>
       </section>
 
-      <ServiceCityIndex service="Festival" />
+      <ServiceCityIndex service="Festival" collapsible />
+      <Faq items={FAQ} />
       <ContactCta title={<>Boek je<br/>festivalslot.</>} subtitle="App of bel ons met datum, locatie en gewenst tijdslot. Reactie binnen 24 uur." />
       <SiteFooter />
     </main>

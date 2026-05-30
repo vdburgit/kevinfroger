@@ -31,6 +31,7 @@ export const Route = createFileRoute("/dj-boeken-dordrecht")({
 function Page() {
   return (
     <LocationLayout
+      breadcrumbs={[{ name: "Home", path: "/" }, { name: "Werkgebied", path: "/regios" }, { name: "Dordrecht", path: "/dj-boeken-dordrecht" }]}
       eyebrow="Dordrecht"
       heroTitle={<>DJ huren<br/><span className="text-primary">in Dordrecht.</span></>}
       heroIntro="Dordrecht is een vaste stop voor mij. Ik ken de stad goed en draai er regelmatig, van een bruiloft op een historische locatie tot een bedrijfsfeest in het centrum."

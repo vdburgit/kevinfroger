@@ -1,12 +1,20 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageHero } from "@/components/PageHero";
 import { ContactCta } from "@/components/ContactCta";
 import { ServiceCityIndex } from "@/components/ServiceCityIndex";
-import { breadcrumb, buildSeo, service } from "@/lib/seo";
+import { Faq } from "@/components/Faq";
+import { breadcrumb, buildSeo, faqPage, service, type FaqItem } from "@/lib/seo";
 
 const IMG = "/images/dj-kevin-froger-prive-feest.jpeg";
+
+const FAQ: FaqItem[] = [
+  { q: "Draai je verjaardagen en themafeesten?", a: "Ja, van verjaardag en themafeest tot besloten privé-events, altijd op maat van je gasten." },
+  { q: "Is licht en geluid inbegrepen?", a: "Ja, ik kom met een complete show, dus je hoeft niets te regelen." },
+  { q: "Kun je inspelen op verschillende leeftijden?", a: "Ja, ik draai allround en lees het publiek, zodat iedereen op het juiste moment de dansvloer op gaat." },
+  { q: "In welke plaatsen kom je draaien?", a: "Door heel Nederland." },
+];
 
 export const Route = createFileRoute("/verjaardag-dj")({
   head: () => buildSeo({
@@ -26,6 +34,7 @@ export const Route = createFileRoute("/verjaardag-dj")({
         { name: "Home", path: "/" },
         { name: "Feest DJ", path: "/verjaardag-dj" },
       ]),
+      faqPage(FAQ),
     ],
   }),
   component: Page,
@@ -46,6 +55,7 @@ function Page() {
         eyebrow="Feest en verjaardag DJ"
         title={<>Jouw verjaardag,<br/><span className="text-primary">jouw gasten.</span></>}
         intro="Een verjaardag of feest wordt pas echt leuk als de muziek klopt en de dansvloer vol staat. Ik draai allround, van Nederlandstalig en classics tot top 40 en dance, afgestemd op jouw gasten."
+        breadcrumbs={[{ name: "Home", path: "/" }, { name: "Feest DJ", path: "/verjaardag-dj" }]}
         image={IMG}
         imageAlt="DJ Kevin Froger draait een verjaardagsfeest"
       />
@@ -70,22 +80,16 @@ function Page() {
         </div>
       </section>
 
-      <section className="py-24 px-6 lg:px-10 bg-card border-y-2 border-border">
-        <div className="max-w-[1400px] mx-auto text-center">
-          <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Werkgebied</div>
-          <h2 className="text-4xl md:text-5xl leading-[0.9] mb-6" style={{ fontFamily: "var(--font-display)" }}>Feest DJ door heel Nederland</h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            Voor verjaardagen en feesten kom ik in heel Nederland, met extra veel boekingen in de Betuwe, Bommelerwaard, Hoeksche Waard en Zuid-Holland. Wil je weten of ik op jouw datum kan? App of bel ons.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3 justify-center">
-            <Link to="/prijzen" className="rounded-full border-2 border-secondary text-secondary px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:bg-secondary hover:text-secondary-foreground transition">Prijzen</Link>
-            <Link to="/werkwijze" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Werkwijze</Link>
-            <Link to="/regios" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Werkgebied</Link>
-          </div>
-        </div>
-      </section>
-
-      <ServiceCityIndex service="Feest" />
+      <ServiceCityIndex
+        service="Feest"
+        collapsible
+        intro="Voor verjaardagen en feesten kom ik in heel Nederland, met extra veel boekingen in de Betuwe, Bommelerwaard, Hoeksche Waard en Zuid-Holland. Wil je weten of ik op jouw datum kan? App of bel ons."
+        links={[
+          { to: "/prijzen", label: "Prijzen", primary: true },
+          { to: "/werkwijze", label: "Werkwijze" },
+        ]}
+      />
+      <Faq items={FAQ} />
       <ContactCta />
       <SiteFooter />
     </main>

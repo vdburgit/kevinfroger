@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { buildSeo } from "@/lib/seo";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { breadcrumb, buildSeo } from "@/lib/seo";
 
 export const Route = createFileRoute("/privacy")({
   head: () => buildSeo({
@@ -9,6 +10,12 @@ export const Route = createFileRoute("/privacy")({
     description: "Privacyverklaring van DJ Kevin Froger. Hoe persoonlijke gegevens worden verwerkt en beschermd.",
     path: "/privacy",
     noindex: true,
+    jsonLd: [
+      breadcrumb([
+        { name: "Home", path: "/" },
+        { name: "Privacy", path: "/privacy" },
+      ]),
+    ],
   }),
   component: Page,
 });
@@ -19,6 +26,7 @@ function Page() {
       <SiteHeader />
       <article className="max-w-3xl mx-auto px-6 lg:px-10 py-24">
         <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Privacy</div>
+        <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Privacy", path: "/privacy" }]} variant="default" className="mb-6" />
         <h1 className="text-5xl md:text-6xl leading-[0.9] mb-8" style={{ fontFamily: "var(--font-display)" }}>Privacyverklaring</h1>
         <div className="space-y-6 text-muted-foreground leading-relaxed">
           <p>DJ Kevin Froger ("ik", "mij") hecht waarde aan de bescherming van jouw persoonsgegevens. In deze verklaring lees je hoe ik daarmee omga.</p>

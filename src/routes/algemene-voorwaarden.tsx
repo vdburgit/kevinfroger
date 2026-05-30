@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { buildSeo } from "@/lib/seo";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { breadcrumb, buildSeo } from "@/lib/seo";
 
 export const Route = createFileRoute("/algemene-voorwaarden")({
   head: () => buildSeo({
@@ -9,6 +10,12 @@ export const Route = createFileRoute("/algemene-voorwaarden")({
     description: "Algemene voorwaarden van DJ Kevin Froger voor boekingen, betalingen en uitvoering van DJ-diensten.",
     path: "/algemene-voorwaarden",
     noindex: true,
+    jsonLd: [
+      breadcrumb([
+        { name: "Home", path: "/" },
+        { name: "Algemene voorwaarden", path: "/algemene-voorwaarden" },
+      ]),
+    ],
   }),
   component: Page,
 });
@@ -19,6 +26,7 @@ function Page() {
       <SiteHeader />
       <article className="max-w-3xl mx-auto px-6 lg:px-10 py-24">
         <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Voorwaarden</div>
+        <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Algemene voorwaarden", path: "/algemene-voorwaarden" }]} variant="default" className="mb-6" />
         <h1 className="text-5xl md:text-6xl leading-[0.9] mb-8" style={{ fontFamily: "var(--font-display)" }}>Algemene voorwaarden</h1>
         <div className="space-y-6 text-muted-foreground leading-relaxed">
           <Section title="1. Toepasselijkheid">

@@ -31,6 +31,7 @@ export const Route = createFileRoute("/dj-boeken-tiel")({
 function Page() {
   return (
     <LocationLayout
+      breadcrumbs={[{ name: "Home", path: "/" }, { name: "Werkgebied", path: "/regios" }, { name: "Tiel", path: "/dj-boeken-tiel" }]}
       eyebrow="Tiel"
       heroTitle={<>DJ huren<br/><span className="text-primary">in Tiel.</span></>}
       heroIntro="Tiel is voor mij een vast punt in de Betuwe. Ik draai er regelmatig en ben snel ter plaatse, ook voor de omliggende dorpen zoals Tuil, Ophemert, Varik en Zoelen."

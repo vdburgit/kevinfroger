@@ -31,6 +31,7 @@ export const Route = createFileRoute("/dj-boeken-culemborg")({
 function Page() {
   return (
     <LocationLayout
+      breadcrumbs={[{ name: "Home", path: "/" }, { name: "Werkgebied", path: "/regios" }, { name: "Culemborg", path: "/dj-boeken-culemborg" }]}
       eyebrow="Culemborg"
       heroTitle={<>DJ huren<br/><span className="text-primary">in Culemborg.</span></>}
       heroIntro="Culemborg is een sfeervolle stad aan de Lek, met genoeg mooie plekken voor een feest. Ik draai er regelmatig, en ook in de omliggende dorpen Beusichem, Ravenswaaij, Eck en Wiel en Ingen."
