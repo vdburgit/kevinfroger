@@ -6,6 +6,7 @@ import {
   useRouter,
   HeadContent,
 } from "@tanstack/react-router";
+import { MobileCtaBar } from "@/components/MobileCtaBar";
 
 function NotFoundComponent() {
   return (
@@ -359,6 +360,8 @@ function RootComponent() {
       <HeadContent />
       {/* Nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      {/* Vaste bel/WhatsApp-balk op mobiel — staat op elke pagina. */}
+      <MobileCtaBar />
     </QueryClientProvider>
   );
 }

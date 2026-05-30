@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { track } from "@/lib/track";
 
 export function ContactCta({
   title = "Tijd voor een volle dansvloer.",
@@ -18,10 +19,10 @@ export function ContactCta({
           <Link to="/contact" className="rounded-full bg-background text-foreground px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm tracking-[0.15em] uppercase font-bold hover:bg-foreground hover:text-background transition">
             Offerte aanvragen
           </Link>
-          <a href="tel:+31645251333" className="rounded-full border-2 border-background text-background px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm tracking-[0.15em] uppercase font-bold hover:bg-background hover:text-foreground transition">
+          <a href="tel:+31645251333" onClick={() => track("tel_click", { location: "contact_cta" })} className="rounded-full border-2 border-background text-background px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm tracking-[0.15em] uppercase font-bold hover:bg-background hover:text-foreground transition">
             Bellen
           </a>
-          <a href="https://wa.me/31645251333" className="rounded-full border-2 border-background text-background px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm tracking-[0.15em] uppercase font-bold hover:bg-background hover:text-foreground transition">
+          <a href="https://wa.me/31645251333" onClick={() => track("whatsapp_click", { location: "contact_cta" })} className="rounded-full border-2 border-background text-background px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm tracking-[0.15em] uppercase font-bold hover:bg-background hover:text-foreground transition">
             App direct
           </a>
         </div>

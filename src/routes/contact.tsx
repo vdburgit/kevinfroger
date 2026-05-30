@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SITE_URL, breadcrumb, buildSeo } from "@/lib/seo";
+import { track } from "@/lib/track";
 
 export const Route = createFileRoute("/contact")({
   head: () => buildSeo({
@@ -59,15 +60,15 @@ function Page() {
             <div className="mt-10 space-y-5">
               <div>
                 <div className="text-xs tracking-[0.25em] uppercase text-secondary font-bold">Telefoon</div>
-                <a href="tel:0645251333" className="text-xl mt-1 inline-block hover:text-primary transition">Bellen</a>
+                <a href="tel:0645251333" onClick={() => track("tel_click", { location: "contact_page" })} className="text-xl mt-1 inline-block hover:text-primary transition">Bellen</a>
               </div>
               <div>
                 <div className="text-xs tracking-[0.25em] uppercase text-secondary font-bold">E-mail</div>
-                <a href="mailto:Booking@kevinfroger.nl" className="text-xl mt-1 inline-block hover:text-primary transition">Booking@kevinfroger.nl</a>
+                <a href="mailto:Booking@kevinfroger.nl" onClick={() => track("email_click", { location: "contact_page" })} className="text-xl mt-1 inline-block hover:text-primary transition">Booking@kevinfroger.nl</a>
               </div>
               <div>
                 <div className="text-xs tracking-[0.25em] uppercase text-secondary font-bold">WhatsApp</div>
-                <a href="https://wa.me/31645251333" className="text-xl mt-1 inline-block hover:text-primary transition">Direct een appje sturen</a>
+                <a href="https://wa.me/31645251333" onClick={() => track("whatsapp_click", { location: "contact_page" })} className="text-xl mt-1 inline-block hover:text-primary transition">Direct een appje sturen</a>
               </div>
               <div>
                 <div className="text-xs tracking-[0.25em] uppercase text-secondary font-bold">Werkgebied</div>
@@ -82,15 +83,15 @@ function Page() {
               onSubmit={(e) => {
                 e.preventDefault();
                 const data = new FormData(e.currentTarget);
-                const subject = `Aanvraag ${data.get("type")} – ${data.get("date") ?? ""}`;
-                const body = `Naam: ${data.get("name")}\nE-mail: ${data.get("email")}\nTelefoon: ${data.get("phone")}\nType event: ${data.get("type")}\nDatum: ${data.get("date")}\nLocatie: ${data.get("location")}\nAantal gasten: ${data.get("guests")}\n\nBericht:\n${data.get("message")}`;
-                window.location.href = `mailto:Booking@kevinfroger.nl?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                const msg = `Hoi Kevin! Ik wil graag mijn datum checken.\n\nNaam: ${data.get("name")}\nType event: ${data.get("type")}\nDatum: ${data.get("date")}\nLocatie: ${data.get("location") || "-"}\nAantal gasten: ${data.get("guests") || "-"}\nTelefoon: ${data.get("phone") || "-"}\nE-mail: ${data.get("email")}\n\n${data.get("message") || ""}`;
+                track("generate_lead", { method: "whatsapp", event_type: String(data.get("type") || "") });
+                window.location.href = `https://wa.me/31645251333?text=${encodeURIComponent(msg)}`;
                 setSent(true);
               }}
             >
               {sent && (
                 <div className="rounded-xl border-2 border-secondary bg-secondary/10 p-4 text-sm text-secondary font-semibold">
-                  Bedankt! Je mailprogramma wordt geopend met het bericht. Verstuur de mail om je aanvraag te bevestigen.
+                  Bedankt! WhatsApp wordt geopend met je aanvraag al ingevuld. Druk daar op verzenden, dan reageer ik binnen 24 uur.
                 </div>
               )}
               <div className="grid sm:grid-cols-2 gap-5">
@@ -107,9 +108,14 @@ function Page() {
                 <textarea name="message" rows={5} className="w-full rounded-lg border-2 border-border bg-background px-4 py-3 text-sm focus:outline-none focus:border-primary transition" placeholder="Vertel kort over je event, wensen, must-plays..." />
               </div>
               <button type="submit" className="w-full rounded-full bg-primary text-primary-foreground px-8 py-4 text-sm tracking-[0.18em] uppercase font-bold hover:opacity-90 transition shadow-[var(--shadow-glow)]">
-                Verstuur aanvraag
+                Check je datum via WhatsApp
               </button>
-              <p className="text-xs text-muted-foreground">Liever direct contact? Bel ons of stuur een appje.</p>
+              <p className="text-xs text-muted-foreground">
+                Liever bellen of mailen?{" "}
+                <a href="tel:0645251333" onClick={() => track("tel_click", { location: "contact_form" })} className="text-secondary hover:text-primary underline">Bel</a>
+                {" "}of{" "}
+                <a href="mailto:Booking@kevinfroger.nl" onClick={() => track("email_click", { location: "contact_form" })} className="text-secondary hover:text-primary underline">mail</a>.
+              </p>
             </form>
           </div>
         </div>
