@@ -80,7 +80,7 @@ const ORGANIZATION_JSONLD = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": ["EntertainmentBusiness", "LocalBusiness"],
       "@id": `${SITE_URL}/#business`,
       name: "DJ Kevin Froger",
       url: `${SITE_URL}/`,
@@ -95,12 +95,6 @@ const ORGANIZATION_JSONLD = {
         "@type": "PostalAddress",
         addressRegion: "Zuid-Holland",
         addressCountry: "NL",
-      },
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "5.0",
-        bestRating: "5",
-        reviewCount: "10",
       },
       sameAs: SAME_AS,
       areaServed: [

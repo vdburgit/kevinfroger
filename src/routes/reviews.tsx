@@ -30,8 +30,15 @@ export const Route = createFileRoute("/reviews")({
     jsonLd: [
       {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": ["EntertainmentBusiness", "LocalBusiness"],
         "@id": `${SITE_URL}/#business`,
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: "5.0",
+          bestRating: "5",
+          worstRating: "1",
+          reviewCount: "10",
+        },
         review: REVIEWS.map((r) => ({
           "@type": "Review",
           author: { "@type": "Person", name: r.who },
