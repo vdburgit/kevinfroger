@@ -1,0 +1,575 @@
+<!-- ================================================================= -->
+<!--  CHATBOT · DJ KEVIN FROGER                                        -->
+<!--  Eén bestand · geen externe diensten · plak vlak voor </body>     -->
+<!--  Alle inhoudelijke antwoorden komen rechtstreeks van              -->
+<!--  kevinfroger.nl. Onbekende vragen gaan naar WhatsApp/mail.        -->
+<!--  Teksten aanpassen? Zoek de blokken gemarkeerd met  ⬇ EDIT        -->
+<!-- ================================================================= -->
+<div id="kf-chat-root"></div>
+
+<style>
+  #kf-chat-root{
+    --kf-orange:#E5512C;--kf-orange-2:#ff6a3d;--kf-glow:rgba(229,81,44,.55);
+    --kf-bg:#16120f;--kf-bg-2:#1f1916;--kf-panel:#241d19;--kf-bot:#2a221d;
+    --kf-text:#f3ece6;--kf-mut:#9a8e85;--kf-radius:20px;
+    --kf-font:"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;
+    position:fixed;right:20px;bottom:20px;z-index:2147483000;font-family:var(--kf-font);
+  }
+  /* Op mobiel staat de sticky bel/WhatsApp-balk (MobileCtaBar) onderaan;
+     launcher + venster omhoog zodat ze die niet afdekken. */
+  @media (max-width:767px){
+    #kf-chat-root{bottom:84px;}
+    #kf-chat-root .kf-window{max-height:calc(100vh - 194px);}
+  }
+  #kf-chat-root *{box-sizing:border-box;}
+  .kf-launcher{position:relative;width:64px;height:64px;border:none;border-radius:50%;cursor:pointer;
+    background:radial-gradient(circle at 30% 30%,var(--kf-orange-2),var(--kf-orange));
+    color:#fff;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 30px var(--kf-glow),0 0 0 0 var(--kf-glow);
+    transition:transform .2s cubic-bezier(.16,1,.3,1);animation:kf-pulse 2.6s infinite;}
+  @keyframes kf-pulse{0%{box-shadow:0 10px 30px var(--kf-glow),0 0 0 0 var(--kf-glow);}
+    70%{box-shadow:0 10px 30px var(--kf-glow),0 0 0 16px rgba(229,81,44,0);}
+    100%{box-shadow:0 10px 30px var(--kf-glow),0 0 0 0 rgba(229,81,44,0);}}
+  .kf-launcher:hover{transform:scale(1.08);}
+  .kf-launcher svg{width:30px;height:30px;}
+  .kf-launcher .kf-launch-img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;}
+  .kf-launcher .kf-x{display:none;}
+  #kf-chat-root.kf-open .kf-launcher{animation:none;}
+  /* Pulse stopt blijvend zodra de bezoeker de chat één keer opende (geen eeuwige repaint). */
+  #kf-chat-root.kf-engaged .kf-launcher{animation:none;}
+  #kf-chat-root.kf-open .kf-launcher .kf-bubble-ic{display:none;}
+  #kf-chat-root.kf-open .kf-launcher .kf-x{display:block;}
+  .kf-badge{position:absolute;top:-3px;right:-3px;min-width:20px;height:20px;padding:0 5px;
+    background:#28c76f;border:2px solid var(--kf-bg);border-radius:10px;color:#fff;
+    font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+  #kf-chat-root.kf-open .kf-badge{display:none;}
+  .kf-window{position:absolute;bottom:80px;right:0;width:380px;max-width:calc(100vw - 32px);
+    height:600px;max-height:calc(100vh - 130px);background:var(--kf-bg);
+    border:1px solid rgba(255,255,255,.06);border-radius:var(--kf-radius);
+    box-shadow:0 30px 70px rgba(0,0,0,.55);display:flex;flex-direction:column;overflow:hidden;
+    opacity:0;transform:translateY(20px) scale(.97);transform-origin:bottom right;
+    pointer-events:none;transition:opacity .25s,transform .25s cubic-bezier(.16,1,.3,1);}
+  #kf-chat-root.kf-open .kf-window{opacity:1;transform:translateY(0) scale(1);pointer-events:auto;}
+  .kf-head{position:relative;padding:18px 20px;color:#fff;overflow:hidden;
+    background:linear-gradient(135deg,#2a201b 0%,#1c1714 100%);border-bottom:1px solid rgba(255,255,255,.06);}
+  .kf-head::before{content:"";position:absolute;top:-40%;right:-10%;width:160px;height:160px;
+    background:radial-gradient(circle,var(--kf-orange) 0%,transparent 70%);opacity:.5;filter:blur(8px);}
+  .kf-head-row{position:relative;display:flex;align-items:center;gap:13px;}
+  .kf-avatar{width:46px;height:46px;border-radius:50%;flex:0 0 auto;overflow:hidden;
+    background:var(--kf-panel);box-shadow:0 4px 14px var(--kf-glow);
+    border:2px solid rgba(255,106,61,.6);}
+  .kf-avatar img{width:100%;height:100%;object-fit:cover;display:block;}
+  .kf-head h4{margin:0;font-size:16px;font-weight:700;letter-spacing:.2px;}
+  .kf-head p{margin:3px 0 0;font-size:12px;color:#cdbfb6;display:flex;align-items:center;gap:6px;}
+  .kf-dot{width:8px;height:8px;border-radius:50%;background:#28c76f;box-shadow:0 0 8px #28c76f;}
+  .kf-body{flex:1;overflow-y:auto;padding:18px 16px;background:radial-gradient(circle at 50% 0%,#221a16 0%,var(--kf-bg) 60%);}
+  .kf-body::-webkit-scrollbar{width:6px;}
+  .kf-body::-webkit-scrollbar-thumb{background:#3a302a;border-radius:3px;}
+  .kf-row{display:flex;margin-bottom:10px;animation:kf-in .3s ease both;}
+  .kf-row.user{justify-content:flex-end;}
+  @keyframes kf-in{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+  .kf-msg{max-width:85%;padding:12px 15px;font-size:14px;line-height:1.55;border-radius:16px;}
+  .kf-msg.bot{background:var(--kf-bot);color:var(--kf-text);border-bottom-left-radius:5px;border:1px solid rgba(255,255,255,.04);}
+  .kf-msg.user{background:linear-gradient(135deg,var(--kf-orange),var(--kf-orange-2));color:#fff;border-bottom-right-radius:5px;font-weight:500;}
+  .kf-msg b{color:#fff;}
+  .kf-msg.bot b{color:var(--kf-orange-2);}
+  .kf-msg a{color:var(--kf-orange-2);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,106,61,.4);}
+  .kf-msg small{color:var(--kf-mut);}
+  .kf-typing{display:flex;gap:4px;padding:14px 16px;background:var(--kf-bot);border-radius:16px;
+    border-bottom-left-radius:5px;width:fit-content;}
+  .kf-typing span{width:7px;height:7px;border-radius:50%;background:var(--kf-mut);animation:kf-bounce 1.2s infinite;}
+  .kf-typing span:nth-child(2){animation-delay:.18s;}
+  .kf-typing span:nth-child(3){animation-delay:.36s;}
+  @keyframes kf-bounce{0%,60%,100%{transform:translateY(0);opacity:.5;}30%{transform:translateY(-5px);opacity:1;}}
+  .kf-options{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:4px 0 14px;align-items:stretch;}
+  .kf-opt{display:flex;align-items:center;gap:9px;text-align:left;min-height:48px;
+    background:var(--kf-panel);border:1px solid rgba(255,255,255,.07);color:var(--kf-text);
+    padding:10px 12px;border-radius:13px;font-size:12.5px;font-weight:600;line-height:1.2;
+    cursor:pointer;font-family:inherit;transition:border-color .16s,transform .16s,box-shadow .16s,background .16s;
+    animation:kf-in .3s ease both;}
+  .kf-opt .kf-ic{flex:0 0 auto;width:28px;height:28px;border-radius:8px;
+    background:rgba(229,81,44,.14);display:flex;align-items:center;justify-content:center;font-size:14px;
+    transition:background .16s;}
+  .kf-opt .kf-lbl{flex:1;}
+  .kf-opt:hover{border-color:var(--kf-orange);background:#2c241f;transform:translateY(-1px);
+    box-shadow:0 6px 16px rgba(229,81,44,.22);}
+  .kf-opt:hover .kf-ic{background:rgba(229,81,44,.28);}
+  .kf-opt.kf-wide{grid-column:1 / -1;}
+  .kf-opt.kf-more{justify-content:center;background:transparent;border-style:dashed;
+    border-color:rgba(255,255,255,.18);color:var(--kf-mut);font-weight:600;}
+  .kf-opt.kf-more .kf-ic{background:transparent;}
+  .kf-opt.kf-more:hover{color:var(--kf-orange-2);border-color:var(--kf-orange);background:rgba(229,81,44,.06);}
+  .kf-cta{display:flex;flex-direction:column;gap:8px;margin:2px 0 14px;animation:kf-in .3s ease both;}
+  .kf-cta a{display:flex;align-items:center;gap:10px;text-decoration:none;border:none;
+    padding:13px 16px;border-radius:13px;font-size:14px;font-weight:700;transition:transform .15s,filter .15s;}
+  .kf-cta a:hover{transform:translateY(-1px);filter:brightness(1.08);}
+  .kf-cta a.wa{background:#25D366;color:#fff;}
+  .kf-cta a.mail{background:var(--kf-panel);color:var(--kf-text);border:1px solid rgba(255,255,255,.1);}
+  .kf-cta a.tel{background:#fff;color:#16120f;}
+  .kf-foot{padding:12px;background:var(--kf-bg-2);border-top:1px solid rgba(255,255,255,.06);display:flex;gap:9px;align-items:center;}
+  .kf-foot input{flex:1;background:var(--kf-panel);border:1px solid rgba(255,255,255,.1);
+    border-radius:24px;padding:12px 16px;font-size:14px;font-family:inherit;color:var(--kf-text);outline:none;}
+  .kf-foot input::placeholder{color:var(--kf-mut);}
+  .kf-foot input:focus{border-color:var(--kf-orange);}
+  .kf-send{background:linear-gradient(135deg,var(--kf-orange),var(--kf-orange-2));border:none;
+    border-radius:50%;width:44px;height:44px;color:#fff;cursor:pointer;flex:0 0 auto;
+    display:flex;align-items:center;justify-content:center;transition:filter .15s,transform .15s;}
+  .kf-send:hover{filter:brightness(1.1);transform:scale(1.05);}
+  .kf-send svg{width:19px;height:19px;}
+  .kf-credit{text-align:center;font-size:10px;color:var(--kf-mut);padding:7px 0 9px;background:var(--kf-bg-2);}
+  .kf-credit b{color:var(--kf-orange-2);}
+  /* Respecteer de OS-voorkeur 'verminder beweging': geen pulse, geen anim/transities. */
+  @media (prefers-reduced-motion:reduce){
+    #kf-chat-root .kf-launcher{animation:none!important;}
+    #kf-chat-root .kf-row,#kf-chat-root .kf-opt,#kf-chat-root .kf-cta,#kf-chat-root .kf-typing span{animation:none!important;}
+    #kf-chat-root .kf-window{transition:none!important;}
+  }
+</style>
+
+<script>
+(function(){
+  /* ============================================================= */
+  /*  ⬇ EDIT 1 — CONTACTGEGEVENS                                   */
+  /* ============================================================= */
+  const WHATSAPP = "31645251333";
+  const EMAIL    = "Booking@kevinfroger.nl";
+  const TEL      = "+31645251333";
+  const SITE     = "https://kevinfroger.nl";
+  // ⬇ Foto van Kevin (avatar). Vervangen? Zet hier een nieuwe data:image/...;base64,-string of een URL.
+  const AVATAR   = "data:image/webp;base64,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";
+  const waLink   = (txt)=>`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(txt)}`;
+
+  const WELCOME = "Hoi! 👋 Leuk dat je er bent. Ik ben de digitale assistent van DJ Kevin Froger. Waar kan ik je mee helpen?";
+
+  /* ============================================================= */
+  /*  ⬇ EDIT 2 — ONDERWERPEN (alle inhoud komt van kevinfroger.nl) */
+  /*  keys = trefwoorden/synoniemen. Hoe meer, hoe beter de bot    */
+  /*  herkent. Verbuigingen en kleine typefouten worden automatisch*/
+  /*  opgevangen, dus je hoeft niet elke vorm te noemen.           */
+  /* ============================================================= */
+  const TOPICS = [
+    {
+      id:"boeken", label:"📅 Datum boeken", booking:true,
+      keys:["datum","data","boeken","boek","boeking","geboekt","beschikbaar","beschikbaarheid","vrij","reserveren","reservering","aanvraag","aanvragen","offerte","offertes","slot","inplannen","ingepland","agenda","kalender","plannen","afspraak","open","januari","februari","maart","april","mei","juni","juli","augustus","september","oktober","november","december"]
+    },
+    {
+      id:"prijs", label:"💶 Wat kost het?",
+      keys:["prijs","prijzen","prijsje","kosten","kost","kostte","tarief","tarieven","euro","budget","betaalbaar","goedkoop","duur","bedrag","kwijt","vraagprijs","pakket","pakketten","essential","complete","kosten","wat reken"],
+      answer:`Ik werk met een eerlijke <b>all-in prijs</b> voor DJ, licht én geluid — geen verrassingen achteraf. Wat je betaalt hangt af van de duur van de avond, de locatie en eventuele extra wensen. Drie startpunten:<br><br>
+      • <b>Essential — v.a. €795</b><br><small>Intieme feesten tot ~75 gasten · DJ-set 4 uur show · compacte geluidsset · basis sfeerverlichting · persoonlijke intake · reiskosten t/m 50 km inbegrepen.</small><br><br>
+      • <b>Complete — v.a. €1295</b> <small>(meest gekozen)</small><br><small>Bruiloften & bedrijfsfeesten · DJ-set 4 uur show · volledig geluidssysteem · lichtshow met movingheads · draadloze microfoons · intake + draaiboek · reiskosten t/m 50 km inbegrepen.</small><br><br>
+      • <b>Show — op aanvraag</b><br><small>Festival of large-scale event · DJ-set op maat · festival-grade geluid · complete lichtshow + haze · MC services · backup-DJ optioneel · volledig technisch team.</small><br><br>
+      Iedere offerte wordt op maat gemaakt. <a href="${SITE}/prijzen" target="_blank">Bekijk de prijzen →</a>`
+    },
+    {
+      id:"werkgebied", label:"📍 Werkgebied",
+      keys:["waar","regio","regios","gebied","werkgebied","plaats","plaatsen","stad","steden","dorp","provincie","provincies","reizen","reis","afstand","komen","rijden","omgeving","buurt","ver","landelijk","nederland","betuwe","hoeksche","brabant","holland","utrecht","gelderland","groningen","amsterdam","rotterdam","tiel","limburg","zeeland","friesland","drenthe","overijssel","reiskosten","reiskost","kilometers","km","toeslag","verder","verderop"],
+      answer:`Ik draai door <b>heel Nederland</b>, in alle twaalf provincies — van Amsterdam tot Maastricht, van Vlissingen tot Groningen. Veel ervaring in de Betuwe, Bommelerwaard, Hoeksche Waard en Zuid-Holland. Voor jouw plaats kom ik graag mee.<br><br>Reiskosten t/m 50 km zitten bij de pakketten inbegrepen. Verder weg kan ook — dan komt er een reiskostentoeslag bij, die ik vooraf in de offerte verreken.<br><br><a href="${SITE}/regios" target="_blank">Bekijk alle plaatsen →</a>`
+    },
+    {
+      id:"bruiloft", label:"💍 Bruiloft",
+      keys:["bruiloft","bruiloften","trouwen","trouwerij","trouwfeest","huwelijk","getrouwd","ceremonie","trouwdag","trouw","openingsdans","eerste dans","bruidspaar","ja-woord","jawoord"],
+      answer:`Ik verzorg jullie hele trouwdag, van de ceremonie tot de laatste plaat:<br><br>
+      • <b>Ceremonie & diner</b> — achtergrondmuziek bij binnenkomst en diner, draadloze microfoons voor toespraken en jullie eigen songs op de juiste momenten.<br>
+      • <b>Openingsdans</b> — begeleiding van jullie eerste dans op een originele track of een mix die we samen kiezen.<br>
+      • <b>Feestavond</b> — allround set die meebeweegt met de gasten: van Nederlandstalig en classics tot top 40 en dance, opgebouwd naar een volle vloer.<br>
+      • <b>DJ én MC in één</b> — aankondigingen en programmaonderdelen netjes aan elkaar, zonder losse presentator.<br>
+      • <b>Eigen licht & geluid</b> — complete show, geen aparte leverancier nodig.<br><br>
+      <a href="${SITE}/bruiloft-dj" target="_blank">Meer over bruiloften →</a>`
+    },
+    {
+      id:"bedrijf", label:"🏢 Bedrijfsfeest",
+      keys:["bedrijf","bedrijfsfeest","bedrijfsfeesten","zakelijk","zakelijke","corporate","personeel","personeelsfeest","collega","jubileum","netwerk","netwerkevent","productlancering","lancering","teambuilding","team","factuur","facturatie","btw","relatie","relatiedag","borrel","firma","kantoor","opening","awards","award"],
+      answer:`Ik verzorg personeelsfeesten, jubilea, netwerkevents, productlanceringen en teambuilding — inclusief licht, geluid en presentatie. Eén leverancier, alles geregeld:<br><br>
+      • <b>Borrel & netwerken</b> — achtergrondmuziek zonder gesprekken te overstemmen.<br>
+      • <b>Diner</b> — subtiele set die past bij het tempo van de avond.<br>
+      • <b>Feestavond</b> — opbouw van classics naar dance en top 40.<br>
+      • <b>MC services</b> — aankondiging van speeches, awards en presentaties, strak getimed.<br>
+      • <b>Factuur op naam</b> — zakelijke offerte en facturatie, BTW-conform.<br>
+      • <b>Themafeest</b> — jaren 80, Italo disco, festival, aprèsski, volledig op maat.<br><br>
+      <a href="${SITE}/zakelijk-dj" target="_blank">Meer over bedrijfsfeesten →</a>`
+    },
+    {
+      id:"verjaardag", label:"🎉 Verjaardag / feest",
+      keys:["verjaardag","verjaardagsfeest","jarig","feest","feestje","privefeest","prive","private","themafeest","thema","besloten","party","familiefeest","familie","reunie","doopfeest","tuinfeest","tuin","abraham","sarah","mijlpaal"],
+      answer:`Of het nu een gezellig feest thuis is of een groot verjaardagsfeest in een zaal, ik pas me aan. Ik kom met een complete set, dus licht en geluid zijn geregeld. Gasten kunnen verzoekjes doen en ik hou een microfoon bij de hand voor een speech of toost.<br><br>
+      • <b>Verjaardag</b> — van 30 tot 70 jaar, met persoonlijke verzoekjes in een set die werkt.<br>
+      • <b>Familiefeest</b> — reünies, jubilea, doopfeesten; een mix voor alle generaties.<br>
+      • <b>Themafeest</b> — jaren 80, Ibiza, festival, Bourgondisch, met bijpassende verlichting.<br>
+      • <b>Tuinfeest</b> — compacte set-up die ook outdoor werkt: hard genoeg voor de gasten, niet de hele buurt.<br><br>
+      <a href="${SITE}/verjaardag-dj" target="_blank">Meer over feesten →</a>`
+    },
+    {
+      id:"festival", label:"🎪 Festival",
+      keys:["festival","festivals","apresski","apres","podium","crowd","mainstage","stage","power","blok","tijdslot","event","evenement","openlucht","buitenevenement"],
+      answer:`Op een festival of groot evenement moet de energie meteen staan. Ik draai strakke sets met crowd control en presentatie — een set van 60 minuten of een langer blok:<br><br>
+      • <b>Power set</b> — 60 minuten non-stop, hoge BPM, strakke transities, geen pauzes.<br>
+      • <b>Crowd control</b> — de massa lezen, opbouwen en uitlopen op het juiste moment.<br>
+      • <b>MC & presentatie</b> — microfoonwerk, acts aankondigen, het podium aan elkaar praten.<br>
+      • <b>Allround schakelen</b> — van dance naar mainstream, top 40, classics of aprèsski.<br><br>
+      Eerder o.a. op Dutch Grand Prix, Circuit Zandvoort en aprèsski-events. <a href="${SITE}/festival-dj" target="_blank">Meer over festivals →</a>`
+    },
+    {
+      id:"inbegrepen", label:"🔊 Wat zit erbij in?",
+      keys:["inbegrepen","erbij","zit","zitten","erin","inclusief","licht","lichtshow","verlichting","geluid","geluidset","apparatuur","spullen","boxen","speakers","installatie","setup","microfoon","microfoons","mic","allin","all-in","meenemen","meebrengen","regelen","backup","reserve","movingheads","haze","draadloos"],
+      answer:`In de prijs zit de <b>complete show</b>: opbouw, een professionele geluidsset, een lichtshow en mijn rol als DJ en MC. Ik kom met eigen licht en geluid, dus je hoeft nergens voor te zorgen — geen aparte leverancier nodig. Backup-apparatuur heb ik altijd mee. Geen verborgen kosten.`
+    },
+    {
+      id:"muziek", label:"🎧 Muziek & verzoekjes",
+      keys:["muziek","nummer","nummers","verzoek","verzoekje","verzoekjes","verzoeknummer","genre","genres","playlist","afspeellijst","liedjes","lied","liedje","stijl","stijlen","allround","dance","classics","top40","top","nederlandstalig","mix","mixen","wensen","muziekwensen","spotify","lijst","afspeellijstje","no-go","nogo","mustplay","must-play","kinderen","kids","leeftijden","leeftijd","generaties","internationaal"],
+      answer:`Geen vaste afspeellijst — ik draai <b>allround</b> en <b>lees de zaal</b>, dus van de oma's tot de vrienden gaat iedereen los op het juiste moment. Van Nederlandstalig en classics tot top 40 en dance. Vooraf bespreken we bij de intake jullie muziekwensen, must-plays en no-go's, en gasten kunnen tijdens de avond verzoekjes doen.`
+    },
+    {
+      id:"werkwijze", label:"📋 Hoe werkt het?",
+      keys:["werkwijze","werk","hoe werkt","stappen","stap","proces","intake","gesprek","draaiboek","opbouw","opbouwen","verloopt","verloop","gang","afbouw","nazorg","voorbereiding","soundcheck","planning","traject"],
+      answer:`Een transparant proces in 8 stappen:<br><br>
+      <b>1. Aanvraag</b> — datum, locatie en type event · binnen 24 uur reactie of ik beschikbaar ben<br>
+      <b>2. Offerte</b> — heldere all-in offerte op maat, vaste prijs, geen verborgen kosten<br>
+      <b>3. Intake</b> — telefonisch of in persoon: programma, must-plays, no-go's en logistiek<br>
+      <b>4. Voorbereiding</b> — set, microfoons, draaipunten en planning in een draaiboek<br>
+      <b>5. Opbouw</b> — minimaal 2 uur voor aanvang op locatie, soundcheck, backup altijd mee<br>
+      <b>6. Show</b> — live mixing, het publiek lezen en strakke transities<br>
+      <b>7. Afbouw</b> — snel en netjes, locatie achtergelaten zoals aangetroffen<br>
+      <b>8. Nazorg</b> — korte follow-up na het event<br><br>
+      <a href="${SITE}/werkwijze" target="_blank">Volledige werkwijze →</a>`
+    },
+    {
+      id:"mc", label:"🎤 DJ én MC",
+      keys:["mc","presentatie","presenteren","presentator","aankondigen","aankondiging","speech","toespraak","microfoonwerk","host","ceremoniemeester"],
+      answer:`Kevin is <b>DJ én MC in één persoon</b>. Hij verzorgt naast de muziek ook de presentatie: aankondigingen, speeches, awards en programmaonderdelen netjes aan elkaar — zonder dat je een losse presentator nodig hebt. Geen schreeuwer, wel een aanjager.`
+    },
+    {
+      id:"ervaring", label:"⭐ Ervaring & reviews",
+      keys:["ervaring","ervaren","jaar","jaren","reviews","review","beoordeling","beoordelingen","sterren","google","wie","over","biografie","bekend","referentie","referenties","merken","bedrijven","gedraaid","heineken","jumbo","feyenoord"],
+      answer:`Kevin Froger is een allround DJ met <b>15+ jaar ervaring</b> en een <b>5,0 op Google</b>. Hij draait bruiloften, bedrijfsfeesten, verjaardagen en festivals door heel Nederland, als DJ én MC in één persoon. Hij draaide o.a. voor Heineken, Jumbo, Albert Heijn, KPN, Van der Valk, Feyenoord en de Dutch Grand Prix.<br><br><a href="${SITE}/reviews" target="_blank">Lees de reviews →</a> · <a href="${SITE}/biografie" target="_blank">Biografie →</a>`
+    },
+    {
+      id:"contact", label:"📞 Contact",
+      keys:["contact","bellen","bel","mailen","mail","email","telefoon","telefoonnummer","appen","whatsapp","app","bereiken","nummer","reactie","reageren","hoe snel","antwoord","social","instagram","facebook"],
+      answer:`Stuur een berichtje met je datum en type event — binnen 24 uur weet je of ik beschikbaar ben en wat het kost.`,
+      cta:[
+        {type:"wa",text:"💬 WhatsApp — direct een appje",link:waLink("Hoi Kevin! Ik heb een vraag:")},
+        {type:"mail",text:"✉️ "+EMAIL,link:`mailto:${EMAIL}`},
+        {type:"tel",text:"📞 Bel 06 4525 1333",link:`tel:${TEL}`}
+      ]
+    },
+    {
+      id:"betaling", label:"💳 Betaling",
+      keys:["betalen","betaling","aanbetaling","aanbetalen","aanbetaal","vooraf","vooruit","deposit","voorschot","borg","factuur","facturen","factuurtermijn","factureren","btw","incl","excl","contant","tikkie","overmaken","restant","wanneer betalen","hoeveel vooraf"],
+      answer:`Zo zit de betaling in elkaar:<br><br>
+      • Een offerte is <b>vrijblijvend en 14 dagen geldig</b>; je boeking is definitief zodra we het allebei schriftelijk bevestigen.<br>
+      • Genoemde prijzen zijn <b>excl. btw</b>, tenzij anders vermeld.<br>
+      • Bij particuliere boekingen vraag ik <b>25% aanbetaling</b>, het restant uiterlijk 7 dagen voor je event.<br>
+      • Facturen voldoe je binnen 14 dagen; zakelijk uiteraard een factuur op naam.<br><br>
+      <a href="${SITE}/algemene-voorwaarden" target="_blank">Algemene voorwaarden →</a>`
+    },
+    {
+      id:"annulering", label:"🔄 Annuleren / verzetten",
+      keys:["annuleren","annulering","annuleer","afzeggen","afzegging","opzeggen","verzetten","verplaatsen","verschuiven","datum wijzigen","andere datum","annuleringskosten","kosten annuleren","verhinderd","overmacht","ziek","ziekte","uitvallen","vervanger","vervangende","backup","corona"],
+      answer:`Wat als het feest niet doorgaat of verschuift:<br><br>
+      • <b>Annuleren door jou:</b> tot 90 dagen voor het event 25%, tussen 90 en 30 dagen 50%, en binnen 30 dagen 100% van de afgesproken prijs.<br>
+      • <b>Verzetten</b> bekijken we altijd eerst samen in overleg.<br>
+      • Val ík onverhoopt uit (bijvoorbeeld door ziekte), dan regel ik in overleg een <b>vervangende DJ van vergelijkbaar niveau</b> of je krijgt de aanbetaling volledig terug.<br><br>
+      <a href="${SITE}/algemene-voorwaarden" target="_blank">Lees de voorwaarden →</a>`
+    },
+    {
+      id:"duur", label:"⏱️ Tijd & duur",
+      keys:["hoelang","hoe lang","duur","uren","speeltijd","hoe laat","begintijd","eindtijd","langer","uitloop","extra uur","extra uren","doorgaan","tot hoe laat","opbouwtijd","opbouwen","opbouw","aanwezig","aankomst","lang","draaien","draait","draaitijd","spelen"],
+      answer:`De pakketten Essential en Complete gaan uit van een <b>DJ-set van 4 uur show</b>. Wil je langer doorgaan? <b>Extra uren</b> zijn gewoon bij te boeken, dat spreken we vooraf af in de offerte. Begin- en eindtijd stemmen we af op jouw programma.<br><br>Ik ben <b>minimaal 2 uur voor aanvang</b> op locatie voor opbouw, soundcheck en de lichtsetting.<br><br><a href="${SITE}/prijzen" target="_blank">Bekijk de pakketten →</a>`
+    },
+    {
+      id:"locatie", label:"🔌 Stroom & locatie", menu:false,
+      keys:["stroom","stopcontact","aansluiting","aggregaat","generator","opstelplek","opstelling","ruimte","podium","vierkante meter","geluidsnormen","decibel","volume","geluidslimiter","limiter","buren","overlast","vergunning","buma","stemra","veilig","veiligheid","outdoor","buiten"],
+      answer:`Een paar dingen regel jij (of de locatie), zodat ik gewoon kan knallen:<br><br>
+      • Een geschikte <b>opstelplek</b> en <b>deugdelijke stroom</b> (minimaal 2× 16A geaard).<br>
+      • Een veilige werkomgeving rond de set.<br>
+      • Het naleven van eventuele <b>geluidsnormen en vergunningen</b> op de locatie, en de <b>Buma/Stemra</b>-afdracht (tenzij de locatie dat al regelt).<br><br>
+      Eigen licht en geluid breng ik mee, backup-apparatuur heb ik altijd bij. Twijfel je over je locatie? <a href="${SITE}/contact" target="_blank">Vraag het even na →</a>`
+    },
+    {
+      id:"samenwerking", label:"🎸 Met band of act", menu:false,
+      keys:["band","liveband","live band","artiest","act","acts","saxofoon","saxofonist","percussie","gitarist","zanger","zangeres","optreden","combineren","samenwerken","afwisselen","wisselwerking"],
+      answer:`Ja, ik werk prima samen met een live act of band. Dat heb ik vaker gedaan — een avond samen met een band verzorgd waarbij de <b>wisselwerking strak liep</b> en het publiek meeging. Vooraf stemmen we af wie wanneer speelt en hoe we het podium aan elkaar knopen, zodat de energie er de hele avond in blijft.`
+    },
+    {
+      id:"vroeg-boeken", label:"📆 Hoe vroeg boeken?", menu:false,
+      keys:["vantevoren","van tevoren","tevoren","vroeg","hoe ver","op tijd","tijdig","last minute","lastminute","korte termijn","binnenkort","ruim van tevoren","wachten"],
+      answer:`Hoe eerder, hoe beter — vooral populaire data (zaterdagen en het bruiloftsseizoen) raken het snelst vol. Maar ook <b>last-minute</b> mag je altijd even checken, het kan zomaar net passen. Stuur je datum door, dan weet je <b>binnen 24 uur</b> of ik vrij ben.`
+    },
+    {
+      id:"waarom", label:"🙌 Waarom Kevin?", menu:false,
+      keys:["waarom","waarom jou","waarom kevin","onderscheid","verschil","andere dj","de moeite","waard","garantie","twijfel","overtuigen","wat maakt","beste keuze"],
+      answer:`Eerlijk antwoord: je boekt geen hobbyist, maar een allround DJ met <b>15+ jaar ervaring</b> en een <b>5,0 op Google</b>. Ik <b>lees de zaal</b> en draai zonder vaste afspeellijst, dus van de oma's tot de vrienden gaat iedereen los op het juiste moment. Ik kom met een <b>complete show</b> (eigen licht én geluid) en ben <b>DJ én MC in één</b>: één aanspreekpunt, alles geregeld, een vaste all-in prijs zonder verrassingen.<br><br><a href="${SITE}/reviews" target="_blank">Lees de reviews →</a>`
+    }
+  ];
+
+  /* ============================================================= */
+  /*  ⬇ EDIT 3 — BEGROETINGEN & BEDANKJES (los van onderwerpen)    */
+  /* ============================================================= */
+  const SMALLTALK = [
+    {keys:["hoi","hallo","hey","hee","goedemorgen","goedemiddag","goedenavond","hee","yo","dag"],
+     reply:"Hoi! 👋 Leuk dat je er bent. Waar kan ik je mee helpen?"},
+    {keys:["bedankt","dank","dankje","dankjewel","thanks","top","fijn","super","prima"],
+     reply:"Graag gedaan! 😊 Kan ik je nog ergens mee helpen?"},
+    {keys:["doei","dag","bye","tot ziens","later","groetjes"],
+     reply:"Tot ziens! 👋 Veel plezier met de voorbereidingen, en app gerust als er nog iets is."}
+  ];
+
+  // Antwoord op vragen die NIET op de site staan: nooit verzinnen, altijd doorsturen.
+  const FALLBACK = `Goede vraag! Dat staat niet op de site, dus dat weet ik zo niet zeker — maar Kevin helpt je graag persoonlijk en reageert binnen 24 uur:`;
+  const FALLBACK_CTA = [
+    {type:"wa",text:"💬 Stel je vraag via WhatsApp",link:waLink("Hoi Kevin! Ik heb een vraag:")},
+    {type:"mail",text:"✉️ Mail Kevin",link:`mailto:${EMAIL}`}
+  ];
+
+  // Boekingsflow
+  const BOOKING_STEPS = [
+    {key:"naam",  q:"Top, ik help je je datum te checken! 🎉 Wat is je <b>naam</b>?", ph:"Bijv. Sanne"},
+    {key:"datum", q:"Leuk, {naam}! Op welke <b>datum</b> is je event?", ph:"Bijv. 12 september 2026"},
+    {key:"plaats",q:"En in welke <b>plaats</b> / locatie?", ph:"Bijv. Tiel"},
+    {key:"type",  q:"Wat voor <b>soort event</b> is het?", ph:"Bruiloft / bedrijfsfeest / verjaardag / festival"}
+  ];
+  const bookingMsg = (d)=>`Hoi Kevin! Ik wil graag mijn datum checken.
+Naam: ${d.naam||"-"}
+Datum: ${d.datum||"-"}
+Plaats: ${d.plaats||"-"}
+Type event: ${d.type||"-"}`;
+
+  /* ============================================================= */
+  /*  ⬆ EINDE EDIT — hieronder de werking (slimme matching)        */
+  /* ============================================================= */
+
+  const STOP = new Set(["de","het","een","en","of","ik","je","jij","u","we","wij","is","ben","hoe","kan","kun","kunt","mijn","voor","met","op","in","aan","te","heb","hebben","wil","willen","graag","dj","kevin","froger","zo","ook","jullie","jou","komt","wordt","worden","heeft","ben","even","misschien","eigenlijk","wel","niet","maar","dat","die","deze","er","nog","mij","me","ze","zij","hun","als","dan","naar","over","om","bij","tot","uit","door","allemaal","allerlei","soort","zoal"]);
+
+  // Levenshtein voor typefout-tolerantie
+  function lev(a,b){
+    if(Math.abs(a.length-b.length)>2) return 9;
+    const m=a.length,n=b.length,d=[];
+    for(let i=0;i<=m;i++) d[i]=[i];
+    for(let j=0;j<=n;j++) d[0][j]=j;
+    for(let i=1;i<=m;i++) for(let j=1;j<=n;j++)
+      d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));
+    return d[m][n];
+  }
+  // Eén woord vs één key: exact / verbuiging (stam) / kleine typefout
+  function wordMatches(w,k){
+    if(w===k) return 1;
+    if(w.length>=4 && k.length>=4){
+      // verbuiging: alleen als het kortere woord een fors deel van het langere beslaat
+      const shortL=Math.min(w.length,k.length), longL=Math.max(w.length,k.length);
+      if((w.includes(k)||k.includes(w)) && shortL/longL>=0.7) return .9; // boeking/boek, festivals/festival
+    }
+    if(w.length>=5 && k.length>=5 && lev(w,k)<=1) return .7; // typefout: bruioft/bruiloft
+    return 0;
+  }
+
+  function scoreTopic(words,keys){
+    let s=0;
+    keys.forEach(k=>{
+      const parts=k.split(" ");
+      if(parts.length>1){ if(words.join(" ").includes(k)) s+=1.2; return; } // meerwoords-key
+      let best=0; words.forEach(w=>{ const m=wordMatches(w,k); if(m>best) best=m; });
+      s+=best;
+    });
+    return s;
+  }
+
+  // Geeft beste + op één na beste onderwerp terug (voor suggesties bij twijfel)
+  function rankTopics(text){
+    const words=text.toLowerCase().replace(/[^a-z0-9\u00e0-\u00ff\s]/g,' ').split(/\s+/).filter(w=>w&&!STOP.has(w));
+    if(!words.length) return {top:null,second:null,score:0};
+    const scored=TOPICS.map(t=>({t,score:scoreTopic(words,t.keys)})).sort((a,b)=>b.score-a.score);
+    return {top:scored[0].score>0?scored[0].t:null, second:scored[1]&&scored[1].score>0?scored[1].t:null,
+            score:scored[0].score, gap:scored[0].score-(scored[1]?scored[1].score:0)};
+  }
+
+  function matchSmalltalk(text){
+    const words=text.toLowerCase().replace(/[^a-z\u00e0-\u00ff\s]/g,' ').split(/\s+/).filter(Boolean);
+    if(words.length>4) return null; // alleen korte berichtjes als smalltalk behandelen
+    for(const s of SMALLTALK){ for(const k of s.keys){ if(words.includes(k)) return s.reply; } }
+    return null;
+  }
+
+  /* ---- UI ---- */
+  const root=document.getElementById('kf-chat-root');
+  root.innerHTML=`
+    <div class="kf-window" id="kf-window" role="dialog" aria-label="Chat met DJ Kevin Froger" inert>
+      <div class="kf-head"><div class="kf-head-row">
+        <div class="kf-avatar"><img id="kf-av-img" alt="DJ Kevin Froger"></div>
+        <div><h4>DJ Kevin Froger</h4><p><span class="kf-dot"></span> Meestal binnen 24 uur antwoord</p></div>
+      </div></div>
+      <div class="kf-body" id="kf-body"></div>
+      <div class="kf-foot">
+        <input id="kf-input" type="text" placeholder="Typ je vraag…" autocomplete="off" aria-label="Bericht">
+        <button class="kf-send" id="kf-send" aria-label="Versturen">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12h15M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+      <div class="kf-credit">Snelle antwoorden · voor een offerte reageert <b>Kevin persoonlijk</b></div>
+    </div>
+    <button class="kf-launcher" id="kf-launcher" aria-label="Chat openen" aria-haspopup="dialog" aria-controls="kf-window" aria-expanded="false">
+      <span class="kf-badge">1</span>
+      <img class="kf-bubble-ic kf-launch-img" id="kf-launch-img" alt="Chat met Kevin">
+      <svg class="kf-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg>
+    </button>`;
+
+  const bodyEl=root.querySelector('#kf-body');
+  const input=root.querySelector('#kf-input');
+  // foto van Kevin in header-avatar en launcher zetten
+  const _av=root.querySelector('#kf-av-img'); if(_av) _av.src=AVATAR;
+  const _li=root.querySelector('#kf-launch-img'); if(_li) _li.src=AVATAR;
+  let booking=null;
+  const scroll=()=>{ bodyEl.scrollTop=bodyEl.scrollHeight; };
+  // scroll zo dat de BOVENKANT van een bericht netjes in beeld komt,
+  // pas nadat de browser de inhoud echt heeft gerenderd (2x rAF).
+  const scrollToTopOf=(row)=>{
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      bodyEl.scrollTop=Math.max(0,row.offsetTop-14);
+    }));
+  };
+
+  function addMsg(html,who,topAlign){
+    const row=document.createElement('div');row.className='kf-row '+who;
+    const m=document.createElement('div');m.className='kf-msg '+who;m.innerHTML=html;
+    row.appendChild(m);bodyEl.appendChild(row);
+    if(topAlign){ scrollToTopOf(row); } else { scroll(); }
+    return row;
+  }
+  function addCTA(list,noScroll){
+    const w=document.createElement('div');w.className='kf-cta';
+    list.forEach(c=>{const a=document.createElement('a');a.className=c.type;a.href=c.link;
+      a.target="_blank";a.rel="noopener";a.textContent=c.text;w.appendChild(a);});
+    bodyEl.appendChild(w);
+    if(!noScroll) scroll();
+  }
+  function typing(cb,delay){
+    const row=document.createElement('div');row.className='kf-row bot';
+    row.innerHTML='<div class="kf-typing"><span></span><span></span><span></span></div>';
+    bodyEl.appendChild(row);scroll();
+    setTimeout(()=>{ row.remove(); cb(); }, delay||600);
+  }
+  function botSay(html,after,topAlign){ typing(()=>{ addMsg(html,'bot',topAlign); if(after) after(); }); }
+
+  function showMenu(custom){
+    // Standaardmenu toont alleen topics zonder menu:false; de rest blijft via typen vindbaar.
+    const list=custom||TOPICS.filter(t=>t.menu!==false);
+    const w=document.createElement('div');w.className='kf-options';
+    list.forEach((t,i)=>{
+      const b=document.createElement('button');b.className='kf-opt';
+      // splits het emoji-icoon van de tekst
+      const m=t.label.match(/^(\S+)\s+(.*)$/);
+      const icon=m?m[1]:"•", text=m?m[2]:t.label;
+      const ic=document.createElement('span');ic.className='kf-ic';ic.textContent=icon;
+      const lb=document.createElement('span');lb.className='kf-lbl';lb.textContent=text;
+      b.appendChild(ic);b.appendChild(lb);
+      b.style.animationDelay=(i*0.03)+'s';            // nette gestaffelde reveal
+      b.onclick=()=>chooseTopic(t);
+      w.appendChild(b);
+    });
+    // bij oneven aantal de laatste knop over de volle breedte voor een net raster
+    if(list.length%2===1 && w.lastChild) w.lastChild.classList.add('kf-wide');
+    bodyEl.appendChild(w);scroll();
+  }
+
+  // Compacte knop na een antwoord: toont pas op verzoek het volledige menu,
+  // zodat het antwoord zelf leesbaar blijft en niet weggedrukt wordt.
+  function showMoreButton(noScroll){
+    const w=document.createElement('div');w.className='kf-options';
+    const b=document.createElement('button');b.className='kf-opt kf-wide kf-more';
+    const ic=document.createElement('span');ic.className='kf-ic';ic.textContent="💬";
+    const lb=document.createElement('span');lb.className='kf-lbl';lb.textContent="Nog een vraag stellen";
+    b.appendChild(ic);b.appendChild(lb);
+    b.onclick=()=>{ w.remove(); showMenu(); };
+    w.appendChild(b);bodyEl.appendChild(w);
+    if(!noScroll) scroll();
+  }
+
+  function answerTopic(t,follow){
+    botSay(t.answer,()=>{ if(t.cta) addCTA(t.cta,true); if(follow!==false) showMoreButton(true); }, true);
+  }
+  function chooseTopic(t){
+    addMsg(t.label,'user');
+    if(t.booking){ startBooking(); return; }
+    botSay(t.answer,()=>{ if(t.cta) addCTA(t.cta,true); showMoreButton(true); }, true);
+  }
+
+  /* Boekingsflow */
+  function startBooking(){ booking={step:0,data:{}}; askStep(); }
+  function askStep(){
+    const s=BOOKING_STEPS[booking.step];
+    botSay(s.q.replace(/\{naam\}/g,booking.data.naam||""),()=>{ input.placeholder=s.ph; input.focus(); });
+  }
+  function handleBooking(text){
+    const s=BOOKING_STEPS[booking.step];
+    booking.data[s.key]=text.trim(); addMsg(text,'user'); booking.step++;
+    if(booking.step<BOOKING_STEPS.length){ askStep(); return; }
+    const d=booking.data; booking=null; input.placeholder="Typ je vraag…";
+    botSay(`Helemaal goed, ${d.naam}! 🙌 Ik heb dit voor je klaargezet:<br><br>
+      <b>Datum:</b> ${d.datum}<br><b>Plaats:</b> ${d.plaats}<br><b>Event:</b> ${d.type}<br><br>
+      Tik op de knop om het direct naar Kevin te sturen — hij checkt de datum en reageert binnen 24 uur.`,
+      ()=>{
+        addCTA([
+          {type:"wa",text:"💬 Verstuur naar Kevin via WhatsApp",link:waLink(bookingMsg(d))},
+          {type:"mail",text:"✉️ Liever mailen",link:`mailto:${EMAIL}?subject=${encodeURIComponent("Datum-aanvraag "+d.datum)}&body=${encodeURIComponent(bookingMsg(d))}`}
+        ]);
+        showMoreButton();
+      });
+  }
+
+  /* Vrije tekst */
+  function handleText(text){
+    if(!text.trim()) return;
+    if(booking){ handleBooking(text); return; }
+    addMsg(text,'user');
+
+    const st=matchSmalltalk(text);
+    if(st){ botSay(st,()=>showMenu()); return; }
+
+    const r=rankTopics(text);
+    if(r.top && r.top.booking){ startBooking(); return; }
+    if(r.top && (r.gap>=0.8 || !r.second)){            // duidelijke winnaar
+      answerTopic(r.top); return;
+    }
+    if(r.top && r.second){                              // twijfel → bied beide aan
+      botSay("Ik denk dat je één van deze bedoelt — waar kan ik je over vertellen?",
+        ()=>showMenu([r.top,r.second]));
+      return;
+    }
+    // niets gevonden → nooit verzinnen, doorsturen
+    botSay(FALLBACK,()=>{ addCTA(FALLBACK_CTA); showMoreButton(); });
+  }
+
+  /* Events */
+  const launcher=root.querySelector('#kf-launcher');
+  const winEl=root.querySelector('#kf-window');
+  function setOpen(open){
+    root.classList.toggle('kf-open',open);
+    launcher.setAttribute('aria-expanded',open?'true':'false');
+    launcher.setAttribute('aria-label',open?'Chat sluiten':'Chat openen');
+    // Gesloten venster uit de tab-volgorde halen (inert = ook aria-hidden).
+    winEl.inert=!open;
+    if(open){
+      root.classList.add('kf-engaged'); // pulse blijvend stoppen na eerste opening
+      input.focus();
+      if(!bodyEl.dataset.started){ bodyEl.dataset.started="1"; botSay(WELCOME,()=>showMenu()); }
+    } else {
+      launcher.focus(); // focus terug naar de knop bij sluiten
+    }
+  }
+  launcher.onclick=()=> setOpen(!root.classList.contains('kf-open'));
+  root.querySelector('#kf-send').onclick=()=>{ handleText(input.value); input.value=''; };
+  input.addEventListener('keydown',e=>{ if(e.key==='Enter'){ handleText(input.value); input.value=''; }});
+  // Escape sluit de chat (alleen als 'ie open is).
+  root.addEventListener('keydown',e=>{ if(e.key==='Escape' && root.classList.contains('kf-open')) setOpen(false); });
+
+  /* Test-haak: maakt matching aanroepbaar buiten de UI (voor geautomatiseerd testen) */
+  window.__kfMatch=function(text){
+    const st=matchSmalltalk(text); if(st) return "SMALLTALK";
+    const r=rankTopics(text);
+    if(!r.top) return "FALLBACK";
+    if(r.gap>=0.8||!r.second) return r.top.id;
+    return r.top.id+"|"+r.second.id;
+  };
+})();
+</script>
+<!-- ==================== EINDE CHATBOT ==================== -->
