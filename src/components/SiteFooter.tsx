@@ -27,6 +27,7 @@ export function SiteFooter() {
               <li><Link to="/verjaardag-dj" className="hover:text-foreground">Feest en verjaardag</Link></li>
               <li><Link to="/zakelijk-dj" className="hover:text-foreground">Bedrijfsfeest</Link></li>
               <li><Link to="/festival-dj" className="hover:text-foreground">Festival</Link></li>
+              <li><Link to="/verzoekje" className="hover:text-foreground">Verzoekje bij de DJ</Link></li>
             </ul>
           </div>
           <div>

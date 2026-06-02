@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ZakelijkDjRouteImport } from './routes/zakelijk-dj'
 import { Route as WerkwijzeRouteImport } from './routes/werkwijze'
+import { Route as VerzoekjeRouteImport } from './routes/verzoekje'
 import { Route as VerjaardagDjRouteImport } from './routes/verjaardag-dj'
 import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as RegiosRouteImport } from './routes/regios'
@@ -65,6 +66,7 @@ import { Route as DjBoekenAmsterdamRouteImport } from './routes/dj-boeken-amster
 import { Route as DjBoekenAmersfoortRouteImport } from './routes/dj-boeken-amersfoort'
 import { Route as DjBoekenAlmereRouteImport } from './routes/dj-boeken-almere'
 import { Route as DjBoekenAlkmaarRouteImport } from './routes/dj-boeken-alkmaar'
+import { Route as DjRouteImport } from './routes/dj'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BruiloftDjRouteImport } from './routes/bruiloft-dj'
 import { Route as BiografieRouteImport } from './routes/biografie'
@@ -79,6 +81,11 @@ const ZakelijkDjRoute = ZakelijkDjRouteImport.update({
 const WerkwijzeRoute = WerkwijzeRouteImport.update({
   id: '/werkwijze',
   path: '/werkwijze',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VerzoekjeRoute = VerzoekjeRouteImport.update({
+  id: '/verzoekje',
+  path: '/verzoekje',
   getParentRoute: () => rootRouteImport,
 } as any)
 const VerjaardagDjRoute = VerjaardagDjRouteImport.update({
@@ -351,6 +358,11 @@ const DjBoekenAlkmaarRoute = DjBoekenAlkmaarRouteImport.update({
   path: '/dj-boeken-alkmaar',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DjRoute = DjRouteImport.update({
+  id: '/dj',
+  path: '/dj',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
@@ -383,6 +395,7 @@ export interface FileRoutesByFullPath {
   '/biografie': typeof BiografieRoute
   '/bruiloft-dj': typeof BruiloftDjRoute
   '/contact': typeof ContactRoute
+  '/dj': typeof DjRoute
   '/dj-boeken-alkmaar': typeof DjBoekenAlkmaarRoute
   '/dj-boeken-almere': typeof DjBoekenAlmereRoute
   '/dj-boeken-amersfoort': typeof DjBoekenAmersfoortRoute
@@ -437,6 +450,7 @@ export interface FileRoutesByFullPath {
   '/regios': typeof RegiosRoute
   '/reviews': typeof ReviewsRoute
   '/verjaardag-dj': typeof VerjaardagDjRoute
+  '/verzoekje': typeof VerzoekjeRoute
   '/werkwijze': typeof WerkwijzeRoute
   '/zakelijk-dj': typeof ZakelijkDjRoute
 }
@@ -446,6 +460,7 @@ export interface FileRoutesByTo {
   '/biografie': typeof BiografieRoute
   '/bruiloft-dj': typeof BruiloftDjRoute
   '/contact': typeof ContactRoute
+  '/dj': typeof DjRoute
   '/dj-boeken-alkmaar': typeof DjBoekenAlkmaarRoute
   '/dj-boeken-almere': typeof DjBoekenAlmereRoute
   '/dj-boeken-amersfoort': typeof DjBoekenAmersfoortRoute
@@ -500,6 +515,7 @@ export interface FileRoutesByTo {
   '/regios': typeof RegiosRoute
   '/reviews': typeof ReviewsRoute
   '/verjaardag-dj': typeof VerjaardagDjRoute
+  '/verzoekje': typeof VerzoekjeRoute
   '/werkwijze': typeof WerkwijzeRoute
   '/zakelijk-dj': typeof ZakelijkDjRoute
 }
@@ -510,6 +526,7 @@ export interface FileRoutesById {
   '/biografie': typeof BiografieRoute
   '/bruiloft-dj': typeof BruiloftDjRoute
   '/contact': typeof ContactRoute
+  '/dj': typeof DjRoute
   '/dj-boeken-alkmaar': typeof DjBoekenAlkmaarRoute
   '/dj-boeken-almere': typeof DjBoekenAlmereRoute
   '/dj-boeken-amersfoort': typeof DjBoekenAmersfoortRoute
@@ -564,6 +581,7 @@ export interface FileRoutesById {
   '/regios': typeof RegiosRoute
   '/reviews': typeof ReviewsRoute
   '/verjaardag-dj': typeof VerjaardagDjRoute
+  '/verzoekje': typeof VerzoekjeRoute
   '/werkwijze': typeof WerkwijzeRoute
   '/zakelijk-dj': typeof ZakelijkDjRoute
 }
@@ -575,6 +593,7 @@ export interface FileRouteTypes {
     | '/biografie'
     | '/bruiloft-dj'
     | '/contact'
+    | '/dj'
     | '/dj-boeken-alkmaar'
     | '/dj-boeken-almere'
     | '/dj-boeken-amersfoort'
@@ -629,6 +648,7 @@ export interface FileRouteTypes {
     | '/regios'
     | '/reviews'
     | '/verjaardag-dj'
+    | '/verzoekje'
     | '/werkwijze'
     | '/zakelijk-dj'
   fileRoutesByTo: FileRoutesByTo
@@ -638,6 +658,7 @@ export interface FileRouteTypes {
     | '/biografie'
     | '/bruiloft-dj'
     | '/contact'
+    | '/dj'
     | '/dj-boeken-alkmaar'
     | '/dj-boeken-almere'
     | '/dj-boeken-amersfoort'
@@ -692,6 +713,7 @@ export interface FileRouteTypes {
     | '/regios'
     | '/reviews'
     | '/verjaardag-dj'
+    | '/verzoekje'
     | '/werkwijze'
     | '/zakelijk-dj'
   id:
@@ -701,6 +723,7 @@ export interface FileRouteTypes {
     | '/biografie'
     | '/bruiloft-dj'
     | '/contact'
+    | '/dj'
     | '/dj-boeken-alkmaar'
     | '/dj-boeken-almere'
     | '/dj-boeken-amersfoort'
@@ -755,6 +778,7 @@ export interface FileRouteTypes {
     | '/regios'
     | '/reviews'
     | '/verjaardag-dj'
+    | '/verzoekje'
     | '/werkwijze'
     | '/zakelijk-dj'
   fileRoutesById: FileRoutesById
@@ -765,6 +789,7 @@ export interface RootRouteChildren {
   BiografieRoute: typeof BiografieRoute
   BruiloftDjRoute: typeof BruiloftDjRoute
   ContactRoute: typeof ContactRoute
+  DjRoute: typeof DjRoute
   DjBoekenAlkmaarRoute: typeof DjBoekenAlkmaarRoute
   DjBoekenAlmereRoute: typeof DjBoekenAlmereRoute
   DjBoekenAmersfoortRoute: typeof DjBoekenAmersfoortRoute
@@ -819,6 +844,7 @@ export interface RootRouteChildren {
   RegiosRoute: typeof RegiosRoute
   ReviewsRoute: typeof ReviewsRoute
   VerjaardagDjRoute: typeof VerjaardagDjRoute
+  VerzoekjeRoute: typeof VerzoekjeRoute
   WerkwijzeRoute: typeof WerkwijzeRoute
   ZakelijkDjRoute: typeof ZakelijkDjRoute
 }
@@ -837,6 +863,13 @@ declare module '@tanstack/react-router' {
       path: '/werkwijze'
       fullPath: '/werkwijze'
       preLoaderRoute: typeof WerkwijzeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/verzoekje': {
+      id: '/verzoekje'
+      path: '/verzoekje'
+      fullPath: '/verzoekje'
+      preLoaderRoute: typeof VerzoekjeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/verjaardag-dj': {
@@ -1217,6 +1250,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DjBoekenAlkmaarRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dj': {
+      id: '/dj'
+      path: '/dj'
+      fullPath: '/dj'
+      preLoaderRoute: typeof DjRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -1261,6 +1301,7 @@ const rootRouteChildren: RootRouteChildren = {
   BiografieRoute: BiografieRoute,
   BruiloftDjRoute: BruiloftDjRoute,
   ContactRoute: ContactRoute,
+  DjRoute: DjRoute,
   DjBoekenAlkmaarRoute: DjBoekenAlkmaarRoute,
   DjBoekenAlmereRoute: DjBoekenAlmereRoute,
   DjBoekenAmersfoortRoute: DjBoekenAmersfoortRoute,
@@ -1315,6 +1356,7 @@ const rootRouteChildren: RootRouteChildren = {
   RegiosRoute: RegiosRoute,
   ReviewsRoute: ReviewsRoute,
   VerjaardagDjRoute: VerjaardagDjRoute,
+  VerzoekjeRoute: VerzoekjeRoute,
   WerkwijzeRoute: WerkwijzeRoute,
   ZakelijkDjRoute: ZakelijkDjRoute,
 }

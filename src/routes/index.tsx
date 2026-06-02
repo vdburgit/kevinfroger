@@ -131,6 +131,9 @@ function Index() {
             <a href="tel:0645251333" className="rounded-full border-2 border-secondary text-secondary px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.18em] uppercase font-bold hover:bg-secondary hover:text-secondary-foreground transition">
               Bellen
             </a>
+            <Link to="/verzoekje" className="rounded-full bg-secondary text-secondary-foreground px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.18em] uppercase font-bold hover:opacity-90 transition shadow-[var(--shadow-glow)] animate-pulse">
+              🎉 Verzoekje bij de DJ
+            </Link>
           </div>
         </div>
 
