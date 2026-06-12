@@ -43,8 +43,20 @@ export function SiteFooter() {
           </div>
         </div>
 
-        {/* Subtiele link naar landelijk werkgebied (alle plaatsen + provincies) */}
+        {/* Vragenlijst-CTA */}
         <div className="mt-10 pt-8 border-t border-border text-center">
+          <a
+            href="https://kevinfroger.fillout.com/t/e4SxxxQXrjus"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block rounded-full bg-primary text-primary-foreground border-2 border-secondary px-6 py-3 text-xs sm:text-sm tracking-[0.15em] uppercase font-bold hover:bg-secondary hover:text-secondary-foreground transition"
+          >
+            Vul de vragenlijst in
+          </a>
+        </div>
+
+        {/* Subtiele link naar landelijk werkgebied (alle plaatsen + provincies) */}
+        <div className="mt-8 text-center">
           <Link
             to="/regios"
             className="text-muted-foreground text-xs tracking-[0.18em] uppercase font-bold hover:text-foreground transition"

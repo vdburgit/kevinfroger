@@ -136,6 +136,15 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
               >
                 💬 Direct een appje sturen
               </a>
+              <a
+                href="https://kevinfroger.fillout.com/t/e4SxxxQXrjus"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
+                className="block hover:text-foreground"
+              >
+                📝 Vul de vragenlijst in
+              </a>
               <SocialLinks className="pt-2" />
             </div>
           </div>
