@@ -6,6 +6,9 @@ Allow: /
 Allow: /images/
 Allow: /assets/
 
+# Privé DJ-dashboard (alleen exact /dj; $ voorkomt blokkade van /dj-boeken-*)
+Disallow: /dj$
+
 # Block development files
 Disallow: /src/
 Disallow: /.git/
