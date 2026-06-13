@@ -94,6 +94,7 @@ const ORGANIZATION_JSONLD = {
         "Allround DJ voor bruiloft, bedrijfsfeest, verjaardag of festival door heel Nederland. Veel ervaring in de Betuwe, Bommelerwaard, Hoeksche Waard en Zuid-Holland. Eigen licht en geluid, DJ en MC in een persoon.",
       address: {
         "@type": "PostalAddress",
+        addressLocality: "'s-Gravendeel",
         addressRegion: "Zuid-Holland",
         addressCountry: "NL",
       },
