@@ -61,7 +61,7 @@ export function SiteFooter() {
             to="/regios"
             className="text-muted-foreground text-xs tracking-[0.18em] uppercase font-bold hover:text-foreground transition"
           >
-            DJ in Nederland — bekijk alle plaatsen
+            DJ in Nederland, bekijk alle plaatsen
           </Link>
         </div>
       </div>
