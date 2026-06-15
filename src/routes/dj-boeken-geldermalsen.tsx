@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { LocationLayout } from "@/components/LocationLayout";
-import { breadcrumb, buildSeo, service } from "@/lib/seo";
+import { breadcrumb, buildSeo, cityFaq, faqPage, service } from "@/lib/seo";
 
 const IMG = "/images/dj-kevin-froger-bruiloft-scaled.jpeg";
 
@@ -14,10 +14,12 @@ export const Route = createFileRoute("/dj-boeken-geldermalsen")({
       service({
         name: "DJ Geldermalsen en West Betuwe",
         serviceType: "DJ in Geldermalsen",
+        areaServed: "Geldermalsen",
         description: "Allround DJ voor bruiloft, verjaardag en bedrijfsfeest in Geldermalsen en de West Betuwe. Complete show inclusief licht en geluid.",
         path: "/dj-boeken-geldermalsen",
         image: IMG,
       }),
+      faqPage(cityFaq("Geldermalsen")),
       breadcrumb([
         { name: "Home", path: "/" },
         { name: "Werkgebied", path: "/regios" },
@@ -65,6 +67,16 @@ function Page() {
       <p className="text-lg text-muted-foreground leading-relaxed">
         Via de A15 is West Betuwe goed bereikbaar. App of bel ons om je datum te checken.
       </p>
+
+      <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6 mt-10" style={{ fontFamily: "var(--font-display)" }}>Veelgestelde vragen over een DJ in Geldermalsen</h2>
+      <div className="divide-y-2 divide-border border-y-2 border-border">
+        {cityFaq("Geldermalsen").map((f) => (
+          <details key={f.q} className="group py-5">
+            <summary className="flex cursor-pointer items-center justify-between gap-4 text-lg font-semibold text-foreground list-none [&::-webkit-details-marker]:hidden"><span>{f.q}</span><span aria-hidden className="shrink-0 text-secondary text-2xl leading-none transition-transform group-open:rotate-45">+</span></summary>
+            <p className="mt-3 text-muted-foreground leading-relaxed">{f.a}</p>
+          </details>
+        ))}
+      </div>
     </LocationLayout>
   );
 }

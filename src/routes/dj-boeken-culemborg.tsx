@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { LocationLayout } from "@/components/LocationLayout";
-import { breadcrumb, buildSeo, service } from "@/lib/seo";
+import { breadcrumb, buildSeo, cityFaq, faqPage, service } from "@/lib/seo";
 
 const IMG = "/images/dj-kevin-froger-bruiloft-scaled.jpeg";
 
@@ -14,10 +14,12 @@ export const Route = createFileRoute("/dj-boeken-culemborg")({
       service({
         name: "DJ Culemborg",
         serviceType: "DJ in Culemborg",
+        areaServed: "Culemborg",
         description: "Allround DJ voor bruiloft, verjaardag en bedrijfsfeest in Culemborg. Inclusief licht, geluid en MC services.",
         path: "/dj-boeken-culemborg",
         image: IMG,
       }),
+      faqPage(cityFaq("Culemborg")),
       breadcrumb([
         { name: "Home", path: "/" },
         { name: "Werkgebied", path: "/regios" },
@@ -33,7 +35,7 @@ function Page() {
     <LocationLayout
       breadcrumbs={[{ name: "Home", path: "/" }, { name: "Werkgebied", path: "/regios" }, { name: "Culemborg", path: "/dj-boeken-culemborg" }]}
       eyebrow="Culemborg"
-      heroTitle={<>DJ huren<br/><span className="text-primary">in Culemborg.</span></>}
+      heroTitle={<>DJ in Culemborg<br/><span className="text-primary">huren.</span></>}
       heroIntro="Culemborg is een sfeervolle stad aan de Lek, met genoeg mooie plekken voor een feest. Ik draai er regelmatig, en ook in de omliggende dorpen Beusichem, Ravenswaaij, Eck en Wiel en Ingen."
       heroImage={IMG}
       heroImageAlt="DJ Kevin Froger op een bruiloft in Culemborg"
@@ -65,6 +67,16 @@ function Page() {
       <p className="text-lg text-muted-foreground leading-relaxed">
         Benieuwd naar de mogelijkheden voor jouw datum? App ons of vraag een offerte aan. Bekijk eerst de <Link to="/prijzen" className="text-secondary underline hover:text-primary">prijzen</Link> en <Link to="/reviews" className="text-secondary underline hover:text-primary">reviews</Link>.
       </p>
+
+      <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6 mt-10" style={{ fontFamily: "var(--font-display)" }}>Veelgestelde vragen over een DJ in Culemborg</h2>
+      <div className="divide-y-2 divide-border border-y-2 border-border">
+        {cityFaq("Culemborg").map((f) => (
+          <details key={f.q} className="group py-5">
+            <summary className="flex cursor-pointer items-center justify-between gap-4 text-lg font-semibold text-foreground list-none [&::-webkit-details-marker]:hidden"><span>{f.q}</span><span aria-hidden className="shrink-0 text-secondary text-2xl leading-none transition-transform group-open:rotate-45">+</span></summary>
+            <p className="mt-3 text-muted-foreground leading-relaxed">{f.a}</p>
+          </details>
+        ))}
+      </div>
     </LocationLayout>
   );
 }

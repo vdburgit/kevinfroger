@@ -21,6 +21,8 @@ export function PageHero({ eyebrow, title, intro, image, imageAlt, breadcrumbs }
         srcSet={srcSet}
         sizes="100vw"
         alt={imageAlt}
+        width={1920}
+        height={1080}
         className="absolute inset-0 w-full h-full object-cover"
         loading="eager"
         fetchPriority="high"

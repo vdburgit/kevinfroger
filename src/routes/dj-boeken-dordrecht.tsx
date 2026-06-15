@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { LocationLayout } from "@/components/LocationLayout";
-import { breadcrumb, buildSeo, service } from "@/lib/seo";
+import { breadcrumb, buildSeo, cityFaq, faqPage, service } from "@/lib/seo";
 
 const IMG = "/images/dj-kevin-froger-bruiloft-scaled.jpeg";
 
@@ -14,10 +14,12 @@ export const Route = createFileRoute("/dj-boeken-dordrecht")({
       service({
         name: "DJ Dordrecht",
         serviceType: "DJ in Dordrecht",
+        areaServed: "Dordrecht",
         description: "Allround DJ voor bruiloft, verjaardag en bedrijfsfeest in Dordrecht en de hele Drechtsteden. Eigen licht en geluid.",
         path: "/dj-boeken-dordrecht",
         image: IMG,
       }),
+      faqPage(cityFaq("Dordrecht")),
       breadcrumb([
         { name: "Home", path: "/" },
         { name: "Werkgebied", path: "/regios" },
@@ -33,7 +35,7 @@ function Page() {
     <LocationLayout
       breadcrumbs={[{ name: "Home", path: "/" }, { name: "Werkgebied", path: "/regios" }, { name: "Dordrecht", path: "/dj-boeken-dordrecht" }]}
       eyebrow="Dordrecht"
-      heroTitle={<>DJ huren<br/><span className="text-primary">in Dordrecht.</span></>}
+      heroTitle={<>DJ in Dordrecht<br/><span className="text-primary">huren.</span></>}
       heroIntro="Dordrecht is een vaste stop voor mij. Ik ken de stad goed en draai er regelmatig, van een bruiloft op een historische locatie tot een bedrijfsfeest in het centrum."
       heroImage={IMG}
       heroImageAlt="DJ Kevin Froger draait een feest in Dordrecht"
@@ -69,6 +71,16 @@ function Page() {
       <p className="text-lg text-muted-foreground leading-relaxed">
         Wil je weten of ik op jouw datum kan? App of bel ons. Bekijk eerst de <Link to="/prijzen" className="text-secondary underline hover:text-primary">prijzen</Link>.
       </p>
+
+      <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6 mt-10" style={{ fontFamily: "var(--font-display)" }}>Veelgestelde vragen over een DJ in Dordrecht</h2>
+      <div className="divide-y-2 divide-border border-y-2 border-border">
+        {cityFaq("Dordrecht").map((f) => (
+          <details key={f.q} className="group py-5">
+            <summary className="flex cursor-pointer items-center justify-between gap-4 text-lg font-semibold text-foreground list-none [&::-webkit-details-marker]:hidden"><span>{f.q}</span><span aria-hidden className="shrink-0 text-secondary text-2xl leading-none transition-transform group-open:rotate-45">+</span></summary>
+            <p className="mt-3 text-muted-foreground leading-relaxed">{f.a}</p>
+          </details>
+        ))}
+      </div>
     </LocationLayout>
   );
 }

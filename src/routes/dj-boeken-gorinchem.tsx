@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { LocationLayout } from "@/components/LocationLayout";
-import { breadcrumb, buildSeo, service } from "@/lib/seo";
+import { breadcrumb, buildSeo, cityFaq, faqPage, service } from "@/lib/seo";
 
 const IMG = "/images/dj-kevin-froger-bruiloft-scaled.jpeg";
 
@@ -14,10 +14,12 @@ export const Route = createFileRoute("/dj-boeken-gorinchem")({
       service({
         name: "DJ Gorinchem",
         serviceType: "DJ in Gorinchem",
+        areaServed: "Gorinchem",
         description: "Allround DJ voor bruiloften, verjaardagen en bedrijfsfeesten in Gorinchem. Complete show met licht en geluid, en MC services.",
         path: "/dj-boeken-gorinchem",
         image: IMG,
       }),
+      faqPage(cityFaq("Gorinchem")),
       breadcrumb([
         { name: "Home", path: "/" },
         { name: "Werkgebied", path: "/regios" },
@@ -33,7 +35,7 @@ function Page() {
     <LocationLayout
       breadcrumbs={[{ name: "Home", path: "/" }, { name: "Werkgebied", path: "/regios" }, { name: "Gorinchem", path: "/dj-boeken-gorinchem" }]}
       eyebrow="Gorinchem"
-      heroTitle={<>DJ huren<br/><span className="text-primary">in Gorinchem.</span></>}
+      heroTitle={<>DJ in Gorinchem<br/><span className="text-primary">huren.</span></>}
       heroIntro="Gorinchem is voor mij een vaste stop tussen de Hoeksche Waard en de Betuwe. Ik draai er regelmatig en ken zowel de stad als de Alblasserwaard en het Land van Heusden en Altena goed."
       heroImage={IMG}
       heroImageAlt="DJ Kevin Froger draait een feest in Gorinchem"
@@ -65,6 +67,16 @@ function Page() {
       <p className="text-lg text-muted-foreground leading-relaxed">
         Wil je weten of ik beschikbaar ben? Bel of app ons. Bekijk eerst de <Link to="/prijzen" className="text-secondary underline hover:text-primary">prijzen</Link>.
       </p>
+
+      <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6 mt-10" style={{ fontFamily: "var(--font-display)" }}>Veelgestelde vragen over een DJ in Gorinchem</h2>
+      <div className="divide-y-2 divide-border border-y-2 border-border">
+        {cityFaq("Gorinchem").map((f) => (
+          <details key={f.q} className="group py-5">
+            <summary className="flex cursor-pointer items-center justify-between gap-4 text-lg font-semibold text-foreground list-none [&::-webkit-details-marker]:hidden"><span>{f.q}</span><span aria-hidden className="shrink-0 text-secondary text-2xl leading-none transition-transform group-open:rotate-45">+</span></summary>
+            <p className="mt-3 text-muted-foreground leading-relaxed">{f.a}</p>
+          </details>
+        ))}
+      </div>
     </LocationLayout>
   );
 }

@@ -135,6 +135,30 @@ export function aggregateRating() {
   };
 }
 
+// Herbruikbare per-plaats FAQ. Zelfde array voedt het zichtbare <Faq> en de
+// faqPage()-JSON-LD, zodat tekst en markup matchen. Vangt long-tail queries als
+// "wat kost een dj in <plaats>" en "dj <plaats> eigen licht en geluid".
+export function cityFaq(plaats: string): FaqItem[] {
+  return [
+    {
+      q: `Wat kost een DJ in ${plaats}?`,
+      a: `Dat hangt af van de duur, de locatie en je wensen rond licht en geluid. Je krijgt vooraf een heldere all-in prijs zonder verrassingen achteraf. Vraag een offerte aan met je datum in ${plaats}, dan reken ik het voor je uit.`,
+    },
+    {
+      q: `Kom je met eigen licht en geluid naar ${plaats}?`,
+      a: `Ja, ik draai in ${plaats} met een complete set. Licht en geluid neem ik zelf mee en stem ik af op de ruimte, dus op de locatie hoef je daar niets voor te regelen.`,
+    },
+    {
+      q: `Ben je in ${plaats} ook DJ en MC in een?`,
+      a: `Ja. Ik draai de muziek en pak zelf de microfoon voor de aankondigingen, speeches en het inleiden van de dans. Je hebt er in ${plaats} geen losse presentator bij nodig.`,
+    },
+    {
+      q: `Hoe snel kan ik een DJ in ${plaats} boeken?`,
+      a: `App of bel me met je datum, dan check ik meteen of ik vrij ben in ${plaats}. Ik reageer binnen 24 uur. Populaire data raken vroeg vol, dus vroeg checken is slim.`,
+    },
+  ];
+}
+
 export function service(opts: {
   name: string;
   description: string;
@@ -142,6 +166,8 @@ export function service(opts: {
   path: string;
   image: string;
   areaServed?: string;
+  // Standaard "City" (een plaats). Voor regio's/provincies "AdministrativeArea".
+  areaServedType?: "City" | "AdministrativeArea";
   rating?: boolean;
 }) {
   return {
@@ -154,7 +180,7 @@ export function service(opts: {
     image: abs(opts.image),
     provider: { "@id": `${SITE_URL}/#business` },
     areaServed: opts.areaServed
-      ? { "@type": "AdministrativeArea", name: opts.areaServed }
+      ? { "@type": opts.areaServedType ?? "City", name: opts.areaServed }
       : { "@type": "Country", name: "Nederland" },
     // Standaard de echte aggregateRating meenemen. Elke pagina die service()
     // gebruikt toont ook een zichtbaar reviewblok (ReviewBadge/ReviewStrip),

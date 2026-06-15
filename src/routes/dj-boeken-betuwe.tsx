@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { LocationLayout } from "@/components/LocationLayout";
-import { breadcrumb, buildSeo, service } from "@/lib/seo";
+import { breadcrumb, buildSeo, cityFaq, faqPage, service } from "@/lib/seo";
 
 const IMG = "/images/dj-kevin-froger-apreskifeest.webp";
 
@@ -14,10 +14,13 @@ export const Route = createFileRoute("/dj-boeken-betuwe")({
       service({
         name: "DJ Betuwe en Rivierenland",
         serviceType: "DJ in Betuwe",
+        areaServed: "Betuwe",
+        areaServedType: "AdministrativeArea",
         description: "Allround DJ voor bruiloften, bedrijfsfeesten en verjaardagen in de Betuwe en het Rivierenland. Inclusief licht, geluid en MC.",
         path: "/dj-boeken-betuwe",
         image: IMG,
       }),
+      faqPage(cityFaq("de Betuwe")),
       breadcrumb([
         { name: "Home", path: "/" },
         { name: "Werkgebied", path: "/regios" },
@@ -33,7 +36,7 @@ function Page() {
     <LocationLayout
       breadcrumbs={[{ name: "Home", path: "/" }, { name: "Werkgebied", path: "/regios" }, { name: "Betuwe", path: "/dj-boeken-betuwe" }]}
       eyebrow="Betuwe en Rivierenland"
-      heroTitle={<>Allround DJ in de<br/><span className="text-primary">Betuwe.</span></>}
+      heroTitle={<>DJ in de Betuwe<br/><span className="text-primary">huren.</span></>}
       heroIntro="De Betuwe is een gebied met veel mooie feestplekken, van landelijke trouwlocaties tussen de boomgaarden tot zalen in de dorpskernen. Ik draai er regelmatig, van Tiel tot Zaltbommel en alles ertussen."
       heroImage={IMG}
       heroImageAlt="DJ Kevin Froger met complete show in de Betuwe"
@@ -74,6 +77,16 @@ function Page() {
       <p className="text-lg text-muted-foreground leading-relaxed">
         Vraag een vrijblijvende offerte aan of app ons. Bekijk eerst de <Link to="/prijzen" className="text-secondary underline hover:text-primary">prijzen</Link>.
       </p>
+
+      <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6 mt-10" style={{ fontFamily: "var(--font-display)" }}>Veelgestelde vragen over een DJ in de Betuwe</h2>
+      <div className="divide-y-2 divide-border border-y-2 border-border">
+        {cityFaq("de Betuwe").map((f) => (
+          <details key={f.q} className="group py-5">
+            <summary className="flex cursor-pointer items-center justify-between gap-4 text-lg font-semibold text-foreground list-none [&::-webkit-details-marker]:hidden"><span>{f.q}</span><span aria-hidden className="shrink-0 text-secondary text-2xl leading-none transition-transform group-open:rotate-45">+</span></summary>
+            <p className="mt-3 text-muted-foreground leading-relaxed">{f.a}</p>
+          </details>
+        ))}
+      </div>
     </LocationLayout>
   );
 }

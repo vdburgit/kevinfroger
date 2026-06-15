@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CityPage } from "@/components/CityPage";
 import { CITIES } from "@/data/cities";
-import { breadcrumb, buildSeo, service } from "@/lib/seo";
+import { breadcrumb, buildSeo, cityFaq, faqPage, service } from "@/lib/seo";
 
 const CITY = CITIES["ridderkerk"];
 const IMG = "/images/dj-kevin-froger-bruiloft-scaled.jpeg";
@@ -18,6 +18,7 @@ export const Route = createFileRoute("/dj-boeken-ridderkerk")({
         service({
           name: `DJ ${CITY.name}`,
           serviceType: `DJ in ${CITY.name}`,
+          areaServed: CITY.name,
           description: CITY.serviceDescription,
           path: PATH,
           image: IMG,
@@ -28,6 +29,7 @@ export const Route = createFileRoute("/dj-boeken-ridderkerk")({
           name: CITY.name,
           containedInPlace: { "@type": "AdministrativeArea", name: CITY.province },
         },
+        faqPage(cityFaq(CITY.name)),
         breadcrumb([
           { name: "Home", path: "/" },
           { name: "Werkgebied", path: "/regios" },

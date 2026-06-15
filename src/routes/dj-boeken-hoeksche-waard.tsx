@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { LocationLayout } from "@/components/LocationLayout";
 import { ReviewBadge } from "@/components/ReviewBadge";
-import { breadcrumb, buildSeo, service } from "@/lib/seo";
+import { breadcrumb, buildSeo, cityFaq, faqPage, service } from "@/lib/seo";
 
 const IMG = "/images/dj-kevin-froger-bruiloft-scaled.jpeg";
 
@@ -15,10 +15,13 @@ export const Route = createFileRoute("/dj-boeken-hoeksche-waard")({
       service({
         name: "DJ Hoeksche Waard",
         serviceType: "DJ in Hoeksche Waard",
+        areaServed: "Hoeksche Waard",
+        areaServedType: "AdministrativeArea",
         description: "Allround DJ voor bruiloften, feesten en bedrijfsfeesten in de hele Hoeksche Waard. Complete show met licht en geluid, DJ en MC in een persoon.",
         path: "/dj-boeken-hoeksche-waard",
         image: IMG,
       }),
+      faqPage(cityFaq("de Hoeksche Waard")),
       breadcrumb([
         { name: "Home", path: "/" },
         { name: "Werkgebied", path: "/regios" },
@@ -74,6 +77,16 @@ function Page() {
       <p className="text-lg text-muted-foreground leading-relaxed">
         Wil je weten of ik op jouw datum kan? Bel of app ons, dan check ik het meteen. Of bekijk eerst de <Link to="/prijzen" className="text-secondary underline hover:text-primary">prijzen</Link> en <Link to="/reviews" className="text-secondary underline hover:text-primary">reviews</Link>.
       </p>
+
+      <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6 mt-10" style={{ fontFamily: "var(--font-display)" }}>Veelgestelde vragen over een DJ in de Hoeksche Waard</h2>
+      <div className="divide-y-2 divide-border border-y-2 border-border">
+        {cityFaq("de Hoeksche Waard").map((f) => (
+          <details key={f.q} className="group py-5">
+            <summary className="flex cursor-pointer items-center justify-between gap-4 text-lg font-semibold text-foreground list-none [&::-webkit-details-marker]:hidden"><span>{f.q}</span><span aria-hidden className="shrink-0 text-secondary text-2xl leading-none transition-transform group-open:rotate-45">+</span></summary>
+            <p className="mt-3 text-muted-foreground leading-relaxed">{f.a}</p>
+          </details>
+        ))}
+      </div>
     </LocationLayout>
   );
 }

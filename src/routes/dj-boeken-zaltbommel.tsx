@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { LocationLayout } from "@/components/LocationLayout";
-import { breadcrumb, buildSeo, service } from "@/lib/seo";
+import { breadcrumb, buildSeo, cityFaq, faqPage, service } from "@/lib/seo";
 
 const IMG = "/images/dj-kevin-froger-bruiloft-scaled.jpeg";
 
@@ -14,10 +14,12 @@ export const Route = createFileRoute("/dj-boeken-zaltbommel")({
       service({
         name: "DJ Zaltbommel en Bommelerwaard",
         serviceType: "DJ in Zaltbommel",
+        areaServed: "Zaltbommel",
         description: "Allround DJ voor bruiloft, verjaardag of bedrijfsfeest in Zaltbommel en de Bommelerwaard. Complete show inclusief licht en geluid.",
         path: "/dj-boeken-zaltbommel",
         image: IMG,
       }),
+      faqPage(cityFaq("Zaltbommel")),
       breadcrumb([
         { name: "Home", path: "/" },
         { name: "Werkgebied", path: "/regios" },
@@ -33,7 +35,7 @@ function Page() {
     <LocationLayout
       breadcrumbs={[{ name: "Home", path: "/" }, { name: "Werkgebied", path: "/regios" }, { name: "Zaltbommel", path: "/dj-boeken-zaltbommel" }]}
       eyebrow="Zaltbommel"
-      heroTitle={<>DJ huren<br/><span className="text-primary">in Zaltbommel.</span></>}
+      heroTitle={<>DJ in Zaltbommel<br/><span className="text-primary">huren.</span></>}
       heroIntro="Zaltbommel ligt net ten zuiden van de Waal, in de Bommelerwaard. Een mooi stukje rivierenland met genoeg sfeervolle feestlocaties. Ik draai er graag en de regio is vanuit mijn kant prima bereikbaar."
       heroImage={IMG}
       heroImageAlt="DJ Kevin Froger op een feest in Zaltbommel"
@@ -65,6 +67,16 @@ function Page() {
       <p className="text-lg text-muted-foreground leading-relaxed">
         Bel of app ons om te kijken of ik vrij ben op jouw datum. Bekijk eerst de <Link to="/prijzen" className="text-secondary underline hover:text-primary">prijzen</Link>.
       </p>
+
+      <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6 mt-10" style={{ fontFamily: "var(--font-display)" }}>Veelgestelde vragen over een DJ in Zaltbommel</h2>
+      <div className="divide-y-2 divide-border border-y-2 border-border">
+        {cityFaq("Zaltbommel").map((f) => (
+          <details key={f.q} className="group py-5">
+            <summary className="flex cursor-pointer items-center justify-between gap-4 text-lg font-semibold text-foreground list-none [&::-webkit-details-marker]:hidden"><span>{f.q}</span><span aria-hidden className="shrink-0 text-secondary text-2xl leading-none transition-transform group-open:rotate-45">+</span></summary>
+            <p className="mt-3 text-muted-foreground leading-relaxed">{f.a}</p>
+          </details>
+        ))}
+      </div>
     </LocationLayout>
   );
 }

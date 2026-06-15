@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { LocationLayout } from "@/components/LocationLayout";
 import { ReviewBadge } from "@/components/ReviewBadge";
+import { cityFaq } from "@/lib/seo";
 import type { CityData } from "@/data/cities";
 
 const IMG = "/images/dj-kevin-froger-bruiloft-scaled.jpeg";
@@ -11,8 +12,8 @@ export function CityPage({ city }: { city: CityData }) {
       eyebrow={`DJ in ${city.name}`}
       heroTitle={
         <>
-          DJ huren<br />
-          <span className="text-primary">in {city.name}.</span>
+          DJ in {city.name}<br />
+          <span className="text-primary">huren.</span>
         </>
       }
       heroIntro={city.heroIntro}
@@ -28,7 +29,7 @@ export function CityPage({ city }: { city: CityData }) {
       <ReviewBadge className="mb-8" />
 
       <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>
-        Bruiloft, feest of zakelijk in {city.name}
+        Bruiloft-DJ en feest-DJ in {city.name}
       </h2>
       {city.paragraphs.map((p, i) => (
         <p key={i} className="text-lg text-muted-foreground leading-relaxed mb-6">
@@ -57,6 +58,21 @@ export function CityPage({ city }: { city: CityData }) {
           Onderdeel van de regio <strong className="text-foreground">{city.region}</strong> in de provincie <strong className="text-foreground">{city.province}</strong>. Bekijk mijn complete <Link to="/regios" className="text-secondary underline hover:text-primary">werkgebied per provincie</Link>.
         </p>
       )}
+
+      <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>
+        Veelgestelde vragen over een DJ in {city.name}
+      </h2>
+      <div className="divide-y-2 divide-border border-y-2 border-border mb-10">
+        {cityFaq(city.name).map((f) => (
+          <details key={f.q} className="group py-5">
+            <summary className="flex cursor-pointer items-center justify-between gap-4 text-lg font-semibold text-foreground list-none [&::-webkit-details-marker]:hidden">
+              <span>{f.q}</span>
+              <span aria-hidden className="shrink-0 text-secondary text-2xl leading-none transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p className="mt-3 text-muted-foreground leading-relaxed">{f.a}</p>
+          </details>
+        ))}
+      </div>
 
       <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>
         Datum checken

@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { LocationLayout } from "@/components/LocationLayout";
-import { breadcrumb, buildSeo, service } from "@/lib/seo";
+import { breadcrumb, buildSeo, cityFaq, faqPage, service } from "@/lib/seo";
 
 const IMG = "/images/dj-kevin-froger-bruiloft-scaled.jpeg";
 
@@ -14,10 +14,12 @@ export const Route = createFileRoute("/dj-boeken-tiel")({
       service({
         name: "Bruiloft DJ Tiel",
         serviceType: "Wedding DJ Tiel",
+        areaServed: "Tiel",
         description: "Allround DJ voor bruiloft en feest in Tiel en de Betuwe. Complete show met licht en geluid, DJ en MC in een persoon.",
         path: "/dj-boeken-tiel",
         image: IMG,
       }),
+      faqPage(cityFaq("Tiel")),
       breadcrumb([
         { name: "Home", path: "/" },
         { name: "Werkgebied", path: "/regios" },
@@ -33,7 +35,7 @@ function Page() {
     <LocationLayout
       breadcrumbs={[{ name: "Home", path: "/" }, { name: "Werkgebied", path: "/regios" }, { name: "Tiel", path: "/dj-boeken-tiel" }]}
       eyebrow="Tiel"
-      heroTitle={<>DJ huren<br/><span className="text-primary">in Tiel.</span></>}
+      heroTitle={<>DJ in Tiel<br/><span className="text-primary">huren.</span></>}
       heroIntro="Tiel is voor mij een vast punt in de Betuwe. Ik draai er regelmatig en ben snel ter plaatse, ook voor de omliggende dorpen zoals Tuil, Ophemert, Varik en Zoelen."
       heroImage={IMG}
       heroImageAlt="DJ Kevin Froger draait een bruiloft in Tiel"
@@ -76,6 +78,16 @@ function Page() {
       <p className="text-lg text-muted-foreground leading-relaxed">
         Bel of app ons voor je datum. Of bekijk eerst de <Link to="/prijzen" className="text-secondary underline hover:text-primary">prijzen</Link>.
       </p>
+
+      <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6 mt-10" style={{ fontFamily: "var(--font-display)" }}>Veelgestelde vragen over een DJ in Tiel</h2>
+      <div className="divide-y-2 divide-border border-y-2 border-border">
+        {cityFaq("Tiel").map((f) => (
+          <details key={f.q} className="group py-5">
+            <summary className="flex cursor-pointer items-center justify-between gap-4 text-lg font-semibold text-foreground list-none [&::-webkit-details-marker]:hidden"><span>{f.q}</span><span aria-hidden className="shrink-0 text-secondary text-2xl leading-none transition-transform group-open:rotate-45">+</span></summary>
+            <p className="mt-3 text-muted-foreground leading-relaxed">{f.a}</p>
+          </details>
+        ))}
+      </div>
     </LocationLayout>
   );
 }
