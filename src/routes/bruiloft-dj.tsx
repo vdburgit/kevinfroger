@@ -5,6 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { ContactCta } from "@/components/ContactCta";
 import { ServiceCityIndex } from "@/components/ServiceCityIndex";
 import { Faq } from "@/components/Faq";
+import { ReviewStrip } from "@/components/ReviewBadge";
 import { breadcrumb, buildSeo, faqPage, service, type FaqItem } from "@/lib/seo";
 
 const IMG = "/images/dj-kevin-froger-bruiloft-scaled.jpeg";
@@ -93,7 +94,7 @@ function Page() {
               Vooraf bespreken we jullie muziekwensen, de openingsdans en het draaiboek. Op de dag zelf ben ik er ruim op tijd voor opbouw en soundcheck. Als DJ en MC in een persoon kan ik ook aankondigingen en momenten netjes aan elkaar praten. Licht en geluid neem ik mee, dus jullie hoeven nergens voor te zorgen.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/werkwijze" className="rounded-full border-2 border-secondary text-secondary px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:bg-secondary hover:text-secondary-foreground transition">Werkwijze</Link>
+              <Link to="/dj-en-mc" className="rounded-full border-2 border-secondary text-secondary px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:bg-secondary hover:text-secondary-foreground transition">DJ en MC</Link>
               <Link to="/prijzen" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Prijsindicatie</Link>
               <Link to="/reviews" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Reviews</Link>
             </div>
@@ -109,6 +110,7 @@ function Page() {
         collapsible
         intro="Ik draai bruiloften door heel Nederland, met veel ervaring in de Betuwe, Bommelerwaard, Hoeksche Waard en Zuid-Holland. Voor jouw plaats kom ik graag mee."
       />
+      <ReviewStrip text="Bruidsparen waarderen mijn werk met een 5,0 op Google." />
       <Faq items={FAQ} />
       <ContactCta title={<>Klaar om jullie<br/>datum te checken?</>} subtitle="App of bel ons met jullie datum en locatie. Reactie binnen 24 uur." />
       <SiteFooter />

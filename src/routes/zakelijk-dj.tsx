@@ -5,6 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { ContactCta } from "@/components/ContactCta";
 import { ServiceCityIndex } from "@/components/ServiceCityIndex";
 import { Faq } from "@/components/Faq";
+import { ReviewStrip } from "@/components/ReviewBadge";
 import { breadcrumb, buildSeo, faqPage, service, type FaqItem } from "@/lib/seo";
 
 const IMG = "/images/dj-kevin-froger-bedrijfsfeest.webp";
@@ -92,7 +93,7 @@ function Page() {
               Onder andere Heineken, Jumbo, Albert Heijn, Makro, Bol.com, KPN, Van der Valk, Feyenoord, Sparta Rotterdam, Dutch Grand Prix, Circuit Zandvoort, Roparun, de Koninklijke Landmacht, de Politie, Hogeschool Rotterdam, Flügel, Pupa Milano, YourSurprise, Voorwinden en Modern Nerdplace. Wat ze gemeen hebben: een dag met meerdere programmaonderdelen, een gemengd gezelschap en geen ruimte voor losse eindjes.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/werkwijze" className="rounded-full border-2 border-secondary text-secondary px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:bg-secondary hover:text-secondary-foreground transition">Werkwijze</Link>
+              <Link to="/dj-en-mc" className="rounded-full border-2 border-secondary text-secondary px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:bg-secondary hover:text-secondary-foreground transition">DJ en MC</Link>
               <Link to="/prijzen" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Prijsindicatie</Link>
               <Link to="/regios" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Werkgebied</Link>
             </div>
@@ -104,6 +105,7 @@ function Page() {
       </section>
 
       <ServiceCityIndex service="Bedrijfsfeest" collapsible />
+      <ReviewStrip text="Opdrachtgevers waarderen mijn werk met een 5,0 op Google." />
       <Faq items={FAQ} />
       <ContactCta />
       <SiteFooter />

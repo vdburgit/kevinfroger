@@ -156,6 +156,9 @@ export function service(opts: {
     areaServed: opts.areaServed
       ? { "@type": "AdministrativeArea", name: opts.areaServed }
       : { "@type": "Country", name: "Nederland" },
-    ...(opts.rating ? { aggregateRating: aggregateRating() } : {}),
+    // Standaard de echte aggregateRating meenemen. Elke pagina die service()
+    // gebruikt toont ook een zichtbaar reviewblok (ReviewBadge/ReviewStrip),
+    // zodat markup en zichtbare content overeenkomen. Opt-out met rating:false.
+    ...(opts.rating === false ? {} : { aggregateRating: aggregateRating() }),
   };
 }

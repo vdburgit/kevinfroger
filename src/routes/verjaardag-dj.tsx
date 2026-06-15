@@ -5,6 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { ContactCta } from "@/components/ContactCta";
 import { ServiceCityIndex } from "@/components/ServiceCityIndex";
 import { Faq } from "@/components/Faq";
+import { ReviewStrip } from "@/components/ReviewBadge";
 import { breadcrumb, buildSeo, faqPage, service, type FaqItem } from "@/lib/seo";
 
 const IMG = "/images/dj-kevin-froger-prive-feest.jpeg";
@@ -89,6 +90,7 @@ function Page() {
           { to: "/werkwijze", label: "Werkwijze" },
         ]}
       />
+      <ReviewStrip />
       <Faq items={FAQ} />
       <ContactCta />
       <SiteFooter />

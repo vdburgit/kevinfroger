@@ -5,9 +5,19 @@ import { PageHero } from "@/components/PageHero";
 import { ContactCta } from "@/components/ContactCta";
 import { ServiceCityIndex } from "@/components/ServiceCityIndex";
 import { Faq } from "@/components/Faq";
+import { ReviewStrip } from "@/components/ReviewBadge";
 import { breadcrumb, buildSeo, faqPage, service, type FaqItem } from "@/lib/seo";
 
 const IMG = "/images/dj-kevin-froger-festival.webp";
+
+const PODIA = [
+  { src: "/images/logos/dutch-grand-prix.webp", alt: "Dutch Grand Prix", w: 240, h: 146 },
+  { src: "/images/logos/zandvoort.webp", alt: "Circuit Zandvoort", w: 240, h: 240 },
+  { src: "/images/logos/feyenoord-rotterdam.webp", alt: "Feyenoord Rotterdam", w: 240, h: 240 },
+  { src: "/images/logos/sparta-rotterdam.webp", alt: "Sparta Rotterdam", w: 64, h: 64 },
+  { src: "/images/logos/heineken.webp", alt: "Heineken", w: 240, h: 125 },
+  { src: "/images/logos/roparun.webp", alt: "Roparun", w: 240, h: 90 },
+];
 
 const FAQ: FaqItem[] = [
   { q: "Draai je festivals en aprèsski?", a: "Ja, strakke sets met crowd control en presentatie voor festivals en aprèsski-events." },
@@ -87,6 +97,19 @@ function Page() {
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
             Dutch Grand Prix, Circuit Zandvoort, festivals en aprèsski-events door Nederland. Zowel mainstage als after-events.
           </p>
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-x-10 gap-y-8">
+            {PODIA.map((logo) => (
+              <img
+                key={logo.alt}
+                src={logo.src}
+                alt={logo.alt}
+                width={logo.w}
+                height={logo.h}
+                loading="lazy"
+                className="h-12 w-auto object-contain opacity-80 grayscale hover:grayscale-0 hover:opacity-100 transition"
+              />
+            ))}
+          </div>
           <div className="mt-10 flex flex-wrap gap-3 justify-center">
             <Link to="/prijzen" className="rounded-full border-2 border-secondary text-secondary px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:bg-secondary hover:text-secondary-foreground transition">Prijzen</Link>
             <Link to="/reviews" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Reviews</Link>
@@ -96,6 +119,7 @@ function Page() {
       </section>
 
       <ServiceCityIndex service="Festival" collapsible />
+      <ReviewStrip />
       <Faq items={FAQ} />
       <ContactCta title={<>Boek je<br/>festivalslot.</>} subtitle="App of bel ons met datum, locatie en gewenst tijdslot. Reactie binnen 24 uur." />
       <SiteFooter />

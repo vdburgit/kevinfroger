@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { LocationLayout } from "@/components/LocationLayout";
+import { ReviewBadge } from "@/components/ReviewBadge";
 import type { CityData } from "@/data/cities";
 
 const IMG = "/images/dj-kevin-froger-bruiloft-scaled.jpeg";
@@ -24,6 +25,8 @@ export function CityPage({ city }: { city: CityData }) {
         { name: city.name, path: `/dj-boeken-${city.slug}` },
       ]}
     >
+      <ReviewBadge className="mb-8" />
+
       <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>
         Bruiloft, feest of zakelijk in {city.name}
       </h2>

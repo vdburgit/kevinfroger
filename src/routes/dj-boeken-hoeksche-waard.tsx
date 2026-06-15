@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { LocationLayout } from "@/components/LocationLayout";
+import { ReviewBadge } from "@/components/ReviewBadge";
 import { breadcrumb, buildSeo, service } from "@/lib/seo";
 
 const IMG = "/images/dj-kevin-froger-bruiloft-scaled.jpeg";
@@ -43,6 +44,8 @@ function Page() {
         { to: "/dj-boeken-betuwe", label: "Betuwe" },
       ]}
     >
+      <ReviewBadge className="mb-8" />
+
       <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>Bekend in de regio</h2>
       <p className="text-lg text-muted-foreground leading-relaxed mb-6">
         Veel boekingen komen via via, gewoon omdat mensen me kennen of op een feest hebben gezien. Dat zegt meer dan welke reclame ook. Ik ken de gangbare feestlocaties en de lijntjes zijn kort.

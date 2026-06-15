@@ -3,9 +3,20 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageHero } from "@/components/PageHero";
 import { ContactCta } from "@/components/ContactCta";
-import { SITE_URL, breadcrumb, buildSeo } from "@/lib/seo";
+import { Faq } from "@/components/Faq";
+import { ReviewStrip } from "@/components/ReviewBadge";
+import { SITE_URL, aggregateRating, breadcrumb, buildSeo, faqPage, type FaqItem } from "@/lib/seo";
 
 const IMG = "/images/dj-booth-wit-design.webp";
+
+const FAQ: FaqItem[] = [
+  { q: "Wat kost een DJ?", a: "Dat hangt af van de duur van de avond, de locatie en je wensen rond licht en geluid. Mijn pakketten starten bij 795 euro voor een compacter feest en 1295 euro voor de complete show. Je krijgt altijd vooraf een heldere offerte." },
+  { q: "Wat is de prijs van een DJ inclusief licht en geluid?", a: "Bij mij zit de complete show in de prijs: opbouw, een professionele geluidsset, een lichtshow en mijn rol als DJ en MC. Geen losse posten of verrassingen achteraf." },
+  { q: "Zijn er extra kosten, zoals reiskosten?", a: "Reiskosten tot 50 km zijn bij de pakketten inbegrepen. Verder reken ik geen verborgen toeslagen; wat in de offerte staat, is wat je betaalt." },
+  { q: "Wat is het verschil tussen de pakketten?", a: "Essential is voor intiemere feesten met een compacte set. Complete is het meestgekozen pakket voor bruiloften en bedrijfsfeesten, met volledig geluid, lichtshow en draadloze microfoons. Show is volledig op maat voor grote events." },
+  { q: "Kan ik een pakket aanpassen?", a: "Ja. Je kunt uren toevoegen, modules combineren of een volledig maatpakket aanvragen. Laat me weten wat je in gedachten hebt, dan reken ik het voor je uit." },
+  { q: "Hoe vraag ik een prijs op?", a: "App of bel me met je datum, locatie en type feest. Je krijgt binnen 24 uur een vrijblijvende offerte op maat." },
+];
 
 const PACKAGES = [
   {
@@ -64,11 +75,13 @@ export const Route = createFileRoute("/prijzen")({
           },
           url: `${SITE_URL}/prijzen`,
         })),
+        aggregateRating: aggregateRating(),
       },
       breadcrumb([
         { name: "Home", path: "/" },
         { name: "Prijzen", path: "/prijzen" },
       ]),
+      faqPage(FAQ),
     ],
   }),
   component: Page,
@@ -136,6 +149,8 @@ function Page() {
         </div>
       </section>
 
+      <ReviewStrip text="Klanten waarderen mijn werk met een 5,0 op Google." />
+      <Faq items={FAQ} />
       <ContactCta />
       <SiteFooter />
     </main>
