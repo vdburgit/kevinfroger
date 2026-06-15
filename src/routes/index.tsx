@@ -276,19 +276,44 @@ function Index() {
         </div>
       </section>
 
-      {/* WERKGEBIED */}
+      {/* WERKGEBIED: rustig gehouden, thuismarkt plus regio, landelijk als sluitstuk */}
       <section className="py-20 sm:py-24 px-5 sm:px-6 lg:px-10 bg-background">
-        <div className="max-w-[1100px] mx-auto text-center">
+        <div className="max-w-[900px] mx-auto text-center">
           <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Waar ik draai</div>
           <h2 className="text-4xl sm:text-5xl md:text-7xl leading-[0.95] sm:leading-[0.9] mb-6" style={{ fontFamily: "var(--font-display)" }}>
-            DJ door<br/><span className="text-primary">heel Nederland</span>
+            Vaak gedraaid<br/><span className="text-primary">in de regio</span>
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            Voor bruiloften, bedrijfsfeesten, verjaardagen en festivals kom ik in alle twaalf provincies. Van Amsterdam tot Maastricht, van Vlissingen tot Groningen. Bekijk het complete werkgebied met alle steden en dorpen.
+            Ik woon in 's-Gravendeel en heb vaak gedraaid in de Hoeksche Waard, Dordrecht en de Drechtsteden, de Betuwe en de Bommelerwaard. Verder kom ik door heel Zuid-Holland en de rest van het land.
           </p>
-          <div className="mt-8 sm:mt-10 flex flex-wrap gap-3 justify-center">
+
+          {/* Ingetogen rij plaatslinks (geen drukke chips) */}
+          <div className="mt-8 text-sm sm:text-base leading-loose">
+            {[
+              { to: "/dj-boeken-hoeksche-waard", label: "Hoeksche Waard" },
+              { to: "/dj-boeken-dordrecht", label: "Dordrecht" },
+              { to: "/dj-boeken-barendrecht", label: "Barendrecht" },
+              { to: "/dj-boeken-rotterdam", label: "Rotterdam" },
+              { to: "/dj-boeken-gorinchem", label: "Gorinchem" },
+              { to: "/dj-boeken-tiel", label: "Tiel" },
+              { to: "/dj-boeken-betuwe", label: "Betuwe" },
+              { to: "/dj-boeken-bommelerwaard", label: "Bommelerwaard" },
+            ].map((c, i) => (
+              <span key={c.to} className="whitespace-nowrap">
+                {i > 0 && <span className="mx-2 text-border" aria-hidden>·</span>}
+                <Link to={c.to} className="text-muted-foreground hover:text-primary transition">
+                  {c.label}
+                </Link>
+              </span>
+            ))}
+          </div>
+
+          <div className="mt-9 flex flex-wrap gap-3 justify-center">
             <Link to="/regios" className="rounded-full bg-primary text-primary-foreground border-2 border-secondary px-6 py-3 text-xs sm:text-sm tracking-[0.15em] uppercase font-bold hover:bg-secondary hover:text-secondary-foreground transition">
-              Bekijk alle plaatsen
+              Alle plaatsen
+            </Link>
+            <Link to="/feestlocaties" className="rounded-full border-2 border-secondary text-secondary px-6 py-3 text-xs sm:text-sm tracking-[0.15em] uppercase font-bold hover:bg-secondary hover:text-secondary-foreground transition">
+              Feestlocaties
             </Link>
           </div>
         </div>
