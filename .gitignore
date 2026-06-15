@@ -38,3 +38,4 @@ scripts/fix-accessibility.js
 
 # Windows artifacts
 nul
+.seo-gen/

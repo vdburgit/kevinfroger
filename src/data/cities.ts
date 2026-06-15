@@ -931,6 +931,440 @@ export const CITIES: Record<string, CityData> = {
     ],
   },
 
+  "oud-beijerland": {
+    "slug": "oud-beijerland",
+    "name": "Oud-Beijerland",
+    "province": "Zuid-Holland",
+    "region": "Hoeksche Waard",
+    "title": "DJ Oud-Beijerland boeken | Kevin Froger",
+    "description": "DJ Oud-Beijerland nodig? Ik draai al 15+ jaar, kom met eigen licht en geluid, ben DJ en MC in een persoon en sta op 5,0 op Google uit 10 reviews.",
+    "heroIntro": "Zoek je een DJ in Oud-Beijerland? Vanuit 's-Gravendeel ben ik zo bij jullie, de Hoeksche Waard is mijn eigen achtertuin. Ik draai jouw feest van begin tot eind en doe de presentatie er zelf bij.",
+    "serviceDescription": "Allround DJ en MC voor bruiloften, bedrijfsfeesten, verjaardagen en festivals in Oud-Beijerland en de rest van de Hoeksche Waard, inclusief eigen licht en geluid.",
+    "paragraphs": [
+      "Oud-Beijerland is de grootste kern van de Hoeksche Waard en het winkelhart van de regio, dus er valt hier veel te vieren. Of je nu een zaal in het centrum hebt geboekt, een feest geeft langs het Spui bij de haven of het thuis houdt in een wijk als De Bedijkte Rotte of Poortwijk, ik pas mijn set aan op de ruimte en het publiek.",
+      "Geluid en licht heb ik zelf bij me, en achter de draaitafel pak ik ook de microfoon: het draaien en de presentatie komen bij mij uit dezelfde hand. Ik kondig de speeches aan, hou de avond op gang en zorg dat de vloer vol blijft. Tijdens het feest let ik op wat werkt en stuur ik daarop bij, in plaats van een vaste afspeellijst blind af te draaien.",
+      "Vanaf 's-Gravendeel rijd ik via de N217 en de A29 zo Oud-Beijerland in, dus ik sta er ruim voor de eerste gasten klaar. Bruiloft, bedrijfsfeest, verjaardag of een feest met de buurt? Op mijn prijzenpagina vind je wat een avond met mij kost, en als je daar je datum bij vermeldt check ik meteen of ik nog vrij ben."
+    ],
+    "characteristics": "Oud-Beijerland centrum, Spui en haven, De Bedijkte Rotte, Poortwijk, Croonenburgh, Hoeksche Waard",
+    "related": [
+      {
+        "to": "/dj-boeken-hoeksche-waard",
+        "label": "Hoeksche Waard"
+      },
+      {
+        "to": "/dj-boeken-numansdorp",
+        "label": "Numansdorp"
+      },
+      {
+        "to": "/dj-boeken-barendrecht",
+        "label": "Barendrecht"
+      }
+    ]
+  },
+
+  "puttershoek": {
+    "slug": "puttershoek",
+    "name": "Puttershoek",
+    "province": "Zuid-Holland",
+    "region": "Hoeksche Waard",
+    "title": "DJ Puttershoek inhuren | Kevin Froger",
+    "description": "Als DJ in Puttershoek kom ik met eigen licht en geluid, en ik ben DJ en MC in een persoon. 15+ jaar ervaring en 5,0 op Google. Plan je feest met mij.",
+    "heroIntro": "Op zoek naar een DJ in Puttershoek? Ik ben Kevin Froger, draai al ruim 15 jaar en woon vlakbij in 's-Gravendeel. Het oude suikerfabriekterrein leent zich prima voor een avond muziek, en ik weet hoe je zo'n ruime locatie vult met geluid en sfeer.",
+    "serviceDescription": "Allround DJ en MC voor bruiloften, bedrijfsfeesten en verjaardagen in Puttershoek en omgeving, inclusief eigen licht- en geluidsinstallatie.",
+    "paragraphs": [
+      "Puttershoek ligt aan de Oude Maas en heeft een dorps karakter, dus de feesten die ik hier draai lopen uiteen van een intieme verjaardag thuis tot een bedrijfsfeest in een grotere zaal. Het voormalige suikerfabriekterrein is omgebouwd tot evenementenruimte, en in dat soort ruime locaties stem ik mijn opstelling af op het volume en de akoestiek.",
+      "Vanuit 's-Gravendeel ben ik snel in Puttershoek, zo over de provinciale weg langs Maasdam. Daardoor heb ik alle ruimte om op mijn gemak op te bouwen en alles te testen voordat het feest begint. Ik neem mijn eigen licht en geluid mee, dus je hoeft op de locatie niets te regelen.",
+      "Als DJ en MC in een persoon praat ik de avond aan elkaar, kondig ik momenten aan en houd ik de vloer vol. Of het nu een bruiloft is in een kleine kring of een feest met honderd man, ik lees mee met wat de zaal wil horen en stuur de muziek daarop bij."
+    ],
+    "characteristics": "Puttershoek-centrum, suikerfabriekterrein, Oude Maas, Maasdam, Hoeksche Waard",
+    "related": [
+      {
+        "to": "/dj-boeken-hoeksche-waard",
+        "label": "Hoeksche Waard"
+      },
+      {
+        "to": "/dj-boeken-maasdam",
+        "label": "Maasdam"
+      },
+      {
+        "to": "/dj-boeken-dordrecht",
+        "label": "Dordrecht"
+      }
+    ]
+  },
+
+  "strijen": {
+    "slug": "strijen",
+    "name": "Strijen",
+    "province": "Zuid-Holland",
+    "region": "Hoeksche Waard",
+    "title": "DJ Strijen voor je bruiloft of feest | Kevin Froger",
+    "description": "Op zoek naar een DJ in Strijen? Ik draai al 15+ jaar, kom met eigen licht en geluid en ben DJ en MC in een. 5,0 op Google. Even bellen kan altijd.",
+    "heroIntro": "Een DJ in Strijen die het dorp en de polder kent? Dat ben ik. Ik woon vlakbij in 's-Gravendeel, dus ik sta zo bij je boerderij of in de zaal. Eigen licht en geluid neem ik mee, en ik praat de avond zelf aan elkaar.",
+    "serviceDescription": "Allround DJ en MC voor bruiloften, bedrijfsfeesten en verjaardagen in Strijen en Strijensas, inclusief eigen licht- en geluidsinstallatie.",
+    "paragraphs": [
+      "Strijen is een echt polderdorp, met de kern rond de Sint-Lambertuskerk en verderop Strijensas aan het Hollands Diep. Juist die buitenlocaties maken het feest hier vaak net even anders dan in een vaste zaal. Of je nu in een omgebouwde schuur, een feesttent in het weiland of een loods trouwt: ik kijk vooraf naar de ruimte zodat het geluid klopt en de avond loopt.",
+      "Voor een boerderijbruiloft buitenaf is het handig dat ik alles zelf meebreng en zelf opbouw. Stroom, kabels, lampen, de hele installatie. Ik regel ook de momenten daaromheen, van de binnenkomst tot de eerste dans en het slotnummer, zodat jullie je geen zorgen hoeven te maken over wie wat aankondigt.",
+      "Vanuit 's-Gravendeel rijd ik via de N217 en de Provincialeweg zo Strijen en Strijensas binnen. Ook de buurtschappen en het buitengebied richting Mookhoek en Cillaarshoek liggen voor mij om de hoek. Wil je weten of het op jullie datum past, dan kijken we dat samen rustig na."
+    ],
+    "characteristics": "Strijen centrum, Strijensas, Mookhoek, Cillaarshoek, buitengebied Hoeksche Waard",
+    "related": [
+      {
+        "to": "/dj-boeken-hoeksche-waard",
+        "label": "Hoeksche Waard"
+      },
+      {
+        "to": "/dj-boeken-numansdorp",
+        "label": "Numansdorp"
+      },
+      {
+        "to": "/dj-boeken-dordrecht",
+        "label": "Dordrecht"
+      }
+    ]
+  },
+
+  "numansdorp": {
+    "slug": "numansdorp",
+    "name": "Numansdorp",
+    "province": "Zuid-Holland",
+    "region": "Hoeksche Waard",
+    "title": "DJ Numansdorp boeken | Kevin Froger",
+    "description": "DJ in Numansdorp nodig? Ik draai al 15+ jaar, DJ en MC in een persoon, eigen licht en geluid en 5,0 op Google. Compleet geregeld voor jouw feest.",
+    "heroIntro": "Zoek je een DJ in Numansdorp die het feest van begin tot eind in goede banen leidt? Ik ben Kevin, woon om de hoek in 's-Gravendeel en sta zo bij je in het zuiden van de Hoeksche Waard. DJ en MC in een persoon, met mijn eigen licht en geluid mee.",
+    "serviceDescription": "DJ en MC voor bruiloften, bedrijfsfeesten, verjaardagen en festivals in Numansdorp en omgeving, inclusief eigen licht- en geluidsinstallatie.",
+    "paragraphs": [
+      "Vanuit 's-Gravendeel ben ik snel in Numansdorp. Via de A29 sta ik zo aan de zuidkant van de Hoeksche Waard, dus ik heb genoeg tijd om alles in alle rust neer te zetten en te testen. Daar laad ik mijn complete set uit: licht en geluid neem ik zelf mee, jij hoeft niets te regelen.",
+      "Of je feest nu in het centrum van Numansdorp is, dicht bij de jachthaven aan het Hollandsch Diep of richting het Hellegatsplein, ik draai overal waar je een goede vloer en wat ruimte hebt. Dat kan een feestzaal zijn, een loods, een tent in de tuin of een locatie aan het water. Ik kijk vooraf met je naar de plek zodat de opstelling klopt.",
+      "Achter de draaitafel pak ik ook de microfoon erbij, dus een aparte presentator komt er niet aan te pas. Ik kondig de momenten aan, lees de zaal en pas de muziek aan op wat er die avond gebeurt. Bruiloft, bedrijfsfeest, verjaardag of festival in Numansdorp: ik zorg dat het van de eerste tot de laatste track loopt."
+    ],
+    "characteristics": "Numansdorp centrum, jachthaven Hollandsch Diep, Hellegatsplein, Buitensluis, zuidelijke Hoeksche Waard",
+    "related": [
+      {
+        "to": "/dj-boeken-hoeksche-waard",
+        "label": "Hoeksche Waard"
+      },
+      {
+        "to": "/dj-boeken-klaaswaal",
+        "label": "Klaaswaal"
+      },
+      {
+        "to": "/dj-boeken-strijen",
+        "label": "Strijen"
+      }
+    ]
+  },
+
+  "s-gravendeel": {
+    "slug": "s-gravendeel",
+    "name": "'s-Gravendeel",
+    "province": "Zuid-Holland",
+    "region": "Hoeksche Waard",
+    "title": "DJ 's-Gravendeel boeken | Kevin Froger",
+    "description": "DJ 's-Gravendeel nodig? Dit is mijn eigen dorp. Ik draai al 15+ jaar, kom met eigen licht en geluid, ben DJ en MC in een en sta op 5,0 op Google.",
+    "heroIntro": "Je zoekt een DJ in 's-Gravendeel? Dan zit je goed, want dit is mijn dorp. Ik woon hier aan de Dordtse Kil, tegenover Dordrecht, en sta vaak binnen een kwartier bij je voor de deur. Eigen licht en geluid neem ik mee, en de presentatie doe ik er zelf bij.",
+    "serviceDescription": "Allround DJ en MC voor bruiloften, bedrijfsfeesten, verjaardagen en festivals in 's-Gravendeel en de hele Hoeksche Waard, inclusief eigen licht- en geluidsinstallatie.",
+    "paragraphs": [
+      "'s-Gravendeel is mijn thuisbasis, dus ik ken de kern rond de Kerkstraat, de buurt richting de jachthaven aan de Kil en de nieuwere wijken aan de rand van het dorp. Of je nu een feest geeft in een zaal in het centrum, een verjaardag thuis houdt of buiten bij het water iets organiseert: ik weet de weg en draai mijn set op wat bij de ruimte en de mensen past.",
+      "Het grote voordeel als je mij hier boekt: korte lijntjes en geen reistijd om over na te denken. Ik bouw rustig op en test alles ruim voor aanvang, zonder gehaast. Mocht er tijdens de avond iets nodig zijn, dan ben ik letterlijk om de hoek en kan ik snel schakelen. Eigen licht en geluid heb ik bij me, dus op de locatie hoef je niets te regelen.",
+      "Als DJ en MC in een persoon praat ik de avond aan elkaar, kondig ik de speeches en de eerste dans aan en hou ik de vloer vol. Je hebt er geen losse presentator bij nodig. 's-Gravendeel ligt vlak bij de A16 en de Kiltunnel naar Dordrecht, dus ook gasten van buiten het dorp vinden de weg makkelijk. Op mijn reviewspagina lees je hoe anderen het ervaren hebben, en wil je je datum vastleggen? Eén berichtje en je weet of ik nog vrij ben."
+    ],
+    "characteristics": "'s-Gravendeel centrum, Kerkstraat, jachthaven Dordtse Kil, Mookhoek, Wieldrecht, Kiltunnel, Hoeksche Waard",
+    "related": [
+      {
+        "to": "/dj-boeken-hoeksche-waard",
+        "label": "Hoeksche Waard"
+      },
+      {
+        "to": "/dj-boeken-dordrecht",
+        "label": "Dordrecht"
+      },
+      {
+        "to": "/dj-boeken-puttershoek",
+        "label": "Puttershoek"
+      }
+    ]
+  },
+
+  "zuid-beijerland": {
+    "slug": "zuid-beijerland",
+    "name": "Zuid-Beijerland",
+    "province": "Zuid-Holland",
+    "region": "Hoeksche Waard",
+    "title": "DJ Zuid-Beijerland boeken | Kevin Froger",
+    "description": "DJ in Zuid-Beijerland nodig? Ik draai met eigen licht en geluid, ben DJ en MC in een persoon, heb 15+ jaar ervaring en sta op 5,0 op Google.",
+    "heroIntro": "Zoek je een DJ in Zuid-Beijerland die het hele feest in handen neemt? Ik ben Kevin, kom uit 's-Gravendeel verderop in de Hoeksche Waard en sta zo bij jou in het westen van het eiland. Eigen licht en geluid mee, en ik praat de avond ook zelf aan elkaar.",
+    "serviceDescription": "DJ en MC met eigen licht en geluid voor bruiloften, bedrijfsfeesten en verjaardagen in Zuid-Beijerland en omgeving.",
+    "paragraphs": [
+      "Zuid-Beijerland is een rustig akkerbouwdorp in het westen van de Hoeksche Waard, met veel ruimte en mooie buitenlocaties tussen de polders. Dat soort plekken vind ik fijn om te draaien: een feest in een schuur, op het erf van een boerderij of in een tent achter het huis. Ik breng mijn complete set licht en geluid mee, dus ook op een locatie zonder vaste installatie staat het binnen no time klaar.",
+      "Vanuit 's-Gravendeel rij ik via de N217 zo door naar Zuid-Beijerland, en ook de buurkernen Goudswaard en Piershil liggen om de hoek. Ik ben dus snel ter plaatse om vooraf even rond te kijken hoe de zaal of de tent in elkaar zit. Of het nou een bruiloft, een verjaardag of een bedrijfsfeest is, ik stem de muziek af op wie er voor me staat.",
+      "Het draaien en de presentatie komen bij mij uit dezelfde hand: ik kondig het eerste dansje aan, geef de toost een zetje en houd in de gaten dat de vloer vol blijft. In 15+ jaar achter de draaitafels heb ik geleerd te lezen wat een groep op dat moment wil horen."
+    ],
+    "characteristics": "Zuid-Beijerland, Goudswaard, Piershil, Nieuw-Beijerland, westelijke Hoeksche Waard, buitengebied en polders",
+    "related": [
+      {
+        "to": "/dj-boeken-hoeksche-waard",
+        "label": "Hoeksche Waard"
+      },
+      {
+        "to": "/dj-boeken-oud-beijerland",
+        "label": "Oud-Beijerland"
+      },
+      {
+        "to": "/dj-boeken-numansdorp",
+        "label": "Numansdorp"
+      }
+    ]
+  },
+
+  "klaaswaal": {
+    "slug": "klaaswaal",
+    "name": "Klaaswaal",
+    "province": "Zuid-Holland",
+    "region": "Hoeksche Waard",
+    "title": "DJ Klaaswaal boeken? Allround DJ en MC | Kevin Froger",
+    "description": "DJ in Klaaswaal nodig? Ik draai al 15+ jaar, kom met eigen licht en geluid en ben DJ en MC in een. 5,0 op Google. Bel of mail voor je datum.",
+    "heroIntro": "Op zoek naar een DJ in Klaaswaal die de avond in handen neemt? Ik ben Kevin, allround DJ en MC uit 's-Gravendeel, dus ik zit zo bij je in het dorp. Ik draai wat de zaal wil horen en houd het feest aan de gang tot het laatste nummer.",
+    "serviceDescription": "Allround DJ en MC voor bruiloften, bedrijfsfeesten, verjaardagen en feesten in Klaaswaal en de hele Hoeksche Waard, inclusief eigen licht en geluid.",
+    "paragraphs": [
+      "Klaaswaal ligt mooi centraal-zuid in de Hoeksche Waard, pal langs de A29. Vanuit 's-Gravendeel ben ik dus zo bij je, en met mijn eigen licht en geluid staat alles ruim voor aanvang klaar en getest. Of het nu in het dorpshuis is of een zaal in de buurt, ik pas mijn opstelling aan op de ruimte.",
+      "Het feestpubliek hier is lekker gemoedelijk, en daar speel ik graag op in. Ik lees de zaal en draai van meezingers tot stevigere plaatjes, afhankelijk van wie er voor me staat. Als MC kondig ik momenten aan en zorg ik dat het programma loopt, zonder dat je daar een aparte presentator voor hoeft te regelen.",
+      "Ik draai in Klaaswaal voor van alles: bruiloften, bedrijfsfeesten, verjaardagen en gewoon een goed feest. Via de A29 ben ik snel ter plaatse in de omliggende kernen als Numansdorp, Oud-Beijerland en Zuid-Beijerland. Wil je weten of jouw datum nog kan? Bel of mail me gerust, dan kom je er meteen achter."
+    ],
+    "characteristics": "Klaaswaal centrum, Numansdorp, Oud-Beijerland, Zuid-Beijerland, Mijnsheerenland, Hoeksche Waard",
+    "related": [
+      {
+        "to": "/dj-boeken-hoeksche-waard",
+        "label": "Hoeksche Waard"
+      },
+      {
+        "to": "/dj-boeken-numansdorp",
+        "label": "Numansdorp"
+      },
+      {
+        "to": "/dj-boeken-oud-beijerland",
+        "label": "Oud-Beijerland"
+      }
+    ]
+  },
+
+  "maasdam": {
+    "slug": "maasdam",
+    "name": "Maasdam",
+    "province": "Zuid-Holland",
+    "region": "Hoeksche Waard",
+    "title": "DJ Maasdam boeken | Kevin Froger",
+    "description": "Op zoek naar een DJ in Maasdam? Ik draai al 15+ jaar, kom met eigen licht en geluid, ben DJ en MC in een en sta op 5,0 op Google. Bekijk de mogelijkheden.",
+    "heroIntro": "Een DJ in Maasdam die je feest van begin tot eind leest? Daar kom ik voor. Ik woon vlakbij in 's-Gravendeel, dus dat dorpsfeest aan de Binnenmaas is voor mij een kort ritje. Ik regel het licht, het geluid en de microfoon zelf, zodat jij je nergens druk om hoeft te maken.",
+    "serviceDescription": "Allround DJ en MC voor bruiloften, bedrijfsfeesten, verjaardagen en festivals in Maasdam en de rest van de Hoeksche Waard, inclusief eigen licht- en geluidsset.",
+    "paragraphs": [
+      "Maasdam is een klein dorp, en juist daar voel ik me thuis. Of het nu een verjaardag is in een zaaltje langs de Maasdamseweg, een feest bij iemand thuis of een buurtborrel met de hele straat, ik pas mijn set aan op de ruimte en de mensen die er staan. Ik kijk wat werkt en stuur bij terwijl ik draai, in plaats van een vaste lijst af te spelen.",
+      "Omdat ik in 's-Gravendeel woon, ben ik snel ter plaatse. Via de Provincialeweg en langs Puttershoek sta ik zo in Maasdam, met genoeg marge om de boel rustig in te richten en te testen. Dat scheelt gedoe en betekent dat ik geen haast heb bij de opbouw.",
+      "Ik draai bruiloften, bedrijfsfeesten, verjaardagen en festivals, en doe daarbij ook de presentatie zelf. Geschikt voor een kleine dorpsavond net zo goed als voor een grotere tent aan het water richting de Binnenmaas. Eigen licht en geluid neem ik mee, dus de zaal hoeft niets te leveren."
+    ],
+    "characteristics": "Maasdam, Puttershoek, Binnenmaas, 's-Gravendeel, Hoeksche Waard",
+    "related": [
+      {
+        "to": "/dj-boeken-hoeksche-waard",
+        "label": "Hoeksche Waard"
+      },
+      {
+        "to": "/dj-boeken-puttershoek",
+        "label": "Puttershoek"
+      },
+      {
+        "to": "/dj-boeken-s-gravendeel",
+        "label": "'s-Gravendeel"
+      }
+    ]
+  },
+
+  "heinenoord": {
+    "slug": "heinenoord",
+    "name": "Heinenoord",
+    "province": "Zuid-Holland",
+    "region": "Hoeksche Waard",
+    "title": "DJ Heinenoord inhuren | Kevin Froger",
+    "description": "DJ Heinenoord nodig? Ik draai al 15+ jaar, kom met eigen licht en geluid en ben DJ en MC in een persoon. 5,0 op Google. Bel of app me even.",
+    "heroIntro": "Zoek je een DJ in Heinenoord die het feest van begin tot eind in goede banen leidt? Ik ben Kevin, allround DJ en MC uit 's-Gravendeel, en in Heinenoord ben ik in een wip ter plaatse. Ik kom met mijn eigen licht en geluid en regel zelf de aankondigingen, dus je hebt aan mij genoeg.",
+    "serviceDescription": "Allround DJ en MC voor bruiloften, bedrijfsfeesten, verjaardagen en festivals in Heinenoord en omgeving, inclusief eigen licht en geluid.",
+    "paragraphs": [
+      "Heinenoord ligt aan de noordkant van de Hoeksche Waard, vlak bij de Heinenoordtunnel. Voor mij is dat de poort naar de regio: vanuit 's-Gravendeel ben ik er zo, en ook vanaf Rotterdam-zuid rij je er via de A29 en de tunnel binnen een kwartier naartoe. Handig als je gasten van beide kanten van het water komen.",
+      "Ik draai in Heinenoord op allerlei plekken: een feestzaal of partyboerderij langs de Buitenom of de Dorpsstraat, een bedrijfspand op een terrein dichter bij de tunnel, of gewoon thuis in de tuin of de schuur. Ik kom langs, kijk waar de stroom zit en hoe de ruimte klinkt, en zorg dat licht en geluid passen bij de plek. Een grote zaal of een kleine huiskamer, ik stem het er allebei op af.",
+      "Of het nu een bruiloft, een bedrijfsfeest, een verjaardag of een festival is: ik draai de muziek en pak zelf de microfoon voor de aankondigingen. Zo loopt de avond door zonder dat je een aparte presentator hoeft te regelen. Vooraf nemen we samen door wat je wel en niet wilt horen, zodat de vloer vol staat met nummers waar jouw mensen op wachten."
+    ],
+    "characteristics": "Heinenoord, Heinenoordtunnel, Buitenom, Dorpsstraat, noordkant Hoeksche Waard, A29",
+    "related": [
+      {
+        "to": "/dj-boeken-hoeksche-waard",
+        "label": "Hoeksche Waard"
+      },
+      {
+        "to": "/dj-boeken-barendrecht",
+        "label": "Barendrecht"
+      },
+      {
+        "to": "/dj-boeken-oud-beijerland",
+        "label": "Oud-Beijerland"
+      }
+    ]
+  },
+
+  "barendrecht": {
+    "slug": "barendrecht",
+    "name": "Barendrecht",
+    "province": "Zuid-Holland",
+    "region": "IJsselmonde",
+    "title": "DJ Barendrecht boeken | Kevin Froger",
+    "description": "Een DJ in Barendrecht die het feest van A tot Z draait? Ik werk 15+ jaar, kom met eigen licht en geluid, ben DJ en MC in een en sta op 5,0 op Google.",
+    "heroIntro": "Zoek je een DJ in Barendrecht? Ik ben Kevin Froger en woon net over de Oude Maas in 's-Gravendeel, dus ik sta zo bij jullie. Ik draai je feest van begin tot eind en doe de presentatie er zelf bij.",
+    "serviceDescription": "Allround DJ en MC voor bruiloften, bedrijfsfeesten, verjaardagen en festivals in Barendrecht en omgeving, inclusief eigen licht- en geluidsinstallatie.",
+    "paragraphs": [
+      "Barendrecht ligt klem tussen Rotterdam en de Hoeksche Waard, en dat merk je aan de feesten hier: van een verjaardag in een wijk als Carnisselande of Buitenoord tot een bedrijfsfeest in een van de modernere zalen rond het centrum en Oude Dorp. In dat soort strakke, ruime locaties stem ik mijn opstelling en mijn volume af op de akoestiek, zodat het in een hoge zaal net zo lekker klinkt als in een kleinere ruimte.",
+      "Vanuit 's-Gravendeel rijd ik over de Heinenoordtunnel en de A29 zo Barendrecht in, en via de A15 ben ik er ook snel als je aan de oostkant van het dorp zit. Daardoor heb ik alle tijd om in alle rust op te bouwen en alles te testen terwijl het nog stil is in de zaal. Mijn eigen licht en geluid neem ik mee, dus op de zaal hoef je daar niets voor te regelen.",
+      "Als DJ en MC in een persoon praat ik de avond aan elkaar: ik kondig de speeches en het eerste dansje aan, hou het tempo erin en let de hele avond op wat de vloer doet. Bruiloft, bedrijfsfeest, verjaardag of festival, ik draai geen vaste lijst blind af maar stuur bij op wat dit publiek wil horen. Benieuwd of jouw datum nog vrij is? Stuur me een appje, dan hoor je het snel."
+    ],
+    "characteristics": "Barendrecht-centrum, Oude Dorp, Carnisselande, Buitenoord, Vrijenburg, langs Rotterdam en de Hoeksche Waard",
+    "related": [
+      {
+        "to": "/dj-boeken-rotterdam",
+        "label": "Rotterdam"
+      },
+      {
+        "to": "/dj-boeken-hoeksche-waard",
+        "label": "Hoeksche Waard"
+      },
+      {
+        "to": "/dj-boeken-ridderkerk",
+        "label": "Ridderkerk"
+      }
+    ]
+  },
+
+  "ridderkerk": {
+    "slug": "ridderkerk",
+    "name": "Ridderkerk",
+    "province": "Zuid-Holland",
+    "region": "IJsselmonde",
+    "title": "DJ Ridderkerk inhuren | Kevin Froger",
+    "description": "DJ Ridderkerk gezocht? Ik draai al 15+ jaar, kom met eigen licht en geluid, ben DJ en MC in een persoon en sta op 5,0 op Google uit 10 reviews.",
+    "heroIntro": "Op zoek naar een DJ in Ridderkerk? Ik ben Kevin Froger en woon in 's-Gravendeel, net ten zuiden van de Oude Maas. Via de A15 en A16 ben ik zo op IJsselmonde, dus voor mij is Ridderkerk een kort ritje en ben ik ruim op tijd om op te bouwen.",
+    "serviceDescription": "Allround DJ en MC voor bruiloften, bedrijfsfeesten, verjaardagen en festivals in Ridderkerk en op IJsselmonde, inclusief eigen licht- en geluidsinstallatie.",
+    "paragraphs": [
+      "Ridderkerk ligt op IJsselmonde, tegen Rotterdam-zuid aan, met aan de ene kant flink wat bedrijventerrein langs de snelwegen en aan de andere kant rustige woonwijken zoals Drievliet, Bolnes en Slikkerveer. Die mix zie ik terug in de feesten: de ene week een bedrijfsfeest in een loods of bedrijfshal langs de A15, de week erna een verjaardag of jubileum gewoon in een wijkzaal of thuis in de tuin.",
+      "Mijn geluid en licht neem ik allemaal zelf mee, en ik draai niet alleen maar pak ook de microfoon. Aankondigen van de speeches en de eerste dans, het tempo erin houden en de muziek bijsturen op wat de vloer doet: dat zit allemaal bij mij. In een grote ruimte zoals een bedrijfshal stem ik mijn opstelling af op de akoestiek, zodat het ook achterin goed klinkt.",
+      "Door de ligging aan de A15 en A16 is Ridderkerk vanuit de Hoeksche Waard goed bereikbaar, en ik ben er vaak voor de gasten al. Feest je in Rijsoord, Slikkerveer of dichter bij het centrum? Bel of app me met je datum en wat voor avond je voor ogen hebt, dan hoor je snel of het lukt en denk ik mee over de invulling."
+    ],
+    "characteristics": "Ridderkerk centrum, Slikkerveer, Bolnes, Drievliet, Rijsoord, IJsselmonde, bedrijventerrein A15",
+    "related": [
+      {
+        "to": "/dj-boeken-rotterdam",
+        "label": "Rotterdam"
+      },
+      {
+        "to": "/dj-boeken-barendrecht",
+        "label": "Barendrecht"
+      },
+      {
+        "to": "/dj-boeken-hoeksche-waard",
+        "label": "Hoeksche Waard"
+      }
+    ]
+  },
+
+  "bommelerwaard": {
+    "slug": "bommelerwaard",
+    "name": "Bommelerwaard",
+    "province": "Gelderland",
+    "region": "Rivierenland",
+    "title": "DJ Bommelerwaard inhuren | Kevin Froger",
+    "description": "Op zoek naar een DJ in de Bommelerwaard? Ik draai al 15+ jaar, kom met eigen licht en geluid en ben DJ en MC in een. 5,0 op Google. Bekijk mijn beschikbaarheid.",
+    "heroIntro": "Zoek je een DJ in de Bommelerwaard, het stukje tussen Maas en Waal met Zaltbommel, Kerkdriel en Ammerzoden? Ik kom met mijn complete show jullie kant op, van een bruiloft op een landelijke locatie tot een verjaardag in de fruitstreek. Eigen licht, eigen geluid en ik praat het feest zelf aan elkaar.",
+    "serviceDescription": "Allround DJ en MC met eigen licht en geluid voor bruiloften, bedrijfsfeesten en verjaardagen in de Bommelerwaard.",
+    "paragraphs": [
+      "De Bommelerwaard ken ik als de strook tussen de Maas en de Waal: Zaltbommel aan de noordkant, met Kerkdriel, Ammerzoden en Hedel iets zuidelijker. Veel feesten hier zitten op een landelijke trouwlocatie of in een boerenschuur tussen de boomgaarden, en daar voel ik me prima thuis. Ik draai allround, dus ik lees de zaal en pas de muziek aan op wie er staat.",
+      "Trouwen jullie in de buurt van Kasteel Ammersoyen of op een plek buitenaf in de fruitstreek? Licht en geluid breng ik zelf mee en ik sta achter de draaitafel én bij de microfoon, zodat het aankondigen van de momenten ook geregeld is. Of het nu een intieme bruiloft is of een verjaardag waar het later op de avond losgaat, ik bouw de avond mee op.",
+      "De Bommelerwaard ligt vlak aan de A2 en de A15, dus vanuit 's-Gravendeel ben ik snel bij jullie en sta ik op tijd op te bouwen. Ik draai er bruiloften, bedrijfsfeesten, verjaardagen en feesten, in Zaltbommel net zo makkelijk als in de kleinere kernen eromheen. Wil je sparren over de muziek of weten of jullie datum nog vrij is? Stuur me gerust een bericht."
+    ],
+    "characteristics": "Zaltbommel, Kerkdriel, Ammerzoden, Hedel, Rossum, Brakel, Aalst, Gameren, Nederhemert",
+    "related": [
+      {
+        "to": "/dj-boeken-zaltbommel",
+        "label": "Zaltbommel"
+      },
+      {
+        "to": "/dj-boeken-betuwe",
+        "label": "Betuwe"
+      },
+      {
+        "to": "/dj-boeken-den-bosch",
+        "label": "'s-Hertogenbosch"
+      }
+    ]
+  },
+
+  "buren": {
+    "slug": "buren",
+    "name": "Buren",
+    "province": "Gelderland",
+    "region": "Betuwe",
+    "title": "DJ Buren huren in de Betuwe | Kevin Froger",
+    "description": "DJ in Buren nodig? Ik draai al 15+ jaar, kom als DJ en MC in een persoon met eigen licht en geluid. 5,0 op Google. Vraag mijn beschikbaarheid op.",
+    "heroIntro": "Op zoek naar een DJ in Buren? Ik ben Kevin, allround DJ en MC, en ik draai graag in en rond het oude vestingstadje van de Oranjestad. Tussen de fruitboomgaarden van de Betuwe staat een feest pas echt mooi met goed licht en geluid.",
+    "serviceDescription": "DJ en MC voor bruiloften, bedrijfsfeesten, verjaardagen en festivals in Buren en de Betuwe, inclusief eigen licht- en geluidsinstallatie.",
+    "paragraphs": [
+      "Buren is klein maar bijzonder: de historische vesting met zijn poorten, de Marsch eromheen en de kernen Lienden, Maurik en Beusichem horen er allemaal bij. Veel feesten in deze hoek vinden plaats op landelijke locaties, in een boomgaard, een verbouwde schuur of een sfeervolle hoeve. Ik stem mijn opstelling daarop af, of de ruimte nu hoog en galmend is of juist intiem.",
+      "Ik werk als DJ en MC in een persoon, dus je hoeft geen aparte presentator te regelen. Ik kondig het eerste dansje aan, hou de avond op gang en draai van Nederlandstalig tot recente hits, afhankelijk van wat jullie en de gasten leuk vinden. Mijn eigen licht en geluid neem ik mee, zodat ook een kale feestzaal of tent er meteen goed uitziet.",
+      "Buren ligt vlak bij de A15 en de N320, dus vanuit 's-Gravendeel ben ik snel ter plaatse en heb ik ruim de tijd om op te bouwen en alles rustig te testen. Een bruiloft op een fruitbedrijf bij Maurik, een bedrijfsfeest in de buurt van Beusichem of een verjaardag in het centrum van Buren: laat me weten wat je van plan bent, dan kijk ik of jouw datum nog vrij is."
+    ],
+    "characteristics": "Buren centrum, De Marsch, Lienden, Maurik, Beusichem, Eck en Wiel, Zoelen, Erichem",
+    "related": [
+      {
+        "to": "/dj-boeken-tiel",
+        "label": "Tiel"
+      },
+      {
+        "to": "/dj-boeken-betuwe",
+        "label": "Betuwe"
+      },
+      {
+        "to": "/dj-boeken-culemborg",
+        "label": "Culemborg"
+      }
+    ]
+  },
+
+  "zuid-holland": {
+    "slug": "zuid-holland",
+    "name": "Zuid-Holland",
+    "province": "Zuid-Holland",
+    "region": "Zuid-Holland",
+    "title": "DJ Zuid-Holland inhuren | Kevin Froger",
+    "description": "Op zoek naar een dj in Zuid-Holland? Ik draai al 15+ jaar, kom met eigen licht en geluid en ben dj en MC in een. 5,0 op Google uit 10 reviews.",
+    "heroIntro": "Een dj in Zuid-Holland die net zo makkelijk in Rotterdam staat als in een dorpszaal in de Hoeksche Waard? Dat ben ik. Mijn thuisbasis is 's-Gravendeel, dus de hele provincie ligt om de hoek.",
+    "serviceDescription": "Allround dj en MC voor bruiloften, bedrijfsfeesten, verjaardagen en festivals door heel Zuid-Holland.",
+    "paragraphs": [
+      "Vanuit 's-Gravendeel zit ik snel in de Drechtsteden: Dordrecht, Zwijndrecht, Papendrecht en Sliedrecht zijn via de A16 en N3 een kort ritje. Ook richting Rotterdam-Zuid en de stad zelf ben ik vlot ter plaatse over de A15 en A29. Of het nu een trouwlocatie aan de Waal is of een bedrijfshal op een terrein langs de snelweg, ik plan mijn opbouw zo dat alles ruim op tijd staat.",
+      "De Hoeksche Waard ken ik op mijn duimpje. Kernen als Oud-Beijerland, Puttershoek, Maasdam, Strijen en Numansdorp draai ik graag, of het nu een verjaardag in een dorpshuis is of een feest in een boerenschuur. Verder de provincie in kom ik ook: Den Haag, Delft, Leiden, Zoetermeer en Gouda zijn voor mij prima te doen.",
+      "Geluid en licht breng ik allemaal zelf mee en stel ik in op de ruimte. Het draaien en de microfoon liggen bij dezelfde persoon, dus voor de aankondigingen en de speeches zit je ook bij mij goed. Een kleine zaal of een grote ruimte, ik stem de set af op jouw gasten en houd de avond op gang."
+    ],
+    "characteristics": "Rotterdam, Den Haag, Dordrecht, Drechtsteden, Hoeksche Waard, Delft, Leiden, Zoetermeer, Gouda, 's-Gravendeel",
+    "related": [
+      {
+        "to": "/dj-boeken-rotterdam",
+        "label": "Rotterdam"
+      },
+      {
+        "to": "/dj-boeken-dordrecht",
+        "label": "Dordrecht"
+      },
+      {
+        "to": "/dj-boeken-hoeksche-waard",
+        "label": "Hoeksche Waard"
+      }
+    ]
+  },
+
 };
 
 export function getCity(slug: string): CityData | undefined {
