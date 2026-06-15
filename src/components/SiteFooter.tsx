@@ -8,7 +8,7 @@ export function SiteFooter() {
     <footer className="bg-background border-t-2 border-border py-12 sm:py-16 px-5 sm:px-6 lg:px-10">
       <div className="max-w-[1400px] mx-auto">
         {/* Top: branding + diensten + info */}
-        <div className="grid md:grid-cols-4 gap-10 text-sm">
+        <div className="grid md:grid-cols-5 gap-8 text-sm">
           <div className="md:col-span-2">
             <img src={LOGO} alt="DJ Kevin Froger" width={360} height={198} loading="lazy" decoding="async" className="h-14 sm:h-16 w-auto mb-4" />
             <p className="text-muted-foreground max-w-sm leading-relaxed">
@@ -27,13 +27,26 @@ export function SiteFooter() {
               <li><Link to="/verjaardag-dj" className="hover:text-foreground">Feest en verjaardag</Link></li>
               <li><Link to="/zakelijk-dj" className="hover:text-foreground">Bedrijfsfeest</Link></li>
               <li><Link to="/festival-dj" className="hover:text-foreground">Festival</Link></li>
+              <li><Link to="/dj-en-mc" className="hover:text-foreground">DJ en MC in een</Link></li>
               <li><Link to="/verzoekje" className="hover:text-foreground">Verzoekje bij de DJ</Link></li>
+            </ul>
+          </div>
+          <div>
+            <div className="text-xs tracking-[0.25em] uppercase text-secondary font-bold mb-4">Hoeksche Waard</div>
+            <ul className="space-y-2 text-muted-foreground">
+              <li><Link to="/dj-boeken-hoeksche-waard" className="hover:text-foreground">DJ Hoeksche Waard</Link></li>
+              <li><Link to="/bruiloft-dj-hoeksche-waard" className="hover:text-foreground">Bruiloft DJ Hoeksche Waard</Link></li>
+              <li><Link to="/dj-boeken-oud-beijerland" className="hover:text-foreground">Oud-Beijerland</Link></li>
+              <li><Link to="/dj-boeken-s-gravendeel" className="hover:text-foreground">'s-Gravendeel</Link></li>
+              <li><Link to="/dj-boeken-numansdorp" className="hover:text-foreground">Numansdorp</Link></li>
+              <li><Link to="/dj-boeken-dordrecht" className="hover:text-foreground">Dordrecht</Link></li>
             </ul>
           </div>
           <div>
             <div className="text-xs tracking-[0.25em] uppercase text-secondary font-bold mb-4">Info</div>
             <ul className="space-y-2 text-muted-foreground">
               <li><Link to="/regios" className="hover:text-foreground">Werkgebied</Link></li>
+              <li><Link to="/feestlocaties" className="hover:text-foreground">Feestlocaties</Link></li>
               <li><Link to="/werkwijze" className="hover:text-foreground">Werkwijze</Link></li>
               <li><Link to="/prijzen" className="hover:text-foreground">Prijzen</Link></li>
               <li><Link to="/reviews" className="hover:text-foreground">Reviews</Link></li>

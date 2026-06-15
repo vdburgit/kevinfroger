@@ -39,7 +39,7 @@ const REDIRECTS = {
   "/dj-boeken-flevoland": "/regios",
   "/dj-boeken-zeeland": "/regios",
   "/dj-boeken-gelderland": "/dj-boeken-betuwe",
-  "/dj-boeken-zuid-holland": "/dj-boeken-hoeksche-waard",
+  // /dj-boeken-zuid-holland is nu een echte regiopagina; niet wegredirecten.
   // Opgeruimde minidorp-pagina's (West Betuwe) -> Betuwe-regiopagina
   "/dj-boeken-tuil": "/dj-boeken-betuwe",
   "/dj-boeken-ophemert": "/dj-boeken-betuwe",
