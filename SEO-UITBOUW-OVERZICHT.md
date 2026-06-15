@@ -85,3 +85,23 @@ De losse `/feestlocaties`-index en de 7 `/feestlocatie/<slug>`-pagina's zijn ver
 - `/dj-boeken-bommelerwaard`: Kasteel Ammersoyen (Ammerzoden), Kasteel Nederhemert (Nederhemert)
 
 De eerder genoemde feestlocatie-rijen in de routetabel hierboven zijn dus vervallen.
+
+## Technische SEO-pass (audit met agents)
+
+Een multi-agent audit (6 dimensies, 45 findings) is uitgewerkt tot een actieplan (`.seo-audit/plan.md`). Doorgevoerd, gericht op ranken voor "dj [plaats]" / "dj in [plaats]":
+
+- **areaServed per plaats**: `service()` zet op alle 62 locatiepagina's `areaServed` op de plaats (`City`) of regio (`AdministrativeArea`) i.p.v. `Country: Nederland`.
+- **H1 front-loaded**: locatiepagina's hebben nu H1 "DJ in {plaats} huren" (was "DJ huren in {plaats}").
+- **Per-plaats FAQ**: `cityFaq()`-helper levert zichtbare FAQ + identiek FAQPage-schema op elke locatiepagina (long-tail: "wat kost een dj in [plaats]" enz.).
+- **H2** "Bruiloft-DJ en feest-DJ in {plaats}".
+- **Anchor-teksten** naar "DJ {plaats}" op homepage-werkgebied, footer en de stedenchips op dienstpagina's.
+- **Titles** genormaliseerd naar het hoogvolume "DJ {Plaats} huren | ... | Kevin Froger"; merk-suffix overal "Kevin Froger".
+- **Hoeksche Waard-regiopagina** front-loaded ("DJ Hoeksche Waard huren"), kannibalisatie met de bruiloft-pagina opgelost.
+- **GeoCoordinates** op de LocalBusiness (benadering 's-Gravendeel).
+- **CWV**: `width`/`height` op de PageHero-afbeelding (LCP/CLS). Sitemap `lastmod` gebumpt.
+
+### NOG HANDMATIG / NEEDS-DATA (door Kevin)
+- **Exacte geo-coordinaten** van 's-Gravendeel bevestigen (nu benadering 51.7806 / 4.6189) en `hasMap` met de Google Maps-URL van het Business Profile toevoegen (`src/routes/__root.tsx`).
+- **postalCode + streetAddress** en **openingHoursSpecification** op de LocalBusiness toevoegen (echte gegevens).
+- **aggregateRating op #business/homepage**: alleen toevoegen met een zichtbaar reviewblok op de homepage (staat er deels al).
+- Overweeg echte provinciepagina's (Gelderland, Noord-Brabant, Utrecht) waar Kevin echt draait, i.p.v. de huidige redirects.

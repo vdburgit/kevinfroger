@@ -6,7 +6,7 @@ const IMG = "/images/dj-kevin-froger-bruiloft-scaled.jpeg";
 
 export const Route = createFileRoute("/dj-boeken-culemborg")({
   head: () => buildSeo({
-    title: "DJ Culemborg huren voor feest of bruiloft | Froger",
+    title: "DJ Culemborg huren voor feest of bruiloft | Kevin Froger",
     description: "Feest of bruiloft in Culemborg? Kevin draait passend bij jouw gasten en houdt de vloer vol. Vraag vrijblijvend een offerte aan.",
     path: "/dj-boeken-culemborg",
     image: IMG,

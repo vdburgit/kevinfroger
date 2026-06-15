@@ -6,7 +6,7 @@ const IMG = "/images/dj-kevin-froger-bruiloft-scaled.jpeg";
 
 export const Route = createFileRoute("/dj-boeken-dordrecht")({
   head: () => buildSeo({
-    title: "DJ Dordrecht huren | Allround feest-DJ | Froger",
+    title: "DJ Dordrecht huren | Allround feest-DJ | Kevin Froger",
     description: "DJ nodig in Dordrecht? Kevin Froger draait bruiloften, bedrijfsfeesten en verjaardagen in de hele stad en Drechtsteden. Vraag een offerte aan.",
     path: "/dj-boeken-dordrecht",
     image: IMG,

@@ -40,7 +40,7 @@ export function ServiceCityIndex({ service, collapsible = false, intro, links }:
           to={l.to}
           className="rounded-full bg-card border-2 border-border text-foreground px-4 py-2 text-xs tracking-[0.1em] uppercase font-bold hover:border-primary transition"
         >
-          {l.label}
+          DJ {l.label}
         </Link>
       ))}
       <Link

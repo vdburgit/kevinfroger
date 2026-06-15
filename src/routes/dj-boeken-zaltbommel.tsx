@@ -6,7 +6,7 @@ const IMG = "/images/dj-kevin-froger-bruiloft-scaled.jpeg";
 
 export const Route = createFileRoute("/dj-boeken-zaltbommel")({
   head: () => buildSeo({
-    title: "DJ Zaltbommel huren | Bruiloft & feest | Froger",
+    title: "DJ Zaltbommel huren | Bruiloft & feest | Kevin Froger",
     description: "Bruiloft of feest in Zaltbommel of de Bommelerwaard? Kevin maakt er een avond van om niet te vergeten. Check snel je datum.",
     path: "/dj-boeken-zaltbommel",
     image: IMG,

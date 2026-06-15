@@ -6,7 +6,7 @@ const IMG = "/images/dj-kevin-froger-bruiloft-scaled.jpeg";
 
 export const Route = createFileRoute("/dj-boeken-gorinchem")({
   head: () => buildSeo({
-    title: "DJ Gorinchem huren | Bruiloft & feest | Froger",
+    title: "DJ Gorinchem huren | Bruiloft & feest | Kevin Froger",
     description: "Feest of bruiloft in Gorinchem? DJ Kevin Froger zorgt voor de juiste muziek en een volle dansvloer. Vraag vrijblijvend een offerte aan.",
     path: "/dj-boeken-gorinchem",
     image: IMG,

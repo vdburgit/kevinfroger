@@ -7,8 +7,8 @@ const IMG = "/images/dj-kevin-froger-bruiloft-scaled.jpeg";
 
 export const Route = createFileRoute("/dj-boeken-hoeksche-waard")({
   head: () => buildSeo({
-    title: "Bruiloft DJ Hoeksche Waard | DJ Kevin Froger",
-    description: "DJ in de Hoeksche Waard? Kevin Froger draait al jaren bruiloften en feesten in de regio, van Oud-Beijerland tot Numansdorp. Check je datum.",
+    title: "DJ Hoeksche Waard huren | Bruiloft & feest | Kevin Froger",
+    description: "DJ in de Hoeksche Waard huren? Kevin uit 's-Gravendeel draait al jaren bruiloften en feesten in de regio, van Oud-Beijerland tot Numansdorp. Check je datum.",
     path: "/dj-boeken-hoeksche-waard",
     image: IMG,
     jsonLd: [

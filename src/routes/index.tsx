@@ -290,14 +290,14 @@ function Index() {
           {/* Ingetogen rij plaatslinks (geen drukke chips) */}
           <div className="mt-8 text-sm sm:text-base leading-loose">
             {[
-              { to: "/dj-boeken-hoeksche-waard", label: "Hoeksche Waard" },
-              { to: "/dj-boeken-dordrecht", label: "Dordrecht" },
-              { to: "/dj-boeken-barendrecht", label: "Barendrecht" },
-              { to: "/dj-boeken-rotterdam", label: "Rotterdam" },
-              { to: "/dj-boeken-gorinchem", label: "Gorinchem" },
-              { to: "/dj-boeken-tiel", label: "Tiel" },
-              { to: "/dj-boeken-betuwe", label: "Betuwe" },
-              { to: "/dj-boeken-bommelerwaard", label: "Bommelerwaard" },
+              { to: "/dj-boeken-hoeksche-waard", label: "DJ Hoeksche Waard" },
+              { to: "/dj-boeken-dordrecht", label: "DJ Dordrecht" },
+              { to: "/dj-boeken-barendrecht", label: "DJ Barendrecht" },
+              { to: "/dj-boeken-rotterdam", label: "DJ Rotterdam" },
+              { to: "/dj-boeken-gorinchem", label: "DJ Gorinchem" },
+              { to: "/dj-boeken-tiel", label: "DJ Tiel" },
+              { to: "/dj-boeken-betuwe", label: "DJ Betuwe" },
+              { to: "/dj-boeken-bommelerwaard", label: "DJ Bommelerwaard" },
             ].map((c, i) => (
               <span key={c.to} className="whitespace-nowrap">
                 {i > 0 && <span className="mx-2 text-border" aria-hidden>·</span>}

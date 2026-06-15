@@ -98,6 +98,13 @@ const ORGANIZATION_JSONLD = {
         addressRegion: "Zuid-Holland",
         addressCountry: "NL",
       },
+      // Benadering 's-Gravendeel. Kevin: bevestig exacte coordinaten en vul
+      // hasMap met de Google Maps-URL van het Business Profile aan.
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 51.7806,
+        longitude: 4.6189,
+      },
       sameAs: SAME_AS,
       areaServed: [
         { "@type": "Country", name: "Nederland" },

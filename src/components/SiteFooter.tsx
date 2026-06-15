@@ -32,14 +32,14 @@ export function SiteFooter() {
             </ul>
           </div>
           <div>
-            <div className="text-xs tracking-[0.25em] uppercase text-secondary font-bold mb-4">Hoeksche Waard</div>
+            <div className="text-xs tracking-[0.25em] uppercase text-secondary font-bold mb-4">Regio</div>
             <ul className="space-y-2 text-muted-foreground">
               <li><Link to="/dj-boeken-hoeksche-waard" className="hover:text-foreground">DJ Hoeksche Waard</Link></li>
               <li><Link to="/bruiloft-dj-hoeksche-waard" className="hover:text-foreground">Bruiloft DJ Hoeksche Waard</Link></li>
-              <li><Link to="/dj-boeken-oud-beijerland" className="hover:text-foreground">Oud-Beijerland</Link></li>
-              <li><Link to="/dj-boeken-s-gravendeel" className="hover:text-foreground">'s-Gravendeel</Link></li>
-              <li><Link to="/dj-boeken-numansdorp" className="hover:text-foreground">Numansdorp</Link></li>
-              <li><Link to="/dj-boeken-dordrecht" className="hover:text-foreground">Dordrecht</Link></li>
+              <li><Link to="/dj-boeken-dordrecht" className="hover:text-foreground">DJ Dordrecht</Link></li>
+              <li><Link to="/dj-boeken-rotterdam" className="hover:text-foreground">DJ Rotterdam</Link></li>
+              <li><Link to="/dj-boeken-barendrecht" className="hover:text-foreground">DJ Barendrecht</Link></li>
+              <li><Link to="/dj-boeken-s-gravendeel" className="hover:text-foreground">DJ 's-Gravendeel</Link></li>
             </ul>
           </div>
           <div>
