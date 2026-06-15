@@ -1,6 +1,13 @@
 export const SITE_URL = "https://kevinfroger.nl";
 export const SITE_NAME = "DJ Kevin Froger";
 
+// Echte Google-reviewcijfers. Eén centrale bron, zodat zichtbaar reviewblok en
+// JSON-LD altijd hetzelfde getal gebruiken. Pas alleen hier aan als het aantal
+// reviews of de score op Google verandert.
+export const REVIEW_RATING = "5.0";
+export const REVIEW_COUNT = 10;
+export const REVIEW_URL = "https://www.google.com/search?q=DJ+Kevin+Froger+reviews";
+
 type MetaTag =
   | { title: string }
   | { name: string; content: string }
@@ -114,12 +121,28 @@ export function faqPage(items: FaqItem[]) {
   };
 }
 
+// AggregateRating-blok op basis van de echte Google-cijfers (5,0 / 10 reviews).
+// Voeg toe aan een Service via service({ rating: true }). Gebruik alleen waar de
+// pagina ook een zichtbaar reviewblok met dezelfde cijfers toont (Google-vereiste:
+// rating-markup moet overeenkomen met zichtbare content).
+export function aggregateRating() {
+  return {
+    "@type": "AggregateRating",
+    ratingValue: REVIEW_RATING,
+    reviewCount: REVIEW_COUNT,
+    bestRating: "5",
+    worstRating: "1",
+  };
+}
+
 export function service(opts: {
   name: string;
   description: string;
   serviceType: string;
   path: string;
   image: string;
+  areaServed?: string;
+  rating?: boolean;
 }) {
   return {
     "@context": "https://schema.org",
@@ -130,6 +153,9 @@ export function service(opts: {
     url: abs(opts.path),
     image: abs(opts.image),
     provider: { "@id": `${SITE_URL}/#business` },
-    areaServed: { "@type": "Country", name: "Nederland" },
+    areaServed: opts.areaServed
+      ? { "@type": "AdministrativeArea", name: opts.areaServed }
+      : { "@type": "Country", name: "Nederland" },
+    ...(opts.rating ? { aggregateRating: aggregateRating() } : {}),
   };
 }
