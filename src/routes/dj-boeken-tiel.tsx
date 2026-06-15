@@ -67,6 +67,11 @@ function Page() {
         Verder de Betuwe in: Kesteren, Opheusden, Ochten, Dodewaard, Maurik, Lienden, Eck en Wiel en Ingen. Allemaal binnen een half uurtje rijden vanuit Tiel.
       </p>
 
+      <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>Bekende feestlocatie</h2>
+      <p className="text-lg text-muted-foreground leading-relaxed mb-10">
+        In Tiel draai ik regelmatig op Hart van de Betuwe, een feestlocatie waar veel mensen graag komen. Of het nu om een bruiloft, verjaardag of bedrijfsfeest gaat, ik kom er graag langs en maak er met de juiste muziek een mooie avond van.
+      </p>
+
       <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>Datum checken</h2>
       <p className="text-lg text-muted-foreground leading-relaxed">
         Bel of app ons voor je datum. Of bekijk eerst de <Link to="/prijzen" className="text-secondary underline hover:text-primary">prijzen</Link>.

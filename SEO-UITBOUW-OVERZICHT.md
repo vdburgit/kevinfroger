@@ -74,3 +74,14 @@ De 7 feestlocatie-pagina's zijn gesaneerd (geen verzonnen cijfers, geen "heb hie
 ### Na deploy (Search Console / Google)
 - Nieuwe sitemap opnieuw indienen in Google Search Console en crawl forceren voor de nieuwe pagina's.
 - Google Business Profile up-to-date houden (vestiging 's-Gravendeel, service-area Hoeksche Waard + Betuwe).
+
+## Update: feestlocaties niet meer als losse pagina's
+
+De losse `/feestlocaties`-index en de 7 `/feestlocatie/<slug>`-pagina's zijn verwijderd (inclusief component, datafile, sitemap-entries en de links in footer en homepage). De locaties zijn nu **per plaats verwerkt** in de betreffende werkgebied-pagina, met de formulering "vaak gedraaid op":
+
+- `/dj-boeken-dordrecht`: Partycentrum Wantijpaviljoen, Postillion Hotel Dordrecht, Event Center Dordrecht
+- `/dj-boeken-tiel`: Hart van de Betuwe
+- `/dj-boeken-betuwe`: Kasteel Wijenburg (Echteld)
+- `/dj-boeken-bommelerwaard`: Kasteel Ammersoyen (Ammerzoden), Kasteel Nederhemert (Nederhemert)
+
+De eerder genoemde feestlocatie-rijen in de routetabel hierboven zijn dus vervallen.

@@ -18,7 +18,6 @@ import { Route as RegiosRouteImport } from './routes/regios'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PrijzenRouteImport } from './routes/prijzen'
 import { Route as FestivalDjRouteImport } from './routes/festival-dj'
-import { Route as FeestlocatiesRouteImport } from './routes/feestlocaties'
 import { Route as DjEnMcRouteImport } from './routes/dj-en-mc'
 import { Route as DjBoekenZwolleRouteImport } from './routes/dj-boeken-zwolle'
 import { Route as DjBoekenZuidHollandRouteImport } from './routes/dj-boeken-zuid-holland'
@@ -89,13 +88,6 @@ import { Route as BruiloftDjRouteImport } from './routes/bruiloft-dj'
 import { Route as BiografieRouteImport } from './routes/biografie'
 import { Route as AlgemeneVoorwaardenRouteImport } from './routes/algemene-voorwaarden'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as FeestlocatieWantijpaviljoenDordrechtRouteImport } from './routes/feestlocatie.wantijpaviljoen-dordrecht'
-import { Route as FeestlocatiePostillionHotelDordrechtRouteImport } from './routes/feestlocatie.postillion-hotel-dordrecht'
-import { Route as FeestlocatieKasteelWijenburgRouteImport } from './routes/feestlocatie.kasteel-wijenburg'
-import { Route as FeestlocatieKasteelNederhemertRouteImport } from './routes/feestlocatie.kasteel-nederhemert'
-import { Route as FeestlocatieKasteelAmmersoyenRouteImport } from './routes/feestlocatie.kasteel-ammersoyen'
-import { Route as FeestlocatieHartVanDeBetuweTielRouteImport } from './routes/feestlocatie.hart-van-de-betuwe-tiel'
-import { Route as FeestlocatieEventCenterDordrechtRouteImport } from './routes/feestlocatie.event-center-dordrecht'
 
 const ZakelijkDjRoute = ZakelijkDjRouteImport.update({
   id: '/zakelijk-dj',
@@ -140,11 +132,6 @@ const PrijzenRoute = PrijzenRouteImport.update({
 const FestivalDjRoute = FestivalDjRouteImport.update({
   id: '/festival-dj',
   path: '/festival-dj',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FeestlocatiesRoute = FeestlocatiesRouteImport.update({
-  id: '/feestlocaties',
-  path: '/feestlocaties',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DjEnMcRoute = DjEnMcRouteImport.update({
@@ -497,48 +484,6 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const FeestlocatieWantijpaviljoenDordrechtRoute =
-  FeestlocatieWantijpaviljoenDordrechtRouteImport.update({
-    id: '/feestlocatie/wantijpaviljoen-dordrecht',
-    path: '/feestlocatie/wantijpaviljoen-dordrecht',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const FeestlocatiePostillionHotelDordrechtRoute =
-  FeestlocatiePostillionHotelDordrechtRouteImport.update({
-    id: '/feestlocatie/postillion-hotel-dordrecht',
-    path: '/feestlocatie/postillion-hotel-dordrecht',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const FeestlocatieKasteelWijenburgRoute =
-  FeestlocatieKasteelWijenburgRouteImport.update({
-    id: '/feestlocatie/kasteel-wijenburg',
-    path: '/feestlocatie/kasteel-wijenburg',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const FeestlocatieKasteelNederhemertRoute =
-  FeestlocatieKasteelNederhemertRouteImport.update({
-    id: '/feestlocatie/kasteel-nederhemert',
-    path: '/feestlocatie/kasteel-nederhemert',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const FeestlocatieKasteelAmmersoyenRoute =
-  FeestlocatieKasteelAmmersoyenRouteImport.update({
-    id: '/feestlocatie/kasteel-ammersoyen',
-    path: '/feestlocatie/kasteel-ammersoyen',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const FeestlocatieHartVanDeBetuweTielRoute =
-  FeestlocatieHartVanDeBetuweTielRouteImport.update({
-    id: '/feestlocatie/hart-van-de-betuwe-tiel',
-    path: '/feestlocatie/hart-van-de-betuwe-tiel',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const FeestlocatieEventCenterDordrechtRoute =
-  FeestlocatieEventCenterDordrechtRouteImport.update({
-    id: '/feestlocatie/event-center-dordrecht',
-    path: '/feestlocatie/event-center-dordrecht',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -611,7 +556,6 @@ export interface FileRoutesByFullPath {
   '/dj-boeken-zuid-holland': typeof DjBoekenZuidHollandRoute
   '/dj-boeken-zwolle': typeof DjBoekenZwolleRoute
   '/dj-en-mc': typeof DjEnMcRoute
-  '/feestlocaties': typeof FeestlocatiesRoute
   '/festival-dj': typeof FestivalDjRoute
   '/prijzen': typeof PrijzenRoute
   '/privacy': typeof PrivacyRoute
@@ -621,13 +565,6 @@ export interface FileRoutesByFullPath {
   '/verzoekje': typeof VerzoekjeRoute
   '/werkwijze': typeof WerkwijzeRoute
   '/zakelijk-dj': typeof ZakelijkDjRoute
-  '/feestlocatie/event-center-dordrecht': typeof FeestlocatieEventCenterDordrechtRoute
-  '/feestlocatie/hart-van-de-betuwe-tiel': typeof FeestlocatieHartVanDeBetuweTielRoute
-  '/feestlocatie/kasteel-ammersoyen': typeof FeestlocatieKasteelAmmersoyenRoute
-  '/feestlocatie/kasteel-nederhemert': typeof FeestlocatieKasteelNederhemertRoute
-  '/feestlocatie/kasteel-wijenburg': typeof FeestlocatieKasteelWijenburgRoute
-  '/feestlocatie/postillion-hotel-dordrecht': typeof FeestlocatiePostillionHotelDordrechtRoute
-  '/feestlocatie/wantijpaviljoen-dordrecht': typeof FeestlocatieWantijpaviljoenDordrechtRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -700,7 +637,6 @@ export interface FileRoutesByTo {
   '/dj-boeken-zuid-holland': typeof DjBoekenZuidHollandRoute
   '/dj-boeken-zwolle': typeof DjBoekenZwolleRoute
   '/dj-en-mc': typeof DjEnMcRoute
-  '/feestlocaties': typeof FeestlocatiesRoute
   '/festival-dj': typeof FestivalDjRoute
   '/prijzen': typeof PrijzenRoute
   '/privacy': typeof PrivacyRoute
@@ -710,13 +646,6 @@ export interface FileRoutesByTo {
   '/verzoekje': typeof VerzoekjeRoute
   '/werkwijze': typeof WerkwijzeRoute
   '/zakelijk-dj': typeof ZakelijkDjRoute
-  '/feestlocatie/event-center-dordrecht': typeof FeestlocatieEventCenterDordrechtRoute
-  '/feestlocatie/hart-van-de-betuwe-tiel': typeof FeestlocatieHartVanDeBetuweTielRoute
-  '/feestlocatie/kasteel-ammersoyen': typeof FeestlocatieKasteelAmmersoyenRoute
-  '/feestlocatie/kasteel-nederhemert': typeof FeestlocatieKasteelNederhemertRoute
-  '/feestlocatie/kasteel-wijenburg': typeof FeestlocatieKasteelWijenburgRoute
-  '/feestlocatie/postillion-hotel-dordrecht': typeof FeestlocatiePostillionHotelDordrechtRoute
-  '/feestlocatie/wantijpaviljoen-dordrecht': typeof FeestlocatieWantijpaviljoenDordrechtRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -790,7 +719,6 @@ export interface FileRoutesById {
   '/dj-boeken-zuid-holland': typeof DjBoekenZuidHollandRoute
   '/dj-boeken-zwolle': typeof DjBoekenZwolleRoute
   '/dj-en-mc': typeof DjEnMcRoute
-  '/feestlocaties': typeof FeestlocatiesRoute
   '/festival-dj': typeof FestivalDjRoute
   '/prijzen': typeof PrijzenRoute
   '/privacy': typeof PrivacyRoute
@@ -800,13 +728,6 @@ export interface FileRoutesById {
   '/verzoekje': typeof VerzoekjeRoute
   '/werkwijze': typeof WerkwijzeRoute
   '/zakelijk-dj': typeof ZakelijkDjRoute
-  '/feestlocatie/event-center-dordrecht': typeof FeestlocatieEventCenterDordrechtRoute
-  '/feestlocatie/hart-van-de-betuwe-tiel': typeof FeestlocatieHartVanDeBetuweTielRoute
-  '/feestlocatie/kasteel-ammersoyen': typeof FeestlocatieKasteelAmmersoyenRoute
-  '/feestlocatie/kasteel-nederhemert': typeof FeestlocatieKasteelNederhemertRoute
-  '/feestlocatie/kasteel-wijenburg': typeof FeestlocatieKasteelWijenburgRoute
-  '/feestlocatie/postillion-hotel-dordrecht': typeof FeestlocatiePostillionHotelDordrechtRoute
-  '/feestlocatie/wantijpaviljoen-dordrecht': typeof FeestlocatieWantijpaviljoenDordrechtRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -881,7 +802,6 @@ export interface FileRouteTypes {
     | '/dj-boeken-zuid-holland'
     | '/dj-boeken-zwolle'
     | '/dj-en-mc'
-    | '/feestlocaties'
     | '/festival-dj'
     | '/prijzen'
     | '/privacy'
@@ -891,13 +811,6 @@ export interface FileRouteTypes {
     | '/verzoekje'
     | '/werkwijze'
     | '/zakelijk-dj'
-    | '/feestlocatie/event-center-dordrecht'
-    | '/feestlocatie/hart-van-de-betuwe-tiel'
-    | '/feestlocatie/kasteel-ammersoyen'
-    | '/feestlocatie/kasteel-nederhemert'
-    | '/feestlocatie/kasteel-wijenburg'
-    | '/feestlocatie/postillion-hotel-dordrecht'
-    | '/feestlocatie/wantijpaviljoen-dordrecht'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -970,7 +883,6 @@ export interface FileRouteTypes {
     | '/dj-boeken-zuid-holland'
     | '/dj-boeken-zwolle'
     | '/dj-en-mc'
-    | '/feestlocaties'
     | '/festival-dj'
     | '/prijzen'
     | '/privacy'
@@ -980,13 +892,6 @@ export interface FileRouteTypes {
     | '/verzoekje'
     | '/werkwijze'
     | '/zakelijk-dj'
-    | '/feestlocatie/event-center-dordrecht'
-    | '/feestlocatie/hart-van-de-betuwe-tiel'
-    | '/feestlocatie/kasteel-ammersoyen'
-    | '/feestlocatie/kasteel-nederhemert'
-    | '/feestlocatie/kasteel-wijenburg'
-    | '/feestlocatie/postillion-hotel-dordrecht'
-    | '/feestlocatie/wantijpaviljoen-dordrecht'
   id:
     | '__root__'
     | '/'
@@ -1059,7 +964,6 @@ export interface FileRouteTypes {
     | '/dj-boeken-zuid-holland'
     | '/dj-boeken-zwolle'
     | '/dj-en-mc'
-    | '/feestlocaties'
     | '/festival-dj'
     | '/prijzen'
     | '/privacy'
@@ -1069,13 +973,6 @@ export interface FileRouteTypes {
     | '/verzoekje'
     | '/werkwijze'
     | '/zakelijk-dj'
-    | '/feestlocatie/event-center-dordrecht'
-    | '/feestlocatie/hart-van-de-betuwe-tiel'
-    | '/feestlocatie/kasteel-ammersoyen'
-    | '/feestlocatie/kasteel-nederhemert'
-    | '/feestlocatie/kasteel-wijenburg'
-    | '/feestlocatie/postillion-hotel-dordrecht'
-    | '/feestlocatie/wantijpaviljoen-dordrecht'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -1149,7 +1046,6 @@ export interface RootRouteChildren {
   DjBoekenZuidHollandRoute: typeof DjBoekenZuidHollandRoute
   DjBoekenZwolleRoute: typeof DjBoekenZwolleRoute
   DjEnMcRoute: typeof DjEnMcRoute
-  FeestlocatiesRoute: typeof FeestlocatiesRoute
   FestivalDjRoute: typeof FestivalDjRoute
   PrijzenRoute: typeof PrijzenRoute
   PrivacyRoute: typeof PrivacyRoute
@@ -1159,13 +1055,6 @@ export interface RootRouteChildren {
   VerzoekjeRoute: typeof VerzoekjeRoute
   WerkwijzeRoute: typeof WerkwijzeRoute
   ZakelijkDjRoute: typeof ZakelijkDjRoute
-  FeestlocatieEventCenterDordrechtRoute: typeof FeestlocatieEventCenterDordrechtRoute
-  FeestlocatieHartVanDeBetuweTielRoute: typeof FeestlocatieHartVanDeBetuweTielRoute
-  FeestlocatieKasteelAmmersoyenRoute: typeof FeestlocatieKasteelAmmersoyenRoute
-  FeestlocatieKasteelNederhemertRoute: typeof FeestlocatieKasteelNederhemertRoute
-  FeestlocatieKasteelWijenburgRoute: typeof FeestlocatieKasteelWijenburgRoute
-  FeestlocatiePostillionHotelDordrechtRoute: typeof FeestlocatiePostillionHotelDordrechtRoute
-  FeestlocatieWantijpaviljoenDordrechtRoute: typeof FeestlocatieWantijpaviljoenDordrechtRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -1231,13 +1120,6 @@ declare module '@tanstack/react-router' {
       path: '/festival-dj'
       fullPath: '/festival-dj'
       preLoaderRoute: typeof FestivalDjRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/feestlocaties': {
-      id: '/feestlocaties'
-      path: '/feestlocaties'
-      fullPath: '/feestlocaties'
-      preLoaderRoute: typeof FeestlocatiesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dj-en-mc': {
@@ -1730,55 +1612,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/feestlocatie/wantijpaviljoen-dordrecht': {
-      id: '/feestlocatie/wantijpaviljoen-dordrecht'
-      path: '/feestlocatie/wantijpaviljoen-dordrecht'
-      fullPath: '/feestlocatie/wantijpaviljoen-dordrecht'
-      preLoaderRoute: typeof FeestlocatieWantijpaviljoenDordrechtRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/feestlocatie/postillion-hotel-dordrecht': {
-      id: '/feestlocatie/postillion-hotel-dordrecht'
-      path: '/feestlocatie/postillion-hotel-dordrecht'
-      fullPath: '/feestlocatie/postillion-hotel-dordrecht'
-      preLoaderRoute: typeof FeestlocatiePostillionHotelDordrechtRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/feestlocatie/kasteel-wijenburg': {
-      id: '/feestlocatie/kasteel-wijenburg'
-      path: '/feestlocatie/kasteel-wijenburg'
-      fullPath: '/feestlocatie/kasteel-wijenburg'
-      preLoaderRoute: typeof FeestlocatieKasteelWijenburgRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/feestlocatie/kasteel-nederhemert': {
-      id: '/feestlocatie/kasteel-nederhemert'
-      path: '/feestlocatie/kasteel-nederhemert'
-      fullPath: '/feestlocatie/kasteel-nederhemert'
-      preLoaderRoute: typeof FeestlocatieKasteelNederhemertRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/feestlocatie/kasteel-ammersoyen': {
-      id: '/feestlocatie/kasteel-ammersoyen'
-      path: '/feestlocatie/kasteel-ammersoyen'
-      fullPath: '/feestlocatie/kasteel-ammersoyen'
-      preLoaderRoute: typeof FeestlocatieKasteelAmmersoyenRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/feestlocatie/hart-van-de-betuwe-tiel': {
-      id: '/feestlocatie/hart-van-de-betuwe-tiel'
-      path: '/feestlocatie/hart-van-de-betuwe-tiel'
-      fullPath: '/feestlocatie/hart-van-de-betuwe-tiel'
-      preLoaderRoute: typeof FeestlocatieHartVanDeBetuweTielRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/feestlocatie/event-center-dordrecht': {
-      id: '/feestlocatie/event-center-dordrecht'
-      path: '/feestlocatie/event-center-dordrecht'
-      fullPath: '/feestlocatie/event-center-dordrecht'
-      preLoaderRoute: typeof FeestlocatieEventCenterDordrechtRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
@@ -1853,7 +1686,6 @@ const rootRouteChildren: RootRouteChildren = {
   DjBoekenZuidHollandRoute: DjBoekenZuidHollandRoute,
   DjBoekenZwolleRoute: DjBoekenZwolleRoute,
   DjEnMcRoute: DjEnMcRoute,
-  FeestlocatiesRoute: FeestlocatiesRoute,
   FestivalDjRoute: FestivalDjRoute,
   PrijzenRoute: PrijzenRoute,
   PrivacyRoute: PrivacyRoute,
@@ -1863,15 +1695,6 @@ const rootRouteChildren: RootRouteChildren = {
   VerzoekjeRoute: VerzoekjeRoute,
   WerkwijzeRoute: WerkwijzeRoute,
   ZakelijkDjRoute: ZakelijkDjRoute,
-  FeestlocatieEventCenterDordrechtRoute: FeestlocatieEventCenterDordrechtRoute,
-  FeestlocatieHartVanDeBetuweTielRoute: FeestlocatieHartVanDeBetuweTielRoute,
-  FeestlocatieKasteelAmmersoyenRoute: FeestlocatieKasteelAmmersoyenRoute,
-  FeestlocatieKasteelNederhemertRoute: FeestlocatieKasteelNederhemertRoute,
-  FeestlocatieKasteelWijenburgRoute: FeestlocatieKasteelWijenburgRoute,
-  FeestlocatiePostillionHotelDordrechtRoute:
-    FeestlocatiePostillionHotelDordrechtRoute,
-  FeestlocatieWantijpaviljoenDordrechtRoute:
-    FeestlocatieWantijpaviljoenDordrechtRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

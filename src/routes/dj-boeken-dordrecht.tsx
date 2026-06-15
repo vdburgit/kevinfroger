@@ -61,6 +61,10 @@ function Page() {
         Via de A15 ben ik ook snel in <Link to="/dj-boeken-gorinchem" className="text-secondary underline hover:text-primary">Gorinchem</Link> en de <Link to="/dj-boeken-betuwe" className="text-secondary underline hover:text-primary">Betuwe</Link>, en via de Kiltunnel in de <Link to="/dj-boeken-hoeksche-waard" className="text-secondary underline hover:text-primary">Hoeksche Waard</Link>.
       </p>
 
+      <p className="text-lg text-muted-foreground leading-relaxed mb-10">
+        In Dordrecht draai ik regelmatig op bekende feestlocaties in de stad. Zo heb ik al vaak gedraaid in Partycentrum Wantijpaviljoen, het Postillion Hotel Dordrecht en Event Center Dordrecht. Ik ken de zalen hier goed en weet er een mooi feest van te maken.
+      </p>
+
       <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>Korte lijntjes</h2>
       <p className="text-lg text-muted-foreground leading-relaxed">
         Wil je weten of ik op jouw datum kan? App of bel ons. Bekijk eerst de <Link to="/prijzen" className="text-secondary underline hover:text-primary">prijzen</Link>.

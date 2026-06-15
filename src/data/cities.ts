@@ -1284,7 +1284,8 @@ export const CITIES: Record<string, CityData> = {
     "paragraphs": [
       "De Bommelerwaard ken ik als de strook tussen de Maas en de Waal: Zaltbommel aan de noordkant, met Kerkdriel, Ammerzoden en Hedel iets zuidelijker. Veel feesten hier zitten op een landelijke trouwlocatie of in een boerenschuur tussen de boomgaarden, en daar voel ik me prima thuis. Ik draai allround, dus ik lees de zaal en pas de muziek aan op wie er staat.",
       "Trouwen jullie in de buurt van Kasteel Ammersoyen of op een plek buitenaf in de fruitstreek? Licht en geluid breng ik zelf mee en ik sta achter de draaitafel én bij de microfoon, zodat het aankondigen van de momenten ook geregeld is. Of het nu een intieme bruiloft is of een verjaardag waar het later op de avond losgaat, ik bouw de avond mee op.",
-      "De Bommelerwaard ligt vlak aan de A2 en de A15, dus vanuit 's-Gravendeel ben ik snel bij jullie en sta ik op tijd op te bouwen. Ik draai er bruiloften, bedrijfsfeesten, verjaardagen en feesten, in Zaltbommel net zo makkelijk als in de kleinere kernen eromheen. Wil je sparren over de muziek of weten of jullie datum nog vrij is? Stuur me gerust een bericht."
+      "De Bommelerwaard ligt vlak aan de A2 en de A15, dus vanuit 's-Gravendeel ben ik snel bij jullie en sta ik op tijd op te bouwen. Ik draai er bruiloften, bedrijfsfeesten, verjaardagen en feesten, in Zaltbommel net zo makkelijk als in de kleinere kernen eromheen. Wil je sparren over de muziek of weten of jullie datum nog vrij is? Stuur me gerust een bericht.",
+      "In de Bommelerwaard draai ik regelmatig op sfeervolle locaties, waaronder een aantal mooie kastelen. Zo heb ik vaak gedraaid op Kasteel Ammersoyen in Ammerzoden en Kasteel Nederhemert in Nederhemert. Die plekken hebben een fijne, eigen sfeer en ik sluit er met mijn muziek graag op aan."
     ],
     "characteristics": "Zaltbommel, Kerkdriel, Ammerzoden, Hedel, Rossum, Brakel, Aalst, Gameren, Nederhemert",
     "related": [

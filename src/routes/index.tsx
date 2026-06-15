@@ -312,9 +312,6 @@ function Index() {
             <Link to="/regios" className="rounded-full bg-primary text-primary-foreground border-2 border-secondary px-6 py-3 text-xs sm:text-sm tracking-[0.15em] uppercase font-bold hover:bg-secondary hover:text-secondary-foreground transition">
               Alle plaatsen
             </Link>
-            <Link to="/feestlocaties" className="rounded-full border-2 border-secondary text-secondary px-6 py-3 text-xs sm:text-sm tracking-[0.15em] uppercase font-bold hover:bg-secondary hover:text-secondary-foreground transition">
-              Feestlocaties
-            </Link>
           </div>
         </div>
       </section>

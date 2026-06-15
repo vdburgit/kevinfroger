@@ -58,6 +58,10 @@ function Page() {
         <strong className="text-foreground">Neder-Betuwe en Maas en Waal</strong>: Kesteren, Opheusden, Ochten, Dodewaard, Maurik, Lienden, Eck en Wiel, Ingen, Echteld, Ravenswaaij, en aan de overkant van de Waal: Wamel, Druten en Beneden-Leeuwen.
       </p>
 
+      <p className="text-lg text-muted-foreground leading-relaxed mb-10">
+        In de Betuwe draai ik regelmatig op sfeervolle locaties, en dat zijn soms ook echte kastelen. Zo heb ik al vaak gedraaid op Kasteel Wijenburg in Echteld, een fijne plek waar de juiste muziek goed tot zijn recht komt.
+      </p>
+
       <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>Wat ik breng</h2>
       <p className="text-lg text-muted-foreground leading-relaxed mb-6">
         Wat ik breng is een complete avond. Licht en geluid zitten erbij, ik draai allround, en ik stem de muziek af op jouw gasten in plaats van een standaardlijst af te spelen. Van het diner tot de laatste plaat bouw ik de energie rustig op.

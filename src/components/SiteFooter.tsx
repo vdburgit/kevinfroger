@@ -46,7 +46,6 @@ export function SiteFooter() {
             <div className="text-xs tracking-[0.25em] uppercase text-secondary font-bold mb-4">Info</div>
             <ul className="space-y-2 text-muted-foreground">
               <li><Link to="/regios" className="hover:text-foreground">Werkgebied</Link></li>
-              <li><Link to="/feestlocaties" className="hover:text-foreground">Feestlocaties</Link></li>
               <li><Link to="/werkwijze" className="hover:text-foreground">Werkwijze</Link></li>
               <li><Link to="/prijzen" className="hover:text-foreground">Prijzen</Link></li>
               <li><Link to="/reviews" className="hover:text-foreground">Reviews</Link></li>
