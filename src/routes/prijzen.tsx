@@ -48,11 +48,11 @@ const PACKAGES = [
 // de mogelijkheden via de CTA. Afbeeldingen worden los aangeleverd (zie paden).
 const EXTRAS = [
   { title: "Sfeerverlichting met accuspots", image: "/images/extra-accuspots.jpg", alt: "Accuspots die een feestzaal uitlichten in kleur", text: "Zes draadloze accuspots die je hele zaal in kleur zetten. Geen kabels over de vloer en de accu houdt het een avond lang vol. Binnen no-time staat de ruimte in de juiste sfeer." },
-  { title: "Confettikanonnen", image: "/images/extra-confetti.jpg", alt: "Confetti boven de dansvloer tijdens een feest", text: "De perfecte knal voor de openingsdans of de start van de avond. De set is compleet voor twee confettimomenten, precies op het juiste nummer." },
+  { title: "Confettikanonnen", image: "/images/extra-confetti.webp", alt: "Confetti boven de dansvloer tijdens een feest", text: "De perfecte knal voor de openingsdans of de start van de avond. De set is compleet voor twee confettimomenten, precies op het juiste nummer." },
   { title: "Spark-fonteinen", image: "/images/extra-sparks.jpg", alt: "Spark fonteinen met vonken op een podium", text: "Het veilige alternatief voor echt vuurwerk binnen. De vonken schieten tot vijf meter de lucht in, zonder brandgevaar en zonder rook. Indrukwekkend voor een opkomst of een speciaal moment." },
   { title: "Tv-scherm voor foto's en video", image: "/images/extra-tv-scherm.webp", alt: "Groot tv-scherm op statief tijdens een evenement", text: "Deel foto's, een slideshow of de aftermovie met je gasten op een groot scherm. Beschikbaar vanaf 55 inch, op statief of standaard." },
   { title: "Podium", image: "/images/extra-podium.webp", alt: "Podium opgebouwd in een evenementenzaal", text: "Een podium voor de DJ-set, een presentatie, prijsuitreiking of optreden. Stevig en strak afgewerkt, in de maat die bij jouw locatie past." },
-  { title: "Eigen wensen", image: "/images/extra-maatwerk.jpg", alt: "DJ booth met sfeerverlichting tijdens een feest", text: "Iets anders in gedachten? Denk aan een naam in licht, een speciale opkomst of andere aankleding. Laat het weten, dan kijken we samen wat er mogelijk is." },
+  { title: "Eigen wensen", image: "/images/extra-maatwerk.webp", alt: "DJ booth met sfeerverlichting tijdens een feest", text: "Iets anders in gedachten? Denk aan een naam in licht, een speciale opkomst of andere aankleding. Laat het weten, dan kijken we samen wat er mogelijk is." },
 ];
 
 export const Route = createFileRoute("/prijzen")({
