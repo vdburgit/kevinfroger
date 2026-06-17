@@ -18,6 +18,9 @@ export const Route = createFileRoute("/dj-boeken-dordrecht")({
         description: "Allround DJ voor bruiloft, verjaardag en bedrijfsfeest in Dordrecht en de hele Drechtsteden. Eigen licht en geluid.",
         path: "/dj-boeken-dordrecht",
         image: IMG,
+        // Geen zichtbaar reviewblok op deze pagina, dus geen rating in de JSON-LD
+        // (Google-beleid: rating-markup alleen waar de reviews ook zichtbaar staan).
+        rating: false,
       }),
       faqPage(cityFaq("Dordrecht")),
       breadcrumb([
@@ -57,7 +60,7 @@ function Page() {
 
       <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>Dordrecht en Drechtsteden</h2>
       <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-        Vanuit Dordrecht draai ik in de hele <strong className="text-foreground">Drechtsteden</strong>: Zwijndrecht, Barendrecht, Hendrik-Ido-Ambacht, Ridderkerk, Papendrecht, Sliedrecht en Hardinxveld-Giessendam. Allemaal binnen handbereik.
+        Vanuit Dordrecht draai ik in de hele <strong className="text-foreground">Drechtsteden</strong>: <Link to="/dj-boeken-zwijndrecht" className="text-secondary underline hover:text-primary">Zwijndrecht</Link>, <Link to="/dj-boeken-barendrecht" className="text-secondary underline hover:text-primary">Barendrecht</Link>, Hendrik-Ido-Ambacht, <Link to="/dj-boeken-ridderkerk" className="text-secondary underline hover:text-primary">Ridderkerk</Link>, <Link to="/dj-boeken-papendrecht" className="text-secondary underline hover:text-primary">Papendrecht</Link>, <Link to="/dj-boeken-sliedrecht" className="text-secondary underline hover:text-primary">Sliedrecht</Link> en Hardinxveld-Giessendam. Allemaal binnen handbereik.
       </p>
       <p className="text-lg text-muted-foreground leading-relaxed mb-10">
         Via de A15 ben ik ook snel in <Link to="/dj-boeken-gorinchem" className="text-secondary underline hover:text-primary">Gorinchem</Link> en de <Link to="/dj-boeken-betuwe" className="text-secondary underline hover:text-primary">Betuwe</Link>, en via de Kiltunnel in de <Link to="/dj-boeken-hoeksche-waard" className="text-secondary underline hover:text-primary">Hoeksche Waard</Link>.

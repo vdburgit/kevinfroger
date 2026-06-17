@@ -54,7 +54,7 @@ function Page() {
         Veel boekingen komen via via, gewoon omdat mensen me kennen of op een feest hebben gezien. Dat zegt meer dan welke reclame ook. Ik ken de gangbare feestlocaties en de lijntjes zijn kort.
       </p>
       <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-        Op- en afbouw verlopen soepel en ik ben snel ter plaatse. Of je feest nu in Oud-Beijerland, Puttershoek, Strijen, Maasdam of Numansdorp is, ik ben zo bij je. Ook in de kleinere kernen zoals Klaaswaal, Heinenoord, Mijnsheerenland, Westmaas, Nieuw-Beijerland, Zuid-Beijerland, Goudswaard, Piershil en 's-Gravendeel draai ik regelmatig.
+        Op- en afbouw verlopen soepel en ik ben snel ter plaatse. Of je feest nu in <Link to="/dj-boeken-oud-beijerland" className="text-secondary underline hover:text-primary">Oud-Beijerland</Link>, <Link to="/dj-boeken-puttershoek" className="text-secondary underline hover:text-primary">Puttershoek</Link>, <Link to="/dj-boeken-strijen" className="text-secondary underline hover:text-primary">Strijen</Link>, <Link to="/dj-boeken-maasdam" className="text-secondary underline hover:text-primary">Maasdam</Link> of <Link to="/dj-boeken-numansdorp" className="text-secondary underline hover:text-primary">Numansdorp</Link> is, ik ben zo bij je. Ook in de kleinere kernen zoals <Link to="/dj-boeken-klaaswaal" className="text-secondary underline hover:text-primary">Klaaswaal</Link>, <Link to="/dj-boeken-heinenoord" className="text-secondary underline hover:text-primary">Heinenoord</Link>, Mijnsheerenland, Westmaas, Nieuw-Beijerland, <Link to="/dj-boeken-zuid-beijerland" className="text-secondary underline hover:text-primary">Zuid-Beijerland</Link>, Goudswaard, Piershil en <Link to="/dj-boeken-s-gravendeel" className="text-secondary underline hover:text-primary">'s-Gravendeel</Link> draai ik regelmatig.
       </p>
 
       <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>Wat ik meeneem</h2>
@@ -70,7 +70,7 @@ function Page() {
         Naast Oud-Beijerland, Strijen, Maasdam en Numansdorp draai ik ook in <strong className="text-foreground">Klaaswaal, Heinenoord, Mijnsheerenland, Westmaas, Nieuw-Beijerland, Zuid-Beijerland, Goudswaard en Piershil</strong>.
       </p>
       <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-        Buiten de Hoeksche Waard ben ik snel in <Link to="/dj-boeken-dordrecht" className="text-secondary underline hover:text-primary">Dordrecht</Link>, en in Zwijndrecht, Barendrecht, Hendrik-Ido-Ambacht en Ridderkerk. Voor de hele <strong className="text-foreground">Drechtsteden</strong> ben ik je DJ.
+        Buiten de Hoeksche Waard ben ik snel in <Link to="/dj-boeken-dordrecht" className="text-secondary underline hover:text-primary">Dordrecht</Link>, en in <Link to="/dj-boeken-zwijndrecht" className="text-secondary underline hover:text-primary">Zwijndrecht</Link>, <Link to="/dj-boeken-barendrecht" className="text-secondary underline hover:text-primary">Barendrecht</Link>, Hendrik-Ido-Ambacht en <Link to="/dj-boeken-ridderkerk" className="text-secondary underline hover:text-primary">Ridderkerk</Link>. Voor de hele <strong className="text-foreground">Drechtsteden</strong> ben ik je DJ.
       </p>
 
       <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>Datum checken</h2>

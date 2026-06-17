@@ -18,6 +18,9 @@ export const Route = createFileRoute("/dj-boeken-culemborg")({
         description: "Allround DJ voor bruiloft, verjaardag en bedrijfsfeest in Culemborg. Inclusief licht, geluid en MC services.",
         path: "/dj-boeken-culemborg",
         image: IMG,
+        // Geen zichtbaar reviewblok op deze pagina, dus geen rating in de JSON-LD
+        // (Google-beleid: rating-markup alleen waar de reviews ook zichtbaar staan).
+        rating: false,
       }),
       faqPage(cityFaq("Culemborg")),
       breadcrumb([

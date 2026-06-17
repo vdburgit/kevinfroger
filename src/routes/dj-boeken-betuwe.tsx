@@ -19,6 +19,9 @@ export const Route = createFileRoute("/dj-boeken-betuwe")({
         description: "Allround DJ voor bruiloften, bedrijfsfeesten en verjaardagen in de Betuwe en het Rivierenland. Inclusief licht, geluid en MC.",
         path: "/dj-boeken-betuwe",
         image: IMG,
+        // Geen zichtbaar reviewblok op deze pagina, dus geen rating in de JSON-LD
+        // (Google-beleid: rating-markup alleen waar de reviews ook zichtbaar staan).
+        rating: false,
       }),
       faqPage(cityFaq("de Betuwe")),
       breadcrumb([

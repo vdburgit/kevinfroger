@@ -18,6 +18,9 @@ export const Route = createFileRoute("/dj-boeken-tiel")({
         description: "Allround DJ voor bruiloft en feest in Tiel en de Betuwe. Complete show met licht en geluid, DJ en MC in een persoon.",
         path: "/dj-boeken-tiel",
         image: IMG,
+        // Geen zichtbaar reviewblok op deze pagina, dus geen rating in de JSON-LD
+        // (Google-beleid: rating-markup alleen waar de reviews ook zichtbaar staan).
+        rating: false,
       }),
       faqPage(cityFaq("Tiel")),
       breadcrumb([

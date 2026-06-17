@@ -106,7 +106,7 @@ function Page() {
             Wat je betaalt hangt af van de duur van de avond, de locatie en eventuele extra wensen, maar je krijgt altijd een heldere offerte. Goedkoop is niet mijn uitgangspunt, eerlijk wel. Je boekt geen hobbyist, maar een DJ met 15+ jaar ervaring, die de avond strak verzorgt en met je meedenkt. Dat verschil merk je op de dansvloer.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mt-6">
-            In de prijs zit de complete show: opbouw, een professionele geluidsset, een lichtshow en mijn rol als DJ en MC. We bespreken vooraf je wensen, zodat je precies krijgt wat bij jouw feest past.
+            In de prijs zit de complete show: opbouw, een professionele geluidsset, een lichtshow en mijn rol als <Link to="/dj-en-mc" className="text-secondary underline hover:text-primary">DJ en MC</Link>. We bespreken vooraf je wensen, zodat je precies krijgt wat bij jouw feest past. Bekijk ook wat ik voor een <Link to="/bruiloft-dj" className="text-secondary underline hover:text-primary">bruiloft</Link>, <Link to="/zakelijk-dj" className="text-secondary underline hover:text-primary">bedrijfsfeest</Link> of <Link to="/festival-dj" className="text-secondary underline hover:text-primary">festival</Link> doe, of lees hoe mijn <Link to="/werkwijze" className="text-secondary underline hover:text-primary">werkwijze</Link> eruitziet.
           </p>
         </div>
       </section>

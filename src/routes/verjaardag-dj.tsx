@@ -88,6 +88,8 @@ function Page() {
         links={[
           { to: "/prijzen", label: "Prijzen", primary: true },
           { to: "/werkwijze", label: "Werkwijze" },
+          { to: "/dj-en-mc", label: "DJ en MC" },
+          { to: "/reviews", label: "Reviews" },
         ]}
       />
       <ReviewStrip />

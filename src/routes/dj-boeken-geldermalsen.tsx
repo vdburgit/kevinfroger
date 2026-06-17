@@ -18,6 +18,9 @@ export const Route = createFileRoute("/dj-boeken-geldermalsen")({
         description: "Allround DJ voor bruiloft, verjaardag en bedrijfsfeest in Geldermalsen en de West Betuwe. Complete show inclusief licht en geluid.",
         path: "/dj-boeken-geldermalsen",
         image: IMG,
+        // Geen zichtbaar reviewblok op deze pagina, dus geen rating in de JSON-LD
+        // (Google-beleid: rating-markup alleen waar de reviews ook zichtbaar staan).
+        rating: false,
       }),
       faqPage(cityFaq("Geldermalsen")),
       breadcrumb([

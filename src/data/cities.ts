@@ -1272,6 +1272,99 @@ export const CITIES: Record<string, CityData> = {
     ]
   },
 
+  "zwijndrecht": {
+    "slug": "zwijndrecht",
+    "name": "Zwijndrecht",
+    "province": "Zuid-Holland",
+    "region": "Drechtsteden",
+    "title": "DJ Zwijndrecht huren | Kevin Froger",
+    "description": "DJ in Zwijndrecht nodig? Ik draai al 15+ jaar, kom met eigen licht en geluid en ben DJ en MC in een persoon. 5,0 op Google. Check je datum.",
+    "heroIntro": "Zoek je een DJ in Zwijndrecht? Ik ben Kevin Froger en woon in 's-Gravendeel, vlak over de Oude Maas. Via de N3 en de A16 ben ik zo bij jullie, dus ik ben ruim op tijd om rustig op te bouwen en alles te testen.",
+    "serviceDescription": "Allround DJ en MC voor bruiloften, bedrijfsfeesten, verjaardagen en festivals in Zwijndrecht en de Drechtsteden, inclusief eigen licht- en geluidsinstallatie.",
+    "paragraphs": [
+      "Zwijndrecht ligt aan de overkant van Dordrecht, tussen de Oude Maas en de Devel. Ik draai er van een verjaardag in een wijk als Walburg, Kort Ambacht of Nederhoven tot een bedrijfsfeest op een van de terreinen langs de A16 en de spoorlijn. Ook Heerjansdam hoort bij Zwijndrecht, en daar zit het feest vaker op een landelijke locatie. Ik stem mijn opstelling en mijn volume af op de ruimte, of die nu hoog en galmend is of juist klein.",
+      "Mijn licht en geluid neem ik allemaal zelf mee, dus op de zaal of in de tent hoef je daar niets voor te regelen. Ik sta niet alleen achter de draaitafel maar pak ook de microfoon: het eerste dansje aankondigen, de speeches inleiden en het tempo erin houden, dat zit er bij mij bij. Ik draai allround, van Nederlandstalig en classics tot recente hits, en ik stuur bij op wat de vloer doet.",
+      "Het Develpark en de groene randen van Zwijndrecht zijn fijne plekken voor een feest buiten, en in het centrum en de buitenwijken ken ik de meeste zalen. Vanuit 's-Gravendeel ben ik in een kwartiertje bij jullie. Bruiloft, bedrijfsfeest of verjaardag in Zwijndrecht of Heerjansdam? App of bel me met je datum, dan hoor je snel of het lukt en denk ik mee over de invulling."
+    ],
+    "characteristics": "Zwijndrecht centrum, Walburg, Kort Ambacht, Nederhoven, Heer Oudelands Ambacht, Heerjansdam, Develpark, langs de Oude Maas",
+    "related": [
+      {
+        "to": "/dj-boeken-dordrecht",
+        "label": "Dordrecht"
+      },
+      {
+        "to": "/dj-boeken-papendrecht",
+        "label": "Papendrecht"
+      },
+      {
+        "to": "/dj-boeken-ridderkerk",
+        "label": "Ridderkerk"
+      }
+    ]
+  },
+
+  "papendrecht": {
+    "slug": "papendrecht",
+    "name": "Papendrecht",
+    "province": "Zuid-Holland",
+    "region": "Drechtsteden",
+    "title": "DJ Papendrecht huren | Kevin Froger",
+    "description": "DJ Papendrecht gezocht? Ik draai al 15+ jaar, kom met eigen licht en geluid en ben DJ en MC in een persoon. 5,0 op Google. Vraag je datum op.",
+    "heroIntro": "Op zoek naar een DJ in Papendrecht? Ik ben Kevin Froger, allround DJ en MC uit 's-Gravendeel. Papendrecht ligt aan de overkant van Dordrecht, aan de Beneden-Merwede, en daar kom ik graag voor een bruiloft, bedrijfsfeest of verjaardag.",
+    "serviceDescription": "Allround DJ en MC voor bruiloften, bedrijfsfeesten, verjaardagen en festivals in Papendrecht en de Drechtsteden, inclusief eigen licht- en geluidsinstallatie.",
+    "paragraphs": [
+      "Papendrecht ligt tegen Sliedrecht aan, langs de Beneden-Merwede, met woonwijken als Wilgendonk, Kraaihoek, Westpolder, Oostpolder en Molenvliet. Ik draai er net zo makkelijk een verjaardag in een wijkzaal als een bruiloft op een locatie aan het water. In een hoge of ruime zaal stem ik mijn geluid af op de akoestiek, zodat het ook achterin lekker blijft klinken.",
+      "Papendrecht is ook een werkdorp met grote werkgevers, en dat zie ik terug in de bedrijfsfeesten en jubilea die ik er draai. Als DJ en MC in een persoon doe ik de aankondigingen, de prijsuitreikingen en het inleiden van de avond er zelf bij, dus je hoeft geen losse presentator te regelen. Licht en geluid breng ik mee, en ik draai allround zodat iedereen wat van zijn gading hoort.",
+      "Vanuit 's-Gravendeel rijd ik via Dordrecht en de N3 zo Papendrecht in, en ik ben er ruim op tijd om op te bouwen. Feest je in Papendrecht zelf of net over de grens richting Sliedrecht of Alblasserdam? Stuur me een appje met je datum en wat je voor ogen hebt, dan hoor je snel of het past en kijken we samen naar de muziek."
+    ],
+    "characteristics": "Papendrecht centrum, Wilgendonk, Kraaihoek, Westpolder, Oostpolder, Molenvliet, langs de Beneden-Merwede",
+    "related": [
+      {
+        "to": "/dj-boeken-sliedrecht",
+        "label": "Sliedrecht"
+      },
+      {
+        "to": "/dj-boeken-dordrecht",
+        "label": "Dordrecht"
+      },
+      {
+        "to": "/dj-boeken-zwijndrecht",
+        "label": "Zwijndrecht"
+      }
+    ]
+  },
+
+  "sliedrecht": {
+    "slug": "sliedrecht",
+    "name": "Sliedrecht",
+    "province": "Zuid-Holland",
+    "region": "Drechtsteden",
+    "title": "DJ Sliedrecht huren | Kevin Froger",
+    "description": "DJ in Sliedrecht nodig? Ik draai al 15+ jaar, kom met eigen licht en geluid en ben DJ en MC in een persoon. 5,0 op Google. Bekijk mijn beschikbaarheid.",
+    "heroIntro": "Zoek je een DJ in Sliedrecht? Ik ben Kevin Froger en kom uit 's-Gravendeel, hier vlakbij. Sliedrecht ligt langs de Beneden-Merwede, tegen Papendrecht aan en op de rand van de Alblasserwaard, en daar draai ik graag jullie feest aan elkaar.",
+    "serviceDescription": "Allround DJ en MC voor bruiloften, bedrijfsfeesten, verjaardagen en festivals in Sliedrecht en de Drechtsteden, inclusief eigen licht- en geluidsinstallatie.",
+    "paragraphs": [
+      "Sliedrecht is het langgerekte dorp aan het water, met de Kerkbuurt als oude kern en wijken als Baanhoek en de Staatsliedenbuurt. Het is van oudsher een baggerdorp, en dat nuchtere zit ook in de feesten: lekker draaien, niet moeilijk doen, vooral de vloer vol houden. Of het nu een verjaardag in een buurthuis is of een bruiloft op een locatie aan de Merwede, ik pas mijn muziek aan op wie er staat.",
+      "Mijn licht en geluid neem ik zelf mee, en ik draai niet alleen maar pak ook de microfoon. Het eerste dansje aankondigen, een speech inleiden en het tempo bewaken hoort er bij mij gewoon bij, dus een aparte presentator heb je niet nodig. Ik draai allround, van Nederlandstalig en meezingers tot top 40 en dance, en ik stuur de hele avond bij op wat het publiek doet.",
+      "Vanuit 's-Gravendeel ben ik via Dordrecht en de A15 snel in Sliedrecht en sta ik op tijd op te bouwen. Feest je in Sliedrecht zelf, of richting Papendrecht of Hardinxveld-Giessendam? Laat me weten welke datum je in gedachten hebt en wat voor avond je wilt, dan hoor je snel of het lukt en denk ik mee over de invulling."
+    ],
+    "characteristics": "Sliedrecht centrum, Kerkbuurt, Baanhoek, Staatsliedenbuurt, langs de Beneden-Merwede, rand Alblasserwaard",
+    "related": [
+      {
+        "to": "/dj-boeken-papendrecht",
+        "label": "Papendrecht"
+      },
+      {
+        "to": "/dj-boeken-dordrecht",
+        "label": "Dordrecht"
+      },
+      {
+        "to": "/dj-boeken-gorinchem",
+        "label": "Gorinchem"
+      }
+    ]
+  },
+
   "bommelerwaard": {
     "slug": "bommelerwaard",
     "name": "Bommelerwaard",

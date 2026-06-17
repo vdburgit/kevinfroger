@@ -113,7 +113,7 @@ function Page() {
       breadcrumbs={[{"name":"Home","path":"/"},{"name":"DJ en MC","path":"/dj-en-mc"}]}
       blocks={BLOCKS}
       sections={SECTIONS}
-      links={[{"to":"/bruiloft-dj","label":"Bruiloft DJ"},{"to":"/zakelijk-dj","label":"Bedrijfsfeest DJ"}]}
+      links={[{"to":"/bruiloft-dj","label":"Bruiloft DJ"},{"to":"/zakelijk-dj","label":"Bedrijfsfeest DJ"},{"to":"/verjaardag-dj","label":"Feest DJ"},{"to":"/prijzen","label":"Prijzen"}]}
       faq={FAQ}
       ctaSubtitle={"App of bel ons. Een aanspreekpunt voor de muziek en de presentatie."}
     />
