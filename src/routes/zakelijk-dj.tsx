@@ -57,7 +57,7 @@ function Page() {
       <SiteHeader transparent />
       <PageHero
         eyebrow="Bedrijfsfeest DJ"
-        title={<>Personeelsfeest,<br/><span className="text-primary">strak verzorgd.</span></>}
+        title={<>Bedrijfsfeest DJ<br/><span className="text-primary">die de vloer vol houdt.</span></>}
         intro="Een goed bedrijfsfeest blijft hangen bij je collega's en relaties. Ik verzorg personeelsfeesten, jubilea, netwerkevents, productlanceringen en teambuilding. Inclusief licht, geluid en presentatie."
         image={IMG}
         imageAlt="DJ Kevin Froger op een bedrijfsfeest"
@@ -70,7 +70,7 @@ function Page() {
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Compleet pakket</div>
             <h2 className="text-4xl md:text-6xl leading-[0.9]" style={{ fontFamily: "var(--font-display)" }}>Eén leverancier, alles geregeld</h2>
             <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
-              Ik lever een complete show met licht en geluid en stem de muziek af op het gezelschap, zodat zowel de directie als de jongere collega's zich vermaken. Als DJ en MC in een persoon kan ik ook de presentatie verzorgen, bijvoorbeeld bij een opening, een prijsuitreiking of een toespraak. Van intake tot nazorg heb je een vast aanspreekpunt, dus de organisatie is voor jou een zorg minder.
+              Ik lever een complete show met licht en geluid en stem de muziek af op het gezelschap, zodat zowel de directie als de jongere collega's zich vermaken. Als DJ en MC in een persoon kan ik ook de presentatie verzorgen, bijvoorbeeld bij een opening, een prijsuitreiking of een toespraak. Van intake tot nazorg heb je een vast aanspreekpunt, dus jij hoeft de muziek en het programma niet zelf te regelen.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">

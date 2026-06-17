@@ -105,15 +105,15 @@ function Page() {
   return (
     <ContentPage
       eyebrow={"DJ en MC"}
-      titleLine1={"Ik draai de muziek"}
-      titleLine2={"en praat je avond aan elkaar"}
+      titleLine1={"DJ en MC in een persoon"}
+      titleLine2={"die je avond aan elkaar praat"}
       intro={"Bij mij krijg je een DJ en een MC in een persoon. Ik draai de hele avond en pak tussendoor de microfoon om je programma aan elkaar te praten. Je hoeft dus geen losse presentator te boeken die ik daarna moet aansturen."}
       image={IMG}
       imageAlt={"DJ Kevin Froger met microfoon als DJ en MC"}
       breadcrumbs={[{"name":"Home","path":"/"},{"name":"DJ en MC","path":"/dj-en-mc"}]}
       blocks={BLOCKS}
       sections={SECTIONS}
-      links={[{"to":"/bruiloft-dj","label":"Bruiloft DJ"},{"to":"/zakelijk-dj","label":"Bedrijfsfeest DJ"}]}
+      links={[{"to":"/bruiloft-dj","label":"Bruiloft DJ"},{"to":"/zakelijk-dj","label":"Bedrijfsfeest DJ"},{"to":"/verjaardag-dj","label":"Feest DJ"},{"to":"/prijzen","label":"Prijzen"}]}
       faq={FAQ}
       ctaSubtitle={"App of bel ons. Een aanspreekpunt voor de muziek en de presentatie."}
     />

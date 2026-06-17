@@ -45,7 +45,7 @@ const PACKAGES = [
 
 export const Route = createFileRoute("/prijzen")({
   head: () => buildSeo({
-    title: "Wat kost een DJ? Betaalbare DJ huren | Kevin Froger",
+    title: "DJ prijzen | Wat kost een DJ? | Kevin Froger",
     description: "Benieuwd wat een DJ kost? Kevin werkt met een eerlijke all-in prijs voor DJ, licht en geluid. Bekijk de tarieven en vraag je datum aan.",
     path: "/prijzen",
     image: IMG,
@@ -93,7 +93,7 @@ function Page() {
       <SiteHeader transparent />
       <PageHero
         eyebrow="Prijzen"
-        title={<>Wat kost<br/><span className="text-primary">een DJ?</span></>}
+        title={<>DJ prijzen:<br/><span className="text-primary">wat kost een DJ?</span></>}
         breadcrumbs={[{ name: "Home", path: "/" }, { name: "Prijzen", path: "/prijzen" }]}
         intro="Op zoek naar een betaalbare DJ voor je bruiloft of feest? Bij mij weet je vooraf waar je aan toe bent. Ik werk met een eerlijke all-in prijs voor DJ, licht en geluid, zonder verrassingen achteraf."
         image={IMG}
@@ -106,7 +106,7 @@ function Page() {
             Wat je betaalt hangt af van de duur van de avond, de locatie en eventuele extra wensen, maar je krijgt altijd een heldere offerte. Goedkoop is niet mijn uitgangspunt, eerlijk wel. Je boekt geen hobbyist, maar een DJ met 15+ jaar ervaring, die de avond strak verzorgt en met je meedenkt. Dat verschil merk je op de dansvloer.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mt-6">
-            In de prijs zit de complete show: opbouw, een professionele geluidsset, een lichtshow en mijn rol als DJ en MC. We bespreken vooraf je wensen, zodat je precies krijgt wat bij jouw feest past.
+            In de prijs zit de complete show: opbouw, een professionele geluidsset, een lichtshow en mijn rol als <Link to="/dj-en-mc" className="text-secondary underline hover:text-primary">DJ en MC</Link>. We bespreken vooraf je wensen, zodat je precies krijgt wat bij jouw feest past. Bekijk ook wat ik voor een <Link to="/bruiloft-dj" className="text-secondary underline hover:text-primary">bruiloft</Link>, <Link to="/zakelijk-dj" className="text-secondary underline hover:text-primary">bedrijfsfeest</Link> of <Link to="/festival-dj" className="text-secondary underline hover:text-primary">festival</Link> doe, of lees hoe mijn <Link to="/werkwijze" className="text-secondary underline hover:text-primary">werkwijze</Link> eruitziet. Voor een bruiloft lees je in <Link to="/blog/$slug" params={{ slug: "wat-kost-dj-bruiloft" }} className="text-secondary underline hover:text-primary">wat een DJ voor een bruiloft kost</Link> wat je kunt verwachten.
           </p>
         </div>
       </section>

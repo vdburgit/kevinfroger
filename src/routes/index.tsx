@@ -180,7 +180,7 @@ function Index() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { title: "Bruiloften", img: IMG_WEDDING, alt: "DJ Kevin Froger draait op een bruiloft", desc: "Complete muzikale begeleiding voor jullie mooiste dag, van ceremonie tot late avond.", href: "/bruiloft-dj" },
-              { title: "Bedrijfsfeesten", img: IMG_CORPORATE, alt: "DJ Kevin Froger op een bedrijfsfeest", desc: "Professionele entertainment voor corporate events, jubilea en personeelsfeesten.", href: "/zakelijk-dj" },
+              { title: "Bedrijfsfeesten", img: IMG_CORPORATE, alt: "DJ Kevin Froger op een bedrijfsfeest", desc: "Strakke muziek en presentatie voor bedrijfsfeesten, jubilea en personeelsfeesten.", href: "/zakelijk-dj" },
               { title: "Festivals", img: IMG_FESTIVAL, alt: "DJ Kevin Froger op een festival met vuurwerk boven het podium en volle dansvloer", desc: "Strakke sets met crowd control en presentatie voor festivals en aprèsski.", href: "/festival-dj" },
               { title: "Privéfeesten", img: IMG_PRIVATE, alt: "DJ Kevin Froger op een privéfeest of verjaardag", desc: "Verjaardag, themafeest of besloten event, altijd op maat van jouw gasten.", href: "/verjaardag-dj" },
             ].map((d) => {

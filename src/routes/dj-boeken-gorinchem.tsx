@@ -18,6 +18,9 @@ export const Route = createFileRoute("/dj-boeken-gorinchem")({
         description: "Allround DJ voor bruiloften, verjaardagen en bedrijfsfeesten in Gorinchem. Complete show met licht en geluid, en MC services.",
         path: "/dj-boeken-gorinchem",
         image: IMG,
+        // Geen zichtbaar reviewblok op deze pagina, dus geen rating in de JSON-LD
+        // (Google-beleid: rating-markup alleen waar de reviews ook zichtbaar staan).
+        rating: false,
       }),
       faqPage(cityFaq("Gorinchem")),
       breadcrumb([

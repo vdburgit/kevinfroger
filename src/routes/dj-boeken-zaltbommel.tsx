@@ -18,6 +18,9 @@ export const Route = createFileRoute("/dj-boeken-zaltbommel")({
         description: "Allround DJ voor bruiloft, verjaardag of bedrijfsfeest in Zaltbommel en de Bommelerwaard. Complete show inclusief licht en geluid.",
         path: "/dj-boeken-zaltbommel",
         image: IMG,
+        // Geen zichtbaar reviewblok op deze pagina, dus geen rating in de JSON-LD
+        // (Google-beleid: rating-markup alleen waar de reviews ook zichtbaar staan).
+        rating: false,
       }),
       faqPage(cityFaq("Zaltbommel")),
       breadcrumb([

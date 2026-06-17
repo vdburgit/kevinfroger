@@ -28,7 +28,7 @@ const FAQ: FaqItem[] = [
 
 export const Route = createFileRoute("/festival-dj")({
   head: () => buildSeo({
-    title: "Festival DJ huren | Energieke sets | Kevin Froger",
+    title: "Festival DJ boeken | Energieke sets | Kevin Froger",
     description: "Festival of groot evenement? Kevin draait energieke sets vol crowd control en presentatie. Check beschikbaarheid en boek je slot.",
     path: "/festival-dj",
     image: IMG,
@@ -63,7 +63,7 @@ function Page() {
       <SiteHeader transparent />
       <PageHero
         eyebrow="Festival DJ"
-        title={<>60 minuten<br/><span className="text-primary">non-stop.</span></>}
+        title={<>Festival DJ boeken,<br/><span className="text-primary">60 minuten non-stop.</span></>}
         intro="Op een festival of groot evenement moet de energie meteen staan. Ik draai strakke sets die het publiek meenemen, met crowd control en presentatie. Of het nu een set van 60 minuten is of een langer blok."
         image={IMG}
         imageAlt="DJ Kevin Froger op een festival: verlicht hoofdpodium met vuurwerk en een juichende dansende menigte"

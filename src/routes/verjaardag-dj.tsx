@@ -19,7 +19,7 @@ const FAQ: FaqItem[] = [
 
 export const Route = createFileRoute("/verjaardag-dj")({
   head: () => buildSeo({
-    title: "Feest & verjaardag DJ huren | DJ Kevin Froger",
+    title: "Verjaardag DJ huren | Feest DJ | Kevin Froger",
     description: "Verjaardag of feest? Kevin draait allround en houdt de vloer vol, van familiefeest tot groot verjaardagsfeest. Vraag een offerte aan.",
     path: "/verjaardag-dj",
     image: IMG,
@@ -54,7 +54,7 @@ function Page() {
       <SiteHeader transparent />
       <PageHero
         eyebrow="Feest en verjaardag DJ"
-        title={<>Jouw verjaardag,<br/><span className="text-primary">jouw gasten.</span></>}
+        title={<>DJ voor jouw verjaardag,<br/><span className="text-primary">jouw gasten.</span></>}
         intro="Een verjaardag of feest wordt pas echt leuk als de muziek klopt en de dansvloer vol staat. Ik draai allround, van Nederlandstalig en classics tot top 40 en dance, afgestemd op jouw gasten."
         breadcrumbs={[{ name: "Home", path: "/" }, { name: "Feest DJ", path: "/verjaardag-dj" }]}
         image={IMG}
@@ -87,7 +87,10 @@ function Page() {
         intro="Voor verjaardagen en feesten kom ik in heel Nederland, met extra veel boekingen in de Betuwe, Bommelerwaard, Hoeksche Waard en Zuid-Holland. Wil je weten of ik op jouw datum kan? App of bel ons."
         links={[
           { to: "/prijzen", label: "Prijzen", primary: true },
+          { to: "/verzoekje", label: "Verzoekje doen" },
           { to: "/werkwijze", label: "Werkwijze" },
+          { to: "/dj-en-mc", label: "DJ en MC" },
+          { to: "/reviews", label: "Reviews" },
         ]}
       />
       <ReviewStrip />
