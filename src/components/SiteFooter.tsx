@@ -48,6 +48,7 @@ export function SiteFooter() {
               <li><Link to="/regios" className="hover:text-foreground">Werkgebied</Link></li>
               <li><Link to="/werkwijze" className="hover:text-foreground">Werkwijze</Link></li>
               <li><Link to="/prijzen" className="hover:text-foreground">Prijzen</Link></li>
+              <li><Link to="/blog" className="hover:text-foreground">Blog</Link></li>
               <li><Link to="/reviews" className="hover:text-foreground">Reviews</Link></li>
               <li><Link to="/biografie" className="hover:text-foreground">Biografie</Link></li>
               <li><Link to="/contact" className="hover:text-foreground">Contact</Link></li>

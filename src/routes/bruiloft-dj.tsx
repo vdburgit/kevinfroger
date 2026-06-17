@@ -58,7 +58,7 @@ function Page() {
       <SiteHeader transparent />
       <PageHero
         eyebrow="Bruiloft DJ"
-        title={<>Jullie trouwdag,<br/><span className="text-primary">van begin tot eind.</span></>}
+        title={<>Bruiloft DJ huren<br/><span className="text-primary">voor jullie hele dag.</span></>}
         intro="Jullie trouwdag draait om sfeer, en muziek bepaalt die sfeer voor een groot deel. Als bruiloft DJ verzorg ik de hele dag, van de ceremonie tot de laatste plaat."
         image={IMG}
         imageAlt="DJ Kevin Froger achter zijn set tijdens een bruiloft"
@@ -97,6 +97,8 @@ function Page() {
               <Link to="/dj-en-mc" className="rounded-full border-2 border-secondary text-secondary px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:bg-secondary hover:text-secondary-foreground transition">DJ en MC</Link>
               <Link to="/prijzen" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Prijsindicatie</Link>
               <Link to="/reviews" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Reviews</Link>
+              <Link to="/blog/$slug" params={{ slug: "wat-kost-dj-bruiloft" }} className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Wat kost een DJ?</Link>
+              <Link to="/blog/$slug" params={{ slug: "openingsdans-nummers" }} className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Openingsdans nummers</Link>
             </div>
           </div>
           <div className="rounded-2xl overflow-hidden border-2 border-border aspect-[4/5]">

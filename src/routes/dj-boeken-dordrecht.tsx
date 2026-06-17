@@ -67,7 +67,7 @@ function Page() {
       </p>
 
       <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-        In Dordrecht draai ik regelmatig op bekende feestlocaties in de stad. Zo heb ik al vaak gedraaid in Partycentrum Wantijpaviljoen, het Postillion Hotel Dordrecht en Event Center Dordrecht. Ik ken de zalen hier goed en weet er een mooi feest van te maken.
+        In Dordrecht draai ik regelmatig op bekende feestlocaties in de stad, van locaties als Partycentrum Wantijpaviljoen tot het Postillion Hotel Dordrecht. Op dat soort zalen in en rond Dordrecht voel ik me thuis en weet ik er een mooi feest van te maken.
       </p>
 
       <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>Korte lijntjes</h2>
