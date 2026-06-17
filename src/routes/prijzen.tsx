@@ -43,6 +43,18 @@ const PACKAGES = [
   },
 ];
 
+// Losse extra's die je bij elk pakket kunt bijboeken. Bewerk deze lijst om items
+// toe te voegen of teksten aan te passen. Geen prijzen: bezoekers informeren naar
+// de mogelijkheden via de CTA. Afbeeldingen worden los aangeleverd (zie paden).
+const EXTRAS = [
+  { title: "Sfeerverlichting met accuspots", image: "/images/extra-accuspots.jpg", alt: "Accuspots die een feestzaal uitlichten in kleur", text: "Zes draadloze accuspots die je hele zaal in kleur zetten. Geen kabels over de vloer en de accu houdt het een avond lang vol. Binnen no-time staat de ruimte in de juiste sfeer." },
+  { title: "Confettikanonnen", image: "/images/extra-confetti.webp", alt: "Confetti boven de dansvloer tijdens een feest", text: "De perfecte knal voor de openingsdans of de start van de avond. De set is compleet voor twee confettimomenten, precies op het juiste nummer." },
+  { title: "Spark-fonteinen", image: "/images/extra-sparks.jpg", alt: "Spark fonteinen met vonken op een podium", text: "Het veilige alternatief voor echt vuurwerk binnen. De vonken schieten tot vijf meter de lucht in, zonder brandgevaar en zonder rook. Indrukwekkend voor een opkomst of een speciaal moment." },
+  { title: "Tv-scherm voor foto's en video", image: "/images/extra-tv-scherm.webp", alt: "Groot tv-scherm op statief tijdens een evenement", text: "Deel foto's, een slideshow of de aftermovie met je gasten op een groot scherm. Beschikbaar vanaf 55 inch, op statief of standaard." },
+  { title: "Podium", image: "/images/extra-podium.webp", alt: "Podium opgebouwd in een evenementenzaal", text: "Een podium voor de DJ-set, een presentatie, prijsuitreiking of optreden. Stevig en strak afgewerkt, in de maat die bij jouw locatie past." },
+  { title: "Eigen wensen", image: "/images/extra-maatwerk.webp", alt: "DJ booth met sfeerverlichting tijdens een feest", text: "Iets anders in gedachten? Denk aan een naam in licht, een speciale opkomst of andere aankleding. Laat het weten, dan kijken we samen wat er mogelijk is." },
+];
+
 export const Route = createFileRoute("/prijzen")({
   head: () => buildSeo({
     title: "DJ prijzen | Wat kost een DJ? | Kevin Froger",
@@ -86,6 +98,42 @@ export const Route = createFileRoute("/prijzen")({
   }),
   component: Page,
 });
+
+// Herbruikbare sectie met losse extra's. Voedt zich met de EXTRAS-lijst hierboven.
+// Responsive: 1 kolom mobiel, 2 op tablet, 3 op desktop. Geen prijzen; CTA stuurt
+// naar /contact om naar de mogelijkheden te informeren.
+function ExtrasGrid() {
+  return (
+    <section className="py-16 px-6 lg:px-10">
+      <div className="max-w-[1040px] mx-auto">
+        <div className="text-center mb-10">
+          <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Extra's</div>
+          <h2 className="text-3xl md:text-5xl leading-[0.9]" style={{ fontFamily: "var(--font-display)" }}>Extra opties voor je feest</h2>
+          <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">Wil je er net iets meer van maken? Deze extra's boek je bij elk pakket bij. Laat in je aanvraag weten wat je leuk vindt, dan zet ik het op de offerte.</p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {EXTRAS.map((item) => (
+            <div key={item.title} className="rounded-2xl border-2 border-border bg-card overflow-hidden shadow-sm hover:border-primary hover:shadow-md transition flex flex-col">
+              <div className="aspect-[4/3] overflow-hidden bg-background">
+                <img src={item.image} alt={item.alt} width={480} height={360} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              </div>
+              <div className="p-5 flex flex-col flex-1">
+                <div className="text-primary text-[0.7rem] tracking-[0.18em] uppercase font-bold">Prijs op aanvraag</div>
+                <h3 className="text-lg leading-tight mt-2 min-h-[2.6rem]" style={{ fontFamily: "var(--font-display)" }}>{item.title}</h3>
+                <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{item.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="text-center mt-12">
+          <Link to="/contact" className="inline-block rounded-full bg-primary text-primary-foreground px-8 py-4 text-xs tracking-[0.18em] uppercase font-bold hover:opacity-90 transition">
+            Informeer naar de mogelijkheden
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function Page() {
   return (
@@ -140,6 +188,8 @@ function Page() {
           </div>
         </div>
       </section>
+
+      <ExtrasGrid />
 
       <section className="py-16 px-6 lg:px-10 bg-card border-y-2 border-border">
         <div className="max-w-3xl mx-auto text-center">
