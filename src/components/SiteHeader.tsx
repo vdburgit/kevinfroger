@@ -97,6 +97,7 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
           open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
         aria-hidden={!open}
+        inert={!open}
       >
         <div
           className="absolute inset-0 bg-black/70 backdrop-blur"
