@@ -85,9 +85,7 @@
   --card-foreground: oklch(0.97 0.012 80);
   --popover: oklch(0.21 0.014 250);
   --popover-foreground: oklch(0.97 0.012 80);
-  /* Logo-oranje, iets dieper (was 0.74) zodat WITTE tekst erop de AA-contrastnorm
-     haalt (~4.7:1). Op de donkere achtergrond blijft het oranje ~4:1 leesbaar. */
-  --primary: oklch(0.57 0.20 42);
+  --primary: oklch(0.74 0.21 42);           /* logo orange, feller voor display tekst */
   --primary-foreground: oklch(0.99 0.01 80);
   --primary-glow: oklch(0.82 0.19 50);
   --secondary: oklch(0.82 0.16 85);         /* warm gold — for 5-star/labels */
