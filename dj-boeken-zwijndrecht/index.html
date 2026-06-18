@@ -2,7 +2,7 @@
 <html lang="nl"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Google Tag Manager (uitgesteld: laadt bij eerste interactie of 4s na load,
+    <!-- Google Tag Manager (uitgesteld: laadt bij eerste interactie of 2s na load,
          zodat het de first paint op mobiel niet vertraagt. dataLayer staat meteen
          klaar, dus events die eerder gepusht worden queuen tot GTM geladen is). -->
     <script>
@@ -24,7 +24,7 @@
           w.addEventListener(e, loadGTM, { once: true, passive: true });
         });
         w.addEventListener("load", function () {
-          setTimeout(loadGTM, 4000);
+          setTimeout(loadGTM, 2000);
         });
       })(window, document, "script", "dataLayer", "GTM-PV4P82PD");
     </script>
