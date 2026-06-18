@@ -191,7 +191,7 @@ function Index() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/10" />
                 <div className="absolute inset-x-0 bottom-0 p-6">
                   <h3 className="text-2xl md:text-3xl mb-2 text-white" style={{ fontFamily: "var(--font-display)" }}>{d.title}</h3>
-                  <p className="text-sm text-white/80 leading-relaxed">{d.desc}</p>
+                  <p className="text-sm text-white/80 leading-relaxed line-clamp-3 min-h-[4.25rem]">{d.desc}</p>
                   <div className="mt-4 text-secondary text-xs tracking-[0.25em] uppercase font-bold inline-flex items-center gap-2">
                     Meer info <span aria-hidden>→</span>
                   </div>
