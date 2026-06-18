@@ -30,7 +30,6 @@ export const Route = createFileRoute("/werkwijze")({
         "@type": "HowTo",
         name: "DJ boeken bij Kevin Froger, werkwijze",
         description: "Het complete proces van eerste contact tot afbouw na het feest.",
-        totalTime: "PT2M",
         step: STEPS.map((s, i) => ({
           "@type": "HowToStep",
           position: i + 1,
