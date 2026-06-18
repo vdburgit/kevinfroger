@@ -1,25 +1,65 @@
-# DJ Kevin Froger - Robots.txt
+# ===================================================================
+# robots.txt — kevinfroger.nl
+# DJ Kevin Froger | Allround DJ & MC uit 's-Gravendeel (Hoeksche Waard)
+# Bruiloften, bedrijfsfeesten, verjaardagen en festivals door heel Nederland
+# ===================================================================
+#
+# Beleid: de hele publieke site mag gecrawld en geïndexeerd worden.
+# Alleen het privé-dashboard, tracking-URL's en niet-publieke mappen
+# blijven buiten de index. AI-crawlers zijn welkom (zie onderaan + /llms.txt).
+#
+# Alle regels staan bewust in één "User-agent: *"-groep. Een crawler volgt
+# namelijk maar één groep; door alles hier te zetten gelden dezelfde regels
+# voor élke bot (Google, Bing, en AI-crawlers zoals GPTBot/ClaudeBot).
+
 User-agent: *
 Allow: /
 
-# Static assets
-Allow: /images/
+# --- Statische assets expliciet toestaan ---
+# Google moet CSS/JS/afbeeldingen kunnen laden om pagina's correct te renderen.
 Allow: /assets/
+Allow: /images/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.webp$
+Allow: /*.svg$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.ico$
+Allow: /*.woff2$
 
-# Privé DJ-dashboard (alleen exact /dj; $ voorkomt blokkade van /dj-boeken-*)
+# --- Niet indexeren: privé DJ-dashboard ---
+# De $ zorgt dat ALLEEN /dj exact geblokkeerd wordt, niet /dj-boeken-* of
+# /dj-en-mc (dat zijn echte, indexeerbare pagina's).
 Disallow: /dj$
 
-# Block development files
+# --- Niet indexeren: tracking-parameters (voorkomt duplicate content) ---
+Disallow: /*?utm_
+Disallow: /*&utm_
+Disallow: /*?fbclid=
+Disallow: /*?gclid=
+Disallow: /*?msclkid=
+Disallow: /*?ref=
+
+# --- Defensief: bron- en buildmappen ---
+# Deze worden op GitHub Pages niet geserveerd, maar staan hier voor de
+# zekerheid zodat ze nooit per ongeluk geïndexeerd raken.
 Disallow: /src/
-Disallow: /.git/
 Disallow: /node_modules/
 Disallow: /dist/
+Disallow: /.git/
 Disallow: /api/
 
-# Block tracking parameters
-Disallow: /*?utm_*
-Disallow: /*?fbclid=*
-Disallow: /*?gclid=*
+# ===================================================================
+# AI-crawlers
+# Bewust NIET geblokkeerd: we willen vindbaar zijn in AI-antwoorden.
+# Deze bots vallen onder de "User-agent: *"-regels hierboven en vinden
+# de samenvatting van de site in /llms.txt.
+# Bekende AI-crawlers: GPTBot, OAI-SearchBot, ChatGPT-User (OpenAI),
+# ClaudeBot, Claude-Web (Anthropic), Google-Extended, PerplexityBot.
+# Wil je ze later tóch weren, geef dat door, dan zet ik per bot een blok.
+# ===================================================================
 
-# Sitemap
+# --- Sitemap ---
 Sitemap: https://kevinfroger.nl/sitemap.xml
