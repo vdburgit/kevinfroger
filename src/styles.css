@@ -86,7 +86,9 @@
   --popover: oklch(0.21 0.014 250);
   --popover-foreground: oklch(0.97 0.012 80);
   --primary: oklch(0.74 0.21 42);           /* logo orange, feller voor display tekst */
-  --primary-foreground: oklch(0.99 0.01 80);
+  /* Donkere tekst op de oranje knoppen: WCAG-contrast ~6.8:1 (was wit = 2.7:1, faalde AA).
+     Merkoranje blijft ongewijzigd; alleen de tekstkleur erop wordt donker. */
+  --primary-foreground: oklch(0.20 0.015 250);
   --primary-glow: oklch(0.82 0.19 50);
   --secondary: oklch(0.82 0.16 85);         /* warm gold — for 5-star/labels */
   --secondary-foreground: oklch(0.18 0.014 250);
