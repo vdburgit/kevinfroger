@@ -36,17 +36,22 @@ export function ReviewStrip({
   text?: string;
 }) {
   return (
-    <section className="py-12 px-6 lg:px-10 bg-card border-y-2 border-border">
-      <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 text-center sm:text-left">
-        <Stars />
-        <p className="text-lg text-foreground">
-          <strong className="font-semibold">{REVIEW_RATING.replace(".", ",")}</strong> op Google
-          uit {REVIEW_COUNT} reviews. {text}{" "}
-          <Link to="/reviews" className="text-secondary underline hover:text-primary">
-            Lees de reviews
-          </Link>
-          .
-        </p>
+    <section className="py-14 px-6 lg:px-10 bg-card border-y-2 border-border">
+      <div className="max-w-2xl mx-auto flex flex-col items-center gap-4 text-center">
+        <div className="flex items-center gap-2.5">
+          <Stars />
+          <span className="text-lg font-semibold text-foreground">
+            {REVIEW_RATING.replace(".", ",")} op Google
+          </span>
+          <span className="text-base text-muted-foreground">· {REVIEW_COUNT} reviews</span>
+        </div>
+        <p className="text-lg leading-relaxed text-foreground">{text}</p>
+        <Link
+          to="/reviews"
+          className="text-secondary font-semibold underline underline-offset-4 hover:text-primary"
+        >
+          Lees de reviews
+        </Link>
       </div>
     </section>
   );
