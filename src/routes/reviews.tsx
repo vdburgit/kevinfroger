@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageHero } from "@/components/PageHero";
 import { ContactCta } from "@/components/ContactCta";
-import { SITE_URL, breadcrumb, buildSeo } from "@/lib/seo";
+import { SITE_URL, aggregateRating, breadcrumb, buildSeo } from "@/lib/seo";
 
 const IMG = "/images/dj-booth-apresski.webp";
 
@@ -32,13 +32,7 @@ export const Route = createFileRoute("/reviews")({
         "@context": "https://schema.org",
         "@type": ["EntertainmentBusiness", "LocalBusiness"],
         "@id": `${SITE_URL}/#business`,
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: "5.0",
-          bestRating: "5",
-          worstRating: "1",
-          reviewCount: "10",
-        },
+        aggregateRating: aggregateRating(),
         review: REVIEWS.map((r) => ({
           "@type": "Review",
           author: { "@type": "Person", name: r.who },

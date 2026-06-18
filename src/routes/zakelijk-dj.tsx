@@ -10,6 +10,17 @@ import { breadcrumb, buildSeo, faqPage, service, type FaqItem } from "@/lib/seo"
 
 const IMG = "/images/dj-kevin-froger-bedrijfsfeest.webp";
 
+// Klantlogo's. Heineken, KPN en Feyenoord vooraan, daarna een aantal bekende
+// namen. Logo's bestaan al in /public/images/logos.
+const LOGOS = [
+  { src: "/images/logos/heineken.webp", alt: "Heineken", w: 240, h: 125 },
+  { src: "/images/logos/kpn.webp", alt: "KPN", w: 240, h: 240 },
+  { src: "/images/logos/feyenoord-rotterdam.webp", alt: "Feyenoord Rotterdam", w: 240, h: 240 },
+  { src: "/images/logos/jumbo.webp", alt: "Jumbo", w: 240, h: 240 },
+  { src: "/images/logos/van-der-valk.webp", alt: "Van der Valk", w: 240, h: 125 },
+  { src: "/images/logos/makro.webp", alt: "Makro", w: 240, h: 125 },
+];
+
 const FAQ: FaqItem[] = [
   { q: "Draai je personeelsfeesten, jubilea en bedrijfsevents?", a: "Ja, van borrel en personeelsfeest tot jubileum en corporate event." },
   { q: "Kun je het programma aan elkaar presenteren?", a: "Ja, als DJ en MC verzorg ik ook aankondigingen en momenten op het podium." },
@@ -49,6 +60,7 @@ const HIGHLIGHTS = [
   { t: "MC services", d: "Aankondiging van speeches, awards en presentaties. Strak getimed, in lijn met het programma." },
   { t: "Factuur op naam", d: "Zakelijke offerte en facturatie, BTW-conform. Eén aanspreekpunt voor alles wat met muziek te maken heeft." },
   { t: "Themafeest", d: "Jaren 80, Italo disco, festival, aprèsski. Themasets volledig op maat van jullie concept." },
+  { t: "Personeelsfeest, jubileum of kerstborrel", d: "Of het nu een personeelsfeest, een jubileum of de kerstborrel is: ik stem de muziek en het programma af op de gelegenheid en het gezelschap." },
 ];
 
 function Page() {
@@ -92,10 +104,24 @@ function Page() {
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
               Onder andere Heineken, Jumbo, Albert Heijn, Makro, Bol.com, KPN, Van der Valk, Feyenoord, Sparta Rotterdam, Dutch Grand Prix, Circuit Zandvoort, Roparun, de Koninklijke Landmacht, de Politie, Hogeschool Rotterdam, Flügel, Pupa Milano, YourSurprise, Voorwinden en Modern Nerdplace. Wat ze gemeen hebben: een dag met meerdere programmaonderdelen, een gemengd gezelschap en geen ruimte voor losse eindjes.
             </p>
+            <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-6">
+              {LOGOS.map((logo) => (
+                <img
+                  key={logo.alt}
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={logo.w}
+                  height={logo.h}
+                  loading="lazy"
+                  className="h-10 w-auto object-contain opacity-80 grayscale hover:grayscale-0 hover:opacity-100 transition"
+                />
+              ))}
+            </div>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/dj-en-mc" className="rounded-full border-2 border-secondary text-secondary px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:bg-secondary hover:text-secondary-foreground transition">DJ en MC</Link>
               <Link to="/prijzen" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Prijsindicatie</Link>
-              <Link to="/regios" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Werkgebied</Link>
+              <Link to="/reviews" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Reviews</Link>
+              <Link to="/werkwijze" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Werkwijze</Link>
             </div>
           </div>
           <div className="rounded-2xl overflow-hidden border-2 border-border aspect-[4/5]">

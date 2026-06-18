@@ -39,3 +39,21 @@ scripts/fix-accessibility.js
 # Windows artifacts
 nul
 .seo-gen/
+
+# Interne SEO-strategie en werkdocumenten (NOOIT publiceren — zie ALLEEN-VOOR-JOU)
+/claude-code-taken.md
+/kevinfroger-contentplan.xlsx
+/kevinfroger-seo-strategie.docx
+/keyword-strategie-kevinfroger.xlsx
+/seo plan/
+/seo strategie new/
+/files.zip
+/files-1/
+*.docx
+*.xlsx
+mega-keyword-strategie-*
+concurrentieanalyse.md
+SEO-MASTERPLAN.md
+ALLEEN-VOOR-JOU-niet-publiceren.md
+LIVE-AUDIT-bevindingen.md
+seo-pakket-kevinfroger.zip

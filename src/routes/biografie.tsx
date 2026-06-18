@@ -5,7 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { ContactCta } from "@/components/ContactCta";
 import { SITE_URL, breadcrumb, buildSeo } from "@/lib/seo";
 
-const IMG = "/images/licht-en-geluid-verhuur-show.jpeg";
+const IMG = "/images/licht-en-geluid-verhuur-show.webp";
 
 export const Route = createFileRoute("/biografie")({
   head: () => buildSeo({

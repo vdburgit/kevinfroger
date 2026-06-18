@@ -40,10 +40,10 @@ const REDIRECTS = {
   "/dj-boeken-zeeland": "/regios",
   "/dj-boeken-gelderland": "/dj-boeken-betuwe",
   // /dj-boeken-zuid-holland is nu een echte regiopagina; niet wegredirecten.
-  // Opgeruimde minidorp-pagina's (West Betuwe) -> Betuwe-regiopagina
-  "/dj-boeken-tuil": "/dj-boeken-betuwe",
-  "/dj-boeken-ophemert": "/dj-boeken-betuwe",
-  "/dj-boeken-varik": "/dj-boeken-betuwe",
+  // LET OP: /dj-boeken-tuil, /dj-boeken-ophemert en /dj-boeken-varik zijn
+  // inmiddels weer echte routes (src/routes/*.tsx) en staan in de sitemap.
+  // Daarom NIET wegredirecten — een stub zou de live, geindexeerde pagina
+  // overschrijven. Eerder verwezen ze naar /dj-boeken-betuwe.
   // Oude merk-slugs
   "/dj-kevin-froger": "/",
   "/kevin-froger-dj": "/",

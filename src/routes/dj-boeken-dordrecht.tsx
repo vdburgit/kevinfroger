@@ -49,8 +49,11 @@ function Page() {
       ]}
     >
       <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>Van bruiloft tot bedrijfsfeest</h2>
+      <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+        Dordrecht is een oude havenstad en dat zie je terug in de feestlocaties. De historische binnenstad rond de Grote Kerk, de Voorstraat en de Wijnhaven leent zich prima voor een sfeervolle bruiloft, terwijl de nieuwere kant van de stad bij Stadswerven en het Wantij ruime, moderne locaties heeft voor een groter feest. Voor een bruiloft buitenaf zit je richting de Dordtse Biesbosch goed.
+      </p>
       <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-        Van een bruiloft op een historische locatie tot een verjaardag of een bedrijfsfeest, ik kom met een complete show: licht, geluid en allround muziek, opgebouwd naar de sfeer van de avond. Geen standaardlijst, maar een set die meebeweegt met jouw gasten.
+        Of het nu een bruiloft, een verjaardag of een bedrijfsfeest is, ik kom met een complete show: licht, geluid en allround muziek, opgebouwd naar de sfeer van de avond. Geen standaardlijst, maar een set die meebeweegt met jouw gasten. In een hoge zaal of oud pakhuis stem ik mijn opstelling af op de akoestiek, zodat het ook achterin lekker blijft klinken.
       </p>
 
       <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>DJ en MC in een persoon</h2>
@@ -60,7 +63,7 @@ function Page() {
 
       <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>Dordrecht en Drechtsteden</h2>
       <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-        Vanuit Dordrecht draai ik in de hele <strong className="text-foreground">Drechtsteden</strong>: <Link to="/dj-boeken-zwijndrecht" className="text-secondary underline hover:text-primary">Zwijndrecht</Link>, <Link to="/dj-boeken-barendrecht" className="text-secondary underline hover:text-primary">Barendrecht</Link>, Hendrik-Ido-Ambacht, <Link to="/dj-boeken-ridderkerk" className="text-secondary underline hover:text-primary">Ridderkerk</Link>, <Link to="/dj-boeken-papendrecht" className="text-secondary underline hover:text-primary">Papendrecht</Link>, <Link to="/dj-boeken-sliedrecht" className="text-secondary underline hover:text-primary">Sliedrecht</Link> en Hardinxveld-Giessendam. Allemaal binnen handbereik.
+        Vanuit Dordrecht draai ik in de hele <strong className="text-foreground">Drechtsteden</strong>: <Link to="/dj-boeken-zwijndrecht" className="text-secondary underline hover:text-primary">Zwijndrecht</Link>, <Link to="/dj-boeken-barendrecht" className="text-secondary underline hover:text-primary">Barendrecht</Link>, <Link to="/dj-boeken-hendrik-ido-ambacht" className="text-secondary underline hover:text-primary">Hendrik-Ido-Ambacht</Link>, <Link to="/dj-boeken-ridderkerk" className="text-secondary underline hover:text-primary">Ridderkerk</Link>, <Link to="/dj-boeken-papendrecht" className="text-secondary underline hover:text-primary">Papendrecht</Link>, <Link to="/dj-boeken-sliedrecht" className="text-secondary underline hover:text-primary">Sliedrecht</Link> en <Link to="/dj-boeken-hardinxveld-giessendam" className="text-secondary underline hover:text-primary">Hardinxveld-Giessendam</Link>. Allemaal binnen handbereik.
       </p>
       <p className="text-lg text-muted-foreground leading-relaxed mb-10">
         Via de A15 ben ik ook snel in <Link to="/dj-boeken-gorinchem" className="text-secondary underline hover:text-primary">Gorinchem</Link> en de <Link to="/dj-boeken-betuwe" className="text-secondary underline hover:text-primary">Betuwe</Link>, en via de Kiltunnel in de <Link to="/dj-boeken-hoeksche-waard" className="text-secondary underline hover:text-primary">Hoeksche Waard</Link>.

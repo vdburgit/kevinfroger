@@ -12,7 +12,7 @@ const HERO_WEBP_SRCSET =
   "/images/hero-crowd-640.webp 640w, /images/hero-crowd-1280.webp 1280w, /images/hero-crowd-1920.webp 1920w";
 // Portret: responsive zodat mobiel de 640px-variant (~55 KB) pakt i.p.v. het volle bestand.
 const PORTRAIT = responsiveImage("/images/kevin-portrait.webp");
-const IMG_DJ_BOOTH = "/images/licht-en-geluid-verhuur-show.jpeg";
+const IMG_DJ_BOOTH = "/images/licht-en-geluid-verhuur-show.webp";
 const IMG_PRIVATE = "/images/dj-kevin-froger-prive-feest.jpeg";
 const IMG_WEDDING = "/images/dj-kevin-froger-bruiloft-scaled.jpeg";
 const IMG_CORPORATE = "/images/dj-kevin-froger-bedrijfsfeest.webp";

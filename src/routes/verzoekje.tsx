@@ -13,7 +13,7 @@ const REDIRECT_NA_MS = 1400;
 export const Route = createFileRoute("/verzoekje")({
   head: () =>
     buildSeo({
-      title: "Verzoekje bij de DJ | Doe live een muziekverzoek aan Kevin Froger",
+      title: "Verzoekje doen | Live muziekverzoek aan DJ Kevin Froger",
       description:
         "Op het feest? Doe live een verzoekje bij DJ Kevin Froger. Geef je favoriete nummer door en wie weet hoor je het zo voorbijkomen op de dansvloer.",
       path: "/verzoekje",
