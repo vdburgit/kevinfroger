@@ -112,7 +112,7 @@ function Page() {
         collapsible
         intro="Ik draai bruiloften door heel Nederland, met veel ervaring in de Betuwe, Bommelerwaard, Hoeksche Waard en Zuid-Holland. Voor jouw plaats kom ik graag mee."
       />
-      <ReviewStrip text="Bruidsparen waarderen mijn werk met een 5,0 op Google." />
+      <ReviewStrip text="Bruidsparen voor wie ik de hele dag draaide, van ceremonie tot de laatste plaat." />
       <Faq items={FAQ} />
       <ContactCta title={<>Klaar om jullie<br/>datum te checken?</>} subtitle="App of bel ons met jullie datum en locatie. Reactie binnen 24 uur." />
       <SiteFooter />

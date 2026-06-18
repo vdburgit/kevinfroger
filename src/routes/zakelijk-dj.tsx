@@ -131,7 +131,7 @@ function Page() {
       </section>
 
       <ServiceCityIndex service="Bedrijfsfeest" collapsible />
-      <ReviewStrip text="Opdrachtgevers waarderen mijn werk met een 5,0 op Google." />
+      <ReviewStrip text="Van personeelsborrel tot groot bedrijfsfeest, opdrachtgevers weten me te vinden." />
       <Faq items={FAQ} />
       <ContactCta />
       <SiteFooter />

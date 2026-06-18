@@ -31,7 +31,7 @@ export function ReviewBadge({ className = "" }: { className?: string }) {
 // Variant als volledige sectie met wat meer ademruimte, voor onderaan een
 // landingspagina of tussen contentblokken.
 export function ReviewStrip({
-  text = "Klanten waarderen mijn werk met een 5,0 op Google.",
+  text = "Stuk voor stuk echte klanten voor wie ik zelf achter de set stond.",
 }: {
   text?: string;
 }) {

@@ -199,7 +199,7 @@ function Page() {
         </div>
       </section>
 
-      <ReviewStrip text="Klanten waarderen mijn werk met een 5,0 op Google." />
+      <ReviewStrip text="Allemaal klanten die vooraf precies wisten waar ze aan toe waren." />
       <Faq items={FAQ} />
       <ContactCta />
       <SiteFooter />
