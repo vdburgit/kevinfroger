@@ -2,17 +2,30 @@
 <html lang="nl"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Google Tag Manager -->
+    <!-- Google Tag Manager (uitgesteld: laadt bij eerste interactie of 4s na load,
+         zodat het de first paint op mobiel niet vertraagt. dataLayer staat meteen
+         klaar, dus events die eerder gepusht worden queuen tot GTM geladen is). -->
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
+        function loadGTM() {
+          if (w.__gtmLoaded) return;
+          w.__gtmLoaded = true;
+          w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != "dataLayer" ? "&l=" + l : "";
+          j.async = true;
+          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+          f.parentNode.insertBefore(j, f);
+        }
+        var evts = ["scroll", "mousemove", "touchstart", "keydown", "click"];
+        evts.forEach(function (e) {
+          w.addEventListener(e, loadGTM, { once: true, passive: true });
+        });
+        w.addEventListener("load", function () {
+          setTimeout(loadGTM, 4000);
+        });
       })(window, document, "script", "dataLayer", "GTM-PV4P82PD");
     </script>
     <!-- End Google Tag Manager -->
@@ -23,23 +36,16 @@
     <link rel="apple-touch-icon" href="/images/kevin-logo.png">
     <!-- LCP hero: preload de responsive WebP-set zodat de preload-scanner 'm vindt vóór de JS rendert -->
     <link rel="preload" as="image" href="/images/hero-crowd-1280.webp" imagesrcset="/images/hero-crowd-640.webp 640w, /images/hero-crowd-1280.webp 1280w, /images/hero-crowd-1920.webp 1920w" imagesizes="100vw" fetchpriority="high">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <!--
-      Alleen de twee daadwerkelijk gebruikte families (Barlow Condensed = display,
-      Inter = body). Niet-blokkerend geladen via media="print"/onload zodat het
-      stylesheet de first paint niet ophoudt; display=swap toont direct fallback-tekst.
+      Fonts worden zelf gehost (woff2 in /fonts, @font-face in styles.css) zodat er
+      geen render-blokkerende externe Google Fonts-aanroep meer is. We preloaden de
+      twee meest gebruikte boven de vouw: Barlow Condensed 700 (hero-koptekst) en
+      Inter 400 (bodytekst). De rest laadt via @font-face met font-display: swap.
     -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" media="all" onload="this.media = 'all'">
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
-      />
-    </noscript>
-    <script type="module" crossorigin="" src="/assets/index-CZmg5R0_.js"></script>
-    <link rel="stylesheet" crossorigin="" href="/assets/index-Uoytt9IH.css">
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/barlow-condensed-700.woff2" crossorigin="">
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-400.woff2" crossorigin="">
+    <script type="module" crossorigin="" src="/assets/index-D9QqxKMi.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-DFPUHE7n.css">
   <style id="kf-chat-style">
   #kf-chat-root{
     --kf-orange:#E5512C;--kf-orange-2:#ff6a3d;--kf-glow:rgba(229,81,44,.55);
@@ -157,7 +163,7 @@
     #kf-chat-root .kf-row,#kf-chat-root .kf-opt,#kf-chat-root .kf-cta,#kf-chat-root .kf-typing span{animation:none!important;}
     #kf-chat-root .kf-window{transition:none!important;}
   }
-</style><link rel="modulepreload" as="script" crossorigin="" href="/assets/dj-boeken-nijmegen-CKrL91Wo.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/CityPage-CYSf6vdB.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/LocationLayout-CxUb8IlL.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/SiteFooter-B38ORalq.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/ContactCta-IqVS35oU.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/images-CH2kJFe4.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/Breadcrumbs-Cyh8f14t.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/ReviewBadge-BtNa8ffr.js"><title>DJ Nijmegen huren | Bruiloft &amp; festival | Kevin Froger</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#E5512C"><meta name="robots" content="index, follow, max-image-preview:large"><meta name="geo.region" content="NL"><meta name="geo.placename" content="Nederland"><meta name="description" content="DJ in Nijmegen voor bruiloften, festivals en bedrijfsfeesten. Complete show met licht en geluid. Check beschikbaarheid."><meta property="og:title" content="DJ Nijmegen huren | Bruiloft &amp; festival | Kevin Froger"><meta property="og:description" content="DJ in Nijmegen voor bruiloften, festivals en bedrijfsfeesten. Complete show met licht en geluid. Check beschikbaarheid."><meta property="og:url" content="https://kevinfroger.nl/dj-boeken-nijmegen"><meta property="og:type" content="website"><meta property="og:locale" content="nl_NL"><meta property="og:site_name" content="DJ Kevin Froger"><meta property="og:image" content="https://kevinfroger.nl/images/dj-kevin-froger-bruiloft-scaled.jpeg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="DJ Nijmegen huren | Bruiloft &amp; festival | Kevin Froger"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="DJ Nijmegen huren | Bruiloft &amp; festival | Kevin Froger"><meta name="twitter:description" content="DJ in Nijmegen voor bruiloften, festivals en bedrijfsfeesten. Complete show met licht en geluid. Check beschikbaarheid."><meta name="twitter:image" content="https://kevinfroger.nl/images/dj-kevin-froger-bruiloft-scaled.jpeg"><meta name="twitter:image:alt" content="DJ Nijmegen huren | Bruiloft &amp; festival | Kevin Froger"><link rel="canonical" href="https://kevinfroger.nl/dj-boeken-nijmegen"></head>
+</style><link rel="modulepreload" as="script" crossorigin="" href="/assets/dj-boeken-nijmegen-B3swPNTl.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/CityPage-Ca4-Poqv.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/LocationLayout-DjEanMCY.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/SiteFooter-DS99ze0M.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/ContactCta-BWyyd2pH.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/images-CH2kJFe4.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/Breadcrumbs-DX271CC8.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/ReviewBadge-6f28Uoma.js"><title>DJ Nijmegen huren | Bruiloft &amp; festival | Kevin Froger</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#E5512C"><meta name="robots" content="index, follow, max-image-preview:large"><meta name="geo.region" content="NL"><meta name="geo.placename" content="Nederland"><meta name="description" content="DJ in Nijmegen voor bruiloften, festivals en bedrijfsfeesten. Complete show met licht en geluid. Check beschikbaarheid."><meta property="og:title" content="DJ Nijmegen huren | Bruiloft &amp; festival | Kevin Froger"><meta property="og:description" content="DJ in Nijmegen voor bruiloften, festivals en bedrijfsfeesten. Complete show met licht en geluid. Check beschikbaarheid."><meta property="og:url" content="https://kevinfroger.nl/dj-boeken-nijmegen"><meta property="og:type" content="website"><meta property="og:locale" content="nl_NL"><meta property="og:site_name" content="DJ Kevin Froger"><meta property="og:image" content="https://kevinfroger.nl/images/dj-kevin-froger-bruiloft-scaled.jpeg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="DJ Nijmegen huren | Bruiloft &amp; festival | Kevin Froger"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="DJ Nijmegen huren | Bruiloft &amp; festival | Kevin Froger"><meta name="twitter:description" content="DJ in Nijmegen voor bruiloften, festivals en bedrijfsfeesten. Complete show met licht en geluid. Check beschikbaarheid."><meta name="twitter:image" content="https://kevinfroger.nl/images/dj-kevin-froger-bruiloft-scaled.jpeg"><meta name="twitter:image:alt" content="DJ Nijmegen huren | Bruiloft &amp; festival | Kevin Froger"><link rel="canonical" href="https://kevinfroger.nl/dj-boeken-nijmegen"></head>
   <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe
