@@ -27,11 +27,17 @@
          klaar, dus events die eerder gepusht worden queuen tot GTM geladen is). -->
     <script>
       (function (w, d, s, l, i) {
-        // Alleen op het productiedomein laden. Zo vervuilen dev/test/preview
-        // (test26, dev.kevinfroger.nl, localhost, IP) en de prerender de GA4-
-        // property niet. track.ts init zelf de dataLayer, dus vroeg stoppen mag.
+        // GTM laden, BEHALVE op bekende niet-productie-hosts (denylist). Zo laadt
+        // productie (en elke legitieme render-/cachecontext) GTM altijd, terwijl
+        // dev/test/preview (test26, dev, localhost, IP) de GA4-property schoon
+        // houden. Denylist i.p.v. allowlist voorkomt "ongetagde pagina's" in GTM.
         var host = w.location.hostname;
-        if (host !== "kevinfroger.nl" && host !== "www.kevinfroger.nl") return;
+        var DENY = ["localhost", "127.0.0.1"];
+        var DENY_PREFIX = ["192.168.", "test26.", "dev.", "vscode."];
+        if (DENY.indexOf(host) > -1) return;
+        for (var bi = 0; bi < DENY_PREFIX.length; bi++) {
+          if (host.indexOf(DENY_PREFIX[bi]) === 0) return;
+        }
         w[l] = w[l] || [];
         function loadGTM() {
           if (w.__gtmLoaded) return;
