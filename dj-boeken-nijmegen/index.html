@@ -7,6 +7,11 @@
          klaar, dus events die eerder gepusht worden queuen tot GTM geladen is). -->
     <script>
       (function (w, d, s, l, i) {
+        // Alleen op het productiedomein laden. Zo vervuilen dev/test/preview
+        // (test26, dev.kevinfroger.nl, localhost, IP) en de prerender de GA4-
+        // property niet. track.ts init zelf de dataLayer, dus vroeg stoppen mag.
+        var host = w.location.hostname;
+        if (host !== "kevinfroger.nl" && host !== "www.kevinfroger.nl") return;
         w[l] = w[l] || [];
         function loadGTM() {
           if (w.__gtmLoaded) return;
