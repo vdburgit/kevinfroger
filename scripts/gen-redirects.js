@@ -48,6 +48,20 @@ const REDIRECTS = {
   "/dj-kevin-froger": "/",
   "/kevin-froger-dj": "/",
   "/dj-kevin": "/",
+  // Legacy occasion-/themaslugs (oude site, nog geindexeerd in GSC juni 2026)
+  "/dj-verjaardag": "/verjaardag-dj",
+  "/dj-themafeest": "/verjaardag-dj",
+  "/dj-tuinfeest": "/verjaardag-dj",
+  "/dj-koningsdag": "/verjaardag-dj",
+  "/dj-met-apparatuur": "/dj-en-mc",
+  "/dj-huren-nederland": "/regios",
+  // Legacy plaats-/regiopaden (oude /regio/* structuur en losse plaatsslugs)
+  "/dj-bruiloft-rotterdam": "/dj-boeken-rotterdam",
+  "/bruiloft-dj-den-haag": "/dj-boeken-den-haag",
+  "/feest-dj-hoeksche-waard": "/dj-boeken-hoeksche-waard",
+  "/regio/zuid-holland": "/dj-boeken-zuid-holland",
+  "/regio/zuid-holland/westland": "/regios",
+  "/regio/noord-holland/amsterdam": "/dj-boeken-amsterdam",
 };
 
 const PUBLIC = path.resolve("public");

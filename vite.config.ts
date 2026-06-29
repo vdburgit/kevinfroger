@@ -25,6 +25,9 @@ export default defineConfig({
   server: {
     port: 3000,
     host: "0.0.0.0",
+    // Sta de Cloudflare-tunnel-subdomeinen toe (test/dev/test26.kevinfroger.nl),
+    // anders blokkeert de dev-server de tunnel-host met 403.
+    allowedHosts: [".kevinfroger.nl"],
   },
   build: {
     outDir: "dist",

@@ -14,6 +14,7 @@ const FAQ: FaqItem[] = [
   { q: "Draai je verjaardagen en themafeesten?", a: "Ja, van verjaardag en themafeest tot besloten privé-events, altijd op maat van je gasten." },
   { q: "Is licht en geluid inbegrepen?", a: "Ja, ik kom met een complete show, dus je hoeft niets te regelen." },
   { q: "Kun je inspelen op verschillende leeftijden?", a: "Ja, ik draai allround en lees het publiek, zodat iedereen op het juiste moment de dansvloer op gaat." },
+  { q: "Draai je ook mijlpaal-verjaardagen zoals een 25e of 50e?", a: "Zeker. Of het nu een 18e, 25e, 50e (Abraham of Sarah) of 60e is, ik stem de muziek af op de leeftijd en de gasten, zodat iedereen de dansvloer op gaat." },
   { q: "In welke plaatsen kom je draaien?", a: "Door heel Nederland." },
 ];
 
@@ -48,6 +49,15 @@ const OCC = [
   { t: "Tuinfeest", d: "Compacte set-up die ook outdoor werkt. Geluid hard genoeg voor de gasten, niet de hele buurt." },
 ];
 
+// Mijlpaal-verjaardagen: dekt zoektermen als "dj voor 25e/50e verjaardag" natuurlijk af.
+const MILESTONES = [
+  { t: "18e en 21e", d: "De eerste grote party. Top 40, dance en een fout uurtje waar de hele vriendengroep op losgaat." },
+  { t: "25e verjaardag", d: "Een kwart eeuw. Een mix van de hits waarmee je opgroeide en de nummers van nu." },
+  { t: "30e en 40e", d: "Vrienden, familie en collega's door elkaar. Classics, foute uurtjes en dance, met ruimte voor verzoekjes." },
+  { t: "50e verjaardag", d: "Abraham of Sarah. Van Nederlandstalig en jaren 70 en 80 tot de nummers waar je kinderen op dansen." },
+  { t: "60e en ouder", d: "Een feest voor alle generaties. Ik bouw rustig op en hou de vloer de hele avond gezellig vol." },
+];
+
 function Page() {
   return (
     <main className="min-h-screen bg-background text-foreground">
@@ -75,6 +85,26 @@ function Page() {
               <div key={o.t} className="rounded-2xl border-2 border-border bg-card p-6 hover:border-primary transition-colors">
                 <h3 className="text-xl mb-3" style={{ fontFamily: "var(--font-display)" }}>{o.t}</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm">{o.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6 lg:px-10 border-t-2 border-border">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="max-w-2xl mb-12">
+            <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Elke mijlpaal</div>
+            <h2 className="text-4xl md:text-6xl leading-[0.9]" style={{ fontFamily: "var(--font-display)" }}>Van een 18e tot een 60e</h2>
+            <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
+              Elke verjaardag heeft zijn eigen publiek en zijn eigen muziek. Een 25e voelt anders dan een 50e, en daar stem ik de set op af zodat jong en oud de vloer op gaan. Een paar voorbeelden:
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+            {MILESTONES.map((m) => (
+              <div key={m.t} className="rounded-2xl border-2 border-border bg-card p-6 hover:border-primary transition-colors">
+                <h3 className="text-lg mb-3" style={{ fontFamily: "var(--font-display)" }}>{m.t}</h3>
+                <p className="text-muted-foreground leading-relaxed text-sm">{m.d}</p>
               </div>
             ))}
           </div>
