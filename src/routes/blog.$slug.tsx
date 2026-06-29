@@ -60,7 +60,7 @@ function Page() {
     return (
       <main className="min-h-screen bg-background text-foreground">
         <SiteHeader transparent />
-        <section className="py-32 px-6 lg:px-10 text-center">
+        <section className="py-32 px-5 sm:px-6 lg:px-10 text-center">
           <div className="max-w-xl mx-auto">
             <h1
               className="text-4xl mb-4"

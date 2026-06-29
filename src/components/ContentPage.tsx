@@ -90,7 +90,7 @@ export function ContentPage({
         breadcrumbs={breadcrumbs}
       />
 
-      <section className="py-16 px-6 lg:px-10">
+      <section className="py-16 px-5 sm:px-6 lg:px-10">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">
@@ -119,12 +119,12 @@ export function ContentPage({
         </div>
       </section>
 
-      <section className="py-20 px-6 lg:px-10 bg-card border-y-2 border-border">
-        <article className="max-w-[800px] mx-auto prose-content">
+      <section className="py-20 px-5 sm:px-6 lg:px-10 bg-card border-y-2 border-border">
+        <article className="max-w-[800px] mx-auto">
           {sections.map((s) => (
             <div key={s.h2}>
               <h2
-                className="text-3xl md:text-5xl leading-[0.95] mb-6 mt-10 first:mt-0"
+                className="text-3xl md:text-5xl leading-tight mb-6 mt-10 first:mt-0"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 {s.h2}

@@ -29,14 +29,14 @@ export function LocationLayout({ eyebrow, heroTitle, heroIntro, heroImage, heroI
         breadcrumbs={breadcrumbs}
       />
 
-      <section className="py-20 px-6 lg:px-10">
-        <article className="max-w-[800px] mx-auto prose-content">
+      <section className="py-20 px-5 sm:px-6 lg:px-10">
+        <article className="max-w-[800px] mx-auto">
           {children}
         </article>
       </section>
 
       {related && related.length > 0 && (
-        <section className="py-16 px-6 lg:px-10 bg-card border-y-2 border-border">
+        <section className="py-16 px-5 sm:px-6 lg:px-10 bg-card border-y-2 border-border">
           <div className="max-w-[1100px] mx-auto text-center">
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Ook actief in</div>
             <div className="flex flex-wrap gap-3 justify-center">

@@ -5,7 +5,7 @@ const LOGO = "/images/kevin-logo-small.webp";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-background border-t-2 border-border py-12 sm:py-16 px-5 sm:px-6 lg:px-10">
+    <footer className="bg-background border-t-2 border-border py-12 sm:py-16 px-5 sm:px-5 sm:px-6 lg:px-10">
       <div className="max-w-[1400px] mx-auto">
         {/* Top: branding + diensten + info */}
         <div className="grid md:grid-cols-5 gap-8 text-sm">

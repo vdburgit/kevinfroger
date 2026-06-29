@@ -46,7 +46,7 @@ function Page() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <SiteHeader />
-      <section className="px-6 lg:px-10 pt-20 pb-24">
+      <section className="px-5 sm:px-6 lg:px-10 pt-20 pb-24">
         <div className="max-w-[1400px] mx-auto grid lg:grid-cols-5 gap-12">
           <div className="lg:col-span-2">
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Contact</div>

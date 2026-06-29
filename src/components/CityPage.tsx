@@ -28,7 +28,7 @@ export function CityPage({ city }: { city: CityData }) {
     >
       <ReviewBadge className="mb-8" />
 
-      <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>
+      <h2 className="text-3xl md:text-5xl leading-tight mb-6" style={{ fontFamily: "var(--font-display)" }}>
         Bruiloft-DJ en feest-DJ in {city.name}
       </h2>
       {city.paragraphs.map((p, i) => (
@@ -37,7 +37,7 @@ export function CityPage({ city }: { city: CityData }) {
         </p>
       ))}
 
-      <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6 mt-10" style={{ fontFamily: "var(--font-display)" }}>
+      <h2 className="text-3xl md:text-5xl leading-tight mb-6 mt-10" style={{ fontFamily: "var(--font-display)" }}>
         Wat ik meeneem
       </h2>
       <p className="text-lg text-muted-foreground leading-relaxed mb-6">
@@ -47,7 +47,7 @@ export function CityPage({ city }: { city: CityData }) {
         Voor een <Link to="/bruiloft-dj" className="text-secondary underline hover:text-primary">bruiloft</Link>, <Link to="/verjaardag-dj" className="text-secondary underline hover:text-primary">verjaardag</Link>, <Link to="/zakelijk-dj" className="text-secondary underline hover:text-primary">bedrijfsfeest</Link> of <Link to="/festival-dj" className="text-secondary underline hover:text-primary">festival</Link> in {city.name} ben ik je DJ.
       </p>
 
-      <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>
+      <h2 className="text-3xl md:text-5xl leading-tight mb-6" style={{ fontFamily: "var(--font-display)" }}>
         {city.name} en omgeving
       </h2>
       <p className="text-lg text-muted-foreground leading-relaxed mb-4">
@@ -59,7 +59,7 @@ export function CityPage({ city }: { city: CityData }) {
         </p>
       )}
 
-      <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>
+      <h2 className="text-3xl md:text-5xl leading-tight mb-6" style={{ fontFamily: "var(--font-display)" }}>
         Veelgestelde vragen over een DJ in {city.name}
       </h2>
       <div className="divide-y-2 divide-border border-y-2 border-border mb-10">
@@ -74,7 +74,7 @@ export function CityPage({ city }: { city: CityData }) {
         ))}
       </div>
 
-      <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>
+      <h2 className="text-3xl md:text-5xl leading-tight mb-6" style={{ fontFamily: "var(--font-display)" }}>
         Datum checken
       </h2>
       <p className="text-lg text-muted-foreground leading-relaxed">

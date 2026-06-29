@@ -57,7 +57,7 @@ export const Route = createFileRoute("/zakelijk-dj")({
 
 const HIGHLIGHTS = [
   { t: "Borrel en netwerken", d: "Achtergrondmuziek tijdens netwerken en speeches, zonder dat gesprekken overstemd worden." },
-  { t: "Diner", d: "Subtiele set tijdens het eten. Geen lounge-cliché, maar muziek die past bij het tempo van de avond." },
+  { t: "Diner", d: "Rustige muziek tijdens het eten, die past bij het tempo van de avond." },
   { t: "Feestavond", d: "Opbouw van classics naar dance en top 40. De dansvloer loopt vanzelf vol, ongeacht het gezelschap." },
   { t: "MC services", d: "Aankondiging van speeches, awards en presentaties. Strak getimed, in lijn met het programma." },
   { t: "Factuur op naam", d: "Zakelijke offerte en facturatie, BTW-conform. Eén aanspreekpunt voor alles wat met muziek te maken heeft." },
@@ -78,7 +78,7 @@ function Page() {
         breadcrumbs={[{ name: "Home", path: "/" }, { name: "Bedrijfsfeest DJ", path: "/zakelijk-dj" }]}
       />
 
-      <section className="py-16 px-6 lg:px-10">
+      <section className="py-16 px-5 sm:px-6 lg:px-10">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Compleet pakket</div>
@@ -98,13 +98,13 @@ function Page() {
         </div>
       </section>
 
-      <section className="py-16 px-6 lg:px-10 bg-card border-y-2 border-border">
+      <section className="py-16 px-5 sm:px-6 lg:px-10 bg-card border-y-2 border-border">
         <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Vertrouwd door</div>
             <h2 className="text-4xl md:text-6xl leading-[0.9]" style={{ fontFamily: "var(--font-display)" }}>Merken die<br/><span className="text-primary">terugkomen.</span></h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Onder andere Heineken, Jumbo, Albert Heijn, Makro, Bol.com, KPN, Van der Valk, Feyenoord, Sparta Rotterdam, Dutch Grand Prix, Circuit Zandvoort, Roparun, de Koninklijke Landmacht, de Politie, Hogeschool Rotterdam, Flügel, Pupa Milano, YourSurprise, Voorwinden en Modern Nerdplace. Wat ze gemeen hebben: een dag met meerdere programmaonderdelen, een gemengd gezelschap en geen ruimte voor losse eindjes.
+              Onder andere Heineken, Jumbo, Albert Heijn, Makro, Bol.com, KPN, Van der Valk, Feyenoord, Sparta Rotterdam, Dutch Grand Prix, Circuit Zandvoort, Roparun, de Koninklijke Landmacht, de Politie, Hogeschool Rotterdam, Flügel, Pupa Milano, YourSurprise, Voorwinden en Modern Nerdplace. Wat ze gemeen hebben: een dag met meerdere onderdelen en een gemengd gezelschap, waar de muziek en de aankondigingen moesten kloppen.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-6">
               {LOGOS.map((logo) => (

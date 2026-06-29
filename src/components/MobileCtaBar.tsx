@@ -21,7 +21,7 @@ export function MobileCtaBar() {
         <a
           href={`tel:${TEL}`}
           onClick={() => track("tel_click", { location: "mobile_bar" })}
-          className="flex flex-col items-center justify-center gap-0.5 py-3 text-[0.65rem] tracking-[0.12em] uppercase font-bold text-foreground border-r-2 border-border active:bg-muted"
+          className="flex flex-col items-center justify-center gap-0.5 py-3 text-[0.65rem] tracking-[0.08em] uppercase font-bold text-foreground border-r-2 border-border active:bg-muted"
         >
           <span className="text-base leading-none">📞</span>
           Bellen
@@ -29,7 +29,7 @@ export function MobileCtaBar() {
         <a
           href={WA}
           onClick={() => track("whatsapp_click", { location: "mobile_bar" })}
-          className="flex flex-col items-center justify-center gap-0.5 py-3 text-[0.65rem] tracking-[0.12em] uppercase font-bold bg-primary text-primary-foreground border-r-2 border-border active:opacity-90"
+          className="flex flex-col items-center justify-center gap-0.5 py-3 text-[0.65rem] tracking-[0.08em] uppercase font-bold bg-primary text-primary-foreground border-r-2 border-border active:opacity-90"
         >
           <span className="text-base leading-none">💬</span>
           WhatsApp
@@ -39,7 +39,7 @@ export function MobileCtaBar() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => track("questionnaire_click", { location: "mobile_bar" })}
-          className="flex flex-col items-center justify-center gap-0.5 py-3 text-[0.65rem] tracking-[0.12em] uppercase font-bold text-foreground active:bg-muted"
+          className="flex flex-col items-center justify-center gap-0.5 py-3 text-[0.65rem] tracking-[0.08em] uppercase font-bold text-foreground active:bg-muted"
         >
           <span className="text-base leading-none">📝</span>
           Vragenlijst

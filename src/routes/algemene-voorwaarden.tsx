@@ -24,7 +24,7 @@ function Page() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <SiteHeader />
-      <article className="max-w-3xl mx-auto px-6 lg:px-10 py-16">
+      <article className="max-w-3xl mx-auto px-5 sm:px-6 lg:px-10 py-16">
         <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Voorwaarden</div>
         <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Algemene voorwaarden", path: "/algemene-voorwaarden" }]} variant="default" className="mb-6" />
         <h1 className="text-5xl md:text-6xl leading-[0.9] mb-8" style={{ fontFamily: "var(--font-display)" }}>Algemene voorwaarden</h1>

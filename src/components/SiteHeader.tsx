@@ -44,7 +44,7 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
           : "sticky top-0 z-30 bg-background/95 backdrop-blur border-b border-border"
       }
     >
-      <div className="max-w-[1400px] mx-auto px-5 sm:px-6 lg:px-10 py-4 md:py-5 flex items-center justify-between gap-4">
+      <div className="max-w-[1400px] mx-auto px-5 sm:px-5 sm:px-6 lg:px-10 py-4 md:py-5 flex items-center justify-between gap-4">
         <Link to="/" className="flex items-center gap-3 shrink-0" onClick={() => setOpen(false)}>
           <img src={LOGO} alt="DJ Kevin Froger" width={360} height={198} className="h-10 sm:h-12 md:h-14 w-auto drop-shadow-lg" />
         </Link>

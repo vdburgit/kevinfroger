@@ -65,7 +65,7 @@ function Page() {
         breadcrumbs={[{ name: "Home", path: "/" }, { name: "Bruiloft DJ", path: "/bruiloft-dj" }]}
       />
 
-      <section className="py-16 px-6 lg:px-10">
+      <section className="py-16 px-5 sm:px-6 lg:px-10">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Bruiloft DJ met complete show</div>
@@ -85,7 +85,7 @@ function Page() {
         </div>
       </section>
 
-      <section className="py-16 px-6 lg:px-10 bg-card border-y-2 border-border">
+      <section className="py-16 px-5 sm:px-6 lg:px-10 bg-card border-y-2 border-border">
         <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Persoonlijk</div>
