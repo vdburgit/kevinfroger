@@ -85,10 +85,13 @@ function Page() {
     );
   }
 
-  // "Lees ook": link naar de twee andere artikelen, zodat de blog-silo onderling
-  // gesloten is (alle posts zijn bruiloft-gerelateerd).
-  const related = BLOG_POSTS.filter((p) => p.slug !== slug)
-    .slice(0, 2)
+  // "Lees ook": link naar de twee VOLGENDE artikelen (rondlopend door de lijst).
+  // Een ring i.p.v. altijd de eerste twee, zodat elke post precies twee inkomende
+  // links krijgt en geen enkel artikel verweesd raakt (bv. wat-doet-een-mc).
+  const idx = BLOG_POSTS.findIndex((p) => p.slug === slug);
+  const related = [1, 2]
+    .map((offset) => BLOG_POSTS[(idx + offset) % BLOG_POSTS.length])
+    .filter((p) => p && p.slug !== slug)
     .map((p) => ({ to: `${PATH}/${p.slug}`, label: p.cardTitle }));
 
   return (
