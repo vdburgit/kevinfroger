@@ -3,23 +3,70 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageHero } from "@/components/PageHero";
 import { ContactCta } from "@/components/ContactCta";
-import { breadcrumb, buildSeo } from "@/lib/seo";
+import { SITE_URL, breadcrumb, buildSeo } from "@/lib/seo";
 
 const IMG = "/images/dj-kevin-froger-bruiloft-scaled.jpeg";
 
+// Slugs waarvoor een echte /dj-boeken-* route bestaat. Alleen deze plaatsnamen
+// worden een crawlbare link; de rest blijft platte tekst (geen kapotte links).
+// Houd in sync met src/routes/dj-boeken-*.tsx.
+const ROUTE_SLUGS = new Set<string>([
+  "alblasserdam","albrandswaard","alkmaar","almere","alphen-aan-den-rijn","amersfoort","amsterdam","apeldoorn","arnhem","assen","barendrecht","betuwe","bommelerwaard","breda","buren","capelle-aan-den-ijssel","cillaarshoek","culemborg","delft","den-bosch","den-haag","deventer","dordrecht","ede","eindhoven","enschede","geldermalsen","gorcum","gorinchem","gouda","goudswaard","groningen","haarlem","hardinxveld-giessendam","heinenoord","helmond","hendrik-ido-ambacht","hilversum","hoeksche-waard","houten","klaaswaal","leerdam","leeuwarden","leiden","maasdam","maastricht","middelburg","mijnsheerenland","nieuw-beijerland","nieuwegein","nijmegen","numansdorp","ophemert","oss","oud-beijerland","papendrecht","piershil","poortugaal","puttershoek","rhoon","ridderkerk","rivierenland","roermond","rotterdam","schiedam","s-gravendeel","sliedrecht","spijkenisse","strijen","strijensas","tiel","tiengemeten","tilburg","tuil","utrecht","varik","veenendaal","venlo","vlaardingen","wageningen","westmaas","zaltbommel","zeist","zoetermeer","zuid-beijerland","zuid-holland","zwijndrecht","zwolle",
+]);
+
+// Plaatsnaam -> slug. Aliassen voor namen die anders niet matchen met hun route.
+const SLUG_ALIASES: Record<string, string> = {
+  "s-hertogenbosch": "den-bosch",
+  "den-bosch": "den-bosch",
+};
+function placeSlug(name: string): string {
+  const base = name.toLowerCase().trim().replace(/['']/g, "").replace(/\s+/g, "-");
+  return SLUG_ALIASES[base] ?? base;
+}
+
 export const Route = createFileRoute("/regios")({
-  head: () => buildSeo({
-    title: "DJ door heel Nederland | Alle steden, dorpen en provincies",
-    description: "DJ Kevin Froger draait bruiloften, bedrijfsfeesten, verjaardagen en festivals door heel Nederland. Van Amsterdam tot Maastricht, alle provincies en plaatsen.",
-    path: "/regios",
-    image: IMG,
-    jsonLd: [
-      breadcrumb([
-        { name: "Home", path: "/" },
-        { name: "Werkgebied", path: "/regios" },
-      ]),
-    ],
-  }),
+  head: () => {
+    // Bouw een ItemList van alle plaatsen met een echte /dj-boeken-* pagina.
+    const seen = new Set<string>();
+    const items: Array<{ name: string; slug: string }> = [];
+    for (const p of PROVINCES) {
+      for (const n of [...(p.regions ?? []), ...p.cities, ...(p.villages ?? [])]) {
+        const s = placeSlug(n);
+        if (ROUTE_SLUGS.has(s) && !seen.has(s)) {
+          seen.add(s);
+          items.push({ name: n, slug: s });
+        }
+      }
+    }
+    return buildSeo({
+      title: "DJ door heel Nederland | Alle steden, dorpen en provincies",
+      description: "DJ Kevin Froger draait bruiloften, bedrijfsfeesten, verjaardagen en festivals door heel Nederland. Van Amsterdam tot Maastricht, alle provincies en plaatsen.",
+      path: "/regios",
+      image: IMG,
+      jsonLd: [
+        breadcrumb([
+          { name: "Home", path: "/" },
+          { name: "Werkgebied", path: "/regios" },
+        ]),
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Werkgebied DJ Kevin Froger",
+          description: "Alle plaatsen en regio's waar je DJ Kevin Froger kunt boeken.",
+          url: `${SITE_URL}/regios`,
+          mainEntity: {
+            "@type": "ItemList",
+            itemListElement: items.map((it, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              name: `DJ ${it.name}`,
+              url: `${SITE_URL}/dj-boeken-${it.slug}`,
+            })),
+          },
+        },
+      ],
+    });
+  },
   component: Page,
 });
 
@@ -170,6 +217,36 @@ const PROVINCES: Array<{
   },
 ];
 
+// Rendert een lijst plaatsnamen, met een echte <Link> voor elke plaats die een
+// /dj-boeken-* pagina heeft. Komma-gescheiden, crawlbaar.
+function PlaceList({ names }: { names: string[] }) {
+  return (
+    <>
+      {names.map((name, i) => {
+        const slug = placeSlug(name);
+        const sep = i > 0 ? ", " : "";
+        if (ROUTE_SLUGS.has(slug)) {
+          // string-getypt pad (TanStack Link accepteert string, niet het
+          // template-literal-type) — zelfde patroon als ServiceCityIndex.
+          const href: string = `/dj-boeken-${slug}`;
+          return (
+            <span key={name}>
+              {sep}
+              <Link
+                to={href}
+                className="underline decoration-border/70 underline-offset-2 hover:decoration-primary hover:text-foreground transition-colors"
+              >
+                {name}
+              </Link>
+            </span>
+          );
+        }
+        return <span key={name}>{sep}{name}</span>;
+      })}
+    </>
+  );
+}
+
 function ProvinceCard({ p }: { p: (typeof PROVINCES)[number] }) {
   return (
     <details className="group mb-4 rounded-2xl border-2 border-border bg-card overflow-hidden">
@@ -194,17 +271,17 @@ function ProvinceCard({ p }: { p: (typeof PROVINCES)[number] }) {
 
         {p.regions && p.regions.length > 0 && (
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-3">
-            <strong className="text-foreground">Regio's binnen {p.name}</strong>: {p.regions.join(", ")}.
+            <strong className="text-foreground">Regio's binnen {p.name}</strong>: <PlaceList names={p.regions} />.
           </p>
         )}
 
         <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-3">
-          <strong className="text-foreground">Steden</strong>: {p.cities.join(", ")}.
+          <strong className="text-foreground">Steden</strong>: <PlaceList names={p.cities} />.
         </p>
 
         {p.villages && p.villages.length > 0 && (
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-            <strong className="text-foreground">Dorpen en kleine kernen</strong>: {p.villages.join(", ")}.
+            <strong className="text-foreground">Dorpen en kleine kernen</strong>: <PlaceList names={p.villages} />.
           </p>
         )}
       </div>

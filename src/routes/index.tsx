@@ -183,13 +183,14 @@ function Index() {
               { title: "Bedrijfsfeesten", img: IMG_CORPORATE, alt: "DJ Kevin Froger op een bedrijfsfeest", desc: "Strakke muziek en presentatie voor bedrijfsfeesten, jubilea en personeelsfeesten.", href: "/zakelijk-dj" },
               { title: "Festivals", img: IMG_FESTIVAL, alt: "DJ Kevin Froger op een festival met vuurwerk boven het podium en volle dansvloer", desc: "Strakke sets met crowd control en presentatie voor festivals en aprèsski.", href: "/festival-dj" },
               { title: "Privéfeesten", img: IMG_PRIVATE, alt: "DJ Kevin Froger op een privéfeest of verjaardag", desc: "Verjaardag, themafeest of besloten event, altijd op maat van jouw gasten.", href: "/verjaardag-dj" },
-            ].map((d, i) => {
+            ].map((d) => {
               const { src, srcSet } = responsiveImage(d.img);
               return (
               <Link key={d.title} to={d.href} className="group relative block overflow-hidden rounded-2xl bg-card border-2 border-border hover:border-primary transition-colors aspect-[4/5]">
-                {/* Eerste kaart is op mobiel het LCP-element: eager + hoge prioriteit laden,
-                    de rest blijft lazy (offscreen). */}
-                <img src={src} srcSet={srcSet} sizes="(min-width:1024px) 25vw, (min-width:640px) 50vw, 100vw" alt={d.alt} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading={i === 0 ? "eager" : "lazy"} fetchPriority={i === 0 ? "high" : undefined} width={800} height={1000} />
+                {/* Galerij staat onder de vouw; de hero is het echte LCP-element.
+                    Alle kaarten lazy laden zodat ze niet met de hero om bandbreedte
+                    vechten (anders schuift LCP naar ~4s). */}
+                <img src={src} srcSet={srcSet} sizes="(min-width:1024px) 25vw, (min-width:640px) 50vw, 100vw" alt={d.alt} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" width={800} height={1000} />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/10" />
                 <div className="absolute inset-x-0 bottom-0 p-6">
                   <h3 className="text-2xl md:text-3xl mb-2 text-white" style={{ fontFamily: "var(--font-display)" }}>{d.title}</h3>
