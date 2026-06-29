@@ -5,9 +5,13 @@
     <title>Pagina verhuisd</title>
     <link rel="canonical" href="https://kevinfroger.nl/dj-en-mc" />
     <meta http-equiv="refresh" content="0; url=/dj-en-mc" />
+    <!-- GTM enkel zodat tag-coverage de container vindt; de instant-redirect
+         hierboven voorkomt dat het een pageview vuurt voor de oude URL. -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PV4P82PD');</script>
     <script>location.replace("/dj-en-mc" + location.search + location.hash);</script>
   </head>
   <body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PV4P82PD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Deze pagina is verhuisd naar <a href="/dj-en-mc">https://kevinfroger.nl/dj-en-mc</a>.</p>
   </body>
 </html>
