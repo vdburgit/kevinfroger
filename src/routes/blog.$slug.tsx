@@ -3,7 +3,7 @@ import { ContentPage } from "@/components/ContentPage";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { breadcrumb, buildSeo, faqPage, SITE_URL } from "@/lib/seo";
-import { BLOG_BY_SLUG } from "@/data/blogs";
+import { BLOG_BY_SLUG, BLOG_POSTS } from "@/data/blogs";
 
 const PATH = "/blog";
 
@@ -85,6 +85,12 @@ function Page() {
     );
   }
 
+  // "Lees ook": link naar de twee andere artikelen, zodat de blog-silo onderling
+  // gesloten is (alle posts zijn bruiloft-gerelateerd).
+  const related = BLOG_POSTS.filter((p) => p.slug !== slug)
+    .slice(0, 2)
+    .map((p) => ({ to: `${PATH}/${p.slug}`, label: p.cardTitle }));
+
   return (
     <ContentPage
       eyebrow={post.eyebrow}
@@ -101,7 +107,7 @@ function Page() {
       blocksHeading={post.blocksHeading}
       blocks={post.blocks}
       sections={post.sections}
-      links={post.links}
+      links={[...post.links, ...related]}
       faq={post.faq}
       ctaSubtitle={post.ctaSubtitle}
     />

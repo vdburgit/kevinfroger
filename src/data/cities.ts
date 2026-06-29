@@ -36,7 +36,7 @@ export const CITIES: Record<string, CityData> = {
       "Allround DJ voor bruiloft, bedrijfsfeest en verjaardag in Rotterdam. Complete show met licht en geluid, DJ en MC in een persoon.",
     paragraphs: [
       "Rotterdam heeft enorm veel verschillende feestlocaties. Van historische plekken als de SS Rotterdam tot moderne locaties in M4H, het Lloydkwartier en op de Wilhelminapier. Ik ken de meeste zalen, restaurants en industriële spots en zorg voor een opbouw die past bij de uitstraling.",
-      "Voor bedrijfsfeesten en netwerkevents in Rotterdam-Centrum, het Beurs-WTC of de Coolsingel ben ik vaak ingehuurd. Ook voor bruiloften in de buitenwijken (Hillegersberg, Kralingen, Schiebroek) en in Hoogvliet, Pernis en Hoek van Holland kom ik graag.",
+      "Voor bedrijfsfeesten en netwerkevents in Rotterdam-Centrum, rond het Beurs-WTC of de Coolsingel kun je me boeken. Ook voor bruiloften in de buitenwijken (Hillegersberg, Kralingen, Schiebroek) en in Hoogvliet, Pernis en Hoek van Holland kom ik graag draaien.",
       "Vanuit de Drechtsteden ben ik via de A15 of Beneluxtunnel binnen 30 minuten in elke wijk van Rotterdam. Geen reiskosten binnen de stad.",
     ],
     characteristics:
@@ -57,12 +57,12 @@ export const CITIES: Record<string, CityData> = {
     description:
       "DJ Kevin Froger voor bruiloften, bedrijfsfeesten en festivals in Amsterdam. Complete show met licht en geluid. Check je datum.",
     heroIntro:
-      "Voor feesten in Amsterdam ben ik vaak op locatie. Van bruiloften aan de grachten tot bedrijfsfeesten in de Zuidas, ik zorg voor een avond die staat. De stad heeft elke wijk een eigen sfeer en daar speel ik op in.",
+      "Voor feesten in Amsterdam kom ik graag jouw kant op. Van bruiloften aan de grachten tot bedrijfsfeesten op de Zuidas, ik zorg voor een avond die staat. Elke wijk heeft een eigen sfeer en daar speel ik op in.",
     serviceDescription:
       "Allround DJ voor bruiloft, bedrijfsfeest en festival in Amsterdam. Inclusief licht, geluid en MC services.",
     paragraphs: [
       "Amsterdam heeft alles: bruiloften op een rondvaartboot, bedrijfsfeesten in moderne kantoorgebouwen op de Zuidas, festivals in Noord en intieme feesten in het centrum. Voor elk type event pas ik mijn show aan.",
-      "Geliefde feestlocaties waar ik regelmatig draai: hotels in Centrum en Zuid, locaties langs het IJ, evenementhallen in Noord, en kleinere zalen in Oud-West, De Pijp en Oost.",
+      "Feestlocaties genoeg: hotels in Centrum en Zuid, plekken langs het IJ, evenementhallen in Noord en kleinere zalen in Oud-West, De Pijp en Oost. Heb je je locatie al, dan stem ik mijn set en opstelling daarop af.",
       "Vanuit Midden-Nederland of de Randstad-zuid ben ik via de A2 of A4 in een uur in Amsterdam. Voor klussen die laat eindigen kan ik in de stad overnachten, in overleg.",
     ],
     characteristics:
@@ -87,7 +87,7 @@ export const CITIES: Record<string, CityData> = {
     serviceDescription:
       "Allround DJ voor bedrijfsfeest, bruiloft, verjaardag of festival in Den Haag. Inclusief licht, geluid en MC services.",
     paragraphs: [
-      "In Den Haag draai ik in de hele stad. Voor zakelijke events bij ministeries en internationale organisaties, bruiloften in Scheveningen of Kijkduin, en feesten in de centrum-locaties zoals het Plein, Lange Voorhout of de Witte de Withstraat.",
+      "In Den Haag ben ik je DJ door de hele stad. Voor zakelijke events bij ministeries en internationale organisaties, bruiloften in Scheveningen of Kijkduin, en feesten in centrum-locaties zoals het Plein, Lange Voorhout of de Witte de Withstraat.",
       "Ook voor de wijken Voorburg, Leidschendam, Rijswijk en Wassenaar ben ik je DJ. De ligging van Den Haag aan zee maakt het gebied geliefd voor strandbruiloften en zomer-events.",
       "Vanuit het zuiden via de A4 of A13 ben ik snel in Den Haag. Geen extra reiskosten binnen de stad.",
     ],
@@ -109,12 +109,12 @@ export const CITIES: Record<string, CityData> = {
     description:
       "DJ in Utrecht voor bruiloften, bedrijfsfeesten en festivals. Complete show met licht en geluid. Check beschikbaarheid.",
     heroIntro:
-      "Utrecht zit centraal in Nederland en daar zit ik vaak. Voor bruiloften en bedrijfsfeesten in de Domstad, op kantoorlocaties rond Papendorp of Lage Weide, of in de wijken De Meern, Vleuten en Leidsche Rijn. Goede bereikbaarheid vanuit de Betuwe en Hoeksche Waard.",
+      "Utrecht zit centraal in Nederland en is goed bereikbaar. Voor bruiloften en bedrijfsfeesten in de Domstad, op kantoorlocaties rond Papendorp of Lage Weide, of in de wijken De Meern, Vleuten en Leidsche Rijn kun je me boeken. Goede bereikbaarheid vanuit de Betuwe en Hoeksche Waard.",
     serviceDescription:
       "Allround DJ voor bruiloft, bedrijfsfeest, verjaardag of festival in Utrecht en omgeving.",
     paragraphs: [
       "Utrecht heeft veel feestlocaties: historische plekken in het centrum, moderne event-locaties op de Croeselaan en rond Papendorp, en sfeervolle zalen in Lombok en Ondiep. Voor elke wijk pas ik mijn opbouw aan de ruimte aan.",
-      "Ook voor de randgemeenten ben ik regelmatig in de regio: Nieuwegein, Houten, IJsselstein, Bunnik en Wijk bij Duurstede zijn allemaal goed bereikbaar. Voor de Utrechtse Heuvelrug (Zeist, Doorn, Driebergen) draai ik geregeld bruiloften op buitenlocaties.",
+      "Ook de randgemeenten zijn goed bereikbaar: Nieuwegein, Houten, IJsselstein, Bunnik en Wijk bij Duurstede. Voor een bruiloft op een buitenlocatie op de Utrechtse Heuvelrug (Zeist, Doorn, Driebergen) kun je me net zo goed boeken.",
       "Vanuit de Betuwe via de A12 of A2 ben ik binnen 30-45 minuten in Utrecht. Geen extra reiskosten binnen de stad.",
     ],
     characteristics:
@@ -135,13 +135,13 @@ export const CITIES: Record<string, CityData> = {
     description:
       "DJ Kevin Froger voor bruiloften, festivals en corporate events in Eindhoven en de Brainport-regio. Complete show inbegrepen.",
     heroIntro:
-      "Eindhoven is de Brainport van Nederland: een stad met veel zakelijke events, technologiebedrijven en moderne feestlocaties. Daarnaast veel bruiloften op buitenlocaties tussen Veldhoven, Best en Geldrop. Ik draai er regelmatig.",
+      "Eindhoven is de Brainport van Nederland: een stad met veel zakelijke events, technologiebedrijven en moderne feestlocaties. Daarnaast veel bruiloften op buitenlocaties tussen Veldhoven, Best en Geldrop. Voor een feest in de stad of het ommeland kun je me boeken.",
     serviceDescription:
       "Allround DJ voor bruiloft, bedrijfsfeest, festival of verjaardag in Eindhoven en de Brainport-regio.",
     paragraphs: [
-      "Eindhoven heeft een sterk DJ-circuit, en voor bedrijfsevents van technologiebedrijven, hotels en internationale conferenties ben ik vaak ingezet. Vooral de wijken Strijp-S, het centrum, Tongelre en Woensel hebben mooie feestlocaties.",
+      "Eindhoven heeft een levendig uitgaansleven en mooie feestlocaties, vooral rond Strijp-S, het centrum, Tongelre en Woensel. Voor een bruiloft, bedrijfsfeest of verjaardag in de stad kun je me boeken, inclusief eigen licht en geluid.",
       "Voor bruiloften in en rond Eindhoven kom ik ook naar Veldhoven, Best, Geldrop-Mierlo, Nuenen en Helmond. De Brabantse feestcultuur (en het bourgondische karakter) past goed bij hoe ik draai.",
-      "Voor de zomer-festivals en kermis-events in de regio ben ik geregeld geboekt. Vanuit Den Bosch of de Betuwe via de A2 of A50 ben ik in een uurtje in Eindhoven.",
+      "Ook voor zomer-festivals en kermis-events in de regio kun je me boeken. Vanuit Den Bosch of de Betuwe via de A2 of A50 ben ik in een uurtje in Eindhoven.",
     ],
     characteristics:
       "Centrum, Strijp-S, Tongelre, Woensel, Stratum, Gestel, Veldhoven, Best, Geldrop, Nuenen.",
@@ -165,8 +165,8 @@ export const CITIES: Record<string, CityData> = {
     serviceDescription:
       "Allround DJ voor bruiloft, bedrijfsfeest, festival of verjaardag in Tilburg en het hart van Brabant.",
     paragraphs: [
-      "Tilburg heeft een rijke feestcultuur, vooral rond Carnaval en de Tilburgse Kermis. Voor bedrijfsfeesten in de Tilburgse industrie, restaurants in het centrum of zalen aan de rand van de stad ben ik vaak geboekt.",
-      "Voor bruiloften in en om Tilburg kom ik naar Goirle, Hilvarenbeek, Oisterwijk, Loon op Zand, Kaatsheuvel en Waalwijk. Brabantse bourgondische sfeer met een DJ die de regio kent.",
+      "Tilburg heeft een rijke feestcultuur, vooral rond Carnaval en de Tilburgse Kermis. Voor een bedrijfsfeest, bruiloft of verjaardag in een restaurant in het centrum of een zaal aan de rand van de stad kun je me inhuren.",
+      "Voor bruiloften in en om Tilburg kom ik naar Goirle, Hilvarenbeek, Oisterwijk, Loon op Zand, Kaatsheuvel en Waalwijk. Brabantse bourgondische sfeer met een allround DJ en MC in één.",
       "Vanuit Den Bosch of Eindhoven via de A58 ben ik binnen een half uur in Tilburg.",
     ],
     characteristics:
@@ -187,12 +187,12 @@ export const CITIES: Record<string, CityData> = {
     description:
       "DJ in Breda voor bruiloft, bedrijfsfeest of festival. Complete show met licht en geluid. Vraag een offerte aan.",
     heroIntro:
-      "Breda is een sfeervolle Brabantse stad met veel mooie feestplekken: historische locaties in het centrum, moderne event-zalen rond de Singel en buitenlocaties in en rond het Mastbos. Ik draai er regelmatig en ken het gebied.",
+      "Breda is een sfeervolle Brabantse stad met veel mooie feestplekken: historische locaties in het centrum, moderne event-zalen rond de Singel en buitenlocaties in en rond het Mastbos. Voor een bruiloft of bedrijfsfeest in de stad kun je me inhuren.",
     serviceDescription:
       "Allround DJ voor bruiloft, bedrijfsfeest of verjaardag in Breda en West-Brabant.",
     paragraphs: [
       "Voor bruiloften en bedrijfsfeesten in Breda kom ik in het centrum, Ginneken, Princenhage en de Haagse Beemden. De stad heeft veel landelijke locaties net buiten de ring, mooi voor sfeervolle bruiloften.",
-      "Ook voor Etten-Leur, Oosterhout, Zundert, Bavel en Teteringen draai ik vaak. De combinatie van bourgondische sfeer en moderne uitstraling past mooi bij mijn manier van werken.",
+      "Ook in Etten-Leur, Oosterhout, Zundert, Bavel en Teteringen kun je me boeken. De combinatie van bourgondische sfeer en moderne uitstraling past mooi bij mijn manier van werken.",
       "Vanuit Tilburg of Dordrecht via de A16 ben ik snel in Breda.",
     ],
     characteristics:
@@ -217,7 +217,7 @@ export const CITIES: Record<string, CityData> = {
     serviceDescription:
       "Allround DJ voor bruiloft, bedrijfsfeest, verjaardag of festival in 's-Hertogenbosch en de Meierij.",
     paragraphs: [
-      "Bossche feesten staan bekend om de gezelligheid, en daar speel ik op in. Voor bruiloften in de Stadsschouwburg, restaurants aan de Sint-Jan of zalen rond Hintham draai ik regelmatig.",
+      "Bossche feesten staan bekend om de gezelligheid, en daar speel ik op in. Voor een bruiloft in een locatie als de Stadsschouwburg, een restaurant aan de Sint-Jan of een zaal rond Hintham kun je me inhuren.",
       "Ook voor de Meierij (Schijndel, Sint-Michielsgestel, Boxtel, Vught, Berlicum) en het Land van Heusden en Altena ben ik je DJ. Veel landelijke buitenlocaties tussen de boomgaarden en uiterwaarden.",
       "Vanuit Zaltbommel via de A2 of vanuit Tilburg via de A65 ben ik binnen 20-30 minuten in Den Bosch.",
     ],
@@ -239,7 +239,7 @@ export const CITIES: Record<string, CityData> = {
     description:
       "DJ in Nijmegen voor bruiloften, festivals en bedrijfsfeesten. Complete show met licht en geluid. Check beschikbaarheid.",
     heroIntro:
-      "Nijmegen is een levendige stad met veel jong publiek en een sterk feestcircuit (Vierdaagse, studentenfeesten, festivals). Voor bruiloften, bedrijfsfeesten en evenementen draai ik er regelmatig en ken ik het Rijk van Nijmegen goed.",
+      "Nijmegen is een levendige stad met veel jong publiek en een sterk feestcircuit (Vierdaagse, studentenfeesten, festivals). Voor bruiloften, bedrijfsfeesten en evenementen in de stad en het Rijk van Nijmegen kun je me boeken.",
     serviceDescription:
       "Allround DJ voor bruiloft, bedrijfsfeest, festival of verjaardag in Nijmegen en het Rijk van Nijmegen.",
     paragraphs: [
@@ -265,12 +265,12 @@ export const CITIES: Record<string, CityData> = {
     description:
       "DJ in Arnhem voor bruiloften, bedrijfsfeesten en festivals. Complete show met licht en geluid. Vraag een offerte aan.",
     heroIntro:
-      "Arnhem ligt tussen de Veluwe en de Betuwe en biedt veel feestlocaties met groen en water. Ik draai er regelmatig: in de stad, op de Veluwezoom of langs de Rijn. Goed bereikbaar vanuit de Betuwe.",
+      "Arnhem ligt tussen de Veluwe en de Betuwe en biedt veel feestlocaties met groen en water. Voor een feest in de stad, op de Veluwezoom of langs de Rijn kun je me boeken. Goed bereikbaar vanuit de Betuwe.",
     serviceDescription:
       "Allround DJ voor bruiloft, bedrijfsfeest of festival in Arnhem en de Veluwezoom.",
     paragraphs: [
       "Arnhem heeft een rijke mix van feestlocaties: historische plekken in het centrum, evenementenhallen op Stadsblokken-Meinerswijk en sfeervolle restaurants in Sonsbeek en Burgers' Zoo. Voor bedrijfsfeesten en bruiloften kom ik in de hele stad.",
-      "Ook voor de Veluwezoom (Velp, Rheden, Dieren, Doesburg) en de Liemers (Westervoort, Duiven, Zevenaar) draai ik geregeld. Bekend gebied voor mij vanuit de Betuwe.",
+      "Ook in de Veluwezoom (Velp, Rheden, Dieren, Doesburg) en de Liemers (Westervoort, Duiven, Zevenaar) kun je me boeken. Goed bereikbaar vanuit de Betuwe.",
       "Vanuit Tiel of Nijmegen via de A325 ben ik binnen 30 minuten in Arnhem.",
     ],
     characteristics:
@@ -321,7 +321,7 @@ export const CITIES: Record<string, CityData> = {
     serviceDescription:
       "Allround DJ voor bruiloft, bedrijfsfeest of festival in Zwolle en Overijssel.",
     paragraphs: [
-      "Zwolle heeft veel historische plekken die zich lenen voor een sfeervolle bruiloft: kerken, oude pakhuizen en restaurants in de binnenstad. Voor bedrijfsfeesten draai ik in de Industriële zones en op modern ingerichte event-locaties.",
+      "Zwolle heeft veel historische plekken die zich lenen voor een sfeervolle bruiloft: kerken, oude pakhuizen en restaurants in de binnenstad. Voor bedrijfsfeesten ben ik je DJ in de industriële zones en op modern ingerichte event-locaties.",
       "Ook voor Kampen, Hasselt, Hattem, Raalte en de Vechtdal-regio (Ommen, Hardenberg) ben ik je DJ. Voor de afstand reken ik vaak ook overnachting in, in overleg.",
       "Vanuit de Veluwe via de A28 ben ik in 45 minuten in Zwolle.",
     ],
@@ -343,11 +343,11 @@ export const CITIES: Record<string, CityData> = {
     description:
       "DJ in Almere voor bruiloften, bedrijfsfeesten en verjaardagen. Vanuit de polder snel ter plekke. Vraag een offerte aan.",
     heroIntro:
-      "Almere is de jongste grote stad van Nederland, met moderne event-locaties en veel ruimte. Ik draai er voor bruiloften, bedrijfsfeesten en festivals, en ken het gebied goed door regelmatige klussen in de polder.",
+      "Almere is de jongste grote stad van Nederland, met moderne event-locaties en veel ruimte. Voor bruiloften, bedrijfsfeesten en festivals kun je me er inhuren, van het centrum tot Almere Buiten en Almere Haven.",
     serviceDescription:
       "Allround DJ voor bruiloft, bedrijfsfeest of festival in Almere en heel Flevoland.",
     paragraphs: [
-      "Almere groeit nog steeds, en de stad telt veel moderne feestlocaties: hotels, restaurants en zalen rond het Weerwater en in Almere Centrum. Voor bedrijfsevents in Almere Buiten en Almere Haven kom ik regelmatig.",
+      "Almere groeit nog steeds, en de stad telt veel moderne feestlocaties: hotels, restaurants en zalen rond het Weerwater en in Almere Centrum. Voor bedrijfsevents in Almere Buiten en Almere Haven kun je me inhuren.",
       "Ook voor Lelystad, Dronten, Emmeloord (Noordoostpolder), Zeewolde en Urk ben ik je DJ. Veel ruimte, sfeervolle polderbruiloften en weinig file-stress.",
       "Vanuit Utrecht via de A6 of vanuit Amsterdam via de A1 ben ik snel in Almere.",
     ],
@@ -373,7 +373,7 @@ export const CITIES: Record<string, CityData> = {
     serviceDescription:
       "Allround DJ voor bruiloft, bedrijfsfeest of festival in Maastricht en Limburg.",
     paragraphs: [
-      "Maastricht heeft een rijke feestcultuur: bourgondisch, internationaal en met veel sfeer. Voor bruiloften en bedrijfsevents draai ik in de binnenstad, op locaties als de Bonbonnière, hotels rond de Maas en in Wyck.",
+      "Maastricht heeft een rijke feestcultuur: bourgondisch, internationaal en met veel sfeer. Voor bruiloften en bedrijfsevents ben ik je DJ in de binnenstad, op locaties als de Bonbonnière, hotels rond de Maas en in Wyck.",
       "Ook voor Heuvelland-locaties (Valkenburg, Gulpen, Vaals, Cadier en Keer) en Sittard-Geleen, Heerlen en Roermond ben ik je DJ. Voor de afstand reken ik overnachting in.",
       "De rit vanuit Midden-Nederland is ~2 uur. Voor mooie klussen geen probleem.",
     ],
@@ -395,12 +395,12 @@ export const CITIES: Record<string, CityData> = {
     description:
       "DJ in Haarlem voor bruiloften en bedrijfsfeesten. Complete show met licht en geluid. Vraag een offerte aan.",
     heroIntro:
-      "Haarlem heeft een mooie historische binnenstad en is geliefd voor bruiloften en bedrijfsevents. Ik draai er regelmatig en ken zowel de centrumlocaties als de Kennemerland-omgeving.",
+      "Haarlem heeft een mooie historische binnenstad en is geliefd voor bruiloften en bedrijfsevents. Voor een feest op een centrumlocatie of in de Kennemerland-omgeving kun je me boeken.",
     serviceDescription:
       "Allround DJ voor bruiloft, bedrijfsfeest of verjaardag in Haarlem en Kennemerland.",
     paragraphs: [
-      "Haarlem combineert historische sfeer met moderne event-locaties. Voor bruiloften in de Grote Kerk, Toneelschuur of restaurants aan het Spaarne draai ik regelmatig.",
-      "Voor bedrijfsfeesten kom ik ook in IJmuiden, Beverwijk, Heemstede, Zandvoort en Bloemendaal. Strandbruiloften in Zandvoort zijn een vast onderdeel van mijn zomerseizoen.",
+      "Haarlem combineert historische sfeer met moderne event-locaties. Voor een bruiloft in een locatie als de Grote Kerk of de Toneelschuur, of een restaurant aan het Spaarne, kun je me boeken.",
+      "Voor bedrijfsfeesten kom ik ook in IJmuiden, Beverwijk, Heemstede, Zandvoort en Bloemendaal. Voor een strandbruiloft in Zandvoort ben ik graag je DJ.",
       "Vanuit Amsterdam via de A9 of A200 ben ik snel in Haarlem.",
     ],
     characteristics:
@@ -420,7 +420,7 @@ export const CITIES: Record<string, CityData> = {
     description:
       "DJ in Delft voor bruiloften en bedrijfsfeesten. Complete show met licht en geluid. Vraag een offerte aan.",
     heroIntro:
-      "Delft is een sfeervolle, historische stad waar ik regelmatig draai. Bruiloften aan de Markt, bedrijfsevents in moderne TU-Delft locaties en feesten in de oude pakhuizen langs de Schie.",
+      "Delft is een sfeervolle, historische stad met volop feestlocaties. Denk aan een bruiloft aan de Markt, een bedrijfsevent in een TU-Delft-locatie of een feest in de oude pakhuizen langs de Schie, ik draai er graag.",
     serviceDescription:
       "Allround DJ voor bruiloft, bedrijfsfeest of verjaardag in Delft en omgeving.",
     paragraphs: [
@@ -446,11 +446,11 @@ export const CITIES: Record<string, CityData> = {
     description:
       "DJ in Leiden voor bruiloften, studentenfeesten en bedrijfsevents. Complete show met licht en geluid. Check je datum.",
     heroIntro:
-      "Leiden heeft een levendig studentenleven en een prachtige historische binnenstad. Voor bruiloften, bedrijfsevents en feesten draai ik regelmatig in de stad en de Bollenstreek.",
+      "Leiden heeft een levendig studentenleven en een prachtige historische binnenstad. Voor bruiloften, bedrijfsevents en feesten in de stad en de Bollenstreek kun je me inhuren.",
     serviceDescription:
       "Allround DJ voor bruiloft, bedrijfsfeest, festival of verjaardag in Leiden en de Bollenstreek.",
     paragraphs: [
-      "Leiden is een mix van historie en studentencultuur. Voor bruiloften in de Pieterskerk, Hartebrugkerk of De Burcht ben ik vaak ingehuurd. Bedrijfsevents draai ik in het Stadhuis, op Bio Science Park of in restaurants langs de grachten.",
+      "Leiden is een mix van historie en studentencultuur. Voor een bruiloft in een locatie als de Pieterskerk, de Hartebrugkerk of De Burcht kun je me boeken. Bedrijfsevents draai ik net zo goed, of het nu in een zaal in het centrum, op Bio Science Park of in een restaurant langs de grachten is.",
       "Voor de Bollenstreek (Lisse, Hillegom, Sassenheim, Noordwijk, Katwijk) en Voorschoten ben ik je DJ. Strandbruiloften in Noordwijk en Katwijk staan vast op het zomerprogramma.",
       "Vanuit Den Haag of Amsterdam via de A44 of A4 ben ik snel in Leiden.",
     ],
@@ -472,7 +472,7 @@ export const CITIES: Record<string, CityData> = {
     description:
       "DJ in Amersfoort voor bruiloften, bedrijfsfeesten en verjaardagen. Complete show met licht en geluid. Vraag een offerte aan.",
     heroIntro:
-      "Amersfoort is een sfeervolle stad in het hart van Nederland, met mooie locaties in de historische binnenstad en moderne event-zalen op De Hoef. Ik draai er voor bruiloften en bedrijfsfeesten regelmatig.",
+      "Amersfoort is een sfeervolle stad in het hart van Nederland, met mooie locaties in de historische binnenstad en moderne event-zalen op De Hoef. Voor bruiloften en bedrijfsfeesten kun je me er inhuren.",
     serviceDescription:
       "Allround DJ voor bruiloft, bedrijfsfeest of verjaardag in Amersfoort en Eemland.",
     paragraphs: [
@@ -498,7 +498,7 @@ export const CITIES: Record<string, CityData> = {
     region: "Het Groene Hart",
     title: "DJ Gouda huren | Bruiloft & feest | Kevin Froger",
     description: "DJ in Gouda voor bruiloften, bedrijfsfeesten en verjaardagen. Complete show met licht en geluid. Vraag een offerte aan.",
-    heroIntro: "Gouda heeft een schilderachtig centrum met de Markt en het Stadhuis als blikvangers. Voor bruiloften en bedrijfsfeesten draai ik regelmatig in en rond de stad, ook richting de Krimpenerwaard.",
+    heroIntro: "Gouda heeft een schilderachtig centrum met de Markt en het Stadhuis als blikvangers. Voor bruiloften en bedrijfsfeesten in en rond de stad, ook richting de Krimpenerwaard, kun je me boeken.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of verjaardag in Gouda en het Groene Hart.",
     paragraphs: [
       "Gouda is een Hollandse stad met veel sfeervolle locaties: rond de Markt, de Sint-Janskerk en in de oude binnenstad zit charme. Voor moderne bedrijfsevents zijn er ook locaties op Goudse Poort.",
@@ -518,10 +518,10 @@ export const CITIES: Record<string, CityData> = {
     region: "Voorne-Putten",
     title: "DJ Spijkenisse huren | Bruiloft & feest | Kevin Froger",
     description: "DJ in Spijkenisse en op Voorne-Putten voor bruiloften, bedrijfsfeesten en verjaardagen. Vraag een offerte aan. Eigen licht en geluid, DJ en MC in één.",
-    heroIntro: "Spijkenisse is de centrale plek op Voorne-Putten. Ik draai er regelmatig en kom ook in Hellevoetsluis, Brielle en de hele Voorne-Putten regio.",
+    heroIntro: "Spijkenisse is de centrale plek op Voorne-Putten. Je kunt me hier boeken, en ook in Hellevoetsluis, Brielle en de hele Voorne-Putten regio.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of verjaardag in Spijkenisse en Voorne-Putten.",
     paragraphs: [
-      "Voor bruiloften in Spijkenisse en de omliggende dorpen ben ik vaak ingezet. Geliefde locaties zijn de zalen in het centrum en de buitenlocaties richting Oostvoorne.",
+      "Voor bruiloften in Spijkenisse en de omliggende dorpen kun je me inhuren. Denk aan de zalen in het centrum of een buitenlocatie richting Oostvoorne.",
       "Ook voor Hellevoetsluis, Brielle, Oostvoorne, Rockanje, Zuidland en Abbenbroek kom ik graag. Vanuit Rotterdam via de Hartelbrug ben ik snel op Voorne-Putten.",
     ],
     characteristics: "Centrum, Hellevoetsluis, Brielle, Oostvoorne, Rockanje, Zuidland, Abbenbroek.",
@@ -541,7 +541,7 @@ export const CITIES: Record<string, CityData> = {
     heroIntro: "Schiedam ligt vlakbij Rotterdam en heeft een sfeervol jenever-centrum met molens. Geliefde feeststad voor bruiloften in historische pakhuizen aan de Lange Haven.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of verjaardag in Schiedam en Rijnmond.",
     paragraphs: [
-      "Schiedam heeft veel karakter: de molens, de jenever-distilleerderijen en de oude pakhuizen aan de Lange Haven maken het een populaire bruiloftslocatie. Ook voor bedrijfsevents in moderne kantoorlocaties op Schieveen draai ik regelmatig.",
+      "Schiedam heeft veel karakter: de molens, de jenever-distilleerderijen en de oude pakhuizen aan de Lange Haven maken het een populaire bruiloftslocatie. Ook voor bedrijfsevents in moderne kantoorlocaties op Schieveen kun je me inhuren.",
       "Naast Schiedam zelf kom ik ook in Vlaardingen, Maassluis en de hele Rijnmond. Vanuit Rotterdam in een paar minuten ter plekke.",
     ],
     characteristics: "Centrum, Schieveen, Vlaardingen, Maassluis, Spaland.",
@@ -558,7 +558,7 @@ export const CITIES: Record<string, CityData> = {
     region: "Haaglanden",
     title: "DJ Zoetermeer huren | Bruiloft & feest | Kevin Froger",
     description: "DJ in Zoetermeer voor bruiloften en bedrijfsfeesten. Complete show met licht en geluid. Check je datum.",
-    heroIntro: "Zoetermeer is een groene stad met veel moderne event-locaties. Voor bruiloften en bedrijfsfeesten draai ik regelmatig, ook in Lansingerland en Pijnacker-Nootdorp.",
+    heroIntro: "Zoetermeer is een groene stad met veel moderne event-locaties. Voor bruiloften en bedrijfsfeesten kun je me er boeken, ook in Lansingerland en Pijnacker-Nootdorp.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of verjaardag in Zoetermeer en omgeving.",
     paragraphs: [
       "Zoetermeer heeft een gevarieerd aanbod aan feestlocaties: Dutch Water Dreams, restaurants in Buytenpark en moderne event-zalen rond station Centrum-West.",
@@ -598,7 +598,7 @@ export const CITIES: Record<string, CityData> = {
     region: "Het Gooi",
     title: "DJ Hilversum huren | Bruiloft & event | Kevin Froger",
     description: "DJ in Hilversum en Het Gooi voor bruiloften, bedrijfsfeesten en festivals. Vraag een offerte aan. Eigen licht en geluid, DJ en MC in één.",
-    heroIntro: "Hilversum is mediastad bij uitstek: veel corporate events bij omroepen, productiebedrijven en hotels. Voor bruiloften en feesten in Het Gooi kom ik regelmatig.",
+    heroIntro: "Hilversum is mediastad bij uitstek: veel corporate events bij omroepen, productiebedrijven en hotels. Voor bruiloften en feesten in Het Gooi kun je me boeken.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of verjaardag in Hilversum en Het Gooi.",
     paragraphs: [
       "Hilversum heeft een sterk corporate event-circuit door de mediabedrijven. Voor bedrijfsfeesten draai ik op campussen, in evenementenhallen en bij hotels rond Beeld & Geluid.",
@@ -621,7 +621,7 @@ export const CITIES: Record<string, CityData> = {
     heroIntro: "Veenendaal ligt aan de grens van Utrecht en Gelderland en heeft veel ondernemers-events. Ik draai er voor bedrijfsfeesten, bruiloften en verjaardagen, ook in de Gelderse Vallei.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of verjaardag in Veenendaal en de Vallei.",
     paragraphs: [
-      "Veenendaal heeft een actief bedrijfsleven, dus voor corporate events ben ik er vaak. Voor bruiloften draai ik in en rond de stad, met sfeervolle locaties richting de Veluwe-rand.",
+      "Veenendaal heeft een actief bedrijfsleven, dus voor corporate events kun je me hier goed inzetten. Voor bruiloften ben ik je DJ in en rond de stad, met sfeervolle locaties richting de Veluwe-rand.",
       "Ook voor Rhenen, Renswoude, Scherpenzeel en Woudenberg kom ik graag. Vanuit Utrecht of Arnhem via de A12 snel ter plekke.",
     ],
     characteristics: "Centrum, Rhenen, Renswoude, Scherpenzeel, Woudenberg.",
@@ -638,10 +638,10 @@ export const CITIES: Record<string, CityData> = {
     region: "Utrechtse Heuvelrug",
     title: "DJ Zeist huren | Bruiloft & feest | Kevin Froger",
     description: "DJ in Zeist en op de Utrechtse Heuvelrug voor bruiloften en bedrijfsfeesten. Complete show inbegrepen. Eigen licht en geluid, DJ en MC in één.",
-    heroIntro: "Zeist heeft prachtige landgoederen die ideaal zijn voor bruiloften, plus veel bedrijven met events. Ik draai regelmatig op de Heuvelrug.",
+    heroIntro: "Zeist heeft prachtige landgoederen die ideaal zijn voor bruiloften, plus veel bedrijven met events. Voor een feest op de Heuvelrug kun je me boeken.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of verjaardag in Zeist en op de Utrechtse Heuvelrug.",
     paragraphs: [
-      "Zeist heeft geliefde landgoederen als Slot Zeist, plus moderne event-locaties rond het centrum. Voor bedrijfsfeesten van internationale bedrijven (denk Triodos, KPN) ben ik regelmatig in de regio.",
+      "Zeist heeft geliefde landgoederen als Slot Zeist, plus moderne event-locaties rond het centrum. Voor een bedrijfsfeest of bruiloft op een landgoed of in een zaal in de regio kun je me boeken.",
       "Voor bruiloften kom ik ook in Driebergen, Doorn, Bunnik en Den Dolder. Mooie buitenlocaties tussen Utrecht en de Veluwe.",
     ],
     characteristics: "Centrum, Slot Zeist, Driebergen, Doorn, Bunnik, Den Dolder, Austerlitz.",
@@ -658,10 +658,10 @@ export const CITIES: Record<string, CityData> = {
     region: "Kromme Rijnstreek",
     title: "DJ Houten huren | Bruiloft & feest | Kevin Froger",
     description: "DJ in Houten voor bruiloften, bedrijfsfeesten en verjaardagen. Complete show inbegrepen. Vraag een offerte aan. Eigen licht en geluid, DJ en MC in één.",
-    heroIntro: "Houten ligt vlakbij Utrecht en heeft mooie feestlocaties. Voor bruiloften en bedrijfsevents in Houten en de Kromme Rijnstreek kom ik regelmatig.",
+    heroIntro: "Houten ligt vlakbij Utrecht en heeft mooie feestlocaties. Voor bruiloften en bedrijfsevents in Houten en de Kromme Rijnstreek kun je me boeken.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of verjaardag in Houten en de Kromme Rijnstreek.",
     paragraphs: [
-      "Houten heeft veel mooie buitenlocaties en moderne event-zalen. Voor bruiloften, bedrijfsfeesten en verjaardagen draai ik regelmatig.",
+      "Houten heeft veel mooie buitenlocaties en moderne event-zalen. Voor bruiloften, bedrijfsfeesten en verjaardagen kun je me inhuren.",
       "Ook voor Bunnik, Wijk bij Duurstede, Cothen, Werkhoven en Schalkwijk ben ik je DJ.",
     ],
     characteristics: "Centrum, Bunnik, Wijk bij Duurstede, Cothen, Werkhoven, Schalkwijk.",
@@ -678,10 +678,10 @@ export const CITIES: Record<string, CityData> = {
     region: "Lekstroom",
     title: "DJ Nieuwegein huren | Bruiloft & feest | Kevin Froger",
     description: "DJ in Nieuwegein voor bruiloften en bedrijfsfeesten. Complete show met licht en geluid.",
-    heroIntro: "Nieuwegein ligt aan de zuidkant van Utrecht en heeft veel corporate event-locaties. Ik draai er regelmatig voor zakelijke en privé-events.",
+    heroIntro: "Nieuwegein ligt aan de zuidkant van Utrecht en heeft veel corporate event-locaties. Voor zakelijke en privé-events kun je me hier inhuren.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of verjaardag in Nieuwegein en omgeving.",
     paragraphs: [
-      "Nieuwegein heeft een actief zakelijk circuit: hotels, conferenties en event-zalen op Plettenburg en City. Ik draai er regelmatig voor corporate events.",
+      "Nieuwegein heeft een actief zakelijk circuit: hotels, conferenties en event-zalen op Plettenburg en City. Voor corporate events kun je me hier boeken.",
       "Ook voor Vianen, IJsselstein, Lopik en Benschop kom ik graag. Vanuit Utrecht via de A2 of A27 in 15 minuten ter plekke.",
     ],
     characteristics: "Centrum, Plettenburg, Galecop, Vianen, IJsselstein, Lopik, Benschop.",
@@ -698,7 +698,7 @@ export const CITIES: Record<string, CityData> = {
     region: "Vallei",
     title: "DJ Ede huren | Bruiloft & feest | Kevin Froger",
     description: "DJ in Ede voor bruiloften, bedrijfsfeesten en festivals. Complete show met licht en geluid.",
-    heroIntro: "Ede ligt centraal in Gelderland met de Veluwe-rand binnen handbereik. Voor bruiloften op buitenlocaties en bedrijfsevents kom ik regelmatig.",
+    heroIntro: "Ede ligt centraal in Gelderland met de Veluwe-rand binnen handbereik. Voor bruiloften op buitenlocaties en bedrijfsevents kun je me boeken.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of festival in Ede en de Vallei.",
     paragraphs: [
       "Ede heeft een actief feest- en eventcircuit. Voor bruiloften en bedrijfsfeesten draai ik in het centrum en op de mooie buitenlocaties rond de Veluwe-rand.",
@@ -718,7 +718,7 @@ export const CITIES: Record<string, CityData> = {
     region: "FoodValley",
     title: "DJ Wageningen huren | Bruiloft & event | Kevin Froger",
     description: "DJ in Wageningen voor bruiloften, bedrijfsfeesten en studentenfeesten. Vraag een offerte aan. Eigen licht en geluid, DJ en MC in één.",
-    heroIntro: "Wageningen is de FoodValley met een sterke wetenschaps- en studentencultuur. Voor bruiloften, bedrijfsevents bij WUR en studentenfeesten kom ik regelmatig.",
+    heroIntro: "Wageningen is de FoodValley met een sterke wetenschaps- en studentencultuur. Voor bruiloften, bedrijfsevents bij WUR en studentenfeesten kun je me inhuren.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of festival in Wageningen en de FoodValley.",
     paragraphs: [
       "Wageningen heeft veel zakelijke events door de universiteit en bijbehorende sector. Voor bruiloften ook geliefd: mooie locaties langs de Rijn met de Veluwezoom als achtergrond.",
@@ -738,7 +738,7 @@ export const CITIES: Record<string, CityData> = {
     region: "Peelregio",
     title: "DJ Helmond huren | Bruiloft & feest | Kevin Froger",
     description: "DJ in Helmond voor bruiloften en bedrijfsfeesten in Brabant. Complete show inbegrepen. Vraag een offerte aan. Eigen licht en geluid, DJ en MC in één.",
-    heroIntro: "Helmond ligt vlakbij Eindhoven in de Peelregio. Voor bruiloften, bedrijfsfeesten en verjaardagen kom ik in de stad en het ommeland regelmatig.",
+    heroIntro: "Helmond ligt vlakbij Eindhoven in de Peelregio. Voor bruiloften, bedrijfsfeesten en verjaardagen in de stad en het ommeland kun je me boeken.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of verjaardag in Helmond en de Peelregio.",
     paragraphs: [
       "Helmond heeft een actieve feestcultuur (Carnaval, kermis) en goede feestlocaties. Voor bruiloften draai ik ook in de dorpen eromheen.",
@@ -761,7 +761,7 @@ export const CITIES: Record<string, CityData> = {
     heroIntro: "Oss is een Brabantse industriestad met veel bedrijfsfeesten. Voor bruiloften kom ik ook in de Maas-regio en het Land van Cuijk.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of verjaardag in Oss en Noordoost-Brabant.",
     paragraphs: [
-      "Oss heeft een sterk bedrijfsleven en een actief bruiloftscircuit. Voor corporate events en bruiloften draai ik regelmatig in de stad en de omgeving.",
+      "Oss heeft een sterk bedrijfsleven en een actief bruiloftscircuit. Voor corporate events en bruiloften in de stad en de omgeving kun je me boeken.",
       "Ook voor Berghem, Geffen, Megen, Lithoijen, Macharen en Ravenstein ben ik je DJ. Vanuit Den Bosch of Nijmegen snel ter plekke.",
     ],
     characteristics: "Centrum, Berghem, Geffen, Megen, Lithoijen, Macharen, Ravenstein.",
@@ -781,7 +781,7 @@ export const CITIES: Record<string, CityData> = {
     heroIntro: "Voor klussen in Enschede en Twente rij ik graag mee, vaak met overnachting. Studentenstad met actieve feestcultuur en mooie buitenlocaties richting Duitse grens.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of festival in Enschede en Twente.",
     paragraphs: [
-      "Enschede is studentenstad en heeft een sterk feestcircuit. Voor bruiloften en bedrijfsevents draai ik in de hele Twentse regio.",
+      "Enschede is studentenstad en heeft een sterk feestcircuit. Voor bruiloften en bedrijfsevents in de hele Twentse regio kun je me boeken.",
       "Ook voor Hengelo, Almelo, Oldenzaal, Borne en Haaksbergen kom ik. Voor de afstand reken ik overnachting in.",
     ],
     characteristics: "Centrum, Boekelo, Hengelo, Almelo, Oldenzaal, Borne, Haaksbergen.",
@@ -798,10 +798,10 @@ export const CITIES: Record<string, CityData> = {
     region: "Salland",
     title: "DJ Deventer huren | Bruiloft & event | Kevin Froger",
     description: "DJ in Deventer voor bruiloften, bedrijfsfeesten en festivals. Vraag een offerte aan. Eigen licht en geluid, DJ en MC in één.",
-    heroIntro: "Deventer is een Hanze-stad met veel sfeer en historische feestlocaties. Voor bruiloften, bedrijfsevents en festivals kom ik regelmatig in de hele Salland-regio.",
+    heroIntro: "Deventer is een Hanze-stad met veel sfeer en historische feestlocaties. Voor bruiloften, bedrijfsevents en festivals in de hele Salland-regio kun je me boeken.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of festival in Deventer en Salland.",
     paragraphs: [
-      "Deventer heeft een prachtige binnenstad met de Bergkerk en historische pakhuizen aan de IJssel. Voor bruiloften, bedrijfsevents en festivals draai ik er regelmatig.",
+      "Deventer heeft een prachtige binnenstad met de Bergkerk en historische pakhuizen aan de IJssel. Voor bruiloften, bedrijfsevents en festivals kun je me er inhuren.",
       "Ook voor Bathmen, Diepenveen, Twello, Olst en Wijhe ben ik je DJ. Sallandse landschap met veel mooie buitenlocaties.",
     ],
     characteristics: "Centrum, Bathmen, Diepenveen, Twello, Olst, Wijhe.",
@@ -861,7 +861,7 @@ export const CITIES: Record<string, CityData> = {
     heroIntro: "Voor klussen in Assen en Drenthe rij ik op aanvraag, vaak met overnachting. Bekend van TT Assen, sterke evenementen-cultuur.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of festival in Assen en Drenthe.",
     paragraphs: [
-      "Assen heeft een sterke evenementen-cultuur door TT en andere festivals. Voor bruiloften en bedrijfsfeesten draai ik er ook regelmatig.",
+      "Assen heeft een sterke evenementen-cultuur door TT en andere festivals. Voor bruiloften en bedrijfsfeesten kun je me er ook inhuren.",
       "Ook voor Emmen, Hoogeveen, Meppel, Coevorden en Roden ben ik je DJ.",
     ],
     characteristics: "Centrum, TT-circuit, Emmen, Hoogeveen, Meppel, Coevorden, Roden.",
@@ -881,7 +881,7 @@ export const CITIES: Record<string, CityData> = {
     heroIntro: "Voor bruiloften en strandfeesten in Zeeland kom ik graag. Middelburg is centraal in Walcheren en de Zeeuwse Kust biedt veel mooie locaties.",
     serviceDescription: "Allround DJ voor bruiloft, strandfeest of bedrijfsevent in Middelburg en Zeeland.",
     paragraphs: [
-      "Middelburg heeft een prachtige historische binnenstad met de Lange Jan als blikvanger. Voor bruiloften draai ik er in de centrum-locaties en kerken.",
+      "Middelburg heeft een prachtige historische binnenstad met de Lange Jan als blikvanger. Voor een bruiloft in een centrum-locatie of kerk kun je me boeken.",
       "Ook voor Vlissingen, Goes, Zierikzee, Domburg, Veere en de hele Zeeuwse Kust ben ik je DJ. Voor strandbruiloften veel ervaring.",
     ],
     characteristics: "Centrum, Vlissingen, Goes, Zierikzee, Domburg, Veere, Yerseke.",
@@ -901,7 +901,7 @@ export const CITIES: Record<string, CityData> = {
     heroIntro: "Voor klussen in Roermond en Midden-Limburg kom ik graag, met overnachting. Bekend van de Maasplassen en het Designer Outlet, sterk eventcircuit.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of festival in Roermond en Midden-Limburg.",
     paragraphs: [
-      "Roermond heeft veel mooie waterlocaties aan de Maasplassen en goede event-locaties in de stad. Voor bruiloften en bedrijfsfeesten draai ik er regelmatig.",
+      "Roermond heeft veel mooie waterlocaties aan de Maasplassen en goede event-locaties in de stad. Voor bruiloften en bedrijfsfeesten kun je me er boeken.",
       "Ook voor Weert, Echt-Susteren, Maasbracht en Sittard-Geleen ben ik je DJ. Voor afstand: reis in offerte meegenomen.",
     ],
     characteristics: "Centrum, Maasplassen, Weert, Echt-Susteren, Maasbracht, Sittard-Geleen.",
@@ -921,7 +921,7 @@ export const CITIES: Record<string, CityData> = {
     heroIntro: "Voor klussen in Venlo en Noord-Limburg ben ik op aanvraag inzetbaar. Bourgondische feestcultuur en mooie locaties aan de Maas.",
     serviceDescription: "Allround DJ voor bruiloft, bedrijfsfeest of festival in Venlo en Noord-Limburg.",
     paragraphs: [
-      "Venlo heeft veel mooie feestplekken aan de Maas en in de centrum-locaties. Voor bruiloften en bedrijfsfeesten draai ik regelmatig.",
+      "Venlo heeft veel mooie feestplekken aan de Maas en in de centrum-locaties. Voor bruiloften en bedrijfsfeesten kun je me inhuren.",
       "Ook voor Venray, Horst, Roermond en Maasbracht ben ik je DJ. Voor afstand: reis in offerte meegenomen.",
     ],
     characteristics: "Centrum, Venray, Horst, Blerick, Tegelen, Belfeld.",

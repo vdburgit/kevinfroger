@@ -59,7 +59,7 @@ function Page() {
         imageAlt="DJ Kevin Froger DJ-booth met show verlichting"
       />
 
-      <section className="py-24 px-6 lg:px-10">
+      <section className="py-16 px-6 lg:px-10">
         <div className="max-w-[1400px] mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {STEPS.map((s) => (

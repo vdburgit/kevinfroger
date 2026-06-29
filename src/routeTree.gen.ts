@@ -17,6 +17,7 @@ import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as RegiosRouteImport } from './routes/regios'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PrijzenRouteImport } from './routes/prijzen'
+import { Route as PersoneelsfeestDjRouteImport } from './routes/personeelsfeest-dj'
 import { Route as FestivalDjRouteImport } from './routes/festival-dj'
 import { Route as DjEnMcRouteImport } from './routes/dj-en-mc'
 import { Route as DjBoekenZwolleRouteImport } from './routes/dj-boeken-zwolle'
@@ -155,6 +156,11 @@ const PrivacyRoute = PrivacyRouteImport.update({
 const PrijzenRoute = PrijzenRouteImport.update({
   id: '/prijzen',
   path: '/prijzen',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PersoneelsfeestDjRoute = PersoneelsfeestDjRouteImport.update({
+  id: '/personeelsfeest-dj',
+  path: '/personeelsfeest-dj',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FestivalDjRoute = FestivalDjRouteImport.update({
@@ -755,6 +761,7 @@ export interface FileRoutesByFullPath {
   '/dj-boeken-zwolle': typeof DjBoekenZwolleRoute
   '/dj-en-mc': typeof DjEnMcRoute
   '/festival-dj': typeof FestivalDjRoute
+  '/personeelsfeest-dj': typeof PersoneelsfeestDjRoute
   '/prijzen': typeof PrijzenRoute
   '/privacy': typeof PrivacyRoute
   '/regios': typeof RegiosRoute
@@ -864,6 +871,7 @@ export interface FileRoutesByTo {
   '/dj-boeken-zwolle': typeof DjBoekenZwolleRoute
   '/dj-en-mc': typeof DjEnMcRoute
   '/festival-dj': typeof FestivalDjRoute
+  '/personeelsfeest-dj': typeof PersoneelsfeestDjRoute
   '/prijzen': typeof PrijzenRoute
   '/privacy': typeof PrivacyRoute
   '/regios': typeof RegiosRoute
@@ -974,6 +982,7 @@ export interface FileRoutesById {
   '/dj-boeken-zwolle': typeof DjBoekenZwolleRoute
   '/dj-en-mc': typeof DjEnMcRoute
   '/festival-dj': typeof FestivalDjRoute
+  '/personeelsfeest-dj': typeof PersoneelsfeestDjRoute
   '/prijzen': typeof PrijzenRoute
   '/privacy': typeof PrivacyRoute
   '/regios': typeof RegiosRoute
@@ -1085,6 +1094,7 @@ export interface FileRouteTypes {
     | '/dj-boeken-zwolle'
     | '/dj-en-mc'
     | '/festival-dj'
+    | '/personeelsfeest-dj'
     | '/prijzen'
     | '/privacy'
     | '/regios'
@@ -1194,6 +1204,7 @@ export interface FileRouteTypes {
     | '/dj-boeken-zwolle'
     | '/dj-en-mc'
     | '/festival-dj'
+    | '/personeelsfeest-dj'
     | '/prijzen'
     | '/privacy'
     | '/regios'
@@ -1303,6 +1314,7 @@ export interface FileRouteTypes {
     | '/dj-boeken-zwolle'
     | '/dj-en-mc'
     | '/festival-dj'
+    | '/personeelsfeest-dj'
     | '/prijzen'
     | '/privacy'
     | '/regios'
@@ -1413,6 +1425,7 @@ export interface RootRouteChildren {
   DjBoekenZwolleRoute: typeof DjBoekenZwolleRoute
   DjEnMcRoute: typeof DjEnMcRoute
   FestivalDjRoute: typeof FestivalDjRoute
+  PersoneelsfeestDjRoute: typeof PersoneelsfeestDjRoute
   PrijzenRoute: typeof PrijzenRoute
   PrivacyRoute: typeof PrivacyRoute
   RegiosRoute: typeof RegiosRoute
@@ -1481,6 +1494,13 @@ declare module '@tanstack/react-router' {
       path: '/prijzen'
       fullPath: '/prijzen'
       preLoaderRoute: typeof PrijzenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/personeelsfeest-dj': {
+      id: '/personeelsfeest-dj'
+      path: '/personeelsfeest-dj'
+      fullPath: '/personeelsfeest-dj'
+      preLoaderRoute: typeof PersoneelsfeestDjRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/festival-dj': {
@@ -2277,6 +2297,7 @@ const rootRouteChildren: RootRouteChildren = {
   DjBoekenZwolleRoute: DjBoekenZwolleRoute,
   DjEnMcRoute: DjEnMcRoute,
   FestivalDjRoute: FestivalDjRoute,
+  PersoneelsfeestDjRoute: PersoneelsfeestDjRoute,
   PrijzenRoute: PrijzenRoute,
   PrivacyRoute: PrivacyRoute,
   RegiosRoute: RegiosRoute,

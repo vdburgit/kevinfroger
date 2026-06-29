@@ -97,7 +97,7 @@ export const BLOG_POSTS: BlogPost[] = [
         h2: "Waarom all-in je achteraf gedoe scheelt",
         paragraphs: [
           "Ik werk met een heldere all-in prijs. DJ, MC, licht en geluid zitten er samen in, vooraf vastgelegd. Geen losse opties die je tijdens het rekenen ineens omhoog zien gaan. Wat we afspreken, dat betaal je.",
-          "Dat is precies waar het bij veel aanbieders misgaat. Een lage instapprijs ziet er mooi uit, maar als de microfoons, de tweede speaker en de reiskosten er los bij komen, sta je voor een verrassing. Op mijn prijzen-pagina lees je hoe ik de prijs opbouw, en op de bruiloft-pagina zie je wat ik op een trouwdag allemaal doe.",
+          "Dat is precies waar het bij veel aanbieders misgaat. Een lage instapprijs ziet er mooi uit, maar als de microfoons, de tweede speaker en de reiskosten er los bij komen, sta je voor een verrassing. Op mijn [prijzen-pagina](/prijzen) lees je hoe ik de prijs opbouw, en op de [bruiloft-pagina](/bruiloft-dj) zie je wat ik op een trouwdag allemaal doe.",
         ],
       },
     ],
@@ -180,7 +180,7 @@ export const BLOG_POSTS: BlogPost[] = [
         h2: "Een DJ die ook MC is, scheelt geregel",
         paragraphs: [
           "Er is nog een verschil dat vaak vergeten wordt. Op een bruiloft moet iemand de avond aan elkaar praten: de binnenkomst aankondigen, speeches inleiden, de openingsdans starten. Bij een band regel je dat los, vaak met een aparte presentator.",
-          "Ik ben DJ en MC in een persoon. Ik draai de muziek en pak zelf de microfoon op de momenten die ertoe doen. Dat scheelt een extra boeking en een hoop afstemming. Hoe ik een trouwdag invul lees je op de bruiloft-pagina, en wat die MC-rol precies inhoudt staat op de DJ en MC-pagina.",
+          "Ik ben DJ en MC in een persoon. Ik draai de muziek en pak zelf de microfoon op de momenten die ertoe doen. Dat scheelt een extra boeking en een hoop afstemming. Hoe ik een trouwdag invul lees je op de [bruiloft-pagina](/bruiloft-dj), en wat die MC-rol precies inhoudt staat op de [DJ en MC-pagina](/dj-en-mc).",
         ],
       },
     ],
@@ -259,7 +259,7 @@ export const BLOG_POSTS: BlogPost[] = [
         h2: "Samen voorbereiden",
         paragraphs: [
           "In de intake nemen we jullie openingsdans door. Welk nummer, welke versie, wel of niet inkorten en hoe we de gasten erbij halen. Ik leg het vast in het draaiboek zodat het op de dag zelf klopt en jullie er niet meer aan hoeven te denken.",
-          "Op de dag bewaak ik de timing, want ik ben ook de MC. Ik kondig de openingsdans aan zodat iedereen op tijd op zijn plek staat en jullie het podium krijgen. Hoe ik een hele trouwdag van ceremonie tot laatste plaat invul lees je op de bruiloft-pagina.",
+          "Op de dag bewaak ik de timing, want ik ben ook de MC. Ik kondig de openingsdans aan zodat iedereen op tijd op zijn plek staat en jullie het podium krijgen. Hoe ik een hele trouwdag van ceremonie tot laatste plaat invul lees je op de [bruiloft-pagina](/bruiloft-dj).",
         ],
       },
     ],
@@ -332,13 +332,13 @@ export const BLOG_POSTS: BlogPost[] = [
         h2: "All-in prijs en wat erin zit",
         paragraphs: [
           "Een prijs is pas te vergelijken als je weet wat erin zit. Vraag of het all-in is: DJ, licht, geluid, microfoons en reiskosten samen, vooraf vastgelegd. Anders lijkt een DJ goedkoop tot de losse opties erbij komen en je alsnog duurder uit bent.",
-          "Ik werk met een heldere all-in prijs. Wat we afspreken betaal je, zonder verrassingen achteraf. Hoe ik die prijs opbouw lees je op de prijzen-pagina, en wat ik op een trouwdag allemaal doe staat op de bruiloft-pagina.",
+          "Ik werk met een heldere all-in prijs. Wat we afspreken betaal je, zonder verrassingen achteraf. Hoe ik die prijs opbouw lees je op de [prijzen-pagina](/prijzen), en wat ik op een trouwdag allemaal doe staat op de [bruiloft-pagina](/bruiloft-dj).",
         ],
       },
       {
         h2: "DJ plus MC, backup en de kennismaking",
         paragraphs: [
-          "Let op of de DJ ook de microfoon pakt. Op een bruiloft moet iemand de avond aan elkaar praten: de binnenkomst aankondigen, speeches inleiden, de openingsdans starten. Doet de DJ dat zelf, dan scheelt je dat een aparte presentator en een hoop afstemming. Bij mij zit die MC-rol erbij, daar lees je meer over op de DJ en MC-pagina.",
+          "Let op of de DJ ook de microfoon pakt. Op een bruiloft moet iemand de avond aan elkaar praten: de binnenkomst aankondigen, speeches inleiden, de openingsdans starten. Doet de DJ dat zelf, dan scheelt je dat een aparte presentator en een hoop afstemming. Bij mij zit die MC-rol erbij, daar lees je meer over op de [DJ en MC-pagina](/dj-en-mc).",
           "Vraag ook naar backup. Een tweede laptop, reservespeakers, een extra microfoon: als er iets hapert, draait de avond door. En plan een kennismaking, in het echt of via een videocall. Je merkt snel of er een klik is. Die klik is belangrijker dan een mooie website, want deze persoon staat de hele avond voor jullie gasten.",
         ],
       },
@@ -443,6 +443,118 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     ctaSubtitle:
       "Wensen of een lijstje must-plays? App of bel me, dan nemen we de muziek voor jullie dag samen door.",
+  },
+
+  {
+    slug: "wat-doet-een-mc",
+    title: "Wat doet een MC op een feest? | Kevin Froger",
+    description:
+      "Wat doet een MC, en wat is het verschil met een DJ? Uitleg over presenteren en aankondigen, en waarom DJ en MC in een persoon je avond soepeler maakt.",
+    primaryKeyword: "wat doet een mc",
+    datePublished: "2026-06-29",
+    cardTitle: "Wat doet een MC op een feest?",
+    cardSummary:
+      "Een MC praat je avond aan elkaar: aankondigingen, speeches en het programma. Lees wat een MC doet en waarom DJ en MC in een persoon handig is.",
+    readingMinutes: 4,
+    image: IMG_BOOTH,
+    imageAlt: "DJ Kevin Froger met microfoon in zijn rol als MC",
+    eyebrow: "Blog",
+    titleLine1: "Wat doet een MC",
+    titleLine2: "op een feest?",
+    intro:
+      "MC staat voor master of ceremonies: de persoon die je avond aan elkaar praat. Maar wat houdt dat precies in, en heb je er een nodig naast je DJ? Ik leg het uit, en waarom ik beide rollen in een persoon doe.",
+    blocksHeading: "In het kort",
+    blocks: [
+      { t: "De avond aan elkaar praten", d: "Een MC kondigt de onderdelen aan: binnenkomst, speeches, de eerste dans, een prijsuitreiking. Zo weet iedereen wat er gebeurt en valt er geen stilte." },
+      { t: "Het programma bewaken", d: "Een MC houdt de tijdlijn in de gaten en stuurt bij als het uitloopt, zodat het diner niet koud wordt en de avond op tijd losgaat." },
+      { t: "De microfoon op de juiste momenten", d: "Een goede MC praat niet de hele avond, maar pakt de microfoon alleen als het ertoe doet. De rest van de tijd is voor de muziek." },
+      { t: "DJ en MC in een", d: "Bij mij is de DJ ook de MC. Een aanspreekpunt, en de overgang van praten naar dansen verloopt vloeiend omdat dezelfde persoon de muziek draait." },
+    ],
+    sections: [
+      {
+        h2: "Wat is het verschil tussen een DJ en een MC?",
+        paragraphs: [
+          "Een DJ draait de muziek. Een MC praat de avond aan elkaar en pakt de microfoon voor aankondigingen. Op veel feesten zijn dat twee verschillende mensen, die op de dag zelf op elkaar ingespeeld moeten raken. Dat kan goed gaan, maar het is wel afstemmen.",
+          "Bij mij zijn de DJ en de MC dezelfde persoon. Ik weet dus precies wanneer ik de muziek even zachter draai om iets aan te kondigen en wanneer het feest weer aan kan. Hoe dat werkt lees je op de pagina over [DJ en MC in een persoon](/dj-en-mc).",
+        ],
+      },
+      {
+        h2: "Heb je een MC nodig op je feest?",
+        paragraphs: [
+          "Niet elk feest heeft een strak programma nodig. Maar er zijn bijna altijd momenten die je niet wil missen: een toost, een speech, de eerste dans of een verrassing. Een MC zorgt dat die op het juiste moment komen en dat de hele zaal erbij is.",
+          "Voor een [bruiloft](/bruiloft-dj) is een MC die de dag aan elkaar praat fijn, en op een [bedrijfsfeest](/zakelijk-dj) is er vaak een podiumdeel dat aangekondigd moet worden. Omdat ik beide rollen pak, hoef je geen losse presentator te boeken.",
+        ],
+      },
+    ],
+    links: [
+      { to: "/dj-en-mc", label: "DJ en MC in een" },
+      { to: "/bruiloft-dj", label: "Bruiloft DJ" },
+      { to: "/zakelijk-dj", label: "Bedrijfsfeest DJ" },
+    ],
+    faq: [
+      { q: "Wat betekent MC?", a: "MC staat voor master of ceremonies. Dat is de persoon die het programma aankondigt en de avond aan elkaar praat." },
+      { q: "Is een MC hetzelfde als een presentator?", a: "In de praktijk wel. Een MC presenteert de onderdelen van je feest: aankondigingen, speeches en het inleiden van de momenten die ertoe doen." },
+      { q: "Kan een DJ ook MC zijn?", a: "Ja. Ik ben DJ en MC in een persoon, dus ik draai de muziek en pak de microfoon op de juiste momenten. Je hebt zo een aanspreekpunt." },
+      { q: "Praat een MC de hele avond?", a: "Nee. Een goede MC pakt de microfoon alleen als het nodig is. De rest van de avond ligt de focus op de muziek en de dansvloer." },
+    ],
+    ctaSubtitle:
+      "Benieuwd hoe ik jouw avond aan elkaar praat? App of bel me met je datum en locatie.",
+  },
+
+  {
+    slug: "hoeveel-kost-een-dj-huren",
+    title: "Hoeveel kost een DJ huren? | Kevin Froger",
+    description:
+      "Hoeveel kost het om een DJ te huren? Uitleg over de factoren die de prijs bepalen: uren, ervaring, licht en geluid en reisafstand. Plus wat all-in betekent.",
+    primaryKeyword: "hoeveel kost een dj huren",
+    datePublished: "2026-06-29",
+    cardTitle: "Hoeveel kost een DJ huren?",
+    cardSummary:
+      "Wat bepaalt de prijs van een DJ? Uitleg over uren, ervaring, techniek en reisafstand, en waarom all-in je achteraf gedoe scheelt.",
+    readingMinutes: 4,
+    image: IMG_BOOTH,
+    imageAlt: "DJ-set van Kevin Froger met licht en geluid",
+    eyebrow: "Blog",
+    titleLine1: "Hoeveel kost",
+    titleLine2: "een DJ huren?",
+    intro:
+      "De prijs van een DJ loopt flink uiteen, en dat is logisch: een hobby-DJ is iets anders dan een ervaren DJ met een complete show. Ik leg uit welke factoren de prijs bepalen, zodat je weet waar je op moet letten.",
+    blocksHeading: "In het kort",
+    blocks: [
+      { t: "Uren en opbouw", d: "Hoe langer je draait en hoe meer opbouw en soundcheck, hoe meer tijd erin gaat zitten. De meeste DJ's rekenen per avond of per uur." },
+      { t: "Ervaring", d: "Een hobby-DJ zit vaak rond de 100 tot 300 euro. Een ervaren DJ met eigen show zit marktbreed meestal tussen de 600 en 1.200 euro." },
+      { t: "Licht en geluid", d: "Inclusief eigen set en verlichting, of komt dat los erbij? Dat scheelt veel in de prijs en in het gedoe op de dag zelf." },
+      { t: "Reisafstand", d: "Verder weg betekent vaak reiskosten en soms een overnachting. Vraag of dat in de prijs zit of er los bij komt." },
+    ],
+    sections: [
+      {
+        h2: "Waar betaal je voor bij een DJ?",
+        paragraphs: [
+          "De grootste verschillen zitten in ervaring en in wat er bij de prijs in zit. Een lage instapprijs ziet er mooi uit, maar als de tweede speaker, de microfoons en de reiskosten er los bij komen, sta je voor een verrassing. Vraag daarom altijd wat all-in precies betekent.",
+          "Ik werk all-in: DJ, MC, licht en geluid zitten er samen in. Op de [prijzenpagina](/prijzen) zie je de pakketten en wat erbij hoort, zodat je een eerlijke vergelijking kunt maken.",
+        ],
+      },
+      {
+        h2: "Wat kost een DJ voor jouw feest?",
+        paragraphs: [
+          "Voor een verjaardag of borrel is een DJ vaak goedkoper dan voor een bruiloft, simpelweg omdat er minder uren en minder opbouw bij komen kijken. Voor een bruiloft draai ik vaak de hele dag, van ceremonie tot de laatste plaat, en dat zie je terug in de prijs.",
+          "Wil je het naadje van de kous over een bruiloft-DJ? Lees dan [wat een DJ voor je bruiloft kost](/blog/wat-kost-dj-bruiloft). Voor een prijs op maat voor jouw datum maak ik een offerte, app of bel me met de datum en locatie.",
+        ],
+      },
+    ],
+    links: [
+      { to: "/prijzen", label: "Bekijk de prijzen" },
+      { to: "/dj-en-mc", label: "DJ en MC in een" },
+      { to: "/bruiloft-dj", label: "Bruiloft DJ" },
+    ],
+    faq: [
+      { q: "Hoeveel kost een DJ gemiddeld?", a: "Een ervaren DJ met eigen licht en geluid zit marktbreed meestal tussen de 600 en 1.200 euro, afhankelijk van de uren en de reisafstand. Een hobby-DJ is goedkoper, maar levert meestal geen complete show." },
+      { q: "Is licht en geluid bij de prijs inbegrepen?", a: "Bij mij wel. Ik werk all-in, dus DJ, MC, licht en geluid zitten er samen in. Bij sommige aanbieders komt dat los erbij, dus vraag er altijd naar." },
+      { q: "Wat kost een DJ voor een bruiloft?", a: "Voor een bruiloft draai ik vaak de hele dag, dus dat ligt hoger dan een avondfeest. Lees de details in het artikel over wat een DJ voor je bruiloft kost." },
+      { q: "Kun je een offerte op maat maken?", a: "Ja. Geef je datum, locatie en wensen door, dan reken ik een heldere all-in prijs voor je uit, zonder verrassingen achteraf." },
+    ],
+    ctaSubtitle:
+      "Benieuwd wat een DJ voor jouw feest kost? App of bel me met de datum en locatie.",
   },
 ];
 

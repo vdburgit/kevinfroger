@@ -65,7 +65,7 @@ function Page() {
         breadcrumbs={[{ name: "Home", path: "/" }, { name: "Bruiloft DJ", path: "/bruiloft-dj" }]}
       />
 
-      <section className="py-24 px-6 lg:px-10">
+      <section className="py-16 px-6 lg:px-10">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Bruiloft DJ met complete show</div>
@@ -85,7 +85,7 @@ function Page() {
         </div>
       </section>
 
-      <section className="py-24 px-6 lg:px-10 bg-card border-y-2 border-border">
+      <section className="py-16 px-6 lg:px-10 bg-card border-y-2 border-border">
         <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Persoonlijk</div>
@@ -99,10 +99,14 @@ function Page() {
               <Link to="/reviews" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Reviews</Link>
               <Link to="/blog/$slug" params={{ slug: "wat-kost-dj-bruiloft" }} className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Wat kost een DJ?</Link>
               <Link to="/blog/$slug" params={{ slug: "openingsdans-nummers" }} className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Openingsdans nummers</Link>
+              <Link to="/bruiloft-dj-hoeksche-waard" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Bruiloft DJ Hoeksche Waard</Link>
+              <Link to="/blog/$slug" params={{ slug: "dj-of-band-bruiloft" }} className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">DJ of band?</Link>
+              <Link to="/blog/$slug" params={{ slug: "bruiloft-dj-kiezen" }} className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Bruiloft DJ kiezen</Link>
+              <Link to="/blog/$slug" params={{ slug: "bruiloft-muziek" }} className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Bruiloft muziek</Link>
             </div>
           </div>
-          <div className="rounded-2xl overflow-hidden border-2 border-border aspect-[4/5]">
-            <img src="/images/dj-kevin-froger-prive-feest-1280.webp" alt="Sfeervolle bruiloftslocatie met dansvloer" className="w-full h-full object-cover" loading="lazy" width={1280} height={427} />
+          <div className="rounded-2xl overflow-hidden border-2 border-border aspect-[4/3]">
+            <img src="/images/dj-kevin-froger-prive-feest-1280.webp" alt="DJ Kevin Froger met een volle dansvloer tijdens een feest" className="w-full h-full object-cover" loading="lazy" width={1280} height={427} />
           </div>
         </div>
       </section>

@@ -158,6 +158,12 @@
     border-color: var(--color-border);
   }
 
+  /* Voorkomt horizontale overflow op mobiel (o.a. door de chatbot-widget en de
+     vaste CTA-balk). 'clip' i.p.v. 'hidden' zodat position:sticky blijft werken. */
+  html {
+    overflow-x: clip;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);

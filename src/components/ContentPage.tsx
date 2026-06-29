@@ -29,6 +29,31 @@ type Props = {
   ctaSubtitle?: string;
 };
 
+// Zet markdown-achtige inline links [label](/pad) in een paragraaf om naar echte
+// <Link>s (intern, pad begint met "/") of <a> (extern). Tekst zonder die syntax
+// blijft ongewijzigd, dus bestaande content verandert niet.
+function renderInline(text: string): React.ReactNode {
+  const re = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const parts: React.ReactNode[] = [];
+  let last = 0;
+  let key = 0;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(text)) !== null) {
+    if (m.index > last) parts.push(text.slice(last, m.index));
+    const label = m[1];
+    const url: string = m[2];
+    const cls = "text-secondary underline underline-offset-2 hover:text-primary transition-colors";
+    if (url.startsWith("/")) {
+      parts.push(<Link key={key++} to={url} className={cls}>{label}</Link>);
+    } else {
+      parts.push(<a key={key++} href={url} className={cls} target="_blank" rel="noopener noreferrer">{label}</a>);
+    }
+    last = m.index + m[0].length;
+  }
+  if (last < text.length) parts.push(text.slice(last));
+  return parts.length ? parts : text;
+}
+
 // Generieke landingspagina (hero, blokkenraster, lopende secties, FAQ). Gebruikt
 // voor USP- en gelegenheid-paginas zoals /dj-en-mc en /bruiloft-dj-hoeksche-waard.
 export function ContentPage({
@@ -65,7 +90,7 @@ export function ContentPage({
         breadcrumbs={breadcrumbs}
       />
 
-      <section className="py-24 px-6 lg:px-10">
+      <section className="py-16 px-6 lg:px-10">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">
@@ -106,7 +131,7 @@ export function ContentPage({
               </h2>
               {s.paragraphs.map((p, i) => (
                 <p key={i} className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  {p}
+                  {renderInline(p)}
                 </p>
               ))}
             </div>

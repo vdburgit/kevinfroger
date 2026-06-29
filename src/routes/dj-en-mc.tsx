@@ -60,14 +60,14 @@ const SECTIONS = [
     "h2": "Wat doet een MC eigenlijk op een bruiloft?",
     "paragraphs": [
       "Op een bruiloft is de MC degene die de dag aan elkaar praat. Ik kondig de binnenkomst van het bruidspaar aan, geef het woord aan wie een speech wil houden en zorg dat niemand een gast voor de voeten loopt. De openingsdans leid ik in zodat iedereen op tijd op zijn plek staat en jullie het podium krijgen.",
-      "Het grootste verschil zit in de timing. Ik weet welke onderdelen er nog komen, dus ik bewaak het programma en stuur bij als het uitloopt. Zo wordt het diner niet koud omdat de speeches uitlopen en haal je de avondopening met genoeg tijd om los te gaan. Op de bruiloft-pagina lees je hoe ik een trouwdag van ceremonie tot laatste nummer invul."
+      "Het grootste verschil zit in de timing. Ik weet welke onderdelen er nog komen, dus ik bewaak het programma en stuur bij als het uitloopt. Zo wordt het diner niet koud omdat de speeches uitlopen en haal je de avondopening met genoeg tijd om los te gaan. Op de [bruiloft-pagina](/bruiloft-dj) lees je hoe ik een trouwdag van ceremonie tot laatste nummer invul."
     ]
   },
   {
     "h2": "Aankondigingen en prijsuitreikingen op een bedrijfsfeest",
     "paragraphs": [
       "Bij een bedrijfsfeest is er vaak een podiumdeel: een woordje van de directie, een prijsuitreiking of de aankondiging van een jubileum. Ik leid dat netjes in, geef de microfoon door en pak na afloop de muziek weer op zonder dode momenten. Jullie hoeven niet zelf met een blaadje het podium op om de boel aan te kondigen.",
-      "Doordat ik DJ en MC in een ben, weet ik precies wanneer de muziek even uit moet en wanneer het feest weer aan kan. Dat scheelt geregel met een externe presentator die de zaal en jullie collega's niet kent. Meer over hoe ik een personeelsfeest of jubileum aanpak vind je op de bedrijfsfeest-pagina."
+      "Doordat ik DJ en MC in een ben, weet ik precies wanneer de muziek even uit moet en wanneer het feest weer aan kan. Dat scheelt geregel met een externe presentator die de zaal en jullie collega's niet kent. Meer over hoe ik een personeelsfeest of jubileum aanpak vind je op de [bedrijfsfeest-pagina](/zakelijk-dj)."
     ]
   },
   {

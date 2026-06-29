@@ -6,7 +6,7 @@ export function ContactCta({
   subtitle = "Vraag vrijblijvend een offerte aan of stuur direct een appje. Reactie binnen 24 uur, gegarandeerd.",
 }: { title?: React.ReactNode; subtitle?: React.ReactNode }) {
   return (
-    <section className="relative py-16 sm:py-20 md:py-24 px-5 sm:px-6 lg:px-10 overflow-hidden">
+    <section className="relative py-16 sm:py-20 md:py-16 px-5 sm:px-6 lg:px-10 overflow-hidden">
       <div className="absolute inset-0" style={{ background: "var(--gradient-warm)" }} />
       <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "radial-gradient(circle, oklch(0 0 0 / 0.15) 1px, transparent 1px)", backgroundSize: "20px 20px" }} />
       <div className="relative max-w-3xl mx-auto text-center">

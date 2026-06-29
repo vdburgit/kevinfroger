@@ -22,11 +22,13 @@ const LOGOS = [
 ];
 
 const FAQ: FaqItem[] = [
-  { q: "Draai je personeelsfeesten, jubilea en bedrijfsevents?", a: "Ja, van borrel en personeelsfeest tot jubileum en corporate event." },
-  { q: "Kun je het programma aan elkaar presenteren?", a: "Ja, als DJ en MC verzorg ik ook aankondigingen en momenten op het podium." },
-  { q: "Neem je eigen licht en geluid mee?", a: "Ja, een complete show is inbegrepen, geschikt voor zowel kleine als grote zalen." },
+  { q: "Draai je personeelsfeesten, jubilea en bedrijfsevents?", a: "Ja. Van een borrel of personeelsfeest tot een jubileum, kerstborrel, nieuwjaarsborrel of een opening. Ik stem de muziek af op het moment: rustig tijdens het netwerken en vol op de dansvloer als het feest losbarst." },
+  { q: "Kun je het programma aan elkaar presenteren?", a: "Ja, als DJ en MC verzorg ik ook de aankondigingen en momenten op het podium, zoals een speech, een prijsuitreiking of een aftrap. Geen losse presentator nodig." },
+  { q: "Neem je eigen licht en geluid mee?", a: "Ja, een complete show is inbegrepen, geschikt voor zowel een kleine borrelruimte als een grote zaal. Jullie hoeven geen aparte techniek te regelen." },
   { q: "Voor welke bedrijven heb je gedraaid?", a: "Onder andere voor Heineken, Jumbo, Albert Heijn, KPN, Van der Valk en Feyenoord Rotterdam." },
-  { q: "In welk gebied draai je bedrijfsfeesten?", a: "Door heel Nederland." },
+  { q: "Hoe laat begin je en hoelang draai je?", a: "In overleg. Ik kom ruim op tijd voor opbouw en soundcheck, en draai zo lang als nodig. De uren leggen we vooraf vast, zonder verrassingen achteraf." },
+  { q: "Kunnen collega's verzoekjes doen?", a: "Ja, gasten kunnen verzoekjes doorgeven en ik verwerk ze in de set zonder de sfeer te verliezen." },
+  { q: "In welk gebied draai je bedrijfsfeesten?", a: "Door heel Nederland, met veel bedrijfsfeesten in de Randstad, Zuid-Holland, de Drechtsteden en de Betuwe. Op kantoor, in een zaal of op een externe locatie." },
 ];
 
 export const Route = createFileRoute("/zakelijk-dj")({
@@ -76,7 +78,7 @@ function Page() {
         breadcrumbs={[{ name: "Home", path: "/" }, { name: "Bedrijfsfeest DJ", path: "/zakelijk-dj" }]}
       />
 
-      <section className="py-24 px-6 lg:px-10">
+      <section className="py-16 px-6 lg:px-10">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Compleet pakket</div>
@@ -96,7 +98,7 @@ function Page() {
         </div>
       </section>
 
-      <section className="py-24 px-6 lg:px-10 bg-card border-y-2 border-border">
+      <section className="py-16 px-6 lg:px-10 bg-card border-y-2 border-border">
         <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Vertrouwd door</div>
@@ -122,9 +124,10 @@ function Page() {
               <Link to="/prijzen" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Prijsindicatie</Link>
               <Link to="/reviews" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Reviews</Link>
               <Link to="/werkwijze" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Werkwijze</Link>
+              <Link to="/personeelsfeest-dj" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Personeelsfeest DJ</Link>
             </div>
           </div>
-          <div className="rounded-2xl overflow-hidden border-2 border-border aspect-[4/5]">
+          <div className="rounded-2xl overflow-hidden border-2 border-border aspect-[4/3]">
             <img src="/images/dj-kevin-froger-bedrijfsfeest-lichtshow-1280.webp" alt="Sfeervol bedrijfsfeest met lichtshow" className="w-full h-full object-cover" loading="lazy" width={1280} height={718} />
           </div>
         </div>

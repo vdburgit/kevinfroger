@@ -15,6 +15,7 @@ const NAV = [
 const MOBILE_NAV = [
   ...NAV,
   { to: "/regios", label: "Werkgebied" },
+  { to: "/blog", label: "Blog" },
   { to: "/reviews", label: "Reviews" },
   { to: "/werkwijze", label: "Werkwijze" },
   { to: "/contact", label: "Contact" },
