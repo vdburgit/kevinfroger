@@ -22,11 +22,13 @@ const LOGOS = [
 ];
 
 const FAQ: FaqItem[] = [
-  { q: "Draai je personeelsfeesten, jubilea en bedrijfsevents?", a: "Ja, van borrel en personeelsfeest tot jubileum en corporate event." },
-  { q: "Kun je het programma aan elkaar presenteren?", a: "Ja, als DJ en MC verzorg ik ook aankondigingen en momenten op het podium." },
-  { q: "Neem je eigen licht en geluid mee?", a: "Ja, een complete show is inbegrepen, geschikt voor zowel kleine als grote zalen." },
+  { q: "Draai je personeelsfeesten, jubilea en bedrijfsevents?", a: "Ja. Van een borrel of personeelsfeest tot een jubileum, kerstborrel, nieuwjaarsborrel of een opening. Ik stem de muziek af op het moment: rustig tijdens het netwerken en vol op de dansvloer als het feest losbarst." },
+  { q: "Kun je het programma aan elkaar presenteren?", a: "Ja, als DJ en MC verzorg ik ook de aankondigingen en momenten op het podium, zoals een speech, een prijsuitreiking of een aftrap. Geen losse presentator nodig." },
+  { q: "Neem je eigen licht en geluid mee?", a: "Ja, een complete show is inbegrepen, geschikt voor zowel een kleine borrelruimte als een grote zaal. Jullie hoeven geen aparte techniek te regelen." },
   { q: "Voor welke bedrijven heb je gedraaid?", a: "Onder andere voor Heineken, Jumbo, Albert Heijn, KPN, Van der Valk en Feyenoord Rotterdam." },
-  { q: "In welk gebied draai je bedrijfsfeesten?", a: "Door heel Nederland." },
+  { q: "Hoe laat begin je en hoelang draai je?", a: "In overleg. Ik kom ruim op tijd voor opbouw en soundcheck, en draai zo lang als nodig. De uren leggen we vooraf vast, zonder verrassingen achteraf." },
+  { q: "Kunnen collega's verzoekjes doen?", a: "Ja, gasten kunnen verzoekjes doorgeven en ik verwerk ze in de set zonder de sfeer te verliezen." },
+  { q: "In welk gebied draai je bedrijfsfeesten?", a: "Door heel Nederland, met veel bedrijfsfeesten in de Randstad, Zuid-Holland, de Drechtsteden en de Betuwe. Op kantoor, in een zaal of op een externe locatie." },
 ];
 
 export const Route = createFileRoute("/zakelijk-dj")({

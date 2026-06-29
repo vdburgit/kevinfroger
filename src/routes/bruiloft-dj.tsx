@@ -99,6 +99,10 @@ function Page() {
               <Link to="/reviews" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Reviews</Link>
               <Link to="/blog/$slug" params={{ slug: "wat-kost-dj-bruiloft" }} className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Wat kost een DJ?</Link>
               <Link to="/blog/$slug" params={{ slug: "openingsdans-nummers" }} className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Openingsdans nummers</Link>
+              <Link to="/bruiloft-dj-hoeksche-waard" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Bruiloft DJ Hoeksche Waard</Link>
+              <Link to="/blog/$slug" params={{ slug: "dj-of-band-bruiloft" }} className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">DJ of band?</Link>
+              <Link to="/blog/$slug" params={{ slug: "bruiloft-dj-kiezen" }} className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Bruiloft DJ kiezen</Link>
+              <Link to="/blog/$slug" params={{ slug: "bruiloft-muziek" }} className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Bruiloft muziek</Link>
             </div>
           </div>
           <div className="rounded-2xl overflow-hidden border-2 border-border aspect-[4/5]">
