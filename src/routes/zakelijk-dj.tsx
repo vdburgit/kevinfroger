@@ -125,6 +125,7 @@ function Page() {
               <Link to="/reviews" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Reviews</Link>
               <Link to="/werkwijze" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Werkwijze</Link>
               <Link to="/personeelsfeest-dj" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Personeelsfeest DJ</Link>
+              <Link to="/blog/$slug" params={{ slug: "wat-doet-een-mc" }} className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Wat doet een MC?</Link>
             </div>
           </div>
           <div className="rounded-2xl overflow-hidden border-2 border-border aspect-[4/3]">

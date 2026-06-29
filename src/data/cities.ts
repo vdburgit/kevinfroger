@@ -64,6 +64,7 @@ export const CITIES: Record<string, CityData> = {
       "Amsterdam heeft alles: bruiloften op een rondvaartboot, bedrijfsfeesten in moderne kantoorgebouwen op de Zuidas, festivals in Noord en intieme feesten in het centrum. Voor elk type event pas ik mijn show aan.",
       "Feestlocaties genoeg: hotels in Centrum en Zuid, plekken langs het IJ, evenementhallen in Noord en kleinere zalen in Oud-West, De Pijp en Oost. Heb je je locatie al, dan stem ik mijn set en opstelling daarop af.",
       "Vanuit Midden-Nederland of de Randstad-zuid ben ik via de A2 of A4 in een uur in Amsterdam. Voor klussen die laat eindigen kan ik in de stad overnachten, in overleg.",
+      "Een professionele DJ huren in Amsterdam betekent meer dan platen draaien. Ik kom met eigen licht en geluid, ben DJ en MC in een persoon en draai al ruim 15 jaar. De prijs is all-in en vooraf helder, en op de avond zelf ben ik je vaste aanspreekpunt. Geen tussenpersoon, geen onbekende invaller.",
     ],
     characteristics:
       "Centrum, Zuid, Zuidas, Oud-West, De Pijp, Oost, West, Noord, IJburg, Westpoort en Amstelveen.",

@@ -59,7 +59,7 @@ const SECTIONS = [
   {
     "h2": "Wat doet een MC eigenlijk op een bruiloft?",
     "paragraphs": [
-      "Op een bruiloft is de MC degene die de dag aan elkaar praat. Ik kondig de binnenkomst van het bruidspaar aan, geef het woord aan wie een speech wil houden en zorg dat niemand een gast voor de voeten loopt. De openingsdans leid ik in zodat iedereen op tijd op zijn plek staat en jullie het podium krijgen.",
+      "Op een bruiloft is de MC degene die de dag aan elkaar praat. Ik kondig de binnenkomst van het bruidspaar aan, geef het woord aan wie een speech wil houden en zorg dat niemand een gast voor de voeten loopt. De openingsdans leid ik in zodat iedereen op tijd op zijn plek staat en jullie het podium krijgen. Wil je het kort op een rij? Lees [wat doet een MC](/blog/wat-doet-een-mc) precies, daar leg ik het stap voor stap uit.",
       "Het grootste verschil zit in de timing. Ik weet welke onderdelen er nog komen, dus ik bewaak het programma en stuur bij als het uitloopt. Zo wordt het diner niet koud omdat de speeches uitlopen en haal je de avondopening met genoeg tijd om los te gaan. Op de [bruiloft-pagina](/bruiloft-dj) lees je hoe ik een trouwdag van ceremonie tot laatste nummer invul."
     ]
   },
