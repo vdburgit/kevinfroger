@@ -7,6 +7,7 @@ import {
   HeadContent,
 } from "@tanstack/react-router";
 import { MobileCtaBar } from "@/components/MobileCtaBar";
+import { aggregateRating } from "@/lib/seo";
 
 function NotFoundComponent() {
   return (
@@ -90,6 +91,9 @@ const ORGANIZATION_JSONLD = {
       image: `${SITE_URL}/images/kevin-portrait.webp`,
       logo: `${SITE_URL}/images/kevin-logo.png`,
       priceRange: "€€",
+      // Echte, zichtbare beoordeling (5,0 / 10 reviews) op het centrale business-
+      // knooppunt; onderbouwt rich results. Cijfers uit één bron (seo.ts).
+      aggregateRating: aggregateRating(),
       description:
         "Allround DJ voor bruiloft, bedrijfsfeest, verjaardag of festival door heel Nederland. Veel ervaring in de Betuwe, Bommelerwaard, Hoeksche Waard en Zuid-Holland. Eigen licht en geluid, DJ en MC in een persoon.",
       address: {

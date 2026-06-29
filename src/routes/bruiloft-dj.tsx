@@ -102,7 +102,7 @@ function Page() {
             </div>
           </div>
           <div className="rounded-2xl overflow-hidden border-2 border-border aspect-[4/5]">
-            <img src="/images/dj-kevin-froger-prive-feest-1280.webp" alt="Sfeervolle bruiloftslocatie met dansvloer" className="w-full h-full object-cover" loading="lazy" width={1280} height={427} />
+            <img src="/images/dj-kevin-froger-prive-feest-1280.webp" alt="DJ Kevin Froger met een volle dansvloer tijdens een feest" className="w-full h-full object-cover" loading="lazy" width={1280} height={427} />
           </div>
         </div>
       </section>
