@@ -3,6 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Consent Mode v2: standaard alles geweigerd tot de bezoeker kiest
+         (AVG). De cookiebanner (React) stuurt een consent-update bij akkoord, en
+         herstelt een eerdere keuze bij de volgende paginaload. -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+        wait_for_update: 500,
+      });
+      try {
+        if (localStorage.getItem("kf-consent") === "granted") {
+          gtag("consent", "update", { analytics_storage: "granted" });
+        }
+      } catch (e) {}
+    </script>
     <!-- Google Tag Manager (uitgesteld: laadt bij eerste interactie of 2s na load,
          zodat het de first paint op mobiel niet vertraagt. dataLayer staat meteen
          klaar, dus events die eerder gepusht worden queuen tot GTM geladen is). -->

@@ -7,6 +7,7 @@ import {
   HeadContent,
 } from "@tanstack/react-router";
 import { MobileCtaBar } from "@/components/MobileCtaBar";
+import { CookieConsent } from "@/components/CookieConsent";
 import { aggregateRating } from "@/lib/seo";
 
 function NotFoundComponent() {
@@ -375,6 +376,8 @@ function RootComponent() {
       <Outlet />
       {/* Vaste bel/WhatsApp-balk op mobiel — staat op elke pagina. */}
       <MobileCtaBar />
+      {/* Cookiebanner + Consent Mode v2 (AVG). */}
+      <CookieConsent />
     </QueryClientProvider>
   );
 }
