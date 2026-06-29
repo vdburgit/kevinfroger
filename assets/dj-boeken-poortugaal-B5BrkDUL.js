@@ -1,0 +1,1 @@
+import{ba as o,F as t}from"./index-DLgtjiAD.js";import{C as m}from"./CityPage-sVE6DFrO.js";import"./LocationLayout-B_IYyRa5.js";import"./SiteFooter-DVgh09JL.js";import"./ContactCta-CE0fwsuj.js";import"./images-CH2kJFe4.js";import"./Breadcrumbs-2RQU6L_a.js";import"./ReviewBadge-B82OZs7A.js";const C=()=>o.jsx(m,{city:t});export{C as component};
