@@ -15,7 +15,7 @@ type Props = {
 export function PageHero({ eyebrow, title, intro, image, imageAlt, breadcrumbs }: Props) {
   const { src, srcSet } = responsiveImage(image);
   return (
-    <section className="relative overflow-hidden border-b-2 border-border">
+    <section className="relative overflow-x-clip border-b-2 border-border">
       <img
         src={src}
         srcSet={srcSet}
@@ -28,7 +28,7 @@ export function PageHero({ eyebrow, title, intro, image, imageAlt, breadcrumbs }
         fetchPriority="high"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-background" />
-      <div className="relative max-w-[1400px] mx-auto px-5 sm:px-6 lg:px-10 pt-24 sm:pt-28 md:pt-36 pb-16 sm:pb-20 md:pb-24">
+      <div className="relative max-w-[1400px] mx-auto px-5 sm:px-5 sm:px-6 lg:px-10 pt-24 sm:pt-28 md:pt-36 pb-16 sm:pb-20 md:pb-24">
         {breadcrumbs && breadcrumbs.length > 1 && (
           <Breadcrumbs items={breadcrumbs} variant="onDark" className="mb-4 sm:mb-5" />
         )}

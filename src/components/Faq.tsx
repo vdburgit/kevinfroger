@@ -16,7 +16,7 @@ export function Faq({
 }: Props) {
   if (items.length === 0) return null;
   return (
-    <section className="py-20 px-6 lg:px-10 bg-card border-y-2 border-border">
+    <section className="py-20 px-5 sm:px-6 lg:px-10 bg-card border-y-2 border-border">
       <div className="max-w-3xl mx-auto">
         <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">
           {eyebrow}

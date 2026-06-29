@@ -13,7 +13,7 @@ const STEPS = [
   { n: "03", t: "Intake", d: "Telefonisch of in persoon. We bespreken programma, must-plays, no-go's en logistiek op locatie." },
   { n: "04", t: "Voorbereiding", d: "Set wordt voorbereid op basis van jullie input. Microfoons, draaipunten en planning worden vastgelegd in een draaiboek." },
   { n: "05", t: "Opbouw", d: "Ik ben minimaal 2 uur voor aanvang op locatie voor opbouw, soundcheck en lichtsetting. Backup-apparatuur altijd mee." },
-  { n: "06", t: "Show", d: "Live mixing, het publiek lezen en strakke transities. De dansvloer is mijn werkplek tot het laatste moment." },
+  { n: "06", t: "Show", d: "Ik mix live, lees het publiek en draai door tot het einde." },
   { n: "07", t: "Afbouw", d: "Snelle, nette afbouw na afloop. Locatie wordt achtergelaten zoals we hem aantroffen." },
   { n: "08", t: "Nazorg", d: "Korte follow-up na het event en eventueel een Google-review als jullie tevreden zijn." },
 ];
@@ -54,12 +54,12 @@ function Page() {
         eyebrow="Werkwijze"
         title={<>Van eerste<br/><span className="text-primary">mail tot encore.</span></>}
         breadcrumbs={[{ name: "Home", path: "/" }, { name: "Werkwijze", path: "/werkwijze" }]}
-        intro="Een transparant proces in 8 stappen, zodat jullie weten wat er gebeurt, wanneer het gebeurt en wie het doet."
+        intro="In 8 stappen weet je wat er gebeurt, wanneer en wie het doet."
         image={IMG}
         imageAlt="DJ Kevin Froger DJ-booth met show verlichting"
       />
 
-      <section className="py-16 px-6 lg:px-10">
+      <section className="py-16 px-5 sm:px-6 lg:px-10">
         <div className="max-w-[1400px] mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {STEPS.map((s) => (

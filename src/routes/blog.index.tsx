@@ -63,7 +63,7 @@ function Page() {
         imageAlt="DJ Kevin Froger draait op een feest met eigen licht en geluid"
       />
 
-      <section className="py-16 px-6 lg:px-10">
+      <section className="py-16 px-5 sm:px-6 lg:px-10">
         <div className="max-w-[1400px] mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {BLOG_POSTS.map((p) => (

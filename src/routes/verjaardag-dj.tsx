@@ -71,7 +71,7 @@ function Page() {
         imageAlt="DJ Kevin Froger draait een verjaardagsfeest"
       />
 
-      <section className="py-16 px-6 lg:px-10">
+      <section className="py-16 px-5 sm:px-6 lg:px-10">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Voor elk type feest</div>
@@ -91,9 +91,9 @@ function Page() {
         </div>
       </section>
 
-      <section className="py-20 px-6 lg:px-10 border-t-2 border-border">
+      <section className="py-20 px-5 sm:px-6 lg:px-10 border-t-2 border-border">
         <div className="max-w-[1400px] mx-auto">
-          <div className="max-w-2xl mb-12">
+          <div className="text-center max-w-2xl mx-auto mb-12">
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Elke mijlpaal</div>
             <h2 className="text-4xl md:text-6xl leading-[0.9]" style={{ fontFamily: "var(--font-display)" }}>Van een 18e tot een 60e</h2>
             <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
@@ -111,7 +111,7 @@ function Page() {
         </div>
       </section>
 
-      <section className="py-20 px-6 lg:px-10 bg-card border-t-2 border-border">
+      <section className="py-20 px-5 sm:px-6 lg:px-10 bg-card border-t-2 border-border">
         <div className="max-w-[800px] mx-auto">
           <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6" style={{ fontFamily: "var(--font-display)" }}>
             Muziek die voor elk gezelschap werkt

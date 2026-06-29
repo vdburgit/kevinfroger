@@ -302,7 +302,7 @@ function Page() {
         imageAlt="DJ Kevin Froger met complete show op een feest"
       />
 
-      <section className="py-16 md:py-20 px-5 sm:px-6 lg:px-10">
+      <section className="py-16 md:py-20 px-5 sm:px-5 sm:px-6 lg:px-10">
         <div className="max-w-[900px] mx-auto">
           <div className="mb-12">
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-3">Hoe ik werk</div>

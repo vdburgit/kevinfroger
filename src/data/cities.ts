@@ -1216,7 +1216,7 @@ export const CITIES: Record<string, CityData> = {
     "province": "Zuid-Holland",
     "region": "IJsselmonde",
     "title": "DJ Barendrecht huren | Kevin Froger",
-    "description": "Een DJ in Barendrecht die het feest van A tot Z draait? Ik werk 15+ jaar, kom met eigen licht en geluid, ben DJ en MC in een en sta op 5,0 op Google.",
+    "description": "Een DJ in Barendrecht die je hele feest draait? Ik werk 15+ jaar, kom met eigen licht en geluid, ben DJ en MC in een en sta op 5,0 op Google.",
     "heroIntro": "Zoek je een DJ in Barendrecht? Ik ben Kevin Froger en woon net over de Oude Maas in 's-Gravendeel, dus ik sta zo bij jullie. Ik draai je feest van begin tot eind en doe de presentatie er zelf bij.",
     "serviceDescription": "Allround DJ en MC voor bruiloften, bedrijfsfeesten, verjaardagen en festivals in Barendrecht en omgeving, inclusief eigen licht- en geluidsinstallatie.",
     "paragraphs": [

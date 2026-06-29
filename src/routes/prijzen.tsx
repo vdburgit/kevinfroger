@@ -104,7 +104,7 @@ export const Route = createFileRoute("/prijzen")({
 // naar /contact om naar de mogelijkheden te informeren.
 function ExtrasGrid() {
   return (
-    <section className="py-16 px-6 lg:px-10">
+    <section className="py-16 px-5 sm:px-6 lg:px-10">
       <div className="max-w-[1040px] mx-auto">
         <div className="text-center mb-10">
           <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Extra's</div>
@@ -148,10 +148,10 @@ function Page() {
         imageAlt="DJ Kevin Froger booth met sfeerverlichting"
       />
 
-      <section className="py-20 px-6 lg:px-10">
+      <section className="py-20 px-5 sm:px-6 lg:px-10">
         <div className="max-w-[800px] mx-auto">
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Wat je betaalt hangt af van de duur van de avond, de locatie en eventuele extra wensen, maar je krijgt altijd een heldere offerte. Goedkoop is niet mijn uitgangspunt, eerlijk wel. Je boekt geen hobbyist, maar een DJ met 15+ jaar ervaring, die de avond strak verzorgt en met je meedenkt. Dat verschil merk je op de dansvloer.
+            Wat je betaalt hangt af van de duur van de avond, de locatie en eventuele extra wensen, maar je krijgt altijd een heldere offerte. Ik ben niet de goedkoopste, wel eerlijk over wat je krijgt. Je boekt geen hobbyist maar een DJ met 15+ jaar ervaring, die de avond verzorgt en met je meedenkt.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mt-6">
             In de prijs zit de complete show: opbouw, een professionele geluidsset, een lichtshow en mijn rol als <Link to="/dj-en-mc" className="text-secondary underline hover:text-primary">DJ en MC</Link>. Je boekt rechtstreeks bij mij, Kevin, dus geen bureau ertussen en geen verrassingen achteraf. We bespreken vooraf je wensen, zodat je precies krijgt wat bij jouw feest past. Bekijk ook wat ik voor een <Link to="/bruiloft-dj" className="text-secondary underline hover:text-primary">bruiloft</Link>, <Link to="/zakelijk-dj" className="text-secondary underline hover:text-primary">bedrijfsfeest</Link> of <Link to="/festival-dj" className="text-secondary underline hover:text-primary">festival</Link> doe, of lees hoe mijn <Link to="/werkwijze" className="text-secondary underline hover:text-primary">werkwijze</Link> eruitziet. Voor een bruiloft lees je in <Link to="/blog/$slug" params={{ slug: "wat-kost-dj-bruiloft" }} className="text-secondary underline hover:text-primary">wat een DJ voor een bruiloft kost</Link> wat je kunt verwachten.
@@ -159,7 +159,7 @@ function Page() {
         </div>
       </section>
 
-      <section className="py-16 px-6 lg:px-10">
+      <section className="py-16 px-5 sm:px-6 lg:px-10">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-12">
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Indicatie</div>
@@ -191,7 +191,7 @@ function Page() {
 
       <ExtrasGrid />
 
-      <section className="py-16 px-6 lg:px-10 bg-card border-y-2 border-border">
+      <section className="py-16 px-5 sm:px-6 lg:px-10 bg-card border-y-2 border-border">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl leading-[0.9]" style={{ fontFamily: "var(--font-display)" }}>Andere wensen?</h2>
           <p className="mt-4 text-muted-foreground">Combineer modules, voeg uren toe of vraag een volledig maatpakket aan. Alles bespreekbaar.</p>

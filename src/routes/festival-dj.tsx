@@ -51,9 +51,9 @@ export const Route = createFileRoute("/festival-dj")({
 });
 
 const STYLES = [
-  { t: "Power set", d: "60 minuten non-stop. Hoge BPM, strakke transities, geen pauzes. Het publiek heeft geen tijd om weg te lopen." },
-  { t: "Crowd control", d: "Lezen van de massa, opbouwen en uitlopen op het juiste moment. Energie bouwt op, blijft en escaleert." },
-  { t: "MC en presentatie", d: "Microfoonwerk, acts aankondigen, het podium aan elkaar praten. Geen schreeuwer, wel een aanjager." },
+  { t: "Set van 60 minuten", d: "Een uur non-stop, geen dode momenten. Ik hou het tempo hoog zodat de mensen blijven dansen." },
+  { t: "De massa lezen", d: "Ik kijk naar het publiek en bouw de set op. De energie loopt op en blijft staan." },
+  { t: "MC en presentatie", d: "Ik kondig de acts aan en praat het podium aan elkaar. Ik jaag het publiek op zonder te schreeuwen." },
   { t: "Allround schakelen", d: "Van dance naar mainstream, top 40, classics of aprèsski, afhankelijk van publiek en tijdslot." },
 ];
 
@@ -70,7 +70,7 @@ function Page() {
         breadcrumbs={[{ name: "Home", path: "/" }, { name: "Festival DJ", path: "/festival-dj" }]}
       />
 
-      <section className="py-16 px-6 lg:px-10">
+      <section className="py-16 px-5 sm:px-6 lg:px-10">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Wat je krijgt</div>
@@ -90,7 +90,7 @@ function Page() {
         </div>
       </section>
 
-      <section className="py-16 px-6 lg:px-10 bg-card border-y-2 border-border">
+      <section className="py-16 px-5 sm:px-6 lg:px-10 bg-card border-y-2 border-border">
         <div className="max-w-[1400px] mx-auto text-center">
           <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Eerdere podia</div>
           <h2 className="text-4xl md:text-5xl leading-[0.9] mb-6" style={{ fontFamily: "var(--font-display)" }}>Onder andere</h2>

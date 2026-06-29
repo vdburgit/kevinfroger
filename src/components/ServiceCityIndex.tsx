@@ -53,7 +53,7 @@ export function ServiceCityIndex({ service, collapsible = false, intro, links }:
   );
 
   return (
-    <section className="py-16 sm:py-20 px-5 sm:px-6 lg:px-10 bg-background border-y-2 border-border">
+    <section className="py-16 sm:py-20 px-5 sm:px-5 sm:px-6 lg:px-10 bg-background border-y-2 border-border">
       <div className="max-w-[1100px] mx-auto">
         <div className="text-center mb-10">
           <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-3">

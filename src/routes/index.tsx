@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { ArrowRight, Phone } from "lucide-react";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SITE_URL, buildSeo } from "@/lib/seo";
@@ -104,13 +105,13 @@ function Index() {
           <SiteHeader transparent />
         </div>
 
-        {/* Hero content */}
-        <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-5 sm:px-6 pt-24 sm:pt-28 pb-12 sm:pb-16">
-          <span className="text-secondary text-[10px] sm:text-xs md:text-sm tracking-[0.3em] sm:tracking-[0.4em] uppercase font-bold mb-5 sm:mb-6">
+        {/* Hero content — bewust minimaal: grote titel als blikvanger, één korte regel. */}
+        <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-5 sm:px-6 pt-24 sm:pt-28 pb-14 sm:pb-20">
+          <span className="text-secondary text-[11px] sm:text-xs md:text-sm tracking-[0.35em] uppercase font-bold mb-5 sm:mb-7">
             Nederland · 15+ jaar · allround DJ
           </span>
           <h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.95] sm:leading-[0.9] tracking-tight text-foreground max-w-5xl"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] text-foreground max-w-5xl"
             style={{ fontFamily: "var(--font-display)", textShadow: "0 6px 30px oklch(0 0 0 / 0.5)" }}
           >
             ALLROUND DJ<br/>VOOR JE{" "}
@@ -121,19 +122,24 @@ function Index() {
               {ROTATING_WORDS[wordIdx]}
             </span>
           </h1>
-          <p className="mt-6 sm:mt-8 max-w-2xl text-base sm:text-lg md:text-xl text-foreground/90 leading-relaxed">
-            Allround DJ voor bruiloft, bedrijfsfeest, verjaardag of festival, door heel Nederland. Complete show met licht en geluid, DJ en MC in een persoon. Veel ervaring in de Betuwe, Bommelerwaard, Hoeksche Waard en Zuid-Holland.
+          <p className="mt-6 sm:mt-7 max-w-xl text-lg sm:text-xl text-foreground/90 font-medium">
+            DJ én MC in één persoon. Eigen licht en geluid. Door heel Nederland.
           </p>
-          <div className="mt-8 sm:mt-10 flex flex-wrap gap-3 sm:gap-4 justify-center">
-            <Link to="/contact" className="rounded-full bg-primary text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.18em] uppercase font-bold hover:opacity-90 transition shadow-[var(--shadow-glow)]">
-              Direct offerte aanvragen
+          <div className="mt-9 sm:mt-11 flex flex-wrap gap-3 sm:gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="group inline-flex items-center gap-2.5 rounded-full bg-primary text-primary-foreground pl-8 pr-7 py-4 text-sm tracking-[0.12em] uppercase font-bold whitespace-nowrap shadow-lg shadow-primary/30 hover:-translate-y-0.5 hover:shadow-primary/45 transition-all duration-200"
+            >
+              Offerte aanvragen
+              <ArrowRight className="w-[1.05rem] h-[1.05rem] transition-transform duration-200 group-hover:translate-x-1" />
             </Link>
-            <a href="tel:0645251333" className="rounded-full border-2 border-secondary text-secondary px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.18em] uppercase font-bold hover:bg-secondary hover:text-secondary-foreground transition">
+            <a
+              href="tel:0645251333"
+              className="group inline-flex items-center gap-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/25 text-white pl-7 pr-8 py-4 text-sm tracking-[0.12em] uppercase font-bold whitespace-nowrap hover:bg-white/20 hover:-translate-y-0.5 transition-all duration-200"
+            >
+              <Phone className="w-[1.05rem] h-[1.05rem]" />
               Bellen
             </a>
-            <Link to="/verzoekje" className="rounded-full bg-secondary text-secondary-foreground px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.18em] uppercase font-bold hover:opacity-90 transition shadow-[var(--shadow-glow)] animate-pulse">
-              🎉 Verzoekje bij de DJ
-            </Link>
           </div>
         </div>
 
@@ -165,7 +171,7 @@ function Index() {
       `}</style>
 
       {/* DIENSTEN: uniforme card-grid */}
-      <section id="diensten" className="py-28 px-6 lg:px-10 bg-background">
+      <section id="diensten" className="py-20 px-5 sm:px-5 sm:px-6 lg:px-10 bg-background">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Diensten</div>
@@ -173,15 +179,15 @@ function Index() {
               Voor elke gelegenheid
             </h2>
             <p className="mt-6 text-muted-foreground text-lg">
-              Van intieme bruiloft tot strak bedrijfsfeest. Strakke uitvoering, eigen apparatuur, persoonlijk contact.
+              Van een kleine bruiloft tot een groot bedrijfsfeest. Ik kom met eigen licht en geluid en je hebt direct contact met mij, niet met een bureau.
             </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { title: "Bruiloften", img: IMG_WEDDING, alt: "DJ Kevin Froger draait op een bruiloft", desc: "Complete muzikale begeleiding voor jullie mooiste dag, van ceremonie tot late avond.", href: "/bruiloft-dj" },
-              { title: "Bedrijfsfeesten", img: IMG_CORPORATE, alt: "DJ Kevin Froger op een bedrijfsfeest", desc: "Strakke muziek en presentatie voor bedrijfsfeesten, jubilea en personeelsfeesten.", href: "/zakelijk-dj" },
-              { title: "Festivals", img: IMG_FESTIVAL, alt: "DJ Kevin Froger op een festival met vuurwerk boven het podium en volle dansvloer", desc: "Strakke sets met crowd control en presentatie voor festivals en aprèsski.", href: "/festival-dj" },
+              { title: "Bedrijfsfeesten", img: IMG_CORPORATE, alt: "DJ Kevin Froger op een bedrijfsfeest", desc: "Muziek en presentatie voor bedrijfsfeesten, jubilea en personeelsfeesten.", href: "/zakelijk-dj" },
+              { title: "Festivals", img: IMG_FESTIVAL, alt: "DJ Kevin Froger op een festival met vuurwerk boven het podium en volle dansvloer", desc: "Sets voor festivals en aprèsski. Ik hou de energie erin en praat het podium aan elkaar.", href: "/festival-dj" },
               { title: "Privéfeesten", img: IMG_PRIVATE, alt: "DJ Kevin Froger op een privéfeest of verjaardag", desc: "Verjaardag, themafeest of besloten event, altijd op maat van jouw gasten.", href: "/verjaardag-dj" },
             ].map((d) => {
               const { src, srcSet } = responsiveImage(d.img);
@@ -194,7 +200,7 @@ function Index() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/10" />
                 <div className="absolute inset-x-0 bottom-0 p-6">
                   <h3 className="text-2xl md:text-3xl mb-2 text-white" style={{ fontFamily: "var(--font-display)" }}>{d.title}</h3>
-                  <p className="text-sm text-white/80 leading-relaxed line-clamp-3 min-h-[4.25rem]">{d.desc}</p>
+                  <p className="text-sm text-white/80 leading-relaxed line-clamp-4 min-h-[5.5rem]">{d.desc}</p>
                   <div className="mt-4 text-secondary text-xs tracking-[0.25em] uppercase font-bold inline-flex items-center gap-2">
                     Meer info <span aria-hidden>→</span>
                   </div>
@@ -207,7 +213,7 @@ function Index() {
       </section>
 
       {/* OVER KEVIN: portret met confetti + 2 stats */}
-      <section id="over" className="relative py-28 px-6 lg:px-10 bg-card border-y-2 border-border overflow-hidden">
+      <section id="over" className="relative py-20 px-5 sm:px-5 sm:px-6 lg:px-10 bg-card border-y-2 border-border overflow-hidden">
         {/* Spotlight glow achter het portret */}
         <div
           className="absolute pointer-events-none -right-20 top-1/2 -translate-y-1/2 w-[700px] h-[700px] opacity-60"
@@ -280,7 +286,7 @@ function Index() {
       </section>
 
       {/* WERKGEBIED: rustig gehouden, thuismarkt plus regio, landelijk als sluitstuk */}
-      <section className="py-20 sm:py-16 px-5 sm:px-6 lg:px-10 bg-background">
+      <section className="py-20 sm:py-16 px-5 sm:px-5 sm:px-6 lg:px-10 bg-background">
         <div className="max-w-[900px] mx-auto text-center">
           <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Waar ik draai</div>
           <h2 className="text-4xl sm:text-5xl md:text-7xl leading-[0.95] sm:leading-[0.9] mb-6" style={{ fontFamily: "var(--font-display)" }}>
@@ -320,7 +326,7 @@ function Index() {
       </section>
 
       {/* PARTNERS */}
-      <section id="partners" className="py-16 px-6 lg:px-10 bg-background">
+      <section id="partners" className="py-16 px-5 sm:px-6 lg:px-10 bg-background">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-12">
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Vertrouwd door</div>
@@ -332,7 +338,7 @@ function Index() {
               staat netjes gecentreerd i.p.v. links uitgelijnd. */}
           <div className="flex flex-wrap justify-center gap-4">
             {PARTNER_LOGOS.map((p) => (
-              <div key={p.alt} className={`flex items-center justify-center p-4 rounded-xl border border-border h-24 w-[calc(50%-0.5rem)] sm:w-40 hover:border-primary transition-colors ${p.lightBg ? "bg-white" : "bg-card"}`}>
+              <div key={p.alt} className={`flex items-center justify-center p-4 rounded-2xl border-2 border-border h-24 w-[calc(50%-0.5rem)] sm:w-40 hover:border-primary transition-colors ${p.lightBg ? "bg-white" : "bg-card"}`}>
                 <img src={p.src} alt={`${p.alt} logo`} width={p.w} height={p.h} loading="lazy" decoding="async" className="max-h-12 max-w-full object-contain opacity-90 hover:opacity-100 transition" />
               </div>
             ))}
@@ -341,7 +347,7 @@ function Index() {
       </section>
 
       {/* REVIEWS */}
-      <section id="reviews" className="py-28 px-6 lg:px-10 bg-background">
+      <section id="reviews" className="py-20 px-5 sm:px-5 sm:px-6 lg:px-10 bg-background">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-16">
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Reviews</div>
@@ -375,16 +381,16 @@ function Index() {
       </section>
 
       {/* CONTACT CTA */}
-      <section id="contact" className="relative py-32 px-6 lg:px-10 overflow-hidden">
+      <section id="contact" className="relative py-24 px-5 sm:px-5 sm:px-6 lg:px-10 overflow-hidden">
         <div className="absolute inset-0" style={{ background: "var(--gradient-warm)" }} />
         <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "radial-gradient(circle, oklch(0 0 0 / 0.15) 1px, transparent 1px)", backgroundSize: "20px 20px" }} />
         <div className="relative max-w-3xl mx-auto text-center">
           <div className="text-primary-foreground text-xs tracking-[0.4em] uppercase font-bold mb-4">Boek Kevin</div>
-          <h2 className="text-6xl md:text-8xl leading-[0.85] text-background" style={{ fontFamily: "var(--font-display)" }}>
+          <h2 className="text-6xl md:text-8xl leading-[0.9] text-background" style={{ fontFamily: "var(--font-display)" }}>
             Tijd voor een<br/>volle dansvloer.
           </h2>
           <p className="mt-8 text-lg text-background/80 max-w-xl mx-auto">
-            Vraag vrijblijvend een offerte aan of stuur direct een appje. Reactie binnen 24 uur, gegarandeerd.
+            Vraag een offerte aan of stuur een appje. Ik reageer binnen 24 uur.
           </p>
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
             <Link to="/contact" className="rounded-full bg-background text-foreground px-8 py-4 text-sm tracking-[0.18em] uppercase font-bold hover:bg-foreground hover:text-background transition">

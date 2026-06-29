@@ -56,13 +56,13 @@ function Page() {
       <PageHero
         eyebrow="Reviews"
         title={<>5.0 op<br/><span className="text-primary">Google.</span></>}
-        intro="Het belangrijkste oordeel komt van de mensen die het hebben meegemaakt. Een selectie van reacties van klanten door de jaren heen."
+        intro="Wat klanten van mijn feesten vonden, lees je hieronder. Allemaal echte reacties van mijn Google-profiel."
         image={IMG}
         imageAlt="DJ Kevin Froger booth met gouden verlichting"
         breadcrumbs={[{ name: "Home", path: "/" }, { name: "Reviews", path: "/reviews" }]}
       />
 
-      <section className="py-12 px-6 lg:px-10">
+      <section className="py-12 px-5 sm:px-6 lg:px-10">
         <div className="max-w-3xl mx-auto rounded-2xl border-2 border-secondary/30 bg-card p-6 text-center">
           <div className="text-3xl text-secondary mb-2">★★★★★</div>
           <div className="text-2xl font-bold mb-2" style={{ fontFamily: "var(--font-display)" }}>5,0 op Google · 10 reviews</div>
@@ -75,7 +75,7 @@ function Page() {
         </div>
       </section>
 
-      <section className="pb-24 px-6 lg:px-10">
+      <section className="pb-24 px-5 sm:px-6 lg:px-10">
         <div className="max-w-[1400px] mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {REVIEWS.map((r) => (
             <article key={r.who} className="rounded-2xl bg-card border-2 border-border p-8 flex flex-col hover:border-primary transition-colors">

@@ -36,7 +36,7 @@ export function ReviewStrip({
   text?: string;
 }) {
   return (
-    <section className="py-14 px-6 lg:px-10 bg-card border-y-2 border-border">
+    <section className="py-16 px-5 sm:px-5 sm:px-6 lg:px-10 bg-card border-y-2 border-border">
       <div className="max-w-2xl mx-auto flex flex-col items-center gap-4 text-center">
         <div className="flex items-center gap-2.5">
           <Stars />
