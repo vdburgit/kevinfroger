@@ -81,7 +81,7 @@ function Index() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       {/* HERO: full-bleed festival photo + giant wordmark */}
-      <section className="relative min-h-screen w-full overflow-hidden flex flex-col">
+      <section className="relative min-h-[82vh] w-full overflow-hidden flex flex-col">
         <picture>
           <source type="image/webp" srcSet={HERO_WEBP_SRCSET} sizes="100vw" />
           <img
@@ -110,7 +110,7 @@ function Index() {
             Nederland · 15+ jaar · allround DJ
           </span>
           <h1
-            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.95] sm:leading-[0.9] tracking-tight text-foreground max-w-5xl"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.95] sm:leading-[0.9] tracking-tight text-foreground max-w-5xl"
             style={{ fontFamily: "var(--font-display)", textShadow: "0 6px 30px oklch(0 0 0 / 0.5)" }}
           >
             ALLROUND DJ<br/>VOOR JE{" "}
@@ -186,7 +186,7 @@ function Index() {
             ].map((d) => {
               const { src, srcSet } = responsiveImage(d.img);
               return (
-              <Link key={d.title} to={d.href} className="group relative block overflow-hidden rounded-2xl bg-card border-2 border-border hover:border-primary transition-colors aspect-[4/5]">
+              <Link key={d.title} to={d.href} className="group relative block overflow-hidden rounded-2xl bg-card border-2 border-border hover:border-primary transition-colors aspect-[4/3]">
                 {/* Galerij staat onder de vouw; de hero is het echte LCP-element.
                     Alle kaarten lazy laden zodat ze niet met de hero om bandbreedte
                     vechten (anders schuift LCP naar ~4s). */}
@@ -280,7 +280,7 @@ function Index() {
       </section>
 
       {/* WERKGEBIED: rustig gehouden, thuismarkt plus regio, landelijk als sluitstuk */}
-      <section className="py-20 sm:py-24 px-5 sm:px-6 lg:px-10 bg-background">
+      <section className="py-20 sm:py-16 px-5 sm:px-6 lg:px-10 bg-background">
         <div className="max-w-[900px] mx-auto text-center">
           <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Waar ik draai</div>
           <h2 className="text-4xl sm:text-5xl md:text-7xl leading-[0.95] sm:leading-[0.9] mb-6" style={{ fontFamily: "var(--font-display)" }}>
@@ -320,7 +320,7 @@ function Index() {
       </section>
 
       {/* PARTNERS */}
-      <section id="partners" className="py-24 px-6 lg:px-10 bg-background">
+      <section id="partners" className="py-16 px-6 lg:px-10 bg-background">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-12">
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Vertrouwd door</div>

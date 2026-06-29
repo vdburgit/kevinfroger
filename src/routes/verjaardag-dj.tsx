@@ -71,7 +71,7 @@ function Page() {
         imageAlt="DJ Kevin Froger draait een verjaardagsfeest"
       />
 
-      <section className="py-24 px-6 lg:px-10">
+      <section className="py-16 px-6 lg:px-10">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Voor elk type feest</div>

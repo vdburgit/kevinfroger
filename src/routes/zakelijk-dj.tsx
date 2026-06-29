@@ -78,7 +78,7 @@ function Page() {
         breadcrumbs={[{ name: "Home", path: "/" }, { name: "Bedrijfsfeest DJ", path: "/zakelijk-dj" }]}
       />
 
-      <section className="py-24 px-6 lg:px-10">
+      <section className="py-16 px-6 lg:px-10">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Compleet pakket</div>
@@ -98,7 +98,7 @@ function Page() {
         </div>
       </section>
 
-      <section className="py-24 px-6 lg:px-10 bg-card border-y-2 border-border">
+      <section className="py-16 px-6 lg:px-10 bg-card border-y-2 border-border">
         <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Vertrouwd door</div>
@@ -127,7 +127,7 @@ function Page() {
               <Link to="/personeelsfeest-dj" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">Personeelsfeest DJ</Link>
             </div>
           </div>
-          <div className="rounded-2xl overflow-hidden border-2 border-border aspect-[4/5]">
+          <div className="rounded-2xl overflow-hidden border-2 border-border aspect-[4/3]">
             <img src="/images/dj-kevin-froger-bedrijfsfeest-lichtshow-1280.webp" alt="Sfeervol bedrijfsfeest met lichtshow" className="w-full h-full object-cover" loading="lazy" width={1280} height={718} />
           </div>
         </div>

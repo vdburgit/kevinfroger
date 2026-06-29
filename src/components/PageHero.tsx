@@ -28,12 +28,12 @@ export function PageHero({ eyebrow, title, intro, image, imageAlt, breadcrumbs }
         fetchPriority="high"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-background" />
-      <div className="relative max-w-[1400px] mx-auto px-5 sm:px-6 lg:px-10 pt-28 sm:pt-32 md:pt-48 pb-20 sm:pb-24 md:pb-36">
+      <div className="relative max-w-[1400px] mx-auto px-5 sm:px-6 lg:px-10 pt-24 sm:pt-28 md:pt-36 pb-16 sm:pb-20 md:pb-24">
         {breadcrumbs && breadcrumbs.length > 1 && (
           <Breadcrumbs items={breadcrumbs} variant="onDark" className="mb-4 sm:mb-5" />
         )}
         <div className="text-secondary text-[10px] sm:text-xs tracking-[0.3em] sm:tracking-[0.4em] uppercase font-bold mb-3 sm:mb-4">{eyebrow}</div>
-        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.95] sm:leading-[0.9] max-w-4xl" style={{ fontFamily: "var(--font-display)", textShadow: "0 6px 30px oklch(0 0 0 / 0.5)" }}>
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.95] sm:leading-[0.9] max-w-4xl" style={{ fontFamily: "var(--font-display)", textShadow: "0 6px 30px oklch(0 0 0 / 0.5)" }}>
           {title}
         </h1>
         {intro && (

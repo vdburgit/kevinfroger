@@ -60,7 +60,7 @@ function Page() {
         imageAlt="DJ Kevin Froger met volledige show set-up"
       />
 
-      <section className="py-24 px-6 lg:px-10">
+      <section className="py-16 px-6 lg:px-10">
         <div className="max-w-3xl mx-auto">
           <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Verhaal</div>
           <h2 className="text-4xl md:text-6xl leading-[0.9] mb-8" style={{ fontFamily: "var(--font-display)" }}>Het draait om<br/><span className="text-primary">het moment.</span></h2>
@@ -72,7 +72,7 @@ function Page() {
         </div>
       </section>
 
-      <section className="py-24 px-6 lg:px-10 bg-card border-y-2 border-border">
+      <section className="py-16 px-6 lg:px-10 bg-card border-y-2 border-border">
         <div className="max-w-3xl mx-auto">
           <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Tijdlijn</div>
           <h2 className="text-4xl md:text-6xl leading-[0.9] mb-12" style={{ fontFamily: "var(--font-display)" }}>Hoe het ging</h2>

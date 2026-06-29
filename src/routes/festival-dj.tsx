@@ -70,7 +70,7 @@ function Page() {
         breadcrumbs={[{ name: "Home", path: "/" }, { name: "Festival DJ", path: "/festival-dj" }]}
       />
 
-      <section className="py-24 px-6 lg:px-10">
+      <section className="py-16 px-6 lg:px-10">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Wat je krijgt</div>
@@ -90,7 +90,7 @@ function Page() {
         </div>
       </section>
 
-      <section className="py-24 px-6 lg:px-10 bg-card border-y-2 border-border">
+      <section className="py-16 px-6 lg:px-10 bg-card border-y-2 border-border">
         <div className="max-w-[1400px] mx-auto text-center">
           <div className="text-secondary text-xs tracking-[0.4em] uppercase font-bold mb-4">Eerdere podia</div>
           <h2 className="text-4xl md:text-5xl leading-[0.9] mb-6" style={{ fontFamily: "var(--font-display)" }}>Onder andere</h2>
