@@ -19,6 +19,7 @@ import { Route as RegiosRouteImport } from './routes/regios'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PrijzenRouteImport } from './routes/prijzen'
 import { Route as PersoneelsfeestDjRouteImport } from './routes/personeelsfeest-dj'
+import { Route as HorecaRouteImport } from './routes/horeca'
 import { Route as FestivalDjRouteImport } from './routes/festival-dj'
 import { Route as FeestOpLocatieRouteImport } from './routes/feest-op-locatie'
 import { Route as DjEnMcRouteImport } from './routes/dj-en-mc'
@@ -120,6 +121,7 @@ import { Route as BruiloftDjDordrechtRouteImport } from './routes/bruiloft-dj-do
 import { Route as BruiloftDjBetuweRouteImport } from './routes/bruiloft-dj-betuwe'
 import { Route as BruiloftDjRouteImport } from './routes/bruiloft-dj'
 import { Route as BiografieRouteImport } from './routes/biografie'
+import { Route as ArtiestenRouteImport } from './routes/artiesten'
 import { Route as AlgemeneVoorwaardenRouteImport } from './routes/algemene-voorwaarden'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
@@ -173,6 +175,11 @@ const PrijzenRoute = PrijzenRouteImport.update({
 const PersoneelsfeestDjRoute = PersoneelsfeestDjRouteImport.update({
   id: '/personeelsfeest-dj',
   path: '/personeelsfeest-dj',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HorecaRoute = HorecaRouteImport.update({
+  id: '/horeca',
+  path: '/horeca',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FestivalDjRoute = FestivalDjRouteImport.update({
@@ -684,6 +691,11 @@ const BiografieRoute = BiografieRouteImport.update({
   path: '/biografie',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ArtiestenRoute = ArtiestenRouteImport.update({
+  id: '/artiesten',
+  path: '/artiesten',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AlgemeneVoorwaardenRoute = AlgemeneVoorwaardenRouteImport.update({
   id: '/algemene-voorwaarden',
   path: '/algemene-voorwaarden',
@@ -708,6 +720,7 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/algemene-voorwaarden': typeof AlgemeneVoorwaardenRoute
+  '/artiesten': typeof ArtiestenRoute
   '/biografie': typeof BiografieRoute
   '/bruiloft-dj': typeof BruiloftDjRoute
   '/bruiloft-dj-betuwe': typeof BruiloftDjBetuweRoute
@@ -809,6 +822,7 @@ export interface FileRoutesByFullPath {
   '/dj-en-mc': typeof DjEnMcRoute
   '/feest-op-locatie': typeof FeestOpLocatieRoute
   '/festival-dj': typeof FestivalDjRoute
+  '/horeca': typeof HorecaRoute
   '/personeelsfeest-dj': typeof PersoneelsfeestDjRoute
   '/prijzen': typeof PrijzenRoute
   '/privacy': typeof PrivacyRoute
@@ -825,6 +839,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/algemene-voorwaarden': typeof AlgemeneVoorwaardenRoute
+  '/artiesten': typeof ArtiestenRoute
   '/biografie': typeof BiografieRoute
   '/bruiloft-dj': typeof BruiloftDjRoute
   '/bruiloft-dj-betuwe': typeof BruiloftDjBetuweRoute
@@ -926,6 +941,7 @@ export interface FileRoutesByTo {
   '/dj-en-mc': typeof DjEnMcRoute
   '/feest-op-locatie': typeof FeestOpLocatieRoute
   '/festival-dj': typeof FestivalDjRoute
+  '/horeca': typeof HorecaRoute
   '/personeelsfeest-dj': typeof PersoneelsfeestDjRoute
   '/prijzen': typeof PrijzenRoute
   '/privacy': typeof PrivacyRoute
@@ -943,6 +959,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/algemene-voorwaarden': typeof AlgemeneVoorwaardenRoute
+  '/artiesten': typeof ArtiestenRoute
   '/biografie': typeof BiografieRoute
   '/bruiloft-dj': typeof BruiloftDjRoute
   '/bruiloft-dj-betuwe': typeof BruiloftDjBetuweRoute
@@ -1044,6 +1061,7 @@ export interface FileRoutesById {
   '/dj-en-mc': typeof DjEnMcRoute
   '/feest-op-locatie': typeof FeestOpLocatieRoute
   '/festival-dj': typeof FestivalDjRoute
+  '/horeca': typeof HorecaRoute
   '/personeelsfeest-dj': typeof PersoneelsfeestDjRoute
   '/prijzen': typeof PrijzenRoute
   '/privacy': typeof PrivacyRoute
@@ -1062,6 +1080,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/algemene-voorwaarden'
+    | '/artiesten'
     | '/biografie'
     | '/bruiloft-dj'
     | '/bruiloft-dj-betuwe'
@@ -1163,6 +1182,7 @@ export interface FileRouteTypes {
     | '/dj-en-mc'
     | '/feest-op-locatie'
     | '/festival-dj'
+    | '/horeca'
     | '/personeelsfeest-dj'
     | '/prijzen'
     | '/privacy'
@@ -1179,6 +1199,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/algemene-voorwaarden'
+    | '/artiesten'
     | '/biografie'
     | '/bruiloft-dj'
     | '/bruiloft-dj-betuwe'
@@ -1280,6 +1301,7 @@ export interface FileRouteTypes {
     | '/dj-en-mc'
     | '/feest-op-locatie'
     | '/festival-dj'
+    | '/horeca'
     | '/personeelsfeest-dj'
     | '/prijzen'
     | '/privacy'
@@ -1296,6 +1318,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/algemene-voorwaarden'
+    | '/artiesten'
     | '/biografie'
     | '/bruiloft-dj'
     | '/bruiloft-dj-betuwe'
@@ -1397,6 +1420,7 @@ export interface FileRouteTypes {
     | '/dj-en-mc'
     | '/feest-op-locatie'
     | '/festival-dj'
+    | '/horeca'
     | '/personeelsfeest-dj'
     | '/prijzen'
     | '/privacy'
@@ -1414,6 +1438,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AlgemeneVoorwaardenRoute: typeof AlgemeneVoorwaardenRoute
+  ArtiestenRoute: typeof ArtiestenRoute
   BiografieRoute: typeof BiografieRoute
   BruiloftDjRoute: typeof BruiloftDjRoute
   BruiloftDjBetuweRoute: typeof BruiloftDjBetuweRoute
@@ -1515,6 +1540,7 @@ export interface RootRouteChildren {
   DjEnMcRoute: typeof DjEnMcRoute
   FeestOpLocatieRoute: typeof FeestOpLocatieRoute
   FestivalDjRoute: typeof FestivalDjRoute
+  HorecaRoute: typeof HorecaRoute
   PersoneelsfeestDjRoute: typeof PersoneelsfeestDjRoute
   PrijzenRoute: typeof PrijzenRoute
   PrivacyRoute: typeof PrivacyRoute
@@ -1599,6 +1625,13 @@ declare module '@tanstack/react-router' {
       path: '/personeelsfeest-dj'
       fullPath: '/personeelsfeest-dj'
       preLoaderRoute: typeof PersoneelsfeestDjRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/horeca': {
+      id: '/horeca'
+      path: '/horeca'
+      fullPath: '/horeca'
+      preLoaderRoute: typeof HorecaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/festival-dj': {
@@ -2308,6 +2341,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BiografieRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/artiesten': {
+      id: '/artiesten'
+      path: '/artiesten'
+      fullPath: '/artiesten'
+      preLoaderRoute: typeof ArtiestenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/algemene-voorwaarden': {
       id: '/algemene-voorwaarden'
       path: '/algemene-voorwaarden'
@@ -2342,6 +2382,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AlgemeneVoorwaardenRoute: AlgemeneVoorwaardenRoute,
+  ArtiestenRoute: ArtiestenRoute,
   BiografieRoute: BiografieRoute,
   BruiloftDjRoute: BruiloftDjRoute,
   BruiloftDjBetuweRoute: BruiloftDjBetuweRoute,
@@ -2443,6 +2484,7 @@ const rootRouteChildren: RootRouteChildren = {
   DjEnMcRoute: DjEnMcRoute,
   FeestOpLocatieRoute: FeestOpLocatieRoute,
   FestivalDjRoute: FestivalDjRoute,
+  HorecaRoute: HorecaRoute,
   PersoneelsfeestDjRoute: PersoneelsfeestDjRoute,
   PrijzenRoute: PrijzenRoute,
   PrivacyRoute: PrivacyRoute,
