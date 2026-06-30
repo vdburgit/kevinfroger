@@ -74,6 +74,32 @@ export const CITIES: Record<string, CityData> = {
     ],
   },
 
+  amstelveen: {
+    slug: "amstelveen",
+    name: "Amstelveen",
+    province: "Noord-Holland",
+    region: "Amstelland",
+    title: "DJ Amstelveen huren | Bruiloft & bedrijfsfeest | Kevin Froger",
+    description:
+      "DJ Amstelveen voor bruiloften en bedrijfsfeesten. Eigen licht en geluid, DJ en MC in een persoon. Check je datum bij Kevin Froger.",
+    heroIntro:
+      "Amstelveen grenst aan Amsterdam-Zuid en de Zuidas, met veel zakelijke bedrijvigheid en groene woonwijken. Voor een bruiloft of een bedrijfsfeest kom ik graag jouw kant op. Ik draai door heel Nederland, dus ook in Amstelveen sta ik er met plezier.",
+    serviceDescription:
+      "Allround DJ voor bruiloft en bedrijfsfeest in Amstelveen. Eigen licht en geluid, DJ en MC in een persoon.",
+    paragraphs: [
+      "Amstelveen heeft een fijne mix voor bruiloften: het groene Amsterdamse Bos voor een buitenceremonie, het Cobra Museum bij het Stadshart voor iets met meer karakter, en restaurants en zalen verspreid door de stad. Voor een bruiloft stem ik mijn set en de opbouw af op de locatie en op jullie gasten.",
+      "De zakelijke kant is sterk in Amstelveen. Met het KLM-hoofdkantoor en veel internationale bedrijven rond de Zuidas en het Stadshart zijn er volop bedrijfsfeesten, jubilea en netwerkevents. Als DJ en MC in een persoon verzorg ik ook de presentatie, dus je hebt geen losse spreker nodig.",
+      "De woonwijken zijn rustig en groen: Westwijk, Bankras, Elsrijk en Randwijck. Voor een feest thuis, in de tuin of in een wijklocatie kan ik met eigen licht en geluid een complete show neerzetten. Kevin woont in 's-Gravendeel in de Hoeksche Waard, dus Amstelveen is een stuk rijden, maar daar kom ik graag voor.",
+    ],
+    characteristics:
+      "Stadshart, Zuidas-rand, Amsterdamse Bos, Cobra Museum, Westwijk, Bankras, Elsrijk, Randwijck.",
+    related: [
+      { to: "/dj-boeken-amsterdam", label: "Amsterdam" },
+      { to: "/dj-boeken-haarlem", label: "Haarlem" },
+      { to: "/dj-boeken-hilversum", label: "Hilversum" },
+    ],
+  },
+
   "den-haag": {
     slug: "den-haag",
     name: "Den Haag",

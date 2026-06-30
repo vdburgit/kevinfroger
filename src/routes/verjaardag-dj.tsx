@@ -120,10 +120,10 @@ function Page() {
             Op een verjaardag staat vaak een gemengd gezelschap: vrienden, ouders, buren en soms de kleinkinderen. Ik draai allround en lees de zaal, dus ik schakel van Nederlandstalig en classics naar top 40 en dance op het moment dat het past. Verzoekjes verwerk ik in de set, zodat het jouw feest blijft. Als <Link to="/dj-en-mc" className="text-secondary underline underline-offset-2 hover:text-primary transition-colors">DJ en MC in een persoon</Link> kan ik ook het officiële deel aan elkaar praten, van een speech tot een verrassing.
           </p>
           <h2 className="text-3xl md:text-5xl leading-[0.95] mb-6 mt-10" style={{ fontFamily: "var(--font-display)" }}>
-            Binnen of buiten, ook je tuinfeest
+            Binnen of buiten draaien
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Een verjaardag in de tuin vraagt een andere aanpak dan een zaal. Voor een tuinfeest kom ik met een compacte set-up: geluid dat hard genoeg is voor je gasten maar niet voor de hele straat, en verlichting die het ook 's avonds af maakt. Binnen of buiten, ik stem licht en geluid af op de ruimte. Bekijk wat een avond kost op de <Link to="/prijzen" className="text-secondary underline underline-offset-2 hover:text-primary transition-colors">prijzenpagina</Link>.
+            Een verjaardag in de tuin vraagt een andere aanpak dan een zaal. Binnen of buiten, ik stem licht en geluid af op de ruimte. Geef je je feest in de tuin? Daar heb ik een aparte pagina voor, met de Schirmbar, een mini festival of een poolparty in je eigen tuin: <Link to="/tuinfeest" className="text-secondary underline underline-offset-2 hover:text-primary transition-colors">tuinfeest</Link>. Wil je verder gaan dan een set met licht en geluid? Bekijk dan het concept <Link to="/feest-op-locatie" className="text-secondary underline underline-offset-2 hover:text-primary transition-colors">feest op locatie</Link>, met een Schirmbar, achtertuinfestival of poolparty in je eigen tuin. Bekijk wat een avond kost op de <Link to="/prijzen" className="text-secondary underline underline-offset-2 hover:text-primary transition-colors">prijzenpagina</Link>.
           </p>
         </div>
       </section>

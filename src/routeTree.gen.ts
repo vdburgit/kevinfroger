@@ -13,12 +13,14 @@ import { Route as ZakelijkDjRouteImport } from './routes/zakelijk-dj'
 import { Route as WerkwijzeRouteImport } from './routes/werkwijze'
 import { Route as VerzoekjeRouteImport } from './routes/verzoekje'
 import { Route as VerjaardagDjRouteImport } from './routes/verjaardag-dj'
+import { Route as TuinfeestRouteImport } from './routes/tuinfeest'
 import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as RegiosRouteImport } from './routes/regios'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PrijzenRouteImport } from './routes/prijzen'
 import { Route as PersoneelsfeestDjRouteImport } from './routes/personeelsfeest-dj'
 import { Route as FestivalDjRouteImport } from './routes/festival-dj'
+import { Route as FeestOpLocatieRouteImport } from './routes/feest-op-locatie'
 import { Route as DjEnMcRouteImport } from './routes/dj-en-mc'
 import { Route as DjBoekenZwolleRouteImport } from './routes/dj-boeken-zwolle'
 import { Route as DjBoekenZwijndrechtRouteImport } from './routes/dj-boeken-zwijndrecht'
@@ -102,6 +104,7 @@ import { Route as DjBoekenAssenRouteImport } from './routes/dj-boeken-assen'
 import { Route as DjBoekenArnhemRouteImport } from './routes/dj-boeken-arnhem'
 import { Route as DjBoekenApeldoornRouteImport } from './routes/dj-boeken-apeldoorn'
 import { Route as DjBoekenAmsterdamRouteImport } from './routes/dj-boeken-amsterdam'
+import { Route as DjBoekenAmstelveenRouteImport } from './routes/dj-boeken-amstelveen'
 import { Route as DjBoekenAmersfoortRouteImport } from './routes/dj-boeken-amersfoort'
 import { Route as DjBoekenAlphenAanDenRijnRouteImport } from './routes/dj-boeken-alphen-aan-den-rijn'
 import { Route as DjBoekenAlmereRouteImport } from './routes/dj-boeken-almere'
@@ -110,7 +113,11 @@ import { Route as DjBoekenAlbrandswaardRouteImport } from './routes/dj-boeken-al
 import { Route as DjBoekenAlblasserdamRouteImport } from './routes/dj-boeken-alblasserdam'
 import { Route as DjRouteImport } from './routes/dj'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as BruiloftDjTielRouteImport } from './routes/bruiloft-dj-tiel'
+import { Route as BruiloftDjRotterdamRouteImport } from './routes/bruiloft-dj-rotterdam'
 import { Route as BruiloftDjHoekscheWaardRouteImport } from './routes/bruiloft-dj-hoeksche-waard'
+import { Route as BruiloftDjDordrechtRouteImport } from './routes/bruiloft-dj-dordrecht'
+import { Route as BruiloftDjBetuweRouteImport } from './routes/bruiloft-dj-betuwe'
 import { Route as BruiloftDjRouteImport } from './routes/bruiloft-dj'
 import { Route as BiografieRouteImport } from './routes/biografie'
 import { Route as AlgemeneVoorwaardenRouteImport } from './routes/algemene-voorwaarden'
@@ -136,6 +143,11 @@ const VerzoekjeRoute = VerzoekjeRouteImport.update({
 const VerjaardagDjRoute = VerjaardagDjRouteImport.update({
   id: '/verjaardag-dj',
   path: '/verjaardag-dj',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TuinfeestRoute = TuinfeestRouteImport.update({
+  id: '/tuinfeest',
+  path: '/tuinfeest',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ReviewsRoute = ReviewsRouteImport.update({
@@ -166,6 +178,11 @@ const PersoneelsfeestDjRoute = PersoneelsfeestDjRouteImport.update({
 const FestivalDjRoute = FestivalDjRouteImport.update({
   id: '/festival-dj',
   path: '/festival-dj',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FeestOpLocatieRoute = FeestOpLocatieRouteImport.update({
+  id: '/feest-op-locatie',
+  path: '/feest-op-locatie',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DjEnMcRoute = DjEnMcRouteImport.update({
@@ -586,6 +603,11 @@ const DjBoekenAmsterdamRoute = DjBoekenAmsterdamRouteImport.update({
   path: '/dj-boeken-amsterdam',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DjBoekenAmstelveenRoute = DjBoekenAmstelveenRouteImport.update({
+  id: '/dj-boeken-amstelveen',
+  path: '/dj-boeken-amstelveen',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DjBoekenAmersfoortRoute = DjBoekenAmersfoortRouteImport.update({
   id: '/dj-boeken-amersfoort',
   path: '/dj-boeken-amersfoort',
@@ -627,9 +649,29 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BruiloftDjTielRoute = BruiloftDjTielRouteImport.update({
+  id: '/bruiloft-dj-tiel',
+  path: '/bruiloft-dj-tiel',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BruiloftDjRotterdamRoute = BruiloftDjRotterdamRouteImport.update({
+  id: '/bruiloft-dj-rotterdam',
+  path: '/bruiloft-dj-rotterdam',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BruiloftDjHoekscheWaardRoute = BruiloftDjHoekscheWaardRouteImport.update({
   id: '/bruiloft-dj-hoeksche-waard',
   path: '/bruiloft-dj-hoeksche-waard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BruiloftDjDordrechtRoute = BruiloftDjDordrechtRouteImport.update({
+  id: '/bruiloft-dj-dordrecht',
+  path: '/bruiloft-dj-dordrecht',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BruiloftDjBetuweRoute = BruiloftDjBetuweRouteImport.update({
+  id: '/bruiloft-dj-betuwe',
+  path: '/bruiloft-dj-betuwe',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BruiloftDjRoute = BruiloftDjRouteImport.update({
@@ -668,7 +710,11 @@ export interface FileRoutesByFullPath {
   '/algemene-voorwaarden': typeof AlgemeneVoorwaardenRoute
   '/biografie': typeof BiografieRoute
   '/bruiloft-dj': typeof BruiloftDjRoute
+  '/bruiloft-dj-betuwe': typeof BruiloftDjBetuweRoute
+  '/bruiloft-dj-dordrecht': typeof BruiloftDjDordrechtRoute
   '/bruiloft-dj-hoeksche-waard': typeof BruiloftDjHoekscheWaardRoute
+  '/bruiloft-dj-rotterdam': typeof BruiloftDjRotterdamRoute
+  '/bruiloft-dj-tiel': typeof BruiloftDjTielRoute
   '/contact': typeof ContactRoute
   '/dj': typeof DjRoute
   '/dj-boeken-alblasserdam': typeof DjBoekenAlblasserdamRoute
@@ -677,6 +723,7 @@ export interface FileRoutesByFullPath {
   '/dj-boeken-almere': typeof DjBoekenAlmereRoute
   '/dj-boeken-alphen-aan-den-rijn': typeof DjBoekenAlphenAanDenRijnRoute
   '/dj-boeken-amersfoort': typeof DjBoekenAmersfoortRoute
+  '/dj-boeken-amstelveen': typeof DjBoekenAmstelveenRoute
   '/dj-boeken-amsterdam': typeof DjBoekenAmsterdamRoute
   '/dj-boeken-apeldoorn': typeof DjBoekenApeldoornRoute
   '/dj-boeken-arnhem': typeof DjBoekenArnhemRoute
@@ -760,12 +807,14 @@ export interface FileRoutesByFullPath {
   '/dj-boeken-zwijndrecht': typeof DjBoekenZwijndrechtRoute
   '/dj-boeken-zwolle': typeof DjBoekenZwolleRoute
   '/dj-en-mc': typeof DjEnMcRoute
+  '/feest-op-locatie': typeof FeestOpLocatieRoute
   '/festival-dj': typeof FestivalDjRoute
   '/personeelsfeest-dj': typeof PersoneelsfeestDjRoute
   '/prijzen': typeof PrijzenRoute
   '/privacy': typeof PrivacyRoute
   '/regios': typeof RegiosRoute
   '/reviews': typeof ReviewsRoute
+  '/tuinfeest': typeof TuinfeestRoute
   '/verjaardag-dj': typeof VerjaardagDjRoute
   '/verzoekje': typeof VerzoekjeRoute
   '/werkwijze': typeof WerkwijzeRoute
@@ -778,7 +827,11 @@ export interface FileRoutesByTo {
   '/algemene-voorwaarden': typeof AlgemeneVoorwaardenRoute
   '/biografie': typeof BiografieRoute
   '/bruiloft-dj': typeof BruiloftDjRoute
+  '/bruiloft-dj-betuwe': typeof BruiloftDjBetuweRoute
+  '/bruiloft-dj-dordrecht': typeof BruiloftDjDordrechtRoute
   '/bruiloft-dj-hoeksche-waard': typeof BruiloftDjHoekscheWaardRoute
+  '/bruiloft-dj-rotterdam': typeof BruiloftDjRotterdamRoute
+  '/bruiloft-dj-tiel': typeof BruiloftDjTielRoute
   '/contact': typeof ContactRoute
   '/dj': typeof DjRoute
   '/dj-boeken-alblasserdam': typeof DjBoekenAlblasserdamRoute
@@ -787,6 +840,7 @@ export interface FileRoutesByTo {
   '/dj-boeken-almere': typeof DjBoekenAlmereRoute
   '/dj-boeken-alphen-aan-den-rijn': typeof DjBoekenAlphenAanDenRijnRoute
   '/dj-boeken-amersfoort': typeof DjBoekenAmersfoortRoute
+  '/dj-boeken-amstelveen': typeof DjBoekenAmstelveenRoute
   '/dj-boeken-amsterdam': typeof DjBoekenAmsterdamRoute
   '/dj-boeken-apeldoorn': typeof DjBoekenApeldoornRoute
   '/dj-boeken-arnhem': typeof DjBoekenArnhemRoute
@@ -870,12 +924,14 @@ export interface FileRoutesByTo {
   '/dj-boeken-zwijndrecht': typeof DjBoekenZwijndrechtRoute
   '/dj-boeken-zwolle': typeof DjBoekenZwolleRoute
   '/dj-en-mc': typeof DjEnMcRoute
+  '/feest-op-locatie': typeof FeestOpLocatieRoute
   '/festival-dj': typeof FestivalDjRoute
   '/personeelsfeest-dj': typeof PersoneelsfeestDjRoute
   '/prijzen': typeof PrijzenRoute
   '/privacy': typeof PrivacyRoute
   '/regios': typeof RegiosRoute
   '/reviews': typeof ReviewsRoute
+  '/tuinfeest': typeof TuinfeestRoute
   '/verjaardag-dj': typeof VerjaardagDjRoute
   '/verzoekje': typeof VerzoekjeRoute
   '/werkwijze': typeof WerkwijzeRoute
@@ -889,7 +945,11 @@ export interface FileRoutesById {
   '/algemene-voorwaarden': typeof AlgemeneVoorwaardenRoute
   '/biografie': typeof BiografieRoute
   '/bruiloft-dj': typeof BruiloftDjRoute
+  '/bruiloft-dj-betuwe': typeof BruiloftDjBetuweRoute
+  '/bruiloft-dj-dordrecht': typeof BruiloftDjDordrechtRoute
   '/bruiloft-dj-hoeksche-waard': typeof BruiloftDjHoekscheWaardRoute
+  '/bruiloft-dj-rotterdam': typeof BruiloftDjRotterdamRoute
+  '/bruiloft-dj-tiel': typeof BruiloftDjTielRoute
   '/contact': typeof ContactRoute
   '/dj': typeof DjRoute
   '/dj-boeken-alblasserdam': typeof DjBoekenAlblasserdamRoute
@@ -898,6 +958,7 @@ export interface FileRoutesById {
   '/dj-boeken-almere': typeof DjBoekenAlmereRoute
   '/dj-boeken-alphen-aan-den-rijn': typeof DjBoekenAlphenAanDenRijnRoute
   '/dj-boeken-amersfoort': typeof DjBoekenAmersfoortRoute
+  '/dj-boeken-amstelveen': typeof DjBoekenAmstelveenRoute
   '/dj-boeken-amsterdam': typeof DjBoekenAmsterdamRoute
   '/dj-boeken-apeldoorn': typeof DjBoekenApeldoornRoute
   '/dj-boeken-arnhem': typeof DjBoekenArnhemRoute
@@ -981,12 +1042,14 @@ export interface FileRoutesById {
   '/dj-boeken-zwijndrecht': typeof DjBoekenZwijndrechtRoute
   '/dj-boeken-zwolle': typeof DjBoekenZwolleRoute
   '/dj-en-mc': typeof DjEnMcRoute
+  '/feest-op-locatie': typeof FeestOpLocatieRoute
   '/festival-dj': typeof FestivalDjRoute
   '/personeelsfeest-dj': typeof PersoneelsfeestDjRoute
   '/prijzen': typeof PrijzenRoute
   '/privacy': typeof PrivacyRoute
   '/regios': typeof RegiosRoute
   '/reviews': typeof ReviewsRoute
+  '/tuinfeest': typeof TuinfeestRoute
   '/verjaardag-dj': typeof VerjaardagDjRoute
   '/verzoekje': typeof VerzoekjeRoute
   '/werkwijze': typeof WerkwijzeRoute
@@ -1001,7 +1064,11 @@ export interface FileRouteTypes {
     | '/algemene-voorwaarden'
     | '/biografie'
     | '/bruiloft-dj'
+    | '/bruiloft-dj-betuwe'
+    | '/bruiloft-dj-dordrecht'
     | '/bruiloft-dj-hoeksche-waard'
+    | '/bruiloft-dj-rotterdam'
+    | '/bruiloft-dj-tiel'
     | '/contact'
     | '/dj'
     | '/dj-boeken-alblasserdam'
@@ -1010,6 +1077,7 @@ export interface FileRouteTypes {
     | '/dj-boeken-almere'
     | '/dj-boeken-alphen-aan-den-rijn'
     | '/dj-boeken-amersfoort'
+    | '/dj-boeken-amstelveen'
     | '/dj-boeken-amsterdam'
     | '/dj-boeken-apeldoorn'
     | '/dj-boeken-arnhem'
@@ -1093,12 +1161,14 @@ export interface FileRouteTypes {
     | '/dj-boeken-zwijndrecht'
     | '/dj-boeken-zwolle'
     | '/dj-en-mc'
+    | '/feest-op-locatie'
     | '/festival-dj'
     | '/personeelsfeest-dj'
     | '/prijzen'
     | '/privacy'
     | '/regios'
     | '/reviews'
+    | '/tuinfeest'
     | '/verjaardag-dj'
     | '/verzoekje'
     | '/werkwijze'
@@ -1111,7 +1181,11 @@ export interface FileRouteTypes {
     | '/algemene-voorwaarden'
     | '/biografie'
     | '/bruiloft-dj'
+    | '/bruiloft-dj-betuwe'
+    | '/bruiloft-dj-dordrecht'
     | '/bruiloft-dj-hoeksche-waard'
+    | '/bruiloft-dj-rotterdam'
+    | '/bruiloft-dj-tiel'
     | '/contact'
     | '/dj'
     | '/dj-boeken-alblasserdam'
@@ -1120,6 +1194,7 @@ export interface FileRouteTypes {
     | '/dj-boeken-almere'
     | '/dj-boeken-alphen-aan-den-rijn'
     | '/dj-boeken-amersfoort'
+    | '/dj-boeken-amstelveen'
     | '/dj-boeken-amsterdam'
     | '/dj-boeken-apeldoorn'
     | '/dj-boeken-arnhem'
@@ -1203,12 +1278,14 @@ export interface FileRouteTypes {
     | '/dj-boeken-zwijndrecht'
     | '/dj-boeken-zwolle'
     | '/dj-en-mc'
+    | '/feest-op-locatie'
     | '/festival-dj'
     | '/personeelsfeest-dj'
     | '/prijzen'
     | '/privacy'
     | '/regios'
     | '/reviews'
+    | '/tuinfeest'
     | '/verjaardag-dj'
     | '/verzoekje'
     | '/werkwijze'
@@ -1221,7 +1298,11 @@ export interface FileRouteTypes {
     | '/algemene-voorwaarden'
     | '/biografie'
     | '/bruiloft-dj'
+    | '/bruiloft-dj-betuwe'
+    | '/bruiloft-dj-dordrecht'
     | '/bruiloft-dj-hoeksche-waard'
+    | '/bruiloft-dj-rotterdam'
+    | '/bruiloft-dj-tiel'
     | '/contact'
     | '/dj'
     | '/dj-boeken-alblasserdam'
@@ -1230,6 +1311,7 @@ export interface FileRouteTypes {
     | '/dj-boeken-almere'
     | '/dj-boeken-alphen-aan-den-rijn'
     | '/dj-boeken-amersfoort'
+    | '/dj-boeken-amstelveen'
     | '/dj-boeken-amsterdam'
     | '/dj-boeken-apeldoorn'
     | '/dj-boeken-arnhem'
@@ -1313,12 +1395,14 @@ export interface FileRouteTypes {
     | '/dj-boeken-zwijndrecht'
     | '/dj-boeken-zwolle'
     | '/dj-en-mc'
+    | '/feest-op-locatie'
     | '/festival-dj'
     | '/personeelsfeest-dj'
     | '/prijzen'
     | '/privacy'
     | '/regios'
     | '/reviews'
+    | '/tuinfeest'
     | '/verjaardag-dj'
     | '/verzoekje'
     | '/werkwijze'
@@ -1332,7 +1416,11 @@ export interface RootRouteChildren {
   AlgemeneVoorwaardenRoute: typeof AlgemeneVoorwaardenRoute
   BiografieRoute: typeof BiografieRoute
   BruiloftDjRoute: typeof BruiloftDjRoute
+  BruiloftDjBetuweRoute: typeof BruiloftDjBetuweRoute
+  BruiloftDjDordrechtRoute: typeof BruiloftDjDordrechtRoute
   BruiloftDjHoekscheWaardRoute: typeof BruiloftDjHoekscheWaardRoute
+  BruiloftDjRotterdamRoute: typeof BruiloftDjRotterdamRoute
+  BruiloftDjTielRoute: typeof BruiloftDjTielRoute
   ContactRoute: typeof ContactRoute
   DjRoute: typeof DjRoute
   DjBoekenAlblasserdamRoute: typeof DjBoekenAlblasserdamRoute
@@ -1341,6 +1429,7 @@ export interface RootRouteChildren {
   DjBoekenAlmereRoute: typeof DjBoekenAlmereRoute
   DjBoekenAlphenAanDenRijnRoute: typeof DjBoekenAlphenAanDenRijnRoute
   DjBoekenAmersfoortRoute: typeof DjBoekenAmersfoortRoute
+  DjBoekenAmstelveenRoute: typeof DjBoekenAmstelveenRoute
   DjBoekenAmsterdamRoute: typeof DjBoekenAmsterdamRoute
   DjBoekenApeldoornRoute: typeof DjBoekenApeldoornRoute
   DjBoekenArnhemRoute: typeof DjBoekenArnhemRoute
@@ -1424,12 +1513,14 @@ export interface RootRouteChildren {
   DjBoekenZwijndrechtRoute: typeof DjBoekenZwijndrechtRoute
   DjBoekenZwolleRoute: typeof DjBoekenZwolleRoute
   DjEnMcRoute: typeof DjEnMcRoute
+  FeestOpLocatieRoute: typeof FeestOpLocatieRoute
   FestivalDjRoute: typeof FestivalDjRoute
   PersoneelsfeestDjRoute: typeof PersoneelsfeestDjRoute
   PrijzenRoute: typeof PrijzenRoute
   PrivacyRoute: typeof PrivacyRoute
   RegiosRoute: typeof RegiosRoute
   ReviewsRoute: typeof ReviewsRoute
+  TuinfeestRoute: typeof TuinfeestRoute
   VerjaardagDjRoute: typeof VerjaardagDjRoute
   VerzoekjeRoute: typeof VerzoekjeRoute
   WerkwijzeRoute: typeof WerkwijzeRoute
@@ -1466,6 +1557,13 @@ declare module '@tanstack/react-router' {
       path: '/verjaardag-dj'
       fullPath: '/verjaardag-dj'
       preLoaderRoute: typeof VerjaardagDjRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tuinfeest': {
+      id: '/tuinfeest'
+      path: '/tuinfeest'
+      fullPath: '/tuinfeest'
+      preLoaderRoute: typeof TuinfeestRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/reviews': {
@@ -1508,6 +1606,13 @@ declare module '@tanstack/react-router' {
       path: '/festival-dj'
       fullPath: '/festival-dj'
       preLoaderRoute: typeof FestivalDjRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/feest-op-locatie': {
+      id: '/feest-op-locatie'
+      path: '/feest-op-locatie'
+      fullPath: '/feest-op-locatie'
+      preLoaderRoute: typeof FeestOpLocatieRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dj-en-mc': {
@@ -2091,6 +2196,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DjBoekenAmsterdamRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dj-boeken-amstelveen': {
+      id: '/dj-boeken-amstelveen'
+      path: '/dj-boeken-amstelveen'
+      fullPath: '/dj-boeken-amstelveen'
+      preLoaderRoute: typeof DjBoekenAmstelveenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/dj-boeken-amersfoort': {
       id: '/dj-boeken-amersfoort'
       path: '/dj-boeken-amersfoort'
@@ -2147,11 +2259,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/bruiloft-dj-tiel': {
+      id: '/bruiloft-dj-tiel'
+      path: '/bruiloft-dj-tiel'
+      fullPath: '/bruiloft-dj-tiel'
+      preLoaderRoute: typeof BruiloftDjTielRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bruiloft-dj-rotterdam': {
+      id: '/bruiloft-dj-rotterdam'
+      path: '/bruiloft-dj-rotterdam'
+      fullPath: '/bruiloft-dj-rotterdam'
+      preLoaderRoute: typeof BruiloftDjRotterdamRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/bruiloft-dj-hoeksche-waard': {
       id: '/bruiloft-dj-hoeksche-waard'
       path: '/bruiloft-dj-hoeksche-waard'
       fullPath: '/bruiloft-dj-hoeksche-waard'
       preLoaderRoute: typeof BruiloftDjHoekscheWaardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bruiloft-dj-dordrecht': {
+      id: '/bruiloft-dj-dordrecht'
+      path: '/bruiloft-dj-dordrecht'
+      fullPath: '/bruiloft-dj-dordrecht'
+      preLoaderRoute: typeof BruiloftDjDordrechtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bruiloft-dj-betuwe': {
+      id: '/bruiloft-dj-betuwe'
+      path: '/bruiloft-dj-betuwe'
+      fullPath: '/bruiloft-dj-betuwe'
+      preLoaderRoute: typeof BruiloftDjBetuweRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/bruiloft-dj': {
@@ -2204,7 +2344,11 @@ const rootRouteChildren: RootRouteChildren = {
   AlgemeneVoorwaardenRoute: AlgemeneVoorwaardenRoute,
   BiografieRoute: BiografieRoute,
   BruiloftDjRoute: BruiloftDjRoute,
+  BruiloftDjBetuweRoute: BruiloftDjBetuweRoute,
+  BruiloftDjDordrechtRoute: BruiloftDjDordrechtRoute,
   BruiloftDjHoekscheWaardRoute: BruiloftDjHoekscheWaardRoute,
+  BruiloftDjRotterdamRoute: BruiloftDjRotterdamRoute,
+  BruiloftDjTielRoute: BruiloftDjTielRoute,
   ContactRoute: ContactRoute,
   DjRoute: DjRoute,
   DjBoekenAlblasserdamRoute: DjBoekenAlblasserdamRoute,
@@ -2213,6 +2357,7 @@ const rootRouteChildren: RootRouteChildren = {
   DjBoekenAlmereRoute: DjBoekenAlmereRoute,
   DjBoekenAlphenAanDenRijnRoute: DjBoekenAlphenAanDenRijnRoute,
   DjBoekenAmersfoortRoute: DjBoekenAmersfoortRoute,
+  DjBoekenAmstelveenRoute: DjBoekenAmstelveenRoute,
   DjBoekenAmsterdamRoute: DjBoekenAmsterdamRoute,
   DjBoekenApeldoornRoute: DjBoekenApeldoornRoute,
   DjBoekenArnhemRoute: DjBoekenArnhemRoute,
@@ -2296,12 +2441,14 @@ const rootRouteChildren: RootRouteChildren = {
   DjBoekenZwijndrechtRoute: DjBoekenZwijndrechtRoute,
   DjBoekenZwolleRoute: DjBoekenZwolleRoute,
   DjEnMcRoute: DjEnMcRoute,
+  FeestOpLocatieRoute: FeestOpLocatieRoute,
   FestivalDjRoute: FestivalDjRoute,
   PersoneelsfeestDjRoute: PersoneelsfeestDjRoute,
   PrijzenRoute: PrijzenRoute,
   PrivacyRoute: PrivacyRoute,
   RegiosRoute: RegiosRoute,
   ReviewsRoute: ReviewsRoute,
+  TuinfeestRoute: TuinfeestRoute,
   VerjaardagDjRoute: VerjaardagDjRoute,
   VerzoekjeRoute: VerzoekjeRoute,
   WerkwijzeRoute: WerkwijzeRoute,

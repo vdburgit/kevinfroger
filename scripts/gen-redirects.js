@@ -51,7 +51,9 @@ const REDIRECTS = {
   // Legacy occasion-/themaslugs (oude site, nog geindexeerd in GSC juni 2026)
   "/dj-verjaardag": "/verjaardag-dj",
   "/dj-themafeest": "/verjaardag-dj",
-  "/dj-tuinfeest": "/verjaardag-dj",
+  // Legacy /dj-tuinfeest had autoriteit (GSC pos ~15); doorsturen naar de nieuwe
+  // tuinfeest-pagina zodat die linkwaarde behouden blijft.
+  "/dj-tuinfeest": "/tuinfeest",
   "/dj-koningsdag": "/verjaardag-dj",
   "/dj-met-apparatuur": "/dj-en-mc",
   "/dj-huren-nederland": "/regios",
