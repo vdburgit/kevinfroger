@@ -262,6 +262,9 @@ function Index() {
               <Link to="/werkwijze" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">
                 Werkwijze
               </Link>
+              <Link to="/prijzen" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">
+                Prijzen
+              </Link>
               <Link to="/regios" className="rounded-full border-2 border-border text-foreground px-6 py-3 text-xs tracking-[0.18em] uppercase font-bold hover:border-primary transition">
                 Werkgebied
               </Link>
