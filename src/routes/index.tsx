@@ -189,6 +189,8 @@ function Index() {
               { title: "Bedrijfsfeesten", img: IMG_CORPORATE, alt: "DJ Kevin Froger op een bedrijfsfeest", desc: "Muziek en presentatie voor bedrijfsfeesten, jubilea en personeelsfeesten.", href: "/zakelijk-dj" },
               { title: "Festivals", img: IMG_FESTIVAL, alt: "DJ Kevin Froger op een festival met vuurwerk boven het podium en volle dansvloer", desc: "Sets voor festivals en aprèsski. Ik hou de energie erin en praat het podium aan elkaar.", href: "/festival-dj" },
               { title: "Privéfeesten", img: IMG_PRIVATE, alt: "DJ Kevin Froger op een privéfeest of verjaardag", desc: "Verjaardag, themafeest of besloten event, altijd op maat van jouw gasten.", href: "/verjaardag-dj" },
+              { title: "Feest op locatie", img: IMG_DJ_BOOTH, alt: "DJ Kevin Froger draait een compleet feest op locatie met de Schirmbar", desc: "Het complete feest naar jouw locatie. Schirmbar, mini festival of poolparty, thuis of op het bedrijf.", href: "/feest-op-locatie" },
+              { title: "Tuinfeest", img: IMG_FESTIVAL, alt: "DJ Kevin Froger draait een tuinfeest met festivalsfeer in de achtertuin", desc: "Een festival in je eigen achtertuin, met DJ, licht, bar en aankleding. Elk thema mogelijk.", href: "/tuinfeest" },
             ].map((d) => {
               const { src, srcSet } = responsiveImage(d.img);
               return (

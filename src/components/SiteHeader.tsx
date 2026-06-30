@@ -9,11 +9,18 @@ const NAV = [
   { to: "/verjaardag-dj", label: "Feest DJ" },
   { to: "/zakelijk-dj", label: "Bedrijfsfeest" },
   { to: "/festival-dj", label: "Festival" },
+  { to: "/feest-op-locatie", label: "Feest op locatie" },
   { to: "/prijzen", label: "Prijzen" },
 ] as const;
 
 const MOBILE_NAV = [
-  ...NAV,
+  { to: "/bruiloft-dj", label: "Bruiloft DJ" },
+  { to: "/verjaardag-dj", label: "Feest DJ" },
+  { to: "/zakelijk-dj", label: "Bedrijfsfeest" },
+  { to: "/festival-dj", label: "Festival" },
+  { to: "/feest-op-locatie", label: "Feest op locatie" },
+  { to: "/tuinfeest", label: "Tuinfeest" },
+  { to: "/prijzen", label: "Prijzen" },
   { to: "/regios", label: "Werkgebied" },
   { to: "/blog", label: "Blog" },
   { to: "/reviews", label: "Reviews" },
