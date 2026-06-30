@@ -27,6 +27,10 @@ export function SiteFooter() {
               <li><Link to="/verjaardag-dj" className="hover:text-foreground">Feest en verjaardag</Link></li>
               <li><Link to="/zakelijk-dj" className="hover:text-foreground">Bedrijfsfeest</Link></li>
               <li><Link to="/festival-dj" className="hover:text-foreground">Festival</Link></li>
+              <li><Link to="/feest-op-locatie" className="hover:text-foreground">Feest op locatie</Link></li>
+              <li><Link to="/tuinfeest" className="hover:text-foreground">Tuinfeest</Link></li>
+              <li><Link to="/horeca" className="hover:text-foreground">Horeca</Link></li>
+              <li><Link to="/artiesten" className="hover:text-foreground">Artiesten</Link></li>
               <li><Link to="/dj-en-mc" className="hover:text-foreground">DJ en MC in een</Link></li>
               <li><Link to="/verzoekje" className="hover:text-foreground">Verzoekje bij de DJ</Link></li>
             </ul>
