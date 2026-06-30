@@ -317,6 +317,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://kevinfroger.nl/horeca</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kevinfroger.nl/artiesten</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kevinfroger.nl/dj-boeken-amstelveen</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
